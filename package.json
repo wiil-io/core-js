@@ -1,0 +1,43 @@
+{
+  "name": "wiil-core-js",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "WIIL",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wiil-io/core-js.git"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "docs": "typedoc",
+    "docs:watch": "typedoc --watch",
+    "tag:bash": "bash ./scripts/tag-script.sh",
+    "git:commit": "bash ./scripts/commit-script.sh",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "wiil",
+    "data defintions",
+    "data models",
+    "dtos",
+    "schemas"
+  ],
+  "description": "Wiil Platform JavaScript Data Model Definitions. Core schemas for the wiil platform, providing TypeScript types and validation schemas using Zod.",
+  "devDependencies": {
+    "@types/node": "^22.13.14",
+    "typedoc": "^0.28.14",
+    "typedoc-plugin-markdown": "^4.9.0",
+    "typedoc-plugin-zod": "^1.4.3",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "zod": "^4.1.12"
+  }
+}

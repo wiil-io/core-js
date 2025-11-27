@@ -1,0 +1,16 @@
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.1**](../README.md)
+
+***
+
+[Wiil Platform JavaScript Data Model Definitions - API Reference](../globals.md) / PhoneNumberType
+
+# Enumeration: PhoneNumberType
+
+Defined in: src/core/type-definitions/service-config.definitions.ts:41
+
+## Enumeration Members
+
+| Enumeration Member | Value | Defined in |
+| ------ | ------ | ------ |
+| <a id="local"></a> `LOCAL` | `"local"` | src/core/type-definitions/service-config.definitions.ts:42 |
+| <a id="toll_free"></a> `TOLL_FREE` | `"toll-free"` | src/core/type-definitions/service-config.definitions.ts:43 |
