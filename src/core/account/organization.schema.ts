@@ -54,6 +54,9 @@ export const OrganizationServiceStatusRecordSchema = BaseModelSchema.safeExtend(
     isCurrent: z.boolean().default(true),
 });
 
+
+export type OrganizationServiceStatusRecord = z.infer<typeof OrganizationServiceStatusRecordSchema>;
+
 /**
  * Zod schema for organization entity.
  *
@@ -98,3 +101,6 @@ export const OrganizationSchema = BaseModelSchema.safeExtend({
     serviceStatusHistory: z.array(OrganizationServiceStatusRecordSchema).nullable().optional(),
     platformEmail: z.string().nullable().optional(),
 });
+
+
+export type Organization = z.infer<typeof OrganizationSchema>;
