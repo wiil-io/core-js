@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.2**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.3**](../../README.md)
 
 ***
 
@@ -17,7 +17,7 @@ type TranslationConversationConfig = {
 };
 ```
 
-Defined in: [src/core/conversation/translation-config.schema.ts:59](https://github.com/wiil-io/core-js/blob/e764a5e50337be928fa12d95132bc367a4a9284a/src/core/conversation/translation-config.schema.ts#L59)
+Defined in: [src/core/conversation/translation-config.schema.ts:59](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/conversation/translation-config.schema.ts#L59)
 
 Translation conversation configuration schema.
 
@@ -25,9 +25,9 @@ Translation conversation configuration schema.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="sdrtn_id"></a> `sdrtn_id?` | `string` \| `null` | [src/core/conversation/translation-config.schema.ts:39](https://github.com/wiil-io/core-js/blob/e764a5e50337be928fa12d95132bc367a4a9284a/src/core/conversation/translation-config.schema.ts#L39) |
-| <a id="channel_identifier"></a> `channel_identifier` | `string` | [src/core/conversation/translation-config.schema.ts:40](https://github.com/wiil-io/core-js/blob/e764a5e50337be928fa12d95132bc367a4a9284a/src/core/conversation/translation-config.schema.ts#L40) |
-| <a id="initiator_access_id"></a> `initiator_access_id` | `string` | [src/core/conversation/translation-config.schema.ts:41](https://github.com/wiil-io/core-js/blob/e764a5e50337be928fa12d95132bc367a4a9284a/src/core/conversation/translation-config.schema.ts#L41) |
-| <a id="initiator_token"></a> `initiator_token` | `string` | [src/core/conversation/translation-config.schema.ts:42](https://github.com/wiil-io/core-js/blob/e764a5e50337be928fa12d95132bc367a4a9284a/src/core/conversation/translation-config.schema.ts#L42) |
-| <a id="participant_access_id"></a> `participant_access_id` | `string` | [src/core/conversation/translation-config.schema.ts:43](https://github.com/wiil-io/core-js/blob/e764a5e50337be928fa12d95132bc367a4a9284a/src/core/conversation/translation-config.schema.ts#L43) |
-| <a id="participant_token"></a> `participant_token` | `string` | [src/core/conversation/translation-config.schema.ts:44](https://github.com/wiil-io/core-js/blob/e764a5e50337be928fa12d95132bc367a4a9284a/src/core/conversation/translation-config.schema.ts#L44) |
+| <a id="sdrtn_id"></a> `sdrtn_id?` | `string` \| `null` | [src/core/conversation/translation-config.schema.ts:39](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/conversation/translation-config.schema.ts#L39) |
+| <a id="channel_identifier"></a> `channel_identifier` | `string` | [src/core/conversation/translation-config.schema.ts:40](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/conversation/translation-config.schema.ts#L40) |
+| <a id="initiator_access_id"></a> `initiator_access_id` | `string` | [src/core/conversation/translation-config.schema.ts:41](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/conversation/translation-config.schema.ts#L41) |
+| <a id="initiator_token"></a> `initiator_token` | `string` | [src/core/conversation/translation-config.schema.ts:42](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/conversation/translation-config.schema.ts#L42) |
+| <a id="participant_access_id"></a> `participant_access_id` | `string` | [src/core/conversation/translation-config.schema.ts:43](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/conversation/translation-config.schema.ts#L43) |
+| <a id="participant_token"></a> `participant_token` | `string` | [src/core/conversation/translation-config.schema.ts:44](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/conversation/translation-config.schema.ts#L44) |

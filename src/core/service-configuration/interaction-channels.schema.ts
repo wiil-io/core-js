@@ -205,32 +205,42 @@ export const DeploymentChannelRequestSchema = z.object({
  *
  * Provides type-safe channel configuration based on deployment type.
  */
+// export const DeploymentChannelSchema = BaseDeploymentChannelSchema.safeExtend({
+//     channelIdentifier: z.string(),
+// }).and(
+//     z.discriminatedUnion('deploymentType', [
+//         z.object({
+//             deploymentType: z.literal(DeploymentType.CALLS),
+//             channelIdentifier: z.string().regex(phoneNumberPattern),
+//             configuration: PhoneChannelConfigSchema,
+//         }),
+//         z.object({
+//             deploymentType: z.literal(DeploymentType.SMS),
+//             channelIdentifier: z.string().regex(phoneNumberPattern),
+//             configuration: PhoneChannelConfigSchema,
+//         }),
+//         z.object({
+//             deploymentType: z.literal(DeploymentType.WEB),
+//             channelIdentifier: z.string().regex(webSiteUrlPattern),
+//             configuration: WebChannelConfigSchema,
+//         }),
+//         z.object({
+//             deploymentType: z.literal(DeploymentType.MOBILE),
+//             channelIdentifier: z.string(),
+//             configuration: MobileAppChannelConfigSchema,
+//         }),
+//     ])
+// );
+
 export const DeploymentChannelSchema = BaseDeploymentChannelSchema.safeExtend({
     channelIdentifier: z.string(),
-}).and(
-    z.discriminatedUnion('deploymentType', [
-        z.object({
-            deploymentType: z.literal(DeploymentType.CALLS),
-            channelIdentifier: z.string().regex(phoneNumberPattern),
-            configuration: PhoneChannelConfigSchema,
-        }),
-        z.object({
-            deploymentType: z.literal(DeploymentType.SMS),
-            channelIdentifier: z.string().regex(phoneNumberPattern),
-            configuration: PhoneChannelConfigSchema,
-        }),
-        z.object({
-            deploymentType: z.literal(DeploymentType.WEB),
-            channelIdentifier: z.string().regex(webSiteUrlPattern),
-            configuration: WebChannelConfigSchema,
-        }),
-        z.object({
-            deploymentType: z.literal(DeploymentType.MOBILE),
-            channelIdentifier: z.string(),
-            configuration: MobileAppChannelConfigSchema,
-        }),
-    ])
-);
+    configuration: z.union([
+        PhoneChannelConfigSchema,
+        WebChannelConfigSchema,
+        MobileAppChannelConfigSchema,
+    ]),
+
+});
 
 /**
  * Type definition for deployment channel.

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.2**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.3**](../../README.md)
 
 ***
 
@@ -13,7 +13,7 @@ type TimestampQuery = {
 };
 ```
 
-Defined in: [src/request/models/paginated-quest.schema.ts:20](https://github.com/wiil-io/core-js/blob/e764a5e50337be928fa12d95132bc367a4a9284a/src/request/models/paginated-quest.schema.ts#L20)
+Defined in: [src/request/models/paginated-quest.schema.ts:20](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/request/models/paginated-quest.schema.ts#L20)
 
 Schema for queries based on a specific timestamp.
 
@@ -21,5 +21,5 @@ Schema for queries based on a specific timestamp.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="fromtimestamp"></a> `fromTimestamp` | `number` | [src/request/models/paginated-quest.schema.ts:16](https://github.com/wiil-io/core-js/blob/e764a5e50337be928fa12d95132bc367a4a9284a/src/request/models/paginated-quest.schema.ts#L16) |
-| <a id="totimestamp"></a> `toTimestamp?` | `number` | [src/request/models/paginated-quest.schema.ts:17](https://github.com/wiil-io/core-js/blob/e764a5e50337be928fa12d95132bc367a4a9284a/src/request/models/paginated-quest.schema.ts#L17) |
+| <a id="fromtimestamp"></a> `fromTimestamp` | `number` | [src/request/models/paginated-quest.schema.ts:16](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/request/models/paginated-quest.schema.ts#L16) |
+| <a id="totimestamp"></a> `toTimestamp?` | `number` | [src/request/models/paginated-quest.schema.ts:17](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/request/models/paginated-quest.schema.ts#L17) |
