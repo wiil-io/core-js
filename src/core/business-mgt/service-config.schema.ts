@@ -11,7 +11,6 @@ import { BaseModelSchema } from "../base.schema";
  *
  * @typedef {Object} BusinessServiceConfig
  * @property {string} id - Unique identifier for the service
- * @property {string} organizationId - Business account ID this service belongs to
  * @property {string} name - Name of the service offered
  * @property {string} [description] - Detailed description of the service
  * @property {number} duration - Service duration in minutes (max 8 hours)
@@ -23,7 +22,6 @@ import { BaseModelSchema } from "../base.schema";
  */
 export const BusinessServiceConfigSchema = BaseModelSchema.safeExtend({
     id: z.string(),
-    organizationId: z.string(),
     name: z.string().min(1, "Service name is required"),
     description: z.string().optional(),
 
@@ -45,14 +43,12 @@ export const BusinessServiceConfigSchema = BaseModelSchema.safeExtend({
  *
  * @typedef {Object} ServiceQRCode
  * @property {string} id - Unique identifier for the QR code
- * @property {string} organizationId - Business account ID
  * @property {string} appointmentUrl - Direct link to the appointment page
  * @property {string} [qrCodeImage] - Base64 encoded QR code image
  * @property {string} [serviceId] - Specific service ID for direct appointment
  */
 export const ServiceQRCodeSchema = z.object({
     id: z.string(),
-    organizationId: z.string(),
     appointmentUrl: z.string().url(),
     qrCodeImage: z.string().optional(),
     serviceId: z.string().optional(),

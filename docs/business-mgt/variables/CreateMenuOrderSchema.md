@@ -1,0 +1,16 @@
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.2**](../../README.md)
+
+***
+
+[Wiil Platform JavaScript Data Model Definitions - API Reference](../../README.md) / [business-mgt](../README.md) / CreateMenuOrderSchema
+
+# Variable: CreateMenuOrderSchema
+
+```ts
+const CreateMenuOrderSchema: ZodObject<CreateMenuOrder>;
+```
+
+Defined in: [src/core/business-mgt/menu.order.schema.ts:127](https://github.com/wiil-io/core-js/blob/e764a5e50337be928fa12d95132bc367a4a9284a/src/core/business-mgt/menu.order.schema.ts#L127)
+
+Schema for creating a new menu order.
+Omits auto-generated fields and uses base items without IDs.

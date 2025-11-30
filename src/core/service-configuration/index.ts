@@ -8,6 +8,8 @@ export * from './call-transfer-config.schema';
 export * from './deployment-config.schema';
 export * from './instruction-config.schema';
 export * from './interaction-channels.schema';
+export * from './knowledge.schema';
+export * from './phone-config.schema';
 export * from './phone-number.schema';
 export * from './provisioning-config';
 export * from './support-llm';

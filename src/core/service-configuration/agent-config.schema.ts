@@ -33,12 +33,12 @@ import { CallTransferConfigSchema } from "./call-transfer-config.schema";
  * @example
  * ```typescript
  * const agentConfig: AgentConfiguration = {
- *   id: 'agent-123',
+ *   id: '123*',
  *   modelId: 'gpt-4',
  *   name: 'Customer Support Agent',
  *   defaultFunctionState: LLMType.MULTI_MODE,
  *   usesTravnexSupportModel: true,
- *   instructionConfigurationId: 'inst-456',
+ *   instructionConfigurationId: '456*',
  *   assistantType: AssistantType.PHONE,
  *   call_transfer_config: [
  *     {
@@ -91,7 +91,7 @@ export type AgentConfiguration = z.infer<typeof AgentConfigurationSchema>;
  *   name: 'Sales Assistant',
  *   defaultFunctionState: LLMType.MULTI_MODE,
  *   usesTravnexSupportModel: true,
- *   instructionConfigurationId: 'inst-789',
+ *   instructionConfigurationId: '789*',
  *   assistantType: AssistantType.WEB,
  *   requiredModelConfig: {
  *     voiceId: 'rachel',
@@ -130,7 +130,7 @@ export type CreateAgentConfiguration = z.infer<typeof CreateAgentConfigurationSc
  * @example
  * ```typescript
  * const updatePayload: UpdateAgentConfiguration = {
- *   id: 'agent-123',
+ *   id: '123*',
  *   name: 'Updated Sales Assistant',
  *   metadata: { team: 'enterprise-sales' }
  * };

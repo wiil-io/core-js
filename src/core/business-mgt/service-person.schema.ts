@@ -10,13 +10,11 @@ import { BaseModelSchema } from '../base.schema';
  * Service person schema - Complete service person record.
  *
  * @typedef {Object} ServicePerson
- * @property {string} organizationId - Business account ID
  * @property {string} accountId - User account ID of the service person
  * @property {string} [description] - Description of the service person
  * @property {string} serviceId - ID of the service this person provides
  */
 export const ServicePersonSchema = BaseModelSchema.safeExtend({
-    organizationId: z.string(),
     accountId: z.string(),
     description: z.string().optional(),
     serviceId: z.string(),

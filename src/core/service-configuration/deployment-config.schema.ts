@@ -20,7 +20,6 @@ import { ProjectSchema } from '../account/project.schema';
  * @typedef {Object} DeploymentConfigurationProperties
  * @property {string} id - Unique identifier for the deployment configuration
  * @property {string} projectId - ID of the project this deployment belongs to
- * @property {string} organizationId - ID of the organization that owns this deployment
  * @property {string} deploymentChannelId - ID of the channel this deployment uses (call, SMS, web, mobile)
  * @property {string} [deploymentName] - Human-readable name for the deployment
  * @property {string} agentConfigurationId - ID of the agent configuration to use
@@ -39,13 +38,12 @@ import { ProjectSchema } from '../account/project.schema';
  * @example
  * ```typescript
  * const deployment: DeploymentConfiguration = {
- *   id: 'deploy-123',
- *   projectId: 'proj-456',
- *   organizationId: 'org-789',
- *   deploymentChannelId: 'chan-abc',
+ *   id: '123*',
+ *   projectId: '456*',
+ *   deploymentChannelId: 'abc*',
  *   deploymentName: 'Production Customer Support',
- *   agentConfigurationId: 'agent-def',
- *   instructionConfigurationId: 'inst-ghi',
+ *   agentConfigurationId: 'def*',
+ *   instructionConfigurationId: 'ghi*',
  *   deploymentStatus: DeploymentStatus.ACTIVE,
  *   provisioningType: DeploymentProvisioningType.DIRECT,
  *   isActive: true,
@@ -56,7 +54,6 @@ import { ProjectSchema } from '../account/project.schema';
  */
 export const DeploymentConfigurationSchema = BaseModelSchema.safeExtend({
     projectId: z.string(),
-    organizationId: z.string(),
     deploymentChannelId: z.string(),
     deploymentName: z.string().optional(),
     agentConfigurationId: z.string(),
@@ -92,12 +89,11 @@ export type DeploymentConfiguration = z.infer<typeof DeploymentConfigurationSche
  * @example
  * ```typescript
  * const newDeployment: CreateDeploymentConfiguration = {
- *   projectId: 'proj-456',
- *   organizationId: 'org-789',
- *   deploymentChannelId: 'chan-abc',
+ *   projectId: '456*',
+ *   deploymentChannelId: 'abc*',
  *   deploymentName: 'Customer Support Line',
- *   agentConfigurationId: 'agent-def',
- *   instructionConfigurationId: 'inst-ghi',
+ *   agentConfigurationId: 'def*',
+ *   instructionConfigurationId: 'ghi*',
  *   isActive: false,
  *   deploymentStatus: DeploymentStatus.PENDING,
  *   provisioningType: DeploymentProvisioningType.DIRECT
@@ -140,13 +136,12 @@ export type CreateDeploymentConfiguration = z.infer<typeof CreateDeploymentConfi
  * @example
  * ```typescript
  * const chainedDeployment: CreateChainDeploymentConfiguration = {
- *   projectId: 'proj-456',
- *   organizationId: 'org-789',
- *   deploymentChannelId: 'chan-abc',
+ *   projectId: '456*',
+ *   deploymentChannelId: 'abc*',
  *   deploymentName: 'Multi-Step Support Flow',
- *   agentConfigurationId: 'agent-def',
- *   instructionConfigurationId: 'inst-ghi',
- *   provisioningConfigChainId: 'chain-xyz',
+ *   agentConfigurationId: 'def*',
+ *   instructionConfigurationId: 'ghi*',
+ *   provisioningConfigChainId: 'xyz*',
  *   isActive: false,
  *   deploymentStatus: DeploymentStatus.PENDING,
  *   provisioningType: DeploymentProvisioningType.CHAINED
@@ -190,7 +185,7 @@ export type CreateChainDeploymentConfiguration = z.infer<typeof CreateChainDeplo
  * @example
  * ```typescript
  * const updateDeployment: UpdateDeploymentConfiguration = {
- *   id: 'deploy-123',
+ *   id: '123*',
  *   deploymentName: 'Updated Support Line',
  *   isActive: true,
  *   deploymentStatus: DeploymentStatus.ACTIVE
@@ -222,13 +217,12 @@ export type UpdateDeploymentConfiguration = z.infer<typeof UpdateDeploymentConfi
  * @example
  * ```typescript
  * const deploymentResult: DeploymentConfigurationResult = {
- *   id: 'deploy-123',
- *   projectId: 'proj-456',
- *   organizationId: 'org-789',
- *   deploymentChannelId: 'chan-abc',
+ *   id: '123*',
+ *   projectId: '456*',
+ *   deploymentChannelId: 'abc*',
  *   deploymentName: 'Customer Support',
- *   agentConfigurationId: 'agent-def',
- *   instructionConfigurationId: 'inst-ghi',
+ *   agentConfigurationId: 'def*',
+ *   instructionConfigurationId: 'ghi*',
  *   deploymentStatus: DeploymentStatus.ACTIVE,
  *   provisioningType: DeploymentProvisioningType.DIRECT,
  *   isActive: true,
@@ -265,13 +259,12 @@ export type DeploymentConfigurationResult = z.infer<typeof DeploymentConfigurati
  * @example
  * ```typescript
  * const deploymentDetails: DeploymentConfigurationDetails = {
- *   id: 'deploy-123',
- *   projectId: 'proj-456',
- *   organizationId: 'org-789',
- *   deploymentChannelId: 'chan-abc',
+ *   id: '123*',
+ *   projectId: '456*',
+ *   deploymentChannelId: 'abc*',
  *   deploymentName: 'Customer Support',
- *   agentConfigurationId: 'agent-def',
- *   instructionConfigurationId: 'inst-ghi',
+ *   agentConfigurationId: 'def*',
+ *   instructionConfigurationId: 'ghi*',
  *   deploymentStatus: DeploymentStatus.ACTIVE,
  *   provisioningType: DeploymentProvisioningType.DIRECT,
  *   isActive: true,

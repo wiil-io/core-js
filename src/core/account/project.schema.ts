@@ -32,9 +32,9 @@ import { ServiceStatus } from '../type-definitions';
  * @example
  * ```typescript
  * const project: Project = {
- *   id: 'proj-123',
+ *   id: '123*',
  *   name: 'Production Environment',
- *   organizationId: 'org-456',
+ *   organizationId: '456*',
  *   regionId: 'us-west-2',
  *   description: 'Main production deployment project',
  *   compliance: ['SOC2', 'HIPAA'],
@@ -42,7 +42,7 @@ import { ServiceStatus } from '../type-definitions';
  *   hasRate: true,
  *   isDefault: true,
  *   serviceStatus: ServiceStatus.ACTIVE,
- *   currentSubscriptionId: 'sub-789',
+ *   currentSubscriptionId: '789*',
  *   metadata: { environment: 'production' },
  *   createdAt: Date.now(),
  *   updatedAt: Date.now()
@@ -76,7 +76,7 @@ export const ProjectSchema = BaseModelSchema.safeExtend({
  * ```typescript
  * const newProject: CreateProject = {
  *   name: 'Development Environment',
- *   organizationId: 'org-456',
+ *   organizationId: '456*',
  *   regionId: 'us-east-1',
  *   description: 'Development and testing project',
  *   compliance: ['SOC2'],
@@ -105,7 +105,7 @@ export const CreateProjectSchema = ProjectSchema.omit({
  * @example
  * ```typescript
  * const updateProject: UpdateProject = {
- *   id: 'proj-123',
+ *   id: '123*',
  *   name: 'Production Environment v2',
  *   description: 'Updated production deployment',
  *   hasRate: true

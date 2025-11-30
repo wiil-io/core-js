@@ -7,8 +7,7 @@ import { z } from 'zod';
 export const BaseModelSchema = z.object({
     id: z.string().describe("Unique identifier for the model"),
     createdAt: z.number().optional().describe("Date when the model was created"),
-    updatedAt: z.number().optional().describe("Date when the model was last updated"),
-    version: z.number().optional().describe("Version number for optimistic concurrency control"),
+    updatedAt: z.number().optional().describe("Date when the model was last updated")
 });
 
 

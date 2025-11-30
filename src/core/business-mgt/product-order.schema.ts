@@ -52,7 +52,6 @@ export const ProductOrderItemSchema = ProductOrderItemBaseSchema.safeExtend({
  *
  * @typedef {Object} ProductOrder
  * @property {string} id - Unique order ID
- * @property {string} organizationId - Business account ID
  * @property {string} [orderNumber] - Human-readable order number
  * @property {string} status - Order status
  * @property {Array} items - Items in the order
@@ -79,7 +78,6 @@ export const ProductOrderItemSchema = ProductOrderItemBaseSchema.safeExtend({
  */
 export const ProductOrderSchema = BaseModelSchema.safeExtend({
     id: z.string(),
-    organizationId: z.string(),
     orderNumber: z.string().optional(),
     status: z.enum(OrderStatus).default(OrderStatus.PENDING),
     items: z.array(ProductOrderItemSchema).min(1, "Order must have at least one item"),

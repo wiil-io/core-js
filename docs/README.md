@@ -1,4 +1,4 @@
-**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.1**
+**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.2**
 
 ***
 
@@ -6,7 +6,7 @@
 
 **Core schemas for the Wiil platform, providing TypeScript types and validation schemas using Zod.**
 
-[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8.2-blue)](https://www.typescriptlang.org/)
 [![Zod](https://img.shields.io/badge/Zod-4.1.12-red)](https://github.com/colinhacks/zod)
 
@@ -308,19 +308,41 @@ The project uses strict TypeScript settings:
 
 ## Documentation
 
-Comprehensive API documentation is available via TypeDoc. Generate and view locally:
+### API Reference
 
-```bash
-npm run docs
-# Open docs/index.html in your browser
+Complete API documentation is available online:
+
+📖 **[View API Documentation](https://github.com/wiil-io/core-js/tree/main/docs)**
+
+The documentation includes:
+
+- Complete type definitions for all schemas
+- Property descriptions with types and default values
+- Enum values and their meanings
+- JSDoc comments with usage examples
+- Links to source code for each definition
+
+### IDE IntelliSense
+
+All types include comprehensive JSDoc comments that provide inline documentation in your IDE:
+
+```typescript
+import { CustomerSchema } from 'wiil-core-js';
+
+// Hover over CustomerSchema in VS Code to see full documentation
+const customer = CustomerSchema.parse({ /* ... */ });
 ```
 
-Each schema includes:
-- Detailed JSDoc comments
-- Usage examples
-- Property descriptions
-- Type information
-- Validation rules
+### Generate Locally
+
+You can also generate and view the documentation locally:
+
+```bash
+npm run docs        # Generate documentation
+npm run docs:watch  # Watch mode - regenerate on changes
+```
+
+The generated documentation will be available in the `docs/` folder.
 
 ## Type Exports
 
@@ -386,7 +408,7 @@ Contributions are welcome! Please ensure:
 
 ## License
 
-ISC License - see LICENSE file for details
+MIT License - see [LICENSE](_media/LICENSE) file for details
 
 ## Keywords
 
@@ -407,3 +429,15 @@ For issues, questions, or contributions, please refer to the project repository.
 
 **Version**: 0.0.1
 **Author**: WIIL
+
+## Modules
+
+| Module | Description |
+| ------ | ------ |
+| [account](account/README.md) | - |
+| [business-mgt](business-mgt/README.md) | - |
+| [conversation](conversation/README.md) | - |
+| [service-configuration](service-configuration/README.md) | - |
+| [type-definitions](type-definitions/README.md) | - |
+| [validators](validators/README.md) | - |
+| [request](request/README.md) | - |

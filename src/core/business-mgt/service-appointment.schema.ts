@@ -12,7 +12,6 @@ import { AppointmentStatus, CalendarProvider } from "../type-definitions";
  *
  * @typedef {Object} ServiceAppointment
  * @property {string} businessServiceId - ID of the service being booked
- * @property {string} organizationId - Business account ID
  * @property {string} customerId - Customer ID if registered
  * @property {string} [customerName] - Customer's full name
  * @property {string} [customerEmail] - Customer's email address
@@ -31,7 +30,6 @@ import { AppointmentStatus, CalendarProvider } from "../type-definitions";
  */
 export const ServiceAppointmentSchema = BaseModelSchema.safeExtend({
     businessServiceId: z.string(),
-    organizationId: z.string(),
     customerId: z.string(),
     customerName: z.string().optional(),
     customerEmail: z.email().optional(),

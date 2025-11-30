@@ -52,7 +52,6 @@ export const MobileAppChannelConfigSchema = z.object({
  *
  * @typedef {Object} BaseDeploymentChannelProperties
  * @property {string} id - Unique identifier for the deployment channel
- * @property {string} organizationId - ID of the organization that owns this channel
  * @property {DeploymentType} deploymentType - Type of deployment (calls, SMS, web, mobile)
  * @property {string} [channelName] - Human-readable name for the channel
  * @property {boolean} recordingEnabled - Whether interactions should be recorded (default: true)
@@ -60,7 +59,6 @@ export const MobileAppChannelConfigSchema = z.object({
  * @property {number} [updatedAt] - Timestamp when last updated
  */
 const BaseDeploymentChannelSchema = BaseModelSchema.safeExtend({
-    organizationId: z.string(),
     deploymentType: z.enum(DeploymentType),
     channelName: z.string().optional(),
     recordingEnabled: z.boolean().default(true),
@@ -72,13 +70,12 @@ const BaseDeploymentChannelSchema = BaseModelSchema.safeExtend({
  * @example
  * ```typescript
  * const callChannel: CallChannelType = {
- *   id: 'chan-123',
- *   organizationId: 'org-456',
+ *   id: '123*',
  *   channelIdentifier: '+12125551234',
  *   deploymentType: DeploymentType.CALLS,
  *   recordingEnabled: true,
  *   configuration: {
- *     phoneConfigurationId: 'phone-config-789',
+ *     phoneConfigurationId: '789*',
  *     hasForwardingEnabled: false
  *   }
  * };
@@ -173,7 +170,6 @@ export type CreateMobileAppChannel = z.infer<typeof CreateMobileAppChannelSchema
  * Flexible schema that validates based on deployment type.
  */
 export const DeploymentChannelRequestSchema = z.object({
-    organizationId: z.string(),
     deploymentType: z.enum(DeploymentType),
     channelName: z.string().optional(),
     recordingEnabled: z.boolean().default(true),
@@ -258,7 +254,6 @@ export type CreateDeploymentChannel = z.infer<typeof CreateDeploymentChannelSche
  */
 export const DeploymentChannelUpdateRequestSchema = z.object({
     id: z.string(),
-    organizationId: z.string().optional(),
     deploymentType: z.enum(DeploymentType).optional(),
     channelName: z.string().optional(),
     recordingEnabled: z.boolean().optional(),
@@ -332,7 +327,6 @@ export type DeploymentChannelUpdateRequest = z.infer<typeof ChannelUpdateRequest
  */
 export const DeploymentChannelWithDeploymentSchema = z.object({
     id: z.string(),
-    organizationId: z.string(),
     deploymentType: z.enum(DeploymentType),
     channelName: z.string().optional(),
     recordingEnabled: z.boolean().default(true),
@@ -345,7 +339,6 @@ export const DeploymentChannelWithDeploymentSchema = z.object({
     deployment: z.object({
         id: z.string(),
         projectId: z.string(),
-        organizationId: z.string(),
         deploymentChannelId: z.string(),
         deploymentName: z.string().optional(),
         agentConfigurationId: z.string(),

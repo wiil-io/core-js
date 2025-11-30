@@ -17,7 +17,6 @@ import { BusinessSupportServices } from "../type-definitions/account-definitions
  * @property {string} id - Unique identifier for the instruction configuration
  * @property {string} instructionName - System-readable name (auto-generated based on role)
  * @property {string} role - The role or persona the agent should adopt
- * @property {string} organizationId - ID of the organization that owns this configuration
  * @property {string} introductionMessage - Initial greeting message presented when starting a conversation
  * @property {string} instructions - Detailed instructions guiding agent behavior and responses
  * @property {string} guardrails - Safety and behavioral constraints the agent must follow
@@ -36,15 +35,14 @@ import { BusinessSupportServices } from "../type-definitions/account-definitions
  * @example
  * ```typescript
  * const instructionConfig: InstructionConfiguration = {
- *   id: 'inst-123',
+ *   id: '123*',
  *   instructionName: 'customer-support-agent',
  *   role: 'Customer Support Specialist',
- *   organizationId: 'org-456',
  *   introductionMessage: 'Hello! How can I help you today?',
  *   instructions: 'You are a helpful customer support agent...',
  *   guardrails: 'Never share sensitive customer data...',
  *   supportedServices: [BusinessSupportServices.APPOINTMENT_MANAGEMENT],
- *   knowledgeSourceIds: ['kb-789'],
+ *   knowledgeSourceIds: ['789*'],
  *   isTemplate: false,
  *   isPrimary: false,
  *   createdAt: Date.now(),
@@ -55,7 +53,6 @@ import { BusinessSupportServices } from "../type-definitions/account-definitions
 export const InstructionConfigurationSchema = BaseModelSchema.safeExtend({
     instructionName: z.string(),
     role: z.string(),
-    organizationId: z.string(),
     introductionMessage: z.string(),
     instructions: z.string(),
     guardrails: z.string(),
@@ -92,12 +89,11 @@ export type InstructionConfiguration = z.infer<typeof InstructionConfigurationSc
  * const newInstruction: CreateInstructionConfiguration = {
  *   instructionName: 'sales-agent',
  *   role: 'Sales Representative',
- *   organizationId: 'org-456',
  *   introductionMessage: 'Hi! I can help you find the perfect solution.',
  *   instructions: 'You are a knowledgeable sales agent...',
  *   guardrails: 'Always be honest about product capabilities...',
  *   supportedServices: [BusinessSupportServices.PRODUCT_ORDER_MANAGEMENT],
- *   knowledgeSourceIds: ['kb-123'],
+ *   knowledgeSourceIds: ['123*'],
  *   isTemplate: false,
  *   isPrimary: false
  * };
@@ -130,7 +126,7 @@ export type CreateInstructionConfiguration = z.infer<typeof CreateInstructionCon
  * @example
  * ```typescript
  * const updateInstruction: UpdateInstructionConfiguration = {
- *   id: 'inst-123',
+ *   id: '123*',
  *   introductionMessage: 'Hello! How may I assist you today?',
  *   guardrails: 'Updated safety guidelines...'
  * };

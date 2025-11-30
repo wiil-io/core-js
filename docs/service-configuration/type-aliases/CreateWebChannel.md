@@ -1,0 +1,45 @@
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.2**](../../README.md)
+
+***
+
+[Wiil Platform JavaScript Data Model Definitions - API Reference](../../README.md) / [service-configuration](../README.md) / CreateWebChannel
+
+# Type Alias: CreateWebChannel
+
+```ts
+type CreateWebChannel = {
+  channelName?: string;
+  recordingEnabled: boolean;
+  channelIdentifier: string;
+  deploymentType: WEB;
+  configuration: {
+     communicationType: OttCommunicationType;
+     customCssUrl: string | null;
+     widgetConfiguration?: {
+        position: "left" | "right";
+        theme: "custom" | "light" | "dark";
+        customTheme: Record<string, string>;
+     };
+  };
+};
+```
+
+Defined in: [src/core/service-configuration/interaction-channels.schema.ts:160](https://github.com/wiil-io/core-js/blob/e764a5e50337be928fa12d95132bc367a4a9284a/src/core/service-configuration/interaction-channels.schema.ts#L160)
+
+Type definition for creating a web channel.
+
+## Type Declaration
+
+| Name | Type | Default value | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="channelname"></a> `channelName?` | `string` | - | [src/core/service-configuration/interaction-channels.schema.ts:63](https://github.com/wiil-io/core-js/blob/e764a5e50337be928fa12d95132bc367a4a9284a/src/core/service-configuration/interaction-channels.schema.ts#L63) |
+| <a id="recordingenabled"></a> `recordingEnabled` | `boolean` | - | [src/core/service-configuration/interaction-channels.schema.ts:64](https://github.com/wiil-io/core-js/blob/e764a5e50337be928fa12d95132bc367a4a9284a/src/core/service-configuration/interaction-channels.schema.ts#L64) |
+| <a id="channelidentifier"></a> `channelIdentifier` | `string` | - | [src/core/service-configuration/interaction-channels.schema.ts:103](https://github.com/wiil-io/core-js/blob/e764a5e50337be928fa12d95132bc367a4a9284a/src/core/service-configuration/interaction-channels.schema.ts#L103) |
+| <a id="deploymenttype"></a> `deploymentType` | [`WEB`](../../type-definitions/enumerations/DeploymentType.md#web) | - | [src/core/service-configuration/interaction-channels.schema.ts:104](https://github.com/wiil-io/core-js/blob/e764a5e50337be928fa12d95132bc367a4a9284a/src/core/service-configuration/interaction-channels.schema.ts#L104) |
+| <a id="configuration"></a> `configuration` | \{ `communicationType`: [`OttCommunicationType`](../../type-definitions/enumerations/OttCommunicationType.md); `customCssUrl`: `string` \| `null`; `widgetConfiguration?`: \{ `position`: `"left"` \| `"right"`; `theme`: `"custom"` \| `"light"` \| `"dark"`; `customTheme`: `Record`\<`string`, `string`\>; \}; \} | `WebChannelConfigSchema` | [src/core/service-configuration/interaction-channels.schema.ts:105](https://github.com/wiil-io/core-js/blob/e764a5e50337be928fa12d95132bc367a4a9284a/src/core/service-configuration/interaction-channels.schema.ts#L105) |
+| `configuration.communicationType` | [`OttCommunicationType`](../../type-definitions/enumerations/OttCommunicationType.md) | - | [src/core/service-configuration/interaction-channels.schema.ts:31](https://github.com/wiil-io/core-js/blob/e764a5e50337be928fa12d95132bc367a4a9284a/src/core/service-configuration/interaction-channels.schema.ts#L31) |
+| `configuration.customCssUrl` | `string` \| `null` | - | [src/core/service-configuration/interaction-channels.schema.ts:32](https://github.com/wiil-io/core-js/blob/e764a5e50337be928fa12d95132bc367a4a9284a/src/core/service-configuration/interaction-channels.schema.ts#L32) |
+| `configuration.widgetConfiguration?` | \{ `position`: `"left"` \| `"right"`; `theme`: `"custom"` \| `"light"` \| `"dark"`; `customTheme`: `Record`\<`string`, `string`\>; \} | - | [src/core/service-configuration/interaction-channels.schema.ts:33](https://github.com/wiil-io/core-js/blob/e764a5e50337be928fa12d95132bc367a4a9284a/src/core/service-configuration/interaction-channels.schema.ts#L33) |
+| `configuration.widgetConfiguration.position` | `"left"` \| `"right"` | - | [src/core/service-configuration/interaction-channels.schema.ts:34](https://github.com/wiil-io/core-js/blob/e764a5e50337be928fa12d95132bc367a4a9284a/src/core/service-configuration/interaction-channels.schema.ts#L34) |
+| `configuration.widgetConfiguration.theme` | `"custom"` \| `"light"` \| `"dark"` | - | [src/core/service-configuration/interaction-channels.schema.ts:35](https://github.com/wiil-io/core-js/blob/e764a5e50337be928fa12d95132bc367a4a9284a/src/core/service-configuration/interaction-channels.schema.ts#L35) |
+| `configuration.widgetConfiguration.customTheme` | `Record`\<`string`, `string`\> | - | [src/core/service-configuration/interaction-channels.schema.ts:36](https://github.com/wiil-io/core-js/blob/e764a5e50337be928fa12d95132bc367a4a9284a/src/core/service-configuration/interaction-channels.schema.ts#L36) |

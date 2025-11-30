@@ -8,7 +8,6 @@ import { BaseModelSchema } from "../base.schema";
 
 
 export const MenuCategorySchema = BaseModelSchema.safeExtend({
-    organizationId: z.string(),
     name: z.string().min(1, "Category name is required"),
     description: z.string().optional(),
     displayOrder: z.number().int().optional(),
@@ -17,7 +16,6 @@ export const MenuCategorySchema = BaseModelSchema.safeExtend({
 
 export const BusinessMenuItemSchema = BaseModelSchema.safeExtend({
     id: z.string(),
-    organizationId: z.string(),
     name: z.string().min(1, "Menu item name is required"),
     description: z.string().optional(),
 
@@ -46,7 +44,6 @@ export const BusinessMenuItemSchema = BaseModelSchema.safeExtend({
 // Simple QR code for menu
 export const MenuQRCodeSchema = z.object({
     id: z.string(),
-    organizationId: z.string(),
     menuUrl: z.string().url(),
     qrCodeImage: z.string().optional(),
     tableNumber: z.string().optional(),

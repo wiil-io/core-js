@@ -11,7 +11,6 @@ import { BaseModelSchema } from "../base.schema";
  *
  * @typedef {Object} ProductCategory
  * @property {string} id - Unique category ID
- * @property {string} organizationId - Business account ID
  * @property {string} name - Category name (e.g., Electronics, Clothing)
  * @property {string} [description] - Category description
  * @property {number} [displayOrder] - Display order in catalog
@@ -19,7 +18,6 @@ import { BaseModelSchema } from "../base.schema";
  */
 export const ProductCategorySchema = BaseModelSchema.safeExtend({
     id: z.string(),
-    organizationId: z.string(),
     name: z.string().min(1, "Category name is required"),
     description: z.string().optional(),
     displayOrder: z.number().int().optional(),
@@ -31,7 +29,6 @@ export const ProductCategorySchema = BaseModelSchema.safeExtend({
  *
  * @typedef {Object} BusinessProduct
  * @property {string} id - Unique product ID
- * @property {string} organizationId - Business account ID
  * @property {string} name - Product name
  * @property {string} [description] - Product description
  * @property {number} price - Product price
@@ -50,7 +47,6 @@ export const ProductCategorySchema = BaseModelSchema.safeExtend({
  */
 export const BusinessProductSchema = BaseModelSchema.safeExtend({
     id: z.string(),
-    organizationId: z.string(),
     name: z.string().min(1, "Product name is required"),
     description: z.string().optional(),
 

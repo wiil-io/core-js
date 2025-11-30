@@ -45,7 +45,6 @@ export const RentalResourceSchema = z.object({
  * Main resource schema for managing reservable resources.
  *
  * @typedef {Object} Resource
- * @property {string} organizationId - Business account ID
  * @property {string} resourceType - Type of resource
  * @property {string} name - Name of the resource (table, room, etc.)
  * @property {string} [description] - Description of the resource
@@ -63,7 +62,6 @@ export const RentalResourceSchema = z.object({
  * @property {Object} [metadata] - Additional metadata for other resource types
  */
 export const ResourceSchema = BaseModelSchema.safeExtend({
-    organizationId: z.string(),
     resourceType: z.enum(ResourceType),
     name: z.string(),
     description: z.string().optional(),

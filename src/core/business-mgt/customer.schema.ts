@@ -18,7 +18,6 @@ const phoneNumberSchema = z.string()
  * Customer schema - Individual customer record.
  *
  * @typedef {Object} Customer
- * @property {string} organizationId - Business account ID that owns this customer record
  * @property {string} [customerId] - External system customer ID for integration purposes
  * @property {string} [phone_number] - Customer's primary phone number in E.164 format
  * @property {string} [firstname] - Customer's first name
@@ -38,7 +37,6 @@ const phoneNumberSchema = z.string()
  * @property {boolean} isValidatedNames - Whether the customer's name has been validated for accuracy
  */
 export const CustomerSchema = BaseModelSchema.safeExtend({
-    organizationId: z.string(),
     customerId: z.string().nullable().optional(),
     phone_number: phoneNumberSchema.nullable().optional(),
     firstname: z.string().nullable().optional(),

@@ -56,7 +56,6 @@ export const MenuOrderItemSchema = MenuOrderItemBaseSchema.safeExtend({
  *
  * @typedef {Object} MenuOrder
  * @property {string} id - Unique order ID
- * @property {string} organizationId - Business account ID
  * @property {string} [orderNumber] - Human-readable order number
  * @property {string} type - Order type (dine-in, takeout, delivery)
  * @property {string} status - Current order status
@@ -83,7 +82,6 @@ export const MenuOrderItemSchema = MenuOrderItemBaseSchema.safeExtend({
  */
 export const MenuOrderSchema = BaseModelSchema.safeExtend({
     id: z.string(),
-    organizationId: z.string(),
     orderNumber: z.string().optional(),
 
     type: z.enum(MenuOrderType),

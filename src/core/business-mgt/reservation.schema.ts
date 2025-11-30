@@ -11,7 +11,6 @@ import { AppointmentStatus, ReservationSettingType, ResourceReservationDurationU
  * Reservation settings schema.
  *
  * @typedef {Object} ReservationSettings
- * @property {string} organizationId - Business account ID
  * @property {string} reservationType - Type of reservation (table, room, rentals, etc.)
  * @property {string} settingType - Type of reservation setting
  * @property {number} [defaultReservationDuration] - Default reservation duration
@@ -19,7 +18,6 @@ import { AppointmentStatus, ReservationSettingType, ResourceReservationDurationU
  * @property {boolean} isActive - Whether this reservation setting is active
  */
 export const ReservationSettingsSchema = BaseModelSchema.safeExtend({
-    organizationId: z.string(),
     reservationType: z.enum(ResourceType),
     settingType: z.enum(ReservationSettingType),
 
@@ -56,7 +54,6 @@ export type UpdateReservationSettings = z.infer<typeof UpdateReservationSettings
  * Reservation schema for managing bookings.
  *
  * @typedef {Object} Reservation
- * @property {string} organizationId - Business account ID
  * @property {string} reservationType - Type of reservation
  * @property {string} [resourceId] - ID of the reserved resource (table, room, etc.)
  * @property {string} customerId - Customer ID if registered
@@ -75,7 +72,6 @@ export type UpdateReservationSettings = z.infer<typeof UpdateReservationSettings
  * @property {string} [serviceConversationConfigId] - Configuration ID for service conversation
  */
 export const ReservationSchema = BaseModelSchema.safeExtend({
-    organizationId: z.string(),
     reservationType: z.enum(ResourceType),
     resourceId: z.string().optional().nullable(),
     customerId: z.string(),

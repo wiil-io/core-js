@@ -1,5 +1,15 @@
 {
-  "entryPoints": ["src/index.ts"],
+  "entryPoints": [
+    "src/core/account/index.ts",
+    "src/core/base/index.ts",
+    "src/core/business-mgt/index.ts",
+    "src/core/conversation/index.ts",
+    "src/core/service-configuration/index.ts",
+    "src/core/type-definitions/index.ts",
+    "src/core/validators/index.ts",
+    "src/request/index.ts"
+  ],
+  "entryPointStrategy": "expand",
   "out": "docs",
   "plugin": ["typedoc-plugin-markdown", "typedoc-plugin-zod"],
   "excludePrivate": true,
@@ -17,6 +27,7 @@
   },
   "outputFileStrategy": "members",
   "flattenOutputFiles": false,
+  "mergeReadme": true,
   "useCodeBlocks": true,
   "expandObjects": true,
   "parametersFormat": "table",

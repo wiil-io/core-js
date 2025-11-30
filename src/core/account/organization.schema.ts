@@ -29,8 +29,8 @@ import { BaseModelSchema } from '../base.schema';
  * @example
  * ```typescript
  * const statusRecord: OrganizationServiceStatusRecord = {
- *   id: 'status-123',
- *   organizationId: 'org-456',
+ *   id: '123*',
+ *   organizationId: '456*',
  *   status: ServiceStatus.SUSPENDED,
  *   previousStatus: ServiceStatus.ACTIVE,
  *   suspensionType: ServiceSuspensionType.QUOTA_EXCEEDED,
@@ -79,7 +79,7 @@ export type OrganizationServiceStatusRecord = z.infer<typeof OrganizationService
  * @example
  * ```typescript
  * const organization: Organization = {
- *   id: 'org-123',
+ *   id: '123*',
  *   companyName: 'Acme Corporation',
  *   primaryRegionId: 'us-west',
  *   businessVerticalId: 'tech-saas',
