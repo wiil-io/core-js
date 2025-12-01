@@ -19,8 +19,6 @@ import { ServiceStatus } from '../type-definitions';
  * @property {string} [regionId] - Geographic region ID for this project (optional, can inherit from organization)
  * @property {string} [description] - Optional description of the project's purpose
  * @property {string[]} [compliance] - Optional array of compliance standards this project adheres to
- * @property {boolean} [hasQuota=false] - Whether quota limits are enforced for this project
- * @property {boolean} [hasRate=false] - Whether rate limits are enforced for this project
  * @property {string | null} [currentSubscriptionId] - ID of the current subscription plan for this project
  * @property {boolean} isDefault - Whether this is the default project for the organization
  * @property {ServiceStatus} serviceStatus - Current service status (default: ACTIVE)
@@ -36,8 +34,6 @@ import { ServiceStatus } from '../type-definitions';
  *   regionId: 'us-west-2',
  *   description: 'Main production deployment project',
  *   compliance: ['SOC2', 'HIPAA'],
- *   hasQuota: true,
- *   hasRate: true,
  *   isDefault: true,
  *   serviceStatus: ServiceStatus.ACTIVE,
  *   currentSubscriptionId: '789*',
@@ -52,8 +48,6 @@ export const ProjectSchema = BaseModelSchema.safeExtend({
     regionId: z.string().optional().describe("Geographic region ID for this project (optional, can inherit from organization)"),
     description: z.string().optional().describe("Optional description of the project's purpose"),
     compliance: z.string().array().optional().describe("Array of compliance standards this project adheres to (e.g., SOC2, HIPAA)"),
-    hasQuota: z.boolean().optional().default(false).describe("Whether quota limits are enforced for this project"),
-    hasRate: z.boolean().optional().default(false).describe("Whether rate limits are enforced for this project"),
     currentSubscriptionId: z.string().optional().nullable().describe("ID of the current subscription plan for this project"),
     isDefault: z.boolean().describe("Whether this is the default project for the organization (system-managed flag, set automatically on creation)"),
     serviceStatus: z.enum(ServiceStatus).default(ServiceStatus.ACTIVE).describe("Current service status of the project"),
@@ -63,13 +57,12 @@ export const ProjectSchema = BaseModelSchema.safeExtend({
 /**
  * Zod schema for creating a new project.
  *
- * Omits auto-generated fields (id, timestamps) that are populated by the system.
- * The isDefault field is included and can be set during creation for system operations.
+ * Omits auto-generated fields (id, timestamps) and system-managed fields (isDefault)
+ * that are populated by the system.
  *
  * @remarks
  * Use this schema when creating new projects within an organization.
- * The isDefault flag should typically be set by system operations to designate
- * the default project for an organization.
+ * All required fields must be provided.
  *
  * @example
  * ```typescript
@@ -78,9 +71,6 @@ export const ProjectSchema = BaseModelSchema.safeExtend({
  *   regionId: 'us-east-1',
  *   description: 'Development and testing project',
  *   compliance: ['SOC2'],
- *   hasQuota: true,
- *   hasRate: false,
- *   isDefault: false,
  *   serviceStatus: ServiceStatus.ACTIVE,
  *   metadata: { environment: 'development' }
  * };
@@ -90,6 +80,7 @@ export const CreateProjectSchema = ProjectSchema.omit({
     id: true,
     createdAt: true,
     updatedAt: true,
+    isDefault: true,
 });
 
 /**
