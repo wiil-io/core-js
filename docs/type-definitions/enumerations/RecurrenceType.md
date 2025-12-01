@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.4**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.5**](../../README.md)
 
 ***
 
@@ -6,13 +6,13 @@
 
 # Enumeration: RecurrenceType
 
-Defined in: [src/core/type-definitions/business-definitions.ts:53](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/type-definitions/business-definitions.ts#L53)
+Defined in: [src/core/type-definitions/business-definitions.ts:53](https://github.com/wiil-io/core-js/blob/376fc7af7b7b381dfd7c674140b3d9eb8e4bd0c3/src/core/type-definitions/business-definitions.ts#L53)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="none"></a> `NONE` | `"none"` | [src/core/type-definitions/business-definitions.ts:54](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/type-definitions/business-definitions.ts#L54) |
-| <a id="daily"></a> `DAILY` | `"daily"` | [src/core/type-definitions/business-definitions.ts:55](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/type-definitions/business-definitions.ts#L55) |
-| <a id="weekly"></a> `WEEKLY` | `"weekly"` | [src/core/type-definitions/business-definitions.ts:56](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/type-definitions/business-definitions.ts#L56) |
-| <a id="monthly"></a> `MONTHLY` | `"monthly"` | [src/core/type-definitions/business-definitions.ts:57](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/type-definitions/business-definitions.ts#L57) |
+| <a id="none"></a> `NONE` | `"none"` | [src/core/type-definitions/business-definitions.ts:54](https://github.com/wiil-io/core-js/blob/376fc7af7b7b381dfd7c674140b3d9eb8e4bd0c3/src/core/type-definitions/business-definitions.ts#L54) |
+| <a id="daily"></a> `DAILY` | `"daily"` | [src/core/type-definitions/business-definitions.ts:55](https://github.com/wiil-io/core-js/blob/376fc7af7b7b381dfd7c674140b3d9eb8e4bd0c3/src/core/type-definitions/business-definitions.ts#L55) |
+| <a id="weekly"></a> `WEEKLY` | `"weekly"` | [src/core/type-definitions/business-definitions.ts:56](https://github.com/wiil-io/core-js/blob/376fc7af7b7b381dfd7c674140b3d9eb8e4bd0c3/src/core/type-definitions/business-definitions.ts#L56) |
+| <a id="monthly"></a> `MONTHLY` | `"monthly"` | [src/core/type-definitions/business-definitions.ts:57](https://github.com/wiil-io/core-js/blob/376fc7af7b7b381dfd7c674140b3d9eb8e4bd0c3/src/core/type-definitions/business-definitions.ts#L57) |

@@ -64,7 +64,6 @@ export type OrganizationServiceStatusRecord = z.infer<typeof OrganizationService
  * @typedef {Object} OrganizationProperties
  * @property {string} id - Unique identifier for the organization
  * @property {string} companyName - Organization's company name (minimum 2 characters)
- * @property {string} primaryRegionId - Primary geographic region ID for the organization (minimum 3 characters)
  * @property {SupportedBusinessVerticalId | null} [businessVerticalId] - Business industry vertical classification ID
  * @property {Record<string, any>} [metadata] - Additional custom metadata for the organization
  * @property {ServiceStatus} serviceStatus - Current service status (default: ACTIVE)

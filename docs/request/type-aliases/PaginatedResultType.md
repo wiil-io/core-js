@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.4**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.5**](../../README.md)
 
 ***
 
@@ -13,7 +13,7 @@ type PaginatedResultType<T> = {
 };
 ```
 
-Defined in: [src/request/models/paginated-result.schema.ts:109](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/request/models/paginated-result.schema.ts#L109)
+Defined in: [src/request/models/paginated-result.schema.ts:109](https://github.com/wiil-io/core-js/blob/376fc7af7b7b381dfd7c674140b3d9eb8e4bd0c3/src/request/models/paginated-result.schema.ts#L109)
 
 Helper type for creating typed paginated results.
 
@@ -27,5 +27,5 @@ Helper type for creating typed paginated results.
 
 | Property | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="data"></a> `data` | `T`[] | [src/request/models/paginated-result.schema.ts:110](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/request/models/paginated-result.schema.ts#L110) |
-| <a id="meta"></a> `meta` | [`PaginationMetaType`](PaginationMetaType.md) | [src/request/models/paginated-result.schema.ts:111](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/request/models/paginated-result.schema.ts#L111) |
+| <a id="data"></a> `data` | `T`[] | [src/request/models/paginated-result.schema.ts:110](https://github.com/wiil-io/core-js/blob/376fc7af7b7b381dfd7c674140b3d9eb8e4bd0c3/src/request/models/paginated-result.schema.ts#L110) |
+| <a id="meta"></a> `meta` | [`PaginationMetaType`](PaginationMetaType.md) | [src/request/models/paginated-result.schema.ts:111](https://github.com/wiil-io/core-js/blob/376fc7af7b7b381dfd7c674140b3d9eb8e4bd0c3/src/request/models/paginated-result.schema.ts#L111) |

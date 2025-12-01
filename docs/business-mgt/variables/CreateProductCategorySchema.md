@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.4**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.5**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const CreateProductCategorySchema: ZodObject<CreateProductCategory>;
 ```
 
-Defined in: [src/core/business-mgt/product-config.schema.ts:84](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/business-mgt/product-config.schema.ts#L84)
+Defined in: [src/core/business-mgt/product-config.schema.ts:84](https://github.com/wiil-io/core-js/blob/376fc7af7b7b381dfd7c674140b3d9eb8e4bd0c3/src/core/business-mgt/product-config.schema.ts#L84)
 
 Schema for creating a new product category.
 Omits auto-generated fields.

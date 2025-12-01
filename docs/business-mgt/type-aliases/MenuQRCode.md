@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.4**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.5**](../../README.md)
 
 ***
 
@@ -15,7 +15,7 @@ type MenuQRCode = {
 };
 ```
 
-Defined in: [src/core/business-mgt/menu-config.schema.ts:112](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/business-mgt/menu-config.schema.ts#L112)
+Defined in: [src/core/business-mgt/menu-config.schema.ts:112](https://github.com/wiil-io/core-js/blob/376fc7af7b7b381dfd7c674140b3d9eb8e4bd0c3/src/core/business-mgt/menu-config.schema.ts#L112)
 
 Type definition for menu QR code.
 
@@ -23,7 +23,7 @@ Type definition for menu QR code.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="id"></a> `id` | `string` | [src/core/business-mgt/menu-config.schema.ts:46](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/business-mgt/menu-config.schema.ts#L46) |
-| <a id="menuurl"></a> `menuUrl` | `string` | [src/core/business-mgt/menu-config.schema.ts:47](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/business-mgt/menu-config.schema.ts#L47) |
-| <a id="qrcodeimage"></a> `qrCodeImage?` | `string` | [src/core/business-mgt/menu-config.schema.ts:48](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/business-mgt/menu-config.schema.ts#L48) |
-| <a id="tablenumber"></a> `tableNumber?` | `string` | [src/core/business-mgt/menu-config.schema.ts:49](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/business-mgt/menu-config.schema.ts#L49) |
+| <a id="id"></a> `id` | `string` | [src/core/business-mgt/menu-config.schema.ts:46](https://github.com/wiil-io/core-js/blob/376fc7af7b7b381dfd7c674140b3d9eb8e4bd0c3/src/core/business-mgt/menu-config.schema.ts#L46) |
+| <a id="menuurl"></a> `menuUrl` | `string` | [src/core/business-mgt/menu-config.schema.ts:47](https://github.com/wiil-io/core-js/blob/376fc7af7b7b381dfd7c674140b3d9eb8e4bd0c3/src/core/business-mgt/menu-config.schema.ts#L47) |
+| <a id="qrcodeimage"></a> `qrCodeImage?` | `string` | [src/core/business-mgt/menu-config.schema.ts:48](https://github.com/wiil-io/core-js/blob/376fc7af7b7b381dfd7c674140b3d9eb8e4bd0c3/src/core/business-mgt/menu-config.schema.ts#L48) |
+| <a id="tablenumber"></a> `tableNumber?` | `string` | [src/core/business-mgt/menu-config.schema.ts:49](https://github.com/wiil-io/core-js/blob/376fc7af7b7b381dfd7c674140b3d9eb8e4bd0c3/src/core/business-mgt/menu-config.schema.ts#L49) |

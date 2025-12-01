@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.4**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.5**](../../README.md)
 
 ***
 
@@ -6,14 +6,14 @@
 
 # Enumeration: AppointmentStatus
 
-Defined in: [src/core/type-definitions/business-definitions.ts:37](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/type-definitions/business-definitions.ts#L37)
+Defined in: [src/core/type-definitions/business-definitions.ts:37](https://github.com/wiil-io/core-js/blob/376fc7af7b7b381dfd7c674140b3d9eb8e4bd0c3/src/core/type-definitions/business-definitions.ts#L37)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="pending"></a> `PENDING` | `"pending"` | [src/core/type-definitions/business-definitions.ts:38](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/type-definitions/business-definitions.ts#L38) |
-| <a id="confirmed"></a> `CONFIRMED` | `"confirmed"` | [src/core/type-definitions/business-definitions.ts:39](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/type-definitions/business-definitions.ts#L39) |
-| <a id="cancelled"></a> `CANCELLED` | `"cancelled"` | [src/core/type-definitions/business-definitions.ts:40](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/type-definitions/business-definitions.ts#L40) |
-| <a id="completed"></a> `COMPLETED` | `"completed"` | [src/core/type-definitions/business-definitions.ts:41](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/type-definitions/business-definitions.ts#L41) |
-| <a id="no_show"></a> `NO_SHOW` | `"no_show"` | [src/core/type-definitions/business-definitions.ts:42](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/type-definitions/business-definitions.ts#L42) |
+| <a id="pending"></a> `PENDING` | `"pending"` | [src/core/type-definitions/business-definitions.ts:38](https://github.com/wiil-io/core-js/blob/376fc7af7b7b381dfd7c674140b3d9eb8e4bd0c3/src/core/type-definitions/business-definitions.ts#L38) |
+| <a id="confirmed"></a> `CONFIRMED` | `"confirmed"` | [src/core/type-definitions/business-definitions.ts:39](https://github.com/wiil-io/core-js/blob/376fc7af7b7b381dfd7c674140b3d9eb8e4bd0c3/src/core/type-definitions/business-definitions.ts#L39) |
+| <a id="cancelled"></a> `CANCELLED` | `"cancelled"` | [src/core/type-definitions/business-definitions.ts:40](https://github.com/wiil-io/core-js/blob/376fc7af7b7b381dfd7c674140b3d9eb8e4bd0c3/src/core/type-definitions/business-definitions.ts#L40) |
+| <a id="completed"></a> `COMPLETED` | `"completed"` | [src/core/type-definitions/business-definitions.ts:41](https://github.com/wiil-io/core-js/blob/376fc7af7b7b381dfd7c674140b3d9eb8e4bd0c3/src/core/type-definitions/business-definitions.ts#L41) |
+| <a id="no_show"></a> `NO_SHOW` | `"no_show"` | [src/core/type-definitions/business-definitions.ts:42](https://github.com/wiil-io/core-js/blob/376fc7af7b7b381dfd7c674140b3d9eb8e4bd0c3/src/core/type-definitions/business-definitions.ts#L42) |

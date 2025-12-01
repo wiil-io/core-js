@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.4**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.5**](../../README.md)
 
 ***
 
@@ -20,7 +20,7 @@ function createPaginatedResultSchema<T>(dataSchema): ZodObject<{
 }, $strip>;
 ```
 
-Defined in: [src/request/models/paginated-result.schema.ts:35](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/request/models/paginated-result.schema.ts#L35)
+Defined in: [src/request/models/paginated-result.schema.ts:35](https://github.com/wiil-io/core-js/blob/376fc7af7b7b381dfd7c674140b3d9eb8e4bd0c3/src/request/models/paginated-result.schema.ts#L35)
 
 Generic function to create a paginated result schema.
 Use this with any data schema to create typed paginated responses.

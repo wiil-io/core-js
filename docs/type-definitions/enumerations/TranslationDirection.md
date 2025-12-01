@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.4**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.5**](../../README.md)
 
 ***
 
@@ -6,11 +6,11 @@
 
 # Enumeration: TranslationDirection
 
-Defined in: [src/core/type-definitions/conversation.type.definition.ts:32](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/type-definitions/conversation.type.definition.ts#L32)
+Defined in: [src/core/type-definitions/conversation.type.definition.ts:32](https://github.com/wiil-io/core-js/blob/376fc7af7b7b381dfd7c674140b3d9eb8e4bd0c3/src/core/type-definitions/conversation.type.definition.ts#L32)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="bidirectional"></a> `BIDIRECTIONAL` | `"bidirectional"` | [src/core/type-definitions/conversation.type.definition.ts:33](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/type-definitions/conversation.type.definition.ts#L33) |
-| <a id="unidirectional"></a> `UNIDIRECTIONAL` | `"unidirectional"` | [src/core/type-definitions/conversation.type.definition.ts:34](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/type-definitions/conversation.type.definition.ts#L34) |
+| <a id="bidirectional"></a> `BIDIRECTIONAL` | `"bidirectional"` | [src/core/type-definitions/conversation.type.definition.ts:33](https://github.com/wiil-io/core-js/blob/376fc7af7b7b381dfd7c674140b3d9eb8e4bd0c3/src/core/type-definitions/conversation.type.definition.ts#L33) |
+| <a id="unidirectional"></a> `UNIDIRECTIONAL` | `"unidirectional"` | [src/core/type-definitions/conversation.type.definition.ts:34](https://github.com/wiil-io/core-js/blob/376fc7af7b7b381dfd7c674140b3d9eb8e4bd0c3/src/core/type-definitions/conversation.type.definition.ts#L34) |

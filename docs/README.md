@@ -1,4 +1,4 @@
-**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.4**
+**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.5**
 
 ***
 
@@ -12,16 +12,25 @@
 
 ## Overview
 
-`wiil-core-js` is a TypeScript-first data model definition library that provides comprehensive type definitions, validation schemas, and data models. It leverages Zod for runtime type validation and offers complete TypeScript support for type safety across your applications.
+`wiil-core-js` provides production-ready TypeScript schemas and Zod validation for the WIIL Platform—an AI-powered conversational services platform that enables organizations to deploy intelligent agents across multiple communication channels (voice, chat, SMS, email) to drive business transactions like appointments, reservations, and orders.
 
-## Features
+This library serves as the single source of truth for data models across the entire WIIL Platform ecosystem, ensuring type safety and runtime validation for:
 
-- **Type-Safe Schemas**: Complete TypeScript definitions with Zod runtime validation
-- **Comprehensive Coverage**: Schemas for accounts, business management, service configuration, and conversations
-- **Modular Architecture**: Organized into logical modules for easy navigation and tree-shaking
-- **Production-Ready**: Built with strict TypeScript compiler settings and comprehensive validation
-- **Well-Documented**: Extensive JSDoc comments with examples and type information
-- **Zero Runtime Dependencies**: Only requires Zod for schema validation
+- **Service Configuration**: AI agent deployment and instruction management
+- **Advanced Service Configuration**: Voice processing with STT, TTS, and Speech-to-Speech pipelines
+- **Translation Services**: Real-time multilingual voice translation
+- **Business Management**: Catalog and transaction management for services, reservations, menus, and products
+- **Conversation Management**: Multi-channel conversation handling and message threading
+
+## Key Features
+
+- **Type-Safe Schemas**: Complete TypeScript definitions with Zod runtime validation for all platform entities
+- **Comprehensive Platform Coverage**: Schemas spanning four integrated domains (Service Config, Voice Processing, Translation, Business Management)
+- **Production-Grade Documentation**: Every schema property includes detailed `.describe()` annotations with architectural context, relationships (1:1, 1:N, N:1), format examples, and use cases
+- **Modular Architecture**: Organized into logical domain modules with clear separation of concerns
+- **Runtime Validation**: Zod-powered validation ensures data integrity at system boundaries
+- **Zero Runtime Dependencies**: Only requires Zod for schema validation—no bloat
+- **IDE-Optimized**: Rich JSDoc comments provide inline documentation and IntelliSense support
 
 ## Installation
 
@@ -61,46 +70,142 @@ const customer = CustomerSchema.parse({
 });
 ```
 
+## Platform Architecture
+
+The WIIL Platform integrates four major architectural domains, with Conversations serving as the central integration hub:
+
+```text
+┌────────────────────────────────────────────────────────────────┐
+│                         ORGANIZATION                            │
+│                              │                                  │
+│              ┌───────────────┴───────────────┐                  │
+│              │                               │                  │
+│              ▼                               ▼                  │
+│   ┌──────────────────────┐      ┌──────────────────────┐       │
+│   │ SERVICE CONFIGURATION│      │  BUSINESS MANAGEMENT │       │
+│   │ (Agent Deployment)   │      │  (Catalog Management)│       │
+│   └──────────┬───────────┘      └──────────┬───────────┘       │
+│              │                             │                   │
+│              │                             │                   │
+│              └──────────┬──────────────────┘                   │
+│                         │                                      │
+│                         ▼                                      │
+│              ┌──────────────────────┐                          │
+│              │   CONVERSATIONS      │◄─── Business Customers   │
+│              │ (Integration Hub)    │                          │
+│              └──────────┬───────────┘                          │
+│                         │                                      │
+│                         │ Creates                              │
+│                         ▼                                      │
+│              ┌──────────────────────┐                          │
+│              │    TRANSACTIONS      │                          │
+│              │ • Appointments       │                          │
+│              │ • Reservations       │                          │
+│              │ • Orders             │                          │
+│              └──────────────────────┘                          │
+└────────────────────────────────────────────────────────────────┘
+```
+
 ## Module Structure
 
-The SDK is organized into the following core modules:
+### Core Domains
 
-### Core Modules
+#### **1. Account Management** (`core/account`)
 
-#### **Account Management** (`core/account`)
-- `OrganizationSchema` - Organization/company account management
-- `ProjectSchema` - Project configuration and settings
-- Service status tracking and audit history
+Multi-tenant organization and project management.
 
-#### **Business Management** (`core/business-mgt`)
-- `CustomerSchema` - Customer records and contact information
-- `OrderSchema` - Order processing and tracking
-- `ProductOrderSchema` - Product-specific order details
-- `MenuOrderSchema` - Menu-based ordering (restaurant/food service)
-- `ReservationSchema` - Reservation booking and management
-- `ReservationResourceSchema` - Resource allocation for reservations
-- `ServiceAppointmentSchema` - Service appointment scheduling
-- `ServicePersonSchema` - Service provider information
-- `MenuConfigSchema` - Menu configuration and items
-- `ProductConfigSchema` - Product catalog configuration
-- `ServiceConfigSchema` - Service offering configuration
+- `OrganizationSchema` - Root account entity with service status, region, and business vertical configuration
+- `ProjectSchema` - Project-level segmentation for team-based access control and deployment organization
 
-#### **Service Configuration** (`core/service-configuration`)
-- `AgentConfigurationSchema` - AI agent configuration and settings
-- `CallTransferConfigSchema` - Call routing and transfer logic
-- `DeploymentConfigSchema` - Deployment channel configuration
-- `InstructionConfigSchema` - Agent instruction and persona settings
-- `InteractionChannelsSchema` - Multi-channel deployment (calls, SMS, web, mobile, WhatsApp, email)
-- `PhoneNumberSchema` - Phone number provisioning and management
-- `VoiceLanguageSchema` - Voice and language settings
-- `ProvisioningConfig` - Resource provisioning configuration
-- `SupportModelSchema` - Supported LLM model registry
+#### **2. Service Configuration** (`core/service-configuration`)
 
-#### **Conversation Management** (`core/conversation`)
-- `ConversationConfigSchema` - Conversation settings and preferences
-- `ConversationMessageSchema` - Message structure and formatting
-- `TranslationConfigSchema` - Translation service configuration
-- `TranslationConversationSchema` - Multi-language conversation support
+Core AI agent deployment system—the heart of agent behavior and multi-channel deployment.
+
+**Instruction & Agent Configuration:**
+
+- `InstructionConfigurationSchema` - **The heart of agent behavior**: system prompts, guidelines, compliance rules, and escalation criteria (1:N relationship with Agent Configurations)
+- `AgentConfigurationSchema` - AI agent capabilities, LLM model selection, and operational mode (TEXT, VOICE, MULTI_MODE)
+
+**Deployment & Channels:**
+
+- `DeploymentConfigurationSchema` - Central composition entity combining agent, instruction, and channel configurations
+- `InteractionChannelsSchema` - Multi-channel deployment (OTT_CHAT, TELEPHONY_CALL, SMS, EMAIL, WHATSAPP)
+- `PhoneConfigurationSchema` - Telephony channel configuration with provider integration
+- `PhoneNumberSchema` - Phone number purchase lifecycle and provisioning
+
+**Voice & Translation:**
+
+- `VoiceLanguageSchema` - Voice and language settings for telephony deployments
+- `ProvisioningConfigChainSchema` - STT → Agent → TTS processing pipeline configuration
+- `CallTransferConfigSchema` - Call routing and escalation to human agents (blind/warm transfers)
+
+**Knowledge & Models:**
+
+- `KnowledgeSchema` - Knowledge source management for agent context (vector stores, file uploads, web scraping)
+- `SupportedLLMSchema` - Registry of supported AI models from OpenAI, Anthropic, Google, Meta, etc.
+
+#### **3. Advanced Service Configuration** (Voice Processing)
+Voice processing pipelines for Speech-to-Text, Text-to-Speech, and Speech-to-Speech.
+
+- `ProvisioningConfigChainSchema` with `provisioningType`:
+  - **DIRECT**: Agent processes interactions directly (text-based channels)
+  - **CHAINED**: STT → Agent → TTS pipeline (voice channels)
+  - **SPEECH_TO_SPEECH**: Direct voice-to-voice processing (ultra-low latency)
+
+**Supported Providers:**
+- **STT**: Deepgram, OpenAI Whisper, Cartesia, Google STT, Azure STT
+- **TTS**: ElevenLabs, Cartesia, OpenAI, PlayHT, Google TTS, Azure TTS
+- **STS**: Gemini Live, OpenAI Realtime
+
+#### **4. Translation Services** (`core/conversation/translation-*.schema.ts`)
+
+Real-time multilingual voice-to-voice translation.
+
+- `TranslationServiceRequestSchema` - Initiate translation sessions between participants speaking different languages
+- `TranslationConversationConfigSchema` - WebRTC connection credentials and channel identifiers
+- `TranslationParticipantSchema` - Participant language preferences, authentication tokens, and message history
+- `TranslationServiceLogSchema` - Complete translation session record with bidirectional/unidirectional support
+- `TranslationMessageSchema` - Individual translation interaction (original text, translated text, languages, timestamps)
+
+#### **5. Conversation Management** (`core/conversation`)
+
+**Conversations** is the central integration hub connecting Service Configuration with Business Management.
+
+- `ServiceConversationConfigSchema` - Complete conversation record linking deployment config, instruction config, customer, channel, and messages
+- `ConversationMessageSchema` - Message threading with user/assistant message types (chat and email variants)
+- `ConversationSummarySchema` - AI-generated conversation summaries with key points, action items, and sentiment analysis
+- `ConversationStateHistorySchema` - Audit trail of status changes (ACTIVE → COMPLETED/TRANSFERRED/ABANDONED)
+
+**Conversation Types:** OTT_CHAT, TELEPHONY_CALL, SMS, EMAIL, WHATSAPP
+
+#### **6. Business Management** (`core/business-mgt`)
+
+Business entity catalogs and transactional operations.
+
+**Customer Management:**
+
+- `CustomerSchema` - Customer records with phone number normalization, language preferences, and contact methods
+
+**Service Catalog:**
+
+- `ServiceConfigSchema` - Bookable services (appointments, consultations, sessions)
+- `ServiceAppointmentSchema` - Service appointment scheduling with calendar integration
+- `ServicePersonSchema` - Service provider/staff information
+
+**Resource Management:**
+
+- `ReservationResourceSchema` - Reservable assets (tables, rooms, equipment, vehicles)
+- `ReservationSchema` - Resource reservation booking and management
+
+**Menu Management:**
+
+- `MenuConfigSchema` - Food/beverage menu structure with categories and items
+- `MenuOrderSchema` - Menu-based ordering for restaurants and food service
+
+**Product Catalog:**
+
+- `ProductConfigSchema` - Retail product catalog with categories and inventory
+- `ProductOrderSchema` - Product order processing and tracking
 
 #### **Type Definitions** (`core/type-definitions`)
 Comprehensive enumerations and type definitions:
@@ -139,11 +244,11 @@ const organization = OrganizationSchema.parse({
   id: 'org-456',
   companyName: 'Tech Startup Inc',
   primaryRegionId: 'us-east',
-  businessVerticalId: 'tech-saas',
+  businessVerticalId: 'technology',
   serviceStatus: ServiceStatus.ACTIVE,
   platformEmail: 'techstartup@mg.wiil.io',
   metadata: {
-    industry: 'technology',
+    industry: 'SaaS',
     employeeCount: 50
   }
 });
