@@ -16,7 +16,7 @@ import { ServiceStatus } from '../type-definitions';
  * @typedef {Object} ProjectProperties
  * @property {string} id - Unique identifier for the project
  * @property {string} name - Project name (minimum 2 characters)
- * @property {string} regionId - Geographic region ID for this project (minimum 3 characters)
+ * @property {string} [regionId] - Geographic region ID for this project (optional, can inherit from organization)
  * @property {string} [description] - Optional description of the project's purpose
  * @property {string[]} [compliance] - Optional array of compliance standards this project adheres to
  * @property {boolean} [hasQuota=false] - Whether quota limits are enforced for this project
@@ -49,13 +49,13 @@ import { ServiceStatus } from '../type-definitions';
  */
 export const ProjectSchema = BaseModelSchema.safeExtend({
     name: z.string().min(2).describe("Project name (minimum 2 characters)"),
-    regionId: z.string().min(3).describe("Geographic region ID for this project"),
+    regionId: z.string().optional().describe("Geographic region ID for this project (optional, can inherit from organization)"),
     description: z.string().optional().describe("Optional description of the project's purpose"),
     compliance: z.string().array().optional().describe("Array of compliance standards this project adheres to (e.g., SOC2, HIPAA)"),
     hasQuota: z.boolean().optional().default(false).describe("Whether quota limits are enforced for this project"),
     hasRate: z.boolean().optional().default(false).describe("Whether rate limits are enforced for this project"),
     currentSubscriptionId: z.string().optional().nullable().describe("ID of the current subscription plan for this project"),
-    isDefault: z.boolean().describe("Whether this is the default project for the organization"),
+    isDefault: z.boolean().describe("Whether this is the default project for the organization (system-managed flag, set automatically on creation)"),
     serviceStatus: z.enum(ServiceStatus).default(ServiceStatus.ACTIVE).describe("Current service status of the project"),
     metadata: z.record(z.string(), z.any()).optional().describe("Additional custom metadata for the project"),
 });
@@ -64,10 +64,12 @@ export const ProjectSchema = BaseModelSchema.safeExtend({
  * Zod schema for creating a new project.
  *
  * Omits auto-generated fields (id, timestamps) that are populated by the system.
+ * The isDefault field is included and can be set during creation for system operations.
  *
  * @remarks
  * Use this schema when creating new projects within an organization.
- * All required fields must be provided.
+ * The isDefault flag should typically be set by system operations to designate
+ * the default project for an organization.
  *
  * @example
  * ```typescript
