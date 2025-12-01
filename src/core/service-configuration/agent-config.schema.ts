@@ -6,29 +6,49 @@ import { CallTransferConfigSchema } from "./call-transfer-config.schema";
 
 /**
  * @fileoverview Agent configuration schema definitions.
+ *
+ * Agent Configurations define the core behavior, capabilities, and personality of AI agents.
+ * They reference LLM models and instruction configurations, and can be reused across multiple
+ * deployments. The Instruction Configuration (1:N relationship) governs agent behavior.
+ *
  * @module service-configuration/agent-config
  */
 
 /**
  * Zod schema for Agent Configuration validation.
  *
- * Defines the complete configuration for an AI agent, including model selection,
- * operational modes, instruction sets, and telephony features.
+ * Agent Configurations define the core behavior, capabilities, and personality of AI agents in the
+ * Service Configuration architecture. They are designed to be reusable across multiple deployments,
+ * with each agent governed by an Instruction Configuration (1:N relationship). Multiple Agent
+ * Configurations can share the same Instruction Configuration for consistent behavioral guidelines.
+ *
+ * @remarks
+ * **Architecture Context:**
+ * - **Managed By**: Service Configuration (lifecycle management)
+ * - **Used By**: Deployment Configurations (N:1 - multiple deployments can use the same agent)
+ * - **Associated With**: Instruction Configuration (1:N - one instruction set can govern multiple agents)
+ * - **References**: Travnex Support Model Registry (via modelId)
+ * - **Reusability**: Designed to be reused across multiple deployments with different channels
+ *
+ * **Configuration Layers:**
+ * - **Agent Configuration**: Defines capabilities, model, and operational mode
+ * - **Instruction Configuration**: Defines behavioral guidelines and conversation flow
+ * - Together they create a complete agent persona
  *
  * @typedef {Object} AgentConfigurationProperties
  * @property {string} id - Unique identifier for the agent configuration
- * @property {string} modelId - Identifier of the LLM model to use for this agent
- * @property {string} name - Human-readable name for the agent configuration
- * @property {LLMType} defaultFunctionState - Default operational mode (text, audio, multimodal) (default: MULTI_MODE)
+ * @property {string} modelId - Identifier of the LLM model from Travnex Support Registry (e.g., 'gpt-4-turbo', 'claude-3-sonnet')
+ * @property {string} name - Human-readable name for the agent configuration (e.g., 'Customer Support Agent', 'Sales Assistant')
+ * @property {LLMType} defaultFunctionState - Default operational mode (TEXT, VOICE, MULTI_MODE) (default: MULTI_MODE)
  * @property {boolean} [usesTravnexSupportModel=true] - Whether this agent uses Travnex's supported model registry
- * @property {Record<string, any>} [requiredModelConfig] - Additional model parameters (e.g., voiceId, languageId)
- * @property {string} instructionConfigurationId - ID of the instruction configuration (role/persona) for this agent
- * @property {AssistantType} assistantType - Type of assistant (web, phone, email, etc.) (default: GENERAL)
- * @property {CallTransferConfig[]} [call_transfer_config=[]] - Array of call transfer configurations
- * @property {Record<string, any>} [metadata] - Additional metadata for the agent configuration
- * @property {TravnexSupportModel | null} [model] - Complete model information from Travnex support registry
- * @property {number} [createdAt] - Timestamp when the configuration was created
- * @property {number} [updatedAt] - Timestamp when the configuration was last updated
+ * @property {Record<string, any>} [requiredModelConfig] - Additional model parameters (e.g., { voiceId: 'adam', languageId: 'en-US' })
+ * @property {string} instructionConfigurationId - ID of the instruction configuration providing behavioral guidelines (N:1)
+ * @property {AssistantType} assistantType - Channel specialization type (GENERAL, WEB, PHONE, etc.) (default: GENERAL)
+ * @property {CallTransferConfig[]} [call_transfer_config=[]] - Call transfer configurations for phone deployments
+ * @property {Record<string, any>} [metadata] - Additional metadata for organization and filtering
+ * @property {TravnexSupportModel | null} [model] - Auto-populated model information from registry
+ * @property {number} [createdAt] - Unix timestamp (milliseconds) when created
+ * @property {number} [updatedAt] - Unix timestamp (milliseconds) when last updated
  *
  * @example
  * ```typescript
@@ -54,16 +74,16 @@ import { CallTransferConfigSchema } from "./call-transfer-config.schema";
  * ```
  */
 export const AgentConfigurationSchema = BaseModelSchema.safeExtend({
-    modelId: z.string(),
-    name: z.string(),
-    defaultFunctionState: z.enum(LLMType).default(LLMType.MULTI_MODE),
-    usesTravnexSupportModel: z.boolean().optional().default(true),
-    requiredModelConfig: z.record(z.string(), z.any()).optional(),
-    instructionConfigurationId: z.string(),
-    assistantType: z.enum(AssistantType).default(AssistantType.GENERAL),
-    call_transfer_config: z.array(CallTransferConfigSchema).optional().default([]),
-    metadata: z.record(z.string(), z.any()).optional(),
-    model: TravnexSupportModelSchema.nullable().optional(),
+    modelId: z.string().describe("Identifier of the LLM model from Travnex Support Registry to power this agent (e.g., 'gpt-4-turbo', 'claude-3-sonnet'). References TravnexSupportModel.modelId"),
+    name: z.string().describe("Human-readable name for the agent configuration used in administrative interfaces (e.g., 'Customer Support Agent', 'Sales Assistant')"),
+    defaultFunctionState: z.enum(LLMType).default(LLMType.MULTI_MODE).describe("Default operational mode (TEXT for text-only, VOICE for speech, MULTI_MODE for combined text/voice capabilities)"),
+    usesTravnexSupportModel: z.boolean().optional().default(true).describe("Whether this agent uses a model from Travnex's curated registry (true) or a custom external model (false)"),
+    requiredModelConfig: z.record(z.string(), z.any()).optional().describe("Model-specific configuration parameters as key-value pairs (e.g., { voiceId: 'adam', languageId: 'en-US', temperature: 0.7 })"),
+    instructionConfigurationId: z.string().describe("ID of the Instruction Configuration providing behavioral guidelines and conversation patterns. Multiple agents can share the same instruction configuration (N:1)"),
+    assistantType: z.enum(AssistantType).default(AssistantType.GENERAL).describe("Channel specialization type for optimization (GENERAL for multi-channel, WEB for browser, PHONE for telephony, EMAIL for email)"),
+    call_transfer_config: z.array(CallTransferConfigSchema).optional().default([]).describe("Array of call transfer configurations for phone deployments, defining transfer destinations and conditions for escalation"),
+    metadata: z.record(z.string(), z.any()).optional().describe("Additional metadata for organization including tags, categories, department, or custom attributes for filtering and reporting"),
+    model: TravnexSupportModelSchema.nullable().optional().describe("Complete model information auto-populated from Travnex registry (includes provider, voices, languages). Null if not loaded or custom model"),
 });
 
 /**

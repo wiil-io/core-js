@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.3**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.4**](../../README.md)
 
 ***
 
@@ -15,7 +15,7 @@ type CreateProductCategory = {
 };
 ```
 
-Defined in: [src/core/business-mgt/product-config.schema.ts:123](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/business-mgt/product-config.schema.ts#L123)
+Defined in: [src/core/business-mgt/product-config.schema.ts:123](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/business-mgt/product-config.schema.ts#L123)
 
 Schema for creating a new product category.
 Omits auto-generated fields.
@@ -24,7 +24,7 @@ Omits auto-generated fields.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="name"></a> `name` | `string` | [src/core/business-mgt/product-config.schema.ts:21](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/business-mgt/product-config.schema.ts#L21) |
-| <a id="description"></a> `description?` | `string` | [src/core/business-mgt/product-config.schema.ts:22](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/business-mgt/product-config.schema.ts#L22) |
-| <a id="displayorder"></a> `displayOrder?` | `number` | [src/core/business-mgt/product-config.schema.ts:23](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/business-mgt/product-config.schema.ts#L23) |
-| <a id="isdefault"></a> `isDefault` | `boolean` | [src/core/business-mgt/product-config.schema.ts:24](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/business-mgt/product-config.schema.ts#L24) |
+| <a id="name"></a> `name` | `string` | [src/core/business-mgt/product-config.schema.ts:21](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/business-mgt/product-config.schema.ts#L21) |
+| <a id="description"></a> `description?` | `string` | [src/core/business-mgt/product-config.schema.ts:22](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/business-mgt/product-config.schema.ts#L22) |
+| <a id="displayorder"></a> `displayOrder?` | `number` | [src/core/business-mgt/product-config.schema.ts:23](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/business-mgt/product-config.schema.ts#L23) |
+| <a id="isdefault"></a> `isDefault` | `boolean` | [src/core/business-mgt/product-config.schema.ts:24](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/business-mgt/product-config.schema.ts#L24) |

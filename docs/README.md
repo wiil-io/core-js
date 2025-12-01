@@ -1,4 +1,4 @@
-**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.3**
+**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.4**
 
 ***
 
@@ -52,7 +52,6 @@ const organization = OrganizationSchema.parse({
 
 // Validate customer data with automatic phone number normalization
 const customer = CustomerSchema.parse({
-  organizationId: 'org-123',
   phone_number: '+15551234567',
   firstname: 'John',
   lastname: 'Doe',
@@ -156,7 +155,6 @@ const organization = OrganizationSchema.parse({
 import { CustomerSchema, CallPriority, PreferredContactMethod } from 'wiil-core-js';
 
 const customer = CustomerSchema.parse({
-  organizationId: 'org-456',
   phone_number: '15551234567', // Automatically normalized to +15551234567
   firstname: 'Jane',
   lastname: 'Smith',

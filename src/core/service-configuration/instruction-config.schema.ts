@@ -4,33 +4,52 @@ import { BusinessSupportServices } from "../type-definitions/account-definitions
 
 /**
  * @fileoverview Instruction configuration schema definitions.
+ *
+ * The Instruction Configuration is the heart of agent behaviour in the Service Configuration architecture.
+ * It contains the prompts, guidelines, and contextual instructions that fundamentally define how agents
+ * operate during conversations.
+ *
  * @module service-configuration/instruction-config
  */
 
 /**
  * Zod schema for Instruction Configuration validation.
  *
- * Defines the complete configuration for agent instructions, including role definition,
- * behavioral guidelines, knowledge sources, and enabled business services.
+ * The Instruction Configuration is the heart of agent behaviour in the Service Configuration architecture.
+ * It contains the prompts, guidelines, and contextual instructions that fundamentally define how an agent
+ * operates during conversations. A single Instruction Configuration can be associated with multiple Agent
+ * Configurations (1:N relationship), allowing consistent behavioral guidelines across different agent types.
+ *
+ * @remarks
+ * **Architecture Context:**
+ * - **Central Role**: The Instruction Configuration is the core element that shapes agent behavior
+ * - **Relationship**: 1:N with Agent Configurations - one instruction set can govern multiple agents
+ * - **Reusability**: Designed to be reused across multiple deployments
+ * - **Managed By**: Service Configuration (lifecycle management)
+ * - **Used By**: Deployment Configurations reference instruction sets for agent behavior
+ *
+ * **Example Use Case:**
+ * A "Customer Service Guidelines" instruction set might govern both a "Sales Agent" and a "Support Agent",
+ * ensuring uniform tone and compliance while each agent maintains its specialized capabilities.
  *
  * @typedef {Object} InstructionConfigurationProperties
  * @property {string} id - Unique identifier for the instruction configuration
- * @property {string} instructionName - System-readable name (auto-generated based on role)
- * @property {string} role - The role or persona the agent should adopt
- * @property {string} introductionMessage - Initial greeting message presented when starting a conversation
- * @property {string} instructions - Detailed instructions guiding agent behavior and responses
- * @property {string} guardrails - Safety and behavioral constraints the agent must follow
- * @property {string[]} [requiredSkills] - Specific skills or capabilities required for this instruction set
- * @property {Record<string, any>} [validationRules] - Custom validation rules for input/output processing
- * @property {string} [serviceId] - ID of the service this instruction configuration is associated with
- * @property {BusinessSupportServices[]} [supportedServices=[]] - Platform services (tools) enabled for this agent
- * @property {string[]} [tools] - Tool identifiers the agent can use with this instruction set
- * @property {boolean} [isTemplate=false] - Whether this is a reusable template for creating other configurations
- * @property {boolean} isPrimary - Whether this is the primary system instruction configuration template
- * @property {Record<string, any>} [metadata] - Additional metadata for the instruction configuration
- * @property {string[]} [knowledgeSourceIds=[]] - IDs of knowledge sources providing context for this instruction set
- * @property {number} [createdAt] - Timestamp when the configuration was created
- * @property {number} [updatedAt] - Timestamp when the configuration was last updated
+ * @property {string} instructionName - System-readable name, typically auto-generated based on role (e.g., 'customer-support-agent')
+ * @property {string} role - The role or persona the agent should adopt (e.g., 'Customer Support Specialist', 'Sales Representative')
+ * @property {string} introductionMessage - Initial greeting message presented to users when starting a conversation
+ * @property {string} instructions - Detailed instructions that guide agent behavior, responses, conversation flow, and decision-making processes
+ * @property {string} guardrails - Safety and behavioral constraints the agent must follow, including compliance rules, forbidden topics, and ethical guidelines
+ * @property {string[]} [requiredSkills] - Specific skills or capabilities required for this instruction set (e.g., 'appointment_booking', 'order_management')
+ * @property {Record<string, any>} [validationRules] - Custom validation rules for input/output processing to ensure response quality and format compliance
+ * @property {string} [serviceId] - ID of the service this instruction configuration is associated with for organizational purposes
+ * @property {BusinessSupportServices[]} [supportedServices=[]] - Platform business services (tools) enabled for this agent, such as appointment management or order processing
+ * @property {string[]} [tools] - Tool identifiers the agent can use with this instruction set for extended capabilities
+ * @property {boolean} [isTemplate=false] - Whether this is a reusable template for creating other instruction configurations
+ * @property {boolean} isPrimary - Whether this is the primary system instruction configuration template used as a baseline
+ * @property {Record<string, any>} [metadata] - Additional metadata for the instruction configuration, such as version info or custom attributes
+ * @property {string[]} [knowledgeSourceIds=[]] - Array of IDs referencing knowledge sources that provide context and information for this instruction set
+ * @property {number} [createdAt] - Unix timestamp (milliseconds) when the configuration was created
+ * @property {number} [updatedAt] - Unix timestamp (milliseconds) when the configuration was last updated
  *
  * @example
  * ```typescript
@@ -51,20 +70,20 @@ import { BusinessSupportServices } from "../type-definitions/account-definitions
  * ```
  */
 export const InstructionConfigurationSchema = BaseModelSchema.safeExtend({
-    instructionName: z.string(),
-    role: z.string(),
-    introductionMessage: z.string(),
-    instructions: z.string(),
-    guardrails: z.string(),
-    requiredSkills: z.array(z.string()).optional(),
-    validationRules: z.record(z.string(), z.any()).optional(),
-    serviceId: z.string().optional(),
-    supportedServices: z.array(z.enum(BusinessSupportServices)).optional().default([]),
-    tools: z.array(z.string()).optional(),
-    isTemplate: z.boolean().optional().default(false),
-    isPrimary: z.boolean().default(false),
-    metadata: z.record(z.string(), z.any()).optional(),
-    knowledgeSourceIds: z.array(z.string()).optional().default([]),
+    instructionName: z.string().describe("System-readable name for the instruction configuration, typically auto-generated based on the role (e.g., 'customer-support-agent', 'sales-representative')"),
+    role: z.string().describe("The role or persona the agent should adopt during conversations (e.g., 'Customer Support Specialist', 'Sales Representative', 'Technical Advisor')"),
+    introductionMessage: z.string().describe("Initial greeting message presented to users when starting a conversation with the agent"),
+    instructions: z.string().describe("Detailed instructions that fundamentally define how the agent operates, including behavioral guidelines, conversation flow, response patterns, and decision-making processes"),
+    guardrails: z.string().describe("Safety and behavioral constraints the agent must strictly follow, including compliance rules, forbidden topics, ethical guidelines, and escalation criteria"),
+    requiredSkills: z.array(z.string()).optional().describe("Specific skills or capabilities required for this instruction set (e.g., 'appointment_booking', 'order_management', 'technical_troubleshooting')"),
+    validationRules: z.record(z.string(), z.any()).optional().describe("Custom validation rules for input/output processing to ensure response quality, format compliance, and data integrity"),
+    serviceId: z.string().optional().describe("ID of the parent service this instruction configuration is associated with for organizational and access control purposes"),
+    supportedServices: z.array(z.enum(BusinessSupportServices)).optional().default([]).describe("Array of platform business services (tools) enabled for this agent, such as appointment management, order processing, or payment handling"),
+    tools: z.array(z.string()).optional().describe("Array of tool identifiers the agent can use with this instruction set for extended capabilities and integrations"),
+    isTemplate: z.boolean().optional().default(false).describe("Whether this instruction configuration is a reusable template that can be used as a baseline for creating other instruction configurations"),
+    isPrimary: z.boolean().default(false).describe("Whether this is the primary system instruction configuration template used as the default baseline for new instruction configurations"),
+    metadata: z.record(z.string(), z.any()).optional().describe("Additional metadata for the instruction configuration, such as version information, tags, custom attributes, or categorization data"),
+    knowledgeSourceIds: z.array(z.string()).optional().default([]).describe("Array of IDs referencing knowledge sources that provide contextual information, documentation, and domain knowledge for this instruction set (1:N relationship with Knowledge Sources)"),
 });
 
 /**

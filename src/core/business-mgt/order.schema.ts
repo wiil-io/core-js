@@ -10,7 +10,7 @@ import { AddressSchema } from "../base.schema";
  * Order address schema extending base address with delivery instructions.
  */
 export const OrderAddress = AddressSchema.safeExtend({
-    deliveryInstructions: z.string().optional()
+    deliveryInstructions: z.string().optional().describe("Special delivery instructions (gate code, building entrance, drop-off location) for couriers and delivery personnel.")
 }).optional()
 
 /**
@@ -24,11 +24,11 @@ export const OrderAddress = AddressSchema.safeExtend({
  * @property {Object} [address] - Customer address for delivery/billing
  */
 export const OrderCustomerSchema = z.object({
-    customerId: z.string().optional(),
-    name: z.string().min(1, "Customer name is required"),
-    phone: z.string().optional(),
-    email: z.email().optional(),
-    address: OrderAddress
+    customerId: z.string().optional().describe("References Customer ID if customer is registered in the system. Used to link order history, preferences, and loyalty data."),
+    name: z.string().min(1, "Customer name is required").describe("Customer's full name for order identification, receipts, and communication. Required for all orders."),
+    phone: z.string().optional().describe("Customer's contact phone for order updates, delivery coordination, and support. Used by AI Powered Services for SMS notifications."),
+    email: z.email().optional().describe("Customer's email for digital receipts, order confirmations, and AI-generated order summaries."),
+    address: OrderAddress.describe("Customer address for delivery (menu/product orders) or billing purposes. Extended with delivery-specific instructions.")
 });
 
 /**
@@ -44,13 +44,13 @@ export const OrderCustomerSchema = z.object({
  * @property {string} currency - Currency code (ISO 4217 format)
  */
 export const OrderPricingSchema = z.object({
-    subtotal: z.number().nonnegative(),
-    tax: z.number().nonnegative().default(0),
-    tip: z.number().nonnegative().default(0),
-    shippingAmount: z.number().nonnegative().default(0),
-    discount: z.number().nonnegative().default(0),
-    total: z.number().nonnegative(),
-    currency: z.string().length(3).default("USD")
+    subtotal: z.number().nonnegative().describe("Sum of all item prices before tax, fees, or discounts. Base amount for pricing calculations."),
+    tax: z.number().nonnegative().default(0).describe("Calculated tax amount based on applicable tax rates and jurisdictions. Defaults to 0."),
+    tip: z.number().nonnegative().default(0).describe("Gratuity amount for service staff (common in food service). Defaults to 0."),
+    shippingAmount: z.number().nonnegative().default(0).describe("Shipping or delivery fee for product/menu orders. Defaults to 0 for pickup or dine-in."),
+    discount: z.number().nonnegative().default(0).describe("Total discount applied from promotions, coupons, or loyalty programs. Defaults to 0."),
+    total: z.number().nonnegative().describe("Final amount due: subtotal + tax + tip + shipping - discount. Amount charged to customer."),
+    currency: z.string().length(3).default("USD").describe("ISO 4217 currency code (e.g., 'USD', 'EUR', 'GBP') for international operations. Defaults to USD.")
 });
 
 export type OrderCustomer = z.infer<typeof OrderCustomerSchema>;

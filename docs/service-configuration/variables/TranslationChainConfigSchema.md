@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.3**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.4**](../../README.md)
 
 ***
 
@@ -10,18 +10,31 @@
 const TranslationChainConfigSchema: ZodObject<TranslationChainConfig>;
 ```
 
-Defined in: [src/core/service-configuration/provisioning-config.ts:222](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/service-configuration/provisioning-config.ts#L222)
+Defined in: [src/core/service-configuration/provisioning-config.ts:266](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/service-configuration/provisioning-config.ts#L266)
 
 Zod schema for translation chain configuration.
 
-Extends provisioning chain with translation-specific processing capabilities.
+Extends the provisioning chain concept with translation-specific processing capabilities.
+Enables real-time language translation in voice interactions (e.g., English caller to Spanish agent).
+
+## Remarks
+
+**Architecture Context:**
+- **Extension Of**: ProvisioningConfigChain with translation capabilities
+- **Purpose**: Real-time language translation for multilingual support
+- **Pipeline Flow**: Speech (Lang A) → STT → Text (Lang A) → Translation → Text (Lang B) → TTS → Speech (Lang B)
+- **Use Case**: Cross-language customer support, international business
+
+**Translation Pipeline:**
+1. **STT Stage**: Converts incoming speech to text in source language
+2. **Translation Stage**: Translates text between languages using processingModelId
+3. **TTS Stage**: Converts translated text to speech in target language
 
 ## Example
 
 ```typescript
 const translationChain: TranslationChainConfig = {
   id: 'chain-123',
-  organizationId: 'org-456',
   chainName: 'EN-ES Translation Chain',
   description: 'English to Spanish translation for customer support',
   sttConfig: {

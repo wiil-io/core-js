@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.3**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.4**](../../README.md)
 
 ***
 
@@ -10,12 +10,25 @@
 const TravnexSupportModelSchema: ZodObject<TravnexSupportModel>;
 ```
 
-Defined in: [src/core/service-configuration/support-llm.ts:44](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/service-configuration/support-llm.ts#L44)
+Defined in: [src/core/service-configuration/support-llm.ts:61](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/service-configuration/support-llm.ts#L61)
 
 Zod schema for Travnex supported model configuration.
 
-Represents a model registered in the Travnex platform's support registry,
-including model metadata, capabilities, and supported voices/languages.
+Represents a language model registered in the Travnex platform's support registry. The registry
+provides a centralized catalog of available models with their capabilities, supported languages,
+and voices. Agent Configurations reference these models via modelId.
+
+## Remarks
+
+**Architecture Context:**
+- **Used By**: Agent Configuration (modelId reference)
+- **Purpose**: Central registry of supported LLM models with their capabilities
+- **Model Types**: TEXT (text-only), VOICE (speech), MULTI_MODE (combined), etc.
+- **Providers**: OpenAI, Anthropic, Google, ElevenLabs, and other LLM proprietors
+
+**Model Lifecycle:**
+- **Active**: Available for new deployments (discontinued: false)
+- **Discontinued**: Legacy support only, not recommended for new deployments (discontinued: true)
 
 ## Example
 

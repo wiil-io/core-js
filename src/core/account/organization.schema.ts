@@ -1,6 +1,7 @@
 import { z } from 'zod';
 import { ServiceStatus, ServiceSuspensionType } from '../type-definitions';
 import { BaseModelSchema } from '../base.schema';
+import { SUPPORTED_BUSINESS_VERTICALS } from './supported-business-verticals';
 
 /**
  * @fileoverview Organization schema definitions for account management.
@@ -15,7 +16,6 @@ import { BaseModelSchema } from '../base.schema';
  *
  * @typedef {Object} OrganizationServiceStatusRecordProperties
  * @property {string} id - Unique identifier for the status record
- * @property {string} organizationId - ID of the organization this status record belongs to
  * @property {ServiceStatus} status - Current status at the time of this record
  * @property {ServiceStatus | null} previousStatus - Previous status before this change
  * @property {ServiceSuspensionType | null} suspensionType - Type of suspension if status is SUSPENDED
@@ -30,7 +30,6 @@ import { BaseModelSchema } from '../base.schema';
  * ```typescript
  * const statusRecord: OrganizationServiceStatusRecord = {
  *   id: '123*',
- *   organizationId: '456*',
  *   status: ServiceStatus.SUSPENDED,
  *   previousStatus: ServiceStatus.ACTIVE,
  *   suspensionType: ServiceSuspensionType.QUOTA_EXCEEDED,
@@ -44,14 +43,13 @@ import { BaseModelSchema } from '../base.schema';
  * ```
  */
 export const OrganizationServiceStatusRecordSchema = BaseModelSchema.safeExtend({
-    organizationId: z.string(),
-    status: z.enum(ServiceStatus),
-    previousStatus: z.enum(ServiceStatus).nullable(),
-    suspensionType: z.enum(ServiceSuspensionType).nullable(),
-    timestamp: z.number(),
-    reason: z.string(),
-    changedBy: z.string(),
-    isCurrent: z.boolean().default(true),
+    status: z.enum(ServiceStatus).describe("Current status at the time of this record"),
+    previousStatus: z.enum(ServiceStatus).nullable().describe("Previous status before this change"),
+    suspensionType: z.enum(ServiceSuspensionType).nullable().describe("Type of suspension if status is SUSPENDED"),
+    timestamp: z.number().describe("Unix timestamp when the status change occurred"),
+    reason: z.string().describe("Explanation for the status change"),
+    changedBy: z.string().describe("User ID who initiated the status change"),
+    isCurrent: z.boolean().default(true).describe("Whether this is the current active status record"),
 });
 
 
@@ -67,7 +65,7 @@ export type OrganizationServiceStatusRecord = z.infer<typeof OrganizationService
  * @property {string} id - Unique identifier for the organization
  * @property {string} companyName - Organization's company name (minimum 2 characters)
  * @property {string} primaryRegionId - Primary geographic region ID for the organization (minimum 3 characters)
- * @property {string | null} [businessVerticalId] - Business industry vertical classification ID
+ * @property {SupportedBusinessVerticalId | null} [businessVerticalId] - Business industry vertical classification ID
  * @property {Record<string, any>} [metadata] - Additional custom metadata for the organization
  * @property {ServiceStatus} serviceStatus - Current service status (default: ACTIVE)
  * @property {number | null} [lastServiceStatusChanged] - Timestamp of last service status change
@@ -82,7 +80,7 @@ export type OrganizationServiceStatusRecord = z.infer<typeof OrganizationService
  *   id: '123*',
  *   companyName: 'Acme Corporation',
  *   primaryRegionId: 'us-west',
- *   businessVerticalId: 'tech-saas',
+ *   businessVerticalId: 'technology',
  *   serviceStatus: ServiceStatus.ACTIVE,
  *   platformEmail: 'admin@acme.com',
  *   metadata: { industry: 'technology' },
@@ -92,14 +90,13 @@ export type OrganizationServiceStatusRecord = z.infer<typeof OrganizationService
  * ```
  */
 export const OrganizationSchema = BaseModelSchema.safeExtend({
-    companyName: z.string().min(2),
-    primaryRegionId: z.string().min(3),
-    businessVerticalId: z.string().nullable().optional(),
-    metadata: z.record(z.string(), z.any()).optional(),
-    serviceStatus: z.enum(ServiceStatus).default(ServiceStatus.ACTIVE),
-    lastServiceStatusChanged: z.number().nullable().optional(),
-    serviceStatusHistory: z.array(OrganizationServiceStatusRecordSchema).nullable().optional(),
-    platformEmail: z.string().nullable().optional(),
+    companyName: z.string().min(2).describe("Organization's company name (minimum 2 characters)"),
+    businessVerticalId: z.enum(SUPPORTED_BUSINESS_VERTICALS).nullable().optional().describe("Business industry vertical classification ID (healthcare, retail, technology, etc.)"),
+    metadata: z.record(z.string(), z.any()).optional().describe("Additional custom metadata for the organization"),
+    serviceStatus: z.enum(ServiceStatus).default(ServiceStatus.ACTIVE).describe("Current service status of the organization"),
+    lastServiceStatusChanged: z.number().nullable().optional().describe("Timestamp of last service status change"),
+    serviceStatusHistory: z.array(OrganizationServiceStatusRecordSchema).nullable().optional().describe("Complete history of service status changes"),
+    platformEmail: z.string().nullable().optional().describe("Organization's platform contact email"),
 });
 
 

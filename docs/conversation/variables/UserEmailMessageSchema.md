@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.3**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.4**](../../README.md)
 
 ***
 
@@ -10,6 +10,22 @@
 const UserEmailMessageSchema: ZodObject<UserEmailMessage>;
 ```
 
-Defined in: [src/core/conversation/conversation-message.schema.ts:79](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/conversation/conversation-message.schema.ts#L79)
+Defined in: [src/core/conversation/conversation-message.schema.ts:138](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/conversation/conversation-message.schema.ts#L138)
 
 User email message schema.
+
+Represents an email message sent by a user/customer. Extends base email schema with user-specific
+fields and optional provider message ID for integration with external email services (Gmail, Outlook, etc.).
+
+## Remarks
+
+**Architecture Context:**
+- **Extends**: BaseEmailMessageSchema with user-specific fields
+- **Message Type**: Always 'user' (MessageType.USER)
+- **Channel**: Used exclusively for EMAIL conversation type
+- **Provider Integration**: Links to external email service message IDs
+
+**Email Integration:**
+- provider_message_id enables tracking emails across platforms
+- Supports Gmail API, Outlook Graph API, SendGrid, etc.
+- Used for reply-to threading and email service synchronization

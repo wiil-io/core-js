@@ -4,25 +4,42 @@ import { LanguageSchema, VoiceSchema } from "./voice-language.schema";
 
 /**
  * @fileoverview Travnex support model schema definitions.
+ *
+ * The Travnex Support Model Registry maintains a curated list of LLM models from various providers
+ * (OpenAI, Anthropic, etc.) that are supported by the platform. This registry includes model metadata,
+ * capabilities, and associated voices/languages for configuration and deployment.
+ *
  * @module service-configuration/support-llm
  */
 
 /**
  * Zod schema for Travnex supported model configuration.
  *
- * Represents a model registered in the Travnex platform's support registry,
- * including model metadata, capabilities, and supported voices/languages.
+ * Represents a language model registered in the Travnex platform's support registry. The registry
+ * provides a centralized catalog of available models with their capabilities, supported languages,
+ * and voices. Agent Configurations reference these models via modelId.
+ *
+ * @remarks
+ * **Architecture Context:**
+ * - **Used By**: Agent Configuration (modelId reference)
+ * - **Purpose**: Central registry of supported LLM models with their capabilities
+ * - **Model Types**: TEXT (text-only), VOICE (speech), MULTI_MODE (combined), etc.
+ * - **Providers**: OpenAI, Anthropic, Google, ElevenLabs, and other LLM proprietors
+ *
+ * **Model Lifecycle:**
+ * - **Active**: Available for new deployments (discontinued: false)
+ * - **Discontinued**: Legacy support only, not recommended for new deployments (discontinued: true)
  *
  * @typedef {Object} TravnexSupportModelProperties
- * @property {string} modelId - Unique identifier for the model in Travnex registry
- * @property {SupportedProprietor} proprietor - Model proprietor/provider (OpenAI, Anthropic, etc.)
- * @property {string} name - Human-readable name of the model
- * @property {string} [provider_model_id] - Original model ID from the provider (if different from modelId)
- * @property {string} description - Description of the model's capabilities and use cases
- * @property {LLMType} type - Type of LLM functionality (text, voice, multi-mode, etc.)
- * @property {boolean} discontinued - Whether this model is discontinued (default: false)
- * @property {Voice[] | null} [supportedVoices] - Array of voices supported by this model (for TTS models)
- * @property {Language[] | null} [supportLanguages] - Array of languages supported by this model
+ * @property {string} modelId - Unique identifier for the model in the Travnex registry (e.g., 'gpt-4-turbo', 'claude-3-sonnet', 'eleven-labs-multilingual-v2')
+ * @property {SupportedProprietor} proprietor - Model proprietor/provider organization (OPENAI, ANTHROPIC, GOOGLE, ELEVENLABS, etc.)
+ * @property {string} name - Human-readable name of the model for display in UI (e.g., 'GPT-4 Turbo', 'Claude 3 Sonnet', 'ElevenLabs Multilingual v2')
+ * @property {string} [provider_model_id] - Original model ID from the provider if different from Travnex modelId (e.g., 'gpt-4-1106-preview' for OpenAI's internal ID)
+ * @property {string} description - Description of the model's capabilities, use cases, strengths, and limitations for selection guidance
+ * @property {LLMType} type - Type of LLM functionality (TEXT for text generation, VOICE for TTS, MULTI_MODE for combined text/voice, etc.)
+ * @property {boolean} discontinued - Whether this model has been discontinued and is only available for legacy support (default: false)
+ * @property {Voice[] | null} [supportedVoices] - Array of voice configurations supported by this model (populated for TTS/voice models, null for text-only models)
+ * @property {Language[] | null} [supportLanguages] - Array of languages supported by this model for processing and generation (null if language-agnostic)
  *
  * @example
  * ```typescript
@@ -42,15 +59,15 @@ import { LanguageSchema, VoiceSchema } from "./voice-language.schema";
  * ```
  */
 export const TravnexSupportModelSchema = z.object({
-    modelId: z.string(),
-    proprietor: z.enum(SupportedProprietor),
-    name: z.string(),
-    provider_model_id: z.string().optional(),
-    description: z.string(),
-    type: z.enum(LLMType),
-    discontinued: z.boolean().optional().default(false),
-    supportedVoices: z.array(VoiceSchema).optional().nullable(),
-    supportLanguages: z.array(LanguageSchema).optional().nullable(),
+    modelId: z.string().describe("Unique identifier for the model in the Travnex registry, used in Agent Configuration references (e.g., 'gpt-4-turbo', 'claude-3-sonnet', 'whisper-v3')"),
+    proprietor: z.enum(SupportedProprietor).describe("Model proprietor/provider organization that developed and maintains the model (OPENAI, ANTHROPIC, GOOGLE, ELEVENLABS, SIGNALWIRE, etc.)"),
+    name: z.string().describe("Human-readable name of the model for display in administrative interfaces and model selection UI (e.g., 'GPT-4 Turbo', 'Claude 3 Sonnet')"),
+    provider_model_id: z.string().optional().describe("Original model identifier from the provider's system if different from Travnex modelId (e.g., 'gpt-4-1106-preview' for OpenAI's internal versioning)"),
+    description: z.string().describe("Comprehensive description of the model's capabilities, recommended use cases, strengths, limitations, and selection guidance for administrators"),
+    type: z.enum(LLMType).describe("Type of LLM functionality provided by this model (TEXT for text generation, VOICE for speech synthesis, STT for speech recognition, MULTI_MODE for combined capabilities)"),
+    discontinued: z.boolean().optional().default(false).describe("Whether this model has been discontinued by the provider and is only available for legacy support of existing deployments (not recommended for new deployments)"),
+    supportedVoices: z.array(VoiceSchema).optional().nullable().describe("Array of voice configurations supported by this model (populated for TTS and voice models with available voice options, null for text-only models)"),
+    supportLanguages: z.array(LanguageSchema).optional().nullable().describe("Array of languages supported by this model for processing, generation, and understanding (null if model is language-agnostic or supports all languages)"),
 });
 
 /**

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.3**](../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.4**](../README.md)
 
 ***
 
@@ -19,6 +19,7 @@ Central export point for all account management schemas.
 | [Project](type-aliases/Project.md) | Type definition for a complete project entity. |
 | [CreateProject](type-aliases/CreateProject.md) | Type definition for creating a new project. |
 | [UpdateProject](type-aliases/UpdateProject.md) | Type definition for updating an existing project. |
+| [SupportedBusinessVerticalId](type-aliases/SupportedBusinessVerticalId.md) | - |
 
 ## Variables
 
@@ -29,3 +30,4 @@ Central export point for all account management schemas.
 | [ProjectSchema](variables/ProjectSchema.md) | Zod schema for project entity. |
 | [CreateProjectSchema](variables/CreateProjectSchema.md) | Zod schema for creating a new project. |
 | [UpdateProjectSchema](variables/UpdateProjectSchema.md) | Zod schema for updating an existing project. |
+| [SUPPORTED\_BUSINESS\_VERTICALS](variables/SUPPORTED_BUSINESS_VERTICALS.md) | Supported Business Vertical IDs |

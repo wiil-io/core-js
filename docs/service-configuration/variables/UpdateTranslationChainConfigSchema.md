@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.3**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.4**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const UpdateTranslationChainConfigSchema: ZodObject<UpdateTranslationChainConfig>;
 ```
 
-Defined in: [src/core/service-configuration/provisioning-config.ts:289](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/service-configuration/provisioning-config.ts#L289)
+Defined in: [src/core/service-configuration/provisioning-config.ts:331](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/service-configuration/provisioning-config.ts#L331)
 
 Zod schema for updating an existing translation chain configuration.
 

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.3**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.4**](../../README.md)
 
 ***
 
@@ -25,7 +25,7 @@ type CreateInstructionConfiguration = {
 };
 ```
 
-Defined in: [src/core/service-configuration/instruction-config.schema.ts:114](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/service-configuration/instruction-config.schema.ts#L114)
+Defined in: [src/core/service-configuration/instruction-config.schema.ts:133](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/service-configuration/instruction-config.schema.ts#L133)
 
 Type definition for creating a new instruction configuration.
 
@@ -36,17 +36,17 @@ excluding system-generated fields.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="instructionname"></a> `instructionName` | `string` | [src/core/service-configuration/instruction-config.schema.ts:54](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/service-configuration/instruction-config.schema.ts#L54) |
-| <a id="role"></a> `role` | `string` | [src/core/service-configuration/instruction-config.schema.ts:55](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/service-configuration/instruction-config.schema.ts#L55) |
-| <a id="introductionmessage"></a> `introductionMessage` | `string` | [src/core/service-configuration/instruction-config.schema.ts:56](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/service-configuration/instruction-config.schema.ts#L56) |
-| <a id="instructions"></a> `instructions` | `string` | [src/core/service-configuration/instruction-config.schema.ts:57](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/service-configuration/instruction-config.schema.ts#L57) |
-| <a id="guardrails"></a> `guardrails` | `string` | [src/core/service-configuration/instruction-config.schema.ts:58](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/service-configuration/instruction-config.schema.ts#L58) |
-| <a id="requiredskills"></a> `requiredSkills?` | `string`[] | [src/core/service-configuration/instruction-config.schema.ts:59](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/service-configuration/instruction-config.schema.ts#L59) |
-| <a id="validationrules"></a> `validationRules?` | `Record`\<`string`, `any`\> | [src/core/service-configuration/instruction-config.schema.ts:60](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/service-configuration/instruction-config.schema.ts#L60) |
-| <a id="serviceid"></a> `serviceId?` | `string` | [src/core/service-configuration/instruction-config.schema.ts:61](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/service-configuration/instruction-config.schema.ts#L61) |
-| <a id="supportedservices"></a> `supportedServices` | [`BusinessSupportServices`](../../type-definitions/enumerations/BusinessSupportServices.md)[] | [src/core/service-configuration/instruction-config.schema.ts:62](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/service-configuration/instruction-config.schema.ts#L62) |
-| <a id="tools"></a> `tools?` | `string`[] | [src/core/service-configuration/instruction-config.schema.ts:63](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/service-configuration/instruction-config.schema.ts#L63) |
-| <a id="istemplate"></a> `isTemplate` | `boolean` | [src/core/service-configuration/instruction-config.schema.ts:64](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/service-configuration/instruction-config.schema.ts#L64) |
-| <a id="isprimary"></a> `isPrimary` | `boolean` | [src/core/service-configuration/instruction-config.schema.ts:65](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/service-configuration/instruction-config.schema.ts#L65) |
-| <a id="metadata"></a> `metadata?` | `Record`\<`string`, `any`\> | [src/core/service-configuration/instruction-config.schema.ts:66](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/service-configuration/instruction-config.schema.ts#L66) |
-| <a id="knowledgesourceids"></a> `knowledgeSourceIds` | `string`[] | [src/core/service-configuration/instruction-config.schema.ts:67](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/service-configuration/instruction-config.schema.ts#L67) |
+| <a id="instructionname"></a> `instructionName` | `string` | [src/core/service-configuration/instruction-config.schema.ts:73](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/service-configuration/instruction-config.schema.ts#L73) |
+| <a id="role"></a> `role` | `string` | [src/core/service-configuration/instruction-config.schema.ts:74](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/service-configuration/instruction-config.schema.ts#L74) |
+| <a id="introductionmessage"></a> `introductionMessage` | `string` | [src/core/service-configuration/instruction-config.schema.ts:75](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/service-configuration/instruction-config.schema.ts#L75) |
+| <a id="instructions"></a> `instructions` | `string` | [src/core/service-configuration/instruction-config.schema.ts:76](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/service-configuration/instruction-config.schema.ts#L76) |
+| <a id="guardrails"></a> `guardrails` | `string` | [src/core/service-configuration/instruction-config.schema.ts:77](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/service-configuration/instruction-config.schema.ts#L77) |
+| <a id="requiredskills"></a> `requiredSkills?` | `string`[] | [src/core/service-configuration/instruction-config.schema.ts:78](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/service-configuration/instruction-config.schema.ts#L78) |
+| <a id="validationrules"></a> `validationRules?` | `Record`\<`string`, `any`\> | [src/core/service-configuration/instruction-config.schema.ts:79](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/service-configuration/instruction-config.schema.ts#L79) |
+| <a id="serviceid"></a> `serviceId?` | `string` | [src/core/service-configuration/instruction-config.schema.ts:80](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/service-configuration/instruction-config.schema.ts#L80) |
+| <a id="supportedservices"></a> `supportedServices` | [`BusinessSupportServices`](../../type-definitions/enumerations/BusinessSupportServices.md)[] | [src/core/service-configuration/instruction-config.schema.ts:81](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/service-configuration/instruction-config.schema.ts#L81) |
+| <a id="tools"></a> `tools?` | `string`[] | [src/core/service-configuration/instruction-config.schema.ts:82](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/service-configuration/instruction-config.schema.ts#L82) |
+| <a id="istemplate"></a> `isTemplate` | `boolean` | [src/core/service-configuration/instruction-config.schema.ts:83](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/service-configuration/instruction-config.schema.ts#L83) |
+| <a id="isprimary"></a> `isPrimary` | `boolean` | [src/core/service-configuration/instruction-config.schema.ts:84](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/service-configuration/instruction-config.schema.ts#L84) |
+| <a id="metadata"></a> `metadata?` | `Record`\<`string`, `any`\> | [src/core/service-configuration/instruction-config.schema.ts:85](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/service-configuration/instruction-config.schema.ts#L85) |
+| <a id="knowledgesourceids"></a> `knowledgeSourceIds` | `string`[] | [src/core/service-configuration/instruction-config.schema.ts:86](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/service-configuration/instruction-config.schema.ts#L86) |

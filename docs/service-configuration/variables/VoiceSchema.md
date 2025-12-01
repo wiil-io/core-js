@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.3**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.4**](../../README.md)
 
 ***
 
@@ -10,11 +10,26 @@
 const VoiceSchema: ZodObject<Voice>;
 ```
 
-Defined in: [src/core/service-configuration/voice-language.schema.ts:48](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/service-configuration/voice-language.schema.ts#L48)
+Defined in: [src/core/service-configuration/voice-language.schema.ts:69](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/service-configuration/voice-language.schema.ts#L69)
 
 Zod schema for voice configuration.
 
-Represents a voice option available for text-to-speech synthesis.
+Represents a synthetic voice option available for text-to-speech (TTS) synthesis. Voices are
+associated with TTS models in the Travnex support registry and selected in provisioning chains
+for voice-based deployments.
+
+## Remarks
+
+**Architecture Context:**
+- **Used By**: TravnexSupportModel (supportedVoices array for TTS models)
+- **Referenced In**: TtsModelConfig (voiceId selection) and ProvisioningConfigChain
+- **Purpose**: Defines available voice options for agent speech synthesis
+
+**Voice Characteristics:**
+- **Identity**: Unique ID and human-readable name
+- **Gender**: Male, female, or neutral classification
+- **Language**: Optimal language for the voice
+- **Default**: Flag for platform default selection
 
 ## Example
 

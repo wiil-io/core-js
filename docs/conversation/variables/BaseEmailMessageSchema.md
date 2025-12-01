@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.3**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.4**](../../README.md)
 
 ***
 
@@ -17,6 +17,22 @@ const BaseEmailMessageSchema: ZodObject<{
 }, $strip>;
 ```
 
-Defined in: [src/core/conversation/conversation-message.schema.ts:39](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/conversation/conversation-message.schema.ts#L39)
+Defined in: [src/core/conversation/conversation-message.schema.ts:65](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/conversation/conversation-message.schema.ts#L65)
 
 Base email message schema extending chat message with email-specific fields.
+
+Extends BaseChatMessageSchema with email-specific attributes including subject line and email
+identifier flag. Used as foundation for user and assistant email messages in email-based
+conversation channels.
+
+## Remarks
+
+**Architecture Context:**
+- **Extends**: BaseChatMessageSchema with email-specific fields
+- **Extended By**: UserEmailMessageSchema, AssistantEmailMessageSchema
+- **Channel**: Used exclusively for EMAIL conversation type
+- **Threading**: Subject line enables email thread grouping and conversation continuity
+
+**Email Features:**
+- Subject line for email clients and threading
+- isEmail flag distinguishes email messages from chat messages in unified message stores

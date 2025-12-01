@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.3**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.4**](../../README.md)
 
 ***
 
@@ -10,9 +10,19 @@
 const CallChannelSchema: ZodObject<CallChannelType>;
 ```
 
-Defined in: [src/core/service-configuration/interaction-channels.schema.ts:84](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/service-configuration/interaction-channels.schema.ts#L84)
+Defined in: [src/core/service-configuration/interaction-channels.schema.ts:130](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/service-configuration/interaction-channels.schema.ts#L130)
 
 Zod schema for call-based deployment channel.
+
+Defines a voice telephony channel for inbound and outbound phone calls. Integrates with
+telephony providers (SignalWire, Twilio) through PhoneConfiguration.
+
+## Remarks
+
+**Architecture Context:**
+- **Channel Type**: Phone (Voice Calls)
+- **Integration**: PBX systems, contact centers, SIP trunks, cloud telephony
+- **Features**: Call recording, DTMF input, call forwarding, SIP/VoIP support
 
 ## Example
 

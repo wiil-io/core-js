@@ -21,21 +21,21 @@ import { BaseModelSchema } from "../base.schema";
  * @property {number} [displayOrder] - Display order in service listings
  */
 export const BusinessServiceConfigSchema = BaseModelSchema.safeExtend({
-    id: z.string(),
-    name: z.string().min(1, "Service name is required"),
-    description: z.string().optional(),
+    id: z.string().describe("Unique identifier for this business service in the catalog managed by Appointment Management."),
+    name: z.string().min(1, "Service name is required").describe("Display name of the service offered (e.g., 'Haircut', 'Massage', 'Consultation'). Used by AI Powered Services when presenting booking options to customers."),
+    description: z.string().optional().describe("Detailed description of the service including what's included, benefits, or special instructions. Helps customers understand the service before booking via Service Appointment workflow."),
 
     // Scheduling & Duration
-    duration: z.number().int().positive().max(480).default(60),
-    bufferTime: z.number().int().nonnegative().default(0),
-    isBookable: z.boolean().default(true),
+    duration: z.number().int().positive().max(480).default(60).describe("Service duration in minutes with maximum of 480 minutes (8 hours). Used by AI Powered Services to calculate appointment end times and availability slots. Defaults to 60 minutes."),
+    bufferTime: z.number().int().nonnegative().default(0).describe("Buffer time in minutes between consecutive appointments for cleanup, preparation, or transition. Ensures adequate spacing in Service Person schedules. Defaults to 0."),
+    isBookable: z.boolean().default(true).describe("Whether this service can be booked online through AI Powered Services conversations. Services marked false require manual booking or are for internal use only. Defaults to true."),
 
     // Pricing
-    price: z.number().nonnegative().default(0).optional(),
+    price: z.number().nonnegative().default(0).optional().describe("Service price in the account's currency. Used for Service Appointment pricing and customer quotes during AI conversations. Defaults to 0 for complimentary services."),
 
     // Business Management
-    isActive: z.boolean().default(true),
-    displayOrder: z.number().int().optional(),
+    isActive: z.boolean().default(true).describe("Whether the service is currently active and available for booking. Inactive services are hidden from customers and AI Powered Services. Defaults to true."),
+    displayOrder: z.number().int().optional().describe("Display order in service listings and booking interfaces. Lower numbers appear first. Enables strategic service positioning and featured service placement."),
 });
 
 /**
@@ -48,10 +48,10 @@ export const BusinessServiceConfigSchema = BaseModelSchema.safeExtend({
  * @property {string} [serviceId] - Specific service ID for direct appointment
  */
 export const ServiceQRCodeSchema = z.object({
-    id: z.string(),
-    appointmentUrl: z.string().url(),
-    qrCodeImage: z.string().optional(),
-    serviceId: z.string().optional(),
+    id: z.string().describe("Unique identifier for this QR code instance."),
+    appointmentUrl: z.string().url().describe("URL to the appointment booking interface accessed by scanning this QR code. Links to service selection and scheduling flow powered by AI Powered Services."),
+    qrCodeImage: z.string().optional().describe("Base64 encoded QR code image for printing or digital display (posters, flyers, websites). Generated from appointmentUrl."),
+    serviceId: z.string().optional().describe("Optional specific Business Service ID for direct appointment booking. When provided, QR code bypasses service selection and goes directly to scheduling for this service."),
 });
 
 /**

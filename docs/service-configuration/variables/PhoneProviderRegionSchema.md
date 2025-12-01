@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.3**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.4**](../../README.md)
 
 ***
 
@@ -10,11 +10,19 @@
 const PhoneProviderRegionSchema: ZodObject<PhoneProviderRegion>;
 ```
 
-Defined in: [src/core/service-configuration/phone-number.schema.ts:33](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/service-configuration/phone-number.schema.ts#L33)
+Defined in: [src/core/service-configuration/phone-number.schema.ts:45](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/service-configuration/phone-number.schema.ts#L45)
 
 Zod schema for phone provider region information.
 
-Represents geographic region information for phone number providers.
+Represents geographic region information from telephony providers, used for filtering and
+searching available phone numbers by location.
+
+## Remarks
+
+**Architecture Context:**
+- **Usage**: Phone number discovery and filtering
+- **Provider Integration**: Maps to provider regional offerings
+- **Search**: Used to narrow number searches by geographic area
 
 ## Example
 

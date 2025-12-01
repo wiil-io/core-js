@@ -3,15 +3,29 @@ import { BaseModelSchema } from "../base.schema";
 
 /**
  * @fileoverview Provisioning configuration chain schema definitions.
+ *
+ * Provisioning chains orchestrate the complete voice interaction pipeline by linking Speech-to-Text (STT),
+ * Agent Configuration, and Text-to-Speech (TTS) models. Used for voice-based deployments with CHAINED
+ * provisioning type.
+ *
  * @module service-configuration/provisioning-config
  */
 
 /**
  * Zod schema for Speech-to-Text (STT) model configuration.
  *
+ * Defines the STT model used to convert user speech to text in voice-based interactions.
+ * Part of the provisioning chain's input processing stage.
+ *
+ * @remarks
+ * **Architecture Context:**
+ * - **Used In**: ProvisioningConfigChain (sttConfig field)
+ * - **Purpose**: Converts incoming voice to text for agent processing
+ * - **Pipeline Position**: First stage (Speech → Text)
+ *
  * @typedef {Object} SttModelConfigProperties
- * @property {string} modelId - Identifier of the STT model to use
- * @property {string} defaultLanguage - Default language code for speech recognition (default: "en-US")
+ * @property {string} modelId - Identifier of the STT model from Travnex registry (e.g., 'whisper-v3', 'google-stt-enhanced')
+ * @property {string} defaultLanguage - Default language code for speech recognition in ISO format (default: "en-US")
  *
  * @example
  * ```typescript
@@ -22,8 +36,8 @@ import { BaseModelSchema } from "../base.schema";
  * ```
  */
 export const SttModelConfigSchema = z.object({
-    modelId: z.string(),
-    defaultLanguage: z.string().default("en-US"),
+    modelId: z.string().describe("Identifier of the STT (Speech-to-Text) model from Travnex registry for converting user speech to text (e.g., 'whisper-v3', 'google-stt-enhanced', 'deepgram-nova')"),
+    defaultLanguage: z.string().default("en-US").describe("Default language code for speech recognition in ISO 639-1 format with region (e.g., 'en-US', 'es-ES', 'fr-FR'). Used when language auto-detection is not available or fails"),
 });
 
 /**
@@ -34,11 +48,21 @@ export type SttModelConfig = z.infer<typeof SttModelConfigSchema>;
 /**
  * Zod schema for Text-to-Speech (TTS) model configuration.
  *
+ * Defines the TTS model and voice used to convert agent text responses to speech in voice interactions.
+ * Part of the provisioning chain's output generation stage.
+ *
+ * @remarks
+ * **Architecture Context:**
+ * - **Used In**: ProvisioningConfigChain (ttsConfig field)
+ * - **Purpose**: Converts agent text responses to natural speech
+ * - **Pipeline Position**: Final stage (Text → Speech)
+ * - **Voice Selection**: References voices from TravnexSupportModel.supportedVoices
+ *
  * @typedef {Object} TtsModelConfigProperties
- * @property {string} modelId - Identifier of the TTS model to use
- * @property {string} voiceId - Identifier of the voice to use for speech synthesis
+ * @property {string} modelId - Identifier of the TTS model from Travnex registry (e.g., 'eleven-labs-v2', 'google-tts-wavenet')
+ * @property {string} voiceId - Identifier of the specific voice for speech synthesis (e.g., 'adam', 'rachel', 'en-us-neural-female')
  * @property {string} defaultLanguage - Default language code for speech synthesis (default: "en-US")
- * @property {Record<string, any>} [voiceSettings] - Optional voice-specific settings (pitch, speed, etc.)
+ * @property {Record<string, any>} [voiceSettings] - Optional voice-specific settings (pitch, speed, stability, etc.)
  *
  * @example
  * ```typescript
@@ -51,10 +75,10 @@ export type SttModelConfig = z.infer<typeof SttModelConfigSchema>;
  * ```
  */
 export const TtsModelConfigSchema = z.object({
-    modelId: z.string(),
-    voiceId: z.string(),
-    defaultLanguage: z.string().default("en-US"),
-    voiceSettings: z.record(z.string(), z.any()).optional(),
+    modelId: z.string().describe("Identifier of the TTS (Text-to-Speech) model from Travnex registry for converting agent responses to speech (e.g., 'eleven-labs-v2', 'google-tts-wavenet', 'azure-neural-tts')"),
+    voiceId: z.string().describe("Identifier of the specific voice to use for speech synthesis (e.g., 'adam', 'rachel', 'en-us-neural-female'). Must be available in the TTS model's supportedVoices"),
+    defaultLanguage: z.string().default("en-US").describe("Default language code for speech synthesis in ISO 639-1 format with region (e.g., 'en-US', 'es-MX', 'fr-CA')"),
+    voiceSettings: z.record(z.string(), z.any()).optional().describe("Optional voice-specific settings as key-value pairs for fine-tuning speech output (e.g., { stability: 0.75, similarity_boost: 0.5, pitch: 1.0, speed: 1.1 })"),
 });
 
 /**
@@ -65,25 +89,36 @@ export type TtsModelConfig = z.infer<typeof TtsModelConfigSchema>;
 /**
  * Zod schema for provisioning configuration chain.
  *
- * Represents a complete provisioning chain linking STT, agent configuration, and TTS
- * for end-to-end voice interaction processing.
+ * Represents a complete voice interaction processing pipeline that chains Speech-to-Text (STT),
+ * Agent Configuration, and Text-to-Speech (TTS) for end-to-end voice conversations. Referenced
+ * by Deployment Configurations with CHAINED provisioning type.
+ *
+ * @remarks
+ * **Architecture Context:**
+ * - **Used By**: Deployment Configuration (provisioningConfigChainId for CHAINED type)
+ * - **Purpose**: Orchestrates complete voice interaction pipeline
+ * - **Pipeline Flow**: User Speech → STT → Text → Agent → Text Response → TTS → Agent Speech
+ * - **Organization**: Scoped to organization for multi-tenant isolation
+ *
+ * **Voice Processing Pipeline:**
+ * 1. **STT Stage**: Converts incoming user speech to text using sttConfig
+ * 2. **Agent Stage**: Processes text through agent (referenced by agentConfigurationId)
+ * 3. **TTS Stage**: Converts agent text response to speech using ttsConfig
  *
  * @typedef {Object} ProvisioningConfigChainProperties
  * @property {string} id - Unique identifier for the provisioning chain
- * @property {string} organizationId - ID of the organization that owns this chain
- * @property {string} chainName - Human-readable name for the provisioning chain
- * @property {string} [description] - Optional description of the chain's purpose
- * @property {SttModelConfig} sttConfig - Speech-to-text model configuration
- * @property {string} agentConfigurationId - ID of the agent configuration to use in the chain
- * @property {TtsModelConfig} ttsConfig - Text-to-speech model configuration
- * @property {number} [createdAt] - Timestamp when created
- * @property {number} [updatedAt] - Timestamp when last updated
+ * @property {string} chainName - Human-readable name for the provisioning chain for administrative identification
+ * @property {string} [description] - Optional description of the chain's purpose, use case, and configuration details
+ * @property {SttModelConfig} sttConfig - Speech-to-text model configuration for converting user voice to text (pipeline stage 1)
+ * @property {string} agentConfigurationId - ID of the agent configuration to use for processing text interactions (pipeline stage 2)
+ * @property {TtsModelConfig} ttsConfig - Text-to-speech model configuration for converting agent responses to voice (pipeline stage 3)
+ * @property {number} [createdAt] - Unix timestamp (milliseconds) when created
+ * @property {number} [updatedAt] - Unix timestamp (milliseconds) when last updated
  *
  * @example
  * ```typescript
  * const provisioningChain: ProvisioningConfigChain = {
  *   id: 'chain-123',
- *   organizationId: 'org-456',
  *   chainName: 'Customer Support Voice Chain',
  *   description: 'Voice processing chain for customer support calls',
  *   sttConfig: {
@@ -102,12 +137,11 @@ export type TtsModelConfig = z.infer<typeof TtsModelConfigSchema>;
  * ```
  */
 export const ProvisioningConfigChainSchema = BaseModelSchema.safeExtend({
-    organizationId: z.string(),
-    chainName: z.string(),
-    description: z.string().optional(),
-    sttConfig: SttModelConfigSchema,
-    agentConfigurationId: z.string(),
-    ttsConfig: TtsModelConfigSchema,
+    chainName: z.string().describe("Human-readable name for the provisioning chain used in administrative interfaces and deployment configuration (e.g., 'Customer Support Voice Chain', 'Multilingual Sales Pipeline')"),
+    description: z.string().optional().describe("Optional description of the chain's purpose, use case, language support, and configuration details for documentation"),
+    sttConfig: SttModelConfigSchema.describe("Speech-to-Text model configuration for the first stage of the pipeline, converting incoming user voice to text for agent processing"),
+    agentConfigurationId: z.string().describe("ID of the agent configuration to use in the middle stage of the pipeline for processing text interactions and generating text responses"),
+    ttsConfig: TtsModelConfigSchema.describe("Text-to-Speech model configuration for the final stage of the pipeline, converting agent text responses back to natural speech for the user"),
 });
 
 /**
@@ -126,7 +160,6 @@ export type ProvisioningConfigChain = z.infer<typeof ProvisioningConfigChainSche
  * @example
  * ```typescript
  * const newChain: CreateProvisioningConfig = {
- *   organizationId: 'org-456',
  *   chainName: 'New Voice Chain',
  *   description: 'Processing chain for multilingual support',
  *   sttConfig: {
@@ -182,25 +215,36 @@ export type UpdateProvisioningConfig = z.infer<typeof UpdateProvisioningConfigSc
 /**
  * Zod schema for translation chain configuration.
  *
- * Extends provisioning chain with translation-specific processing capabilities.
+ * Extends the provisioning chain concept with translation-specific processing capabilities.
+ * Enables real-time language translation in voice interactions (e.g., English caller to Spanish agent).
+ *
+ * @remarks
+ * **Architecture Context:**
+ * - **Extension Of**: ProvisioningConfigChain with translation capabilities
+ * - **Purpose**: Real-time language translation for multilingual support
+ * - **Pipeline Flow**: Speech (Lang A) → STT → Text (Lang A) → Translation → Text (Lang B) → TTS → Speech (Lang B)
+ * - **Use Case**: Cross-language customer support, international business
+ *
+ * **Translation Pipeline:**
+ * 1. **STT Stage**: Converts incoming speech to text in source language
+ * 2. **Translation Stage**: Translates text between languages using processingModelId
+ * 3. **TTS Stage**: Converts translated text to speech in target language
  *
  * @typedef {Object} TranslationChainConfigProperties
  * @property {string} id - Unique identifier for the translation chain
- * @property {string} organizationId - ID of the organization that owns this chain
- * @property {string} chainName - Human-readable name for the translation chain
- * @property {string} [description] - Optional description of the chain's purpose
- * @property {SttModelConfig} sttConfig - Speech-to-text model configuration
- * @property {string} processingModelId - ID of the model used for translation processing
- * @property {TtsModelConfig} ttsConfig - Text-to-speech model configuration
- * @property {boolean} isTranslation - Whether this chain performs translation (default: true)
- * @property {number} [createdAt] - Timestamp when created
- * @property {number} [updatedAt] - Timestamp when last updated
+ * @property {string} chainName - Human-readable name for the translation chain (e.g., 'EN-ES Translation', 'Multilingual Support')
+ * @property {string} [description] - Optional description of language pair, use case, and configuration
+ * @property {SttModelConfig} sttConfig - Speech-to-text configuration for source language recognition
+ * @property {string} processingModelId - ID of the LLM model used for translation processing between languages
+ * @property {TtsModelConfig} ttsConfig - Text-to-speech configuration for target language synthesis
+ * @property {boolean} isTranslation - Flag indicating this chain performs translation (default: true)
+ * @property {number} [createdAt] - Unix timestamp (milliseconds) when created
+ * @property {number} [updatedAt] - Unix timestamp (milliseconds) when last updated
  *
  * @example
  * ```typescript
  * const translationChain: TranslationChainConfig = {
  *   id: 'chain-123',
- *   organizationId: 'org-456',
  *   chainName: 'EN-ES Translation Chain',
  *   description: 'English to Spanish translation for customer support',
  *   sttConfig: {
@@ -220,13 +264,12 @@ export type UpdateProvisioningConfig = z.infer<typeof UpdateProvisioningConfigSc
  * ```
  */
 export const TranslationChainConfigSchema = BaseModelSchema.safeExtend({
-    organizationId: z.string(),
-    chainName: z.string(),
-    description: z.string().optional(),
-    sttConfig: SttModelConfigSchema,
-    processingModelId: z.string(),
-    ttsConfig: TtsModelConfigSchema,
-    isTranslation: z.boolean().default(true),
+    chainName: z.string().describe("Human-readable name for the translation chain identifying the language pair (e.g., 'EN-ES Translation', 'French to English Support')"),
+    description: z.string().optional().describe("Optional description of the translation language pair, use case, supported scenarios, and configuration details"),
+    sttConfig: SttModelConfigSchema.describe("Speech-to-Text configuration for recognizing and transcribing speech in the source language"),
+    processingModelId: z.string().describe("ID of the LLM model used for translation processing between source and target languages (e.g., 'gpt-4-translator', 'claude-multilingual')"),
+    ttsConfig: TtsModelConfigSchema.describe("Text-to-Speech configuration for synthesizing speech in the target language with appropriate voice and accent"),
+    isTranslation: z.boolean().default(true).describe("Flag indicating this chain performs real-time language translation (always true for translation chains)"),
 });
 
 /**
@@ -242,7 +285,6 @@ export type TranslationChainConfig = z.infer<typeof TranslationChainConfigSchema
  * @example
  * ```typescript
  * const newTranslationChain: CreateTranslationChainConfig = {
- *   organizationId: 'org-456',
  *   chainName: 'FR-EN Translation',
  *   description: 'French to English translation chain',
  *   sttConfig: {

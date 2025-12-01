@@ -8,32 +8,57 @@ import { ProjectSchema } from '../account/project.schema';
 
 /**
  * @fileoverview Deployment configuration schema definitions.
+ *
+ * Deployment Configuration is the central composition entity in the Service Configuration architecture.
+ * It brings together agent behavior, instructions, organizational context, and channel configuration
+ * to create a complete deployable unit. Each deployment has exactly one channel (1:1 relationship).
+ *
  * @module service-configuration/deployment-config
  */
 
 /**
  * Zod schema for deployment configuration validation.
  *
- * Represents the complete configuration for a deployment, linking together a project,
- * deployment channel, agent configuration, and instruction configuration.
+ * The Deployment Configuration is the central composition entity that brings together agent behavior,
+ * instructions, and organizational context to create a deployable unit. It serves as the primary
+ * entity that operators interact with when setting up new agent deployments.
+ *
+ * @remarks
+ * **Architecture Context:**
+ * - **Central Entity**: Primary composition point for all deployment components
+ * - **Managed By**: Service Configuration (administrative oversight)
+ * - **Uses**: Agent Configuration (N:1), Instruction Configuration (N:1)
+ * - **Associated With**: Project (N:1 for organizational grouping)
+ * - **Has**: Deployment Channel (1:1 - each deployment exposes through exactly one channel)
+ * - **Pattern**: Multi-channel deployments require separate Deployment Configurations per channel
+ *
+ * **Provisioning Types:**
+ * - **DIRECT**: Agent processes interactions directly without additional chains
+ * - **CHAINED**: Uses provisioning chain (STT → Agent → TTS) for voice processing
+ *
+ * **Deployment Lifecycle:**
+ * - **PENDING**: Created but not yet activated
+ * - **ACTIVE**: Operational and accepting interactions
+ * - **SUSPENDED**: Temporarily paused
+ * - **FAILED**: Deployment encountered errors
  *
  * @typedef {Object} DeploymentConfigurationProperties
  * @property {string} id - Unique identifier for the deployment configuration
- * @property {string} projectId - ID of the project this deployment belongs to
- * @property {string} deploymentChannelId - ID of the channel this deployment uses (call, SMS, web, mobile)
- * @property {string} [deploymentName] - Human-readable name for the deployment
- * @property {string} agentConfigurationId - ID of the agent configuration to use
- * @property {string} instructionConfigurationId - ID of the instruction configuration to use
- * @property {DeploymentStatus} deploymentStatus - Current status of the deployment
- * @property {DeploymentProvisioningType | null} [provisioningType] - How this deployment is provisioned
- * @property {string | null} [provisioningConfigChainId] - ID of the provisioning chain if using chained provisioning
- * @property {boolean} isActive - Whether this deployment is currently active (default: false)
- * @property {DeploymentChannel | null} [channel] - Full channel configuration (populated for detail views)
- * @property {Project | null} [project] - Full project information (populated for detail views)
- * @property {AgentInfo | null} [agent] - Agent configuration summary (populated for detail views)
- * @property {InstructionInfo | null} [instruction] - Instruction configuration summary (populated for detail views)
- * @property {number} [createdAt] - Timestamp when created
- * @property {number} [updatedAt] - Timestamp when last updated
+ * @property {string} projectId - ID of the project this deployment belongs to for organizational grouping and access control
+ * @property {string} deploymentChannelId - ID of the deployment channel (1:1 relationship - phone, SMS, web, or mobile)
+ * @property {string} [deploymentName] - Optional human-readable name for administrative identification
+ * @property {string} agentConfigurationId - ID of the agent configuration defining core behavior and capabilities (N:1)
+ * @property {string} instructionConfigurationId - ID of the instruction configuration providing behavioral guidelines (N:1)
+ * @property {DeploymentStatus} deploymentStatus - Current operational status (PENDING, ACTIVE, SUSPENDED, FAILED)
+ * @property {DeploymentProvisioningType} provisioningType - How this deployment processes interactions (DIRECT or CHAINED) (default: DIRECT)
+ * @property {string | null} [provisioningConfigChainId] - ID of the provisioning chain for voice processing (required for CHAINED type)
+ * @property {boolean} isActive - Whether this deployment is currently active and accepting interactions (default: false)
+ * @property {DeploymentChannel | null} [channel] - Populated deployment channel configuration (for detail views)
+ * @property {Project | null} [project] - Populated project information (for detail views)
+ * @property {AgentConfiguration | null} [agent] - Populated agent configuration (for detail views)
+ * @property {InstructionConfiguration | null} [instruction] - Populated instruction configuration (for detail views)
+ * @property {number} [createdAt] - Unix timestamp (milliseconds) when created
+ * @property {number} [updatedAt] - Unix timestamp (milliseconds) when last updated
  *
  * @example
  * ```typescript
@@ -53,19 +78,19 @@ import { ProjectSchema } from '../account/project.schema';
  * ```
  */
 export const DeploymentConfigurationSchema = BaseModelSchema.safeExtend({
-    projectId: z.string(),
-    deploymentChannelId: z.string(),
-    deploymentName: z.string().optional(),
-    agentConfigurationId: z.string(),
-    instructionConfigurationId: z.string(),
-    deploymentStatus: z.enum(DeploymentStatus),
-    provisioningType: z.enum(DeploymentProvisioningType).default(DeploymentProvisioningType.DIRECT),
-    provisioningConfigChainId: z.string().optional().nullable(),
-    isActive: z.boolean().default(false),
-    channel: DeploymentChannelSchema.optional().nullable(),
-    project: ProjectSchema.optional().nullable(),
-    agent: AgentConfigurationSchema.optional().nullable(),
-    instruction: InstructionConfigurationSchema.optional().nullable(),
+    projectId: z.string().describe("ID of the project this deployment belongs to for organizational grouping, access control, and resource management"),
+    deploymentChannelId: z.string().describe("ID of the deployment channel through which this deployment is accessible (1:1 relationship - each deployment has exactly one channel)"),
+    deploymentName: z.string().optional().describe("Optional human-readable name for the deployment used in administrative interfaces and reporting"),
+    agentConfigurationId: z.string().describe("ID of the agent configuration that defines the agent's core behavior, capabilities, and LLM model (N:1 relationship - multiple deployments can share an agent)"),
+    instructionConfigurationId: z.string().describe("ID of the instruction configuration that provides behavioral guidelines, role definition, and conversation patterns for the agent (N:1 relationship)"),
+    deploymentStatus: z.enum(DeploymentStatus).describe("Current operational status of the deployment (PENDING: awaiting activation, ACTIVE: operational, SUSPENDED: temporarily paused, FAILED: encountered errors)"),
+    provisioningType: z.enum(DeploymentProvisioningType).default(DeploymentProvisioningType.DIRECT).describe("How this deployment processes interactions: DIRECT for direct agent processing, CHAINED for provisioning chain (STT → Agent → TTS) voice processing"),
+    provisioningConfigChainId: z.string().optional().nullable().describe("ID of the provisioning configuration chain for voice processing (required for CHAINED provisioning type, links STT, agent, and TTS models)"),
+    isActive: z.boolean().default(false).describe("Whether this deployment is currently active and accepting user interactions (independent of deploymentStatus for granular control)"),
+    channel: DeploymentChannelSchema.optional().nullable().describe("Populated deployment channel configuration including type, identifier, and channel-specific settings (null if not loaded, populated for detail views)"),
+    project: ProjectSchema.optional().nullable().describe("Populated project information including name and organizational details (null if not loaded, populated for detail views)"),
+    agent: AgentConfigurationSchema.optional().nullable().describe("Populated agent configuration including model, operational mode, and capabilities (null if not loaded, populated for detail views)"),
+    instruction: InstructionConfigurationSchema.optional().nullable().describe("Populated instruction configuration including role, guidelines, and knowledge sources (null if not loaded, populated for detail views)"),
 });
 
 /**

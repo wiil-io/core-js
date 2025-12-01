@@ -4,20 +4,32 @@ import { BaseModelSchema } from "../base.schema";
 
 /**
  * @fileoverview Phone number configuration and purchase schema definitions.
+ *
+ * Phone number schemas manage the complete lifecycle of phone number acquisition from telephony providers:
+ * discovery of available inventory, purchase transactions, and provisioning into Phone Configurations.
+ * Supports multiple providers (SignalWire, Twilio) with provider-specific extensions.
+ *
  * @module service-configuration/phone-number
  */
 
 /**
  * Zod schema for phone provider region information.
  *
- * Represents geographic region information for phone number providers.
+ * Represents geographic region information from telephony providers, used for filtering and
+ * searching available phone numbers by location.
+ *
+ * @remarks
+ * **Architecture Context:**
+ * - **Usage**: Phone number discovery and filtering
+ * - **Provider Integration**: Maps to provider regional offerings
+ * - **Search**: Used to narrow number searches by geographic area
  *
  * @typedef {Object} PhoneProviderRegionProperties
- * @property {string} regionId - Unique identifier for the region
- * @property {string} regionName - Human-readable name of the region
- * @property {string | null} [countryCode] - ISO country code (e.g., "US", "CA")
- * @property {string | null} [countryName] - Full country name
- * @property {ProviderType} providerType - Phone service provider type
+ * @property {string} regionId - Unique identifier for the region from provider (e.g., 'us-west', 'uk-london')
+ * @property {string} regionName - Human-readable region name (e.g., 'US West', 'United Kingdom')
+ * @property {string | null} [countryCode] - ISO 3166-1 alpha-2 country code (e.g., 'US', 'GB', 'CA')
+ * @property {string | null} [countryName] - Full country name (e.g., 'United States', 'United Kingdom')
+ * @property {ProviderType} providerType - Telephony provider offering numbers in this region
  *
  * @example
  * ```typescript
@@ -31,11 +43,11 @@ import { BaseModelSchema } from "../base.schema";
  * ```
  */
 export const PhoneProviderRegionSchema = z.object({
-    regionId: z.string(),
-    regionName: z.string(),
-    countryCode: z.string().optional().nullable(),
-    countryName: z.string().optional().nullable(),
-    providerType: z.enum(ProviderType)
+    regionId: z.string().describe("Unique identifier for this geographic region from the provider's system (e.g., 'us-west', 'us-ny', 'uk-london')"),
+    regionName: z.string().describe("Human-readable name for the geographic region (e.g., 'US West', 'New York', 'United Kingdom')"),
+    countryCode: z.string().optional().nullable().describe("ISO 3166-1 alpha-2 country code for this region (e.g., 'US', 'GB', 'CA', 'AU')"),
+    countryName: z.string().optional().nullable().describe("Full country name for user display (e.g., 'United States', 'United Kingdom', 'Canada')"),
+    providerType: z.enum(ProviderType).describe("Telephony provider offering phone numbers in this region (SIGNALWIRE, TWILIO, VONAGE, etc.)")
 });
 
 /**
@@ -76,20 +88,20 @@ export type PhoneProviderRegion = z.infer<typeof PhoneProviderRegionSchema>;
  * ```
  */
 export const BasePhoneNumberInfoSchema = z.object({
-    friendlyName: z.string(),
-    phoneNumber: z.string(),
-    lata: z.string().nullable().optional(),
-    rateCenter: z.string().optional(),
-    region: z.string().optional(),
-    postalCode: z.string().optional(),
-    isoCountry: z.string(),
+    friendlyName: z.string().describe("Human-readable display name for this phone number (e.g., 'New York Local', 'Customer Support Line')"),
+    phoneNumber: z.string().describe("Phone number in E.164 international format (e.g., '+12125551234')"),
+    lata: z.string().nullable().optional().describe("Local Access and Transport Area (LATA) code for North American numbers (telecom routing identifier)"),
+    rateCenter: z.string().optional().describe("Rate center name for billing and routing purposes (North American telephony concept)"),
+    region: z.string().optional().describe("State or province code where the number is registered (e.g., 'NY', 'CA', 'ON')"),
+    postalCode: z.string().optional().describe("Postal or ZIP code associated with this phone number's geographic location"),
+    isoCountry: z.string().describe("ISO 3166-1 alpha-2 country code for this phone number (e.g., 'US', 'GB', 'CA')"),
     capabilities: z.object({
-        voice: z.boolean(),
-        SMS: z.boolean(),
-        MMS: z.boolean(),
-    }),
-    beta: z.boolean(),
-    numberType: z.enum(PhoneNumberType),
+        voice: z.boolean().describe("Whether this phone number supports voice calls (inbound/outbound telephony)"),
+        SMS: z.boolean().describe("Whether this phone number supports SMS text messaging"),
+        MMS: z.boolean().describe("Whether this phone number supports MMS multimedia messaging"),
+    }).describe("Capabilities supported by this phone number for voice and messaging"),
+    beta: z.boolean().describe("Whether this is a beta phone number (experimental or limited availability)"),
+    numberType: z.enum(PhoneNumberType).describe("Type of phone number (LOCAL for geographic, TOLL_FREE for 1-800 numbers, MOBILE for cellular, etc.)"),
 });
 
 /**
@@ -220,7 +232,6 @@ export type PhoneProviderResponse = z.infer<typeof PhoneProviderResponseSchema>;
  * @property {string} id - Unique identifier for the purchase transaction
  * @property {string} friendlyName - Human-readable name for the purchased number
  * @property {string} phoneNumber - The phone number being purchased
- * @property {string} organizationId - ID of the organization purchasing the number
  * @property {number} requestTime - Timestamp when the purchase was requested (default: Date.now())
  * @property {ProviderType} providerType - Provider from which the number is being purchased
  * @property {number} amount - Purchase amount (must be positive)
@@ -241,7 +252,6 @@ export type PhoneProviderResponse = z.infer<typeof PhoneProviderResponseSchema>;
  *   id: 'purchase-123',
  *   friendlyName: 'Main Support Line',
  *   phoneNumber: '+12125551234',
- *   organizationId: 'org-456',
  *   requestTime: Date.now(),
  *   providerType: ProviderType.TWILIO,
  *   amount: 1.00,
@@ -257,20 +267,19 @@ export type PhoneProviderResponse = z.infer<typeof PhoneProviderResponseSchema>;
  * ```
  */
 export const PhoneNumberPurchaseSchema = BaseModelSchema.safeExtend({
-    friendlyName: z.string(),
-    phoneNumber: z.string(),
-    organizationId: z.string(),
-    requestTime: z.number().default(Date.now()),
-    providerType: z.enum(ProviderType),
-    amount: z.number().positive(),
-    currency: z.string().length(3).default('USD'),
-    phoneNumberInfo: z.unknown(),
-    status: z.enum(PhonePurchaseStatus).default(PhonePurchaseStatus.PENDING),
-    numberType: z.enum(PhoneNumberType).default(PhoneNumberType.LOCAL),
-    transactionId: z.string().nullable().optional(),
-    statusDetails: z.string().nullable().optional(),
-    completedAt: z.number().nullable().optional(),
-    metadata: z.record(z.string(), z.any()).nullable().optional(),
+    friendlyName: z.string().describe("Human-readable name for the phone number being purchased (e.g., 'Customer Support Line', 'Sales Main Number')"),
+    phoneNumber: z.string().describe("Phone number in E.164 international format being purchased (e.g., '+12125551234')"),
+    requestTime: z.number().default(Date.now()).describe("Unix timestamp (milliseconds) when the purchase was initiated (auto-set to current time)"),
+    providerType: z.enum(ProviderType).describe("Telephony provider from which the number is being purchased (SIGNALWIRE, TWILIO, etc.)"),
+    amount: z.number().positive().describe("Purchase price for this phone number (must be positive, typically $1-5 for local numbers)"),
+    currency: z.string().length(3).default('USD').describe("ISO 4217 currency code for the purchase amount (e.g., 'USD', 'GBP', 'EUR')"),
+    phoneNumberInfo: z.unknown().describe("Complete phone number information from the provider including capabilities, region, and metadata"),
+    status: z.enum(PhonePurchaseStatus).default(PhonePurchaseStatus.PENDING).describe("Current status of the purchase transaction (PENDING, PROCESSING, COMPLETED, FAILED, CANCELLED)"),
+    numberType: z.enum(PhoneNumberType).default(PhoneNumberType.LOCAL).describe("Type of phone number being purchased (LOCAL for geographic, TOLL_FREE for 1-800, MOBILE for cellular)"),
+    transactionId: z.string().nullable().optional().describe("Transaction identifier from the telephony provider for this purchase (populated after provider confirms)"),
+    statusDetails: z.string().nullable().optional().describe("Additional details about the current status (error messages, provider notes, or completion details)"),
+    completedAt: z.number().nullable().optional().describe("Unix timestamp (milliseconds) when the purchase was successfully completed and number became active"),
+    metadata: z.record(z.string(), z.any()).nullable().optional().describe("Additional metadata for the purchase including provider-specific details, billing information, or custom attributes"),
 });
 
 /**
@@ -291,7 +300,6 @@ export type PhoneNumberPurchase = z.infer<typeof PhoneNumberPurchaseSchema>;
  * const newPurchase: CreatePhoneNumberPurchase = {
  *   friendlyName: 'New Support Line',
  *   phoneNumber: '+12125551234',
- *   organizationId: 'org-456',
  *   providerType: ProviderType.TWILIO,
  *   amount: 1.00,
  *   currency: 'USD',

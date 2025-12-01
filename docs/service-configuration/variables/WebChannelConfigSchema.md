@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.3**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.4**](../../README.md)
 
 ***
 
@@ -25,8 +25,16 @@ const WebChannelConfigSchema: ZodObject<{
 }, $strip>;
 ```
 
-Defined in: [src/core/service-configuration/interaction-channels.schema.ts:30](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/service-configuration/interaction-channels.schema.ts#L30)
+Defined in: [src/core/service-configuration/interaction-channels.schema.ts:51](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/service-configuration/interaction-channels.schema.ts#L51)
 
 Zod schema for web channel configuration.
 
-Configuration specific to web-based chat widget channels.
+Configuration specific to web-based chat widget channels that can be embedded in websites
+and web applications for browser-based real-time communication.
+
+## Remarks
+
+**Architecture Context:**
+- **Used By**: Web deployment channels
+- **Features**: Embeddable chat widget, WebSocket communication, rich media support
+- **Customization**: Supports custom CSS and theming for brand consistency

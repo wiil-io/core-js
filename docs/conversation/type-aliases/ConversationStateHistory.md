@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.3**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.4**](../../README.md)
 
 ***
 
@@ -15,15 +15,33 @@ type ConversationStateHistory = {
 };
 ```
 
-Defined in: [src/core/conversation/conversation-config.schema.ts:192](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/conversation/conversation-config.schema.ts#L192)
+Defined in: [src/core/conversation/conversation-config.schema.ts:286](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/conversation/conversation-config.schema.ts#L286)
 
 Conversation state history schema for tracking status changes.
+
+Audit trail recording each status transition throughout a conversation's lifecycle. Enables tracking
+conversation progression from initiation to completion, understanding conversation flow patterns, and
+analyzing resolution times.
 
 ## Type Declaration
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="status"></a> `status` | [`ConversationStatus`](../../type-definitions/enumerations/ConversationStatus.md) | [src/core/conversation/conversation-config.schema.ts:78](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/conversation/conversation-config.schema.ts#L78) |
-| <a id="timestamp"></a> `timestamp` | `number` | [src/core/conversation/conversation-config.schema.ts:79](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/conversation/conversation-config.schema.ts#L79) |
-| <a id="reason"></a> `reason?` | `string` | [src/core/conversation/conversation-config.schema.ts:80](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/conversation/conversation-config.schema.ts#L80) |
-| <a id="metadata"></a> `metadata?` | `Record`\<`string`, `any`\> | [src/core/conversation/conversation-config.schema.ts:81](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/conversation/conversation-config.schema.ts#L81) |
+| <a id="status"></a> `status` | [`ConversationStatus`](../../type-definitions/enumerations/ConversationStatus.md) | [src/core/conversation/conversation-config.schema.ts:120](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/conversation/conversation-config.schema.ts#L120) |
+| <a id="timestamp"></a> `timestamp` | `number` | [src/core/conversation/conversation-config.schema.ts:121](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/conversation/conversation-config.schema.ts#L121) |
+| <a id="reason"></a> `reason?` | `string` | [src/core/conversation/conversation-config.schema.ts:122](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/conversation/conversation-config.schema.ts#L122) |
+| <a id="metadata"></a> `metadata?` | `Record`\<`string`, `any`\> | [src/core/conversation/conversation-config.schema.ts:123](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/conversation/conversation-config.schema.ts#L123) |
+
+## Remarks
+
+**Architecture Context:**
+- **Used In**: ServiceConversationConfig.state_history array
+- **Purpose**: Audit trail for status transitions and conversation lifecycle tracking
+- **Analytics**: Used for measuring average handling time, resolution rates, and conversation flow analysis
+
+**Status Lifecycle:**
+- **ACTIVE**: Conversation currently in progress with ongoing message exchange
+- **COMPLETED**: Conversation successfully concluded with issue resolved or information provided
+- **FAILED**: Conversation encountered errors or technical failures
+- **ABANDONED**: User left conversation without resolution
+- **TRANSFERRED**: Call transferred to human agent

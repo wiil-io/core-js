@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.3**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.4**](../../README.md)
 
 ***
 
@@ -10,12 +10,27 @@
 const InstructionConfigurationSchema: ZodObject<InstructionConfiguration>;
 ```
 
-Defined in: [src/core/service-configuration/instruction-config.schema.ts:53](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/service-configuration/instruction-config.schema.ts#L53)
+Defined in: [src/core/service-configuration/instruction-config.schema.ts:72](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/service-configuration/instruction-config.schema.ts#L72)
 
 Zod schema for Instruction Configuration validation.
 
-Defines the complete configuration for agent instructions, including role definition,
-behavioral guidelines, knowledge sources, and enabled business services.
+The Instruction Configuration is the heart of agent behaviour in the Service Configuration architecture.
+It contains the prompts, guidelines, and contextual instructions that fundamentally define how an agent
+operates during conversations. A single Instruction Configuration can be associated with multiple Agent
+Configurations (1:N relationship), allowing consistent behavioral guidelines across different agent types.
+
+## Remarks
+
+**Architecture Context:**
+- **Central Role**: The Instruction Configuration is the core element that shapes agent behavior
+- **Relationship**: 1:N with Agent Configurations - one instruction set can govern multiple agents
+- **Reusability**: Designed to be reused across multiple deployments
+- **Managed By**: Service Configuration (lifecycle management)
+- **Used By**: Deployment Configurations reference instruction sets for agent behavior
+
+**Example Use Case:**
+A "Customer Service Guidelines" instruction set might govern both a "Sales Agent" and a "Support Agent",
+ensuring uniform tone and compliance while each agent maintains its specialized capabilities.
 
 ## Example
 

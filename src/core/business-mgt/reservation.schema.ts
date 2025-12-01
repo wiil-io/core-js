@@ -18,14 +18,14 @@ import { AppointmentStatus, ReservationSettingType, ResourceReservationDurationU
  * @property {boolean} isActive - Whether this reservation setting is active
  */
 export const ReservationSettingsSchema = BaseModelSchema.safeExtend({
-    reservationType: z.enum(ResourceType),
-    settingType: z.enum(ReservationSettingType),
+    reservationType: z.enum(ResourceType).describe("Resource type this setting applies to: ROOM, TABLE, RENTAL, or OTHER. Determines which resources inherit these default reservation parameters."),
+    settingType: z.enum(ReservationSettingType).describe("Configuration category defining what aspect of reservations this setting controls. Enables flexible reservation policy management."),
 
-    defaultReservationDuration: z.number().int().positive().default(1).optional(),
+    defaultReservationDuration: z.number().int().positive().default(1).optional().describe("Standard reservation length in specified units. Applied as default when customers make reservations via AI Powered Services. Defaults to 1."),
 
-    defaultReservationDurationUnit: z.enum(ResourceReservationDurationUnit).optional().default(ResourceReservationDurationUnit.HOURS),
+    defaultReservationDurationUnit: z.enum(ResourceReservationDurationUnit).optional().default(ResourceReservationDurationUnit.HOURS).describe("Time unit for defaultReservationDuration: HOURS (restaurant tables, rentals), DAYS (hotel rooms), or MINUTES (short-term use). Defaults to HOURS."),
 
-    isActive: z.boolean().default(false),
+    isActive: z.boolean().default(false).describe("Whether this configuration is currently active and applied to new reservations. Inactive settings are ignored. Defaults to false."),
 });
 
 /**
@@ -72,22 +72,22 @@ export type UpdateReservationSettings = z.infer<typeof UpdateReservationSettings
  * @property {string} [serviceConversationConfigId] - Configuration ID for service conversation
  */
 export const ReservationSchema = BaseModelSchema.safeExtend({
-    reservationType: z.enum(ResourceType),
-    resourceId: z.string().optional().nullable(),
-    customerId: z.string(),
-    customerName: z.string().optional(),
-    customerEmail: z.email().optional(),
-    startTime: z.number(),
-    endTime: z.number().optional(),
-    duration: z.number().nonnegative().optional(),
-    personsNumber: z.number().int().nonnegative().optional(),
-    totalPrice: z.number().nonnegative().optional(),
-    depositPaid: z.number().nonnegative().default(0),
-    status: z.enum(AppointmentStatus).default(AppointmentStatus.PENDING),
-    notes: z.string().optional(),
-    cancelReason: z.string().nullable().optional(),
-    isResourceReservation: z.boolean().default(false),
-    serviceConversationConfigId: z.string().nullable().optional(),
+    reservationType: z.enum(ResourceType).describe("Category of reservation: ROOM (hotel stay), TABLE (restaurant seating), RENTAL (hourly/daily equipment/space), or OTHER. Determines pricing model and fulfillment workflow."),
+    resourceId: z.string().optional().nullable().describe("References specific Resource from reservation-resource.schema being reserved (e.g., 'Table 5', 'Room 101'). Null for general availability reservations without specific resource assignment."),
+    customerId: z.string().describe("References Customer who made this reservation. Links to customer profile for history, preferences, and communication."),
+    customerName: z.string().optional().describe("Customer's full name captured at reservation time. Used for identification and communication when customer record doesn't have name populated."),
+    customerEmail: z.email().optional().describe("Customer's email for confirmation messages and updates sent by AI Powered Services. Used when customer record email is unavailable."),
+    startTime: z.number().describe("Unix timestamp for reservation start. Critical for availability management, customer notifications, and operational scheduling."),
+    endTime: z.number().optional().describe("Unix timestamp for reservation end. Calculated from startTime + duration. Used for availability blocking and checkout management."),
+    duration: z.number().nonnegative().optional().describe("Reservation length in units matching reservationType (hours for TABLE/RENTAL, days for ROOM). Used for pricing calculations and availability management."),
+    personsNumber: z.number().int().nonnegative().optional().describe("Party size or occupancy count. Used to match customers with appropriately sized resources (table capacity, room occupancy). Critical for resource allocation."),
+    totalPrice: z.number().nonnegative().optional().describe("Total reservation cost in account's currency. Calculated from duration, resource pricing, and any applicable fees. Used for payment processing."),
+    depositPaid: z.number().nonnegative().default(0).describe("Deposit amount already paid to secure reservation. Used for payment tracking and no-show protection. Defaults to 0."),
+    status: z.enum(AppointmentStatus).default(AppointmentStatus.PENDING).describe("Current reservation status tracking from booking through check-in to completion. Used for operational workflow and customer notifications. Defaults to PENDING."),
+    notes: z.string().optional().describe("Customer's special requests or preferences (e.g., 'window table', 'early check-in', 'quiet room'). Communicated to staff for enhanced service delivery."),
+    cancelReason: z.string().nullable().optional().describe("Reason provided when reservation is cancelled. Used for analytics, refund processing, and customer service improvement."),
+    isResourceReservation: z.boolean().default(false).describe("Whether this is a specific resource reservation (true) or general availability booking (false). True when resourceId is assigned. Defaults to false."),
+    serviceConversationConfigId: z.string().nullable().optional().describe("References the AI Powered Services conversation configuration that powered this reservation. Links reservation to deployment channel and conversation history."),
 });
 
 /**

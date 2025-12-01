@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.3**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.4**](../../README.md)
 
 ***
 
@@ -10,12 +10,33 @@
 const DeploymentConfigurationSchema: ZodObject<DeploymentConfiguration>;
 ```
 
-Defined in: [src/core/service-configuration/deployment-config.schema.ts:55](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/service-configuration/deployment-config.schema.ts#L55)
+Defined in: [src/core/service-configuration/deployment-config.schema.ts:80](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/service-configuration/deployment-config.schema.ts#L80)
 
 Zod schema for deployment configuration validation.
 
-Represents the complete configuration for a deployment, linking together a project,
-deployment channel, agent configuration, and instruction configuration.
+The Deployment Configuration is the central composition entity that brings together agent behavior,
+instructions, and organizational context to create a deployable unit. It serves as the primary
+entity that operators interact with when setting up new agent deployments.
+
+## Remarks
+
+**Architecture Context:**
+- **Central Entity**: Primary composition point for all deployment components
+- **Managed By**: Service Configuration (administrative oversight)
+- **Uses**: Agent Configuration (N:1), Instruction Configuration (N:1)
+- **Associated With**: Project (N:1 for organizational grouping)
+- **Has**: Deployment Channel (1:1 - each deployment exposes through exactly one channel)
+- **Pattern**: Multi-channel deployments require separate Deployment Configurations per channel
+
+**Provisioning Types:**
+- **DIRECT**: Agent processes interactions directly without additional chains
+- **CHAINED**: Uses provisioning chain (STT → Agent → TTS) for voice processing
+
+**Deployment Lifecycle:**
+- **PENDING**: Created but not yet activated
+- **ACTIVE**: Operational and accepting interactions
+- **SUSPENDED**: Temporarily paused
+- **FAILED**: Deployment encountered errors
 
 ## Example
 

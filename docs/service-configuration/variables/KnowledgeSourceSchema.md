@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.3**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.4**](../../README.md)
 
 ***
 
@@ -10,12 +10,26 @@
 const KnowledgeSourceSchema: ZodObject<KnowledgeSource>;
 ```
 
-Defined in: [src/core/service-configuration/knowledge.schema.ts:60](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/service-configuration/knowledge.schema.ts#L60)
+Defined in: [src/core/service-configuration/knowledge.schema.ts:78](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/service-configuration/knowledge.schema.ts#L78)
 
 Zod schema for Knowledge Source validation.
 
-Defines the complete configuration for a knowledge source, including content storage,
-processing status, and storage tier optimization.
+Knowledge Sources provide contextual information and domain knowledge for AI agents. They are
+referenced by Instruction Configurations (1:N relationship) to give agents access to specific
+information, documentation, or business knowledge needed for their tasks.
+
+## Remarks
+
+**Architecture Context:**
+- **Relationship**: Referenced by Instruction Configurations via knowledgeSourceIds (1:N)
+- **Purpose**: Provides domain knowledge, documentation, and context for agent responses
+- **Storage Strategy**: Multi-tier storage (Firestore, Cloud Storage) with automatic optimization
+- **Processing Pipeline**: Raw content → Processing → Prepared content optimized for AI consumption
+
+**Storage Tiers:**
+- **FIRESTORE**: Fast access for frequently used knowledge (stored in database)
+- **CLOUD_STORAGE**: Cost-effective for less frequently accessed content
+- **Automatic Optimization**: Access patterns drive tier migration for cost efficiency
 
 ## Example
 

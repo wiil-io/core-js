@@ -1,7 +1,6 @@
 {
   "entryPoints": [
     "src/core/account/index.ts",
-    "src/core/base/index.ts",
     "src/core/business-mgt/index.ts",
     "src/core/conversation/index.ts",
     "src/core/service-configuration/index.ts",
@@ -25,6 +24,18 @@
     "invalidLink": true,
     "notDocumented": false
   },
+  "blockTags": [
+    "@fileoverview",
+    "@param",
+    "@returns",
+    "@throws",
+    "@example",
+    "@typedef",
+    "@property",
+    "@remarks",
+    "@module",
+    "@deprecated"
+  ],
   "outputFileStrategy": "members",
   "flattenOutputFiles": false,
   "mergeReadme": true,

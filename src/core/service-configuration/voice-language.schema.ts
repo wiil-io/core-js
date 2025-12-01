@@ -2,11 +2,18 @@ import { z } from 'zod';
 
 /**
  * @fileoverview Voice and language configuration schema definitions.
+ *
+ * Voice and language configurations define the supported voices and languages for text-to-speech
+ * synthesis and speech-to-text recognition. These configurations are referenced by support models
+ * and provisioning chains for voice-based interactions.
+ *
  * @module service-configuration/voice-language
  */
 
 /**
  * Enum schema for voice gender classification.
+ *
+ * Categorizes synthetic voices by gender characteristics for user preference and selection.
  *
  * @example
  * ```typescript
@@ -23,15 +30,29 @@ export type VoiceGender = z.infer<typeof VoiceGender>;
 /**
  * Zod schema for voice configuration.
  *
- * Represents a voice option available for text-to-speech synthesis.
+ * Represents a synthetic voice option available for text-to-speech (TTS) synthesis. Voices are
+ * associated with TTS models in the Travnex support registry and selected in provisioning chains
+ * for voice-based deployments.
+ *
+ * @remarks
+ * **Architecture Context:**
+ * - **Used By**: TravnexSupportModel (supportedVoices array for TTS models)
+ * - **Referenced In**: TtsModelConfig (voiceId selection) and ProvisioningConfigChain
+ * - **Purpose**: Defines available voice options for agent speech synthesis
+ *
+ * **Voice Characteristics:**
+ * - **Identity**: Unique ID and human-readable name
+ * - **Gender**: Male, female, or neutral classification
+ * - **Language**: Optimal language for the voice
+ * - **Default**: Flag for platform default selection
  *
  * @typedef {Object} VoiceProperties
- * @property {string} voiceId - Unique identifier for the voice
- * @property {string} name - Human-readable name of the voice
- * @property {string} description - Description of the voice characteristics
- * @property {VoiceGender} gender - Gender classification of the voice
- * @property {string | null} [language] - Language code this voice is optimized for
- * @property {boolean} isDefault - Whether this is the default voice (default: false)
+ * @property {string} voiceId - Unique identifier for the voice used in configurations (e.g., 'adam', 'rachel', 'en-us-standard-a')
+ * @property {string} name - Human-readable name of the voice for display in UI (e.g., 'Adam', 'Rachel', 'Google Standard A')
+ * @property {string} description - Description of the voice characteristics including tone, accent, and use cases (e.g., 'Deep, authoritative male voice', 'Warm, friendly female voice')
+ * @property {VoiceGender} gender - Gender classification of the voice (male, female, or neutral) for user preference filtering
+ * @property {string | null} [language] - Language code this voice is optimized for (e.g., 'en-US', 'es-ES', 'fr-FR'), null if multi-language
+ * @property {boolean} isDefault - Whether this is the default voice for its language or model (default: false)
  *
  * @example
  * ```typescript
@@ -46,12 +67,12 @@ export type VoiceGender = z.infer<typeof VoiceGender>;
  * ```
  */
 const VoiceSchema = z.object({
-    voiceId: z.string().min(1, 'Voice ID is required'),
-    name: z.string().min(1, 'Voice name is required'),
-    description: z.string().min(1, 'Voice description is required'),
-    gender: VoiceGender,
-    language: z.string().optional().nullable(),
-    isDefault: z.boolean().default(false),
+    voiceId: z.string().min(1, 'Voice ID is required').describe("Unique identifier for the voice used in TTS configurations (e.g., 'adam', 'rachel', 'en-us-neural-female')"),
+    name: z.string().min(1, 'Voice name is required').describe("Human-readable name of the voice displayed in user interfaces (e.g., 'Adam', 'Rachel', 'Google Neural Female')"),
+    description: z.string().min(1, 'Voice description is required').describe("Description of the voice characteristics including tone, accent, pitch, and recommended use cases (e.g., 'Deep, authoritative male voice suitable for professional announcements')"),
+    gender: VoiceGender.describe("Gender classification of the voice (male, female, or neutral) used for filtering and user preference matching"),
+    language: z.string().optional().nullable().describe("Language code this voice is optimized for in ISO 639-1 format with optional region (e.g., 'en-US', 'es-ES', 'fr-FR'), null if the voice supports multiple languages"),
+    isDefault: z.boolean().default(false).describe("Whether this is the default voice selection for its language or TTS model, used for automatic voice assignment"),
 });
 
 /**
@@ -62,14 +83,27 @@ export type Voice = z.infer<typeof VoiceSchema>;
 /**
  * Zod schema for language configuration.
  *
- * Represents a language supported by the platform for speech processing.
+ * Represents a language supported by the platform for speech processing (STT/TTS). Languages are
+ * associated with models in the Travnex support registry and selected in provisioning chains
+ * for voice-based and text-based interactions.
+ *
+ * @remarks
+ * **Architecture Context:**
+ * - **Used By**: TravnexSupportModel (supportLanguages array)
+ * - **Referenced In**: SttModelConfig and TtsModelConfig (defaultLanguage selection)
+ * - **Purpose**: Defines supported languages for speech recognition and synthesis
+ *
+ * **Language Support Levels:**
+ * - **Production**: Fully supported, tested languages (isExperimental: false)
+ * - **Experimental**: Beta or limited support languages (isExperimental: true)
+ * - **Default**: Platform default for automatic selection (isDefault: true)
  *
  * @typedef {Object} LanguageProperties
- * @property {string} languageId - Unique identifier for the language
- * @property {string} name - Human-readable name of the language
- * @property {string} code - Language code (e.g., "en-US", "es-ES")
- * @property {boolean} [isDefault=false] - Whether this is the default language
- * @property {boolean} [isExperimental=false] - Whether this language is in experimental support
+ * @property {string} languageId - Unique identifier for the language (e.g., 'en-us', 'es-es', 'fr-fr')
+ * @property {string} name - Human-readable name of the language for display (e.g., 'English (United States)', 'Spanish (Spain)')
+ * @property {string} code - Standard language code in ISO 639-1 format with optional region (e.g., 'en-US', 'es-ES', 'fr-FR')
+ * @property {boolean} [isDefault=false] - Whether this is the default language for the platform or model, used for automatic language selection
+ * @property {boolean} [isExperimental=false] - Whether this language is in experimental/beta support with potentially limited accuracy or features
  *
  * @example
  * ```typescript
@@ -83,11 +117,11 @@ export type Voice = z.infer<typeof VoiceSchema>;
  * ```
  */
 export const LanguageSchema = z.object({
-    languageId: z.string().min(1, 'Language ID is required'),
-    name: z.string().min(1, 'Language name is required'),
-    code: z.string(),
-    isDefault: z.boolean().optional().default(false),
-    isExperimental: z.boolean().optional().default(false),
+    languageId: z.string().min(1, 'Language ID is required').describe("Unique identifier for the language, typically lowercase with region (e.g., 'en-us', 'es-mx', 'fr-ca')"),
+    name: z.string().min(1, 'Language name is required').describe("Human-readable name of the language with region specification for user interfaces (e.g., 'English (United States)', 'Spanish (Mexico)', 'French (Canada)')"),
+    code: z.string().describe("Standard language code in ISO 639-1 format with optional ISO 3166-1 region code (e.g., 'en-US', 'es-ES', 'zh-CN'), used for API requests and language detection"),
+    isDefault: z.boolean().optional().default(false).describe("Whether this is the default language for the platform or model, used when no language is explicitly specified by the user"),
+    isExperimental: z.boolean().optional().default(false).describe("Whether this language is in experimental or beta support status, potentially with limited accuracy, features, or voice options"),
 });
 
 /**

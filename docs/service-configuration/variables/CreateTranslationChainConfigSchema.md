@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.3**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.4**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const CreateTranslationChainConfigSchema: ZodObject<CreateTranslationChainConfig>;
 ```
 
-Defined in: [src/core/service-configuration/provisioning-config.ts:262](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/service-configuration/provisioning-config.ts#L262)
+Defined in: [src/core/service-configuration/provisioning-config.ts:304](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/service-configuration/provisioning-config.ts#L304)
 
 Zod schema for creating a new translation chain configuration.
 
@@ -20,7 +20,6 @@ Omits auto-generated fields and sets isTranslation to true by default.
 
 ```typescript
 const newTranslationChain: CreateTranslationChainConfig = {
-  organizationId: 'org-456',
   chainName: 'FR-EN Translation',
   description: 'French to English translation chain',
   sttConfig: {

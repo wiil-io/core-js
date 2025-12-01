@@ -17,11 +17,11 @@ import { BaseModelSchema } from "../base.schema";
  * @property {boolean} isDefault - Whether this is the default category
  */
 export const ProductCategorySchema = BaseModelSchema.safeExtend({
-    id: z.string(),
-    name: z.string().min(1, "Category name is required"),
-    description: z.string().optional(),
-    displayOrder: z.number().int().optional(),
-    isDefault: z.boolean().default(false),
+    id: z.string().describe("Unique identifier for this product category in the catalog managed by Product Management."),
+    name: z.string().min(1, "Category name is required").describe("Category name for product organization (e.g., Electronics, Clothing, Home & Garden). Used by AI Powered Services when presenting product options to customers."),
+    description: z.string().optional().describe("Category description providing context about the type of products included. Helps customers navigate the product catalog and understand category scope."),
+    displayOrder: z.number().int().optional().describe("Numeric order for category display in product catalog. Lower numbers appear first. Enables strategic category positioning."),
+    isDefault: z.boolean().default(false).describe("Whether this is the default category for uncategorized products. Only one category should be default. Defaults to false."),
 });
 
 /**
@@ -46,35 +46,35 @@ export const ProductCategorySchema = BaseModelSchema.safeExtend({
  * @property {number} [displayOrder] - Display order in category
  */
 export const BusinessProductSchema = BaseModelSchema.safeExtend({
-    id: z.string(),
-    name: z.string().min(1, "Product name is required"),
-    description: z.string().optional(),
+    id: z.string().describe("Unique identifier for this product in the catalog managed by Product Management."),
+    name: z.string().min(1, "Product name is required").describe("Display name of the product shown to customers. Used by AI Powered Services in product order conversations."),
+    description: z.string().optional().describe("Detailed product description including features, specifications, or benefits. Helps customers make informed purchasing decisions and enables AI-powered product recommendations."),
 
     // Product-specific fields
-    price: z.number().nonnegative(),
-    sku: z.string().optional(),
-    barcode: z.string().optional(),
-    categoryId: z.string(),
-    category: ProductCategorySchema.optional(),
-    brand: z.string().optional(),
+    price: z.number().nonnegative().describe("Base price for this product in the account's currency. Used for order pricing calculations and Product Order workflow."),
+    sku: z.string().optional().describe("Stock Keeping Unit identifier for internal inventory tracking and integration with external inventory systems. Unique alphanumeric code for warehouse and fulfillment operations."),
+    barcode: z.string().optional().describe("Product barcode (UPC, EAN, ISBN) for point-of-sale scanning and inventory management. Links physical products to digital catalog."),
+    categoryId: z.string().describe("References ProductCategory this product belongs to. Used for product organization and AI-driven category-based browsing."),
+    category: ProductCategorySchema.optional().describe("Populated ProductCategory object for convenient access. Not required during creation; managed by Product Management."),
+    brand: z.string().optional().describe("Product brand or manufacturer name for brand-based filtering and customer preference matching in AI conversations."),
 
     // Inventory
-    trackInventory: z.boolean().default(false),
-    stockQuantity: z.number().int().nonnegative().optional(),
-    lowStockThreshold: z.number().int().nonnegative().optional(),
+    trackInventory: z.boolean().default(false).describe("Whether inventory tracking is enabled for this product. When true, stockQuantity is enforced and Product Order validates availability. Defaults to false for digital or unlimited products."),
+    stockQuantity: z.number().int().nonnegative().optional().describe("Current available stock quantity. Only applicable when trackInventory is true. AI Powered Services checks availability before accepting orders. Updated by Product Order and inventory adjustments."),
+    lowStockThreshold: z.number().int().nonnegative().optional().describe("Stock level that triggers low inventory alerts for replenishment. Used by inventory management systems to maintain optimal stock levels."),
 
     // Physical attributes
-    weight: z.number().positive().optional(),
+    weight: z.number().positive().optional().describe("Product weight for shipping calculations and carrier integration. Used in delivery cost estimation for Product Order fulfillment."),
     dimensions: z.object({
-        length: z.number().positive(),
-        width: z.number().positive(),
-        height: z.number().positive(),
-        unit: z.enum(['inches', 'cm']).default('inches'),
-    }).optional(),
+        length: z.number().positive().describe("Product length in specified units. Used for shipping calculations and warehouse storage planning."),
+        width: z.number().positive().describe("Product width in specified units. Used for shipping calculations and package sizing."),
+        height: z.number().positive().describe("Product height in specified units. Used for shipping calculations and storage optimization."),
+        unit: z.enum(['inches', 'cm']).default('inches').describe("Measurement unit for length, width, and height dimensions. Supports inches or centimeters. Defaults to inches."),
+    }).optional().describe("Physical dimensions of the product for shipping cost estimation, warehouse management, and packaging requirements. Required for physical goods with dimensional weight pricing."),
 
     // Business Management
-    isActive: z.boolean().default(true),
-    displayOrder: z.number().int().optional(),
+    isActive: z.boolean().default(true).describe("Whether product is active and available for sale. Inactive products are hidden from customers and AI Powered Services. Defaults to true."),
+    displayOrder: z.number().int().optional().describe("Display order within category. Lower numbers appear first. Enables strategic product positioning and featured item placement."),
 });
 
 /**

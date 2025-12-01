@@ -15,9 +15,9 @@ import { BaseModelSchema } from '../base.schema';
  * @property {string} serviceId - ID of the service this person provides
  */
 export const ServicePersonSchema = BaseModelSchema.safeExtend({
-    accountId: z.string(),
-    description: z.string().optional(),
-    serviceId: z.string(),
+    accountId: z.string().describe("User account ID linking this service provider to platform identity management for authentication, scheduling access, and availability management."),
+    description: z.string().optional().describe("Professional bio displayed to customers during booking: qualifications, specializations, experience, languages spoken. Helps customers make informed provider selection."),
+    serviceId: z.string().describe("References Business Service from service-config.schema that this person provides. Multiple persons can offer same service, enabling parallel scheduling and staff load distribution."),
 });
 
 /**

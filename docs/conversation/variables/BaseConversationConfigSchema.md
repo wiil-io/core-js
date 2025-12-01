@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.3**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.4**](../../README.md)
 
 ***
 
@@ -77,6 +77,26 @@ const BaseConversationConfigSchema: ZodObject<{
 }, $strip>;
 ```
 
-Defined in: [src/core/conversation/conversation-config.schema.ts:112](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/conversation/conversation-config.schema.ts#L112)
+Defined in: [src/core/conversation/conversation-config.schema.ts:172](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/conversation/conversation-config.schema.ts#L172)
 
 Base conversation configuration schema.
+
+Foundation schema for all conversation types capturing the essential attributes of an interaction session
+between a user and an AI agent. Conversations link to deployment configurations, track message history,
+monitor status progression, and collect voice processing metadata for telephony interactions.
+
+## Remarks
+
+**Architecture Context:**
+- **Relationship to Deployments**: N:1 - Multiple conversations use one deployment configuration
+- **Relationship to Projects**: N:1 - Conversations are scoped to projects for organizational grouping
+- **Relationship to Channels**: N:1 - Multiple conversations occur through one channel
+- **Extended By**: ServiceConversationConfigSchema adds conversation-specific fields (id, call transfer, etc.)
+- **Storage**: Primary conversation record with embedded messages for performance
+
+**Conversation Types:**
+- **OTT_CHAT**: Over-the-top chat (web, mobile app messaging)
+- **TELEPHONY_CALL**: Voice phone calls with STT/TTS processing
+- **SMS**: Text message conversations
+- **EMAIL**: Email-based interactions
+- **WHATSAPP**: WhatsApp messaging conversations

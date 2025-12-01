@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.3**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.4**](../../README.md)
 
 ***
 
@@ -10,12 +10,28 @@
 const AgentConfigurationSchema: ZodObject<AgentConfiguration>;
 ```
 
-Defined in: [src/core/service-configuration/agent-config.schema.ts:56](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/service-configuration/agent-config.schema.ts#L56)
+Defined in: [src/core/service-configuration/agent-config.schema.ts:76](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/service-configuration/agent-config.schema.ts#L76)
 
 Zod schema for Agent Configuration validation.
 
-Defines the complete configuration for an AI agent, including model selection,
-operational modes, instruction sets, and telephony features.
+Agent Configurations define the core behavior, capabilities, and personality of AI agents in the
+Service Configuration architecture. They are designed to be reusable across multiple deployments,
+with each agent governed by an Instruction Configuration (1:N relationship). Multiple Agent
+Configurations can share the same Instruction Configuration for consistent behavioral guidelines.
+
+## Remarks
+
+**Architecture Context:**
+- **Managed By**: Service Configuration (lifecycle management)
+- **Used By**: Deployment Configurations (N:1 - multiple deployments can use the same agent)
+- **Associated With**: Instruction Configuration (1:N - one instruction set can govern multiple agents)
+- **References**: Travnex Support Model Registry (via modelId)
+- **Reusability**: Designed to be reused across multiple deployments with different channels
+
+**Configuration Layers:**
+- **Agent Configuration**: Defines capabilities, model, and operational mode
+- **Instruction Configuration**: Defines behavioral guidelines and conversation flow
+- Together they create a complete agent persona
 
 ## Example
 

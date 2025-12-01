@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.3**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.4**](../../README.md)
 
 ***
 
@@ -13,8 +13,16 @@ const MobileAppChannelConfigSchema: ZodObject<{
 }, $strip>;
 ```
 
-Defined in: [src/core/service-configuration/interaction-channels.schema.ts:45](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/service-configuration/interaction-channels.schema.ts#L45)
+Defined in: [src/core/service-configuration/interaction-channels.schema.ts:73](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/service-configuration/interaction-channels.schema.ts#L73)
 
 Zod schema for mobile app channel configuration.
 
-Configuration specific to mobile application channels.
+Configuration specific to mobile application channels for native iOS and Android integrations.
+Enables SDK-based integration with platform-specific UI components.
+
+## Remarks
+
+**Architecture Context:**
+- **Used By**: Mobile deployment channels
+- **Features**: SDK-based integration, deep linking, platform-specific UI
+- **Status**: Coming soon - currently in development

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.3**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.4**](../../README.md)
 
 ***
 
@@ -10,6 +10,22 @@
 const DecommissionConfigSchema: ZodObject<DecommissionRequest>;
 ```
 
-Defined in: [src/core/conversation/conversation-config.schema.ts:184](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/conversation/conversation-config.schema.ts#L184)
+Defined in: [src/core/conversation/conversation-config.schema.ts:278](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/conversation/conversation-config.schema.ts#L278)
 
 Decommission configuration schema.
+
+Request payload for decommissioning and shutting down active conversation services. Used for
+gracefully terminating conversation sessions, cleaning up resources, and releasing telephony
+connections when deployments are disabled or conversations are force-closed.
+
+## Remarks
+
+**Architecture Context:**
+- **Used For**: Graceful shutdown of active conversation sessions
+- **Triggered By**: Admin actions, deployment deactivation, or timeout policies
+- **Effects**: Releases telephony resources, closes WebSocket connections, archives conversation
+
+**Use Cases:**
+- Emergency shutdown of misbehaving conversation sessions
+- Cleanup when deployments are deactivated
+- Forced conversation termination for policy violations

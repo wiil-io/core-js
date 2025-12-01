@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.3**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.4**](../../README.md)
 
 ***
 
@@ -10,9 +10,20 @@
 const TtsModelConfigSchema: ZodObject<TtsModelConfig>;
 ```
 
-Defined in: [src/core/service-configuration/provisioning-config.ts:53](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/service-configuration/provisioning-config.ts#L53)
+Defined in: [src/core/service-configuration/provisioning-config.ts:77](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/service-configuration/provisioning-config.ts#L77)
 
 Zod schema for Text-to-Speech (TTS) model configuration.
+
+Defines the TTS model and voice used to convert agent text responses to speech in voice interactions.
+Part of the provisioning chain's output generation stage.
+
+## Remarks
+
+**Architecture Context:**
+- **Used In**: ProvisioningConfigChain (ttsConfig field)
+- **Purpose**: Converts agent text responses to natural speech
+- **Pipeline Position**: Final stage (Text → Speech)
+- **Voice Selection**: References voices from TravnexSupportModel.supportedVoices
 
 ## Example
 

@@ -56,12 +56,10 @@ export const BasePaginatedResultSchema = z.object({
  * Schema for paginated account requests.
  *
  * @typedef {Object} PaginatedAccountRequest
- * @property {string} organizationId - Account ID to filter results by
  * @property {number} page - Page number to retrieve (1-based)
  * @property {number} pageSize - Number of items per page (max 1000)
  */
 export const PaginatedAccountRequestSchema = z.object({
-    organizationId: z.string(),
     page: z.number().int().positive().default(1),
     pageSize: z.number().int().positive().max(1000).default(20),
 });

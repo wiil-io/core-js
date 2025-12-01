@@ -20,13 +20,13 @@ import { ResourceReservationDurationUnit, ResourceType } from "../type-definitio
  * @property {string} [accessibilityFeatures] - Accessibility features available
  */
 export const RoomResourceSchema = z.object({
-    roomNumber: z.string(),
-    roomType: z.string(),
-    pricePerNight: z.number().nonnegative(),
-    view: z.string().optional(),
-    bedType: z.string().optional(),
-    isSmoking: z.boolean().default(false),
-    accessibilityFeatures: z.string().optional(),
+    roomNumber: z.string().describe("Unique room identifier or number (e.g., '101', 'Penthouse A'). Used for guest communication, housekeeping coordination, and reservation assignment."),
+    roomType: z.string().describe("Room category or class (e.g., 'Standard Queen', 'Deluxe King', 'Executive Suite'). Used by AI Powered Services to match customer preferences with available room types."),
+    pricePerNight: z.number().nonnegative().describe("Nightly rate for this room in the account's currency. Used for Reservation pricing calculations and dynamic rate management."),
+    view: z.string().optional().describe("Room view classification (e.g., 'City View', 'Ocean View', 'Garden View'). Premium feature for upselling and guest preference matching."),
+    bedType: z.string().optional().describe("Bed configuration (e.g., 'Queen', 'King', 'Twin', '2 Double'). Important for guest comfort and party size accommodation."),
+    isSmoking: z.boolean().default(false).describe("Whether smoking is permitted in this room. Used for guest preference filtering and regulatory compliance. Defaults to false (non-smoking)."),
+    accessibilityFeatures: z.string().optional().describe("ADA/accessibility accommodations available (e.g., 'Roll-in shower', 'Grab bars', 'Hearing accessible'). Critical for inclusive booking and regulatory compliance."),
 });
 
 /**
@@ -37,8 +37,8 @@ export const RoomResourceSchema = z.object({
  * @property {number} pricePerHour - Hourly rate for this rental
  */
 export const RentalResourceSchema = z.object({
-    itemType: z.string(),
-    pricePerHour: z.number().nonnegative(),
+    itemType: z.string().describe("Rental category or equipment type (e.g., 'Game Room', 'Conference Room', 'Sports Equipment'). Used by AI Powered Services to categorize and present rental options."),
+    pricePerHour: z.number().nonnegative().describe("Hourly rental rate in the account's currency. Used for Reservation pricing calculations for time-based bookings."),
 });
 
 /**
@@ -62,28 +62,28 @@ export const RentalResourceSchema = z.object({
  * @property {Object} [metadata] - Additional metadata for other resource types
  */
 export const ResourceSchema = BaseModelSchema.safeExtend({
-    resourceType: z.enum(ResourceType),
-    name: z.string(),
-    description: z.string().optional(),
-    capacity: z.number().int().positive().optional(),
-    isAvailable: z.boolean().default(true),
+    resourceType: z.enum(ResourceType).describe("Category of reservable resource: ROOM (hotel/accommodation), TABLE (restaurant seating), RENTAL (hourly equipment/space), or OTHER. Determines pricing model and booking workflow."),
+    name: z.string().describe("Display name of the resource (e.g., 'Table 5', 'Conference Room A', 'Room 101'). Used by AI Powered Services when presenting reservation options to customers."),
+    description: z.string().optional().describe("Detailed description of the resource including features, special characteristics, or usage guidelines. Helps customers make informed reservation decisions."),
+    capacity: z.number().int().positive().optional().describe("Maximum occupancy or party size for this resource (e.g., table seats 4, room sleeps 2). Used by AI Powered Services to match customer group size with appropriate resources."),
+    isAvailable: z.boolean().default(true).describe("Whether this resource is currently active and available for reservations. Disabled resources are hidden from customers and AI Powered Services. Defaults to true."),
 
-    location: z.string().optional(),
-    amenities: z.array(z.string()).default([]),
+    location: z.string().optional().describe("Physical location or placement (e.g., 'Window side', 'Third floor', 'Main dining area'). Helps with customer preferences and operational logistics."),
+    amenities: z.array(z.string()).default([]).describe("List of available features or amenities (e.g., ['WiFi', 'Projector', 'Whiteboard'] for conference room). Used for filtering and customer preference matching. Defaults to empty array."),
 
-    reservationDuration: z.number().int().positive().nullable().optional(),
+    reservationDuration: z.number().int().positive().nullable().optional().describe("Default or standard reservation length in specified units. Used for availability slot calculations and customer guidance in Reservation workflow."),
 
-    reservationDurationUnit: z.enum(ResourceReservationDurationUnit).optional().nullable(),
+    reservationDurationUnit: z.enum(ResourceReservationDurationUnit).optional().nullable().describe("Time unit for reservationDuration: HOURS, DAYS, or MINUTES. Determines how reservation pricing and availability are calculated."),
 
     // Calendar integration (optional)
-    calendarId: z.string().nullable().optional(),
-    syncEnabled: z.boolean().default(false),
-    lastSyncAt: z.number().nullable().optional(),
+    calendarId: z.string().nullable().optional().describe("External calendar system ID for real-time availability synchronization (Google Calendar, Outlook, etc.). Enables two-way booking sync."),
+    syncEnabled: z.boolean().default(false).describe("Whether automatic calendar synchronization is active for this resource. When true, availability updates from external calendar system. Defaults to false."),
+    lastSyncAt: z.number().nullable().optional().describe("Unix timestamp of most recent calendar synchronization. Used for sync health monitoring and troubleshooting availability discrepancies."),
 
     // Type-specific fields
-    roomResource: RoomResourceSchema.nullable().optional(),
-    rentalResource: RentalResourceSchema.nullable().optional(),
-    metadata: z.record(z.string(), z.any()).optional(),
+    roomResource: RoomResourceSchema.nullable().optional().describe("Hotel/accommodation-specific fields (room number, bed type, view, etc.). Only populated when resourceType is ROOM."),
+    rentalResource: RentalResourceSchema.nullable().optional().describe("Hourly rental-specific fields (item type, hourly rate). Only populated when resourceType is RENTAL."),
+    metadata: z.record(z.string(), z.any()).optional().describe("Extensible key-value storage for custom resource attributes not covered by standard fields. Provides flexibility for unique business requirements."),
 });
 
 /**

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.3**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.4**](../../README.md)
 
 ***
 
@@ -10,9 +10,19 @@
 const SttModelConfigSchema: ZodObject<SttModelConfig>;
 ```
 
-Defined in: [src/core/service-configuration/provisioning-config.ts:24](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/service-configuration/provisioning-config.ts#L24)
+Defined in: [src/core/service-configuration/provisioning-config.ts:38](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/service-configuration/provisioning-config.ts#L38)
 
 Zod schema for Speech-to-Text (STT) model configuration.
+
+Defines the STT model used to convert user speech to text in voice-based interactions.
+Part of the provisioning chain's input processing stage.
+
+## Remarks
+
+**Architecture Context:**
+- **Used In**: ProvisioningConfigChain (sttConfig field)
+- **Purpose**: Converts incoming voice to text for agent processing
+- **Pipeline Position**: First stage (Speech → Text)
 
 ## Example
 

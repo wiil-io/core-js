@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.3**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.4**](../../README.md)
 
 ***
 
@@ -6,13 +6,13 @@
 
 # Enumeration: BusinessServiceType
 
-Defined in: [src/core/type-definitions/business-definitions.ts:2](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/type-definitions/business-definitions.ts#L2)
+Defined in: [src/core/type-definitions/business-definitions.ts:2](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/type-definitions/business-definitions.ts#L2)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="menu"></a> `MENU` | `"menu"` | [src/core/type-definitions/business-definitions.ts:3](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/type-definitions/business-definitions.ts#L3) |
-| <a id="service"></a> `SERVICE` | `"service"` | [src/core/type-definitions/business-definitions.ts:4](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/type-definitions/business-definitions.ts#L4) |
-| <a id="product"></a> `PRODUCT` | `"product"` | [src/core/type-definitions/business-definitions.ts:5](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/type-definitions/business-definitions.ts#L5) |
-| <a id="appointment"></a> `APPOINTMENT` | `"appointment"` | [src/core/type-definitions/business-definitions.ts:6](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/type-definitions/business-definitions.ts#L6) |
+| <a id="menu"></a> `MENU` | `"menu"` | [src/core/type-definitions/business-definitions.ts:3](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/type-definitions/business-definitions.ts#L3) |
+| <a id="service"></a> `SERVICE` | `"service"` | [src/core/type-definitions/business-definitions.ts:4](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/type-definitions/business-definitions.ts#L4) |
+| <a id="product"></a> `PRODUCT` | `"product"` | [src/core/type-definitions/business-definitions.ts:5](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/type-definitions/business-definitions.ts#L5) |
+| <a id="appointment"></a> `APPOINTMENT` | `"appointment"` | [src/core/type-definitions/business-definitions.ts:6](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/type-definitions/business-definitions.ts#L6) |

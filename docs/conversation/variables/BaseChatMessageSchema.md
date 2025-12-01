@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.3**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.4**](../../README.md)
 
 ***
 
@@ -15,6 +15,22 @@ const BaseChatMessageSchema: ZodObject<{
 }, $strip>;
 ```
 
-Defined in: [src/core/conversation/conversation-message.schema.ts:25](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/conversation/conversation-message.schema.ts#L25)
+Defined in: [src/core/conversation/conversation-message.schema.ts:40](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/conversation/conversation-message.schema.ts#L40)
 
 Base chat message schema.
+
+Foundation schema for all chat-based messages containing core fields shared by both user and
+assistant messages. Extended by UserChatMessageSchema and AssistantChatMessageSchema with
+role-specific identifiers for message threading and conversation flow tracking.
+
+## Remarks
+
+**Architecture Context:**
+- **Extended By**: UserChatMessageSchema, AssistantChatMessageSchema for role-specific messages
+- **Relationship**: N:1 - Multiple messages belong to one conversation (via conversation_config_id)
+- **Storage**: Stored in conversation message arrays and separate message collections
+- **LLM Context**: llm_conversation_id enables multi-turn context tracking with LLM providers
+
+**Message Flow:**
+- User sends message → UserChatMessage created → Agent processes → AssistantChatMessage generated
+- Messages linked via user_message_id and assistant_message_id for threading

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.3**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.4**](../../README.md)
 
 ***
 
@@ -10,12 +10,28 @@
 const PhoneConfigurationSchema: ZodObject<PhoneConfiguration>;
 ```
 
-Defined in: [src/core/service-configuration/phone-config.schema.ts:66](https://github.com/wiil-io/core-js/blob/2f08d8b8259e218835f402a6f149a3abc5fb9b15/src/core/service-configuration/phone-config.schema.ts#L66)
+Defined in: [src/core/service-configuration/phone-config.schema.ts:86](https://github.com/wiil-io/core-js/blob/2943a7dc25408ff086e97be678f178807540438b/src/core/service-configuration/phone-config.schema.ts#L86)
 
 Zod schema for Phone Configuration validation.
 
-Defines the complete configuration for a phone number, including provider information,
-channel associations, and operational status.
+Manages a phone number resource from a telephony provider, tracking its configuration, status,
+and associations with deployment channels. A single phone number can support both voice calls
+and SMS through separate channel associations.
+
+## Remarks
+
+**Architecture Context:**
+- **Referenced By**: PhoneChannelConfig (via phoneConfigurationId)
+- **Purpose**: Manages telephony resources and provider integration
+- **Dual Channel Support**: One phone number can have both voice and SMS channels
+- **Providers**: SignalWire, Twilio, and other SIP/VoIP providers
+
+**Phone Number Lifecycle:**
+- **PENDING**: Purchase initiated, awaiting provisioning
+- **ACTIVE**: Operational and ready for deployments
+- **INACTIVE**: Purchased but not yet activated
+- **SUSPENDED**: Temporarily disabled
+- **RELEASED**: Disconnected and returned to provider
 
 ## Example
 
