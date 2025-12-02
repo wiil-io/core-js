@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.7**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.8**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const OrganizationServiceStatusRecordSchema: ZodObject<OrganizationServiceStatusRecord>;
 ```
 
-Defined in: [src/core/account/organization.schema.ts:45](https://github.com/wiil-io/core-js/blob/4b63c8896ad37782b63ed301c387268f31cbfe58/src/core/account/organization.schema.ts#L45)
+Defined in: [src/core/account/organization.schema.ts:45](https://github.com/wiil-io/core-js/blob/37fff13d5d1551b6c7ae100ac09635b34618b421/src/core/account/organization.schema.ts#L45)
 
 Zod schema for organization service status history records.
 

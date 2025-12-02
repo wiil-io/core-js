@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.7**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.8**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const AgentConfigurationSchema: ZodObject<AgentConfiguration>;
 ```
 
-Defined in: [src/core/service-configuration/agent-config.schema.ts:76](https://github.com/wiil-io/core-js/blob/4b63c8896ad37782b63ed301c387268f31cbfe58/src/core/service-configuration/agent-config.schema.ts#L76)
+Defined in: [src/core/service-configuration/agent-config.schema.ts:76](https://github.com/wiil-io/core-js/blob/37fff13d5d1551b6c7ae100ac09635b34618b421/src/core/service-configuration/agent-config.schema.ts#L76)
 
 Zod schema for Agent Configuration validation.
 
@@ -38,7 +38,7 @@ Configurations can share the same Instruction Configuration for consistent behav
 ```typescript
 const agentConfig: AgentConfiguration = {
   id: '123*',
-  modelId: 'gpt-4',
+  modelId: 'YUSI21217J1',
   name: 'Customer Support Agent',
   defaultFunctionState: LLMType.MULTI_MODE,
   usesTravnexSupportModel: true,

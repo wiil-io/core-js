@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.7**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.8**](../../README.md)
 
 ***
 
@@ -6,14 +6,14 @@
 
 # Enumeration: LLMRequestType
 
-Defined in: [src/core/type-definitions/service-config.definitions.ts:120](https://github.com/wiil-io/core-js/blob/4b63c8896ad37782b63ed301c387268f31cbfe58/src/core/type-definitions/service-config.definitions.ts#L120)
+Defined in: [src/core/type-definitions/service-config.definitions.ts:120](https://github.com/wiil-io/core-js/blob/37fff13d5d1551b6c7ae100ac09635b34618b421/src/core/type-definitions/service-config.definitions.ts#L120)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="text"></a> `TEXT` | `"text"` | [src/core/type-definitions/service-config.definitions.ts:121](https://github.com/wiil-io/core-js/blob/4b63c8896ad37782b63ed301c387268f31cbfe58/src/core/type-definitions/service-config.definitions.ts#L121) |
-| <a id="audio"></a> `AUDIO` | `"audio"` | [src/core/type-definitions/service-config.definitions.ts:122](https://github.com/wiil-io/core-js/blob/4b63c8896ad37782b63ed301c387268f31cbfe58/src/core/type-definitions/service-config.definitions.ts#L122) |
-| <a id="image"></a> `IMAGE` | `"image"` | [src/core/type-definitions/service-config.definitions.ts:123](https://github.com/wiil-io/core-js/blob/4b63c8896ad37782b63ed301c387268f31cbfe58/src/core/type-definitions/service-config.definitions.ts#L123) |
-| <a id="video"></a> `VIDEO` | `"video"` | [src/core/type-definitions/service-config.definitions.ts:124](https://github.com/wiil-io/core-js/blob/4b63c8896ad37782b63ed301c387268f31cbfe58/src/core/type-definitions/service-config.definitions.ts#L124) |
-| <a id="multimodal"></a> `MULTIMODAL` | `"multimodal"` | [src/core/type-definitions/service-config.definitions.ts:125](https://github.com/wiil-io/core-js/blob/4b63c8896ad37782b63ed301c387268f31cbfe58/src/core/type-definitions/service-config.definitions.ts#L125) |
+| <a id="text"></a> `TEXT` | `"text"` | [src/core/type-definitions/service-config.definitions.ts:121](https://github.com/wiil-io/core-js/blob/37fff13d5d1551b6c7ae100ac09635b34618b421/src/core/type-definitions/service-config.definitions.ts#L121) |
+| <a id="audio"></a> `AUDIO` | `"audio"` | [src/core/type-definitions/service-config.definitions.ts:122](https://github.com/wiil-io/core-js/blob/37fff13d5d1551b6c7ae100ac09635b34618b421/src/core/type-definitions/service-config.definitions.ts#L122) |
+| <a id="image"></a> `IMAGE` | `"image"` | [src/core/type-definitions/service-config.definitions.ts:123](https://github.com/wiil-io/core-js/blob/37fff13d5d1551b6c7ae100ac09635b34618b421/src/core/type-definitions/service-config.definitions.ts#L123) |
+| <a id="video"></a> `VIDEO` | `"video"` | [src/core/type-definitions/service-config.definitions.ts:124](https://github.com/wiil-io/core-js/blob/37fff13d5d1551b6c7ae100ac09635b34618b421/src/core/type-definitions/service-config.definitions.ts#L124) |
+| <a id="multimodal"></a> `MULTIMODAL` | `"multimodal"` | [src/core/type-definitions/service-config.definitions.ts:125](https://github.com/wiil-io/core-js/blob/37fff13d5d1551b6c7ae100ac09635b34618b421/src/core/type-definitions/service-config.definitions.ts#L125) |

@@ -16,7 +16,7 @@ import { ServiceStatus } from '../type-definitions';
  * @typedef {Object} ProjectProperties
  * @property {string} id - Unique identifier for the project
  * @property {string} name - Project name (minimum 2 characters)
- * @property {string} [regionId] - Geographic region ID for this project (optional, can inherit from organization)
+ * @property {string | undefined} [regionId] - Geographic region ID for this project (optional, can inherit from organization)
  * @property {string} [description] - Optional description of the project's purpose
  * @property {string[]} [compliance] - Optional array of compliance standards this project adheres to
  * @property {string | null} [currentSubscriptionId] - ID of the current subscription plan for this project

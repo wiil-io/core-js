@@ -37,7 +37,7 @@ import { CallTransferConfigSchema } from "./call-transfer-config.schema";
  *
  * @typedef {Object} AgentConfigurationProperties
  * @property {string} id - Unique identifier for the agent configuration
- * @property {string} modelId - Identifier of the LLM model from Travnex Support Registry (e.g., 'gpt-4-turbo', 'claude-3-sonnet')
+ * @property {string} modelId - Identifier of the LLM model from Travnex Support Registry (e.g., '2323*', 'EYUW&*EU@H$#'). References TravnexSupportModel.modelId
  * @property {string} name - Human-readable name for the agent configuration (e.g., 'Customer Support Agent', 'Sales Assistant')
  * @property {LLMType} defaultFunctionState - Default operational mode (TEXT, VOICE, MULTI_MODE) (default: MULTI_MODE)
  * @property {boolean} [usesTravnexSupportModel=true] - Whether this agent uses Travnex's supported model registry
@@ -54,7 +54,7 @@ import { CallTransferConfigSchema } from "./call-transfer-config.schema";
  * ```typescript
  * const agentConfig: AgentConfiguration = {
  *   id: '123*',
- *   modelId: 'gpt-4',
+ *   modelId: 'YUSI21217J1',
  *   name: 'Customer Support Agent',
  *   defaultFunctionState: LLMType.MULTI_MODE,
  *   usesTravnexSupportModel: true,
@@ -74,7 +74,7 @@ import { CallTransferConfigSchema } from "./call-transfer-config.schema";
  * ```
  */
 export const AgentConfigurationSchema = BaseModelSchema.safeExtend({
-    modelId: z.string().describe("Identifier of the LLM model from Travnex Support Registry to power this agent (e.g., 'gpt-4-turbo', 'claude-3-sonnet'). References TravnexSupportModel.modelId"),
+    modelId: z.string().describe("Identifier of the LLM model from Travnex Support Registry to power this agent (e.g., 'YUSI21217J1', 'EYUW&*EU@H$#'). References TravnexSupportModel.modelId"),
     name: z.string().describe("Human-readable name for the agent configuration used in administrative interfaces (e.g., 'Customer Support Agent', 'Sales Assistant')"),
     defaultFunctionState: z.enum(LLMType).default(LLMType.MULTI_MODE).describe("Default operational mode (TEXT for text-only, VOICE for speech, MULTI_MODE for combined text/voice capabilities)"),
     usesTravnexSupportModel: z.boolean().optional().default(true).describe("Whether this agent uses a model from Travnex's curated registry (true) or a custom external model (false)"),
