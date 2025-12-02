@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.9**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.10**](../../README.md)
 
 ***
 
@@ -16,7 +16,7 @@ type CreateTranslationServiceRequest = {
 };
 ```
 
-Defined in: [src/core/conversation/translation-config.schema.ts:92](https://github.com/wiil-io/core-js/blob/6743c4ae992e07d3c6269212065befbbcc5cf8ce/src/core/conversation/translation-config.schema.ts#L92)
+Defined in: [src/core/conversation/translation-config.schema.ts:92](https://github.com/wiil-io/core-js/blob/465d307305563ec9efb5deeecc4be24f1e371aa2/src/core/conversation/translation-config.schema.ts#L92)
 
 Schema for creating a new translation service request.
 Omits auto-generated fields.
@@ -25,8 +25,8 @@ Omits auto-generated fields.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="initiator_id"></a> `initiator_id` | `string` | [src/core/conversation/translation-config.schema.ts:41](https://github.com/wiil-io/core-js/blob/6743c4ae992e07d3c6269212065befbbcc5cf8ce/src/core/conversation/translation-config.schema.ts#L41) |
-| <a id="initiator_language_code"></a> `initiator_language_code` | `string` | [src/core/conversation/translation-config.schema.ts:42](https://github.com/wiil-io/core-js/blob/6743c4ae992e07d3c6269212065befbbcc5cf8ce/src/core/conversation/translation-config.schema.ts#L42) |
-| <a id="participant_language_code"></a> `participant_language_code` | `string` | [src/core/conversation/translation-config.schema.ts:43](https://github.com/wiil-io/core-js/blob/6743c4ae992e07d3c6269212065befbbcc5cf8ce/src/core/conversation/translation-config.schema.ts#L43) |
-| <a id="session_id"></a> `session_id?` | `string` \| `null` | [src/core/conversation/translation-config.schema.ts:44](https://github.com/wiil-io/core-js/blob/6743c4ae992e07d3c6269212065befbbcc5cf8ce/src/core/conversation/translation-config.schema.ts#L44) |
-| <a id="translation_config_id"></a> `translation_config_id?` | `string` \| `null` | [src/core/conversation/translation-config.schema.ts:45](https://github.com/wiil-io/core-js/blob/6743c4ae992e07d3c6269212065befbbcc5cf8ce/src/core/conversation/translation-config.schema.ts#L45) |
+| <a id="initiator_id"></a> `initiator_id` | `string` | [src/core/conversation/translation-config.schema.ts:41](https://github.com/wiil-io/core-js/blob/465d307305563ec9efb5deeecc4be24f1e371aa2/src/core/conversation/translation-config.schema.ts#L41) |
+| <a id="initiator_language_code"></a> `initiator_language_code` | `string` | [src/core/conversation/translation-config.schema.ts:42](https://github.com/wiil-io/core-js/blob/465d307305563ec9efb5deeecc4be24f1e371aa2/src/core/conversation/translation-config.schema.ts#L42) |
+| <a id="participant_language_code"></a> `participant_language_code` | `string` | [src/core/conversation/translation-config.schema.ts:43](https://github.com/wiil-io/core-js/blob/465d307305563ec9efb5deeecc4be24f1e371aa2/src/core/conversation/translation-config.schema.ts#L43) |
+| <a id="session_id"></a> `session_id?` | `string` \| `null` | [src/core/conversation/translation-config.schema.ts:44](https://github.com/wiil-io/core-js/blob/465d307305563ec9efb5deeecc4be24f1e371aa2/src/core/conversation/translation-config.schema.ts#L44) |
+| <a id="translation_config_id"></a> `translation_config_id?` | `string` \| `null` | [src/core/conversation/translation-config.schema.ts:45](https://github.com/wiil-io/core-js/blob/465d307305563ec9efb5deeecc4be24f1e371aa2/src/core/conversation/translation-config.schema.ts#L45) |

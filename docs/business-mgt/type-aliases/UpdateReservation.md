@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.9**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.10**](../../README.md)
 
 ***
 
@@ -35,7 +35,7 @@ type UpdateReservation = {
 };
 ```
 
-Defined in: [src/core/business-mgt/reservation.schema.ts:115](https://github.com/wiil-io/core-js/blob/6743c4ae992e07d3c6269212065befbbcc5cf8ce/src/core/business-mgt/reservation.schema.ts#L115)
+Defined in: [src/core/business-mgt/reservation.schema.ts:115](https://github.com/wiil-io/core-js/blob/465d307305563ec9efb5deeecc4be24f1e371aa2/src/core/business-mgt/reservation.schema.ts#L115)
 
 Schema for updating an existing reservation.
 All fields are optional except id.
@@ -44,20 +44,20 @@ All fields are optional except id.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="reservationtype"></a> `reservationType?` | \| [`TABLE`](../../type-definitions/enumerations/ResourceType.md#table) \| [`ROOM`](../../type-definitions/enumerations/ResourceType.md#room) \| [`RENTALS`](../../type-definitions/enumerations/ResourceType.md#rentals) \| [`RESOURCE`](../../type-definitions/enumerations/ResourceType.md#resource) | [src/core/business-mgt/reservation.schema.ts:75](https://github.com/wiil-io/core-js/blob/6743c4ae992e07d3c6269212065befbbcc5cf8ce/src/core/business-mgt/reservation.schema.ts#L75) |
-| <a id="resourceid"></a> `resourceId?` | `string` \| `null` | [src/core/business-mgt/reservation.schema.ts:76](https://github.com/wiil-io/core-js/blob/6743c4ae992e07d3c6269212065befbbcc5cf8ce/src/core/business-mgt/reservation.schema.ts#L76) |
-| <a id="customerid"></a> `customerId?` | `string` | [src/core/business-mgt/reservation.schema.ts:77](https://github.com/wiil-io/core-js/blob/6743c4ae992e07d3c6269212065befbbcc5cf8ce/src/core/business-mgt/reservation.schema.ts#L77) |
-| <a id="customername"></a> `customerName?` | `string` | [src/core/business-mgt/reservation.schema.ts:78](https://github.com/wiil-io/core-js/blob/6743c4ae992e07d3c6269212065befbbcc5cf8ce/src/core/business-mgt/reservation.schema.ts#L78) |
-| <a id="customeremail"></a> `customerEmail?` | `string` | [src/core/business-mgt/reservation.schema.ts:79](https://github.com/wiil-io/core-js/blob/6743c4ae992e07d3c6269212065befbbcc5cf8ce/src/core/business-mgt/reservation.schema.ts#L79) |
-| <a id="starttime"></a> `startTime?` | `number` | [src/core/business-mgt/reservation.schema.ts:80](https://github.com/wiil-io/core-js/blob/6743c4ae992e07d3c6269212065befbbcc5cf8ce/src/core/business-mgt/reservation.schema.ts#L80) |
-| <a id="endtime"></a> `endTime?` | `number` | [src/core/business-mgt/reservation.schema.ts:81](https://github.com/wiil-io/core-js/blob/6743c4ae992e07d3c6269212065befbbcc5cf8ce/src/core/business-mgt/reservation.schema.ts#L81) |
-| <a id="duration"></a> `duration?` | `number` | [src/core/business-mgt/reservation.schema.ts:82](https://github.com/wiil-io/core-js/blob/6743c4ae992e07d3c6269212065befbbcc5cf8ce/src/core/business-mgt/reservation.schema.ts#L82) |
-| <a id="personsnumber"></a> `personsNumber?` | `number` | [src/core/business-mgt/reservation.schema.ts:83](https://github.com/wiil-io/core-js/blob/6743c4ae992e07d3c6269212065befbbcc5cf8ce/src/core/business-mgt/reservation.schema.ts#L83) |
-| <a id="totalprice"></a> `totalPrice?` | `number` | [src/core/business-mgt/reservation.schema.ts:84](https://github.com/wiil-io/core-js/blob/6743c4ae992e07d3c6269212065befbbcc5cf8ce/src/core/business-mgt/reservation.schema.ts#L84) |
-| <a id="depositpaid"></a> `depositPaid?` | `number` | [src/core/business-mgt/reservation.schema.ts:85](https://github.com/wiil-io/core-js/blob/6743c4ae992e07d3c6269212065befbbcc5cf8ce/src/core/business-mgt/reservation.schema.ts#L85) |
-| <a id="status"></a> `status?` | \| [`PENDING`](../../type-definitions/enumerations/AppointmentStatus.md#pending) \| [`CONFIRMED`](../../type-definitions/enumerations/AppointmentStatus.md#confirmed) \| [`CANCELLED`](../../type-definitions/enumerations/AppointmentStatus.md#cancelled) \| [`COMPLETED`](../../type-definitions/enumerations/AppointmentStatus.md#completed) \| [`NO_SHOW`](../../type-definitions/enumerations/AppointmentStatus.md#no_show) | [src/core/business-mgt/reservation.schema.ts:86](https://github.com/wiil-io/core-js/blob/6743c4ae992e07d3c6269212065befbbcc5cf8ce/src/core/business-mgt/reservation.schema.ts#L86) |
-| <a id="notes"></a> `notes?` | `string` | [src/core/business-mgt/reservation.schema.ts:87](https://github.com/wiil-io/core-js/blob/6743c4ae992e07d3c6269212065befbbcc5cf8ce/src/core/business-mgt/reservation.schema.ts#L87) |
-| <a id="isresourcereservation"></a> `isResourceReservation?` | `boolean` | [src/core/business-mgt/reservation.schema.ts:89](https://github.com/wiil-io/core-js/blob/6743c4ae992e07d3c6269212065befbbcc5cf8ce/src/core/business-mgt/reservation.schema.ts#L89) |
-| <a id="serviceconversationconfigid"></a> `serviceConversationConfigId?` | `string` \| `null` | [src/core/business-mgt/reservation.schema.ts:90](https://github.com/wiil-io/core-js/blob/6743c4ae992e07d3c6269212065befbbcc5cf8ce/src/core/business-mgt/reservation.schema.ts#L90) |
-| <a id="id"></a> `id` | `string` | [src/core/business-mgt/reservation.schema.ts:109](https://github.com/wiil-io/core-js/blob/6743c4ae992e07d3c6269212065befbbcc5cf8ce/src/core/business-mgt/reservation.schema.ts#L109) |
-| <a id="cancelreason"></a> `cancelReason?` | `string` \| `null` | [src/core/business-mgt/reservation.schema.ts:110](https://github.com/wiil-io/core-js/blob/6743c4ae992e07d3c6269212065befbbcc5cf8ce/src/core/business-mgt/reservation.schema.ts#L110) |
+| <a id="reservationtype"></a> `reservationType?` | \| [`TABLE`](../../type-definitions/enumerations/ResourceType.md#table) \| [`ROOM`](../../type-definitions/enumerations/ResourceType.md#room) \| [`RENTALS`](../../type-definitions/enumerations/ResourceType.md#rentals) \| [`RESOURCE`](../../type-definitions/enumerations/ResourceType.md#resource) | [src/core/business-mgt/reservation.schema.ts:75](https://github.com/wiil-io/core-js/blob/465d307305563ec9efb5deeecc4be24f1e371aa2/src/core/business-mgt/reservation.schema.ts#L75) |
+| <a id="resourceid"></a> `resourceId?` | `string` \| `null` | [src/core/business-mgt/reservation.schema.ts:76](https://github.com/wiil-io/core-js/blob/465d307305563ec9efb5deeecc4be24f1e371aa2/src/core/business-mgt/reservation.schema.ts#L76) |
+| <a id="customerid"></a> `customerId?` | `string` | [src/core/business-mgt/reservation.schema.ts:77](https://github.com/wiil-io/core-js/blob/465d307305563ec9efb5deeecc4be24f1e371aa2/src/core/business-mgt/reservation.schema.ts#L77) |
+| <a id="customername"></a> `customerName?` | `string` | [src/core/business-mgt/reservation.schema.ts:78](https://github.com/wiil-io/core-js/blob/465d307305563ec9efb5deeecc4be24f1e371aa2/src/core/business-mgt/reservation.schema.ts#L78) |
+| <a id="customeremail"></a> `customerEmail?` | `string` | [src/core/business-mgt/reservation.schema.ts:79](https://github.com/wiil-io/core-js/blob/465d307305563ec9efb5deeecc4be24f1e371aa2/src/core/business-mgt/reservation.schema.ts#L79) |
+| <a id="starttime"></a> `startTime?` | `number` | [src/core/business-mgt/reservation.schema.ts:80](https://github.com/wiil-io/core-js/blob/465d307305563ec9efb5deeecc4be24f1e371aa2/src/core/business-mgt/reservation.schema.ts#L80) |
+| <a id="endtime"></a> `endTime?` | `number` | [src/core/business-mgt/reservation.schema.ts:81](https://github.com/wiil-io/core-js/blob/465d307305563ec9efb5deeecc4be24f1e371aa2/src/core/business-mgt/reservation.schema.ts#L81) |
+| <a id="duration"></a> `duration?` | `number` | [src/core/business-mgt/reservation.schema.ts:82](https://github.com/wiil-io/core-js/blob/465d307305563ec9efb5deeecc4be24f1e371aa2/src/core/business-mgt/reservation.schema.ts#L82) |
+| <a id="personsnumber"></a> `personsNumber?` | `number` | [src/core/business-mgt/reservation.schema.ts:83](https://github.com/wiil-io/core-js/blob/465d307305563ec9efb5deeecc4be24f1e371aa2/src/core/business-mgt/reservation.schema.ts#L83) |
+| <a id="totalprice"></a> `totalPrice?` | `number` | [src/core/business-mgt/reservation.schema.ts:84](https://github.com/wiil-io/core-js/blob/465d307305563ec9efb5deeecc4be24f1e371aa2/src/core/business-mgt/reservation.schema.ts#L84) |
+| <a id="depositpaid"></a> `depositPaid?` | `number` | [src/core/business-mgt/reservation.schema.ts:85](https://github.com/wiil-io/core-js/blob/465d307305563ec9efb5deeecc4be24f1e371aa2/src/core/business-mgt/reservation.schema.ts#L85) |
+| <a id="status"></a> `status?` | \| [`PENDING`](../../type-definitions/enumerations/AppointmentStatus.md#pending) \| [`CONFIRMED`](../../type-definitions/enumerations/AppointmentStatus.md#confirmed) \| [`CANCELLED`](../../type-definitions/enumerations/AppointmentStatus.md#cancelled) \| [`COMPLETED`](../../type-definitions/enumerations/AppointmentStatus.md#completed) \| [`NO_SHOW`](../../type-definitions/enumerations/AppointmentStatus.md#no_show) | [src/core/business-mgt/reservation.schema.ts:86](https://github.com/wiil-io/core-js/blob/465d307305563ec9efb5deeecc4be24f1e371aa2/src/core/business-mgt/reservation.schema.ts#L86) |
+| <a id="notes"></a> `notes?` | `string` | [src/core/business-mgt/reservation.schema.ts:87](https://github.com/wiil-io/core-js/blob/465d307305563ec9efb5deeecc4be24f1e371aa2/src/core/business-mgt/reservation.schema.ts#L87) |
+| <a id="isresourcereservation"></a> `isResourceReservation?` | `boolean` | [src/core/business-mgt/reservation.schema.ts:89](https://github.com/wiil-io/core-js/blob/465d307305563ec9efb5deeecc4be24f1e371aa2/src/core/business-mgt/reservation.schema.ts#L89) |
+| <a id="serviceconversationconfigid"></a> `serviceConversationConfigId?` | `string` \| `null` | [src/core/business-mgt/reservation.schema.ts:90](https://github.com/wiil-io/core-js/blob/465d307305563ec9efb5deeecc4be24f1e371aa2/src/core/business-mgt/reservation.schema.ts#L90) |
+| <a id="id"></a> `id` | `string` | [src/core/business-mgt/reservation.schema.ts:109](https://github.com/wiil-io/core-js/blob/465d307305563ec9efb5deeecc4be24f1e371aa2/src/core/business-mgt/reservation.schema.ts#L109) |
+| <a id="cancelreason"></a> `cancelReason?` | `string` \| `null` | [src/core/business-mgt/reservation.schema.ts:110](https://github.com/wiil-io/core-js/blob/465d307305563ec9efb5deeecc4be24f1e371aa2/src/core/business-mgt/reservation.schema.ts#L110) |

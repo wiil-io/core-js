@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.9**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.10**](../../README.md)
 
 ***
 
@@ -10,12 +10,12 @@
 const VoiceSchema: ZodObject<Voice>;
 ```
 
-Defined in: [src/core/service-configuration/voice-language.schema.ts:69](https://github.com/wiil-io/core-js/blob/6743c4ae992e07d3c6269212065befbbcc5cf8ce/src/core/service-configuration/voice-language.schema.ts#L69)
+Defined in: [src/core/service-configuration/voice-language.schema.ts:69](https://github.com/wiil-io/core-js/blob/465d307305563ec9efb5deeecc4be24f1e371aa2/src/core/service-configuration/voice-language.schema.ts#L69)
 
 Zod schema for voice configuration.
 
 Represents a synthetic voice option available for text-to-speech (TTS) synthesis. Voices are
-associated with TTS models in the Travnex support registry and selected in provisioning chains
+associated with TTS models in the Wiil support registry and selected in provisioning chains
 for voice-based deployments.
 
 ## Remarks

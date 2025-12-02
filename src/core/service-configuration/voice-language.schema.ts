@@ -31,7 +31,7 @@ export type VoiceGender = z.infer<typeof VoiceGender>;
  * Zod schema for voice configuration.
  *
  * Represents a synthetic voice option available for text-to-speech (TTS) synthesis. Voices are
- * associated with TTS models in the Travnex support registry and selected in provisioning chains
+ * associated with TTS models in the Wiil support registry and selected in provisioning chains
  * for voice-based deployments.
  *
  * @remarks
@@ -84,7 +84,7 @@ export type Voice = z.infer<typeof VoiceSchema>;
  * Zod schema for language configuration.
  *
  * Represents a language supported by the platform for speech processing (STT/TTS). Languages are
- * associated with models in the Travnex support registry and selected in provisioning chains
+ * associated with models in the Wiil support registry and selected in provisioning chains
  * for voice-based and text-based interactions.
  *
  * @remarks

@@ -24,7 +24,7 @@ import { BaseModelSchema } from "../base.schema";
  * - **Pipeline Position**: First stage (Speech → Text)
  *
  * @typedef {Object} SttModelConfigProperties
- * @property {string} modelId - Identifier of the STT model from Travnex registry (e.g., 'whisper-v3', 'google-stt-enhanced')
+ * @property {string} modelId - Identifier of the STT model from Wiil registry (e.g., 'whisper-v3', 'google-stt-enhanced')
  * @property {string} defaultLanguage - Default language code for speech recognition in ISO format (default: "en-US")
  *
  * @example
@@ -36,7 +36,7 @@ import { BaseModelSchema } from "../base.schema";
  * ```
  */
 export const SttModelConfigSchema = z.object({
-    modelId: z.string().describe("Identifier of the STT (Speech-to-Text) model from Travnex registry for converting user speech to text (e.g., 'whisper-v3', 'google-stt-enhanced', 'deepgram-nova')"),
+    modelId: z.string().describe("Identifier of the STT (Speech-to-Text) model from Wiil registry for converting user speech to text (e.g., 'whisper-v3', 'google-stt-enhanced', 'deepgram-nova')"),
     defaultLanguage: z.string().default("en-US").describe("Default language code for speech recognition in ISO 639-1 format with region (e.g., 'en-US', 'es-ES', 'fr-FR'). Used when language auto-detection is not available or fails"),
 });
 
@@ -59,7 +59,7 @@ export type SttModelConfig = z.infer<typeof SttModelConfigSchema>;
  * - **Voice Selection**: References voices from WiilSupportModel.supportedVoices
  *
  * @typedef {Object} TtsModelConfigProperties
- * @property {string} modelId - Identifier of the TTS model from Travnex registry (e.g., 'eleven-labs-v2', 'google-tts-wavenet')
+ * @property {string} modelId - Identifier of the TTS model from Wiil registry (e.g., 'eleven-labs-v2', 'google-tts-wavenet')
  * @property {string} voiceId - Identifier of the specific voice for speech synthesis (e.g., 'adam', 'rachel', 'en-us-neural-female')
  * @property {string} defaultLanguage - Default language code for speech synthesis (default: "en-US")
  * @property {Record<string, any>} [voiceSettings] - Optional voice-specific settings (pitch, speed, stability, etc.)
@@ -75,7 +75,7 @@ export type SttModelConfig = z.infer<typeof SttModelConfigSchema>;
  * ```
  */
 export const TtsModelConfigSchema = z.object({
-    modelId: z.string().describe("Identifier of the TTS (Text-to-Speech) model from Travnex registry for converting agent responses to speech (e.g., 'eleven-labs-v2', 'google-tts-wavenet', 'azure-neural-tts')"),
+    modelId: z.string().describe("Identifier of the TTS (Text-to-Speech) model from Wiil registry for converting agent responses to speech (e.g., 'eleven-labs-v2', 'google-tts-wavenet', 'azure-neural-tts')"),
     voiceId: z.string().describe("Identifier of the specific voice to use for speech synthesis (e.g., 'adam', 'rachel', 'en-us-neural-female'). Must be available in the TTS model's supportedVoices"),
     defaultLanguage: z.string().default("en-US").describe("Default language code for speech synthesis in ISO 639-1 format with region (e.g., 'en-US', 'es-MX', 'fr-CA')"),
     voiceSettings: z.record(z.string(), z.any()).optional().describe("Optional voice-specific settings as key-value pairs for fine-tuning speech output (e.g., { stability: 0.75, similarity_boost: 0.5, pitch: 1.0, speed: 1.1 })"),

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.9**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.10**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const UpdateReservationSchema: ZodObject<UpdateReservation>;
 ```
 
-Defined in: [src/core/business-mgt/reservation.schema.ts:108](https://github.com/wiil-io/core-js/blob/6743c4ae992e07d3c6269212065befbbcc5cf8ce/src/core/business-mgt/reservation.schema.ts#L108)
+Defined in: [src/core/business-mgt/reservation.schema.ts:108](https://github.com/wiil-io/core-js/blob/465d307305563ec9efb5deeecc4be24f1e371aa2/src/core/business-mgt/reservation.schema.ts#L108)
 
 Schema for updating an existing reservation.
 All fields are optional except id.
