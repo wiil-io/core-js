@@ -161,8 +161,8 @@ export const ConversationStateHistorySchema = z.object({
  * @property {string} [customer_id] - Customer or contact ID from CRM or external system for customer relationship tracking and conversation history aggregation
  * @property {string} [status] - Current operational status of the conversation (ACTIVE, COMPLETED, FAILED, ABANDONED, TRANSFERRED)
  * @property {number} durationInSeconds - Duration of the conversation in seconds for billing, analytics, and average handling time calculations (default: 15)
- * @property {string} [stt_model_id] - Speech-to-Text model ID used for voice conversations to transcribe user speech (e.g., 'whisper-v3', references TravnexSupportModel)
- * @property {string} [tts_model_id] - Text-to-Speech model ID used for voice conversations to synthesize agent responses (e.g., 'eleven-labs-v2', references TravnexSupportModel)
+ * @property {string} [stt_model_id] - Speech-to-Text model ID used for voice conversations to transcribe user speech (e.g., 'whisper-v3', references WiilSupportModel)
+ * @property {string} [tts_model_id] - Text-to-Speech model ID used for voice conversations to synthesize agent responses (e.g., 'eleven-labs-v2', references WiilSupportModel)
  * @property {Object} [conversationSummary] - Optional AI-generated summary of the conversation including key points, action items, and sentiment analysis (populated post-conversation)
  * @property {string} [created_day] - The day the conversation was created in YYYY-MM-DD format for daily aggregation queries and analytics partitioning
  * @property {Array} [state_history] - Historical audit trail of status changes throughout the conversation lifecycle for flow analysis and troubleshooting
@@ -178,7 +178,7 @@ export const BaseConversationConfigSchema = z.object({
     instruction_config_id: z.string().optional().nullable().describe("Optional ID of the instruction configuration overriding deployment defaults for conversation-specific behavior or A/B testing (references InstructionConfiguration)"),
     partner_user_id: z.string().optional().describe("External partner or user identifier from integrated systems (CRM, help desk, e-commerce) for cross-platform user tracking and unified customer view"),
     conversation_type: z.enum(ServiceConversationType).describe("Type of conversation defining the communication channel and interaction mode (OTT_CHAT: web/mobile chat, TELEPHONY_CALL: voice, SMS: text, EMAIL: email, WHATSAPP: WhatsApp)"),
-    model_id: z.string().optional().describe("AI model ID used for this conversation, may override deployment configuration model for A/B testing, specialized scenarios, or model version upgrades (references TravnexSupportModel)"),
+    model_id: z.string().optional().describe("AI model ID used for this conversation, may override deployment configuration model for A/B testing, specialized scenarios, or model version upgrades (references WiilSupportModel)"),
     user_id: z.number().optional().describe("Internal platform user ID for authenticated users enabling personalized conversations and user-specific history, null for anonymous or guest interactions"),
     created_at: z.number().optional().default(Date.now).describe("Unix timestamp in milliseconds when conversation was initiated by user or outbound campaign (default: current time, used for chronological sorting)"),
     messages: z.array(ConversationMessageSchema).optional().nullable().describe("Array of messages exchanged in this conversation embedded for quick access without separate database queries (includes user and assistant messages with metadata)"),
@@ -186,8 +186,8 @@ export const BaseConversationConfigSchema = z.object({
     customer_id: z.string().optional().nullable().describe("Customer or contact ID from CRM or external system for customer relationship tracking, conversation history aggregation, and personalization"),
     status: z.enum(ConversationStatus).nullable().optional().describe("Current operational status of the conversation (ACTIVE: ongoing, COMPLETED: concluded successfully, FAILED: errors, ABANDONED: user left, TRANSFERRED: escalated to human)"),
     durationInSeconds: z.number().nonnegative().optional().default(15).describe("Duration of the conversation in seconds for billing calculations, analytics reporting, and average handling time (AHT) metrics (default: 15 for minimum billing)"),
-    stt_model_id: z.string().optional().nullable().describe("Speech-to-Text model ID used for voice conversations to transcribe user speech into text (e.g., 'whisper-v3', 'google-stt-enhanced', references TravnexSupportModel)"),
-    tts_model_id: z.string().optional().nullable().describe("Text-to-Speech model ID used for voice conversations to synthesize agent text responses into natural speech (e.g., 'eleven-labs-v2', 'azure-neural-tts', references TravnexSupportModel)"),
+    stt_model_id: z.string().optional().nullable().describe("Speech-to-Text model ID used for voice conversations to transcribe user speech into text (e.g., 'whisper-v3', 'google-stt-enhanced', references WiilSupportModel)"),
+    tts_model_id: z.string().optional().nullable().describe("Text-to-Speech model ID used for voice conversations to synthesize agent text responses into natural speech (e.g., 'eleven-labs-v2', 'azure-neural-tts', references WiilSupportModel)"),
     conversationSummary: ConversationSummarySchema.nullable().optional().describe("Optional AI-generated summary of the conversation including key discussion points, action items, and sentiment analysis (populated post-conversation for reporting and QA)"),
     created_day: z.string().optional().describe("The day the conversation was created in YYYY-MM-DD ISO format for efficient daily aggregation queries, analytics partitioning, and time-series reporting"),
     state_history: z.array(ConversationStateHistorySchema).nullable().optional().describe("Historical audit trail of status changes throughout the conversation lifecycle for flow analysis, troubleshooting, and measuring time-to-resolution"),

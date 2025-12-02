@@ -1,4 +1,4 @@
-**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.8**
+**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.9**
 
 ***
 
@@ -286,7 +286,7 @@ const agentConfig = AgentConfigurationSchema.parse({
   modelId: 'gpt-4',
   name: 'Customer Support Agent',
   defaultFunctionState: LLMType.MULTI_MODE,
-  usesTravnexSupportModel: true,
+  usesWiilSupportModel: true,
   instructionConfigurationId: 'inst-123',
   assistantType: AssistantType.PHONE,
   call_transfer_config: [

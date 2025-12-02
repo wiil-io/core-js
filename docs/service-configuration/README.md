@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.8**](../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.9**](../README.md)
 
 ***
 
@@ -69,7 +69,7 @@ Central export point for all service configuration schemas.
 | [ChainConfiguration](type-aliases/ChainConfiguration.md) | Union type for any chain configuration (provisioning or translation). |
 | [CreateChainConfiguration](type-aliases/CreateChainConfiguration.md) | Union type for creating any chain configuration. |
 | [UpdateChainConfiguration](type-aliases/UpdateChainConfiguration.md) | Union type for updating any chain configuration. |
-| [TravnexSupportModel](type-aliases/TravnexSupportModel.md) | Type definition for Travnex support model. |
+| [WiilSupportModel](type-aliases/WiilSupportModel.md) | Type definition for WIIL Platform support model. |
 | [VoiceGender](type-aliases/VoiceGender.md) | Type definition for voice gender. |
 | [Voice](type-aliases/Voice.md) | Type definition for voice configuration. |
 | [Language](type-aliases/Language.md) | Type definition for language configuration. |
@@ -132,7 +132,7 @@ Central export point for all service configuration schemas.
 | [TranslationChainConfigSchema](variables/TranslationChainConfigSchema.md) | Zod schema for translation chain configuration. |
 | [CreateTranslationChainConfigSchema](variables/CreateTranslationChainConfigSchema.md) | Zod schema for creating a new translation chain configuration. |
 | [UpdateTranslationChainConfigSchema](variables/UpdateTranslationChainConfigSchema.md) | Zod schema for updating an existing translation chain configuration. |
-| [TravnexSupportModelSchema](variables/TravnexSupportModelSchema.md) | Zod schema for Travnex supported model configuration. |
+| [WiilSupportModelSchema](variables/WiilSupportModelSchema.md) | Zod schema for WIIL Platform supported model configuration. |
 | [VoiceGender](variables/VoiceGender.md) | Enum schema for voice gender classification. |
 | [VoiceSchema](variables/VoiceSchema.md) | Zod schema for voice configuration. |
 | [LanguageSchema](variables/LanguageSchema.md) | Zod schema for language configuration. |

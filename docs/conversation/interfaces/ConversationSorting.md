@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.8**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.9**](../../README.md)
 
 ***
 
@@ -6,11 +6,11 @@
 
 # Interface: ConversationSorting
 
-Defined in: [src/core/conversation/conversation-config.schema.ts:303](https://github.com/wiil-io/core-js/blob/37fff13d5d1551b6c7ae100ac09635b34618b421/src/core/conversation/conversation-config.schema.ts#L303)
+Defined in: [src/core/conversation/conversation-config.schema.ts:303](https://github.com/wiil-io/core-js/blob/6743c4ae992e07d3c6269212065befbbcc5cf8ce/src/core/conversation/conversation-config.schema.ts#L303)
 
 ## Properties
 
 | Property | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="field"></a> `field` | `"created_at"` \| `"customer_id"` | [src/core/conversation/conversation-config.schema.ts:304](https://github.com/wiil-io/core-js/blob/37fff13d5d1551b6c7ae100ac09635b34618b421/src/core/conversation/conversation-config.schema.ts#L304) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | [src/core/conversation/conversation-config.schema.ts:305](https://github.com/wiil-io/core-js/blob/37fff13d5d1551b6c7ae100ac09635b34618b421/src/core/conversation/conversation-config.schema.ts#L305) |
+| <a id="field"></a> `field` | `"created_at"` \| `"customer_id"` | [src/core/conversation/conversation-config.schema.ts:304](https://github.com/wiil-io/core-js/blob/6743c4ae992e07d3c6269212065befbbcc5cf8ce/src/core/conversation/conversation-config.schema.ts#L304) |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | [src/core/conversation/conversation-config.schema.ts:305](https://github.com/wiil-io/core-js/blob/6743c4ae992e07d3c6269212065befbbcc5cf8ce/src/core/conversation/conversation-config.schema.ts#L305) |

@@ -56,7 +56,7 @@ export type SttModelConfig = z.infer<typeof SttModelConfigSchema>;
  * - **Used In**: ProvisioningConfigChain (ttsConfig field)
  * - **Purpose**: Converts agent text responses to natural speech
  * - **Pipeline Position**: Final stage (Text → Speech)
- * - **Voice Selection**: References voices from TravnexSupportModel.supportedVoices
+ * - **Voice Selection**: References voices from WiilSupportModel.supportedVoices
  *
  * @typedef {Object} TtsModelConfigProperties
  * @property {string} modelId - Identifier of the TTS model from Travnex registry (e.g., 'eleven-labs-v2', 'google-tts-wavenet')

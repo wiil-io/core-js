@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { BaseModelSchema } from "../base.schema";
-import { TravnexSupportModelSchema } from "./support-llm";
+import { WiilSupportModelSchema } from "./support-llm";
 import { AssistantType, LLMType } from "../type-definitions/service-config.definitions";
 import { CallTransferConfigSchema } from "./call-transfer-config.schema";
 
@@ -37,16 +37,16 @@ import { CallTransferConfigSchema } from "./call-transfer-config.schema";
  *
  * @typedef {Object} AgentConfigurationProperties
  * @property {string} id - Unique identifier for the agent configuration
- * @property {string} modelId - Identifier of the LLM model from Travnex Support Registry (e.g., '2323*', 'EYUW&*EU@H$#'). References TravnexSupportModel.modelId
+ * @property {string} modelId - Identifier of the LLM model from Travnex Support Registry (e.g., '2323*', 'EYUW&*EU@H$#'). References WiilSupportModel.modelId
  * @property {string} name - Human-readable name for the agent configuration (e.g., 'Customer Support Agent', 'Sales Assistant')
  * @property {LLMType} defaultFunctionState - Default operational mode (TEXT, VOICE, MULTI_MODE) (default: MULTI_MODE)
- * @property {boolean} [usesTravnexSupportModel=true] - Whether this agent uses Travnex's supported model registry
+ * @property {boolean} [usesWiilSupportModel=true] - Whether this agent uses Travnex's supported model registry
  * @property {Record<string, any>} [requiredModelConfig] - Additional model parameters (e.g., { voiceId: 'adam', languageId: 'en-US' })
  * @property {string} instructionConfigurationId - ID of the instruction configuration providing behavioral guidelines (N:1)
  * @property {AssistantType} assistantType - Channel specialization type (GENERAL, WEB, PHONE, etc.) (default: GENERAL)
  * @property {CallTransferConfig[]} [call_transfer_config=[]] - Call transfer configurations for phone deployments
  * @property {Record<string, any>} [metadata] - Additional metadata for organization and filtering
- * @property {TravnexSupportModel | null} [model] - Auto-populated model information from registry
+ * @property {WiilSupportModel | null} [model] - Auto-populated model information from registry
  * @property {number} [createdAt] - Unix timestamp (milliseconds) when created
  * @property {number} [updatedAt] - Unix timestamp (milliseconds) when last updated
  *
@@ -57,7 +57,7 @@ import { CallTransferConfigSchema } from "./call-transfer-config.schema";
  *   modelId: 'YUSI21217J1',
  *   name: 'Customer Support Agent',
  *   defaultFunctionState: LLMType.MULTI_MODE,
- *   usesTravnexSupportModel: true,
+ *   usesWiilSupportModel: true,
  *   instructionConfigurationId: '456*',
  *   assistantType: AssistantType.PHONE,
  *   call_transfer_config: [
@@ -74,16 +74,16 @@ import { CallTransferConfigSchema } from "./call-transfer-config.schema";
  * ```
  */
 export const AgentConfigurationSchema = BaseModelSchema.safeExtend({
-    modelId: z.string().describe("Identifier of the LLM model from Travnex Support Registry to power this agent (e.g., 'YUSI21217J1', 'EYUW&*EU@H$#'). References TravnexSupportModel.modelId"),
+    modelId: z.string().describe("Identifier of the LLM model from Travnex Support Registry to power this agent (e.g., 'YUSI21217J1', 'EYUW&*EU@H$#'). References WiilSupportModel.modelId"),
     name: z.string().describe("Human-readable name for the agent configuration used in administrative interfaces (e.g., 'Customer Support Agent', 'Sales Assistant')"),
     defaultFunctionState: z.enum(LLMType).default(LLMType.MULTI_MODE).describe("Default operational mode (TEXT for text-only, VOICE for speech, MULTI_MODE for combined text/voice capabilities)"),
-    usesTravnexSupportModel: z.boolean().optional().default(true).describe("Whether this agent uses a model from Travnex's curated registry (true) or a custom external model (false)"),
+    usesWiilSupportModel: z.boolean().optional().default(true).describe("Whether this agent uses a model from Travnex's curated registry (true) or a custom external model (false)"),
     requiredModelConfig: z.record(z.string(), z.any()).optional().describe("Model-specific configuration parameters as key-value pairs (e.g., { voiceId: 'adam', languageId: 'en-US', temperature: 0.7 })"),
     instructionConfigurationId: z.string().describe("ID of the Instruction Configuration providing behavioral guidelines and conversation patterns. Multiple agents can share the same instruction configuration (N:1)"),
     assistantType: z.enum(AssistantType).default(AssistantType.GENERAL).describe("Channel specialization type for optimization (GENERAL for multi-channel, WEB for browser, PHONE for telephony, EMAIL for email)"),
     call_transfer_config: z.array(CallTransferConfigSchema).optional().default([]).describe("Array of call transfer configurations for phone deployments, defining transfer destinations and conditions for escalation"),
     metadata: z.record(z.string(), z.any()).optional().describe("Additional metadata for organization including tags, categories, department, or custom attributes for filtering and reporting"),
-    model: TravnexSupportModelSchema.nullable().optional().describe("Complete model information auto-populated from Travnex registry (includes provider, voices, languages). Null if not loaded or custom model"),
+    model: WiilSupportModelSchema.nullable().optional().describe("Complete model information auto-populated from Travnex registry (includes provider, voices, languages). Null if not loaded or custom model"),
 });
 
 /**
@@ -110,7 +110,7 @@ export type AgentConfiguration = z.infer<typeof AgentConfigurationSchema>;
  *   modelId: 'gpt-4-turbo',
  *   name: 'Sales Assistant',
  *   defaultFunctionState: LLMType.MULTI_MODE,
- *   usesTravnexSupportModel: true,
+ *   usesWiilSupportModel: true,
  *   instructionConfigurationId: '789*',
  *   assistantType: AssistantType.WEB,
  *   requiredModelConfig: {

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.8**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.9**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const LanguageSchema: ZodObject<Language>;
 ```
 
-Defined in: [src/core/service-configuration/voice-language.schema.ts:119](https://github.com/wiil-io/core-js/blob/37fff13d5d1551b6c7ae100ac09635b34618b421/src/core/service-configuration/voice-language.schema.ts#L119)
+Defined in: [src/core/service-configuration/voice-language.schema.ts:119](https://github.com/wiil-io/core-js/blob/6743c4ae992e07d3c6269212065befbbcc5cf8ce/src/core/service-configuration/voice-language.schema.ts#L119)
 
 Zod schema for language configuration.
 
@@ -21,7 +21,7 @@ for voice-based and text-based interactions.
 ## Remarks
 
 **Architecture Context:**
-- **Used By**: TravnexSupportModel (supportLanguages array)
+- **Used By**: WiilSupportModel (supportLanguages array)
 - **Referenced In**: SttModelConfig and TtsModelConfig (defaultLanguage selection)
 - **Purpose**: Defines supported languages for speech recognition and synthesis
 

@@ -36,7 +36,7 @@ export type VoiceGender = z.infer<typeof VoiceGender>;
  *
  * @remarks
  * **Architecture Context:**
- * - **Used By**: TravnexSupportModel (supportedVoices array for TTS models)
+ * - **Used By**: WiilSupportModel (supportedVoices array for TTS models)
  * - **Referenced In**: TtsModelConfig (voiceId selection) and ProvisioningConfigChain
  * - **Purpose**: Defines available voice options for agent speech synthesis
  *
@@ -89,7 +89,7 @@ export type Voice = z.infer<typeof VoiceSchema>;
  *
  * @remarks
  * **Architecture Context:**
- * - **Used By**: TravnexSupportModel (supportLanguages array)
+ * - **Used By**: WiilSupportModel (supportLanguages array)
  * - **Referenced In**: SttModelConfig and TtsModelConfig (defaultLanguage selection)
  * - **Purpose**: Defines supported languages for speech recognition and synthesis
  *
