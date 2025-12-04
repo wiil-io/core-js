@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.10**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.11**](../../README.md)
 
 ***
 
@@ -10,4 +10,4 @@
 const BusinessMenuItemSchema: ZodObject<BusinessMenuItem>;
 ```
 
-Defined in: [src/core/business-mgt/menu-config.schema.ts:17](https://github.com/wiil-io/core-js/blob/465d307305563ec9efb5deeecc4be24f1e371aa2/src/core/business-mgt/menu-config.schema.ts#L17)
+Defined in: [src/core/business-mgt/menu-config.schema.ts:17](https://github.com/wiil-io/core-js/blob/4926a363486bd7cbbb0f6494fae7e27bdbd0da4e/src/core/business-mgt/menu-config.schema.ts#L17)

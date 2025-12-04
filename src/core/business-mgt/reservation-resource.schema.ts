@@ -77,7 +77,7 @@ export const ResourceSchema = BaseModelSchema.safeExtend({
 
     // Calendar integration (optional)
     calendarId: z.string().nullable().optional().describe("External calendar system ID for real-time availability synchronization (Google Calendar, Outlook, etc.). Enables two-way booking sync."),
-    syncEnabled: z.boolean().default(false).describe("Whether automatic calendar synchronization is active for this resource. When true, availability updates from external calendar system. Defaults to false."),
+    syncEnabled: z.boolean().nullable().optional().default(false).describe("Whether automatic calendar synchronization is active for this resource. When true, availability updates from external calendar system. Defaults to false."),
     lastSyncAt: z.number().nullable().optional().describe("Unix timestamp of most recent calendar synchronization. Used for sync health monitoring and troubleshooting availability discrepancies."),
 
     // Type-specific fields
