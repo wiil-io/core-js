@@ -28,26 +28,16 @@ export const ReservationSettingsSchema = BaseModelSchema.safeExtend({
     isActive: z.boolean().default(false).describe("Whether this configuration is currently active and applied to new reservations. Inactive settings are ignored. Defaults to false."),
 });
 
-/**
- * Schema for creating new reservation settings.
- * Omits auto-generated fields.
- */
-export const CreateReservationSettingsSchema = ReservationSettingsSchema.omit({
-    id: true,
-    createdAt: true,
-    updatedAt: true,
-});
 
 /**
  * Schema for updating existing reservation settings.
  * All fields are optional except id.
  */
-export const UpdateReservationSettingsSchema = CreateReservationSettingsSchema.partial().safeExtend({
+export const UpdateReservationSettingsSchema = ReservationSettingsSchema.partial().safeExtend({
     id: z.string(),
 });
 
 export type ReservationSettings = z.infer<typeof ReservationSettingsSchema>;
-export type CreateReservationSettings = z.infer<typeof CreateReservationSettingsSchema>;
 export type UpdateReservationSettings = z.infer<typeof UpdateReservationSettingsSchema>;
 
 /**
@@ -57,8 +47,6 @@ export type UpdateReservationSettings = z.infer<typeof UpdateReservationSettings
  * @property {string} reservationType - Type of reservation
  * @property {string} [resourceId] - ID of the reserved resource (table, room, etc.)
  * @property {string} customerId - Customer ID if registered
- * @property {string} [customerName] - Customer's full name
- * @property {string} [customerEmail] - Customer's email address
  * @property {number} startTime - Reservation start time as Unix timestamp
  * @property {number} [endTime] - Reservation end time as Unix timestamp
  * @property {number} [duration] - Duration based on resource type
@@ -75,8 +63,6 @@ export const ReservationSchema = BaseModelSchema.safeExtend({
     reservationType: z.enum(ResourceType).describe("Category of reservation: ROOM (hotel stay), TABLE (restaurant seating), RENTAL (hourly/daily equipment/space), or OTHER. Determines pricing model and fulfillment workflow."),
     resourceId: z.string().optional().nullable().describe("References specific Resource from reservation-resource.schema being reserved (e.g., 'Table 5', 'Room 101'). Null for general availability reservations without specific resource assignment."),
     customerId: z.string().describe("References Customer who made this reservation. Links to customer profile for history, preferences, and communication."),
-    customerName: z.string().optional().describe("Customer's full name captured at reservation time. Used for identification and communication when customer record doesn't have name populated."),
-    customerEmail: z.email().optional().describe("Customer's email for confirmation messages and updates sent by AI Powered Services. Used when customer record email is unavailable."),
     startTime: z.number().describe("Unix timestamp for reservation start. Critical for availability management, customer notifications, and operational scheduling."),
     endTime: z.number().optional().describe("Unix timestamp for reservation end. Calculated from startTime + duration. Used for availability blocking and checkout management."),
     duration: z.number().nonnegative().optional().describe("Reservation length in units matching reservationType (hours for TABLE/RENTAL, days for ROOM). Used for pricing calculations and availability management."),
@@ -98,7 +84,9 @@ export const CreateReservationSchema = ReservationSchema.omit({
     id: true,
     createdAt: true,
     updatedAt: true,
-    cancelReason: true
+    status: true,
+    cancelReason: true,
+    serviceConversationConfigId: true,
 });
 
 /**

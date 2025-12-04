@@ -131,7 +131,8 @@ export const CreateMenuOrderSchema = MenuOrderSchema.omit({
     updatedAt: true,
     actualReadyTime: true,
     items: true,
-    cancelReason: true
+    cancelReason: true,
+    serviceConversationConfigId: true,
 }).safeExtend({
     items: z.array(MenuOrderItemBaseSchema).min(1, "Order must have at least one item"),
     cancelReason: z.string().nullable().optional(),

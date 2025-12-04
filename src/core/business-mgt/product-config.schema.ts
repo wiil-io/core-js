@@ -14,14 +14,12 @@ import { BaseModelSchema } from "../base.schema";
  * @property {string} name - Category name (e.g., Electronics, Clothing)
  * @property {string} [description] - Category description
  * @property {number} [displayOrder] - Display order in catalog
- * @property {boolean} isDefault - Whether this is the default category
  */
 export const ProductCategorySchema = BaseModelSchema.safeExtend({
     id: z.string().describe("Unique identifier for this product category in the catalog managed by Product Management."),
     name: z.string().min(1, "Category name is required").describe("Category name for product organization (e.g., Electronics, Clothing, Home & Garden). Used by AI Powered Services when presenting product options to customers."),
     description: z.string().optional().describe("Category description providing context about the type of products included. Helps customers navigate the product catalog and understand category scope."),
     displayOrder: z.number().int().optional().describe("Numeric order for category display in product catalog. Lower numbers appear first. Enables strategic category positioning."),
-    isDefault: z.boolean().default(false).describe("Whether this is the default category for uncategorized products. Only one category should be default. Defaults to false."),
 });
 
 /**
@@ -74,7 +72,6 @@ export const BusinessProductSchema = BaseModelSchema.safeExtend({
 
     // Business Management
     isActive: z.boolean().default(true).describe("Whether product is active and available for sale. Inactive products are hidden from customers and AI Powered Services. Defaults to true."),
-    displayOrder: z.number().int().optional().describe("Display order within category. Lower numbers appear first. Enables strategic product positioning and featured item placement."),
 });
 
 /**
@@ -107,7 +104,6 @@ export const CreateBusinessProductSchema = BusinessProductSchema.omit({
     categoryId: true,
 }).safeExtend({
     categoryId: z.string().optional(),
-    category: z.string().nullable().optional(),
 });
 
 /**

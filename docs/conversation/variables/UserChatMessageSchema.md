@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.17**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.18**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const UserChatMessageSchema: ZodObject<UserChatMessage>;
 ```
 
-Defined in: [src/core/conversation/conversation-message.schema.ts:89](https://github.com/wiil-io/core-js/blob/0169edf7505580a197164cb257e175d1d972b4bf/src/core/conversation/conversation-message.schema.ts#L89)
+Defined in: [src/core/conversation/conversation-message.schema.ts:89](https://github.com/wiil-io/core-js/blob/21f78e57f02d188c257d7debf1363466bcfa4c64/src/core/conversation/conversation-message.schema.ts#L89)
 
 User chat message schema.
 

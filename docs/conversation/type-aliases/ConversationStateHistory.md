@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.17**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.18**](../../README.md)
 
 ***
 
@@ -15,7 +15,7 @@ type ConversationStateHistory = {
 };
 ```
 
-Defined in: [src/core/conversation/conversation-config.schema.ts:286](https://github.com/wiil-io/core-js/blob/0169edf7505580a197164cb257e175d1d972b4bf/src/core/conversation/conversation-config.schema.ts#L286)
+Defined in: [src/core/conversation/conversation-config.schema.ts:286](https://github.com/wiil-io/core-js/blob/21f78e57f02d188c257d7debf1363466bcfa4c64/src/core/conversation/conversation-config.schema.ts#L286)
 
 Conversation state history schema for tracking status changes.
 
@@ -27,10 +27,10 @@ analyzing resolution times.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="status"></a> `status` | [`ConversationStatus`](../../type-definitions/enumerations/ConversationStatus.md) | [src/core/conversation/conversation-config.schema.ts:120](https://github.com/wiil-io/core-js/blob/0169edf7505580a197164cb257e175d1d972b4bf/src/core/conversation/conversation-config.schema.ts#L120) |
-| <a id="timestamp"></a> `timestamp` | `number` | [src/core/conversation/conversation-config.schema.ts:121](https://github.com/wiil-io/core-js/blob/0169edf7505580a197164cb257e175d1d972b4bf/src/core/conversation/conversation-config.schema.ts#L121) |
-| <a id="reason"></a> `reason?` | `string` | [src/core/conversation/conversation-config.schema.ts:122](https://github.com/wiil-io/core-js/blob/0169edf7505580a197164cb257e175d1d972b4bf/src/core/conversation/conversation-config.schema.ts#L122) |
-| <a id="metadata"></a> `metadata?` | `Record`\<`string`, `any`\> | [src/core/conversation/conversation-config.schema.ts:123](https://github.com/wiil-io/core-js/blob/0169edf7505580a197164cb257e175d1d972b4bf/src/core/conversation/conversation-config.schema.ts#L123) |
+| <a id="status"></a> `status` | [`ConversationStatus`](../../type-definitions/enumerations/ConversationStatus.md) | [src/core/conversation/conversation-config.schema.ts:120](https://github.com/wiil-io/core-js/blob/21f78e57f02d188c257d7debf1363466bcfa4c64/src/core/conversation/conversation-config.schema.ts#L120) |
+| <a id="timestamp"></a> `timestamp` | `number` | [src/core/conversation/conversation-config.schema.ts:121](https://github.com/wiil-io/core-js/blob/21f78e57f02d188c257d7debf1363466bcfa4c64/src/core/conversation/conversation-config.schema.ts#L121) |
+| <a id="reason"></a> `reason?` | `string` | [src/core/conversation/conversation-config.schema.ts:122](https://github.com/wiil-io/core-js/blob/21f78e57f02d188c257d7debf1363466bcfa4c64/src/core/conversation/conversation-config.schema.ts#L122) |
+| <a id="metadata"></a> `metadata?` | `Record`\<`string`, `any`\> | [src/core/conversation/conversation-config.schema.ts:123](https://github.com/wiil-io/core-js/blob/21f78e57f02d188c257d7debf1363466bcfa4c64/src/core/conversation/conversation-config.schema.ts#L123) |
 
 ## Remarks
 

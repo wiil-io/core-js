@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.17**](../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.18**](../README.md)
 
 ***
 
@@ -52,7 +52,6 @@ Central export point for business management schemas.
 | [CreateResource](type-aliases/CreateResource.md) | Schema for creating a new resource. Omits auto-generated fields. |
 | [UpdateResource](type-aliases/UpdateResource.md) | Schema for updating an existing resource. All fields are optional except id. |
 | [ReservationSettings](type-aliases/ReservationSettings.md) | Reservation settings schema. |
-| [CreateReservationSettings](type-aliases/CreateReservationSettings.md) | Schema for creating new reservation settings. Omits auto-generated fields. |
 | [UpdateReservationSettings](type-aliases/UpdateReservationSettings.md) | Schema for updating existing reservation settings. All fields are optional except id. |
 | [Reservation](type-aliases/Reservation.md) | Reservation schema for managing bookings. |
 | [CreateReservation](type-aliases/CreateReservation.md) | Schema for creating a new reservation. Omits auto-generated fields. |
@@ -110,7 +109,6 @@ Central export point for business management schemas.
 | [CreateResourceSchema](variables/CreateResourceSchema.md) | Schema for creating a new resource. Omits auto-generated fields. |
 | [UpdateResourceSchema](variables/UpdateResourceSchema.md) | Schema for updating an existing resource. All fields are optional except id. |
 | [ReservationSettingsSchema](variables/ReservationSettingsSchema.md) | Reservation settings schema. |
-| [CreateReservationSettingsSchema](variables/CreateReservationSettingsSchema.md) | Schema for creating new reservation settings. Omits auto-generated fields. |
 | [UpdateReservationSettingsSchema](variables/UpdateReservationSettingsSchema.md) | Schema for updating existing reservation settings. All fields are optional except id. |
 | [ReservationSchema](variables/ReservationSchema.md) | Reservation schema for managing bookings. |
 | [CreateReservationSchema](variables/CreateReservationSchema.md) | Schema for creating a new reservation. Omits auto-generated fields. |

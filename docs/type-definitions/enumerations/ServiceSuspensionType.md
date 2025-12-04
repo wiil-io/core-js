@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.17**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.18**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: ServiceSuspensionType
 
-Defined in: [src/core/type-definitions/account-definitions.ts:41](https://github.com/wiil-io/core-js/blob/0169edf7505580a197164cb257e175d1d972b4bf/src/core/type-definitions/account-definitions.ts#L41)
+Defined in: [src/core/type-definitions/account-definitions.ts:41](https://github.com/wiil-io/core-js/blob/21f78e57f02d188c257d7debf1363466bcfa4c64/src/core/type-definitions/account-definitions.ts#L41)
 
 Service suspension type enumeration.
 
@@ -22,8 +22,8 @@ const suspensionReason: ServiceSuspensionType = ServiceSuspensionType.QUOTA_EXCE
 
 | Enumeration Member | Value | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="manual"></a> `MANUAL` | `"manual"` | Service was manually suspended by an administrator or user | [src/core/type-definitions/account-definitions.ts:43](https://github.com/wiil-io/core-js/blob/0169edf7505580a197164cb257e175d1d972b4bf/src/core/type-definitions/account-definitions.ts#L43) |
-| <a id="automatic"></a> `AUTOMATIC` | `"automatic"` | Service was automatically suspended by the system | [src/core/type-definitions/account-definitions.ts:45](https://github.com/wiil-io/core-js/blob/0169edf7505580a197164cb257e175d1d972b4bf/src/core/type-definitions/account-definitions.ts#L45) |
-| <a id="subscription_quota_exceeded"></a> `SUBSCRIPTION_QUOTA_EXCEEDED` | `"subscription_quota_exceeded"` | Service was suspended due to subscription quota limits being exceeded | [src/core/type-definitions/account-definitions.ts:47](https://github.com/wiil-io/core-js/blob/0169edf7505580a197164cb257e175d1d972b4bf/src/core/type-definitions/account-definitions.ts#L47) |
-| <a id="quota_exceeded"></a> `QUOTA_EXCEEDED` | `"quota_exceeded"` | Service was suspended due to usage quota limits being exceeded | [src/core/type-definitions/account-definitions.ts:49](https://github.com/wiil-io/core-js/blob/0169edf7505580a197164cb257e175d1d972b4bf/src/core/type-definitions/account-definitions.ts#L49) |
-| <a id="payment_failed"></a> `PAYMENT_FAILED` | `"payment_failed"` | Service was suspended due to failed payment transaction | [src/core/type-definitions/account-definitions.ts:51](https://github.com/wiil-io/core-js/blob/0169edf7505580a197164cb257e175d1d972b4bf/src/core/type-definitions/account-definitions.ts#L51) |
+| <a id="manual"></a> `MANUAL` | `"manual"` | Service was manually suspended by an administrator or user | [src/core/type-definitions/account-definitions.ts:43](https://github.com/wiil-io/core-js/blob/21f78e57f02d188c257d7debf1363466bcfa4c64/src/core/type-definitions/account-definitions.ts#L43) |
+| <a id="automatic"></a> `AUTOMATIC` | `"automatic"` | Service was automatically suspended by the system | [src/core/type-definitions/account-definitions.ts:45](https://github.com/wiil-io/core-js/blob/21f78e57f02d188c257d7debf1363466bcfa4c64/src/core/type-definitions/account-definitions.ts#L45) |
+| <a id="subscription_quota_exceeded"></a> `SUBSCRIPTION_QUOTA_EXCEEDED` | `"subscription_quota_exceeded"` | Service was suspended due to subscription quota limits being exceeded | [src/core/type-definitions/account-definitions.ts:47](https://github.com/wiil-io/core-js/blob/21f78e57f02d188c257d7debf1363466bcfa4c64/src/core/type-definitions/account-definitions.ts#L47) |
+| <a id="quota_exceeded"></a> `QUOTA_EXCEEDED` | `"quota_exceeded"` | Service was suspended due to usage quota limits being exceeded | [src/core/type-definitions/account-definitions.ts:49](https://github.com/wiil-io/core-js/blob/21f78e57f02d188c257d7debf1363466bcfa4c64/src/core/type-definitions/account-definitions.ts#L49) |
+| <a id="payment_failed"></a> `PAYMENT_FAILED` | `"payment_failed"` | Service was suspended due to failed payment transaction | [src/core/type-definitions/account-definitions.ts:51](https://github.com/wiil-io/core-js/blob/21f78e57f02d188c257d7debf1363466bcfa4c64/src/core/type-definitions/account-definitions.ts#L51) |
