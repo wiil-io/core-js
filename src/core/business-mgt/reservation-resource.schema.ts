@@ -94,6 +94,7 @@ export const CreateResourceSchema = ResourceSchema.omit({
     id: true,
     createdAt: true,
     updatedAt: true,
+    lastSyncAt: true,
 });
 
 /**

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.20**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.21**](../../README.md)
 
 ***
 
@@ -14,7 +14,7 @@ type CreateMenuCategory = {
 };
 ```
 
-Defined in: [src/core/business-mgt/menu-config.schema.ts:115](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/business-mgt/menu-config.schema.ts#L115)
+Defined in: [src/core/business-mgt/menu-config.schema.ts:115](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/business-mgt/menu-config.schema.ts#L115)
 
 Type definition for creating a menu category.
 
@@ -22,6 +22,6 @@ Type definition for creating a menu category.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="name"></a> `name` | `string` | [src/core/business-mgt/menu-config.schema.ts:11](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/business-mgt/menu-config.schema.ts#L11) |
-| <a id="description"></a> `description?` | `string` | [src/core/business-mgt/menu-config.schema.ts:12](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/business-mgt/menu-config.schema.ts#L12) |
-| <a id="displayorder"></a> `displayOrder?` | `number` | [src/core/business-mgt/menu-config.schema.ts:13](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/business-mgt/menu-config.schema.ts#L13) |
+| <a id="name"></a> `name` | `string` | [src/core/business-mgt/menu-config.schema.ts:11](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/business-mgt/menu-config.schema.ts#L11) |
+| <a id="description"></a> `description?` | `string` | [src/core/business-mgt/menu-config.schema.ts:12](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/business-mgt/menu-config.schema.ts#L12) |
+| <a id="displayorder"></a> `displayOrder?` | `number` | [src/core/business-mgt/menu-config.schema.ts:13](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/business-mgt/menu-config.schema.ts#L13) |

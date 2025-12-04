@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.20**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.21**](../../README.md)
 
 ***
 
@@ -16,7 +16,7 @@ type UpdateProductOrderStatus = {
 };
 ```
 
-Defined in: [src/core/business-mgt/product-order.schema.ts:172](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/business-mgt/product-order.schema.ts#L172)
+Defined in: [src/core/business-mgt/product-order.schema.ts:172](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/business-mgt/product-order.schema.ts#L172)
 
 Quick status update schema for product orders.
 
@@ -24,8 +24,8 @@ Quick status update schema for product orders.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="id"></a> `id` | `string` | [src/core/business-mgt/product-order.schema.ts:147](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/business-mgt/product-order.schema.ts#L147) |
-| <a id="status"></a> `status` | [`OrderStatus`](../../type-definitions/enumerations/OrderStatus.md) | [src/core/business-mgt/product-order.schema.ts:148](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/business-mgt/product-order.schema.ts#L148) |
-| <a id="shippeddate"></a> `shippedDate?` | `number` | [src/core/business-mgt/product-order.schema.ts:149](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/business-mgt/product-order.schema.ts#L149) |
-| <a id="delivereddate"></a> `deliveredDate?` | `number` | [src/core/business-mgt/product-order.schema.ts:150](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/business-mgt/product-order.schema.ts#L150) |
-| <a id="trackingnumber"></a> `trackingNumber?` | `string` | [src/core/business-mgt/product-order.schema.ts:151](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/business-mgt/product-order.schema.ts#L151) |
+| <a id="id"></a> `id` | `string` | [src/core/business-mgt/product-order.schema.ts:147](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/business-mgt/product-order.schema.ts#L147) |
+| <a id="status"></a> `status` | [`OrderStatus`](../../type-definitions/enumerations/OrderStatus.md) | [src/core/business-mgt/product-order.schema.ts:148](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/business-mgt/product-order.schema.ts#L148) |
+| <a id="shippeddate"></a> `shippedDate?` | `number` | [src/core/business-mgt/product-order.schema.ts:149](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/business-mgt/product-order.schema.ts#L149) |
+| <a id="delivereddate"></a> `deliveredDate?` | `number` | [src/core/business-mgt/product-order.schema.ts:150](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/business-mgt/product-order.schema.ts#L150) |
+| <a id="trackingnumber"></a> `trackingNumber?` | `string` | [src/core/business-mgt/product-order.schema.ts:151](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/business-mgt/product-order.schema.ts#L151) |

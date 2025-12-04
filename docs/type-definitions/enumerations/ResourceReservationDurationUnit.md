@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.20**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.21**](../../README.md)
 
 ***
 
@@ -6,12 +6,12 @@
 
 # Enumeration: ResourceReservationDurationUnit
 
-Defined in: [src/core/type-definitions/business-definitions.ts:25](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/type-definitions/business-definitions.ts#L25)
+Defined in: [src/core/type-definitions/business-definitions.ts:25](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/type-definitions/business-definitions.ts#L25)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="minutes"></a> `MINUTES` | `"minutes"` | [src/core/type-definitions/business-definitions.ts:26](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/type-definitions/business-definitions.ts#L26) |
-| <a id="hours"></a> `HOURS` | `"hours"` | [src/core/type-definitions/business-definitions.ts:27](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/type-definitions/business-definitions.ts#L27) |
-| <a id="nights"></a> `NIGHTS` | `"nights"` | [src/core/type-definitions/business-definitions.ts:28](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/type-definitions/business-definitions.ts#L28) |
+| <a id="minutes"></a> `MINUTES` | `"minutes"` | [src/core/type-definitions/business-definitions.ts:26](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/type-definitions/business-definitions.ts#L26) |
+| <a id="hours"></a> `HOURS` | `"hours"` | [src/core/type-definitions/business-definitions.ts:27](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/type-definitions/business-definitions.ts#L27) |
+| <a id="nights"></a> `NIGHTS` | `"nights"` | [src/core/type-definitions/business-definitions.ts:28](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/type-definitions/business-definitions.ts#L28) |

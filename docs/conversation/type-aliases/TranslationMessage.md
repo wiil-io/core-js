@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.20**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.21**](../../README.md)
 
 ***
 
@@ -21,7 +21,7 @@ type TranslationMessage = {
 };
 ```
 
-Defined in: [src/core/conversation/translation-conversation.schema.ts:186](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/conversation/translation-conversation.schema.ts#L186)
+Defined in: [src/core/conversation/translation-conversation.schema.ts:186](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/conversation/translation-conversation.schema.ts#L186)
 
 Translation message schema - represents one translation interaction.
 
@@ -33,16 +33,16 @@ the provisioning chain used for STT → Translation → TTS processing.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="messageid"></a> `messageId` | `string` | [src/core/conversation/translation-conversation.schema.ts:44](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/conversation/translation-conversation.schema.ts#L44) |
-| <a id="speakerparticipantid"></a> `speakerParticipantId` | `string` | [src/core/conversation/translation-conversation.schema.ts:45](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/conversation/translation-conversation.schema.ts#L45) |
-| <a id="targetparticipantid"></a> `targetParticipantId` | `string` | [src/core/conversation/translation-conversation.schema.ts:46](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/conversation/translation-conversation.schema.ts#L46) |
-| <a id="originaltext"></a> `originalText?` | `string` | [src/core/conversation/translation-conversation.schema.ts:47](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/conversation/translation-conversation.schema.ts#L47) |
-| <a id="translatedtext"></a> `translatedText?` | `string` | [src/core/conversation/translation-conversation.schema.ts:48](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/conversation/translation-conversation.schema.ts#L48) |
-| <a id="originallanguage"></a> `originalLanguage` | `string` | [src/core/conversation/translation-conversation.schema.ts:49](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/conversation/translation-conversation.schema.ts#L49) |
-| <a id="targetlanguage"></a> `targetLanguage` | `string` | [src/core/conversation/translation-conversation.schema.ts:50](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/conversation/translation-conversation.schema.ts#L50) |
-| <a id="provisioningconfigid"></a> `provisioningConfigId` | `string` | [src/core/conversation/translation-conversation.schema.ts:51](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/conversation/translation-conversation.schema.ts#L51) |
-| <a id="timestamp"></a> `timestamp` | `number` | [src/core/conversation/translation-conversation.schema.ts:52](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/conversation/translation-conversation.schema.ts#L52) |
-| <a id="metadata"></a> `metadata?` | `Record`\<`string`, `any`\> | [src/core/conversation/translation-conversation.schema.ts:53](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/conversation/translation-conversation.schema.ts#L53) |
+| <a id="messageid"></a> `messageId` | `string` | [src/core/conversation/translation-conversation.schema.ts:44](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/conversation/translation-conversation.schema.ts#L44) |
+| <a id="speakerparticipantid"></a> `speakerParticipantId` | `string` | [src/core/conversation/translation-conversation.schema.ts:45](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/conversation/translation-conversation.schema.ts#L45) |
+| <a id="targetparticipantid"></a> `targetParticipantId` | `string` | [src/core/conversation/translation-conversation.schema.ts:46](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/conversation/translation-conversation.schema.ts#L46) |
+| <a id="originaltext"></a> `originalText?` | `string` | [src/core/conversation/translation-conversation.schema.ts:47](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/conversation/translation-conversation.schema.ts#L47) |
+| <a id="translatedtext"></a> `translatedText?` | `string` | [src/core/conversation/translation-conversation.schema.ts:48](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/conversation/translation-conversation.schema.ts#L48) |
+| <a id="originallanguage"></a> `originalLanguage` | `string` | [src/core/conversation/translation-conversation.schema.ts:49](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/conversation/translation-conversation.schema.ts#L49) |
+| <a id="targetlanguage"></a> `targetLanguage` | `string` | [src/core/conversation/translation-conversation.schema.ts:50](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/conversation/translation-conversation.schema.ts#L50) |
+| <a id="provisioningconfigid"></a> `provisioningConfigId` | `string` | [src/core/conversation/translation-conversation.schema.ts:51](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/conversation/translation-conversation.schema.ts#L51) |
+| <a id="timestamp"></a> `timestamp` | `number` | [src/core/conversation/translation-conversation.schema.ts:52](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/conversation/translation-conversation.schema.ts#L52) |
+| <a id="metadata"></a> `metadata?` | `Record`\<`string`, `any`\> | [src/core/conversation/translation-conversation.schema.ts:53](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/conversation/translation-conversation.schema.ts#L53) |
 
 ## Remarks
 

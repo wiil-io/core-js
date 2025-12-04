@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.20**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.21**](../../README.md)
 
 ***
 
@@ -15,7 +15,7 @@ type UpdateProductCategory = {
 };
 ```
 
-Defined in: [src/core/business-mgt/product-config.schema.ts:120](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/business-mgt/product-config.schema.ts#L120)
+Defined in: [src/core/business-mgt/product-config.schema.ts:120](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/business-mgt/product-config.schema.ts#L120)
 
 Schema for updating an existing product category.
 All fields are optional except id.
@@ -24,7 +24,7 @@ All fields are optional except id.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="name"></a> `name?` | `string` | [src/core/business-mgt/product-config.schema.ts:20](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/business-mgt/product-config.schema.ts#L20) |
-| <a id="description"></a> `description?` | `string` | [src/core/business-mgt/product-config.schema.ts:21](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/business-mgt/product-config.schema.ts#L21) |
-| <a id="displayorder"></a> `displayOrder?` | `number` | [src/core/business-mgt/product-config.schema.ts:22](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/business-mgt/product-config.schema.ts#L22) |
-| <a id="id"></a> `id` | `string` | [src/core/business-mgt/product-config.schema.ts:92](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/business-mgt/product-config.schema.ts#L92) |
+| <a id="name"></a> `name?` | `string` | [src/core/business-mgt/product-config.schema.ts:20](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/business-mgt/product-config.schema.ts#L20) |
+| <a id="description"></a> `description?` | `string` | [src/core/business-mgt/product-config.schema.ts:21](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/business-mgt/product-config.schema.ts#L21) |
+| <a id="displayorder"></a> `displayOrder?` | `number` | [src/core/business-mgt/product-config.schema.ts:22](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/business-mgt/product-config.schema.ts#L22) |
+| <a id="id"></a> `id` | `string` | [src/core/business-mgt/product-config.schema.ts:92](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/business-mgt/product-config.schema.ts#L92) |

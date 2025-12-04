@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.20**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.21**](../../README.md)
 
 ***
 
@@ -21,7 +21,7 @@ type BusinessService = {
 };
 ```
 
-Defined in: [src/core/business-mgt/service-config.schema.ts:74](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/business-mgt/service-config.schema.ts#L74)
+Defined in: [src/core/business-mgt/service-config.schema.ts:74](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/business-mgt/service-config.schema.ts#L74)
 
 Business service configuration schema.
 
@@ -29,13 +29,13 @@ Business service configuration schema.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="createdat"></a> `createdAt?` | `number` | [src/core/base.schema.ts:9](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/base.schema.ts#L9) |
-| <a id="updatedat"></a> `updatedAt?` | `number` | [src/core/base.schema.ts:10](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/base.schema.ts#L10) |
-| <a id="id"></a> `id` | `string` | [src/core/business-mgt/service-config.schema.ts:24](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/business-mgt/service-config.schema.ts#L24) |
-| <a id="name"></a> `name` | `string` | [src/core/business-mgt/service-config.schema.ts:25](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/business-mgt/service-config.schema.ts#L25) |
-| <a id="description"></a> `description` | `string` | [src/core/business-mgt/service-config.schema.ts:26](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/business-mgt/service-config.schema.ts#L26) |
-| <a id="duration"></a> `duration` | `number` | [src/core/business-mgt/service-config.schema.ts:29](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/business-mgt/service-config.schema.ts#L29) |
-| <a id="buffertime"></a> `bufferTime` | `number` | [src/core/business-mgt/service-config.schema.ts:30](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/business-mgt/service-config.schema.ts#L30) |
-| <a id="isbookable"></a> `isBookable` | `boolean` | [src/core/business-mgt/service-config.schema.ts:31](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/business-mgt/service-config.schema.ts#L31) |
-| <a id="price"></a> `price?` | `number` | [src/core/business-mgt/service-config.schema.ts:34](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/business-mgt/service-config.schema.ts#L34) |
-| <a id="isactive"></a> `isActive` | `boolean` | [src/core/business-mgt/service-config.schema.ts:36](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/business-mgt/service-config.schema.ts#L36) |
+| <a id="createdat"></a> `createdAt?` | `number` | [src/core/base.schema.ts:9](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/base.schema.ts#L9) |
+| <a id="updatedat"></a> `updatedAt?` | `number` | [src/core/base.schema.ts:10](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/base.schema.ts#L10) |
+| <a id="id"></a> `id` | `string` | [src/core/business-mgt/service-config.schema.ts:24](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/business-mgt/service-config.schema.ts#L24) |
+| <a id="name"></a> `name` | `string` | [src/core/business-mgt/service-config.schema.ts:25](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/business-mgt/service-config.schema.ts#L25) |
+| <a id="description"></a> `description` | `string` | [src/core/business-mgt/service-config.schema.ts:26](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/business-mgt/service-config.schema.ts#L26) |
+| <a id="duration"></a> `duration` | `number` | [src/core/business-mgt/service-config.schema.ts:29](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/business-mgt/service-config.schema.ts#L29) |
+| <a id="buffertime"></a> `bufferTime` | `number` | [src/core/business-mgt/service-config.schema.ts:30](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/business-mgt/service-config.schema.ts#L30) |
+| <a id="isbookable"></a> `isBookable` | `boolean` | [src/core/business-mgt/service-config.schema.ts:31](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/business-mgt/service-config.schema.ts#L31) |
+| <a id="price"></a> `price?` | `number` | [src/core/business-mgt/service-config.schema.ts:34](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/business-mgt/service-config.schema.ts#L34) |
+| <a id="isactive"></a> `isActive` | `boolean` | [src/core/business-mgt/service-config.schema.ts:36](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/business-mgt/service-config.schema.ts#L36) |
