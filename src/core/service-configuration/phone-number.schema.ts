@@ -252,14 +252,12 @@ export type PhoneProviderResponse = z.infer<typeof PhoneProviderResponseSchema>;
  *   id: 'purchase-123',
  *   friendlyName: 'Main Support Line',
  *   phoneNumber: '+12125551234',
- *   requestTime: Date.now(),
  *   providerType: ProviderType.TWILIO,
  *   amount: 1.00,
  *   currency: 'USD',
  *   phoneNumberInfo: { ... },
  *   status: PhonePurchaseStatus.COMPLETED,
  *   numberType: PhoneNumberType.LOCAL,
- *   transactionId: 'txn-789',
  *   completedAt: Date.now(),
  *   createdAt: Date.now(),
  *   updatedAt: Date.now()
@@ -269,14 +267,12 @@ export type PhoneProviderResponse = z.infer<typeof PhoneProviderResponseSchema>;
 export const PhoneNumberPurchaseSchema = BaseModelSchema.safeExtend({
     friendlyName: z.string().describe("Human-readable name for the phone number being purchased (e.g., 'Customer Support Line', 'Sales Main Number')"),
     phoneNumber: z.string().describe("Phone number in E.164 international format being purchased (e.g., '+12125551234')"),
-    requestTime: z.number().default(Date.now()).describe("Unix timestamp (milliseconds) when the purchase was initiated (auto-set to current time)"),
     providerType: z.enum(ProviderType).describe("Telephony provider from which the number is being purchased (SIGNALWIRE, TWILIO, etc.)"),
     amount: z.number().positive().describe("Purchase price for this phone number (must be positive, typically $1-5 for local numbers)"),
     currency: z.string().length(3).default('USD').describe("ISO 4217 currency code for the purchase amount (e.g., 'USD', 'GBP', 'EUR')"),
     phoneNumberInfo: z.unknown().describe("Complete phone number information from the provider including capabilities, region, and metadata"),
     status: z.enum(PhonePurchaseStatus).default(PhonePurchaseStatus.PENDING).describe("Current status of the purchase transaction (PENDING, PROCESSING, COMPLETED, FAILED, CANCELLED)"),
     numberType: z.enum(PhoneNumberType).default(PhoneNumberType.LOCAL).describe("Type of phone number being purchased (LOCAL for geographic, TOLL_FREE for 1-800, MOBILE for cellular)"),
-    transactionId: z.string().nullable().optional().describe("Transaction identifier from the telephony provider for this purchase (populated after provider confirms)"),
     statusDetails: z.string().nullable().optional().describe("Additional details about the current status (error messages, provider notes, or completion details)"),
     completedAt: z.number().nullable().optional().describe("Unix timestamp (milliseconds) when the purchase was successfully completed and number became active"),
     metadata: z.record(z.string(), z.any()).nullable().optional().describe("Additional metadata for the purchase including provider-specific details, billing information, or custom attributes"),
@@ -301,21 +297,22 @@ export type PhoneNumberPurchase = z.infer<typeof PhoneNumberPurchaseSchema>;
  *   friendlyName: 'New Support Line',
  *   phoneNumber: '+12125551234',
  *   providerType: ProviderType.TWILIO,
- *   amount: 1.00,
- *   currency: 'USD',
  *   phoneNumberInfo: { ... },
- *   status: PhonePurchaseStatus.PENDING,
  *   numberType: PhoneNumberType.LOCAL
  * };
  * ```
  */
 export const CreatePhoneNumberPurchaseSchema = PhoneNumberPurchaseSchema.omit({
     id: true,
+    amount: true,
+    currency: true,
+    status: true,
     createdAt: true,
     updatedAt: true,
     transactionId: true,
     statusDetails: true,
     completedAt: true,
+    metadata: true,
 });
 
 /**
@@ -323,35 +320,6 @@ export const CreatePhoneNumberPurchaseSchema = PhoneNumberPurchaseSchema.omit({
  */
 export type CreatePhoneNumberPurchase = z.infer<typeof CreatePhoneNumberPurchaseSchema>;
 
-/**
- * Zod schema for updating an existing phone number purchase.
- *
- * All fields are optional (partial) except id. Allows updating transaction details.
- *
- * @remarks
- * Supports partial updates - only include the fields you want to modify.
- *
- * @example
- * ```typescript
- * const updatePurchase: UpdatePhoneNumberPurchase = {
- *   id: 'purchase-123',
- *   status: PhonePurchaseStatus.COMPLETED,
- *   transactionId: 'txn-789',
- *   completedAt: Date.now()
- * };
- * ```
- */
-export const UpdatePhoneNumberPurchaseSchema = CreatePhoneNumberPurchaseSchema.partial().safeExtend({
-    id: z.string(),
-    transactionId: z.string().nullable().optional(),
-    statusDetails: z.string().nullable().optional(),
-    completedAt: z.number().nullable().optional(),
-});
-
-/**
- * Type definition for updating a phone number purchase.
- */
-export type UpdatePhoneNumberPurchase = z.infer<typeof UpdatePhoneNumberPurchaseSchema>;
 
 /**
  * Legacy schema export for backwards compatibility.
@@ -414,66 +382,3 @@ export const PhoneNumberPricingSchema = z.object({
  * Type definition for phone number pricing.
  */
 export type PhoneNumberPricing = z.infer<typeof PhoneNumberPricingSchema>;
-
-/**
- * Zod schema for provider phone number configuration.
- *
- * Represents the configuration and webhook settings for a phone number in the provider's system.
- *
- * @typedef {Object} ProviderPhoneNumberInfoProperties
- * @property {string} id - Unique identifier in provider's system
- * @property {string} [name] - Optional name for the phone number
- * @property {string} number - The phone number (must match E.164 format)
- * @property {string} [call_handler] - Handler ID for incoming calls
- * @property {string} call_receive_mode - UUID for call receive mode configuration
- * @property {string} [call_request_url] - Webhook URL for call events
- * @property {'POST' | 'GET'} [call_request_method] - HTTP method for call webhook
- * @property {string} [message_handler] - Handler ID for incoming messages
- * @property {string} [message_request_url] - Webhook URL for message events
- * @property {'POST' | 'GET'} [message_request_method] - HTTP method for message webhook
- * @property {string} [message_fallback_url] - Fallback webhook URL for message errors
- * @property {'POST' | 'GET'} [message_fallback_method] - HTTP method for fallback (default: 'POST')
- * @property {string} [created_at] - ISO datetime when created
- * @property {string} [updated_at] - ISO datetime when last updated
- * @property {string} [next_billed_at] - ISO datetime for next billing
- * @property {'toll-free' | 'longcode'} [number_type] - Type of number
- *
- * @example
- * ```typescript
- * const providerInfo: ProviderPhoneNumberInfo = {
- *   id: 'provider-123',
- *   name: 'Main Line',
- *   number: '+12125551234',
- *   call_receive_mode: 'uuid-here',
- *   call_request_url: 'https://api.example.com/calls',
- *   call_request_method: 'POST',
- *   message_request_url: 'https://api.example.com/messages',
- *   message_request_method: 'POST',
- *   number_type: 'longcode'
- * };
- * ```
- */
-export const ProviderPhoneNumberInfoSchema = z.object({
-    id: z.string(),
-    name: z.string().optional(),
-    number: z.string()
-        .regex(/^(\+?\d{1,4}[-.\s]?)?(\(\d{1,3}\)[-.\s]?)?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/),
-    call_handler: z.string().optional(),
-    call_receive_mode: z.uuid(),
-    call_request_url: z.url().optional(),
-    call_request_method: z.enum(['POST', 'GET']).optional(),
-    message_handler: z.string().optional(),
-    message_request_url: z.url().optional(),
-    message_request_method: z.enum(['POST', 'GET']).optional(),
-    message_fallback_url: z.url().optional(),
-    message_fallback_method: z.enum(['POST', 'GET']).default('POST').optional(),
-    created_at: z.iso.datetime().optional(),
-    updated_at: z.iso.datetime().optional(),
-    next_billed_at: z.iso.datetime().optional(),
-    number_type: z.enum(['toll-free', 'longcode']).optional(),
-});
-
-/**
- * Type definition for provider phone number configuration.
- */
-export type ProviderPhoneNumberInfo = z.infer<typeof ProviderPhoneNumberInfoSchema>;

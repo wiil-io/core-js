@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.11**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.12**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const DeploymentChannelRequestSchema: ZodObject<DeploymentChannelRequest>;
 ```
 
-Defined in: [src/core/service-configuration/interaction-channels.schema.ts:253](https://github.com/wiil-io/core-js/blob/4926a363486bd7cbbb0f6494fae7e27bdbd0da4e/src/core/service-configuration/interaction-channels.schema.ts#L253)
+Defined in: [src/core/service-configuration/interaction-channels.schema.ts:253](https://github.com/wiil-io/core-js/blob/b0f7f7950af29611aee8da699c9336043a3229b0/src/core/service-configuration/interaction-channels.schema.ts#L253)
 
 Zod schema for deployment channel creation request.
 

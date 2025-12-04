@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.11**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.12**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const twilioPhoneNumberInfoSchema: ZodObject<TwilioPhoneNumberInfo>;
 ```
 
-Defined in: [src/core/service-configuration/phone-number.schema.ts:164](https://github.com/wiil-io/core-js/blob/4926a363486bd7cbbb0f6494fae7e27bdbd0da4e/src/core/service-configuration/phone-number.schema.ts#L164)
+Defined in: [src/core/service-configuration/phone-number.schema.ts:164](https://github.com/wiil-io/core-js/blob/b0f7f7950af29611aee8da699c9336043a3229b0/src/core/service-configuration/phone-number.schema.ts#L164)
 
 Zod schema for Twilio-specific phone number information.
 

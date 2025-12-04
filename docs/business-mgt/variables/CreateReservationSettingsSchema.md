@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.11**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.12**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const CreateReservationSettingsSchema: ZodObject<CreateReservationSettings>;
 ```
 
-Defined in: [src/core/business-mgt/reservation.schema.ts:35](https://github.com/wiil-io/core-js/blob/4926a363486bd7cbbb0f6494fae7e27bdbd0da4e/src/core/business-mgt/reservation.schema.ts#L35)
+Defined in: [src/core/business-mgt/reservation.schema.ts:35](https://github.com/wiil-io/core-js/blob/b0f7f7950af29611aee8da699c9336043a3229b0/src/core/business-mgt/reservation.schema.ts#L35)
 
 Schema for creating new reservation settings.
 Omits auto-generated fields.

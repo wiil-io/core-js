@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.11**](../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.12**](../README.md)
 
 ***
 
@@ -54,10 +54,8 @@ Central export point for all service configuration schemas.
 | [PhoneProviderResponse](type-aliases/PhoneProviderResponse.md) | Type definition for phone provider response. |
 | [PhoneNumberPurchase](type-aliases/PhoneNumberPurchase.md) | Type definition for phone number purchase. |
 | [CreatePhoneNumberPurchase](type-aliases/CreatePhoneNumberPurchase.md) | Type definition for creating a phone number purchase. |
-| [UpdatePhoneNumberPurchase](type-aliases/UpdatePhoneNumberPurchase.md) | Type definition for updating a phone number purchase. |
 | [~~PhoneNumberPurchaseRequest~~](type-aliases/PhoneNumberPurchaseRequest.md) | Legacy type export for backwards compatibility. |
 | [PhoneNumberPricing](type-aliases/PhoneNumberPricing.md) | Type definition for phone number pricing. |
-| [ProviderPhoneNumberInfo](type-aliases/ProviderPhoneNumberInfo.md) | Type definition for provider phone number configuration. |
 | [SttModelConfig](type-aliases/SttModelConfig.md) | Type definition for STT model configuration. |
 | [TtsModelConfig](type-aliases/TtsModelConfig.md) | Type definition for TTS model configuration. |
 | [ProvisioningConfigChain](type-aliases/ProvisioningConfigChain.md) | Type definition for provisioning configuration chain. |
@@ -120,10 +118,8 @@ Central export point for all service configuration schemas.
 | [PhoneProviderResponseSchema](variables/PhoneProviderResponseSchema.md) | Zod schema for phone provider response. |
 | [PhoneNumberPurchaseSchema](variables/PhoneNumberPurchaseSchema.md) | Zod schema for phone number purchase transaction. |
 | [CreatePhoneNumberPurchaseSchema](variables/CreatePhoneNumberPurchaseSchema.md) | Zod schema for creating a new phone number purchase. |
-| [UpdatePhoneNumberPurchaseSchema](variables/UpdatePhoneNumberPurchaseSchema.md) | Zod schema for updating an existing phone number purchase. |
 | [~~PhoneNumberPurchaseRequestSchema~~](variables/PhoneNumberPurchaseRequestSchema.md) | Legacy schema export for backwards compatibility. |
 | [PhoneNumberPricingSchema](variables/PhoneNumberPricingSchema.md) | Zod schema for phone number pricing information. |
-| [ProviderPhoneNumberInfoSchema](variables/ProviderPhoneNumberInfoSchema.md) | Zod schema for provider phone number configuration. |
 | [SttModelConfigSchema](variables/SttModelConfigSchema.md) | Zod schema for Speech-to-Text (STT) model configuration. |
 | [TtsModelConfigSchema](variables/TtsModelConfigSchema.md) | Zod schema for Text-to-Speech (TTS) model configuration. |
 | [ProvisioningConfigChainSchema](variables/ProvisioningConfigChainSchema.md) | Zod schema for provisioning configuration chain. |
