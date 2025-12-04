@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.13**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.14**](../../README.md)
 
 ***
 
@@ -10,6 +10,6 @@
 const CreateWebChannelSchema: ZodObject<CreateWebChannel>;
 ```
 
-Defined in: [src/core/service-configuration/interaction-channels.schema.ts:214](https://github.com/wiil-io/core-js/blob/2f692d24a9afc802946fec387d16fa3efc5b70a1/src/core/service-configuration/interaction-channels.schema.ts#L214)
+Defined in: [src/core/service-configuration/interaction-channels.schema.ts:213](https://github.com/wiil-io/core-js/blob/f177b99b436693eb1b93c7f52a2ee6c41007e6bb/src/core/service-configuration/interaction-channels.schema.ts#L213)
 
 Zod schema for creating a new web channel.
