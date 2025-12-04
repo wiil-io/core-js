@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.16**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.17**](../../README.md)
 
 ***
 
@@ -16,7 +16,7 @@ type SupportedLanguages = {
 }[];
 ```
 
-Defined in: [src/core/service-configuration/voice-language.schema.ts:154](https://github.com/wiil-io/core-js/blob/4af96f1b4cda300f688910b998d30dd9a1d9a3f0/src/core/service-configuration/voice-language.schema.ts#L154)
+Defined in: [src/core/service-configuration/voice-language.schema.ts:154](https://github.com/wiil-io/core-js/blob/0169edf7505580a197164cb257e175d1d972b4bf/src/core/service-configuration/voice-language.schema.ts#L154)
 
 Type definition for supported languages array.
 
@@ -24,8 +24,8 @@ Type definition for supported languages array.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| `languageId` | `string` | [src/core/service-configuration/voice-language.schema.ts:120](https://github.com/wiil-io/core-js/blob/4af96f1b4cda300f688910b998d30dd9a1d9a3f0/src/core/service-configuration/voice-language.schema.ts#L120) |
-| `name` | `string` | [src/core/service-configuration/voice-language.schema.ts:121](https://github.com/wiil-io/core-js/blob/4af96f1b4cda300f688910b998d30dd9a1d9a3f0/src/core/service-configuration/voice-language.schema.ts#L121) |
-| `code` | `string` | [src/core/service-configuration/voice-language.schema.ts:122](https://github.com/wiil-io/core-js/blob/4af96f1b4cda300f688910b998d30dd9a1d9a3f0/src/core/service-configuration/voice-language.schema.ts#L122) |
-| `isDefault` | `boolean` | [src/core/service-configuration/voice-language.schema.ts:123](https://github.com/wiil-io/core-js/blob/4af96f1b4cda300f688910b998d30dd9a1d9a3f0/src/core/service-configuration/voice-language.schema.ts#L123) |
-| `isExperimental` | `boolean` | [src/core/service-configuration/voice-language.schema.ts:124](https://github.com/wiil-io/core-js/blob/4af96f1b4cda300f688910b998d30dd9a1d9a3f0/src/core/service-configuration/voice-language.schema.ts#L124) |
+| `languageId` | `string` | [src/core/service-configuration/voice-language.schema.ts:120](https://github.com/wiil-io/core-js/blob/0169edf7505580a197164cb257e175d1d972b4bf/src/core/service-configuration/voice-language.schema.ts#L120) |
+| `name` | `string` | [src/core/service-configuration/voice-language.schema.ts:121](https://github.com/wiil-io/core-js/blob/0169edf7505580a197164cb257e175d1d972b4bf/src/core/service-configuration/voice-language.schema.ts#L121) |
+| `code` | `string` | [src/core/service-configuration/voice-language.schema.ts:122](https://github.com/wiil-io/core-js/blob/0169edf7505580a197164cb257e175d1d972b4bf/src/core/service-configuration/voice-language.schema.ts#L122) |
+| `isDefault` | `boolean` | [src/core/service-configuration/voice-language.schema.ts:123](https://github.com/wiil-io/core-js/blob/0169edf7505580a197164cb257e175d1d972b4bf/src/core/service-configuration/voice-language.schema.ts#L123) |
+| `isExperimental` | `boolean` | [src/core/service-configuration/voice-language.schema.ts:124](https://github.com/wiil-io/core-js/blob/0169edf7505580a197164cb257e175d1d972b4bf/src/core/service-configuration/voice-language.schema.ts#L124) |

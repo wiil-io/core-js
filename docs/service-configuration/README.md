@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.16**](../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.17**](../README.md)
 
 ***
 

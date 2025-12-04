@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.16**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.17**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const UpdateInstructionConfigurationSchema: ZodObject<UpdateInstructionConfiguration>;
 ```
 
-Defined in: [src/core/service-configuration/instruction-config.schema.ts:154](https://github.com/wiil-io/core-js/blob/4af96f1b4cda300f688910b998d30dd9a1d9a3f0/src/core/service-configuration/instruction-config.schema.ts#L154)
+Defined in: [src/core/service-configuration/instruction-config.schema.ts:154](https://github.com/wiil-io/core-js/blob/0169edf7505580a197164cb257e175d1d972b4bf/src/core/service-configuration/instruction-config.schema.ts#L154)
 
 Zod schema for updating an existing instruction configuration.
 

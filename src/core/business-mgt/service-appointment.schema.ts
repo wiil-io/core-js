@@ -13,8 +13,6 @@ import { AppointmentStatus, CalendarProvider } from "../type-definitions";
  * @typedef {Object} ServiceAppointment
  * @property {string} businessServiceId - ID of the service being booked
  * @property {string} customerId - Customer ID if registered
- * @property {string} [customerName] - Customer's full name
- * @property {string} [customerEmail] - Customer's email address
  * @property {number} startTime - Appointment start time as Unix timestamp
  * @property {number} [endTime] - Appointment end time as Unix timestamp
  * @property {number} duration - Duration in minutes
@@ -31,8 +29,6 @@ import { AppointmentStatus, CalendarProvider } from "../type-definitions";
 export const ServiceAppointmentSchema = BaseModelSchema.safeExtend({
     businessServiceId: z.string().describe("References Business Service from service-config.schema being booked. Links appointment to service catalog for pricing, duration, and service details."),
     customerId: z.string().describe("References Customer who booked this appointment. Links to customer profile for history, preferences, and communication."),
-    customerName: z.string().optional().describe("Customer's full name captured at booking time. Used for identification and communication when customer record doesn't have name populated."),
-    customerEmail: z.email().optional().describe("Customer's email for confirmation and reminder messages sent by AI Powered Services. Used when customer record email is unavailable."),
     startTime: z.number().describe("Unix timestamp for appointment start. Critical for Service Person scheduling, availability management, and customer notifications."),
     endTime: z.number().optional().describe("Unix timestamp for appointment end. Calculated from startTime + duration. Used for calendar blocking and scheduling next appointments."),
     duration: z.number().int().positive().default(30).optional().describe("Appointment length in minutes. Typically inherited from Business Service duration but can be customized per appointment. Defaults to 30 minutes."),
@@ -57,7 +53,9 @@ export const CreateServiceAppointmentSchema = ServiceAppointmentSchema.omit({
     id: true,
     createdAt: true,
     updatedAt: true,
-    cancelReason: true
+    status: true,
+    cancelReason: true,
+    serviceConversationConfigId: true,
 });
 
 /**

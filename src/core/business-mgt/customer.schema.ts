@@ -26,7 +26,6 @@ const phoneNumberSchema = z.string()
  * @property {string} [timezone] - Customer's timezone for scheduling purposes
  * @property {string} [email] - Customer's primary email address
  * @property {string} preferred_language - Customer's preferred language for communication
- * @property {string} call_priority - Priority level for customer calls and support
  * @property {string} preferred_contact_method - Customer's preferred method of contact
  * @property {string} [best_time_to_call] - Best time of day to contact customer by phone
  * @property {string} [notes] - Internal notes about the customer
@@ -45,7 +44,6 @@ export const CustomerSchema = BaseModelSchema.safeExtend({
     timezone: z.string().optional().describe("IANA timezone identifier (e.g., 'America/New_York') for accurate appointment scheduling, reservation timing, and ensuring communications arrive at appropriate local times."),
     email: z.email().optional().describe("Primary email for confirmations, receipts, and AI-generated summaries. Also serves as unique identifier for account recovery and duplicate detection."),
     preferred_language: z.string().default('en').describe("ISO 639-1 language code (e.g., 'en', 'es', 'fr') for AI conversations and notifications. Defaults to English. Essential for multilingual operations."),
-    call_priority: z.enum(CallPriority).default(CallPriority.MEDIUM).describe("Priority level for calls and support: HIGH (VIP/urgent), MEDIUM (standard), LOW (non-urgent). Used for routing and queue management. Defaults to MEDIUM."),
     preferred_contact_method: z.enum(PreferredContactMethod).default(PreferredContactMethod.EMAIL).describe("Preferred channel for notifications: EMAIL, PHONE, SMS. AI Powered Services respects this when sending reminders and updates. Defaults to EMAIL."),
     best_time_to_call: z.enum(BestTimeToCall).optional().describe("Optimal time window (MORNING, AFTERNOON, EVENING) for phone contact. Used by support teams and automated systems to improve contact success rates."),
     notes: z.string().optional().describe("Internal staff notes about customer preferences, requirements, history, or behavioral patterns. Not visible to customers; used for personalized service delivery."),
@@ -64,6 +62,7 @@ export const CreateCustomerSchema = CustomerSchema.omit({
     id: true,
     createdAt: true,
     updatedAt: true,
+    channelId: true,
 });
 
 /**

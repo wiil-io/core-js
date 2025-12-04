@@ -125,7 +125,8 @@ export const CreateProductOrderSchema = ProductOrderSchema.omit({
     shippedDate: true,
     customer: true,
     items: true,
-    cancelReason: true
+    cancelReason: true,
+    serviceConversationConfigId: true,
 }).safeExtend({
     items: z.array(ProductOrderItemBaseSchema).min(1, "Order must have at least one item"),
 });
