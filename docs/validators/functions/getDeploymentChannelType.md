@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.14**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.15**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 function getDeploymentChannelType(channel): DeploymentType;
 ```
 
-Defined in: [src/core/validators/channel-validation.ts:13](https://github.com/wiil-io/core-js/blob/f177b99b436693eb1b93c7f52a2ee6c41007e6bb/src/core/validators/channel-validation.ts#L13)
+Defined in: [src/core/validators/channel-validation.ts:13](https://github.com/wiil-io/core-js/blob/bd9dddcff0645fc8d739d0cb70526e8dfb698e4c/src/core/validators/channel-validation.ts#L13)
 
 Helper function for runtime type checking.
 

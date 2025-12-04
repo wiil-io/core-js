@@ -304,7 +304,6 @@ export const CreatePhoneNumberPurchaseSchema = PhoneNumberPurchaseSchema.omit({
     status: true,
     createdAt: true,
     updatedAt: true,
-    transactionId: true,
     statusDetails: true,
     completedAt: true,
     metadata: true,

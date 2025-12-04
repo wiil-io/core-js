@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.14**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.15**](../../README.md)
 
 ***
 
@@ -28,7 +28,7 @@ type CreateBusinessMenuItem = {
 };
 ```
 
-Defined in: [src/core/business-mgt/menu-config.schema.ts:122](https://github.com/wiil-io/core-js/blob/f177b99b436693eb1b93c7f52a2ee6c41007e6bb/src/core/business-mgt/menu-config.schema.ts#L122)
+Defined in: [src/core/business-mgt/menu-config.schema.ts:122](https://github.com/wiil-io/core-js/blob/bd9dddcff0645fc8d739d0cb70526e8dfb698e4c/src/core/business-mgt/menu-config.schema.ts#L122)
 
 Type definition for creating a business menu item.
 
@@ -36,19 +36,19 @@ Type definition for creating a business menu item.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="name"></a> `name` | `string` | [src/core/business-mgt/menu-config.schema.ts:19](https://github.com/wiil-io/core-js/blob/f177b99b436693eb1b93c7f52a2ee6c41007e6bb/src/core/business-mgt/menu-config.schema.ts#L19) |
-| <a id="description"></a> `description?` | `string` | [src/core/business-mgt/menu-config.schema.ts:20](https://github.com/wiil-io/core-js/blob/f177b99b436693eb1b93c7f52a2ee6c41007e6bb/src/core/business-mgt/menu-config.schema.ts#L20) |
-| <a id="price"></a> `price` | `number` | [src/core/business-mgt/menu-config.schema.ts:23](https://github.com/wiil-io/core-js/blob/f177b99b436693eb1b93c7f52a2ee6c41007e6bb/src/core/business-mgt/menu-config.schema.ts#L23) |
-| <a id="ingredients"></a> `ingredients?` | `string`[] | [src/core/business-mgt/menu-config.schema.ts:26](https://github.com/wiil-io/core-js/blob/f177b99b436693eb1b93c7f52a2ee6c41007e6bb/src/core/business-mgt/menu-config.schema.ts#L26) |
-| <a id="allergens"></a> `allergens?` | `string`[] | [src/core/business-mgt/menu-config.schema.ts:27](https://github.com/wiil-io/core-js/blob/f177b99b436693eb1b93c7f52a2ee6c41007e6bb/src/core/business-mgt/menu-config.schema.ts#L27) |
-| <a id="nutritionalinfo"></a> `nutritionalInfo?` | \{ `calories?`: `number`; `protein?`: `number`; `carbs?`: `number`; `fat?`: `number`; \} | [src/core/business-mgt/menu-config.schema.ts:28](https://github.com/wiil-io/core-js/blob/f177b99b436693eb1b93c7f52a2ee6c41007e6bb/src/core/business-mgt/menu-config.schema.ts#L28) |
-| `nutritionalInfo.calories?` | `number` | [src/core/business-mgt/menu-config.schema.ts:29](https://github.com/wiil-io/core-js/blob/f177b99b436693eb1b93c7f52a2ee6c41007e6bb/src/core/business-mgt/menu-config.schema.ts#L29) |
-| `nutritionalInfo.protein?` | `number` | [src/core/business-mgt/menu-config.schema.ts:30](https://github.com/wiil-io/core-js/blob/f177b99b436693eb1b93c7f52a2ee6c41007e6bb/src/core/business-mgt/menu-config.schema.ts#L30) |
-| `nutritionalInfo.carbs?` | `number` | [src/core/business-mgt/menu-config.schema.ts:31](https://github.com/wiil-io/core-js/blob/f177b99b436693eb1b93c7f52a2ee6c41007e6bb/src/core/business-mgt/menu-config.schema.ts#L31) |
-| `nutritionalInfo.fat?` | `number` | [src/core/business-mgt/menu-config.schema.ts:32](https://github.com/wiil-io/core-js/blob/f177b99b436693eb1b93c7f52a2ee6c41007e6bb/src/core/business-mgt/menu-config.schema.ts#L32) |
-| <a id="isavailable"></a> `isAvailable` | `boolean` | [src/core/business-mgt/menu-config.schema.ts:36](https://github.com/wiil-io/core-js/blob/f177b99b436693eb1b93c7f52a2ee6c41007e6bb/src/core/business-mgt/menu-config.schema.ts#L36) |
-| <a id="preparationtime"></a> `preparationTime?` | `number` | [src/core/business-mgt/menu-config.schema.ts:37](https://github.com/wiil-io/core-js/blob/f177b99b436693eb1b93c7f52a2ee6c41007e6bb/src/core/business-mgt/menu-config.schema.ts#L37) |
-| <a id="isactive"></a> `isActive` | `boolean` | [src/core/business-mgt/menu-config.schema.ts:40](https://github.com/wiil-io/core-js/blob/f177b99b436693eb1b93c7f52a2ee6c41007e6bb/src/core/business-mgt/menu-config.schema.ts#L40) |
-| <a id="displayorder"></a> `displayOrder?` | `number` | [src/core/business-mgt/menu-config.schema.ts:41](https://github.com/wiil-io/core-js/blob/f177b99b436693eb1b93c7f52a2ee6c41007e6bb/src/core/business-mgt/menu-config.schema.ts#L41) |
-| <a id="categoryid"></a> `categoryId?` | `string` \| `null` | [src/core/business-mgt/menu-config.schema.ts:77](https://github.com/wiil-io/core-js/blob/f177b99b436693eb1b93c7f52a2ee6c41007e6bb/src/core/business-mgt/menu-config.schema.ts#L77) |
-| <a id="category"></a> `category?` | `string` \| `null` | [src/core/business-mgt/menu-config.schema.ts:78](https://github.com/wiil-io/core-js/blob/f177b99b436693eb1b93c7f52a2ee6c41007e6bb/src/core/business-mgt/menu-config.schema.ts#L78) |
+| <a id="name"></a> `name` | `string` | [src/core/business-mgt/menu-config.schema.ts:19](https://github.com/wiil-io/core-js/blob/bd9dddcff0645fc8d739d0cb70526e8dfb698e4c/src/core/business-mgt/menu-config.schema.ts#L19) |
+| <a id="description"></a> `description?` | `string` | [src/core/business-mgt/menu-config.schema.ts:20](https://github.com/wiil-io/core-js/blob/bd9dddcff0645fc8d739d0cb70526e8dfb698e4c/src/core/business-mgt/menu-config.schema.ts#L20) |
+| <a id="price"></a> `price` | `number` | [src/core/business-mgt/menu-config.schema.ts:23](https://github.com/wiil-io/core-js/blob/bd9dddcff0645fc8d739d0cb70526e8dfb698e4c/src/core/business-mgt/menu-config.schema.ts#L23) |
+| <a id="ingredients"></a> `ingredients?` | `string`[] | [src/core/business-mgt/menu-config.schema.ts:26](https://github.com/wiil-io/core-js/blob/bd9dddcff0645fc8d739d0cb70526e8dfb698e4c/src/core/business-mgt/menu-config.schema.ts#L26) |
+| <a id="allergens"></a> `allergens?` | `string`[] | [src/core/business-mgt/menu-config.schema.ts:27](https://github.com/wiil-io/core-js/blob/bd9dddcff0645fc8d739d0cb70526e8dfb698e4c/src/core/business-mgt/menu-config.schema.ts#L27) |
+| <a id="nutritionalinfo"></a> `nutritionalInfo?` | \{ `calories?`: `number`; `protein?`: `number`; `carbs?`: `number`; `fat?`: `number`; \} | [src/core/business-mgt/menu-config.schema.ts:28](https://github.com/wiil-io/core-js/blob/bd9dddcff0645fc8d739d0cb70526e8dfb698e4c/src/core/business-mgt/menu-config.schema.ts#L28) |
+| `nutritionalInfo.calories?` | `number` | [src/core/business-mgt/menu-config.schema.ts:29](https://github.com/wiil-io/core-js/blob/bd9dddcff0645fc8d739d0cb70526e8dfb698e4c/src/core/business-mgt/menu-config.schema.ts#L29) |
+| `nutritionalInfo.protein?` | `number` | [src/core/business-mgt/menu-config.schema.ts:30](https://github.com/wiil-io/core-js/blob/bd9dddcff0645fc8d739d0cb70526e8dfb698e4c/src/core/business-mgt/menu-config.schema.ts#L30) |
+| `nutritionalInfo.carbs?` | `number` | [src/core/business-mgt/menu-config.schema.ts:31](https://github.com/wiil-io/core-js/blob/bd9dddcff0645fc8d739d0cb70526e8dfb698e4c/src/core/business-mgt/menu-config.schema.ts#L31) |
+| `nutritionalInfo.fat?` | `number` | [src/core/business-mgt/menu-config.schema.ts:32](https://github.com/wiil-io/core-js/blob/bd9dddcff0645fc8d739d0cb70526e8dfb698e4c/src/core/business-mgt/menu-config.schema.ts#L32) |
+| <a id="isavailable"></a> `isAvailable` | `boolean` | [src/core/business-mgt/menu-config.schema.ts:36](https://github.com/wiil-io/core-js/blob/bd9dddcff0645fc8d739d0cb70526e8dfb698e4c/src/core/business-mgt/menu-config.schema.ts#L36) |
+| <a id="preparationtime"></a> `preparationTime?` | `number` | [src/core/business-mgt/menu-config.schema.ts:37](https://github.com/wiil-io/core-js/blob/bd9dddcff0645fc8d739d0cb70526e8dfb698e4c/src/core/business-mgt/menu-config.schema.ts#L37) |
+| <a id="isactive"></a> `isActive` | `boolean` | [src/core/business-mgt/menu-config.schema.ts:40](https://github.com/wiil-io/core-js/blob/bd9dddcff0645fc8d739d0cb70526e8dfb698e4c/src/core/business-mgt/menu-config.schema.ts#L40) |
+| <a id="displayorder"></a> `displayOrder?` | `number` | [src/core/business-mgt/menu-config.schema.ts:41](https://github.com/wiil-io/core-js/blob/bd9dddcff0645fc8d739d0cb70526e8dfb698e4c/src/core/business-mgt/menu-config.schema.ts#L41) |
+| <a id="categoryid"></a> `categoryId?` | `string` \| `null` | [src/core/business-mgt/menu-config.schema.ts:77](https://github.com/wiil-io/core-js/blob/bd9dddcff0645fc8d739d0cb70526e8dfb698e4c/src/core/business-mgt/menu-config.schema.ts#L77) |
+| <a id="category"></a> `category?` | `string` \| `null` | [src/core/business-mgt/menu-config.schema.ts:78](https://github.com/wiil-io/core-js/blob/bd9dddcff0645fc8d739d0cb70526e8dfb698e4c/src/core/business-mgt/menu-config.schema.ts#L78) |

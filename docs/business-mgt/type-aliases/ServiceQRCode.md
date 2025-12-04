@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.14**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.15**](../../README.md)
 
 ***
 
@@ -15,7 +15,7 @@ type ServiceQRCode = {
 };
 ```
 
-Defined in: [src/core/business-mgt/service-config.schema.ts:76](https://github.com/wiil-io/core-js/blob/f177b99b436693eb1b93c7f52a2ee6c41007e6bb/src/core/business-mgt/service-config.schema.ts#L76)
+Defined in: [src/core/business-mgt/service-config.schema.ts:76](https://github.com/wiil-io/core-js/blob/bd9dddcff0645fc8d739d0cb70526e8dfb698e4c/src/core/business-mgt/service-config.schema.ts#L76)
 
 Service QR code schema for appointment booking.
 
@@ -23,7 +23,7 @@ Service QR code schema for appointment booking.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="id"></a> `id` | `string` | [src/core/business-mgt/service-config.schema.ts:51](https://github.com/wiil-io/core-js/blob/f177b99b436693eb1b93c7f52a2ee6c41007e6bb/src/core/business-mgt/service-config.schema.ts#L51) |
-| <a id="appointmenturl"></a> `appointmentUrl` | `string` | [src/core/business-mgt/service-config.schema.ts:52](https://github.com/wiil-io/core-js/blob/f177b99b436693eb1b93c7f52a2ee6c41007e6bb/src/core/business-mgt/service-config.schema.ts#L52) |
-| <a id="qrcodeimage"></a> `qrCodeImage?` | `string` | [src/core/business-mgt/service-config.schema.ts:53](https://github.com/wiil-io/core-js/blob/f177b99b436693eb1b93c7f52a2ee6c41007e6bb/src/core/business-mgt/service-config.schema.ts#L53) |
-| <a id="serviceid"></a> `serviceId?` | `string` | [src/core/business-mgt/service-config.schema.ts:54](https://github.com/wiil-io/core-js/blob/f177b99b436693eb1b93c7f52a2ee6c41007e6bb/src/core/business-mgt/service-config.schema.ts#L54) |
+| <a id="id"></a> `id` | `string` | [src/core/business-mgt/service-config.schema.ts:51](https://github.com/wiil-io/core-js/blob/bd9dddcff0645fc8d739d0cb70526e8dfb698e4c/src/core/business-mgt/service-config.schema.ts#L51) |
+| <a id="appointmenturl"></a> `appointmentUrl` | `string` | [src/core/business-mgt/service-config.schema.ts:52](https://github.com/wiil-io/core-js/blob/bd9dddcff0645fc8d739d0cb70526e8dfb698e4c/src/core/business-mgt/service-config.schema.ts#L52) |
+| <a id="qrcodeimage"></a> `qrCodeImage?` | `string` | [src/core/business-mgt/service-config.schema.ts:53](https://github.com/wiil-io/core-js/blob/bd9dddcff0645fc8d739d0cb70526e8dfb698e4c/src/core/business-mgt/service-config.schema.ts#L53) |
+| <a id="serviceid"></a> `serviceId?` | `string` | [src/core/business-mgt/service-config.schema.ts:54](https://github.com/wiil-io/core-js/blob/bd9dddcff0645fc8d739d0cb70526e8dfb698e4c/src/core/business-mgt/service-config.schema.ts#L54) |
