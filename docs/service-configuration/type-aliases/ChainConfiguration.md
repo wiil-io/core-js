@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.19**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.20**](../../README.md)
 
 ***
 
@@ -12,6 +12,6 @@ type ChainConfiguration =
   | TranslationChainConfig;
 ```
 
-Defined in: [src/core/service-configuration/provisioning-config.ts:343](https://github.com/wiil-io/core-js/blob/b28e0d487336345d79ce228318e44da50cde0531/src/core/service-configuration/provisioning-config.ts#L343)
+Defined in: [src/core/service-configuration/provisioning-config.ts:343](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/service-configuration/provisioning-config.ts#L343)
 
 Union type for any chain configuration (provisioning or translation).

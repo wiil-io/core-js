@@ -58,7 +58,6 @@ export const CreateMenuCategorySchema = MenuCategorySchema.omit({
     id: true,
     createdAt: true,
     updatedAt: true,
-    isDefault: true,
 });
 
 

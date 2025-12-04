@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.19**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.20**](../../README.md)
 
 ***
 
@@ -6,12 +6,12 @@
 
 # Enumeration: ProviderType
 
-Defined in: [src/core/type-definitions/service-config.definitions.ts:19](https://github.com/wiil-io/core-js/blob/b28e0d487336345d79ce228318e44da50cde0531/src/core/type-definitions/service-config.definitions.ts#L19)
+Defined in: [src/core/type-definitions/service-config.definitions.ts:19](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/type-definitions/service-config.definitions.ts#L19)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="twilio"></a> `TWILIO` | `"twilio"` | [src/core/type-definitions/service-config.definitions.ts:20](https://github.com/wiil-io/core-js/blob/b28e0d487336345d79ce228318e44da50cde0531/src/core/type-definitions/service-config.definitions.ts#L20) |
-| <a id="signalwire"></a> `SIGNALWIRE` | `"signal-wire"` | [src/core/type-definitions/service-config.definitions.ts:21](https://github.com/wiil-io/core-js/blob/b28e0d487336345d79ce228318e44da50cde0531/src/core/type-definitions/service-config.definitions.ts#L21) |
-| <a id="telnyx"></a> `TELNYX` | `"telnyx"` | [src/core/type-definitions/service-config.definitions.ts:22](https://github.com/wiil-io/core-js/blob/b28e0d487336345d79ce228318e44da50cde0531/src/core/type-definitions/service-config.definitions.ts#L22) |
+| <a id="twilio"></a> `TWILIO` | `"twilio"` | [src/core/type-definitions/service-config.definitions.ts:20](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/type-definitions/service-config.definitions.ts#L20) |
+| <a id="signalwire"></a> `SIGNALWIRE` | `"signal-wire"` | [src/core/type-definitions/service-config.definitions.ts:21](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/type-definitions/service-config.definitions.ts#L21) |
+| <a id="telnyx"></a> `TELNYX` | `"telnyx"` | [src/core/type-definitions/service-config.definitions.ts:22](https://github.com/wiil-io/core-js/blob/a254626669af0c881a04ad742f84e3e167437bdc/src/core/type-definitions/service-config.definitions.ts#L22) |
