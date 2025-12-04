@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.18**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.19**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const UpdateAgentConfigurationSchema: ZodObject<UpdateAgentConfiguration>;
 ```
 
-Defined in: [src/core/service-configuration/agent-config.schema.ts:159](https://github.com/wiil-io/core-js/blob/21f78e57f02d188c257d7debf1363466bcfa4c64/src/core/service-configuration/agent-config.schema.ts#L159)
+Defined in: [src/core/service-configuration/agent-config.schema.ts:159](https://github.com/wiil-io/core-js/blob/b28e0d487336345d79ce228318e44da50cde0531/src/core/service-configuration/agent-config.schema.ts#L159)
 
 Zod schema for updating an existing agent configuration.
 
