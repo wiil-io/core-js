@@ -232,14 +232,11 @@ export type PhoneProviderResponse = z.infer<typeof PhoneProviderResponseSchema>;
  * @property {string} id - Unique identifier for the purchase transaction
  * @property {string} friendlyName - Human-readable name for the purchased number
  * @property {string} phoneNumber - The phone number being purchased
- * @property {number} requestTime - Timestamp when the purchase was requested (default: Date.now())
  * @property {ProviderType} providerType - Provider from which the number is being purchased
  * @property {number} amount - Purchase amount (must be positive)
  * @property {string} currency - Currency code (3 characters, default: "USD")
- * @property {unknown} phoneNumberInfo - Detailed phone number information from provider
  * @property {PhonePurchaseStatus} status - Current status of the purchase (default: PENDING)
  * @property {PhoneNumberType} numberType - Type of phone number (default: LOCAL)
- * @property {string | null} [transactionId] - Provider's transaction identifier
  * @property {string | null} [statusDetails] - Additional details about the current status
  * @property {number | null} [completedAt] - Timestamp when purchase was completed
  * @property {Record<string, any> | null} [metadata] - Additional metadata for the purchase
@@ -249,13 +246,12 @@ export type PhoneProviderResponse = z.infer<typeof PhoneProviderResponseSchema>;
  * @example
  * ```typescript
  * const purchase: PhoneNumberPurchase = {
- *   id: 'purchase-123',
+ *   id: '32422DEGER56',
  *   friendlyName: 'Main Support Line',
  *   phoneNumber: '+12125551234',
  *   providerType: ProviderType.TWILIO,
  *   amount: 1.00,
  *   currency: 'USD',
- *   phoneNumberInfo: { ... },
  *   status: PhonePurchaseStatus.COMPLETED,
  *   numberType: PhoneNumberType.LOCAL,
  *   completedAt: Date.now(),
@@ -270,7 +266,6 @@ export const PhoneNumberPurchaseSchema = BaseModelSchema.safeExtend({
     providerType: z.enum(ProviderType).describe("Telephony provider from which the number is being purchased (SIGNALWIRE, TWILIO, etc.)"),
     amount: z.number().positive().describe("Purchase price for this phone number (must be positive, typically $1-5 for local numbers)"),
     currency: z.string().length(3).default('USD').describe("ISO 4217 currency code for the purchase amount (e.g., 'USD', 'GBP', 'EUR')"),
-    phoneNumberInfo: z.unknown().describe("Complete phone number information from the provider including capabilities, region, and metadata"),
     status: z.enum(PhonePurchaseStatus).default(PhonePurchaseStatus.PENDING).describe("Current status of the purchase transaction (PENDING, PROCESSING, COMPLETED, FAILED, CANCELLED)"),
     numberType: z.enum(PhoneNumberType).default(PhoneNumberType.LOCAL).describe("Type of phone number being purchased (LOCAL for geographic, TOLL_FREE for 1-800, MOBILE for cellular)"),
     statusDetails: z.string().nullable().optional().describe("Additional details about the current status (error messages, provider notes, or completion details)"),

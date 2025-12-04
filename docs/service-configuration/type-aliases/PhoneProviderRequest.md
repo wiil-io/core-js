@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.12**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.13**](../../README.md)
 
 ***
 
@@ -13,7 +13,7 @@ type PhoneProviderRequest = {
 };
 ```
 
-Defined in: [src/core/service-configuration/phone-number.schema.ts:197](https://github.com/wiil-io/core-js/blob/b0f7f7950af29611aee8da699c9336043a3229b0/src/core/service-configuration/phone-number.schema.ts#L197)
+Defined in: [src/core/service-configuration/phone-number.schema.ts:197](https://github.com/wiil-io/core-js/blob/2f692d24a9afc802946fec387d16fa3efc5b70a1/src/core/service-configuration/phone-number.schema.ts#L197)
 
 Type definition for phone provider request.
 
@@ -21,5 +21,5 @@ Type definition for phone provider request.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="providertype"></a> `providerType` | [`ProviderType`](../../type-definitions/enumerations/ProviderType.md) | [src/core/service-configuration/phone-number.schema.ts:190](https://github.com/wiil-io/core-js/blob/b0f7f7950af29611aee8da699c9336043a3229b0/src/core/service-configuration/phone-number.schema.ts#L190) |
-| <a id="region"></a> `region` | `string` | [src/core/service-configuration/phone-number.schema.ts:191](https://github.com/wiil-io/core-js/blob/b0f7f7950af29611aee8da699c9336043a3229b0/src/core/service-configuration/phone-number.schema.ts#L191) |
+| <a id="providertype"></a> `providerType` | [`ProviderType`](../../type-definitions/enumerations/ProviderType.md) | [src/core/service-configuration/phone-number.schema.ts:190](https://github.com/wiil-io/core-js/blob/2f692d24a9afc802946fec387d16fa3efc5b70a1/src/core/service-configuration/phone-number.schema.ts#L190) |
+| <a id="region"></a> `region` | `string` | [src/core/service-configuration/phone-number.schema.ts:191](https://github.com/wiil-io/core-js/blob/2f692d24a9afc802946fec387d16fa3efc5b70a1/src/core/service-configuration/phone-number.schema.ts#L191) |

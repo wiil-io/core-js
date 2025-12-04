@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.12**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.13**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const PhoneNumberPurchaseSchema: ZodObject<PhoneNumberPurchase>;
 ```
 
-Defined in: [src/core/service-configuration/phone-number.schema.ts:267](https://github.com/wiil-io/core-js/blob/b0f7f7950af29611aee8da699c9336043a3229b0/src/core/service-configuration/phone-number.schema.ts#L267)
+Defined in: [src/core/service-configuration/phone-number.schema.ts:263](https://github.com/wiil-io/core-js/blob/2f692d24a9afc802946fec387d16fa3efc5b70a1/src/core/service-configuration/phone-number.schema.ts#L263)
 
 Zod schema for phone number purchase transaction.
 
@@ -20,13 +20,12 @@ Represents a phone number purchase request and its lifecycle through the purchas
 
 ```typescript
 const purchase: PhoneNumberPurchase = {
-  id: 'purchase-123',
+  id: '32422DEGER56',
   friendlyName: 'Main Support Line',
   phoneNumber: '+12125551234',
   providerType: ProviderType.TWILIO,
   amount: 1.00,
   currency: 'USD',
-  phoneNumberInfo: { ... },
   status: PhonePurchaseStatus.COMPLETED,
   numberType: PhoneNumberType.LOCAL,
   completedAt: Date.now(),

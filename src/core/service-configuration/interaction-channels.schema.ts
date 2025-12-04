@@ -50,11 +50,10 @@ export const PhoneChannelConfigSchema = z.object({
  */
 export const WebChannelConfigSchema = z.object({
     communicationType: z.enum(OttCommunicationType).default(OttCommunicationType.UNIFIED).describe("Type of over-the-top (OTT) communication protocol used for the web channel (default: UNIFIED for combined text/media communication)"),
-    customCssUrl: z.url().optional().nullable().default(null).describe("Optional URL to a custom CSS stylesheet for styling the chat widget to match brand guidelines and website design"),
     widgetConfiguration: z.object({
         position: z.enum(['left', 'right']).default('right').describe("Position of the chat widget on the webpage (left or right side of the screen)"),
-        theme: z.enum(['light', 'dark', 'custom']).default('light').describe("Visual theme for the chat widget (light, dark, or custom theme using customTheme settings)"),
-        customTheme: z.record(z.string(), z.string()).optional().default({}).describe("Custom theme properties as key-value pairs for advanced widget styling (e.g., primary color, font family, border radius)"),
+        theme: z.enum(['light', 'dark', 'custom']).default('custom').describe("Visual theme for the chat widget (light, dark, or custom theme using customTheme settings)"),
+        customTheme: z.record(z.string(), z.string()).optional().default({}).describe("Custom theme properties as key-value pairs for advanced widget styling (e.g., primary color)"),
     }).optional().describe("Configuration settings for the chat widget appearance and behavior"),
 });
 
