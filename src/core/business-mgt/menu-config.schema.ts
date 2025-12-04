@@ -11,7 +11,6 @@ export const MenuCategorySchema = BaseModelSchema.safeExtend({
     name: z.string().min(1, "Category name is required").describe("Category name for menu organization (e.g., Appetizers, Main Course, Desserts). Used by AI Powered Services when presenting menu options to customers."),
     description: z.string().optional().describe("Category description providing context about the type of items included. Helps customers navigate the menu."),
     displayOrder: z.number().int().optional().describe("Numeric order for category display in menu listings. Lower numbers appear first. Enables custom menu organization."),
-    isDefault: z.boolean().default(false).describe("Whether this is the default category for uncategorized menu items. Only one category should be default. Defaults to false."),
 });
 
 export const BusinessMenuItemSchema = BaseModelSchema.safeExtend({
@@ -59,6 +58,7 @@ export const CreateMenuCategorySchema = MenuCategorySchema.omit({
     id: true,
     createdAt: true,
     updatedAt: true,
+    isDefault: true,
 });
 
 
@@ -75,7 +75,6 @@ export const CreateBusinessMenuItemSchema = BusinessMenuItemSchema.omit({
     categoryId: true,
 }).safeExtend({
     categoryId: z.string().nullable().optional(),
-    category: z.string().nullable().optional(),
 });
 
 /**

@@ -18,12 +18,12 @@ import { BaseModelSchema } from "../base.schema";
  * @property {boolean} isBookable - Whether this service can be booked online
  * @property {number} [price] - Service price in account currency
  * @property {boolean} isActive - Whether the service is currently available
- * @property {number} [displayOrder] - Display order in service listings
+
  */
 export const BusinessServiceConfigSchema = BaseModelSchema.safeExtend({
     id: z.string().describe("Unique identifier for this business service in the catalog managed by Appointment Management."),
     name: z.string().min(1, "Service name is required").describe("Display name of the service offered (e.g., 'Haircut', 'Massage', 'Consultation'). Used by AI Powered Services when presenting booking options to customers."),
-    description: z.string().optional().describe("Detailed description of the service including what's included, benefits, or special instructions. Helps customers understand the service before booking via Service Appointment workflow."),
+    description: z.string().describe("Detailed description of the service including what's included, benefits, or special instructions. Helps customers understand the service before booking via Service Appointment workflow."),
 
     // Scheduling & Duration
     duration: z.number().int().positive().max(480).default(60).describe("Service duration in minutes with maximum of 480 minutes (8 hours). Used by AI Powered Services to calculate appointment end times and availability slots. Defaults to 60 minutes."),
@@ -32,10 +32,9 @@ export const BusinessServiceConfigSchema = BaseModelSchema.safeExtend({
 
     // Pricing
     price: z.number().nonnegative().default(0).optional().describe("Service price in the account's currency. Used for Service Appointment pricing and customer quotes during AI conversations. Defaults to 0 for complimentary services."),
-
     // Business Management
     isActive: z.boolean().default(true).describe("Whether the service is currently active and available for booking. Inactive services are hidden from customers and AI Powered Services. Defaults to true."),
-    displayOrder: z.number().int().optional().describe("Display order in service listings and booking interfaces. Lower numbers appear first. Enables strategic service positioning and featured service placement."),
+
 });
 
 /**

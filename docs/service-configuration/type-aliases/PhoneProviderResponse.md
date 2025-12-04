@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.15**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.16**](../../README.md)
 
 ***
 
@@ -15,7 +15,7 @@ type PhoneProviderResponse = {
 };
 ```
 
-Defined in: [src/core/service-configuration/phone-number.schema.ts:224](https://github.com/wiil-io/core-js/blob/bd9dddcff0645fc8d739d0cb70526e8dfb698e4c/src/core/service-configuration/phone-number.schema.ts#L224)
+Defined in: [src/core/service-configuration/phone-number.schema.ts:224](https://github.com/wiil-io/core-js/blob/4af96f1b4cda300f688910b998d30dd9a1d9a3f0/src/core/service-configuration/phone-number.schema.ts#L224)
 
 Type definition for phone provider response.
 
@@ -23,7 +23,7 @@ Type definition for phone provider response.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="providertype"></a> `providerType` | [`ProviderType`](../../type-definitions/enumerations/ProviderType.md) | [src/core/service-configuration/phone-number.schema.ts:215](https://github.com/wiil-io/core-js/blob/bd9dddcff0645fc8d739d0cb70526e8dfb698e4c/src/core/service-configuration/phone-number.schema.ts#L215) |
-| <a id="success"></a> `success` | `boolean` | [src/core/service-configuration/phone-number.schema.ts:216](https://github.com/wiil-io/core-js/blob/bd9dddcff0645fc8d739d0cb70526e8dfb698e4c/src/core/service-configuration/phone-number.schema.ts#L216) |
-| <a id="status"></a> `status?` | `number` | [src/core/service-configuration/phone-number.schema.ts:217](https://github.com/wiil-io/core-js/blob/bd9dddcff0645fc8d739d0cb70526e8dfb698e4c/src/core/service-configuration/phone-number.schema.ts#L217) |
-| <a id="data"></a> `data` | `unknown` | [src/core/service-configuration/phone-number.schema.ts:218](https://github.com/wiil-io/core-js/blob/bd9dddcff0645fc8d739d0cb70526e8dfb698e4c/src/core/service-configuration/phone-number.schema.ts#L218) |
+| <a id="providertype"></a> `providerType` | [`ProviderType`](../../type-definitions/enumerations/ProviderType.md) | [src/core/service-configuration/phone-number.schema.ts:215](https://github.com/wiil-io/core-js/blob/4af96f1b4cda300f688910b998d30dd9a1d9a3f0/src/core/service-configuration/phone-number.schema.ts#L215) |
+| <a id="success"></a> `success` | `boolean` | [src/core/service-configuration/phone-number.schema.ts:216](https://github.com/wiil-io/core-js/blob/4af96f1b4cda300f688910b998d30dd9a1d9a3f0/src/core/service-configuration/phone-number.schema.ts#L216) |
+| <a id="status"></a> `status?` | `number` | [src/core/service-configuration/phone-number.schema.ts:217](https://github.com/wiil-io/core-js/blob/4af96f1b4cda300f688910b998d30dd9a1d9a3f0/src/core/service-configuration/phone-number.schema.ts#L217) |
+| <a id="data"></a> `data` | `unknown` | [src/core/service-configuration/phone-number.schema.ts:218](https://github.com/wiil-io/core-js/blob/4af96f1b4cda300f688910b998d30dd9a1d9a3f0/src/core/service-configuration/phone-number.schema.ts#L218) |
