@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.22**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.23**](../../README.md)
 
 ***
 
@@ -6,17 +6,17 @@
 
 # Enumeration: OrderStatus
 
-Defined in: [src/core/type-definitions/business-definitions.ts:62](https://github.com/wiil-io/core-js/blob/4947d77308cc66f116ab368d918afdf6353c6b41/src/core/type-definitions/business-definitions.ts#L62)
+Defined in: [src/core/type-definitions/business-definitions.ts:62](https://github.com/wiil-io/core-js/blob/044239c5d611706e3f02f4e9da1fbba71c1dc74e/src/core/type-definitions/business-definitions.ts#L62)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="pending"></a> `PENDING` | `"pending"` | [src/core/type-definitions/business-definitions.ts:63](https://github.com/wiil-io/core-js/blob/4947d77308cc66f116ab368d918afdf6353c6b41/src/core/type-definitions/business-definitions.ts#L63) |
-| <a id="confirmed"></a> `CONFIRMED` | `"confirmed"` | [src/core/type-definitions/business-definitions.ts:64](https://github.com/wiil-io/core-js/blob/4947d77308cc66f116ab368d918afdf6353c6b41/src/core/type-definitions/business-definitions.ts#L64) |
-| <a id="preparing"></a> `PREPARING` | `"preparing"` | [src/core/type-definitions/business-definitions.ts:65](https://github.com/wiil-io/core-js/blob/4947d77308cc66f116ab368d918afdf6353c6b41/src/core/type-definitions/business-definitions.ts#L65) |
-| <a id="ready"></a> `READY` | `"ready"` | [src/core/type-definitions/business-definitions.ts:66](https://github.com/wiil-io/core-js/blob/4947d77308cc66f116ab368d918afdf6353c6b41/src/core/type-definitions/business-definitions.ts#L66) |
-| <a id="out_for_delivery"></a> `OUT_FOR_DELIVERY` | `"out_for_delivery"` | [src/core/type-definitions/business-definitions.ts:67](https://github.com/wiil-io/core-js/blob/4947d77308cc66f116ab368d918afdf6353c6b41/src/core/type-definitions/business-definitions.ts#L67) |
-| <a id="completed"></a> `COMPLETED` | `"completed"` | [src/core/type-definitions/business-definitions.ts:68](https://github.com/wiil-io/core-js/blob/4947d77308cc66f116ab368d918afdf6353c6b41/src/core/type-definitions/business-definitions.ts#L68) |
-| <a id="cancelled"></a> `CANCELLED` | `"cancelled"` | [src/core/type-definitions/business-definitions.ts:69](https://github.com/wiil-io/core-js/blob/4947d77308cc66f116ab368d918afdf6353c6b41/src/core/type-definitions/business-definitions.ts#L69) |
-| <a id="returned"></a> `RETURNED` | `"returned"` | [src/core/type-definitions/business-definitions.ts:70](https://github.com/wiil-io/core-js/blob/4947d77308cc66f116ab368d918afdf6353c6b41/src/core/type-definitions/business-definitions.ts#L70) |
+| <a id="pending"></a> `PENDING` | `"pending"` | [src/core/type-definitions/business-definitions.ts:63](https://github.com/wiil-io/core-js/blob/044239c5d611706e3f02f4e9da1fbba71c1dc74e/src/core/type-definitions/business-definitions.ts#L63) |
+| <a id="confirmed"></a> `CONFIRMED` | `"confirmed"` | [src/core/type-definitions/business-definitions.ts:64](https://github.com/wiil-io/core-js/blob/044239c5d611706e3f02f4e9da1fbba71c1dc74e/src/core/type-definitions/business-definitions.ts#L64) |
+| <a id="preparing"></a> `PREPARING` | `"preparing"` | [src/core/type-definitions/business-definitions.ts:65](https://github.com/wiil-io/core-js/blob/044239c5d611706e3f02f4e9da1fbba71c1dc74e/src/core/type-definitions/business-definitions.ts#L65) |
+| <a id="ready"></a> `READY` | `"ready"` | [src/core/type-definitions/business-definitions.ts:66](https://github.com/wiil-io/core-js/blob/044239c5d611706e3f02f4e9da1fbba71c1dc74e/src/core/type-definitions/business-definitions.ts#L66) |
+| <a id="out_for_delivery"></a> `OUT_FOR_DELIVERY` | `"out_for_delivery"` | [src/core/type-definitions/business-definitions.ts:67](https://github.com/wiil-io/core-js/blob/044239c5d611706e3f02f4e9da1fbba71c1dc74e/src/core/type-definitions/business-definitions.ts#L67) |
+| <a id="completed"></a> `COMPLETED` | `"completed"` | [src/core/type-definitions/business-definitions.ts:68](https://github.com/wiil-io/core-js/blob/044239c5d611706e3f02f4e9da1fbba71c1dc74e/src/core/type-definitions/business-definitions.ts#L68) |
+| <a id="cancelled"></a> `CANCELLED` | `"cancelled"` | [src/core/type-definitions/business-definitions.ts:69](https://github.com/wiil-io/core-js/blob/044239c5d611706e3f02f4e9da1fbba71c1dc74e/src/core/type-definitions/business-definitions.ts#L69) |
+| <a id="returned"></a> `RETURNED` | `"returned"` | [src/core/type-definitions/business-definitions.ts:70](https://github.com/wiil-io/core-js/blob/044239c5d611706e3f02f4e9da1fbba71c1dc74e/src/core/type-definitions/business-definitions.ts#L70) |

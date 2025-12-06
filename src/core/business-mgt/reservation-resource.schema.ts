@@ -109,4 +109,4 @@ export const UpdateResourceSchema = CreateResourceSchema.partial().safeExtend({
 
 export type Resource = z.infer<typeof ResourceSchema>;
 export type CreateResource = z.infer<typeof CreateResourceSchema>;
-export type UpdateResource
+export type UpdateResource = z.infer<typeof UpdateResourceSchema>;
