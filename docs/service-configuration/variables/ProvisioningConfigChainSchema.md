@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.21**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.22**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const ProvisioningConfigChainSchema: ZodObject<ProvisioningConfigChain>;
 ```
 
-Defined in: [src/core/service-configuration/provisioning-config.ts:139](https://github.com/wiil-io/core-js/blob/f3384956e14bafdd1347e2d2649f1299435f6e02/src/core/service-configuration/provisioning-config.ts#L139)
+Defined in: [src/core/service-configuration/provisioning-config.ts:139](https://github.com/wiil-io/core-js/blob/4947d77308cc66f116ab368d918afdf6353c6b41/src/core/service-configuration/provisioning-config.ts#L139)
 
 Zod schema for provisioning configuration chain.
 

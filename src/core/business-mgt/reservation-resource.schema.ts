@@ -95,6 +95,7 @@ export const CreateResourceSchema = ResourceSchema.omit({
     createdAt: true,
     updatedAt: true,
     lastSyncAt: true,
+    syncEnabled: true,
 });
 
 /**
@@ -103,8 +104,9 @@ export const CreateResourceSchema = ResourceSchema.omit({
  */
 export const UpdateResourceSchema = CreateResourceSchema.partial().safeExtend({
     id: z.string(),
+    syncEnabled: z.boolean().optional(),
 });
 
 export type Resource = z.infer<typeof ResourceSchema>;
 export type CreateResource = z.infer<typeof CreateResourceSchema>;
-export type UpdateResource = z.infer<typeof UpdateResourceSchema>;
+export type UpdateResource
