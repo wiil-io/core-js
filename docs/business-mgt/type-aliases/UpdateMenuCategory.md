@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.23**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.24**](../../README.md)
 
 ***
 
@@ -15,7 +15,7 @@ type UpdateMenuCategory = {
 };
 ```
 
-Defined in: [src/core/business-mgt/menu-config.schema.ts:125](https://github.com/wiil-io/core-js/blob/044239c5d611706e3f02f4e9da1fbba71c1dc74e/src/core/business-mgt/menu-config.schema.ts#L125)
+Defined in: [src/core/business-mgt/menu-config.schema.ts:125](https://github.com/wiil-io/core-js/blob/1224c87015d28d600db311ffd86ba504fdd5dc04/src/core/business-mgt/menu-config.schema.ts#L125)
 
 Type definition for updating a menu category.
 
@@ -23,7 +23,7 @@ Type definition for updating a menu category.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="name"></a> `name?` | `string` | [src/core/business-mgt/menu-config.schema.ts:11](https://github.com/wiil-io/core-js/blob/044239c5d611706e3f02f4e9da1fbba71c1dc74e/src/core/business-mgt/menu-config.schema.ts#L11) |
-| <a id="description"></a> `description?` | `string` | [src/core/business-mgt/menu-config.schema.ts:12](https://github.com/wiil-io/core-js/blob/044239c5d611706e3f02f4e9da1fbba71c1dc74e/src/core/business-mgt/menu-config.schema.ts#L12) |
-| <a id="displayorder"></a> `displayOrder?` | `number` | [src/core/business-mgt/menu-config.schema.ts:13](https://github.com/wiil-io/core-js/blob/044239c5d611706e3f02f4e9da1fbba71c1dc74e/src/core/business-mgt/menu-config.schema.ts#L13) |
-| <a id="id"></a> `id` | `string` | [src/core/business-mgt/menu-config.schema.ts:85](https://github.com/wiil-io/core-js/blob/044239c5d611706e3f02f4e9da1fbba71c1dc74e/src/core/business-mgt/menu-config.schema.ts#L85) |
+| <a id="name"></a> `name?` | `string` | [src/core/business-mgt/menu-config.schema.ts:11](https://github.com/wiil-io/core-js/blob/1224c87015d28d600db311ffd86ba504fdd5dc04/src/core/business-mgt/menu-config.schema.ts#L11) |
+| <a id="description"></a> `description?` | `string` | [src/core/business-mgt/menu-config.schema.ts:12](https://github.com/wiil-io/core-js/blob/1224c87015d28d600db311ffd86ba504fdd5dc04/src/core/business-mgt/menu-config.schema.ts#L12) |
+| <a id="displayorder"></a> `displayOrder?` | `number` | [src/core/business-mgt/menu-config.schema.ts:13](https://github.com/wiil-io/core-js/blob/1224c87015d28d600db311ffd86ba504fdd5dc04/src/core/business-mgt/menu-config.schema.ts#L13) |
+| <a id="id"></a> `id` | `string` | [src/core/business-mgt/menu-config.schema.ts:85](https://github.com/wiil-io/core-js/blob/1224c87015d28d600db311ffd86ba504fdd5dc04/src/core/business-mgt/menu-config.schema.ts#L85) |
