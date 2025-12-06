@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.27**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.28**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const PhoneProviderRegionSchema: ZodObject<PhoneProviderRegion>;
 ```
 
-Defined in: [src/core/service-configuration/phone-number.schema.ts:45](https://github.com/wiil-io/core-js/blob/4a6a8849502ba7a59ffc90a6343c4d70c3487085/src/core/service-configuration/phone-number.schema.ts#L45)
+Defined in: [src/core/service-configuration/phone-number.schema.ts:45](https://github.com/wiil-io/core-js/blob/8997edaedd112c2beeab642bd1e540f1ccb7802d/src/core/service-configuration/phone-number.schema.ts#L45)
 
 Zod schema for phone provider region information.
 
@@ -30,7 +30,7 @@ searching available phone numbers by location.
 const region: PhoneProviderRegion = {
   regionId: 'us-west',
   regionName: 'US West',
-  countryCode: 'US',
+  isoCountry: 'US',
   countryName: 'United States',
   providerType: ProviderType.TWILIO
 };

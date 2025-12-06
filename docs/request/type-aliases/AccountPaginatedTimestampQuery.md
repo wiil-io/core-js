@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.27**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.28**](../../README.md)
 
 ***
 
@@ -15,7 +15,7 @@ type AccountPaginatedTimestampQuery = {
 };
 ```
 
-Defined in: [src/request/models/paginated-quest.schema.ts:36](https://github.com/wiil-io/core-js/blob/4a6a8849502ba7a59ffc90a6343c4d70c3487085/src/request/models/paginated-quest.schema.ts#L36)
+Defined in: [src/request/models/paginated-quest.schema.ts:36](https://github.com/wiil-io/core-js/blob/8997edaedd112c2beeab642bd1e540f1ccb7802d/src/request/models/paginated-quest.schema.ts#L36)
 
 Schema for paginated queries based on a specific timestamp.
 
@@ -23,7 +23,7 @@ Schema for paginated queries based on a specific timestamp.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="fromtimestamp"></a> `fromTimestamp` | `number` | [src/request/models/paginated-quest.schema.ts:16](https://github.com/wiil-io/core-js/blob/4a6a8849502ba7a59ffc90a6343c4d70c3487085/src/request/models/paginated-quest.schema.ts#L16) |
-| <a id="totimestamp"></a> `toTimestamp?` | `number` | [src/request/models/paginated-quest.schema.ts:17](https://github.com/wiil-io/core-js/blob/4a6a8849502ba7a59ffc90a6343c4d70c3487085/src/request/models/paginated-quest.schema.ts#L17) |
-| <a id="page"></a> `page` | `number` | [src/request/models/paginated-quest.schema.ts:32](https://github.com/wiil-io/core-js/blob/4a6a8849502ba7a59ffc90a6343c4d70c3487085/src/request/models/paginated-quest.schema.ts#L32) |
-| <a id="pagesize"></a> `pageSize` | `number` | [src/request/models/paginated-quest.schema.ts:33](https://github.com/wiil-io/core-js/blob/4a6a8849502ba7a59ffc90a6343c4d70c3487085/src/request/models/paginated-quest.schema.ts#L33) |
+| <a id="fromtimestamp"></a> `fromTimestamp` | `number` | [src/request/models/paginated-quest.schema.ts:16](https://github.com/wiil-io/core-js/blob/8997edaedd112c2beeab642bd1e540f1ccb7802d/src/request/models/paginated-quest.schema.ts#L16) |
+| <a id="totimestamp"></a> `toTimestamp?` | `number` | [src/request/models/paginated-quest.schema.ts:17](https://github.com/wiil-io/core-js/blob/8997edaedd112c2beeab642bd1e540f1ccb7802d/src/request/models/paginated-quest.schema.ts#L17) |
+| <a id="page"></a> `page` | `number` | [src/request/models/paginated-quest.schema.ts:32](https://github.com/wiil-io/core-js/blob/8997edaedd112c2beeab642bd1e540f1ccb7802d/src/request/models/paginated-quest.schema.ts#L32) |
+| <a id="pagesize"></a> `pageSize` | `number` | [src/request/models/paginated-quest.schema.ts:33](https://github.com/wiil-io/core-js/blob/8997edaedd112c2beeab642bd1e540f1ccb7802d/src/request/models/paginated-quest.schema.ts#L33) |

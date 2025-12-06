@@ -45,7 +45,7 @@ const phoneNumberPattern = /^\+[1-9]\d{1,14}$/;
  * @property {string | null} [regionId] - Region identifier where this number is registered (provider-specific)
  * @property {number | null} [monthlyPrice] - Monthly recurring cost for maintaining this phone number
  * @property {string | null} [regionOrCountryName] - Human-readable region or country name
- * @property {string} [countryCode] - ISO 3166-1 alpha-2 country code (e.g., 'US', 'GB', 'CA')
+ * @property {string} [isoCountry] - ISO 3166-1 alpha-2 country code (e.g., 'US', 'GB', 'CA')
  * @property {ProviderType} providerType - Telephony service provider (SIGNALWIRE, TWILIO, etc.) (default: SIGNALWIRE)
  * @property {boolean} isImported - Whether this number was imported from external system (default: false)
  * @property {PhoneStatus} status - Current operational status (PENDING, ACTIVE, INACTIVE, SUSPENDED, RELEASED) (default: INACTIVE)
@@ -71,7 +71,7 @@ const phoneNumberPattern = /^\+[1-9]\d{1,14}$/;
  *   regionId: 'us-ny',
  *   monthlyPrice: 1.00,
  *   regionOrCountryName: 'New York, United States',
- *   countryCode: 'US',
+ *   isoCountry: 'US',
  *   providerType: ProviderType.SIGNALWIRE,
  *   status: PhoneStatus.ACTIVE,
  *   isImported: false,
@@ -90,7 +90,7 @@ export const PhoneConfigurationSchema = BaseModelSchema.safeExtend({
     regionId: z.string().optional().nullable().describe("Region identifier where this phone number is registered (provider-specific, e.g., 'us-ny' for New York)"),
     monthlyPrice: z.number().optional().nullable().describe("Monthly recurring cost for maintaining this phone number in USD or provider currency"),
     regionOrCountryName: z.string().optional().nullable().describe("Human-readable name of the region or country where this number is registered (e.g., 'New York, United States', 'London, United Kingdom')"),
-    countryCode: z.string().optional().describe("ISO 3166-1 alpha-2 country code for this phone number (e.g., 'US', 'GB', 'CA', 'AU')"),
+    isoCountry: z.string().length(2).describe("ISO 3166-1 alpha-2 country code where the phone number is registered (e.g., 'US', 'GB', 'CA')"),
     providerType: z.enum(ProviderType).default(ProviderType.SIGNALWIRE).describe("Telephony service provider managing this phone number (SIGNALWIRE, TWILIO, VONAGE, etc.)"),
     isImported: z.boolean().default(false).describe("Flag indicating if this phone number was imported from an external system rather than purchased through the platform"),
     status: z.enum(PhoneStatus).default(PhoneStatus.INACTIVE).describe("Current operational status (PENDING: provisioning, ACTIVE: operational, INACTIVE: purchased but not activated, SUSPENDED: temporarily disabled, RELEASED: disconnected)"),

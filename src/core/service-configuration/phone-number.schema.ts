@@ -27,7 +27,7 @@ import { BaseModelSchema } from "../base.schema";
  * @typedef {Object} PhoneProviderRegionProperties
  * @property {string} regionId - Unique identifier for the region from provider (e.g., 'us-west', 'uk-london')
  * @property {string} regionName - Human-readable region name (e.g., 'US West', 'United Kingdom')
- * @property {string | null} [countryCode] - ISO 3166-1 alpha-2 country code (e.g., 'US', 'GB', 'CA')
+ * @property {string | null} [isoCountry] - ISO 3166-1 alpha-2 country code (e.g., 'US', 'GB', 'CA')
  * @property {string | null} [countryName] - Full country name (e.g., 'United States', 'United Kingdom')
  * @property {ProviderType} providerType - Telephony provider offering numbers in this region
  *
@@ -36,7 +36,7 @@ import { BaseModelSchema } from "../base.schema";
  * const region: PhoneProviderRegion = {
  *   regionId: 'us-west',
  *   regionName: 'US West',
- *   countryCode: 'US',
+ *   isoCountry: 'US',
  *   countryName: 'United States',
  *   providerType: ProviderType.TWILIO
  * };
@@ -45,7 +45,7 @@ import { BaseModelSchema } from "../base.schema";
 export const PhoneProviderRegionSchema = z.object({
     regionId: z.string().describe("Unique identifier for this geographic region from the provider's system (e.g., 'us-west', 'us-ny', 'uk-london')"),
     regionName: z.string().describe("Human-readable name for the geographic region (e.g., 'US West', 'New York', 'United Kingdom')"),
-    countryCode: z.string().optional().nullable().describe("ISO 3166-1 alpha-2 country code for this region (e.g., 'US', 'GB', 'CA', 'AU')"),
+    isoCountry: z.string().optional().nullable().describe("ISO 3166-1 alpha-2 country code for this region (e.g., 'US', 'GB', 'CA', 'AU')"),
     countryName: z.string().optional().nullable().describe("Full country name for user display (e.g., 'United States', 'United Kingdom', 'Canada')"),
     providerType: z.enum(ProviderType).describe("Telephony provider offering phone numbers in this region (SIGNALWIRE, TWILIO, VONAGE, etc.)")
 });
