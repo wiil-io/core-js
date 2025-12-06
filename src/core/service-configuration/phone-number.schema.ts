@@ -233,6 +233,7 @@ export type PhoneProviderResponse = z.infer<typeof PhoneProviderResponseSchema>;
  * @property {string} friendlyName - Human-readable name for the purchased number
  * @property {string} phoneNumber - The phone number being purchased
  * @property {ProviderType} providerType - Provider from which the number is being purchased
+ * @property {string} isoCountry - ISO country code for the phone number (e.g., 'US', 'GB', 'CA')
  * @property {number} amount - Purchase amount (must be positive)
  * @property {string} currency - Currency code (3 characters, default: "USD")
  * @property {PhonePurchaseStatus} status - Current status of the purchase (default: PENDING)
@@ -249,6 +250,7 @@ export type PhoneProviderResponse = z.infer<typeof PhoneProviderResponseSchema>;
  *   id: '32422DEGER56',
  *   friendlyName: 'Main Support Line',
  *   phoneNumber: '+12125551234',
+ *   isoCountry: 'US',
  *   providerType: ProviderType.TWILIO,
  *   amount: 1.00,
  *   currency: 'USD',
@@ -264,6 +266,7 @@ export const PhoneNumberPurchaseSchema = BaseModelSchema.safeExtend({
     friendlyName: z.string().describe("Human-readable name for the phone number being purchased (e.g., 'Customer Support Line', 'Sales Main Number')"),
     phoneNumber: z.string().describe("Phone number in E.164 international format being purchased (e.g., '+12125551234')"),
     providerType: z.enum(ProviderType).describe("Telephony provider from which the number is being purchased (SIGNALWIRE, TWILIO, etc.)"),
+    isoCountry: z.string().length(2).describe("ISO 3166-1 alpha-2 country code for the phone number (e.g., 'US', 'GB', 'CA')"),
     amount: z.number().positive().describe("Purchase price for this phone number (must be positive, typically $1-5 for local numbers)"),
     currency: z.string().length(3).default('USD').describe("ISO 4217 currency code for the purchase amount (e.g., 'USD', 'GBP', 'EUR')"),
     status: z.enum(PhonePurchaseStatus).default(PhonePurchaseStatus.PENDING).describe("Current status of the purchase transaction (PENDING, PROCESSING, COMPLETED, FAILED, CANCELLED)"),
@@ -291,6 +294,7 @@ export type PhoneNumberPurchase = z.infer<typeof PhoneNumberPurchaseSchema>;
  * const newPurchase: CreatePhoneNumberPurchase = {
  *   friendlyName: 'New Support Line',
  *   phoneNumber: '+12125551234',
+ *   isoCountry: 'US',
  *   providerType: ProviderType.TWILIO,
  *   phoneNumberInfo: { ... },
  *   numberType: PhoneNumberType.LOCAL

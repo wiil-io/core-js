@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.26**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.27**](../../README.md)
 
 ***
 
@@ -25,7 +25,7 @@ type UpdateReservationSettings = {
 };
 ```
 
-Defined in: [src/core/business-mgt/reservation.schema.ts:41](https://github.com/wiil-io/core-js/blob/c2ba6ebfdf7883e5e1c558fee2dddae7978a1043/src/core/business-mgt/reservation.schema.ts#L41)
+Defined in: [src/core/business-mgt/reservation.schema.ts:41](https://github.com/wiil-io/core-js/blob/4a6a8849502ba7a59ffc90a6343c4d70c3487085/src/core/business-mgt/reservation.schema.ts#L41)
 
 Schema for updating existing reservation settings.
 All fields are optional except id.
@@ -34,11 +34,11 @@ All fields are optional except id.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="createdat"></a> `createdAt?` | `number` | [src/core/base.schema.ts:9](https://github.com/wiil-io/core-js/blob/c2ba6ebfdf7883e5e1c558fee2dddae7978a1043/src/core/base.schema.ts#L9) |
-| <a id="updatedat"></a> `updatedAt?` | `number` | [src/core/base.schema.ts:10](https://github.com/wiil-io/core-js/blob/c2ba6ebfdf7883e5e1c558fee2dddae7978a1043/src/core/base.schema.ts#L10) |
-| <a id="reservationtype"></a> `reservationType?` | \| [`TABLE`](../../type-definitions/enumerations/ResourceType.md#table) \| [`ROOM`](../../type-definitions/enumerations/ResourceType.md#room) \| [`RENTALS`](../../type-definitions/enumerations/ResourceType.md#rentals) \| [`RESOURCE`](../../type-definitions/enumerations/ResourceType.md#resource) | [src/core/business-mgt/reservation.schema.ts:21](https://github.com/wiil-io/core-js/blob/c2ba6ebfdf7883e5e1c558fee2dddae7978a1043/src/core/business-mgt/reservation.schema.ts#L21) |
-| <a id="settingtype"></a> `settingType?` | \| [`CAPACITY`](../../type-definitions/enumerations/ReservationSettingType.md#capacity) \| [`RESOURCE_SPECIFIC`](../../type-definitions/enumerations/ReservationSettingType.md#resource_specific) | [src/core/business-mgt/reservation.schema.ts:22](https://github.com/wiil-io/core-js/blob/c2ba6ebfdf7883e5e1c558fee2dddae7978a1043/src/core/business-mgt/reservation.schema.ts#L22) |
-| <a id="defaultreservationduration"></a> `defaultReservationDuration?` | `number` | [src/core/business-mgt/reservation.schema.ts:24](https://github.com/wiil-io/core-js/blob/c2ba6ebfdf7883e5e1c558fee2dddae7978a1043/src/core/business-mgt/reservation.schema.ts#L24) |
-| <a id="defaultreservationdurationunit"></a> `defaultReservationDurationUnit?` | \| [`MINUTES`](../../type-definitions/enumerations/ResourceReservationDurationUnit.md#minutes) \| [`HOURS`](../../type-definitions/enumerations/ResourceReservationDurationUnit.md#hours) \| [`NIGHTS`](../../type-definitions/enumerations/ResourceReservationDurationUnit.md#nights) | [src/core/business-mgt/reservation.schema.ts:26](https://github.com/wiil-io/core-js/blob/c2ba6ebfdf7883e5e1c558fee2dddae7978a1043/src/core/business-mgt/reservation.schema.ts#L26) |
-| <a id="isactive"></a> `isActive?` | `boolean` | [src/core/business-mgt/reservation.schema.ts:28](https://github.com/wiil-io/core-js/blob/c2ba6ebfdf7883e5e1c558fee2dddae7978a1043/src/core/business-mgt/reservation.schema.ts#L28) |
-| <a id="id"></a> `id` | `string` | [src/core/business-mgt/reservation.schema.ts:37](https://github.com/wiil-io/core-js/blob/c2ba6ebfdf7883e5e1c558fee2dddae7978a1043/src/core/business-mgt/reservation.schema.ts#L37) |
+| <a id="createdat"></a> `createdAt?` | `number` | [src/core/base.schema.ts:9](https://github.com/wiil-io/core-js/blob/4a6a8849502ba7a59ffc90a6343c4d70c3487085/src/core/base.schema.ts#L9) |
+| <a id="updatedat"></a> `updatedAt?` | `number` | [src/core/base.schema.ts:10](https://github.com/wiil-io/core-js/blob/4a6a8849502ba7a59ffc90a6343c4d70c3487085/src/core/base.schema.ts#L10) |
+| <a id="reservationtype"></a> `reservationType?` | \| [`TABLE`](../../type-definitions/enumerations/ResourceType.md#table) \| [`ROOM`](../../type-definitions/enumerations/ResourceType.md#room) \| [`RENTALS`](../../type-definitions/enumerations/ResourceType.md#rentals) \| [`RESOURCE`](../../type-definitions/enumerations/ResourceType.md#resource) | [src/core/business-mgt/reservation.schema.ts:21](https://github.com/wiil-io/core-js/blob/4a6a8849502ba7a59ffc90a6343c4d70c3487085/src/core/business-mgt/reservation.schema.ts#L21) |
+| <a id="settingtype"></a> `settingType?` | \| [`CAPACITY`](../../type-definitions/enumerations/ReservationSettingType.md#capacity) \| [`RESOURCE_SPECIFIC`](../../type-definitions/enumerations/ReservationSettingType.md#resource_specific) | [src/core/business-mgt/reservation.schema.ts:22](https://github.com/wiil-io/core-js/blob/4a6a8849502ba7a59ffc90a6343c4d70c3487085/src/core/business-mgt/reservation.schema.ts#L22) |
+| <a id="defaultreservationduration"></a> `defaultReservationDuration?` | `number` | [src/core/business-mgt/reservation.schema.ts:24](https://github.com/wiil-io/core-js/blob/4a6a8849502ba7a59ffc90a6343c4d70c3487085/src/core/business-mgt/reservation.schema.ts#L24) |
+| <a id="defaultreservationdurationunit"></a> `defaultReservationDurationUnit?` | \| [`MINUTES`](../../type-definitions/enumerations/ResourceReservationDurationUnit.md#minutes) \| [`HOURS`](../../type-definitions/enumerations/ResourceReservationDurationUnit.md#hours) \| [`NIGHTS`](../../type-definitions/enumerations/ResourceReservationDurationUnit.md#nights) | [src/core/business-mgt/reservation.schema.ts:26](https://github.com/wiil-io/core-js/blob/4a6a8849502ba7a59ffc90a6343c4d70c3487085/src/core/business-mgt/reservation.schema.ts#L26) |
+| <a id="isactive"></a> `isActive?` | `boolean` | [src/core/business-mgt/reservation.schema.ts:28](https://github.com/wiil-io/core-js/blob/4a6a8849502ba7a59ffc90a6343c4d70c3487085/src/core/business-mgt/reservation.schema.ts#L28) |
+| <a id="id"></a> `id` | `string` | [src/core/business-mgt/reservation.schema.ts:37](https://github.com/wiil-io/core-js/blob/4a6a8849502ba7a59ffc90a6343c4d70c3487085/src/core/business-mgt/reservation.schema.ts#L37) |

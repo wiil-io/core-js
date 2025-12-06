@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.26**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.27**](../../README.md)
 
 ***
 
@@ -17,7 +17,7 @@ type PaginationMetaType = {
 };
 ```
 
-Defined in: [src/request/models/paginated-result.schema.ts:100](https://github.com/wiil-io/core-js/blob/c2ba6ebfdf7883e5e1c558fee2dddae7978a1043/src/request/models/paginated-result.schema.ts#L100)
+Defined in: [src/request/models/paginated-result.schema.ts:100](https://github.com/wiil-io/core-js/blob/4a6a8849502ba7a59ffc90a6343c4d70c3487085/src/request/models/paginated-result.schema.ts#L100)
 
 Pagination metadata schema.
 
@@ -25,9 +25,9 @@ Pagination metadata schema.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | [src/request/models/paginated-result.schema.ts:20](https://github.com/wiil-io/core-js/blob/c2ba6ebfdf7883e5e1c558fee2dddae7978a1043/src/request/models/paginated-result.schema.ts#L20) |
-| <a id="pagesize"></a> `pageSize` | `number` | [src/request/models/paginated-result.schema.ts:21](https://github.com/wiil-io/core-js/blob/c2ba6ebfdf7883e5e1c558fee2dddae7978a1043/src/request/models/paginated-result.schema.ts#L21) |
-| <a id="totalcount"></a> `totalCount` | `number` | [src/request/models/paginated-result.schema.ts:22](https://github.com/wiil-io/core-js/blob/c2ba6ebfdf7883e5e1c558fee2dddae7978a1043/src/request/models/paginated-result.schema.ts#L22) |
-| <a id="totalpages"></a> `totalPages` | `number` | [src/request/models/paginated-result.schema.ts:23](https://github.com/wiil-io/core-js/blob/c2ba6ebfdf7883e5e1c558fee2dddae7978a1043/src/request/models/paginated-result.schema.ts#L23) |
-| <a id="hasnextpage"></a> `hasNextPage` | `boolean` | [src/request/models/paginated-result.schema.ts:24](https://github.com/wiil-io/core-js/blob/c2ba6ebfdf7883e5e1c558fee2dddae7978a1043/src/request/models/paginated-result.schema.ts#L24) |
-| <a id="haspreviouspage"></a> `hasPreviousPage` | `boolean` | [src/request/models/paginated-result.schema.ts:25](https://github.com/wiil-io/core-js/blob/c2ba6ebfdf7883e5e1c558fee2dddae7978a1043/src/request/models/paginated-result.schema.ts#L25) |
+| <a id="page"></a> `page` | `number` | [src/request/models/paginated-result.schema.ts:20](https://github.com/wiil-io/core-js/blob/4a6a8849502ba7a59ffc90a6343c4d70c3487085/src/request/models/paginated-result.schema.ts#L20) |
+| <a id="pagesize"></a> `pageSize` | `number` | [src/request/models/paginated-result.schema.ts:21](https://github.com/wiil-io/core-js/blob/4a6a8849502ba7a59ffc90a6343c4d70c3487085/src/request/models/paginated-result.schema.ts#L21) |
+| <a id="totalcount"></a> `totalCount` | `number` | [src/request/models/paginated-result.schema.ts:22](https://github.com/wiil-io/core-js/blob/4a6a8849502ba7a59ffc90a6343c4d70c3487085/src/request/models/paginated-result.schema.ts#L22) |
+| <a id="totalpages"></a> `totalPages` | `number` | [src/request/models/paginated-result.schema.ts:23](https://github.com/wiil-io/core-js/blob/4a6a8849502ba7a59ffc90a6343c4d70c3487085/src/request/models/paginated-result.schema.ts#L23) |
+| <a id="hasnextpage"></a> `hasNextPage` | `boolean` | [src/request/models/paginated-result.schema.ts:24](https://github.com/wiil-io/core-js/blob/4a6a8849502ba7a59ffc90a6343c4d70c3487085/src/request/models/paginated-result.schema.ts#L24) |
+| <a id="haspreviouspage"></a> `hasPreviousPage` | `boolean` | [src/request/models/paginated-result.schema.ts:25](https://github.com/wiil-io/core-js/blob/4a6a8849502ba7a59ffc90a6343c4d70c3487085/src/request/models/paginated-result.schema.ts#L25) |
