@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.24**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.25**](../../README.md)
 
 ***
 
@@ -18,7 +18,7 @@ type OrderPricing = {
 };
 ```
 
-Defined in: [src/core/business-mgt/order.schema.ts:57](https://github.com/wiil-io/core-js/blob/1224c87015d28d600db311ffd86ba504fdd5dc04/src/core/business-mgt/order.schema.ts#L57)
+Defined in: [src/core/business-mgt/order.schema.ts:57](https://github.com/wiil-io/core-js/blob/93d5ff57756c5fd022c37560f2bcfed1d2d97dc5/src/core/business-mgt/order.schema.ts#L57)
 
 Shared pricing schema for orders.
 
@@ -26,10 +26,10 @@ Shared pricing schema for orders.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="subtotal"></a> `subtotal` | `number` | [src/core/business-mgt/order.schema.ts:47](https://github.com/wiil-io/core-js/blob/1224c87015d28d600db311ffd86ba504fdd5dc04/src/core/business-mgt/order.schema.ts#L47) |
-| <a id="tax"></a> `tax` | `number` | [src/core/business-mgt/order.schema.ts:48](https://github.com/wiil-io/core-js/blob/1224c87015d28d600db311ffd86ba504fdd5dc04/src/core/business-mgt/order.schema.ts#L48) |
-| <a id="tip"></a> `tip` | `number` | [src/core/business-mgt/order.schema.ts:49](https://github.com/wiil-io/core-js/blob/1224c87015d28d600db311ffd86ba504fdd5dc04/src/core/business-mgt/order.schema.ts#L49) |
-| <a id="shippingamount"></a> `shippingAmount` | `number` | [src/core/business-mgt/order.schema.ts:50](https://github.com/wiil-io/core-js/blob/1224c87015d28d600db311ffd86ba504fdd5dc04/src/core/business-mgt/order.schema.ts#L50) |
-| <a id="discount"></a> `discount` | `number` | [src/core/business-mgt/order.schema.ts:51](https://github.com/wiil-io/core-js/blob/1224c87015d28d600db311ffd86ba504fdd5dc04/src/core/business-mgt/order.schema.ts#L51) |
-| <a id="total"></a> `total` | `number` | [src/core/business-mgt/order.schema.ts:52](https://github.com/wiil-io/core-js/blob/1224c87015d28d600db311ffd86ba504fdd5dc04/src/core/business-mgt/order.schema.ts#L52) |
-| <a id="currency"></a> `currency` | `string` | [src/core/business-mgt/order.schema.ts:53](https://github.com/wiil-io/core-js/blob/1224c87015d28d600db311ffd86ba504fdd5dc04/src/core/business-mgt/order.schema.ts#L53) |
+| <a id="subtotal"></a> `subtotal` | `number` | [src/core/business-mgt/order.schema.ts:47](https://github.com/wiil-io/core-js/blob/93d5ff57756c5fd022c37560f2bcfed1d2d97dc5/src/core/business-mgt/order.schema.ts#L47) |
+| <a id="tax"></a> `tax` | `number` | [src/core/business-mgt/order.schema.ts:48](https://github.com/wiil-io/core-js/blob/93d5ff57756c5fd022c37560f2bcfed1d2d97dc5/src/core/business-mgt/order.schema.ts#L48) |
+| <a id="tip"></a> `tip` | `number` | [src/core/business-mgt/order.schema.ts:49](https://github.com/wiil-io/core-js/blob/93d5ff57756c5fd022c37560f2bcfed1d2d97dc5/src/core/business-mgt/order.schema.ts#L49) |
+| <a id="shippingamount"></a> `shippingAmount` | `number` | [src/core/business-mgt/order.schema.ts:50](https://github.com/wiil-io/core-js/blob/93d5ff57756c5fd022c37560f2bcfed1d2d97dc5/src/core/business-mgt/order.schema.ts#L50) |
+| <a id="discount"></a> `discount` | `number` | [src/core/business-mgt/order.schema.ts:51](https://github.com/wiil-io/core-js/blob/93d5ff57756c5fd022c37560f2bcfed1d2d97dc5/src/core/business-mgt/order.schema.ts#L51) |
+| <a id="total"></a> `total` | `number` | [src/core/business-mgt/order.schema.ts:52](https://github.com/wiil-io/core-js/blob/93d5ff57756c5fd022c37560f2bcfed1d2d97dc5/src/core/business-mgt/order.schema.ts#L52) |
+| <a id="currency"></a> `currency` | `string` | [src/core/business-mgt/order.schema.ts:53](https://github.com/wiil-io/core-js/blob/93d5ff57756c5fd022c37560f2bcfed1d2d97dc5/src/core/business-mgt/order.schema.ts#L53) |

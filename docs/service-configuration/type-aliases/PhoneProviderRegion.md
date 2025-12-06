@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.24**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.25**](../../README.md)
 
 ***
 
@@ -16,7 +16,7 @@ type PhoneProviderRegion = {
 };
 ```
 
-Defined in: [src/core/service-configuration/phone-number.schema.ts:56](https://github.com/wiil-io/core-js/blob/1224c87015d28d600db311ffd86ba504fdd5dc04/src/core/service-configuration/phone-number.schema.ts#L56)
+Defined in: [src/core/service-configuration/phone-number.schema.ts:56](https://github.com/wiil-io/core-js/blob/93d5ff57756c5fd022c37560f2bcfed1d2d97dc5/src/core/service-configuration/phone-number.schema.ts#L56)
 
 Type definition for phone provider region.
 
@@ -24,8 +24,8 @@ Type definition for phone provider region.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="regionid"></a> `regionId` | `string` | [src/core/service-configuration/phone-number.schema.ts:46](https://github.com/wiil-io/core-js/blob/1224c87015d28d600db311ffd86ba504fdd5dc04/src/core/service-configuration/phone-number.schema.ts#L46) |
-| <a id="regionname"></a> `regionName` | `string` | [src/core/service-configuration/phone-number.schema.ts:47](https://github.com/wiil-io/core-js/blob/1224c87015d28d600db311ffd86ba504fdd5dc04/src/core/service-configuration/phone-number.schema.ts#L47) |
-| <a id="countrycode"></a> `countryCode?` | `string` \| `null` | [src/core/service-configuration/phone-number.schema.ts:48](https://github.com/wiil-io/core-js/blob/1224c87015d28d600db311ffd86ba504fdd5dc04/src/core/service-configuration/phone-number.schema.ts#L48) |
-| <a id="countryname"></a> `countryName?` | `string` \| `null` | [src/core/service-configuration/phone-number.schema.ts:49](https://github.com/wiil-io/core-js/blob/1224c87015d28d600db311ffd86ba504fdd5dc04/src/core/service-configuration/phone-number.schema.ts#L49) |
-| <a id="providertype"></a> `providerType` | [`ProviderType`](../../type-definitions/enumerations/ProviderType.md) | [src/core/service-configuration/phone-number.schema.ts:50](https://github.com/wiil-io/core-js/blob/1224c87015d28d600db311ffd86ba504fdd5dc04/src/core/service-configuration/phone-number.schema.ts#L50) |
+| <a id="regionid"></a> `regionId` | `string` | [src/core/service-configuration/phone-number.schema.ts:46](https://github.com/wiil-io/core-js/blob/93d5ff57756c5fd022c37560f2bcfed1d2d97dc5/src/core/service-configuration/phone-number.schema.ts#L46) |
+| <a id="regionname"></a> `regionName` | `string` | [src/core/service-configuration/phone-number.schema.ts:47](https://github.com/wiil-io/core-js/blob/93d5ff57756c5fd022c37560f2bcfed1d2d97dc5/src/core/service-configuration/phone-number.schema.ts#L47) |
+| <a id="countrycode"></a> `countryCode?` | `string` \| `null` | [src/core/service-configuration/phone-number.schema.ts:48](https://github.com/wiil-io/core-js/blob/93d5ff57756c5fd022c37560f2bcfed1d2d97dc5/src/core/service-configuration/phone-number.schema.ts#L48) |
+| <a id="countryname"></a> `countryName?` | `string` \| `null` | [src/core/service-configuration/phone-number.schema.ts:49](https://github.com/wiil-io/core-js/blob/93d5ff57756c5fd022c37560f2bcfed1d2d97dc5/src/core/service-configuration/phone-number.schema.ts#L49) |
+| <a id="providertype"></a> `providerType` | [`ProviderType`](../../type-definitions/enumerations/ProviderType.md) | [src/core/service-configuration/phone-number.schema.ts:50](https://github.com/wiil-io/core-js/blob/93d5ff57756c5fd022c37560f2bcfed1d2d97dc5/src/core/service-configuration/phone-number.schema.ts#L50) |

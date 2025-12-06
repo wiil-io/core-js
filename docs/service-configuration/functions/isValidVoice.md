@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.24**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.25**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 function isValidVoice(voice): voice is { voiceId: string; name: string; description: string; gender: "neutral" | "male" | "female"; language?: string | null; isDefault: boolean };
 ```
 
-Defined in: [src/core/service-configuration/voice-language.schema.ts:189](https://github.com/wiil-io/core-js/blob/1224c87015d28d600db311ffd86ba504fdd5dc04/src/core/service-configuration/voice-language.schema.ts#L189)
+Defined in: [src/core/service-configuration/voice-language.schema.ts:189](https://github.com/wiil-io/core-js/blob/93d5ff57756c5fd022c37560f2bcfed1d2d97dc5/src/core/service-configuration/voice-language.schema.ts#L189)
 
 Type guard function to check if an object is a valid Voice.
 
