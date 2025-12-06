@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.25**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.26**](../../README.md)
 
 ***
 
@@ -6,13 +6,13 @@
 
 # Interface: ConversationQueryOptions
 
-Defined in: [src/core/conversation/conversation-config.schema.ts:308](https://github.com/wiil-io/core-js/blob/93d5ff57756c5fd022c37560f2bcfed1d2d97dc5/src/core/conversation/conversation-config.schema.ts#L308)
+Defined in: [src/core/conversation/conversation-config.schema.ts:308](https://github.com/wiil-io/core-js/blob/c2ba6ebfdf7883e5e1c558fee2dddae7978a1043/src/core/conversation/conversation-config.schema.ts#L308)
 
 ## Properties
 
 | Property | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | [src/core/conversation/conversation-config.schema.ts:309](https://github.com/wiil-io/core-js/blob/93d5ff57756c5fd022c37560f2bcfed1d2d97dc5/src/core/conversation/conversation-config.schema.ts#L309) |
-| <a id="pagesize"></a> `pageSize` | `number` | [src/core/conversation/conversation-config.schema.ts:310](https://github.com/wiil-io/core-js/blob/93d5ff57756c5fd022c37560f2bcfed1d2d97dc5/src/core/conversation/conversation-config.schema.ts#L310) |
-| <a id="filters"></a> `filters?` | [`ConversationFilters`](ConversationFilters.md) | [src/core/conversation/conversation-config.schema.ts:311](https://github.com/wiil-io/core-js/blob/93d5ff57756c5fd022c37560f2bcfed1d2d97dc5/src/core/conversation/conversation-config.schema.ts#L311) |
-| <a id="sorting"></a> `sorting?` | [`ConversationSorting`](ConversationSorting.md) | [src/core/conversation/conversation-config.schema.ts:312](https://github.com/wiil-io/core-js/blob/93d5ff57756c5fd022c37560f2bcfed1d2d97dc5/src/core/conversation/conversation-config.schema.ts#L312) |
+| <a id="page"></a> `page` | `number` | [src/core/conversation/conversation-config.schema.ts:309](https://github.com/wiil-io/core-js/blob/c2ba6ebfdf7883e5e1c558fee2dddae7978a1043/src/core/conversation/conversation-config.schema.ts#L309) |
+| <a id="pagesize"></a> `pageSize` | `number` | [src/core/conversation/conversation-config.schema.ts:310](https://github.com/wiil-io/core-js/blob/c2ba6ebfdf7883e5e1c558fee2dddae7978a1043/src/core/conversation/conversation-config.schema.ts#L310) |
+| <a id="filters"></a> `filters?` | [`ConversationFilters`](ConversationFilters.md) | [src/core/conversation/conversation-config.schema.ts:311](https://github.com/wiil-io/core-js/blob/c2ba6ebfdf7883e5e1c558fee2dddae7978a1043/src/core/conversation/conversation-config.schema.ts#L311) |
+| <a id="sorting"></a> `sorting?` | [`ConversationSorting`](ConversationSorting.md) | [src/core/conversation/conversation-config.schema.ts:312](https://github.com/wiil-io/core-js/blob/c2ba6ebfdf7883e5e1c558fee2dddae7978a1043/src/core/conversation/conversation-config.schema.ts#L312) |
