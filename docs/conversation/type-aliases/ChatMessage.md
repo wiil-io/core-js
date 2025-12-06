@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.28**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.29**](../../README.md)
 
 ***
 
@@ -14,4 +14,4 @@ type ChatMessage =
   | AssistantEmailMessage;
 ```
 
-Defined in: [src/core/conversation/conversation-message.schema.ts:171](https://github.com/wiil-io/core-js/blob/8997edaedd112c2beeab642bd1e540f1ccb7802d/src/core/conversation/conversation-message.schema.ts#L171)
+Defined in: [src/core/conversation/conversation-message.schema.ts:171](https://github.com/wiil-io/core-js/blob/84bc94da37a7c071ffcbbcc61f07f2596d6db417/src/core/conversation/conversation-message.schema.ts#L171)

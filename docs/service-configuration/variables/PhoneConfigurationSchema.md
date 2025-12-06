@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.28**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.29**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const PhoneConfigurationSchema: ZodObject<PhoneConfiguration>;
 ```
 
-Defined in: [src/core/service-configuration/phone-config.schema.ts:85](https://github.com/wiil-io/core-js/blob/8997edaedd112c2beeab642bd1e540f1ccb7802d/src/core/service-configuration/phone-config.schema.ts#L85)
+Defined in: [src/core/service-configuration/phone-config.schema.ts:85](https://github.com/wiil-io/core-js/blob/84bc94da37a7c071ffcbbcc61f07f2596d6db417/src/core/service-configuration/phone-config.schema.ts#L85)
 
 Zod schema for Phone Configuration validation.
 
@@ -45,7 +45,7 @@ const phoneConfig: PhoneConfiguration = {
   regionId: 'us-ny',
   monthlyPrice: 1.00,
   regionOrCountryName: 'New York, United States',
-  isoCountry: 'US',
+  countryCode: 'US',
   providerType: ProviderType.SIGNALWIRE,
   status: PhoneStatus.ACTIVE,
   isImported: false,

@@ -27,7 +27,7 @@ import { BaseModelSchema } from "../base.schema";
  * @typedef {Object} PhoneProviderRegionProperties
  * @property {string} regionId - Unique identifier for the region from provider (e.g., 'us-west', 'uk-london')
  * @property {string} regionName - Human-readable region name (e.g., 'US West', 'United Kingdom')
- * @property {string | null} [isoCountry] - ISO 3166-1 alpha-2 country code (e.g., 'US', 'GB', 'CA')
+ * @property {string | null} [countryCode] - ISO 3166-1 alpha-2 country code (e.g., 'US', 'GB', 'CA')
  * @property {string | null} [countryName] - Full country name (e.g., 'United States', 'United Kingdom')
  * @property {ProviderType} providerType - Telephony provider offering numbers in this region
  *
@@ -36,7 +36,7 @@ import { BaseModelSchema } from "../base.schema";
  * const region: PhoneProviderRegion = {
  *   regionId: 'us-west',
  *   regionName: 'US West',
- *   isoCountry: 'US',
+ *   countryCode: 'US',
  *   countryName: 'United States',
  *   providerType: ProviderType.TWILIO
  * };
@@ -45,7 +45,7 @@ import { BaseModelSchema } from "../base.schema";
 export const PhoneProviderRegionSchema = z.object({
     regionId: z.string().describe("Unique identifier for this geographic region from the provider's system (e.g., 'us-west', 'us-ny', 'uk-london')"),
     regionName: z.string().describe("Human-readable name for the geographic region (e.g., 'US West', 'New York', 'United Kingdom')"),
-    isoCountry: z.string().optional().nullable().describe("ISO 3166-1 alpha-2 country code for this region (e.g., 'US', 'GB', 'CA', 'AU')"),
+    countryCode: z.string().optional().nullable().describe("ISO 3166-1 alpha-2 country code for this region (e.g., 'US', 'GB', 'CA', 'AU')"),
     countryName: z.string().optional().nullable().describe("Full country name for user display (e.g., 'United States', 'United Kingdom', 'Canada')"),
     providerType: z.enum(ProviderType).describe("Telephony provider offering phone numbers in this region (SIGNALWIRE, TWILIO, VONAGE, etc.)")
 });
@@ -67,7 +67,7 @@ export type PhoneProviderRegion = z.infer<typeof PhoneProviderRegionSchema>;
  * @property {string} [rateCenter] - Rate center for the phone number
  * @property {string} [region] - Geographic region
  * @property {string} [postalCode] - Postal/ZIP code for the phone number
- * @property {string} isoCountry - ISO country code
+ * @property {string} countryCode - ISO country code
  * @property {Object} capabilities - Phone number capabilities
  * @property {boolean} capabilities.voice - Supports voice calls
  * @property {boolean} capabilities.SMS - Supports SMS messaging
@@ -80,7 +80,7 @@ export type PhoneProviderRegion = z.infer<typeof PhoneProviderRegionSchema>;
  * const phoneInfo: BasePhoneNumberInfo = {
  *   friendlyName: 'Customer Support Line',
  *   phoneNumber: '+12125551234',
- *   isoCountry: 'US',
+ *   countryCode: 'US',
  *   capabilities: { voice: true, SMS: true, MMS: false },
  *   beta: false,
  *   numberType: PhoneNumberType.LOCAL
@@ -94,7 +94,7 @@ export const BasePhoneNumberInfoSchema = z.object({
     rateCenter: z.string().optional().describe("Rate center name for billing and routing purposes (North American telephony concept)"),
     region: z.string().optional().describe("State or province code where the number is registered (e.g., 'NY', 'CA', 'ON')"),
     postalCode: z.string().optional().describe("Postal or ZIP code associated with this phone number's geographic location"),
-    isoCountry: z.string().describe("ISO 3166-1 alpha-2 country code for this phone number (e.g., 'US', 'GB', 'CA')"),
+    countryCode: z.string().describe("ISO 3166-1 alpha-2 country code for this phone number (e.g., 'US', 'GB', 'CA')"),
     capabilities: z.object({
         voice: z.boolean().describe("Whether this phone number supports voice calls (inbound/outbound telephony)"),
         SMS: z.boolean().describe("Whether this phone number supports SMS text messaging"),
@@ -119,7 +119,7 @@ export type BasePhoneNumberInfo = z.infer<typeof BasePhoneNumberInfoSchema>;
  * const swPhone: SWPhoneNumberInfo = {
  *   friendlyName: 'SW Support Line',
  *   phoneNumber: '+12125551234',
- *   isoCountry: 'US',
+ *   countryCode: 'US',
  *   capabilities: { voice: true, SMS: true, MMS: false },
  *   beta: false,
  *   numberType: PhoneNumberType.LOCAL,
@@ -150,7 +150,7 @@ export type SWPhoneNumberInfo = z.infer<typeof swPhoneNumberInfoSchema>;
  * const twilioPhone: TwilioPhoneNumberInfo = {
  *   friendlyName: 'Twilio Support Line',
  *   phoneNumber: '+12125551234',
- *   isoCountry: 'US',
+ *   countryCode: 'US',
  *   capabilities: { voice: true, SMS: true, MMS: true },
  *   beta: false,
  *   numberType: PhoneNumberType.LOCAL,
@@ -233,7 +233,7 @@ export type PhoneProviderResponse = z.infer<typeof PhoneProviderResponseSchema>;
  * @property {string} friendlyName - Human-readable name for the purchased number
  * @property {string} phoneNumber - The phone number being purchased
  * @property {ProviderType} providerType - Provider from which the number is being purchased
- * @property {string} isoCountry - ISO country code for the phone number (e.g., 'US', 'GB', 'CA')
+ * @property {string} countryCode - ISO country code for the phone number (e.g., 'US', 'GB', 'CA')
  * @property {number} amount - Purchase amount (must be positive)
  * @property {string} currency - Currency code (3 characters, default: "USD")
  * @property {PhonePurchaseStatus} status - Current status of the purchase (default: PENDING)
@@ -250,7 +250,7 @@ export type PhoneProviderResponse = z.infer<typeof PhoneProviderResponseSchema>;
  *   id: '32422DEGER56',
  *   friendlyName: 'Main Support Line',
  *   phoneNumber: '+12125551234',
- *   isoCountry: 'US',
+ *   countryCode: 'US',
  *   providerType: ProviderType.TWILIO,
  *   amount: 1.00,
  *   currency: 'USD',
@@ -266,7 +266,7 @@ export const PhoneNumberPurchaseSchema = BaseModelSchema.safeExtend({
     friendlyName: z.string().describe("Human-readable name for the phone number being purchased (e.g., 'Customer Support Line', 'Sales Main Number')"),
     phoneNumber: z.string().describe("Phone number in E.164 international format being purchased (e.g., '+12125551234')"),
     providerType: z.enum(ProviderType).describe("Telephony provider from which the number is being purchased (SIGNALWIRE, TWILIO, etc.)"),
-    isoCountry: z.string().length(2).describe("ISO 3166-1 alpha-2 country code for the phone number (e.g., 'US', 'GB', 'CA')"),
+    countryCode: z.string().length(2).describe("ISO 3166-1 alpha-2 country code for the phone number (e.g., 'US', 'GB', 'CA')"),
     amount: z.number().positive().describe("Purchase price for this phone number (must be positive, typically $1-5 for local numbers)"),
     currency: z.string().length(3).default('USD').describe("ISO 4217 currency code for the purchase amount (e.g., 'USD', 'GBP', 'EUR')"),
     status: z.enum(PhonePurchaseStatus).default(PhonePurchaseStatus.PENDING).describe("Current status of the purchase transaction (PENDING, PROCESSING, COMPLETED, FAILED, CANCELLED)"),
@@ -294,7 +294,7 @@ export type PhoneNumberPurchase = z.infer<typeof PhoneNumberPurchaseSchema>;
  * const newPurchase: CreatePhoneNumberPurchase = {
  *   friendlyName: 'New Support Line',
  *   phoneNumber: '+12125551234',
- *   isoCountry: 'US',
+ *   countryCode: 'US',
  *   providerType: ProviderType.TWILIO,
  *   phoneNumberInfo: { ... },
  *   numberType: PhoneNumberType.LOCAL
@@ -339,7 +339,7 @@ export type PhoneNumberPurchaseRequest = CreatePhoneNumberPurchase;
  * @typedef {Object} PhoneNumberPricingProperties
  * @property {PhoneNumberType} number_type - Type of phone number
  * @property {string} country - Full country name
- * @property {string} isoCountry - ISO country code
+ * @property {string} countryCode - ISO country code
  * @property {Array} phoneNumberPrices - Array of pricing tiers
  * @property {number} price - Final price for the number
  * @property {string} priceUnit - Unit of pricing (e.g., "per month")
@@ -351,7 +351,7 @@ export type PhoneNumberPurchaseRequest = CreatePhoneNumberPurchase;
  * const pricing: PhoneNumberPricing = {
  *   number_type: PhoneNumberType.LOCAL,
  *   country: 'United States',
- *   isoCountry: 'US',
+ *   countryCode: 'US',
  *   phoneNumberPrices: [
  *     { base_price: '1.00', current_price: '1.00' }
  *   ],
@@ -365,7 +365,7 @@ export type PhoneNumberPurchaseRequest = CreatePhoneNumberPurchase;
 export const PhoneNumberPricingSchema = z.object({
     number_type: z.enum(PhoneNumberType),
     country: z.string(),
-    isoCountry: z.string(),
+    countryCode: z.string(),
     phoneNumberPrices: z.array(z.object({
         base_price: z.string(),
         current_price: z.string(),
