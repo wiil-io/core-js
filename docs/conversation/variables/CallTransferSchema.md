@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.30**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.31**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const CallTransferSchema: ZodObject<CallTransfer>;
 ```
 
-Defined in: [src/core/conversation/conversation-config.schema.ts:222](https://github.com/wiil-io/core-js/blob/580be9840674fc43db47bcb0d7cde0e3f86e4124/src/core/conversation/conversation-config.schema.ts#L222)
+Defined in: [src/core/conversation/conversation-config.schema.ts:222](https://github.com/wiil-io/core-js/blob/9f0c461aad6086b1cfa24ec4d8430e9e0677b5c6/src/core/conversation/conversation-config.schema.ts#L222)
 
 Call transfer schema for tracking call transfer details in telephony conversations.
 

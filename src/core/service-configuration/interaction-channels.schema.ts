@@ -486,3 +486,10 @@ export const DeploymentChannelWithDeploymentSchema = z.object({
  */
 export type DeploymentChannelInfo = z.infer<typeof DeploymentChannelWithDeploymentSchema>;
 
+
+export const DeploymentChannelDeletionRequestSchema = z.object({
+    id: z.string().describe("Unique identifier of the deployment channel to delete"),
+    deletePhoneConfig: z.boolean().optional().default(true).describe("Whether to also delete associated phone configurations"),
+});
+
+export type DeploymentChannelDeletionRequest = z.infer<typeof DeploymentChannelDeletionRequestSchema>;

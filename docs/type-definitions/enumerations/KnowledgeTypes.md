@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.30**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.31**](../../README.md)
 
 ***
 
@@ -6,14 +6,14 @@
 
 # Enumeration: KnowledgeTypes
 
-Defined in: [src/core/type-definitions/knowledge-definitions.ts:8](https://github.com/wiil-io/core-js/blob/580be9840674fc43db47bcb0d7cde0e3f86e4124/src/core/type-definitions/knowledge-definitions.ts#L8)
+Defined in: [src/core/type-definitions/knowledge-definitions.ts:8](https://github.com/wiil-io/core-js/blob/9f0c461aad6086b1cfa24ec4d8430e9e0677b5c6/src/core/type-definitions/knowledge-definitions.ts#L8)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="document"></a> `DOCUMENT` | `"document"` | [src/core/type-definitions/knowledge-definitions.ts:9](https://github.com/wiil-io/core-js/blob/580be9840674fc43db47bcb0d7cde0e3f86e4124/src/core/type-definitions/knowledge-definitions.ts#L9) |
-| <a id="url"></a> `URL` | `"url"` | [src/core/type-definitions/knowledge-definitions.ts:10](https://github.com/wiil-io/core-js/blob/580be9840674fc43db47bcb0d7cde0e3f86e4124/src/core/type-definitions/knowledge-definitions.ts#L10) |
-| <a id="business_website"></a> `BUSINESS_WEBSITE` | `"business_website"` | [src/core/type-definitions/knowledge-definitions.ts:11](https://github.com/wiil-io/core-js/blob/580be9840674fc43db47bcb0d7cde0e3f86e4124/src/core/type-definitions/knowledge-definitions.ts#L11) |
-| <a id="corpus"></a> `CORPUS` | `"corpus"` | [src/core/type-definitions/knowledge-definitions.ts:12](https://github.com/wiil-io/core-js/blob/580be9840674fc43db47bcb0d7cde0e3f86e4124/src/core/type-definitions/knowledge-definitions.ts#L12) |
-| <a id="batch_document"></a> `BATCH_DOCUMENT` | `"batch_document"` | [src/core/type-definitions/knowledge-definitions.ts:13](https://github.com/wiil-io/core-js/blob/580be9840674fc43db47bcb0d7cde0e3f86e4124/src/core/type-definitions/knowledge-definitions.ts#L13) |
+| <a id="document"></a> `DOCUMENT` | `"document"` | [src/core/type-definitions/knowledge-definitions.ts:9](https://github.com/wiil-io/core-js/blob/9f0c461aad6086b1cfa24ec4d8430e9e0677b5c6/src/core/type-definitions/knowledge-definitions.ts#L9) |
+| <a id="url"></a> `URL` | `"url"` | [src/core/type-definitions/knowledge-definitions.ts:10](https://github.com/wiil-io/core-js/blob/9f0c461aad6086b1cfa24ec4d8430e9e0677b5c6/src/core/type-definitions/knowledge-definitions.ts#L10) |
+| <a id="business_website"></a> `BUSINESS_WEBSITE` | `"business_website"` | [src/core/type-definitions/knowledge-definitions.ts:11](https://github.com/wiil-io/core-js/blob/9f0c461aad6086b1cfa24ec4d8430e9e0677b5c6/src/core/type-definitions/knowledge-definitions.ts#L11) |
+| <a id="corpus"></a> `CORPUS` | `"corpus"` | [src/core/type-definitions/knowledge-definitions.ts:12](https://github.com/wiil-io/core-js/blob/9f0c461aad6086b1cfa24ec4d8430e9e0677b5c6/src/core/type-definitions/knowledge-definitions.ts#L12) |
+| <a id="batch_document"></a> `BATCH_DOCUMENT` | `"batch_document"` | [src/core/type-definitions/knowledge-definitions.ts:13](https://github.com/wiil-io/core-js/blob/9f0c461aad6086b1cfa24ec4d8430e9e0677b5c6/src/core/type-definitions/knowledge-definitions.ts#L13) |

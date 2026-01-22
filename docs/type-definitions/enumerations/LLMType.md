@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.30**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.31**](../../README.md)
 
 ***
 
@@ -6,15 +6,15 @@
 
 # Enumeration: LLMType
 
-Defined in: [src/core/type-definitions/service-config.definitions.ts:75](https://github.com/wiil-io/core-js/blob/580be9840674fc43db47bcb0d7cde0e3f86e4124/src/core/type-definitions/service-config.definitions.ts#L75)
+Defined in: [src/core/type-definitions/service-config.definitions.ts:75](https://github.com/wiil-io/core-js/blob/9f0c461aad6086b1cfa24ec4d8430e9e0677b5c6/src/core/type-definitions/service-config.definitions.ts#L75)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="sts"></a> `STS` | `"sts"` | [src/core/type-definitions/service-config.definitions.ts:76](https://github.com/wiil-io/core-js/blob/580be9840674fc43db47bcb0d7cde0e3f86e4124/src/core/type-definitions/service-config.definitions.ts#L76) |
-| <a id="tts"></a> `TTS` | `"tts"` | [src/core/type-definitions/service-config.definitions.ts:77](https://github.com/wiil-io/core-js/blob/580be9840674fc43db47bcb0d7cde0e3f86e4124/src/core/type-definitions/service-config.definitions.ts#L77) |
-| <a id="stt"></a> `STT` | `"stt"` | [src/core/type-definitions/service-config.definitions.ts:78](https://github.com/wiil-io/core-js/blob/580be9840674fc43db47bcb0d7cde0e3f86e4124/src/core/type-definitions/service-config.definitions.ts#L78) |
-| <a id="transcribe"></a> `TRANSCRIBE` | `"transcribe"` | [src/core/type-definitions/service-config.definitions.ts:79](https://github.com/wiil-io/core-js/blob/580be9840674fc43db47bcb0d7cde0e3f86e4124/src/core/type-definitions/service-config.definitions.ts#L79) |
-| <a id="text_processing"></a> `TEXT_PROCESSING` | `"text"` | [src/core/type-definitions/service-config.definitions.ts:80](https://github.com/wiil-io/core-js/blob/580be9840674fc43db47bcb0d7cde0e3f86e4124/src/core/type-definitions/service-config.definitions.ts#L80) |
-| <a id="multi_mode"></a> `MULTI_MODE` | `"multi_mode"` | [src/core/type-definitions/service-config.definitions.ts:83](https://github.com/wiil-io/core-js/blob/580be9840674fc43db47bcb0d7cde0e3f86e4124/src/core/type-definitions/service-config.definitions.ts#L83) |
+| <a id="sts"></a> `STS` | `"sts"` | [src/core/type-definitions/service-config.definitions.ts:76](https://github.com/wiil-io/core-js/blob/9f0c461aad6086b1cfa24ec4d8430e9e0677b5c6/src/core/type-definitions/service-config.definitions.ts#L76) |
+| <a id="tts"></a> `TTS` | `"tts"` | [src/core/type-definitions/service-config.definitions.ts:77](https://github.com/wiil-io/core-js/blob/9f0c461aad6086b1cfa24ec4d8430e9e0677b5c6/src/core/type-definitions/service-config.definitions.ts#L77) |
+| <a id="stt"></a> `STT` | `"stt"` | [src/core/type-definitions/service-config.definitions.ts:78](https://github.com/wiil-io/core-js/blob/9f0c461aad6086b1cfa24ec4d8430e9e0677b5c6/src/core/type-definitions/service-config.definitions.ts#L78) |
+| <a id="transcribe"></a> `TRANSCRIBE` | `"transcribe"` | [src/core/type-definitions/service-config.definitions.ts:79](https://github.com/wiil-io/core-js/blob/9f0c461aad6086b1cfa24ec4d8430e9e0677b5c6/src/core/type-definitions/service-config.definitions.ts#L79) |
+| <a id="text_processing"></a> `TEXT_PROCESSING` | `"text"` | [src/core/type-definitions/service-config.definitions.ts:80](https://github.com/wiil-io/core-js/blob/9f0c461aad6086b1cfa24ec4d8430e9e0677b5c6/src/core/type-definitions/service-config.definitions.ts#L80) |
+| <a id="multi_mode"></a> `MULTI_MODE` | `"multi_mode"` | [src/core/type-definitions/service-config.definitions.ts:83](https://github.com/wiil-io/core-js/blob/9f0c461aad6086b1cfa24ec4d8430e9e0677b5c6/src/core/type-definitions/service-config.definitions.ts#L83) |

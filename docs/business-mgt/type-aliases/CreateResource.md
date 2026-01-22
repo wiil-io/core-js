@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.30**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.31**](../../README.md)
 
 ***
 
@@ -40,7 +40,7 @@ type CreateResource = {
 };
 ```
 
-Defined in: [src/core/business-mgt/reservation-resource.schema.ts:111](https://github.com/wiil-io/core-js/blob/580be9840674fc43db47bcb0d7cde0e3f86e4124/src/core/business-mgt/reservation-resource.schema.ts#L111)
+Defined in: [src/core/business-mgt/reservation-resource.schema.ts:111](https://github.com/wiil-io/core-js/blob/9f0c461aad6086b1cfa24ec4d8430e9e0677b5c6/src/core/business-mgt/reservation-resource.schema.ts#L111)
 
 Schema for creating a new resource.
 Omits auto-generated fields.
@@ -49,16 +49,16 @@ Omits auto-generated fields.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="resourcetype"></a> `resourceType` | [`ResourceType`](../../type-definitions/enumerations/ResourceType.md) | [src/core/business-mgt/reservation-resource.schema.ts:65](https://github.com/wiil-io/core-js/blob/580be9840674fc43db47bcb0d7cde0e3f86e4124/src/core/business-mgt/reservation-resource.schema.ts#L65) |
-| <a id="name"></a> `name` | `string` | [src/core/business-mgt/reservation-resource.schema.ts:66](https://github.com/wiil-io/core-js/blob/580be9840674fc43db47bcb0d7cde0e3f86e4124/src/core/business-mgt/reservation-resource.schema.ts#L66) |
-| <a id="description"></a> `description?` | `string` | [src/core/business-mgt/reservation-resource.schema.ts:67](https://github.com/wiil-io/core-js/blob/580be9840674fc43db47bcb0d7cde0e3f86e4124/src/core/business-mgt/reservation-resource.schema.ts#L67) |
-| <a id="capacity"></a> `capacity?` | `number` | [src/core/business-mgt/reservation-resource.schema.ts:68](https://github.com/wiil-io/core-js/blob/580be9840674fc43db47bcb0d7cde0e3f86e4124/src/core/business-mgt/reservation-resource.schema.ts#L68) |
-| <a id="isavailable"></a> `isAvailable` | `boolean` | [src/core/business-mgt/reservation-resource.schema.ts:69](https://github.com/wiil-io/core-js/blob/580be9840674fc43db47bcb0d7cde0e3f86e4124/src/core/business-mgt/reservation-resource.schema.ts#L69) |
-| <a id="location"></a> `location?` | `string` | [src/core/business-mgt/reservation-resource.schema.ts:71](https://github.com/wiil-io/core-js/blob/580be9840674fc43db47bcb0d7cde0e3f86e4124/src/core/business-mgt/reservation-resource.schema.ts#L71) |
-| <a id="amenities"></a> `amenities` | `string`[] | [src/core/business-mgt/reservation-resource.schema.ts:72](https://github.com/wiil-io/core-js/blob/580be9840674fc43db47bcb0d7cde0e3f86e4124/src/core/business-mgt/reservation-resource.schema.ts#L72) |
-| <a id="reservationduration"></a> `reservationDuration?` | `number` \| `null` | [src/core/business-mgt/reservation-resource.schema.ts:74](https://github.com/wiil-io/core-js/blob/580be9840674fc43db47bcb0d7cde0e3f86e4124/src/core/business-mgt/reservation-resource.schema.ts#L74) |
-| <a id="reservationdurationunit"></a> `reservationDurationUnit?` | \| [`MINUTES`](../../type-definitions/enumerations/ResourceReservationDurationUnit.md#minutes) \| [`HOURS`](../../type-definitions/enumerations/ResourceReservationDurationUnit.md#hours) \| [`NIGHTS`](../../type-definitions/enumerations/ResourceReservationDurationUnit.md#nights) \| `null` | [src/core/business-mgt/reservation-resource.schema.ts:76](https://github.com/wiil-io/core-js/blob/580be9840674fc43db47bcb0d7cde0e3f86e4124/src/core/business-mgt/reservation-resource.schema.ts#L76) |
-| <a id="calendarid"></a> `calendarId?` | `string` \| `null` | [src/core/business-mgt/reservation-resource.schema.ts:79](https://github.com/wiil-io/core-js/blob/580be9840674fc43db47bcb0d7cde0e3f86e4124/src/core/business-mgt/reservation-resource.schema.ts#L79) |
-| <a id="roomresource"></a> `roomResource?` | \| \{ `roomNumber`: `string`; `roomType`: `string`; `pricePerNight`: `number`; `view?`: `string`; `bedType?`: `string`; `isSmoking`: `boolean`; `accessibilityFeatures?`: `string`; \} \| `null` | [src/core/business-mgt/reservation-resource.schema.ts:84](https://github.com/wiil-io/core-js/blob/580be9840674fc43db47bcb0d7cde0e3f86e4124/src/core/business-mgt/reservation-resource.schema.ts#L84) |
-| <a id="rentalresource"></a> `rentalResource?` | \| \{ `itemType`: `string`; `pricePerHour`: `number`; \} \| `null` | [src/core/business-mgt/reservation-resource.schema.ts:85](https://github.com/wiil-io/core-js/blob/580be9840674fc43db47bcb0d7cde0e3f86e4124/src/core/business-mgt/reservation-resource.schema.ts#L85) |
-| <a id="metadata"></a> `metadata?` | `Record`\<`string`, `any`\> | [src/core/business-mgt/reservation-resource.schema.ts:86](https://github.com/wiil-io/core-js/blob/580be9840674fc43db47bcb0d7cde0e3f86e4124/src/core/business-mgt/reservation-resource.schema.ts#L86) |
+| <a id="resourcetype"></a> `resourceType` | [`ResourceType`](../../type-definitions/enumerations/ResourceType.md) | [src/core/business-mgt/reservation-resource.schema.ts:65](https://github.com/wiil-io/core-js/blob/9f0c461aad6086b1cfa24ec4d8430e9e0677b5c6/src/core/business-mgt/reservation-resource.schema.ts#L65) |
+| <a id="name"></a> `name` | `string` | [src/core/business-mgt/reservation-resource.schema.ts:66](https://github.com/wiil-io/core-js/blob/9f0c461aad6086b1cfa24ec4d8430e9e0677b5c6/src/core/business-mgt/reservation-resource.schema.ts#L66) |
+| <a id="description"></a> `description?` | `string` | [src/core/business-mgt/reservation-resource.schema.ts:67](https://github.com/wiil-io/core-js/blob/9f0c461aad6086b1cfa24ec4d8430e9e0677b5c6/src/core/business-mgt/reservation-resource.schema.ts#L67) |
+| <a id="capacity"></a> `capacity?` | `number` | [src/core/business-mgt/reservation-resource.schema.ts:68](https://github.com/wiil-io/core-js/blob/9f0c461aad6086b1cfa24ec4d8430e9e0677b5c6/src/core/business-mgt/reservation-resource.schema.ts#L68) |
+| <a id="isavailable"></a> `isAvailable` | `boolean` | [src/core/business-mgt/reservation-resource.schema.ts:69](https://github.com/wiil-io/core-js/blob/9f0c461aad6086b1cfa24ec4d8430e9e0677b5c6/src/core/business-mgt/reservation-resource.schema.ts#L69) |
+| <a id="location"></a> `location?` | `string` | [src/core/business-mgt/reservation-resource.schema.ts:71](https://github.com/wiil-io/core-js/blob/9f0c461aad6086b1cfa24ec4d8430e9e0677b5c6/src/core/business-mgt/reservation-resource.schema.ts#L71) |
+| <a id="amenities"></a> `amenities` | `string`[] | [src/core/business-mgt/reservation-resource.schema.ts:72](https://github.com/wiil-io/core-js/blob/9f0c461aad6086b1cfa24ec4d8430e9e0677b5c6/src/core/business-mgt/reservation-resource.schema.ts#L72) |
+| <a id="reservationduration"></a> `reservationDuration?` | `number` \| `null` | [src/core/business-mgt/reservation-resource.schema.ts:74](https://github.com/wiil-io/core-js/blob/9f0c461aad6086b1cfa24ec4d8430e9e0677b5c6/src/core/business-mgt/reservation-resource.schema.ts#L74) |
+| <a id="reservationdurationunit"></a> `reservationDurationUnit?` | \| [`MINUTES`](../../type-definitions/enumerations/ResourceReservationDurationUnit.md#minutes) \| [`HOURS`](../../type-definitions/enumerations/ResourceReservationDurationUnit.md#hours) \| [`NIGHTS`](../../type-definitions/enumerations/ResourceReservationDurationUnit.md#nights) \| `null` | [src/core/business-mgt/reservation-resource.schema.ts:76](https://github.com/wiil-io/core-js/blob/9f0c461aad6086b1cfa24ec4d8430e9e0677b5c6/src/core/business-mgt/reservation-resource.schema.ts#L76) |
+| <a id="calendarid"></a> `calendarId?` | `string` \| `null` | [src/core/business-mgt/reservation-resource.schema.ts:79](https://github.com/wiil-io/core-js/blob/9f0c461aad6086b1cfa24ec4d8430e9e0677b5c6/src/core/business-mgt/reservation-resource.schema.ts#L79) |
+| <a id="roomresource"></a> `roomResource?` | \| \{ `roomNumber`: `string`; `roomType`: `string`; `pricePerNight`: `number`; `view?`: `string`; `bedType?`: `string`; `isSmoking`: `boolean`; `accessibilityFeatures?`: `string`; \} \| `null` | [src/core/business-mgt/reservation-resource.schema.ts:84](https://github.com/wiil-io/core-js/blob/9f0c461aad6086b1cfa24ec4d8430e9e0677b5c6/src/core/business-mgt/reservation-resource.schema.ts#L84) |
+| <a id="rentalresource"></a> `rentalResource?` | \| \{ `itemType`: `string`; `pricePerHour`: `number`; \} \| `null` | [src/core/business-mgt/reservation-resource.schema.ts:85](https://github.com/wiil-io/core-js/blob/9f0c461aad6086b1cfa24ec4d8430e9e0677b5c6/src/core/business-mgt/reservation-resource.schema.ts#L85) |
+| <a id="metadata"></a> `metadata?` | `Record`\<`string`, `any`\> | [src/core/business-mgt/reservation-resource.schema.ts:86](https://github.com/wiil-io/core-js/blob/9f0c461aad6086b1cfa24ec4d8430e9e0677b5c6/src/core/business-mgt/reservation-resource.schema.ts#L86) |

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.30**](../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.31**](../README.md)
 
 ***
 
@@ -17,6 +17,7 @@ Central export point for all service configuration schemas.
 | [AgentConfiguration](type-aliases/AgentConfiguration.md) | Type definition for Agent Configuration. |
 | [CreateAgentConfiguration](type-aliases/CreateAgentConfiguration.md) | Type definition for creating a new agent configuration. |
 | [UpdateAgentConfiguration](type-aliases/UpdateAgentConfiguration.md) | Type definition for updating an existing agent configuration. |
+| [AgentConfigurationDeleteRequest](type-aliases/AgentConfigurationDeleteRequest.md) | - |
 | [CallTransferConfig](type-aliases/CallTransferConfig.md) | Type definition for call transfer configuration. |
 | [DeploymentConfiguration](type-aliases/DeploymentConfiguration.md) | Type definition for deployment configuration. |
 | [CreateDeploymentConfiguration](type-aliases/CreateDeploymentConfiguration.md) | Type definition for creating a new deployment configuration. |
@@ -43,6 +44,7 @@ Central export point for all service configuration schemas.
 | [DeploymentChannelUpdate](type-aliases/DeploymentChannelUpdate.md) | Type definition for deployment channel update (legacy compatibility). |
 | [DeploymentChannelUpdateRequest](type-aliases/DeploymentChannelUpdateRequest.md) | Type definition for deployment channel update request (legacy compatibility). |
 | [DeploymentChannelInfo](type-aliases/DeploymentChannelInfo.md) | Type definition for deployment channel with deployment info. |
+| [DeploymentChannelDeletionRequest](type-aliases/DeploymentChannelDeletionRequest.md) | - |
 | [KnowledgeSource](type-aliases/KnowledgeSource.md) | Type definition for Knowledge Source. |
 | [PhoneConfiguration](type-aliases/PhoneConfiguration.md) | Type definition for Phone Configuration. |
 | [UpdatePhoneConfiguration](type-aliases/UpdatePhoneConfiguration.md) | Type definition for updating an existing phone configuration. |
@@ -81,6 +83,7 @@ Central export point for all service configuration schemas.
 | [AgentConfigurationSchema](variables/AgentConfigurationSchema.md) | Zod schema for Agent Configuration validation. |
 | [CreateAgentConfigurationSchema](variables/CreateAgentConfigurationSchema.md) | Zod schema for creating a new agent configuration. |
 | [UpdateAgentConfigurationSchema](variables/UpdateAgentConfigurationSchema.md) | Zod schema for updating an existing agent configuration. |
+| [AgentConfigurationDeleteRequestSchema](variables/AgentConfigurationDeleteRequestSchema.md) | - |
 | [CallTransferConfigSchema](variables/CallTransferConfigSchema.md) | Zod schema for individual call transfer configuration. |
 | [DeploymentConfigurationSchema](variables/DeploymentConfigurationSchema.md) | Zod schema for deployment configuration validation. |
 | [CreateDeploymentConfigurationSchema](variables/CreateDeploymentConfigurationSchema.md) | Zod schema for creating a new deployment configuration. |
@@ -107,6 +110,7 @@ Central export point for all service configuration schemas.
 | [ChannelSetupRequestSchema](variables/ChannelSetupRequestSchema.md) | Zod schema for channel setup request. |
 | [ChannelUpdateRequestSchema](variables/ChannelUpdateRequestSchema.md) | Zod schema for channel update request. |
 | [DeploymentChannelWithDeploymentSchema](variables/DeploymentChannelWithDeploymentSchema.md) | Zod schema for deployment channel with deployment information. |
+| [DeploymentChannelDeletionRequestSchema](variables/DeploymentChannelDeletionRequestSchema.md) | - |
 | [KnowledgeSourceSchema](variables/KnowledgeSourceSchema.md) | Zod schema for Knowledge Source validation. |
 | [PhoneConfigurationSchema](variables/PhoneConfigurationSchema.md) | Zod schema for Phone Configuration validation. |
 | [UpdatePhoneConfigurationSchema](variables/UpdatePhoneConfigurationSchema.md) | Zod schema for updating an existing phone configuration. |

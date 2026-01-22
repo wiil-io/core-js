@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.30**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.31**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: ServiceStatus
 
-Defined in: [src/core/type-definitions/account-definitions.ts:19](https://github.com/wiil-io/core-js/blob/580be9840674fc43db47bcb0d7cde0e3f86e4124/src/core/type-definitions/account-definitions.ts#L19)
+Defined in: [src/core/type-definitions/account-definitions.ts:19](https://github.com/wiil-io/core-js/blob/9f0c461aad6086b1cfa24ec4d8430e9e0677b5c6/src/core/type-definitions/account-definitions.ts#L19)
 
 Service status enumeration for organizations and projects.
 
@@ -22,6 +22,6 @@ const orgStatus: ServiceStatus = ServiceStatus.ACTIVE;
 
 | Enumeration Member | Value | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="active"></a> `ACTIVE` | `"active"` | Service is operational and available | [src/core/type-definitions/account-definitions.ts:21](https://github.com/wiil-io/core-js/blob/580be9840674fc43db47bcb0d7cde0e3f86e4124/src/core/type-definitions/account-definitions.ts#L21) |
-| <a id="inactive"></a> `INACTIVE` | `"inactive"` | Service is not currently in use but can be reactivated | [src/core/type-definitions/account-definitions.ts:23](https://github.com/wiil-io/core-js/blob/580be9840674fc43db47bcb0d7cde0e3f86e4124/src/core/type-definitions/account-definitions.ts#L23) |
-| <a id="suspended"></a> `SUSPENDED` | `"suspended"` | Service is temporarily suspended and requires intervention to resume | [src/core/type-definitions/account-definitions.ts:25](https://github.com/wiil-io/core-js/blob/580be9840674fc43db47bcb0d7cde0e3f86e4124/src/core/type-definitions/account-definitions.ts#L25) |
+| <a id="active"></a> `ACTIVE` | `"active"` | Service is operational and available | [src/core/type-definitions/account-definitions.ts:21](https://github.com/wiil-io/core-js/blob/9f0c461aad6086b1cfa24ec4d8430e9e0677b5c6/src/core/type-definitions/account-definitions.ts#L21) |
+| <a id="inactive"></a> `INACTIVE` | `"inactive"` | Service is not currently in use but can be reactivated | [src/core/type-definitions/account-definitions.ts:23](https://github.com/wiil-io/core-js/blob/9f0c461aad6086b1cfa24ec4d8430e9e0677b5c6/src/core/type-definitions/account-definitions.ts#L23) |
+| <a id="suspended"></a> `SUSPENDED` | `"suspended"` | Service is temporarily suspended and requires intervention to resume | [src/core/type-definitions/account-definitions.ts:25](https://github.com/wiil-io/core-js/blob/9f0c461aad6086b1cfa24ec4d8430e9e0677b5c6/src/core/type-definitions/account-definitions.ts#L25) |

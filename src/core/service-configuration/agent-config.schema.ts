@@ -166,3 +166,12 @@ export const UpdateAgentConfigurationSchema = CreateAgentConfigurationSchema.par
  * Represents a partial update payload with required id field.
  */
 export type UpdateAgentConfiguration = z.infer<typeof UpdateAgentConfigurationSchema>;
+
+
+
+export const AgentConfigurationDeleteRequestSchema = z.object({
+    id: z.string().describe("Unique identifier of the agent configuration to delete"),
+    deletePhoneConfig: z.boolean().optional().default(true).describe("Whether to also delete associated phone configurations"),
+});
+
+export type AgentConfigurationDeleteRequest = z.infer<typeof AgentConfigurationDeleteRequestSchema>;
