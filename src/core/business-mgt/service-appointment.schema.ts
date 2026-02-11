@@ -1,6 +1,6 @@
 import z from "zod";
 import { BaseModelSchema } from "../base.schema";
-import { AppointmentStatus, CalendarProvider } from "../type-definitions";
+import { AppointmentStatus, CalendarProvider, ResourceType } from "../type-definitions";
 
 /**
  * @fileoverview Service appointment schema definitions for managing appointment bookings.
@@ -70,3 +70,26 @@ export const UpdateServiceAppointmentSchema = CreateServiceAppointmentSchema.par
 export type ServiceAppointment = z.infer<typeof ServiceAppointmentSchema>;
 export type CreateServiceAppointment = z.infer<typeof CreateServiceAppointmentSchema>;
 export type UpdateServiceAppointment = z.infer<typeof UpdateServiceAppointmentSchema>;
+
+// Query Options
+export interface ReservationFilters {
+    search?: string;
+    status?: AppointmentStatus[];
+    reservationType?: ResourceType[];
+    resourceId?: string;
+    customerId?: string;
+    isResourceReservation?: boolean;
+    dateRange?: { start?: number; end?: number; };
+}
+
+export interface ReservationSorting {
+    field: 'startTime' | 'endTime' | 'createdAt';
+    direction: 'asc' | 'desc';
+}
+
+export interface ReservationQueryOptions {
+    page: number;
+    pageSize: number;
+    filters?: ReservationFilters;
+    sorting?: ReservationSorting;
+}

@@ -8,6 +8,7 @@ export * from './base.schema';
 
 // Module exports
 export * from './account';
+export * from './assistant-setups';
 export * from './business-mgt';
 export * from './conversation';
 export * from './service-configuration';

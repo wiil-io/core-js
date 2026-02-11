@@ -164,3 +164,30 @@ export type CreateMenuOrder = z.infer<typeof CreateMenuOrderSchema>;
 export type UpdateMenuOrder = z.infer<typeof UpdateMenuOrderSchema>;
 export type UpdateMenuOrderStatus = z.infer<typeof UpdateMenuOrderStatusSchema>;
 export type CreateMenuOrderItem = z.infer<typeof MenuOrderItemBaseSchema>;
+
+
+
+
+// Query Options
+export interface MenuOrderFilters {
+    search?: string;
+    type?: MenuOrderType[];
+    status?: OrderStatus[];
+    paymentStatus?: PaymentStatus[];
+    customerId?: string;
+    tableNumber?: string;
+    source?: string;
+    dateRange?: { start?: number; end?: number; };
+}
+
+export interface MenuOrderSorting {
+    field: 'orderDate' | 'createdAt' | 'totalAmount';
+    direction: 'asc' | 'desc';
+}
+
+export interface MenuOrderQueryOptions {
+    page: number;
+    pageSize: number;
+    filters?: MenuOrderFilters;
+    sorting?: MenuOrderSorting;
+}

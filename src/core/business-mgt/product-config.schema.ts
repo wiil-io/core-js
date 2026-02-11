@@ -121,3 +121,28 @@ export type UpdateProductCategory = z.infer<typeof UpdateProductCategorySchema>;
 export type BusinessProduct = z.infer<typeof BusinessProductSchema>;
 export type CreateBusinessProduct = z.infer<typeof CreateBusinessProductSchema>;
 export type UpdateBusinessProduct = z.infer<typeof UpdateBusinessProductSchema>;
+
+
+
+// Query Options
+export interface BusinessProductFilters {
+    search?: string;
+    categoryId?: string;
+    isActive?: boolean;
+    brand?: string;
+    trackInventory?: boolean;
+    priceRange?: { min?: number; max?: number; };
+    lowStock?: boolean;
+}
+
+export interface BusinessProductSorting {
+    field: 'name' | 'price' | 'createdAt' | 'displayOrder';
+    direction: 'asc' | 'desc';
+}
+
+export interface BusinessProductQueryOptions {
+    page: number;
+    pageSize: number;
+    filters?: BusinessProductFilters;
+    sorting?: BusinessProductSorting;
+}

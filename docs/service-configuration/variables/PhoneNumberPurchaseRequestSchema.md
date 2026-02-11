@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.31**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.32**](../../README.md)
 
 ***
 
@@ -16,7 +16,7 @@ const PhoneNumberPurchaseRequestSchema: ZodObject<{
 }, $strip> = CreatePhoneNumberPurchaseSchema;
 ```
 
-Defined in: [src/core/service-configuration/phone-number.schema.ts:326](https://github.com/wiil-io/core-js/blob/9f0c461aad6086b1cfa24ec4d8430e9e0677b5c6/src/core/service-configuration/phone-number.schema.ts#L326)
+Defined in: [src/core/service-configuration/phone-number.schema.ts:326](https://github.com/wiil-io/core-js/blob/9c3a7d6ec57fe61c5efdf2430a4a2e41b7f40577/src/core/service-configuration/phone-number.schema.ts#L326)
 
 Legacy schema export for backwards compatibility.
 

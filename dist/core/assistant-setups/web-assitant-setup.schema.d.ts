@@ -1,0 +1,56 @@
+import z from "zod";
+import { OttCommunicationType } from "../type-definitions";
+export declare const WebAssistantSetupSchema: z.ZodObject<{
+    assistantName: z.ZodString;
+    supportModelId: z.ZodString;
+    voiceId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    languageId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    instructionConfigurationId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    customInstructionConfiguration: z.ZodOptional<z.ZodNullable<z.ZodObject<{
+        metadata: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodAny>>;
+        instructionName: z.ZodString;
+        role: z.ZodString;
+        introductionMessage: z.ZodString;
+        instructions: z.ZodString;
+        guardrails: z.ZodString;
+        requiredSkills: z.ZodOptional<z.ZodArray<z.ZodString>>;
+        validationRules: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodAny>>;
+        serviceId: z.ZodOptional<z.ZodString>;
+        supportedServices: z.ZodDefault<z.ZodOptional<z.ZodArray<z.ZodEnum<typeof import("../type-definitions").BusinessSupportServices>>>>;
+        tools: z.ZodOptional<z.ZodArray<z.ZodString>>;
+        isTemplate: z.ZodDefault<z.ZodOptional<z.ZodBoolean>>;
+        isPrimary: z.ZodDefault<z.ZodBoolean>;
+        knowledgeSourceIds: z.ZodDefault<z.ZodOptional<z.ZodArray<z.ZodString>>>;
+    }, z.core.$strip>>>;
+    knowledgeSourceIds: z.ZodDefault<z.ZodArray<z.ZodString>>;
+    websiteUrl: z.ZodURL;
+    communicationType: z.ZodEnum<typeof OttCommunicationType>;
+}, z.core.$strip>;
+export declare const ChainedWebAssistantSetupSchema: z.ZodObject<{
+    assistantName: z.ZodString;
+    supportModelId: z.ZodString;
+    voiceId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    languageId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    instructionConfigurationId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    customInstructionConfiguration: z.ZodOptional<z.ZodNullable<z.ZodObject<{
+        metadata: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodAny>>;
+        instructionName: z.ZodString;
+        role: z.ZodString;
+        introductionMessage: z.ZodString;
+        instructions: z.ZodString;
+        guardrails: z.ZodString;
+        requiredSkills: z.ZodOptional<z.ZodArray<z.ZodString>>;
+        validationRules: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodAny>>;
+        serviceId: z.ZodOptional<z.ZodString>;
+        supportedServices: z.ZodDefault<z.ZodOptional<z.ZodArray<z.ZodEnum<typeof import("../type-definitions").BusinessSupportServices>>>>;
+        tools: z.ZodOptional<z.ZodArray<z.ZodString>>;
+        isTemplate: z.ZodDefault<z.ZodOptional<z.ZodBoolean>>;
+        isPrimary: z.ZodDefault<z.ZodBoolean>;
+        knowledgeSourceIds: z.ZodDefault<z.ZodOptional<z.ZodArray<z.ZodString>>>;
+    }, z.core.$strip>>>;
+    knowledgeSourceIds: z.ZodDefault<z.ZodArray<z.ZodString>>;
+    websiteUrl: z.ZodURL;
+    communicationType: z.ZodEnum<typeof OttCommunicationType>;
+}, z.core.$strip>;
+export type WebAssistantSetup = z.infer<typeof WebAssistantSetupSchema>;
+export type ChainedWebAssistantSetup = z.infer<typeof ChainedWebAssistantSetupSchema>;

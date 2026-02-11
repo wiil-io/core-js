@@ -43,7 +43,7 @@ export const BusinessMenuItemSchema = BaseModelSchema.safeExtend({
 // Simple QR code for menu
 export const MenuQRCodeSchema = z.object({
     id: z.string().describe("Unique identifier for this QR code instance."),
-    menuUrl: z.string().url().describe("URL to the digital menu accessed by scanning this QR code. Links to menu browsing interface."),
+    menuUrl: z.url().describe("URL to the digital menu accessed by scanning this QR code. Links to menu browsing interface."),
     qrCodeImage: z.string().optional().describe("Base64 encoded QR code image for printing or digital display. Generated from menuUrl."),
     tableNumber: z.string().optional().describe("Optional table number for dine-in scenarios. Associates QR code with specific table for order attribution."),
 });
@@ -128,3 +128,27 @@ export type UpdateMenuCategory = z.infer<typeof UpdateMenuCategorySchema>;
  * Type definition for updating a business menu item.
  */
 export type UpdateBusinessMenuItem = z.infer<typeof UpdateBusinessMenuItemSchema>;
+
+
+
+// Query Options
+export interface BusinessMenuItemFilters {
+    search?: string;
+    categoryId?: string;
+    isActive?: boolean;
+    isAvailable?: boolean;
+    allergens?: string[];
+    priceRange?: { min?: number; max?: number; };
+}
+
+export interface BusinessMenuItemSorting {
+    field: 'name' | 'price' | 'createdAt' | 'displayOrder';
+    direction: 'asc' | 'desc';
+}
+
+export interface BusinessMenuItemQueryOptions {
+    page: number;
+    pageSize: number;
+    filters?: BusinessMenuItemFilters;
+    sorting?: BusinessMenuItemSorting;
+}

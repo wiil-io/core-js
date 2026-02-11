@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.31**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.32**](../../README.md)
 
 ***
 
@@ -10,6 +10,6 @@
 const OrderCustomerSchema: ZodObject<OrderCustomer>;
 ```
 
-Defined in: [src/core/business-mgt/order.schema.ts:26](https://github.com/wiil-io/core-js/blob/9f0c461aad6086b1cfa24ec4d8430e9e0677b5c6/src/core/business-mgt/order.schema.ts#L26)
+Defined in: [src/core/business-mgt/order.schema.ts:26](https://github.com/wiil-io/core-js/blob/9c3a7d6ec57fe61c5efdf2430a4a2e41b7f40577/src/core/business-mgt/order.schema.ts#L26)
 
 Shared customer schema for orders.

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.31**](../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.32**](../README.md)
 
 ***
 
@@ -9,6 +9,26 @@
 ## Fileoverview
 
 Central export point for business management schemas.
+
+## Interfaces
+
+| Interface | Description |
+| ------ | ------ |
+| [BusinessMenuItemFilters](interfaces/BusinessMenuItemFilters.md) | - |
+| [BusinessMenuItemSorting](interfaces/BusinessMenuItemSorting.md) | - |
+| [BusinessMenuItemQueryOptions](interfaces/BusinessMenuItemQueryOptions.md) | - |
+| [MenuOrderFilters](interfaces/MenuOrderFilters.md) | - |
+| [MenuOrderSorting](interfaces/MenuOrderSorting.md) | - |
+| [MenuOrderQueryOptions](interfaces/MenuOrderQueryOptions.md) | - |
+| [BusinessProductFilters](interfaces/BusinessProductFilters.md) | - |
+| [BusinessProductSorting](interfaces/BusinessProductSorting.md) | - |
+| [BusinessProductQueryOptions](interfaces/BusinessProductQueryOptions.md) | - |
+| [ProductOrderFilters](interfaces/ProductOrderFilters.md) | - |
+| [ProductOrderSorting](interfaces/ProductOrderSorting.md) | - |
+| [ProductOrderQueryOptions](interfaces/ProductOrderQueryOptions.md) | - |
+| [ReservationFilters](interfaces/ReservationFilters.md) | - |
+| [ReservationSorting](interfaces/ReservationSorting.md) | - |
+| [ReservationQueryOptions](interfaces/ReservationQueryOptions.md) | - |
 
 ## Type Aliases
 
@@ -59,6 +79,7 @@ Central export point for business management schemas.
 | [ServiceAppointment](type-aliases/ServiceAppointment.md) | Service appointment schema. |
 | [CreateServiceAppointment](type-aliases/CreateServiceAppointment.md) | Schema for creating a new service appointment. Omits auto-generated fields. |
 | [UpdateServiceAppointment](type-aliases/UpdateServiceAppointment.md) | Schema for updating an existing service appointment. All fields are optional except id. |
+| [ServiceAppointmentFieldConfig](type-aliases/ServiceAppointmentFieldConfig.md) | Service-level appointment field configuration (embedded in BusinessServiceConfigSchema). |
 | [BusinessService](type-aliases/BusinessService.md) | Business service configuration schema. |
 | [ServiceQRCode](type-aliases/ServiceQRCode.md) | Service QR code schema for appointment booking. |
 | [CreateBusinessService](type-aliases/CreateBusinessService.md) | Schema for creating a new business service. Omits auto-generated fields. |
@@ -116,6 +137,7 @@ Central export point for business management schemas.
 | [ServiceAppointmentSchema](variables/ServiceAppointmentSchema.md) | Service appointment schema. |
 | [CreateServiceAppointmentSchema](variables/CreateServiceAppointmentSchema.md) | Schema for creating a new service appointment. Omits auto-generated fields. |
 | [UpdateServiceAppointmentSchema](variables/UpdateServiceAppointmentSchema.md) | Schema for updating an existing service appointment. All fields are optional except id. |
+| [ServiceAppointmentFieldConfigSchema](variables/ServiceAppointmentFieldConfigSchema.md) | Service-level appointment field configuration (embedded in BusinessServiceConfigSchema). |
 | [BusinessServiceConfigSchema](variables/BusinessServiceConfigSchema.md) | Business service configuration schema. |
 | [ServiceQRCodeSchema](variables/ServiceQRCodeSchema.md) | Service QR code schema for appointment booking. |
 | [CreateBusinessServiceSchema](variables/CreateBusinessServiceSchema.md) | Schema for creating a new business service. Omits auto-generated fields. |

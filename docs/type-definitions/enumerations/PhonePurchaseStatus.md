@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.31**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.32**](../../README.md)
 
 ***
 
@@ -6,13 +6,13 @@
 
 # Enumeration: PhonePurchaseStatus
 
-Defined in: [src/core/type-definitions/service-config.definitions.ts:26](https://github.com/wiil-io/core-js/blob/9f0c461aad6086b1cfa24ec4d8430e9e0677b5c6/src/core/type-definitions/service-config.definitions.ts#L26)
+Defined in: [src/core/type-definitions/service-config.definitions.ts:26](https://github.com/wiil-io/core-js/blob/9c3a7d6ec57fe61c5efdf2430a4a2e41b7f40577/src/core/type-definitions/service-config.definitions.ts#L26)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="pending"></a> `PENDING` | `"pending"` | [src/core/type-definitions/service-config.definitions.ts:27](https://github.com/wiil-io/core-js/blob/9f0c461aad6086b1cfa24ec4d8430e9e0677b5c6/src/core/type-definitions/service-config.definitions.ts#L27) |
-| <a id="completed"></a> `COMPLETED` | `"completed"` | [src/core/type-definitions/service-config.definitions.ts:28](https://github.com/wiil-io/core-js/blob/9f0c461aad6086b1cfa24ec4d8430e9e0677b5c6/src/core/type-definitions/service-config.definitions.ts#L28) |
-| <a id="failed"></a> `FAILED` | `"failed"` | [src/core/type-definitions/service-config.definitions.ts:29](https://github.com/wiil-io/core-js/blob/9f0c461aad6086b1cfa24ec4d8430e9e0677b5c6/src/core/type-definitions/service-config.definitions.ts#L29) |
-| <a id="cancelled"></a> `CANCELLED` | `"cancelled"` | [src/core/type-definitions/service-config.definitions.ts:30](https://github.com/wiil-io/core-js/blob/9f0c461aad6086b1cfa24ec4d8430e9e0677b5c6/src/core/type-definitions/service-config.definitions.ts#L30) |
+| <a id="pending"></a> `PENDING` | `"pending"` | [src/core/type-definitions/service-config.definitions.ts:27](https://github.com/wiil-io/core-js/blob/9c3a7d6ec57fe61c5efdf2430a4a2e41b7f40577/src/core/type-definitions/service-config.definitions.ts#L27) |
+| <a id="completed"></a> `COMPLETED` | `"completed"` | [src/core/type-definitions/service-config.definitions.ts:28](https://github.com/wiil-io/core-js/blob/9c3a7d6ec57fe61c5efdf2430a4a2e41b7f40577/src/core/type-definitions/service-config.definitions.ts#L28) |
+| <a id="failed"></a> `FAILED` | `"failed"` | [src/core/type-definitions/service-config.definitions.ts:29](https://github.com/wiil-io/core-js/blob/9c3a7d6ec57fe61c5efdf2430a4a2e41b7f40577/src/core/type-definitions/service-config.definitions.ts#L29) |
+| <a id="cancelled"></a> `CANCELLED` | `"cancelled"` | [src/core/type-definitions/service-config.definitions.ts:30](https://github.com/wiil-io/core-js/blob/9c3a7d6ec57fe61c5efdf2430a4a2e41b7f40577/src/core/type-definitions/service-config.definitions.ts#L30) |

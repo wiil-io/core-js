@@ -1,10 +1,45 @@
 import z from "zod";
 import { BaseModelSchema } from "../base.schema";
+import { FieldDefinitionSchema, FieldOverrideSchema } from "../type-definitions/dynamic-fields";
 
 /**
  * @fileoverview Business service configuration schema definitions.
  * @module business-mgt/business-service-config
  */
+
+
+/**
+ * Service-level appointment field configuration (embedded in BusinessServiceConfigSchema).
+ *
+ * This schema represents the **Service Level** in the dynamic fields hierarchy:
+ *
+ * ```
+ * Organization Level (AppointmentFieldConfigSchema)
+ *         │
+ *         ▼ inherits via appointmentFieldConfigId
+ * Service Level (ServiceAppointmentFieldConfigSchema) ← THIS SCHEMA
+ *         │
+ *         ▼ stores values
+ * Appointment Level (AppointmentAdditionalInfoSchema)
+ * ```
+ *
+ * Allows services to:
+ * - Inherit specific fields from the organization-level configuration
+ * - Override properties of inherited fields (e.g., make a field required)
+ * - Add service-specific fields not in the organization config
+ *
+ * @see AppointmentFieldConfigSchema - Organization-level field definitions
+ * @see AppointmentAdditionalInfoSchema - Stores captured field values
+ */
+export const ServiceAppointmentFieldConfigSchema = z.object({
+    inheritedFieldKeys: z.array(z.string()).default([]).describe("Array of fieldKey values to inherit from the organization-level AppointmentFieldConfigSchema. Only fields with matching fieldKey values are included for this service. Example: ['allergies', 'emergency_contact'] inherits those two fields from the org config."),
+    fieldOverrides: z.array(FieldOverrideSchema).default([]).describe("Array of field overrides to customize inherited fields for this service. Each override specifies a fieldKey and the properties to override (label, validation, uiHints, defaultValue, isActive). Example: Override 'allergies' field to make validation.required=true for this service."),
+    additionalFields: z.array(FieldDefinitionSchema).default([]).describe("Array of service-specific field definitions not present in the organization config. These fields are only available for this particular service. Example: A spa service might add 'preferred_pressure' field with SELECT options."),
+    isActive: z.boolean().default(true).describe("Controls whether this field configuration is active for the service. When false, no additional fields are collected during appointment booking. Defaults to true."),
+    reuseDetails: z.boolean().default(false).describe("When true, captured field data for this service can be reused across appointments for the same customer. Overrides the organization-level reuseDetails setting when specified."),
+});
+
+export type ServiceAppointmentFieldConfig = z.infer<typeof ServiceAppointmentFieldConfigSchema>;
 
 /**
  * Business service configuration schema.
@@ -34,6 +69,9 @@ export const BusinessServiceConfigSchema = BaseModelSchema.safeExtend({
     price: z.number().nonnegative().default(0).optional().describe("Service price in the account's currency. Used for Service Appointment pricing and customer quotes during AI conversations. Defaults to 0 for complimentary services."),
     // Business Management
     isActive: z.boolean().default(true).describe("Whether the service is currently active and available for booking. Inactive services are hidden from customers and AI Powered Services. Defaults to true."),
+
+    // Dynamic Field Configuration
+    requiredDatafieldConfig: ServiceAppointmentFieldConfigSchema.optional().describe("Service-level dynamic field configuration for capturing additional appointment information. Inherits fields from organization-level AppointmentFieldConfigSchema via inheritedFieldKeys, allows overrides via fieldOverrides, and supports service-specific fields via additionalFields. When omitted, no additional fields are collected for this service."),
 
 });
 

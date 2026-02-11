@@ -172,3 +172,27 @@ export type UpdateProductOrder = z.infer<typeof UpdateProductOrderSchema>;
 export type UpdateProductOrderStatus = z.infer<typeof UpdateProductOrderStatusSchema>;
 export type CreateProductOrderItem = z.infer<typeof ProductOrderItemBaseSchema>;
 export type OrderInventoryUpdate = z.infer<typeof OrderInventoryUpdateSchema>;
+
+
+// Query Options
+export interface ProductOrderFilters {
+    search?: string;
+    status?: OrderStatus[];
+    paymentStatus?: PaymentStatus[];
+    customerId?: string;
+    shippingMethod?: string;
+    source?: string;
+    dateRange?: { start?: number; end?: number; };
+}
+
+export interface ProductOrderSorting {
+    field: 'orderDate' | 'createdAt' | 'totalAmount';
+    direction: 'asc' | 'desc';
+}
+
+export interface ProductOrderQueryOptions {
+    page: number;
+    pageSize: number;
+    filters?: ProductOrderFilters;
+    sorting?: ProductOrderSorting;
+}
