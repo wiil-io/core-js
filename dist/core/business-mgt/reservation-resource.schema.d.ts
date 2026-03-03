@@ -97,12 +97,12 @@ export declare const CreateResourceSchema: z.ZodObject<{
     name: z.ZodString;
     description: z.ZodOptional<z.ZodString>;
     isAvailable: z.ZodDefault<z.ZodBoolean>;
+    amenities: z.ZodDefault<z.ZodArray<z.ZodString>>;
+    calendarId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     resourceType: z.ZodEnum<typeof ResourceType>;
     location: z.ZodOptional<z.ZodString>;
-    amenities: z.ZodDefault<z.ZodArray<z.ZodString>>;
     reservationDuration: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
     reservationDurationUnit: z.ZodNullable<z.ZodOptional<z.ZodEnum<typeof ResourceReservationDurationUnit>>>;
-    calendarId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     roomResource: z.ZodOptional<z.ZodNullable<z.ZodObject<{
         roomNumber: z.ZodString;
         roomType: z.ZodString;
@@ -127,12 +127,12 @@ export declare const UpdateResourceSchema: z.ZodObject<{
     name: z.ZodOptional<z.ZodString>;
     description: z.ZodOptional<z.ZodOptional<z.ZodString>>;
     isAvailable: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
+    amenities: z.ZodOptional<z.ZodDefault<z.ZodArray<z.ZodString>>>;
+    calendarId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     resourceType: z.ZodOptional<z.ZodEnum<typeof ResourceType>>;
     location: z.ZodOptional<z.ZodOptional<z.ZodString>>;
-    amenities: z.ZodOptional<z.ZodDefault<z.ZodArray<z.ZodString>>>;
     reservationDuration: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
     reservationDurationUnit: z.ZodOptional<z.ZodNullable<z.ZodOptional<z.ZodEnum<typeof ResourceReservationDurationUnit>>>>;
-    calendarId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     roomResource: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodObject<{
         roomNumber: z.ZodString;
         roomType: z.ZodString;

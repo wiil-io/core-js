@@ -14,7 +14,6 @@ export const MenuCategorySchema = BaseModelSchema.safeExtend({
 });
 
 export const BusinessMenuItemSchema = BaseModelSchema.safeExtend({
-    id: z.string().describe("Unique identifier for this menu item in the catalog managed by Menu Management."),
     name: z.string().min(1, "Menu item name is required").describe("Display name of the menu item shown to customers. Used by AI Powered Services in menu order conversations."),
     description: z.string().optional().describe("Detailed item description including preparation style, ingredients, or special features. Helps customers make informed selections."),
 

@@ -84,8 +84,8 @@ export declare const ReservationSchema: z.ZodObject<{
  */
 export declare const CreateReservationSchema: z.ZodObject<{
     customerId: z.ZodString;
-    notes: z.ZodOptional<z.ZodString>;
     duration: z.ZodOptional<z.ZodNumber>;
+    notes: z.ZodOptional<z.ZodString>;
     totalPrice: z.ZodOptional<z.ZodNumber>;
     reservationType: z.ZodEnum<typeof ResourceType>;
     resourceId: z.ZodNullable<z.ZodOptional<z.ZodString>>;
@@ -101,8 +101,8 @@ export declare const CreateReservationSchema: z.ZodObject<{
  */
 export declare const UpdateReservationSchema: z.ZodObject<{
     customerId: z.ZodOptional<z.ZodString>;
-    notes: z.ZodOptional<z.ZodOptional<z.ZodString>>;
     duration: z.ZodOptional<z.ZodOptional<z.ZodNumber>>;
+    notes: z.ZodOptional<z.ZodOptional<z.ZodString>>;
     totalPrice: z.ZodOptional<z.ZodOptional<z.ZodNumber>>;
     reservationType: z.ZodOptional<z.ZodEnum<typeof ResourceType>>;
     resourceId: z.ZodOptional<z.ZodNullable<z.ZodOptional<z.ZodString>>>;

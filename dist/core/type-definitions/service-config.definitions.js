@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.LLMRequestType = exports.ModelProprietor = exports.SupportedLLMKit = exports.SupportedProprietor = exports.LLMType = exports.AssistantType = exports.DeploymentProvisioningType = exports.OttCommunicationType = exports.MobilePlatform = exports.PhoneNumberType = exports.PhoneStatus = exports.PhonePurchaseStatus = exports.ProviderType = exports.DeploymentStatus = exports.DeploymentType = void 0;
+exports.AgentCapabilities = exports.AgentRoleTemplateIdentifier = exports.LLMRequestType = exports.SupportedLLMKit = exports.SupportedProprietor = exports.LLMType = exports.AssistantType = exports.DeploymentProvisioningType = exports.OttCommunicationType = exports.MobilePlatform = exports.PhoneNumberType = exports.PhoneStatus = exports.PhonePurchaseStatus = exports.ProviderType = exports.DeploymentStatus = exports.DeploymentType = void 0;
+const account_definitions_1 = require("./account-definitions");
 // Enums
 var DeploymentType;
 (function (DeploymentType) {
@@ -101,17 +102,6 @@ var SupportedLLMKit;
     SupportedLLMKit["DEEPSEEK"] = "deepseek-kit";
     SupportedLLMKit["CARTESIA"] = "cartesia-kit";
 })(SupportedLLMKit || (exports.SupportedLLMKit = SupportedLLMKit = {}));
-var ModelProprietor;
-(function (ModelProprietor) {
-    ModelProprietor["OPENAI"] = "OpenAI";
-    ModelProprietor["GOOGLE"] = "Google";
-    ModelProprietor["ANTHROPIC"] = "Anthropic";
-    ModelProprietor["GROQ"] = "Groq";
-    ModelProprietor["DEEPGRAM"] = "Deepgram";
-    ModelProprietor["ELEVENLABS"] = "ElevenLabs";
-    ModelProprietor["DEEPSEEK"] = "DeepSeek";
-    ModelProprietor["CARTESIA"] = "Cartesia";
-})(ModelProprietor || (exports.ModelProprietor = ModelProprietor = {}));
 var LLMRequestType;
 (function (LLMRequestType) {
     LLMRequestType["TEXT"] = "text";
@@ -120,3 +110,12 @@ var LLMRequestType;
     LLMRequestType["VIDEO"] = "video";
     LLMRequestType["MULTIMODAL"] = "multimodal";
 })(LLMRequestType || (exports.LLMRequestType = LLMRequestType = {}));
+var AgentRoleTemplateIdentifier;
+(function (AgentRoleTemplateIdentifier) {
+    AgentRoleTemplateIdentifier["CUSTOMER_SUPPORT_GENERAL"] = "customer-support-general";
+    AgentRoleTemplateIdentifier["TECHNICAL_SUPPORT_SPECIALIST"] = "technical-support-specialist";
+    AgentRoleTemplateIdentifier["SALES_REPRESENTATIVE"] = "sales-representative";
+    AgentRoleTemplateIdentifier["ONBOARDING_SPECIALIST"] = "onboarding-specialist";
+    AgentRoleTemplateIdentifier["BILLING_SUPPORT_SPECIALIST"] = "billing-support-specialist";
+})(AgentRoleTemplateIdentifier || (exports.AgentRoleTemplateIdentifier = AgentRoleTemplateIdentifier = {}));
+exports.AgentCapabilities = account_definitions_1.BusinessSupportServices;

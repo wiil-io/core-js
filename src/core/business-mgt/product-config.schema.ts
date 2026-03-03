@@ -10,13 +10,11 @@ import { BaseModelSchema } from "../base.schema";
  * Product category schema.
  *
  * @typedef {Object} ProductCategory
- * @property {string} id - Unique category ID
  * @property {string} name - Category name (e.g., Electronics, Clothing)
  * @property {string} [description] - Category description
  * @property {number} [displayOrder] - Display order in catalog
  */
 export const ProductCategorySchema = BaseModelSchema.safeExtend({
-    id: z.string().describe("Unique identifier for this product category in the catalog managed by Product Management."),
     name: z.string().min(1, "Category name is required").describe("Category name for product organization (e.g., Electronics, Clothing, Home & Garden). Used by AI Powered Services when presenting product options to customers."),
     description: z.string().optional().describe("Category description providing context about the type of products included. Helps customers navigate the product catalog and understand category scope."),
     displayOrder: z.number().int().optional().describe("Numeric order for category display in product catalog. Lower numbers appear first. Enables strategic category positioning."),
@@ -26,7 +24,6 @@ export const ProductCategorySchema = BaseModelSchema.safeExtend({
  * Business product schema.
  *
  * @typedef {Object} BusinessProduct
- * @property {string} id - Unique product ID
  * @property {string} name - Product name
  * @property {string} [description] - Product description
  * @property {number} price - Product price
@@ -44,7 +41,6 @@ export const ProductCategorySchema = BaseModelSchema.safeExtend({
  * @property {number} [displayOrder] - Display order in category
  */
 export const BusinessProductSchema = BaseModelSchema.safeExtend({
-    id: z.string().describe("Unique identifier for this product in the catalog managed by Product Management."),
     name: z.string().min(1, "Product name is required").describe("Display name of the product shown to customers. Used by AI Powered Services in product order conversations."),
     description: z.string().optional().describe("Detailed product description including features, specifications, or benefits. Helps customers make informed purchasing decisions and enables AI-powered product recommendations."),
 

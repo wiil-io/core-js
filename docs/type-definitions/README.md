@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.32**](../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.33**](../README.md)
 
 ***
 
@@ -38,6 +38,17 @@ Central export point for all type definitions.
 | [CallPriority](enumerations/CallPriority.md) | - |
 | [PreferredContactMethod](enumerations/PreferredContactMethod.md) | - |
 | [BestTimeToCall](enumerations/BestTimeToCall.md) | - |
+| [PropertyType](enumerations/PropertyType.md) | - |
+| [PropertySubType](enumerations/PropertySubType.md) | - |
+| [ListingType](enumerations/ListingType.md) | - |
+| [ListingStatus](enumerations/ListingStatus.md) | - |
+| [PropertyCondition](enumerations/PropertyCondition.md) | - |
+| [RentalPeriod](enumerations/RentalPeriod.md) | - |
+| [PropertyPurchaseStatus](enumerations/PropertyPurchaseStatus.md) | - |
+| [PropertyLeaseStatus](enumerations/PropertyLeaseStatus.md) | - |
+| [DepositStatus](enumerations/DepositStatus.md) | - |
+| [PropertyInquiryType](enumerations/PropertyInquiryType.md) | - |
+| [PropertyInquiryStatus](enumerations/PropertyInquiryStatus.md) | - |
 | [ConversationEventType](enumerations/ConversationEventType.md) | - |
 | [ServiceConversationType](enumerations/ServiceConversationType.md) | - |
 | [ConversationStatus](enumerations/ConversationStatus.md) | - |
@@ -60,8 +71,14 @@ Central export point for all type definitions.
 | [LLMType](enumerations/LLMType.md) | - |
 | [SupportedProprietor](enumerations/SupportedProprietor.md) | - |
 | [SupportedLLMKit](enumerations/SupportedLLMKit.md) | - |
-| [ModelProprietor](enumerations/ModelProprietor.md) | - |
 | [LLMRequestType](enumerations/LLMRequestType.md) | - |
+| [AgentRoleTemplateIdentifier](enumerations/AgentRoleTemplateIdentifier.md) | - |
+
+## Type Aliases
+
+| Type Alias | Description |
+| ------ | ------ |
+| [AgentCapabilities](type-aliases/AgentCapabilities.md) | - |
 
 ## Variables
 
@@ -69,3 +86,4 @@ Central export point for all type definitions.
 | ------ | ------ |
 | [DAYS\_OF\_WEEK](variables/DAYS_OF_WEEK.md) | - |
 | [TIMEZONES](variables/TIMEZONES.md) | - |
+| [AgentCapabilities](variables/AgentCapabilities.md) | - |

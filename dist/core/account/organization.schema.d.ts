@@ -90,9 +90,9 @@ export declare const OrganizationSchema: z.ZodObject<{
     updatedAt: z.ZodOptional<z.ZodNumber>;
     companyName: z.ZodString;
     businessVerticalId: z.ZodOptional<z.ZodNullable<z.ZodEnum<{
+        retail: "retail";
         healthcare: "healthcare";
         "health-wellness": "health-wellness";
-        retail: "retail";
         finance: "finance";
         "real-estate": "real-estate";
         technology: "technology";

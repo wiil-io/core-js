@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.BestTimeToCall = exports.PreferredContactMethod = exports.CallPriority = exports.TIMEZONES = exports.DAYS_OF_WEEK = exports.BusinessDocumentTypes = exports.BusinessServiceDocumentTypes = exports.RestockStatus = exports.StockStatus = exports.StockAdjustmentType = exports.InventoryUnit = exports.ProductOrderType = exports.MenuOrderType = exports.PaymentStatus = exports.OrderStatus = exports.RecurrenceType = exports.ReservationSlotStatus = exports.AppointmentStatus = exports.ReservationSettingType = exports.ResourceReservationDurationUnit = exports.ResourceType = exports.CalendarProvider = exports.BusinessServiceType = void 0;
+exports.PropertyInquiryStatus = exports.PropertyInquiryType = exports.DepositStatus = exports.PropertyLeaseStatus = exports.PropertyPurchaseStatus = exports.RentalPeriod = exports.PropertyCondition = exports.ListingStatus = exports.ListingType = exports.PropertySubType = exports.PropertyType = exports.BestTimeToCall = exports.PreferredContactMethod = exports.CallPriority = exports.TIMEZONES = exports.DAYS_OF_WEEK = exports.BusinessDocumentTypes = exports.BusinessServiceDocumentTypes = exports.RestockStatus = exports.StockStatus = exports.StockAdjustmentType = exports.InventoryUnit = exports.ProductOrderType = exports.MenuOrderType = exports.PaymentStatus = exports.OrderStatus = exports.RecurrenceType = exports.ReservationSlotStatus = exports.AppointmentStatus = exports.ReservationSettingType = exports.ResourceReservationDurationUnit = exports.ResourceType = exports.CalendarProvider = exports.BusinessServiceType = void 0;
 var BusinessServiceType;
 (function (BusinessServiceType) {
     BusinessServiceType["MENU"] = "menu";
@@ -195,3 +195,95 @@ var BestTimeToCall;
     BestTimeToCall["EVENING"] = "evening";
     BestTimeToCall["ANYTIME"] = "anytime";
 })(BestTimeToCall || (exports.BestTimeToCall = BestTimeToCall = {}));
+// Property Management Enums
+var PropertyType;
+(function (PropertyType) {
+    PropertyType["RESIDENTIAL"] = "residential";
+    PropertyType["COMMERCIAL"] = "commercial";
+    PropertyType["LAND"] = "land";
+})(PropertyType || (exports.PropertyType = PropertyType = {}));
+var PropertySubType;
+(function (PropertySubType) {
+    // Residential
+    PropertySubType["HOUSE"] = "house";
+    PropertySubType["APARTMENT"] = "apartment";
+    PropertySubType["CONDO"] = "condo";
+    PropertySubType["TOWNHOUSE"] = "townhouse";
+    PropertySubType["VILLA"] = "villa";
+    // Commercial
+    PropertySubType["OFFICE"] = "office";
+    PropertySubType["RETAIL"] = "retail";
+    PropertySubType["WAREHOUSE"] = "warehouse";
+    PropertySubType["INDUSTRIAL"] = "industrial";
+    // Land
+    PropertySubType["LOT"] = "lot";
+    PropertySubType["FARM"] = "farm";
+    PropertySubType["ACREAGE"] = "acreage";
+})(PropertySubType || (exports.PropertySubType = PropertySubType = {}));
+var ListingType;
+(function (ListingType) {
+    ListingType["SALE"] = "sale";
+    ListingType["RENT"] = "rent";
+    ListingType["BOTH"] = "both";
+})(ListingType || (exports.ListingType = ListingType = {}));
+var ListingStatus;
+(function (ListingStatus) {
+    ListingStatus["DRAFT"] = "draft";
+    ListingStatus["ACTIVE"] = "active";
+    ListingStatus["UNDER_OFFER"] = "under_offer";
+    ListingStatus["SOLD"] = "sold";
+    ListingStatus["LEASED"] = "leased";
+    ListingStatus["WITHDRAWN"] = "withdrawn";
+})(ListingStatus || (exports.ListingStatus = ListingStatus = {}));
+var PropertyCondition;
+(function (PropertyCondition) {
+    PropertyCondition["NEW"] = "new";
+    PropertyCondition["EXCELLENT"] = "excellent";
+    PropertyCondition["GOOD"] = "good";
+    PropertyCondition["FAIR"] = "fair";
+    PropertyCondition["NEEDS_WORK"] = "needs_work";
+})(PropertyCondition || (exports.PropertyCondition = PropertyCondition = {}));
+var RentalPeriod;
+(function (RentalPeriod) {
+    RentalPeriod["DAILY"] = "daily";
+    RentalPeriod["WEEKLY"] = "weekly";
+    RentalPeriod["MONTHLY"] = "monthly";
+    RentalPeriod["YEARLY"] = "yearly";
+})(RentalPeriod || (exports.RentalPeriod = RentalPeriod = {}));
+var PropertyPurchaseStatus;
+(function (PropertyPurchaseStatus) {
+    PropertyPurchaseStatus["INQUIRY"] = "inquiry";
+    PropertyPurchaseStatus["OFFER_MADE"] = "offer_made";
+    PropertyPurchaseStatus["UNDER_CONTRACT"] = "under_contract";
+    PropertyPurchaseStatus["COMPLETED"] = "completed";
+    PropertyPurchaseStatus["CANCELLED"] = "cancelled";
+})(PropertyPurchaseStatus || (exports.PropertyPurchaseStatus = PropertyPurchaseStatus = {}));
+var PropertyLeaseStatus;
+(function (PropertyLeaseStatus) {
+    PropertyLeaseStatus["PENDING"] = "pending";
+    PropertyLeaseStatus["ACTIVE"] = "active";
+    PropertyLeaseStatus["RENEWED"] = "renewed";
+    PropertyLeaseStatus["TERMINATED"] = "terminated";
+    PropertyLeaseStatus["EXPIRED"] = "expired";
+})(PropertyLeaseStatus || (exports.PropertyLeaseStatus = PropertyLeaseStatus = {}));
+var DepositStatus;
+(function (DepositStatus) {
+    DepositStatus["PENDING"] = "pending";
+    DepositStatus["PAID"] = "paid";
+    DepositStatus["RETURNED"] = "returned";
+    DepositStatus["FORFEITED"] = "forfeited";
+})(DepositStatus || (exports.DepositStatus = DepositStatus = {}));
+var PropertyInquiryType;
+(function (PropertyInquiryType) {
+    PropertyInquiryType["OFFER"] = "offer";
+    PropertyInquiryType["GENERAL"] = "general";
+})(PropertyInquiryType || (exports.PropertyInquiryType = PropertyInquiryType = {}));
+var PropertyInquiryStatus;
+(function (PropertyInquiryStatus) {
+    PropertyInquiryStatus["NEW"] = "new";
+    PropertyInquiryStatus["CONTACTED"] = "contacted";
+    PropertyInquiryStatus["VIEWING_SCHEDULED"] = "viewing_scheduled";
+    PropertyInquiryStatus["FOLLOW_UP"] = "follow_up";
+    PropertyInquiryStatus["CONVERTED"] = "converted";
+    PropertyInquiryStatus["CLOSED"] = "closed";
+})(PropertyInquiryStatus || (exports.PropertyInquiryStatus = PropertyInquiryStatus = {}));

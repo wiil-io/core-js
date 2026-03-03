@@ -69,16 +69,18 @@ export enum ServiceSuspensionType {
  * ```
  */
 export enum BusinessSupportServices {
-    /** Appointment scheduling and management functionality */
-    APPOINTMENT_MANAGEMENT = 'appointment_management',
-    /** Inventory tracking and stock management functionality */
-    INVENTORY_MANAGEMENT = 'inventory_management',
-    /** Restaurant menu and food order management functionality */
-    MENU_ORDER_MANAGEMENT = 'menu_order_management',
-    /** E-commerce product order management functionality */
-    PRODUCT_ORDER_MANAGEMENT = 'product_order_management',
-    /** Table and venue reservation management functionality */
-    RESERVATION_MANAGEMENT = 'reservation_management',
-    /** No business support services enabled */
-    NONE = 'none',
+  /** Appointment scheduling and management functionality */
+  APPOINTMENT_MANAGEMENT = 'appointment_management',
+  /** Inventory tracking and stock management functionality */
+  INVENTORY_MANAGEMENT = 'inventory_management',
+  /** Restaurant menu and food order management functionality */
+  MENU_ORDER_MANAGEMENT = 'menu_order_management',
+  /** E-commerce product order management functionality */
+  PRODUCT_ORDER_MANAGEMENT = 'product_order_management',
+  /** Table and venue reservation management functionality */
+  RESERVATION_MANAGEMENT = 'reservation_management',
+  /** Property listing and rental management functionality */
+  PROPERTY_MANAGEMENT = 'property_management',
+  /** No business support services enabled */
+  NONE = 'none',
 }

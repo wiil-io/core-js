@@ -2,12 +2,16 @@
  * @fileoverview Central export point for business management schemas.
  * @module business-mgt
  */
+export * from './appointment-additional-info.schema';
+export * from './appointment-field-config.schema';
 export * from './customer.schema';
 export * from './menu-config.schema';
 export * from './menu.order.schema';
 export * from './order.schema';
 export * from './product-config.schema';
 export * from './product-order.schema';
+export * from './property-config.schema';
+export * from './property-inquiry.schema';
 export * from './reservation.schema';
 export * from './reservation-resource.schema';
 export * from './service-appointment.schema';

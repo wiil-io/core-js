@@ -105,7 +105,6 @@ export declare const AppointmentFieldConfigSchema: z.ZodObject<{
 export type AppointmentFieldConfig = z.infer<typeof AppointmentFieldConfigSchema>;
 export declare const CreateAppointmentFieldConfigSchema: z.ZodObject<{
     id: z.ZodString;
-    reuseDetails: z.ZodDefault<z.ZodBoolean>;
     fields: z.ZodDefault<z.ZodArray<z.ZodObject<{
         fieldKey: z.ZodString;
         fieldType: z.ZodEnum<{
@@ -172,12 +171,12 @@ export declare const CreateAppointmentFieldConfigSchema: z.ZodObject<{
         collapsible: z.ZodOptional<z.ZodBoolean>;
         defaultCollapsed: z.ZodOptional<z.ZodBoolean>;
     }, z.core.$strip>>>;
+    reuseDetails: z.ZodDefault<z.ZodBoolean>;
     ensureEmail: z.ZodDefault<z.ZodBoolean>;
     ensurePhone: z.ZodDefault<z.ZodBoolean>;
 }, z.core.$strip>;
 export type CreateAppointmentFieldConfig = z.infer<typeof CreateAppointmentFieldConfigSchema>;
 export declare const UpdateAppointmentFieldConfigSchema: z.ZodObject<{
-    reuseDetails: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
     fields: z.ZodOptional<z.ZodDefault<z.ZodArray<z.ZodObject<{
         fieldKey: z.ZodString;
         fieldType: z.ZodEnum<{
@@ -244,6 +243,7 @@ export declare const UpdateAppointmentFieldConfigSchema: z.ZodObject<{
         collapsible: z.ZodOptional<z.ZodBoolean>;
         defaultCollapsed: z.ZodOptional<z.ZodBoolean>;
     }, z.core.$strip>>>>;
+    reuseDetails: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
     ensureEmail: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
     ensurePhone: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
     id: z.ZodString;

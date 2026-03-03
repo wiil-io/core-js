@@ -1,3 +1,5 @@
+import { BusinessSupportServices } from "./account-definitions";
+
 // Enums
 export enum DeploymentType {
   CALLS = 'calls',
@@ -106,17 +108,6 @@ export enum SupportedLLMKit {
     CARTESIA = 'cartesia-kit',
 }
 
-export enum ModelProprietor {
-    OPENAI = 'OpenAI',
-    GOOGLE = 'Google',
-    ANTHROPIC = 'Anthropic',
-    GROQ = 'Groq',
-    DEEPGRAM = 'Deepgram',
-    ELEVENLABS = 'ElevenLabs',
-    DEEPSEEK = 'DeepSeek',
-    CARTESIA = 'Cartesia',
-}
-
 export enum LLMRequestType {
     TEXT = "text",
     AUDIO = "audio",
@@ -124,3 +115,16 @@ export enum LLMRequestType {
     VIDEO = "video",
     MULTIMODAL = "multimodal"
 }
+
+
+export enum AgentRoleTemplateIdentifier {
+  CUSTOMER_SUPPORT_GENERAL = 'customer-support-general',
+  TECHNICAL_SUPPORT_SPECIALIST = 'technical-support-specialist',
+  SALES_REPRESENTATIVE = 'sales-representative',
+  ONBOARDING_SPECIALIST = 'onboarding-specialist',
+  BILLING_SUPPORT_SPECIALIST = 'billing-support-specialist'
+}
+
+
+export const AgentCapabilities = BusinessSupportServices;
+export type AgentCapabilities = BusinessSupportServices;

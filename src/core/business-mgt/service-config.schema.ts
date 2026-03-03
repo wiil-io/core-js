@@ -56,7 +56,6 @@ export type ServiceAppointmentFieldConfig = z.infer<typeof ServiceAppointmentFie
 
  */
 export const BusinessServiceConfigSchema = BaseModelSchema.safeExtend({
-    id: z.string().describe("Unique identifier for this business service in the catalog managed by Appointment Management."),
     name: z.string().min(1, "Service name is required").describe("Display name of the service offered (e.g., 'Haircut', 'Massage', 'Consultation'). Used by AI Powered Services when presenting booking options to customers."),
     description: z.string().describe("Detailed description of the service including what's included, benefits, or special instructions. Helps customers understand the service before booking via Service Appointment workflow."),
 

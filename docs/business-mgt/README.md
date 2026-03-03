@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.32**](../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.33**](../README.md)
 
 ***
 
@@ -26,6 +26,15 @@ Central export point for business management schemas.
 | [ProductOrderFilters](interfaces/ProductOrderFilters.md) | - |
 | [ProductOrderSorting](interfaces/ProductOrderSorting.md) | - |
 | [ProductOrderQueryOptions](interfaces/ProductOrderQueryOptions.md) | - |
+| [PropertyFilters](interfaces/PropertyFilters.md) | - |
+| [PropertySorting](interfaces/PropertySorting.md) | - |
+| [PropertyQueryOptions](interfaces/PropertyQueryOptions.md) | - |
+| [PropertyAddressFilters](interfaces/PropertyAddressFilters.md) | - |
+| [PropertyAddressSorting](interfaces/PropertyAddressSorting.md) | - |
+| [PropertyAddressQueryOptions](interfaces/PropertyAddressQueryOptions.md) | - |
+| [PropertyInquiryFilters](interfaces/PropertyInquiryFilters.md) | - |
+| [PropertyInquirySorting](interfaces/PropertyInquirySorting.md) | - |
+| [PropertyInquiryQueryOptions](interfaces/PropertyInquiryQueryOptions.md) | - |
 | [ReservationFilters](interfaces/ReservationFilters.md) | - |
 | [ReservationSorting](interfaces/ReservationSorting.md) | - |
 | [ReservationQueryOptions](interfaces/ReservationQueryOptions.md) | - |
@@ -34,6 +43,13 @@ Central export point for business management schemas.
 
 | Type Alias | Description |
 | ------ | ------ |
+| [DynamicFieldValue](type-aliases/DynamicFieldValue.md) | Schema for dynamic field value types. Accepts any value type to support the various DynamicFieldType values (text, number, boolean, date, select options, etc.) |
+| [AppointmentAdditionalInfo](type-aliases/AppointmentAdditionalInfo.md) | Schema for storing dynamic field values captured during appointment booking. Links the captured data to the organization, service, appointment, and customer. |
+| [CreateAppointmentAdditionalInfo](type-aliases/CreateAppointmentAdditionalInfo.md) | - |
+| [UpdateAppointmentAdditionalInfo](type-aliases/UpdateAppointmentAdditionalInfo.md) | - |
+| [AppointmentFieldConfig](type-aliases/AppointmentFieldConfig.md) | Organization-level appointment field configuration. Defines the base field library available to all services within an organization. Services reference this configuration via `appointmentFieldConfigId` and can selectively inherit, override, or extend the defined fields. |
+| [CreateAppointmentFieldConfig](type-aliases/CreateAppointmentFieldConfig.md) | - |
+| [UpdateAppointmentFieldConfig](type-aliases/UpdateAppointmentFieldConfig.md) | - |
 | [CreateCustomer](type-aliases/CreateCustomer.md) | Schema for creating a new customer. Omits auto-generated fields. |
 | [UpdateCustomer](type-aliases/UpdateCustomer.md) | Schema for updating an existing customer. All fields are optional except id. |
 | [Customer](type-aliases/Customer.md) | Customer schema - Individual customer record. |
@@ -68,6 +84,22 @@ Central export point for business management schemas.
 | [UpdateProductOrderStatus](type-aliases/UpdateProductOrderStatus.md) | Quick status update schema for product orders. |
 | [CreateProductOrderItem](type-aliases/CreateProductOrderItem.md) | Base product order item schema (without productOrderId for creation). |
 | [OrderInventoryUpdate](type-aliases/OrderInventoryUpdate.md) | Schema for inventory updates triggered by order fulfillment. |
+| [PropertyCategory](type-aliases/PropertyCategory.md) | Property category schema. |
+| [CreatePropertyCategory](type-aliases/CreatePropertyCategory.md) | Schema for creating a new property category. Omits auto-generated fields. |
+| [UpdatePropertyCategory](type-aliases/UpdatePropertyCategory.md) | Schema for updating an existing property category. All fields are optional except id. |
+| [PropertyAddress](type-aliases/PropertyAddress.md) | Property address schema (standalone entity). |
+| [CreatePropertyAddress](type-aliases/CreatePropertyAddress.md) | Schema for creating a new property address. Omits auto-generated fields. |
+| [UpdatePropertyAddress](type-aliases/UpdatePropertyAddress.md) | Schema for updating an existing property address. All fields are optional except id. |
+| [PropertyFeatures](type-aliases/PropertyFeatures.md) | Property features schema. |
+| [Property](type-aliases/Property.md) | Main property schema for real estate listings. |
+| [CreateProperty](type-aliases/CreateProperty.md) | Schema for creating a new property listing. Omits auto-generated fields and populated objects. |
+| [UpdateProperty](type-aliases/UpdateProperty.md) | Schema for updating an existing property listing. All fields are optional except id. |
+| [PropertyCatalog](type-aliases/PropertyCatalog.md) | - |
+| [BusinessPropertyCatalog](type-aliases/BusinessPropertyCatalog.md) | - |
+| [PropertyInquiry](type-aliases/PropertyInquiry.md) | Property inquiry schema for tracking customer interest in properties. |
+| [CreatePropertyInquiry](type-aliases/CreatePropertyInquiry.md) | Schema for creating a new property inquiry. Omits auto-generated fields. |
+| [UpdatePropertyInquiry](type-aliases/UpdatePropertyInquiry.md) | Schema for updating an existing property inquiry. All fields are optional except id. |
+| [UpdatePropertyInquiryStatus](type-aliases/UpdatePropertyInquiryStatus.md) | Quick status update schema for property inquiries. Allows updating status and viewing/follow-up details without full update. |
 | [Resource](type-aliases/Resource.md) | Main resource schema for managing reservable resources. |
 | [CreateResource](type-aliases/CreateResource.md) | Schema for creating a new resource. Omits auto-generated fields. |
 | [UpdateResource](type-aliases/UpdateResource.md) | Schema for updating an existing resource. All fields are optional except id. |
@@ -92,6 +124,13 @@ Central export point for business management schemas.
 
 | Variable | Description |
 | ------ | ------ |
+| [DynamicFieldValueSchema](variables/DynamicFieldValueSchema.md) | Schema for dynamic field value types. Accepts any value type to support the various DynamicFieldType values (text, number, boolean, date, select options, etc.) |
+| [AppointmentAdditionalInfoSchema](variables/AppointmentAdditionalInfoSchema.md) | Schema for storing dynamic field values captured during appointment booking. Links the captured data to the organization, service, appointment, and customer. |
+| [CreateAppointmentAdditionalInfoSchema](variables/CreateAppointmentAdditionalInfoSchema.md) | - |
+| [UpdateAppointmentAdditionalInfoSchema](variables/UpdateAppointmentAdditionalInfoSchema.md) | - |
+| [AppointmentFieldConfigSchema](variables/AppointmentFieldConfigSchema.md) | Organization-level appointment field configuration. Defines the base field library available to all services within an organization. Services reference this configuration via `appointmentFieldConfigId` and can selectively inherit, override, or extend the defined fields. |
+| [CreateAppointmentFieldConfigSchema](variables/CreateAppointmentFieldConfigSchema.md) | - |
+| [UpdateAppointmentFieldConfigSchema](variables/UpdateAppointmentFieldConfigSchema.md) | - |
 | [CustomerSchema](variables/CustomerSchema.md) | Customer schema - Individual customer record. |
 | [CreateCustomerSchema](variables/CreateCustomerSchema.md) | Schema for creating a new customer. Omits auto-generated fields. |
 | [UpdateCustomerSchema](variables/UpdateCustomerSchema.md) | Schema for updating an existing customer. All fields are optional except id. |
@@ -124,6 +163,22 @@ Central export point for business management schemas.
 | [UpdateProductOrderSchema](variables/UpdateProductOrderSchema.md) | Schema for updating an existing product order. All fields are optional except id. |
 | [UpdateProductOrderStatusSchema](variables/UpdateProductOrderStatusSchema.md) | Quick status update schema for product orders. |
 | [OrderInventoryUpdateSchema](variables/OrderInventoryUpdateSchema.md) | Schema for inventory updates triggered by order fulfillment. |
+| [PropertyCategorySchema](variables/PropertyCategorySchema.md) | Property category schema. |
+| [PropertyAddressSchema](variables/PropertyAddressSchema.md) | Property address schema (standalone entity). |
+| [PropertyFeaturesSchema](variables/PropertyFeaturesSchema.md) | Property features schema. |
+| [PropertySchema](variables/PropertySchema.md) | Main property schema for real estate listings. |
+| [CreatePropertyCategorySchema](variables/CreatePropertyCategorySchema.md) | Schema for creating a new property category. Omits auto-generated fields. |
+| [UpdatePropertyCategorySchema](variables/UpdatePropertyCategorySchema.md) | Schema for updating an existing property category. All fields are optional except id. |
+| [CreatePropertyAddressSchema](variables/CreatePropertyAddressSchema.md) | Schema for creating a new property address. Omits auto-generated fields. |
+| [UpdatePropertyAddressSchema](variables/UpdatePropertyAddressSchema.md) | Schema for updating an existing property address. All fields are optional except id. |
+| [CreatePropertySchema](variables/CreatePropertySchema.md) | Schema for creating a new property listing. Omits auto-generated fields and populated objects. |
+| [UpdatePropertySchema](variables/UpdatePropertySchema.md) | Schema for updating an existing property listing. All fields are optional except id. |
+| [PropertyCatalogSchema](variables/PropertyCatalogSchema.md) | - |
+| [BusinessPropertyCatalogSchema](variables/BusinessPropertyCatalogSchema.md) | - |
+| [PropertyInquirySchema](variables/PropertyInquirySchema.md) | Property inquiry schema for tracking customer interest in properties. |
+| [CreatePropertyInquirySchema](variables/CreatePropertyInquirySchema.md) | Schema for creating a new property inquiry. Omits auto-generated fields. |
+| [UpdatePropertyInquirySchema](variables/UpdatePropertyInquirySchema.md) | Schema for updating an existing property inquiry. All fields are optional except id. |
+| [UpdatePropertyInquiryStatusSchema](variables/UpdatePropertyInquiryStatusSchema.md) | Quick status update schema for property inquiries. Allows updating status and viewing/follow-up details without full update. |
 | [RoomResourceSchema](variables/RoomResourceSchema.md) | Room resource schema for hotel/accommodation bookings. |
 | [RentalResourceSchema](variables/RentalResourceSchema.md) | Rental resource schema for hourly rentals. |
 | [ResourceSchema](variables/ResourceSchema.md) | Main resource schema for managing reservable resources. |

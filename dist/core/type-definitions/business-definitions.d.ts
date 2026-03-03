@@ -152,3 +152,80 @@ export declare enum BestTimeToCall {
     EVENING = "evening",
     ANYTIME = "anytime"
 }
+export declare enum PropertyType {
+    RESIDENTIAL = "residential",
+    COMMERCIAL = "commercial",
+    LAND = "land"
+}
+export declare enum PropertySubType {
+    HOUSE = "house",
+    APARTMENT = "apartment",
+    CONDO = "condo",
+    TOWNHOUSE = "townhouse",
+    VILLA = "villa",
+    OFFICE = "office",
+    RETAIL = "retail",
+    WAREHOUSE = "warehouse",
+    INDUSTRIAL = "industrial",
+    LOT = "lot",
+    FARM = "farm",
+    ACREAGE = "acreage"
+}
+export declare enum ListingType {
+    SALE = "sale",
+    RENT = "rent",
+    BOTH = "both"
+}
+export declare enum ListingStatus {
+    DRAFT = "draft",
+    ACTIVE = "active",
+    UNDER_OFFER = "under_offer",
+    SOLD = "sold",
+    LEASED = "leased",
+    WITHDRAWN = "withdrawn"
+}
+export declare enum PropertyCondition {
+    NEW = "new",
+    EXCELLENT = "excellent",
+    GOOD = "good",
+    FAIR = "fair",
+    NEEDS_WORK = "needs_work"
+}
+export declare enum RentalPeriod {
+    DAILY = "daily",
+    WEEKLY = "weekly",
+    MONTHLY = "monthly",
+    YEARLY = "yearly"
+}
+export declare enum PropertyPurchaseStatus {
+    INQUIRY = "inquiry",
+    OFFER_MADE = "offer_made",
+    UNDER_CONTRACT = "under_contract",
+    COMPLETED = "completed",
+    CANCELLED = "cancelled"
+}
+export declare enum PropertyLeaseStatus {
+    PENDING = "pending",
+    ACTIVE = "active",
+    RENEWED = "renewed",
+    TERMINATED = "terminated",
+    EXPIRED = "expired"
+}
+export declare enum DepositStatus {
+    PENDING = "pending",
+    PAID = "paid",
+    RETURNED = "returned",
+    FORFEITED = "forfeited"
+}
+export declare enum PropertyInquiryType {
+    OFFER = "offer",
+    GENERAL = "general"
+}
+export declare enum PropertyInquiryStatus {
+    NEW = "new",
+    CONTACTED = "contacted",
+    VIEWING_SCHEDULED = "viewing_scheduled",
+    FOLLOW_UP = "follow_up",
+    CONVERTED = "converted",
+    CLOSED = "closed"
+}

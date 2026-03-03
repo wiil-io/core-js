@@ -56,7 +56,6 @@ exports.ServiceAppointmentFieldConfigSchema = zod_1.default.object({
 
  */
 exports.BusinessServiceConfigSchema = base_schema_1.BaseModelSchema.safeExtend({
-    id: zod_1.default.string().describe("Unique identifier for this business service in the catalog managed by Appointment Management."),
     name: zod_1.default.string().min(1, "Service name is required").describe("Display name of the service offered (e.g., 'Haircut', 'Massage', 'Consultation'). Used by AI Powered Services when presenting booking options to customers."),
     description: zod_1.default.string().describe("Detailed description of the service including what's included, benefits, or special instructions. Helps customers understand the service before booking via Service Appointment workflow."),
     // Scheduling & Duration

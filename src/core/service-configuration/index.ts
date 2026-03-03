@@ -14,3 +14,4 @@ export * from './phone-number.schema';
 export * from './provisioning-config';
 export * from './support-llm';
 export * from './voice-language.schema';
+export * from './dynamic_setup';

@@ -7,15 +7,14 @@ import z from "zod";
  * Product category schema.
  *
  * @typedef {Object} ProductCategory
- * @property {string} id - Unique category ID
  * @property {string} name - Category name (e.g., Electronics, Clothing)
  * @property {string} [description] - Category description
  * @property {number} [displayOrder] - Display order in catalog
  */
 export declare const ProductCategorySchema: z.ZodObject<{
+    id: z.ZodString;
     createdAt: z.ZodOptional<z.ZodNumber>;
     updatedAt: z.ZodOptional<z.ZodNumber>;
-    id: z.ZodString;
     name: z.ZodString;
     description: z.ZodOptional<z.ZodString>;
     displayOrder: z.ZodOptional<z.ZodNumber>;
@@ -24,7 +23,6 @@ export declare const ProductCategorySchema: z.ZodObject<{
  * Business product schema.
  *
  * @typedef {Object} BusinessProduct
- * @property {string} id - Unique product ID
  * @property {string} name - Product name
  * @property {string} [description] - Product description
  * @property {number} price - Product price
@@ -42,9 +40,9 @@ export declare const ProductCategorySchema: z.ZodObject<{
  * @property {number} [displayOrder] - Display order in category
  */
 export declare const BusinessProductSchema: z.ZodObject<{
+    id: z.ZodString;
     createdAt: z.ZodOptional<z.ZodNumber>;
     updatedAt: z.ZodOptional<z.ZodNumber>;
-    id: z.ZodString;
     name: z.ZodString;
     description: z.ZodOptional<z.ZodString>;
     price: z.ZodNumber;
@@ -52,9 +50,9 @@ export declare const BusinessProductSchema: z.ZodObject<{
     barcode: z.ZodOptional<z.ZodString>;
     categoryId: z.ZodString;
     category: z.ZodOptional<z.ZodObject<{
+        id: z.ZodString;
         createdAt: z.ZodOptional<z.ZodNumber>;
         updatedAt: z.ZodOptional<z.ZodNumber>;
-        id: z.ZodString;
         name: z.ZodString;
         description: z.ZodOptional<z.ZodString>;
         displayOrder: z.ZodOptional<z.ZodNumber>;

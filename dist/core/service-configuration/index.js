@@ -29,3 +29,4 @@ __exportStar(require("./phone-number.schema"), exports);
 __exportStar(require("./provisioning-config"), exports);
 __exportStar(require("./support-llm"), exports);
 __exportStar(require("./voice-language.schema"), exports);
+__exportStar(require("./dynamic_setup"), exports);

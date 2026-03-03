@@ -76,6 +76,8 @@ export declare enum BusinessSupportServices {
     PRODUCT_ORDER_MANAGEMENT = "product_order_management",
     /** Table and venue reservation management functionality */
     RESERVATION_MANAGEMENT = "reservation_management",
+    /** Property listing and rental management functionality */
+    PROPERTY_MANAGEMENT = "property_management",
     /** No business support services enabled */
     NONE = "none"
 }

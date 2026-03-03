@@ -1,3 +1,4 @@
+import { BusinessSupportServices } from "./account-definitions";
 export declare enum DeploymentType {
     CALLS = "calls",
     SMS = "sms",
@@ -80,16 +81,6 @@ export declare enum SupportedLLMKit {
     DEEPSEEK = "deepseek-kit",
     CARTESIA = "cartesia-kit"
 }
-export declare enum ModelProprietor {
-    OPENAI = "OpenAI",
-    GOOGLE = "Google",
-    ANTHROPIC = "Anthropic",
-    GROQ = "Groq",
-    DEEPGRAM = "Deepgram",
-    ELEVENLABS = "ElevenLabs",
-    DEEPSEEK = "DeepSeek",
-    CARTESIA = "Cartesia"
-}
 export declare enum LLMRequestType {
     TEXT = "text",
     AUDIO = "audio",
@@ -97,3 +88,12 @@ export declare enum LLMRequestType {
     VIDEO = "video",
     MULTIMODAL = "multimodal"
 }
+export declare enum AgentRoleTemplateIdentifier {
+    CUSTOMER_SUPPORT_GENERAL = "customer-support-general",
+    TECHNICAL_SUPPORT_SPECIALIST = "technical-support-specialist",
+    SALES_REPRESENTATIVE = "sales-representative",
+    ONBOARDING_SPECIALIST = "onboarding-specialist",
+    BILLING_SUPPORT_SPECIALIST = "billing-support-specialist"
+}
+export declare const AgentCapabilities: typeof BusinessSupportServices;
+export type AgentCapabilities = BusinessSupportServices;

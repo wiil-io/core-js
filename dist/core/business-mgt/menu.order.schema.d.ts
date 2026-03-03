@@ -60,7 +60,6 @@ export declare const MenuOrderItemSchema: z.ZodObject<{
  * Menu order schema - for restaurants/food service.
  *
  * @typedef {Object} MenuOrder
- * @property {string} id - Unique order ID
  * @property {string} [orderNumber] - Human-readable order number
  * @property {string} type - Order type (dine-in, takeout, delivery)
  * @property {string} status - Current order status
@@ -86,9 +85,9 @@ export declare const MenuOrderItemSchema: z.ZodObject<{
  * @property {Object} [deliveryAddress] - Delivery address if applicable
  */
 export declare const MenuOrderSchema: z.ZodObject<{
+    id: z.ZodString;
     createdAt: z.ZodOptional<z.ZodNumber>;
     updatedAt: z.ZodOptional<z.ZodNumber>;
-    id: z.ZodString;
     orderNumber: z.ZodOptional<z.ZodString>;
     type: z.ZodEnum<typeof MenuOrderType>;
     status: z.ZodDefault<z.ZodEnum<typeof OrderStatus>>;

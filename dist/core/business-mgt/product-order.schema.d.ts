@@ -52,7 +52,6 @@ export declare const ProductOrderItemSchema: z.ZodObject<{
  * Product order schema - for retail/product sales.
  *
  * @typedef {Object} ProductOrder
- * @property {string} id - Unique order ID
  * @property {string} [orderNumber] - Human-readable order number
  * @property {string} status - Order status
  * @property {Array} items - Items in the order
@@ -78,9 +77,9 @@ export declare const ProductOrderItemSchema: z.ZodObject<{
  * @property {string} [serviceConversationConfigId] - Service conversation config ID
  */
 export declare const ProductOrderSchema: z.ZodObject<{
+    id: z.ZodString;
     createdAt: z.ZodOptional<z.ZodNumber>;
     updatedAt: z.ZodOptional<z.ZodNumber>;
-    id: z.ZodString;
     orderNumber: z.ZodOptional<z.ZodString>;
     status: z.ZodDefault<z.ZodEnum<typeof OrderStatus>>;
     items: z.ZodArray<z.ZodObject<{

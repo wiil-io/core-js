@@ -46,18 +46,18 @@ export declare const AppointmentAdditionalInfoSchema: z.ZodObject<{
 export type AppointmentAdditionalInfo = z.infer<typeof AppointmentAdditionalInfoSchema>;
 export declare const CreateAppointmentAdditionalInfoSchema: z.ZodObject<{
     data: z.ZodDefault<z.ZodRecord<z.ZodString, z.ZodAny>>;
-    customerId: z.ZodString;
-    businessServiceId: z.ZodString;
     organizationId: z.ZodString;
+    businessServiceId: z.ZodString;
     appointmentId: z.ZodString;
+    customerId: z.ZodString;
 }, z.core.$strip>;
 export type CreateAppointmentAdditionalInfo = z.infer<typeof CreateAppointmentAdditionalInfoSchema>;
 export declare const UpdateAppointmentAdditionalInfoSchema: z.ZodObject<{
     data: z.ZodOptional<z.ZodDefault<z.ZodRecord<z.ZodString, z.ZodAny>>>;
-    customerId: z.ZodOptional<z.ZodString>;
-    businessServiceId: z.ZodOptional<z.ZodString>;
     organizationId: z.ZodOptional<z.ZodString>;
+    businessServiceId: z.ZodOptional<z.ZodString>;
     appointmentId: z.ZodOptional<z.ZodString>;
+    customerId: z.ZodOptional<z.ZodString>;
     id: z.ZodString;
 }, z.core.$strip>;
 export type UpdateAppointmentAdditionalInfo = z.infer<typeof UpdateAppointmentAdditionalInfoSchema>;

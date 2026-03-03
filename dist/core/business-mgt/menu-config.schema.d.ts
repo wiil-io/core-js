@@ -12,9 +12,9 @@ export declare const MenuCategorySchema: z.ZodObject<{
     displayOrder: z.ZodOptional<z.ZodNumber>;
 }, z.core.$strip>;
 export declare const BusinessMenuItemSchema: z.ZodObject<{
+    id: z.ZodString;
     createdAt: z.ZodOptional<z.ZodNumber>;
     updatedAt: z.ZodOptional<z.ZodNumber>;
-    id: z.ZodString;
     name: z.ZodString;
     description: z.ZodOptional<z.ZodString>;
     price: z.ZodNumber;

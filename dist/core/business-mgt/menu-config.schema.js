@@ -16,7 +16,6 @@ exports.MenuCategorySchema = base_schema_1.BaseModelSchema.safeExtend({
     displayOrder: zod_1.default.number().int().optional().describe("Numeric order for category display in menu listings. Lower numbers appear first. Enables custom menu organization."),
 });
 exports.BusinessMenuItemSchema = base_schema_1.BaseModelSchema.safeExtend({
-    id: zod_1.default.string().describe("Unique identifier for this menu item in the catalog managed by Menu Management."),
     name: zod_1.default.string().min(1, "Menu item name is required").describe("Display name of the menu item shown to customers. Used by AI Powered Services in menu order conversations."),
     description: zod_1.default.string().optional().describe("Detailed item description including preparation style, ingredients, or special features. Helps customers make informed selections."),
     // Menu-specific fields

@@ -203,3 +203,97 @@ export enum BestTimeToCall {
     EVENING = 'evening',
     ANYTIME = 'anytime'
 }
+
+
+
+// Property Management Enums
+export enum PropertyType {
+    RESIDENTIAL = 'residential',
+    COMMERCIAL = 'commercial',
+    LAND = 'land'
+}
+
+export enum PropertySubType {
+    // Residential
+    HOUSE = 'house',
+    APARTMENT = 'apartment',
+    CONDO = 'condo',
+    TOWNHOUSE = 'townhouse',
+    VILLA = 'villa',
+    // Commercial
+    OFFICE = 'office',
+    RETAIL = 'retail',
+    WAREHOUSE = 'warehouse',
+    INDUSTRIAL = 'industrial',
+    // Land
+    LOT = 'lot',
+    FARM = 'farm',
+    ACREAGE = 'acreage'
+}
+
+export enum ListingType {
+    SALE = 'sale',
+    RENT = 'rent',
+    BOTH = 'both'
+}
+
+export enum ListingStatus {
+    DRAFT = 'draft',
+    ACTIVE = 'active',
+    UNDER_OFFER = 'under_offer',
+    SOLD = 'sold',
+    LEASED = 'leased',
+    WITHDRAWN = 'withdrawn'
+}
+
+export enum PropertyCondition {
+    NEW = 'new',
+    EXCELLENT = 'excellent',
+    GOOD = 'good',
+    FAIR = 'fair',
+    NEEDS_WORK = 'needs_work'
+}
+
+export enum RentalPeriod {
+    DAILY = 'daily',
+    WEEKLY = 'weekly',
+    MONTHLY = 'monthly',
+    YEARLY = 'yearly'
+}
+
+export enum PropertyPurchaseStatus {
+    INQUIRY = 'inquiry',
+    OFFER_MADE = 'offer_made',
+    UNDER_CONTRACT = 'under_contract',
+    COMPLETED = 'completed',
+    CANCELLED = 'cancelled'
+}
+
+export enum PropertyLeaseStatus {
+    PENDING = 'pending',
+    ACTIVE = 'active',
+    RENEWED = 'renewed',
+    TERMINATED = 'terminated',
+    EXPIRED = 'expired'
+}
+
+export enum DepositStatus {
+    PENDING = 'pending',
+    PAID = 'paid',
+    RETURNED = 'returned',
+    FORFEITED = 'forfeited'
+}
+
+export enum PropertyInquiryType {
+    OFFER = 'offer',
+    GENERAL = 'general'
+}
+
+export enum PropertyInquiryStatus {
+    NEW = 'new',
+    CONTACTED = 'contacted',
+    VIEWING_SCHEDULED = 'viewing_scheduled',
+    FOLLOW_UP = 'follow_up',
+    CONVERTED = 'converted',
+    CLOSED = 'closed'
+}

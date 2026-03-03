@@ -130,9 +130,9 @@ export type ServiceAppointmentFieldConfig = z.infer<typeof ServiceAppointmentFie
 
  */
 export declare const BusinessServiceConfigSchema: z.ZodObject<{
+    id: z.ZodString;
     createdAt: z.ZodOptional<z.ZodNumber>;
     updatedAt: z.ZodOptional<z.ZodNumber>;
-    id: z.ZodString;
     name: z.ZodString;
     description: z.ZodString;
     duration: z.ZodDefault<z.ZodNumber>;

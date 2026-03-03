@@ -47,34 +47,34 @@ export declare const ServiceAppointmentSchema: z.ZodObject<{
  * Omits auto-generated fields.
  */
 export declare const CreateServiceAppointmentSchema: z.ZodObject<{
+    businessServiceId: z.ZodString;
     customerId: z.ZodString;
     duration: z.ZodOptional<z.ZodDefault<z.ZodNumber>>;
     totalPrice: z.ZodOptional<z.ZodDefault<z.ZodNumber>>;
+    assignedUserAccountId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    calendarId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    calendarEventId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    calendarProvider: z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof CalendarProvider>>>;
     startTime: z.ZodNumber;
     endTime: z.ZodOptional<z.ZodNumber>;
     depositPaid: z.ZodDefault<z.ZodNumber>;
-    calendarId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-    businessServiceId: z.ZodString;
-    assignedUserAccountId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-    calendarEventId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-    calendarProvider: z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof CalendarProvider>>>;
 }, z.core.$strip>;
 /**
  * Schema for updating an existing service appointment.
  * All fields are optional except id.
  */
 export declare const UpdateServiceAppointmentSchema: z.ZodObject<{
+    businessServiceId: z.ZodOptional<z.ZodString>;
     customerId: z.ZodOptional<z.ZodString>;
     duration: z.ZodOptional<z.ZodOptional<z.ZodDefault<z.ZodNumber>>>;
     totalPrice: z.ZodOptional<z.ZodOptional<z.ZodDefault<z.ZodNumber>>>;
+    assignedUserAccountId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
+    calendarId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
+    calendarEventId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
+    calendarProvider: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof CalendarProvider>>>>;
     startTime: z.ZodOptional<z.ZodNumber>;
     endTime: z.ZodOptional<z.ZodOptional<z.ZodNumber>>;
     depositPaid: z.ZodOptional<z.ZodDefault<z.ZodNumber>>;
-    calendarId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
-    businessServiceId: z.ZodOptional<z.ZodString>;
-    assignedUserAccountId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
-    calendarEventId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
-    calendarProvider: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof CalendarProvider>>>>;
     id: z.ZodString;
     cancelReason: z.ZodOptional<z.ZodNullable<z.ZodString>>;
 }, z.core.$strip>;

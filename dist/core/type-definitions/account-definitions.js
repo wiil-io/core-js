@@ -82,6 +82,8 @@ var BusinessSupportServices;
     BusinessSupportServices["PRODUCT_ORDER_MANAGEMENT"] = "product_order_management";
     /** Table and venue reservation management functionality */
     BusinessSupportServices["RESERVATION_MANAGEMENT"] = "reservation_management";
+    /** Property listing and rental management functionality */
+    BusinessSupportServices["PROPERTY_MANAGEMENT"] = "property_management";
     /** No business support services enabled */
     BusinessSupportServices["NONE"] = "none";
 })(BusinessSupportServices || (exports.BusinessSupportServices = BusinessSupportServices = {}));
