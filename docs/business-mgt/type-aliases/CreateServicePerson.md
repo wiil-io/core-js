@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.33**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.34**](../../README.md)
 
 ***
 
@@ -14,7 +14,7 @@ type CreateServicePerson = {
 };
 ```
 
-Defined in: [src/core/business-mgt/service-person.schema.ts:43](https://github.com/wiil-io/core-js/blob/0912d800094d4e3e2e193adfe1e954d82a65fedc/src/core/business-mgt/service-person.schema.ts#L43)
+Defined in: [src/core/business-mgt/service-person.schema.ts:43](https://github.com/wiil-io/core-js/blob/b68e544868dafd593c2ef184dc1ce1086a9534f7/src/core/business-mgt/service-person.schema.ts#L43)
 
 Schema for creating a new service person.
 Omits auto-generated fields.
@@ -23,6 +23,6 @@ Omits auto-generated fields.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="accountid"></a> `accountId` | `string` | [src/core/business-mgt/service-person.schema.ts:18](https://github.com/wiil-io/core-js/blob/0912d800094d4e3e2e193adfe1e954d82a65fedc/src/core/business-mgt/service-person.schema.ts#L18) |
-| <a id="description"></a> `description?` | `string` | [src/core/business-mgt/service-person.schema.ts:19](https://github.com/wiil-io/core-js/blob/0912d800094d4e3e2e193adfe1e954d82a65fedc/src/core/business-mgt/service-person.schema.ts#L19) |
-| <a id="serviceid"></a> `serviceId` | `string` | [src/core/business-mgt/service-person.schema.ts:20](https://github.com/wiil-io/core-js/blob/0912d800094d4e3e2e193adfe1e954d82a65fedc/src/core/business-mgt/service-person.schema.ts#L20) |
+| <a id="accountid"></a> `accountId` | `string` | [src/core/business-mgt/service-person.schema.ts:18](https://github.com/wiil-io/core-js/blob/b68e544868dafd593c2ef184dc1ce1086a9534f7/src/core/business-mgt/service-person.schema.ts#L18) |
+| <a id="description"></a> `description?` | `string` | [src/core/business-mgt/service-person.schema.ts:19](https://github.com/wiil-io/core-js/blob/b68e544868dafd593c2ef184dc1ce1086a9534f7/src/core/business-mgt/service-person.schema.ts#L19) |
+| <a id="serviceid"></a> `serviceId` | `string` | [src/core/business-mgt/service-person.schema.ts:20](https://github.com/wiil-io/core-js/blob/b68e544868dafd593c2ef184dc1ce1086a9534f7/src/core/business-mgt/service-person.schema.ts#L20) |
