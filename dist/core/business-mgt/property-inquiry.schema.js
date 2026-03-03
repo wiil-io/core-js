@@ -45,7 +45,7 @@ exports.PropertyInquirySchema = base_schema_1.BaseModelSchema.safeExtend({
     organizationId: zod_1.default.string().describe("Business account ID"),
     propertyId: zod_1.default.string().describe("ID of the property being inquired about"),
     // Contact Information
-    customerId: zod_1.default.string().nullable().optional().describe("ID of existing contact in system"),
+    customerId: zod_1.default.string().describe("ID of existing contact in system"),
     customer: customer_schema_1.CustomerSchema.describe("Contact details of the inquirer"),
     // Inquiry Details
     inquiryType: zod_1.default.enum(type_definitions_1.PropertyInquiryType).describe("Type of inquiry"),
@@ -90,6 +90,7 @@ exports.CreatePropertyInquirySchema = exports.PropertyInquirySchema.omit({
     id: true,
     createdAt: true,
     updatedAt: true,
+    customer: true,
 });
 /**
  * Schema for updating an existing property inquiry.

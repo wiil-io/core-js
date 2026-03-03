@@ -47,7 +47,7 @@ export const PropertyInquirySchema = BaseModelSchema.safeExtend({
     propertyId: z.string().describe("ID of the property being inquired about"),
 
     // Contact Information
-    customerId: z.string().nullable().optional().describe("ID of existing contact in system"),
+    customerId: z.string().describe("ID of existing contact in system"),
     customer: CustomerSchema.describe("Contact details of the inquirer"),
 
     // Inquiry Details
@@ -101,6 +101,7 @@ export const CreatePropertyInquirySchema = PropertyInquirySchema.omit({
     id: true,
     createdAt: true,
     updatedAt: true,
+    customer: true,
 });
 
 /**

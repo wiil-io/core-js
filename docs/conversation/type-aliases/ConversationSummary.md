@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.34**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.35**](../../README.md)
 
 ***
 
@@ -15,7 +15,7 @@ type ConversationSummary = {
 };
 ```
 
-Defined in: [src/core/conversation/conversation-config.schema.ts:282](https://github.com/wiil-io/core-js/blob/b68e544868dafd593c2ef184dc1ce1086a9534f7/src/core/conversation/conversation-config.schema.ts#L282)
+Defined in: [src/core/conversation/conversation-config.schema.ts:282](https://github.com/wiil-io/core-js/blob/a6d3ab8237aae22c03e6a31e70688247453a5ec5/src/core/conversation/conversation-config.schema.ts#L282)
 
 Conversation summary schema.
 
@@ -27,10 +27,10 @@ reporting, analytics, and customer service quality assurance.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="summary"></a> `summary` | `string` | [src/core/conversation/conversation-config.schema.ts:35](https://github.com/wiil-io/core-js/blob/b68e544868dafd593c2ef184dc1ce1086a9534f7/src/core/conversation/conversation-config.schema.ts#L35) |
-| <a id="key_points"></a> `key_points` | `string`[] | [src/core/conversation/conversation-config.schema.ts:36](https://github.com/wiil-io/core-js/blob/b68e544868dafd593c2ef184dc1ce1086a9534f7/src/core/conversation/conversation-config.schema.ts#L36) |
-| <a id="action_items"></a> `action_items` | `string`[] | [src/core/conversation/conversation-config.schema.ts:37](https://github.com/wiil-io/core-js/blob/b68e544868dafd593c2ef184dc1ce1086a9534f7/src/core/conversation/conversation-config.schema.ts#L37) |
-| <a id="sentiment"></a> `sentiment` | [`ConversationSummarySentiment`](../../type-definitions/enumerations/ConversationSummarySentiment.md) | [src/core/conversation/conversation-config.schema.ts:38](https://github.com/wiil-io/core-js/blob/b68e544868dafd593c2ef184dc1ce1086a9534f7/src/core/conversation/conversation-config.schema.ts#L38) |
+| <a id="summary"></a> `summary` | `string` | [src/core/conversation/conversation-config.schema.ts:35](https://github.com/wiil-io/core-js/blob/a6d3ab8237aae22c03e6a31e70688247453a5ec5/src/core/conversation/conversation-config.schema.ts#L35) |
+| <a id="key_points"></a> `key_points` | `string`[] | [src/core/conversation/conversation-config.schema.ts:36](https://github.com/wiil-io/core-js/blob/a6d3ab8237aae22c03e6a31e70688247453a5ec5/src/core/conversation/conversation-config.schema.ts#L36) |
+| <a id="action_items"></a> `action_items` | `string`[] | [src/core/conversation/conversation-config.schema.ts:37](https://github.com/wiil-io/core-js/blob/a6d3ab8237aae22c03e6a31e70688247453a5ec5/src/core/conversation/conversation-config.schema.ts#L37) |
+| <a id="sentiment"></a> `sentiment` | [`ConversationSummarySentiment`](../../type-definitions/enumerations/ConversationSummarySentiment.md) | [src/core/conversation/conversation-config.schema.ts:38](https://github.com/wiil-io/core-js/blob/a6d3ab8237aae22c03e6a31e70688247453a5ec5/src/core/conversation/conversation-config.schema.ts#L38) |
 
 ## Remarks
 

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.34**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.35**](../../README.md)
 
 ***
 
@@ -6,11 +6,11 @@
 
 # Interface: BusinessProductSorting
 
-Defined in: [src/core/business-mgt/product-config.schema.ts:134](https://github.com/wiil-io/core-js/blob/b68e544868dafd593c2ef184dc1ce1086a9534f7/src/core/business-mgt/product-config.schema.ts#L134)
+Defined in: [src/core/business-mgt/product-config.schema.ts:134](https://github.com/wiil-io/core-js/blob/a6d3ab8237aae22c03e6a31e70688247453a5ec5/src/core/business-mgt/product-config.schema.ts#L134)
 
 ## Properties
 
 | Property | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="field"></a> `field` | `"createdAt"` \| `"name"` \| `"price"` \| `"displayOrder"` | [src/core/business-mgt/product-config.schema.ts:135](https://github.com/wiil-io/core-js/blob/b68e544868dafd593c2ef184dc1ce1086a9534f7/src/core/business-mgt/product-config.schema.ts#L135) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | [src/core/business-mgt/product-config.schema.ts:136](https://github.com/wiil-io/core-js/blob/b68e544868dafd593c2ef184dc1ce1086a9534f7/src/core/business-mgt/product-config.schema.ts#L136) |
+| <a id="field"></a> `field` | `"createdAt"` \| `"name"` \| `"price"` \| `"displayOrder"` | [src/core/business-mgt/product-config.schema.ts:135](https://github.com/wiil-io/core-js/blob/a6d3ab8237aae22c03e6a31e70688247453a5ec5/src/core/business-mgt/product-config.schema.ts#L135) |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | [src/core/business-mgt/product-config.schema.ts:136](https://github.com/wiil-io/core-js/blob/a6d3ab8237aae22c03e6a31e70688247453a5ec5/src/core/business-mgt/product-config.schema.ts#L136) |

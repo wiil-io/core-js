@@ -39,7 +39,7 @@ export declare const PropertyInquirySchema: z.ZodObject<{
     updatedAt: z.ZodOptional<z.ZodNumber>;
     organizationId: z.ZodString;
     propertyId: z.ZodString;
-    customerId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    customerId: z.ZodString;
     customer: z.ZodObject<{
         id: z.ZodString;
         createdAt: z.ZodOptional<z.ZodNumber>;
@@ -106,36 +106,8 @@ export declare const CreatePropertyInquirySchema: z.ZodObject<{
     message: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     status: z.ZodDefault<z.ZodEnum<typeof PropertyInquiryStatus>>;
     organizationId: z.ZodString;
-    customerId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    customerId: z.ZodString;
     notes: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-    customer: z.ZodObject<{
-        id: z.ZodString;
-        createdAt: z.ZodOptional<z.ZodNumber>;
-        updatedAt: z.ZodOptional<z.ZodNumber>;
-        customerId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-        phone_number: z.ZodOptional<z.ZodNullable<z.ZodPipe<z.ZodString, z.ZodTransform<string, string>>>>;
-        firstname: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-        lastname: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-        company: z.ZodOptional<z.ZodString>;
-        timezone: z.ZodOptional<z.ZodString>;
-        email: z.ZodOptional<z.ZodEmail>;
-        preferred_language: z.ZodDefault<z.ZodString>;
-        preferred_contact_method: z.ZodDefault<z.ZodEnum<typeof PreferredContactMethod>>;
-        best_time_to_call: z.ZodOptional<z.ZodEnum<typeof import("../type-definitions").BestTimeToCall>>;
-        notes: z.ZodOptional<z.ZodString>;
-        tags: z.ZodOptional<z.ZodArray<z.ZodString>>;
-        custom_fields: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodAny>>;
-        channelId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-        address: z.ZodOptional<z.ZodObject<{
-            street: z.ZodString;
-            street2: z.ZodOptional<z.ZodString>;
-            city: z.ZodString;
-            state: z.ZodString;
-            postalCode: z.ZodString;
-            country: z.ZodString;
-        }, z.core.$strip>>;
-        isValidatedNames: z.ZodDefault<z.ZodBoolean>;
-    }, z.core.$strip>;
     source: z.ZodDefault<z.ZodString>;
     cancelReason: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     serviceConversationConfigId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
@@ -172,36 +144,8 @@ export declare const UpdatePropertyInquirySchema: z.ZodObject<{
     message: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     status: z.ZodOptional<z.ZodDefault<z.ZodEnum<typeof PropertyInquiryStatus>>>;
     organizationId: z.ZodOptional<z.ZodString>;
-    customerId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
+    customerId: z.ZodOptional<z.ZodString>;
     notes: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
-    customer: z.ZodOptional<z.ZodObject<{
-        id: z.ZodString;
-        createdAt: z.ZodOptional<z.ZodNumber>;
-        updatedAt: z.ZodOptional<z.ZodNumber>;
-        customerId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-        phone_number: z.ZodOptional<z.ZodNullable<z.ZodPipe<z.ZodString, z.ZodTransform<string, string>>>>;
-        firstname: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-        lastname: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-        company: z.ZodOptional<z.ZodString>;
-        timezone: z.ZodOptional<z.ZodString>;
-        email: z.ZodOptional<z.ZodEmail>;
-        preferred_language: z.ZodDefault<z.ZodString>;
-        preferred_contact_method: z.ZodDefault<z.ZodEnum<typeof PreferredContactMethod>>;
-        best_time_to_call: z.ZodOptional<z.ZodEnum<typeof import("../type-definitions").BestTimeToCall>>;
-        notes: z.ZodOptional<z.ZodString>;
-        tags: z.ZodOptional<z.ZodArray<z.ZodString>>;
-        custom_fields: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodAny>>;
-        channelId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-        address: z.ZodOptional<z.ZodObject<{
-            street: z.ZodString;
-            street2: z.ZodOptional<z.ZodString>;
-            city: z.ZodString;
-            state: z.ZodString;
-            postalCode: z.ZodString;
-            country: z.ZodString;
-        }, z.core.$strip>>;
-        isValidatedNames: z.ZodDefault<z.ZodBoolean>;
-    }, z.core.$strip>>;
     source: z.ZodOptional<z.ZodDefault<z.ZodString>>;
     cancelReason: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     serviceConversationConfigId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;

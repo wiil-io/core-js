@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.34**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.35**](../../README.md)
 
 ***
 
@@ -17,7 +17,7 @@ const BaseEmailMessageSchema: ZodObject<{
 }, $strip>;
 ```
 
-Defined in: [src/core/conversation/conversation-message.schema.ts:65](https://github.com/wiil-io/core-js/blob/b68e544868dafd593c2ef184dc1ce1086a9534f7/src/core/conversation/conversation-message.schema.ts#L65)
+Defined in: [src/core/conversation/conversation-message.schema.ts:65](https://github.com/wiil-io/core-js/blob/a6d3ab8237aae22c03e6a31e70688247453a5ec5/src/core/conversation/conversation-message.schema.ts#L65)
 
 Base email message schema extending chat message with email-specific fields.
 
