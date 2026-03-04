@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.36**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.37**](../../README.md)
 
 ***
 
@@ -43,6 +43,6 @@ const ConversationMessageSchema: ZodUnion<readonly [ZodObject<{
 }, $strip>]>;
 ```
 
-Defined in: [src/core/conversation/conversation-config.schema.ts:86](https://github.com/wiil-io/core-js/blob/fb13aab2cdb27f890ccfbc762905c0de67688751/src/core/conversation/conversation-config.schema.ts#L86)
+Defined in: [src/core/conversation/conversation-config.schema.ts:86](https://github.com/wiil-io/core-js/blob/9e9f9b9f49a3a42821de5b04e0cb59fe40e957fc/src/core/conversation/conversation-config.schema.ts#L86)
 
 Union of all conversation message types.

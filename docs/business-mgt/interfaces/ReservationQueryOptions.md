@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.36**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.37**](../../README.md)
 
 ***
 
@@ -6,13 +6,13 @@
 
 # Interface: ReservationQueryOptions
 
-Defined in: [src/core/business-mgt/service-appointment.schema.ts:90](https://github.com/wiil-io/core-js/blob/fb13aab2cdb27f890ccfbc762905c0de67688751/src/core/business-mgt/service-appointment.schema.ts#L90)
+Defined in: [src/core/business-mgt/service-appointment.schema.ts:90](https://github.com/wiil-io/core-js/blob/9e9f9b9f49a3a42821de5b04e0cb59fe40e957fc/src/core/business-mgt/service-appointment.schema.ts#L90)
 
 ## Properties
 
 | Property | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | [src/core/business-mgt/service-appointment.schema.ts:91](https://github.com/wiil-io/core-js/blob/fb13aab2cdb27f890ccfbc762905c0de67688751/src/core/business-mgt/service-appointment.schema.ts#L91) |
-| <a id="pagesize"></a> `pageSize` | `number` | [src/core/business-mgt/service-appointment.schema.ts:92](https://github.com/wiil-io/core-js/blob/fb13aab2cdb27f890ccfbc762905c0de67688751/src/core/business-mgt/service-appointment.schema.ts#L92) |
-| <a id="filters"></a> `filters?` | [`ReservationFilters`](ReservationFilters.md) | [src/core/business-mgt/service-appointment.schema.ts:93](https://github.com/wiil-io/core-js/blob/fb13aab2cdb27f890ccfbc762905c0de67688751/src/core/business-mgt/service-appointment.schema.ts#L93) |
-| <a id="sorting"></a> `sorting?` | [`ReservationSorting`](ReservationSorting.md) | [src/core/business-mgt/service-appointment.schema.ts:94](https://github.com/wiil-io/core-js/blob/fb13aab2cdb27f890ccfbc762905c0de67688751/src/core/business-mgt/service-appointment.schema.ts#L94) |
+| <a id="page"></a> `page` | `number` | [src/core/business-mgt/service-appointment.schema.ts:91](https://github.com/wiil-io/core-js/blob/9e9f9b9f49a3a42821de5b04e0cb59fe40e957fc/src/core/business-mgt/service-appointment.schema.ts#L91) |
+| <a id="pagesize"></a> `pageSize` | `number` | [src/core/business-mgt/service-appointment.schema.ts:92](https://github.com/wiil-io/core-js/blob/9e9f9b9f49a3a42821de5b04e0cb59fe40e957fc/src/core/business-mgt/service-appointment.schema.ts#L92) |
+| <a id="filters"></a> `filters?` | [`ReservationFilters`](ReservationFilters.md) | [src/core/business-mgt/service-appointment.schema.ts:93](https://github.com/wiil-io/core-js/blob/9e9f9b9f49a3a42821de5b04e0cb59fe40e957fc/src/core/business-mgt/service-appointment.schema.ts#L93) |
+| <a id="sorting"></a> `sorting?` | [`ReservationSorting`](ReservationSorting.md) | [src/core/business-mgt/service-appointment.schema.ts:94](https://github.com/wiil-io/core-js/blob/9e9f9b9f49a3a42821de5b04e0cb59fe40e957fc/src/core/business-mgt/service-appointment.schema.ts#L94) |

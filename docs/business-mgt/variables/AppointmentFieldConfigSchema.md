@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.36**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.37**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const AppointmentFieldConfigSchema: ZodObject<AppointmentFieldConfig>;
 ```
 
-Defined in: [src/core/business-mgt/appointment-field-config.schema.ts:35](https://github.com/wiil-io/core-js/blob/fb13aab2cdb27f890ccfbc762905c0de67688751/src/core/business-mgt/appointment-field-config.schema.ts#L35)
+Defined in: [src/core/business-mgt/appointment-field-config.schema.ts:35](https://github.com/wiil-io/core-js/blob/9e9f9b9f49a3a42821de5b04e0cb59fe40e957fc/src/core/business-mgt/appointment-field-config.schema.ts#L35)
 
 Organization-level appointment field configuration.
 Defines the base field library available to all services within an organization.

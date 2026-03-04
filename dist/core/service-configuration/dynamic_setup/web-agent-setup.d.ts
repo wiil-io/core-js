@@ -51,6 +51,9 @@ export declare const DynamicWebAgentSchema: z.ZodObject<{
  * @property {string[]} integrationSnippets - Code snippets for deploying the web assistant
  */
 export declare const DynamicWebAgentSetupResultSchema: z.ZodObject<{
+    id: z.ZodString;
+    createdAt: z.ZodOptional<z.ZodNumber>;
+    updatedAt: z.ZodOptional<z.ZodNumber>;
     success: z.ZodBoolean;
     agentConfigurationId: z.ZodString;
     instructionConfigurationId: z.ZodString;

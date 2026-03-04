@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.36**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.37**](../../README.md)
 
 ***
 
@@ -10,6 +10,6 @@
 const AccountPaginatedTimestampQuerySchema: ZodObject<AccountPaginatedTimestampQuery>;
 ```
 
-Defined in: [src/request/models/paginated-quest.schema.ts:31](https://github.com/wiil-io/core-js/blob/fb13aab2cdb27f890ccfbc762905c0de67688751/src/request/models/paginated-quest.schema.ts#L31)
+Defined in: [src/request/models/paginated-quest.schema.ts:31](https://github.com/wiil-io/core-js/blob/9e9f9b9f49a3a42821de5b04e0cb59fe40e957fc/src/request/models/paginated-quest.schema.ts#L31)
 
 Schema for paginated queries based on a specific timestamp.

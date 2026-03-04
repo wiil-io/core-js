@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.DynamicAgentSetupResultSchema = exports.DynamicTTSModelConfigurationSchema = exports.DynamicSTTModelConfigurationSchema = exports.DynamicModelConfigurationSchema = exports.DynamicBaseAgentSetupSchema = void 0;
 const zod_1 = __importDefault(require("zod"));
 const type_definitions_1 = require("../../type-definitions");
+const base_schema_1 = require("../../base.schema");
 /**
  * @fileoverview Dynamic agent setup base schemas for AI assistant configuration.
  * @module service-configuration/dynamic_setup/base-agent-setup
@@ -84,7 +85,7 @@ exports.DynamicTTSModelConfigurationSchema = exports.DynamicModelConfigurationSc
  * @property {string} [errorMessage] - Error message if setup failed
  * @property {Object} [metadata] - Additional metadata about the setup
  */
-exports.DynamicAgentSetupResultSchema = zod_1.default.object({
+exports.DynamicAgentSetupResultSchema = base_schema_1.BaseModelSchema.safeExtend({
     success: zod_1.default.boolean().describe("Indicates if the phone assistant setup was successful"),
     agentConfigurationId: zod_1.default.string().describe("ID of the agent configuration created for this phone assistant"),
     instructionConfigurationId: zod_1.default.string().describe("ID of the instruction configuration created for this phone assistant"),

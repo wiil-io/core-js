@@ -50,6 +50,9 @@ export declare const DynamicPhoneAgentSchema: z.ZodObject<{
  * @property {string} phoneNumber - Phone number associated with the configuration
  */
 export declare const DynamicPhoneAgentSetupResultSchema: z.ZodObject<{
+    id: z.ZodString;
+    createdAt: z.ZodOptional<z.ZodNumber>;
+    updatedAt: z.ZodOptional<z.ZodNumber>;
     success: z.ZodBoolean;
     agentConfigurationId: z.ZodString;
     instructionConfigurationId: z.ZodString;

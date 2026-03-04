@@ -83,6 +83,9 @@ export declare const DynamicTTSModelConfigurationSchema: z.ZodObject<{
  * @property {Object} [metadata] - Additional metadata about the setup
  */
 export declare const DynamicAgentSetupResultSchema: z.ZodObject<{
+    id: z.ZodString;
+    createdAt: z.ZodOptional<z.ZodNumber>;
+    updatedAt: z.ZodOptional<z.ZodNumber>;
     success: z.ZodBoolean;
     agentConfigurationId: z.ZodString;
     instructionConfigurationId: z.ZodString;

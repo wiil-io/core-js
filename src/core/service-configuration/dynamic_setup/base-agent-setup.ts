@@ -1,5 +1,6 @@
 import z from "zod";
 import { AgentCapabilities, AgentRoleTemplateIdentifier, SupportedProprietor } from "../../type-definitions";
+import { BaseModelSchema } from "../../base.schema";
 
 /**
  * @fileoverview Dynamic agent setup base schemas for AI assistant configuration.
@@ -89,7 +90,7 @@ export const DynamicTTSModelConfigurationSchema = DynamicModelConfigurationSchem
  * @property {string} [errorMessage] - Error message if setup failed
  * @property {Object} [metadata] - Additional metadata about the setup
  */
-export const DynamicAgentSetupResultSchema = z.object({
+export const DynamicAgentSetupResultSchema = BaseModelSchema.safeExtend({
     success: z.boolean().describe("Indicates if the phone assistant setup was successful"),
     agentConfigurationId: z.string().describe("ID of the agent configuration created for this phone assistant"),
     instructionConfigurationId: z.string().describe("ID of the instruction configuration created for this phone assistant"),
