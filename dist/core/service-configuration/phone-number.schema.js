@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.PhoneNumberPricingSchema = exports.PhoneNumberPurchaseRequestSchema = exports.CreatePhoneNumberPurchaseSchema = exports.PhoneNumberPurchaseSchema = exports.PhoneProviderResponseSchema = exports.PhoneProviderRequestSchema = exports.twilioPhoneNumberInfoSchema = exports.swPhoneNumberInfoSchema = exports.BasePhoneNumberInfoSchema = exports.PhoneProviderRegionSchema = void 0;
+exports.PhoneNumberPricingSchema = exports.PhoneNumberPurchaseRequestSchema = exports.BusinessPhoneNumberPurchaseRequestSchema = exports.CreatePhoneNumberPurchaseSchema = exports.PhoneNumberPurchaseSchema = exports.PhoneProviderResponseSchema = exports.PhoneProviderRequestSchema = exports.twilioPhoneNumberInfoSchema = exports.swPhoneNumberInfoSchema = exports.BasePhoneNumberInfoSchema = exports.PhoneProviderRegionSchema = void 0;
 const zod_1 = require("zod");
 const service_config_definitions_1 = require("../type-definitions/service-config.definitions");
 const base_schema_1 = require("../base.schema");
@@ -217,8 +217,7 @@ exports.PhoneProviderResponseSchema = zod_1.z.object({
  *   phoneNumber: '+12125551234',
  *   countryCode: 'US',
  *   providerType: ProviderType.TWILIO,
- *   amount: 1.00,
- *   currency: 'USD',
+ *   chargedCredits: 1500,
  *   status: PhonePurchaseStatus.COMPLETED,
  *   numberType: PhoneNumberType.LOCAL,
  *   completedAt: Date.now(),
@@ -229,11 +228,10 @@ exports.PhoneProviderResponseSchema = zod_1.z.object({
  */
 exports.PhoneNumberPurchaseSchema = base_schema_1.BaseModelSchema.safeExtend({
     friendlyName: zod_1.z.string().describe("Human-readable name for the phone number being purchased (e.g., 'Customer Support Line', 'Sales Main Number')"),
-    phoneNumber: zod_1.z.string().describe("Phone number in E.164 international format being purchased (e.g., '+12125551234')"),
+    phoneNumber: base_schema_1.PhoneNumberSchema.describe("Phone number in E.164 international format being purchased (e.g., '+12125551234')"),
     providerType: zod_1.z.enum(service_config_definitions_1.ProviderType).describe("Telephony provider from which the number is being purchased (SIGNALWIRE, TWILIO, etc.)"),
     countryCode: zod_1.z.string().length(2).describe("ISO 3166-1 alpha-2 country code for the phone number (e.g., 'US', 'GB', 'CA')"),
-    amount: zod_1.z.number().positive().describe("Purchase price for this phone number (must be positive, typically $1-5 for local numbers)"),
-    currency: zod_1.z.string().length(3).default('USD').describe("ISO 4217 currency code for the purchase amount (e.g., 'USD', 'GBP', 'EUR')"),
+    chargedCredits: zod_1.z.number().positive().describe("Amount charged for the phone number purchase (must be a positive number)"),
     status: zod_1.z.enum(service_config_definitions_1.PhonePurchaseStatus).default(service_config_definitions_1.PhonePurchaseStatus.PENDING).describe("Current status of the purchase transaction (PENDING, PROCESSING, COMPLETED, FAILED, CANCELLED)"),
     numberType: zod_1.z.enum(service_config_definitions_1.PhoneNumberType).default(service_config_definitions_1.PhoneNumberType.LOCAL).describe("Type of phone number being purchased (LOCAL for geographic, TOLL_FREE for 1-800, MOBILE for cellular)"),
     statusDetails: zod_1.z.string().nullable().optional().describe("Additional details about the current status (error messages, provider notes, or completion details)"),
@@ -263,7 +261,7 @@ exports.PhoneNumberPurchaseSchema = base_schema_1.BaseModelSchema.safeExtend({
 exports.CreatePhoneNumberPurchaseSchema = exports.PhoneNumberPurchaseSchema.omit({
     id: true,
     amount: true,
-    currency: true,
+    chargedCredits: true,
     status: true,
     createdAt: true,
     updatedAt: true,
@@ -271,6 +269,10 @@ exports.CreatePhoneNumberPurchaseSchema = exports.PhoneNumberPurchaseSchema.omit
     completedAt: true,
     metadata: true,
 });
+exports.BusinessPhoneNumberPurchaseRequestSchema = zod_1.z.object({
+    phoneNumber: base_schema_1.PhoneNumberSchema.describe("Phone number in international format to be purchased"),
+    friendlyName: zod_1.z.string().optional().describe("Human-readable display name for the phone number being purchased"),
+}).describe("Schema for business phone number purchase request, containing necessary information to initiate a phone number purchase for a business account");
 /**
  * Legacy schema export for backwards compatibility.
  * @deprecated Use CreatePhoneNumberPurchaseSchema instead.

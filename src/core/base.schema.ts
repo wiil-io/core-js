@@ -23,6 +23,17 @@ export const AddressSchema = z.object({
     country: z.string().min(2, { message: "Country must be 3 or more characters long" }).describe("ISO country code or country name"),
 });
 
+export const phoneRegex = /^(\+?\d{1,4}[-.\s]?)?(\(\d{1,3}\)[-.\s]?)?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/;
+
+/**
+ * Reusable phone number schema with international format support.
+ * Accepts formats: +1-234-567-8900, (123) 456-7890, 123.456.7890, etc.
+ */
+export const PhoneNumberSchema = z.string()
+    .regex(phoneRegex, { message: "Invalid phone number format" })
+    .describe("Phone number in international or local format");
+
+
 /**
  * Language code schema (ISO 639-1 format)
  */
@@ -31,4 +42,5 @@ export const LanguageCodeSchema = z.string().min(2).max(5).describe("ISO 639-1/6
 
 export type LanguageCode = z.infer<typeof LanguageCodeSchema>;
 export type Address = z.infer<typeof AddressSchema>;
+export type PhoneNumber = z.infer<typeof PhoneNumberSchema>;
 export type BaseModelSchema = z.infer<typeof BaseModelSchema>;

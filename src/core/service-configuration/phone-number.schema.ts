@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { PhoneNumberType, PhonePurchaseStatus, ProviderType } from "../type-definitions/service-config.definitions";
-import { BaseModelSchema } from "../base.schema";
+import { BaseModelSchema, PhoneNumberSchema } from "../base.schema";
 
 /**
  * @fileoverview Phone number configuration and purchase schema definitions.
@@ -252,8 +252,7 @@ export type PhoneProviderResponse = z.infer<typeof PhoneProviderResponseSchema>;
  *   phoneNumber: '+12125551234',
  *   countryCode: 'US',
  *   providerType: ProviderType.TWILIO,
- *   amount: 1.00,
- *   currency: 'USD',
+ *   chargedCredits: 1500,
  *   status: PhonePurchaseStatus.COMPLETED,
  *   numberType: PhoneNumberType.LOCAL,
  *   completedAt: Date.now(),
@@ -264,11 +263,10 @@ export type PhoneProviderResponse = z.infer<typeof PhoneProviderResponseSchema>;
  */
 export const PhoneNumberPurchaseSchema = BaseModelSchema.safeExtend({
     friendlyName: z.string().describe("Human-readable name for the phone number being purchased (e.g., 'Customer Support Line', 'Sales Main Number')"),
-    phoneNumber: z.string().describe("Phone number in E.164 international format being purchased (e.g., '+12125551234')"),
+    phoneNumber: PhoneNumberSchema.describe("Phone number in E.164 international format being purchased (e.g., '+12125551234')"),
     providerType: z.enum(ProviderType).describe("Telephony provider from which the number is being purchased (SIGNALWIRE, TWILIO, etc.)"),
     countryCode: z.string().length(2).describe("ISO 3166-1 alpha-2 country code for the phone number (e.g., 'US', 'GB', 'CA')"),
-    amount: z.number().positive().describe("Purchase price for this phone number (must be positive, typically $1-5 for local numbers)"),
-    currency: z.string().length(3).default('USD').describe("ISO 4217 currency code for the purchase amount (e.g., 'USD', 'GBP', 'EUR')"),
+    chargedCredits: z.number().positive().describe("Amount charged for the phone number purchase (must be a positive number)"),
     status: z.enum(PhonePurchaseStatus).default(PhonePurchaseStatus.PENDING).describe("Current status of the purchase transaction (PENDING, PROCESSING, COMPLETED, FAILED, CANCELLED)"),
     numberType: z.enum(PhoneNumberType).default(PhoneNumberType.LOCAL).describe("Type of phone number being purchased (LOCAL for geographic, TOLL_FREE for 1-800, MOBILE for cellular)"),
     statusDetails: z.string().nullable().optional().describe("Additional details about the current status (error messages, provider notes, or completion details)"),
@@ -304,7 +302,7 @@ export type PhoneNumberPurchase = z.infer<typeof PhoneNumberPurchaseSchema>;
 export const CreatePhoneNumberPurchaseSchema = PhoneNumberPurchaseSchema.omit({
     id: true,
     amount: true,
-    currency: true,
+    chargedCredits: true,
     status: true,
     createdAt: true,
     updatedAt: true,
@@ -317,6 +315,14 @@ export const CreatePhoneNumberPurchaseSchema = PhoneNumberPurchaseSchema.omit({
  * Type definition for creating a phone number purchase.
  */
 export type CreatePhoneNumberPurchase = z.infer<typeof CreatePhoneNumberPurchaseSchema>;
+
+
+export const BusinessPhoneNumberPurchaseRequestSchema = z.object({
+    phoneNumber: PhoneNumberSchema.describe("Phone number in international format to be purchased"),
+    friendlyName: z.string().optional().describe("Human-readable display name for the phone number being purchased"),
+}).describe("Schema for business phone number purchase request, containing necessary information to initiate a phone number purchase for a business account");
+
+export type BusinessPhoneNumberPurchaseRequest = z.infer<typeof BusinessPhoneNumberPurchaseRequestSchema>;
 
 
 /**

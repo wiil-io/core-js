@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.38**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.39**](../../README.md)
 
 ***
 
@@ -6,11 +6,11 @@
 
 # Enumeration: MobilePlatform
 
-Defined in: [src/core/type-definitions/service-config.definitions.ts:49](https://github.com/wiil-io/core-js/blob/f45aa5ab8c493a625bfd18afa3598271cb04182d/src/core/type-definitions/service-config.definitions.ts#L49)
+Defined in: [src/core/type-definitions/service-config.definitions.ts:49](https://github.com/wiil-io/core-js/blob/26d2b631ba1acb31c0e66c5e63fa8ed5c49cb11b/src/core/type-definitions/service-config.definitions.ts#L49)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="ios"></a> `IOS` | `"ios"` | [src/core/type-definitions/service-config.definitions.ts:50](https://github.com/wiil-io/core-js/blob/f45aa5ab8c493a625bfd18afa3598271cb04182d/src/core/type-definitions/service-config.definitions.ts#L50) |
-| <a id="android"></a> `ANDROID` | `"android"` | [src/core/type-definitions/service-config.definitions.ts:51](https://github.com/wiil-io/core-js/blob/f45aa5ab8c493a625bfd18afa3598271cb04182d/src/core/type-definitions/service-config.definitions.ts#L51) |
+| <a id="ios"></a> `IOS` | `"ios"` | [src/core/type-definitions/service-config.definitions.ts:50](https://github.com/wiil-io/core-js/blob/26d2b631ba1acb31c0e66c5e63fa8ed5c49cb11b/src/core/type-definitions/service-config.definitions.ts#L50) |
+| <a id="android"></a> `ANDROID` | `"android"` | [src/core/type-definitions/service-config.definitions.ts:51](https://github.com/wiil-io/core-js/blob/26d2b631ba1acb31c0e66c5e63fa8ed5c49cb11b/src/core/type-definitions/service-config.definitions.ts#L51) |

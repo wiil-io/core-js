@@ -265,8 +265,7 @@ export type PhoneProviderResponse = z.infer<typeof PhoneProviderResponseSchema>;
  *   phoneNumber: '+12125551234',
  *   countryCode: 'US',
  *   providerType: ProviderType.TWILIO,
- *   amount: 1.00,
- *   currency: 'USD',
+ *   chargedCredits: 1500,
  *   status: PhonePurchaseStatus.COMPLETED,
  *   numberType: PhoneNumberType.LOCAL,
  *   completedAt: Date.now(),
@@ -283,8 +282,7 @@ export declare const PhoneNumberPurchaseSchema: z.ZodObject<{
     phoneNumber: z.ZodString;
     providerType: z.ZodEnum<typeof ProviderType>;
     countryCode: z.ZodString;
-    amount: z.ZodNumber;
-    currency: z.ZodDefault<z.ZodString>;
+    chargedCredits: z.ZodNumber;
     status: z.ZodDefault<z.ZodEnum<typeof PhonePurchaseStatus>>;
     numberType: z.ZodDefault<z.ZodEnum<typeof PhoneNumberType>>;
     statusDetails: z.ZodOptional<z.ZodNullable<z.ZodString>>;
@@ -326,6 +324,11 @@ export declare const CreatePhoneNumberPurchaseSchema: z.ZodObject<{
  * Type definition for creating a phone number purchase.
  */
 export type CreatePhoneNumberPurchase = z.infer<typeof CreatePhoneNumberPurchaseSchema>;
+export declare const BusinessPhoneNumberPurchaseRequestSchema: z.ZodObject<{
+    phoneNumber: z.ZodString;
+    friendlyName: z.ZodOptional<z.ZodString>;
+}, z.core.$strip>;
+export type BusinessPhoneNumberPurchaseRequest = z.infer<typeof BusinessPhoneNumberPurchaseRequestSchema>;
 /**
  * Legacy schema export for backwards compatibility.
  * @deprecated Use CreatePhoneNumberPurchaseSchema instead.

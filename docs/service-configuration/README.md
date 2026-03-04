@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.38**](../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.39**](../README.md)
 
 ***
 
@@ -68,6 +68,7 @@ Central export point for all service configuration schemas.
 | [PhoneProviderResponse](type-aliases/PhoneProviderResponse.md) | Type definition for phone provider response. |
 | [PhoneNumberPurchase](type-aliases/PhoneNumberPurchase.md) | Type definition for phone number purchase. |
 | [CreatePhoneNumberPurchase](type-aliases/CreatePhoneNumberPurchase.md) | Type definition for creating a phone number purchase. |
+| [BusinessPhoneNumberPurchaseRequest](type-aliases/BusinessPhoneNumberPurchaseRequest.md) | - |
 | [~~PhoneNumberPurchaseRequest~~](type-aliases/PhoneNumberPurchaseRequest.md) | Legacy type export for backwards compatibility. |
 | [PhoneNumberPricing](type-aliases/PhoneNumberPricing.md) | Type definition for phone number pricing. |
 | [SttModelConfig](type-aliases/SttModelConfig.md) | Type definition for STT model configuration. |
@@ -146,6 +147,7 @@ Central export point for all service configuration schemas.
 | [PhoneProviderResponseSchema](variables/PhoneProviderResponseSchema.md) | Zod schema for phone provider response. |
 | [PhoneNumberPurchaseSchema](variables/PhoneNumberPurchaseSchema.md) | Zod schema for phone number purchase transaction. |
 | [CreatePhoneNumberPurchaseSchema](variables/CreatePhoneNumberPurchaseSchema.md) | Zod schema for creating a new phone number purchase. |
+| [BusinessPhoneNumberPurchaseRequestSchema](variables/BusinessPhoneNumberPurchaseRequestSchema.md) | - |
 | [~~PhoneNumberPurchaseRequestSchema~~](variables/PhoneNumberPurchaseRequestSchema.md) | Legacy schema export for backwards compatibility. |
 | [PhoneNumberPricingSchema](variables/PhoneNumberPricingSchema.md) | Zod schema for phone number pricing information. |
 | [SttModelConfigSchema](variables/SttModelConfigSchema.md) | Zod schema for Speech-to-Text (STT) model configuration. |

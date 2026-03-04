@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.LanguageCodeSchema = exports.AddressSchema = exports.BaseModelSchema = void 0;
+exports.LanguageCodeSchema = exports.PhoneNumberSchema = exports.phoneRegex = exports.AddressSchema = exports.BaseModelSchema = void 0;
 const zod_1 = require("zod");
 // import { TimezoneStringSchema } from './platform-regional-config';
 /**
@@ -22,6 +22,14 @@ exports.AddressSchema = zod_1.z.object({
     postalCode: zod_1.z.string().min(2, { message: "Postal code must be 2 or more characters long" }).describe("ZIP code, postal code, or equivalent"),
     country: zod_1.z.string().min(2, { message: "Country must be 3 or more characters long" }).describe("ISO country code or country name"),
 });
+exports.phoneRegex = /^(\+?\d{1,4}[-.\s]?)?(\(\d{1,3}\)[-.\s]?)?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/;
+/**
+ * Reusable phone number schema with international format support.
+ * Accepts formats: +1-234-567-8900, (123) 456-7890, 123.456.7890, etc.
+ */
+exports.PhoneNumberSchema = zod_1.z.string()
+    .regex(exports.phoneRegex, { message: "Invalid phone number format" })
+    .describe("Phone number in international or local format");
 /**
  * Language code schema (ISO 639-1 format)
  */

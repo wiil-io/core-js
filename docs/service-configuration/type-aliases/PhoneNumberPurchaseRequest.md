@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.38**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.39**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 type PhoneNumberPurchaseRequest = CreatePhoneNumberPurchase;
 ```
 
-Defined in: [src/core/service-configuration/phone-number.schema.ts:332](https://github.com/wiil-io/core-js/blob/f45aa5ab8c493a625bfd18afa3598271cb04182d/src/core/service-configuration/phone-number.schema.ts#L332)
+Defined in: [src/core/service-configuration/phone-number.schema.ts:338](https://github.com/wiil-io/core-js/blob/26d2b631ba1acb31c0e66c5e63fa8ed5c49cb11b/src/core/service-configuration/phone-number.schema.ts#L338)
 
 Legacy type export for backwards compatibility.
 
