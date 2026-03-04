@@ -53,9 +53,19 @@ export declare const DynamicPhoneAgentSetupResultSchema: z.ZodObject<{
     id: z.ZodString;
     createdAt: z.ZodOptional<z.ZodNumber>;
     updatedAt: z.ZodOptional<z.ZodNumber>;
-    success: z.ZodBoolean;
-    agentConfigurationId: z.ZodString;
-    instructionConfigurationId: z.ZodString;
+    processingState: z.ZodObject<{
+        status: z.ZodEnum<{
+            pending: "pending";
+            completed: "completed";
+            failed: "failed";
+            in_progress: "in_progress";
+        }>;
+        progressPercentage: z.ZodNumber;
+        message: z.ZodOptional<z.ZodString>;
+    }, z.core.$strip>;
+    success: z.ZodOptional<z.ZodNullable<z.ZodBoolean>>;
+    agentConfigurationId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    instructionConfigurationId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     errorMessage: z.ZodOptional<z.ZodString>;
     metadata: z.ZodOptional<z.ZodNullable<z.ZodRecord<z.ZodString, z.ZodAny>>>;
     phoneNumber: z.ZodString;

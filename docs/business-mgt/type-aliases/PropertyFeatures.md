@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.37**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.38**](../../README.md)
 
 ***
 
@@ -21,7 +21,7 @@ type PropertyFeatures = {
 };
 ```
 
-Defined in: [src/core/business-mgt/property-config.schema.ts:261](https://github.com/wiil-io/core-js/blob/9e9f9b9f49a3a42821de5b04e0cb59fe40e957fc/src/core/business-mgt/property-config.schema.ts#L261)
+Defined in: [src/core/business-mgt/property-config.schema.ts:261](https://github.com/wiil-io/core-js/blob/f45aa5ab8c493a625bfd18afa3598271cb04182d/src/core/business-mgt/property-config.schema.ts#L261)
 
 Property features schema.
 
@@ -29,13 +29,13 @@ Property features schema.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="bedrooms"></a> `bedrooms?` | `number` \| `null` | [src/core/business-mgt/property-config.schema.ts:91](https://github.com/wiil-io/core-js/blob/9e9f9b9f49a3a42821de5b04e0cb59fe40e957fc/src/core/business-mgt/property-config.schema.ts#L91) |
-| <a id="bathrooms"></a> `bathrooms?` | `number` \| `null` | [src/core/business-mgt/property-config.schema.ts:92](https://github.com/wiil-io/core-js/blob/9e9f9b9f49a3a42821de5b04e0cb59fe40e957fc/src/core/business-mgt/property-config.schema.ts#L92) |
-| <a id="parkingspaces"></a> `parkingSpaces?` | `number` \| `null` | [src/core/business-mgt/property-config.schema.ts:93](https://github.com/wiil-io/core-js/blob/9e9f9b9f49a3a42821de5b04e0cb59fe40e957fc/src/core/business-mgt/property-config.schema.ts#L93) |
-| <a id="squarefootage"></a> `squareFootage?` | `number` \| `null` | [src/core/business-mgt/property-config.schema.ts:94](https://github.com/wiil-io/core-js/blob/9e9f9b9f49a3a42821de5b04e0cb59fe40e957fc/src/core/business-mgt/property-config.schema.ts#L94) |
-| <a id="lotsize"></a> `lotSize?` | `number` \| `null` | [src/core/business-mgt/property-config.schema.ts:95](https://github.com/wiil-io/core-js/blob/9e9f9b9f49a3a42821de5b04e0cb59fe40e957fc/src/core/business-mgt/property-config.schema.ts#L95) |
-| <a id="lotsizeunit"></a> `lotSizeUnit` | `"sqft"` \| `"acres"` \| `"sqm"` \| `"hectares"` | [src/core/business-mgt/property-config.schema.ts:96](https://github.com/wiil-io/core-js/blob/9e9f9b9f49a3a42821de5b04e0cb59fe40e957fc/src/core/business-mgt/property-config.schema.ts#L96) |
-| <a id="yearbuilt"></a> `yearBuilt?` | `number` \| `null` | [src/core/business-mgt/property-config.schema.ts:97](https://github.com/wiil-io/core-js/blob/9e9f9b9f49a3a42821de5b04e0cb59fe40e957fc/src/core/business-mgt/property-config.schema.ts#L97) |
-| <a id="floors"></a> `floors?` | `number` \| `null` | [src/core/business-mgt/property-config.schema.ts:98](https://github.com/wiil-io/core-js/blob/9e9f9b9f49a3a42821de5b04e0cb59fe40e957fc/src/core/business-mgt/property-config.schema.ts#L98) |
-| <a id="amenities"></a> `amenities` | `string`[] | [src/core/business-mgt/property-config.schema.ts:99](https://github.com/wiil-io/core-js/blob/9e9f9b9f49a3a42821de5b04e0cb59fe40e957fc/src/core/business-mgt/property-config.schema.ts#L99) |
-| <a id="utilities"></a> `utilities` | `string`[] | [src/core/business-mgt/property-config.schema.ts:100](https://github.com/wiil-io/core-js/blob/9e9f9b9f49a3a42821de5b04e0cb59fe40e957fc/src/core/business-mgt/property-config.schema.ts#L100) |
+| <a id="bedrooms"></a> `bedrooms?` | `number` \| `null` | [src/core/business-mgt/property-config.schema.ts:91](https://github.com/wiil-io/core-js/blob/f45aa5ab8c493a625bfd18afa3598271cb04182d/src/core/business-mgt/property-config.schema.ts#L91) |
+| <a id="bathrooms"></a> `bathrooms?` | `number` \| `null` | [src/core/business-mgt/property-config.schema.ts:92](https://github.com/wiil-io/core-js/blob/f45aa5ab8c493a625bfd18afa3598271cb04182d/src/core/business-mgt/property-config.schema.ts#L92) |
+| <a id="parkingspaces"></a> `parkingSpaces?` | `number` \| `null` | [src/core/business-mgt/property-config.schema.ts:93](https://github.com/wiil-io/core-js/blob/f45aa5ab8c493a625bfd18afa3598271cb04182d/src/core/business-mgt/property-config.schema.ts#L93) |
+| <a id="squarefootage"></a> `squareFootage?` | `number` \| `null` | [src/core/business-mgt/property-config.schema.ts:94](https://github.com/wiil-io/core-js/blob/f45aa5ab8c493a625bfd18afa3598271cb04182d/src/core/business-mgt/property-config.schema.ts#L94) |
+| <a id="lotsize"></a> `lotSize?` | `number` \| `null` | [src/core/business-mgt/property-config.schema.ts:95](https://github.com/wiil-io/core-js/blob/f45aa5ab8c493a625bfd18afa3598271cb04182d/src/core/business-mgt/property-config.schema.ts#L95) |
+| <a id="lotsizeunit"></a> `lotSizeUnit` | `"sqft"` \| `"acres"` \| `"sqm"` \| `"hectares"` | [src/core/business-mgt/property-config.schema.ts:96](https://github.com/wiil-io/core-js/blob/f45aa5ab8c493a625bfd18afa3598271cb04182d/src/core/business-mgt/property-config.schema.ts#L96) |
+| <a id="yearbuilt"></a> `yearBuilt?` | `number` \| `null` | [src/core/business-mgt/property-config.schema.ts:97](https://github.com/wiil-io/core-js/blob/f45aa5ab8c493a625bfd18afa3598271cb04182d/src/core/business-mgt/property-config.schema.ts#L97) |
+| <a id="floors"></a> `floors?` | `number` \| `null` | [src/core/business-mgt/property-config.schema.ts:98](https://github.com/wiil-io/core-js/blob/f45aa5ab8c493a625bfd18afa3598271cb04182d/src/core/business-mgt/property-config.schema.ts#L98) |
+| <a id="amenities"></a> `amenities` | `string`[] | [src/core/business-mgt/property-config.schema.ts:99](https://github.com/wiil-io/core-js/blob/f45aa5ab8c493a625bfd18afa3598271cb04182d/src/core/business-mgt/property-config.schema.ts#L99) |
+| <a id="utilities"></a> `utilities` | `string`[] | [src/core/business-mgt/property-config.schema.ts:100](https://github.com/wiil-io/core-js/blob/f45aa5ab8c493a625bfd18afa3598271cb04182d/src/core/business-mgt/property-config.schema.ts#L100) |

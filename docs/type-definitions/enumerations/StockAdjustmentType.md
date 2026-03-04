@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.37**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.38**](../../README.md)
 
 ***
 
@@ -6,12 +6,12 @@
 
 # Enumeration: StockAdjustmentType
 
-Defined in: [src/core/type-definitions/business-definitions.ts:114](https://github.com/wiil-io/core-js/blob/9e9f9b9f49a3a42821de5b04e0cb59fe40e957fc/src/core/type-definitions/business-definitions.ts#L114)
+Defined in: [src/core/type-definitions/business-definitions.ts:114](https://github.com/wiil-io/core-js/blob/f45aa5ab8c493a625bfd18afa3598271cb04182d/src/core/type-definitions/business-definitions.ts#L114)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="addition"></a> `ADDITION` | `"addition"` | [src/core/type-definitions/business-definitions.ts:115](https://github.com/wiil-io/core-js/blob/9e9f9b9f49a3a42821de5b04e0cb59fe40e957fc/src/core/type-definitions/business-definitions.ts#L115) |
-| <a id="subtraction"></a> `SUBTRACTION` | `"subtraction"` | [src/core/type-definitions/business-definitions.ts:116](https://github.com/wiil-io/core-js/blob/9e9f9b9f49a3a42821de5b04e0cb59fe40e957fc/src/core/type-definitions/business-definitions.ts#L116) |
-| <a id="adjustment"></a> `ADJUSTMENT` | `"adjustment"` | [src/core/type-definitions/business-definitions.ts:117](https://github.com/wiil-io/core-js/blob/9e9f9b9f49a3a42821de5b04e0cb59fe40e957fc/src/core/type-definitions/business-definitions.ts#L117) |
+| <a id="addition"></a> `ADDITION` | `"addition"` | [src/core/type-definitions/business-definitions.ts:115](https://github.com/wiil-io/core-js/blob/f45aa5ab8c493a625bfd18afa3598271cb04182d/src/core/type-definitions/business-definitions.ts#L115) |
+| <a id="subtraction"></a> `SUBTRACTION` | `"subtraction"` | [src/core/type-definitions/business-definitions.ts:116](https://github.com/wiil-io/core-js/blob/f45aa5ab8c493a625bfd18afa3598271cb04182d/src/core/type-definitions/business-definitions.ts#L116) |
+| <a id="adjustment"></a> `ADJUSTMENT` | `"adjustment"` | [src/core/type-definitions/business-definitions.ts:117](https://github.com/wiil-io/core-js/blob/f45aa5ab8c493a625bfd18afa3598271cb04182d/src/core/type-definitions/business-definitions.ts#L117) |

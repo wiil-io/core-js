@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.37**](../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.38**](../README.md)
 
 ***
 
@@ -29,7 +29,8 @@ Central export point for all service configuration schemas.
 | [DynamicModelConfiguration](type-aliases/DynamicModelConfiguration.md) | Model configuration schema. |
 | [DynamicSTTModelConfiguration](type-aliases/DynamicSTTModelConfiguration.md) | Speech-to-text model configuration schema. |
 | [DynamicTTSModelConfiguration](type-aliases/DynamicTTSModelConfiguration.md) | Text-to-speech model configuration schema. |
-| [DynamicAgentSetupResult](type-aliases/DynamicAgentSetupResult.md) | Agent setup result schema. |
+| [DynamicAgentProcessingState](type-aliases/DynamicAgentProcessingState.md) | Agent processing state schema for tracking long-running setup operations. |
+| [DynamicAgentSetupResult](type-aliases/DynamicAgentSetupResult.md) | Agent setup result schema. Extends BaseModelSchema to include id, createdAt, and updatedAt fields. |
 | [DynamicPhoneAgentSetup](type-aliases/DynamicPhoneAgentSetup.md) | Phone agent setup schema. |
 | [UpdateDynamicPhoneAgent](type-aliases/UpdateDynamicPhoneAgent.md) | Schema for updating an existing phone agent configuration. All fields are optional except id. |
 | [DynamicPhoneAgentSetupResult](type-aliases/DynamicPhoneAgentSetupResult.md) | Phone agent setup result schema. |
@@ -106,7 +107,8 @@ Central export point for all service configuration schemas.
 | [DynamicModelConfigurationSchema](variables/DynamicModelConfigurationSchema.md) | Model configuration schema. |
 | [DynamicSTTModelConfigurationSchema](variables/DynamicSTTModelConfigurationSchema.md) | Speech-to-text model configuration schema. |
 | [DynamicTTSModelConfigurationSchema](variables/DynamicTTSModelConfigurationSchema.md) | Text-to-speech model configuration schema. |
-| [DynamicAgentSetupResultSchema](variables/DynamicAgentSetupResultSchema.md) | Agent setup result schema. |
+| [DynamicAgentProcessingStateSchema](variables/DynamicAgentProcessingStateSchema.md) | Agent processing state schema for tracking long-running setup operations. |
+| [DynamicAgentSetupResultSchema](variables/DynamicAgentSetupResultSchema.md) | Agent setup result schema. Extends BaseModelSchema to include id, createdAt, and updatedAt fields. |
 | [DynamicPhoneAgentSchema](variables/DynamicPhoneAgentSchema.md) | Phone agent setup schema. |
 | [DynamicPhoneAgentSetupResultSchema](variables/DynamicPhoneAgentSetupResultSchema.md) | Phone agent setup result schema. |
 | [UpdateDynamicPhoneAgentSchema](variables/UpdateDynamicPhoneAgentSchema.md) | Schema for updating an existing phone agent configuration. All fields are optional except id. |

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.37**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.38**](../../README.md)
 
 ***
 
@@ -6,17 +6,17 @@
 
 # Interface: BusinessMenuItemFilters
 
-Defined in: [src/core/business-mgt/menu-config.schema.ts:134](https://github.com/wiil-io/core-js/blob/9e9f9b9f49a3a42821de5b04e0cb59fe40e957fc/src/core/business-mgt/menu-config.schema.ts#L134)
+Defined in: [src/core/business-mgt/menu-config.schema.ts:134](https://github.com/wiil-io/core-js/blob/f45aa5ab8c493a625bfd18afa3598271cb04182d/src/core/business-mgt/menu-config.schema.ts#L134)
 
 ## Properties
 
 | Property | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="search"></a> `search?` | `string` | [src/core/business-mgt/menu-config.schema.ts:135](https://github.com/wiil-io/core-js/blob/9e9f9b9f49a3a42821de5b04e0cb59fe40e957fc/src/core/business-mgt/menu-config.schema.ts#L135) |
-| <a id="categoryid"></a> `categoryId?` | `string` | [src/core/business-mgt/menu-config.schema.ts:136](https://github.com/wiil-io/core-js/blob/9e9f9b9f49a3a42821de5b04e0cb59fe40e957fc/src/core/business-mgt/menu-config.schema.ts#L136) |
-| <a id="isactive"></a> `isActive?` | `boolean` | [src/core/business-mgt/menu-config.schema.ts:137](https://github.com/wiil-io/core-js/blob/9e9f9b9f49a3a42821de5b04e0cb59fe40e957fc/src/core/business-mgt/menu-config.schema.ts#L137) |
-| <a id="isavailable"></a> `isAvailable?` | `boolean` | [src/core/business-mgt/menu-config.schema.ts:138](https://github.com/wiil-io/core-js/blob/9e9f9b9f49a3a42821de5b04e0cb59fe40e957fc/src/core/business-mgt/menu-config.schema.ts#L138) |
-| <a id="allergens"></a> `allergens?` | `string`[] | [src/core/business-mgt/menu-config.schema.ts:139](https://github.com/wiil-io/core-js/blob/9e9f9b9f49a3a42821de5b04e0cb59fe40e957fc/src/core/business-mgt/menu-config.schema.ts#L139) |
-| <a id="pricerange"></a> `priceRange?` | \{ `min?`: `number`; `max?`: `number`; \} | [src/core/business-mgt/menu-config.schema.ts:140](https://github.com/wiil-io/core-js/blob/9e9f9b9f49a3a42821de5b04e0cb59fe40e957fc/src/core/business-mgt/menu-config.schema.ts#L140) |
-| `priceRange.min?` | `number` | [src/core/business-mgt/menu-config.schema.ts:140](https://github.com/wiil-io/core-js/blob/9e9f9b9f49a3a42821de5b04e0cb59fe40e957fc/src/core/business-mgt/menu-config.schema.ts#L140) |
-| `priceRange.max?` | `number` | [src/core/business-mgt/menu-config.schema.ts:140](https://github.com/wiil-io/core-js/blob/9e9f9b9f49a3a42821de5b04e0cb59fe40e957fc/src/core/business-mgt/menu-config.schema.ts#L140) |
+| <a id="search"></a> `search?` | `string` | [src/core/business-mgt/menu-config.schema.ts:135](https://github.com/wiil-io/core-js/blob/f45aa5ab8c493a625bfd18afa3598271cb04182d/src/core/business-mgt/menu-config.schema.ts#L135) |
+| <a id="categoryid"></a> `categoryId?` | `string` | [src/core/business-mgt/menu-config.schema.ts:136](https://github.com/wiil-io/core-js/blob/f45aa5ab8c493a625bfd18afa3598271cb04182d/src/core/business-mgt/menu-config.schema.ts#L136) |
+| <a id="isactive"></a> `isActive?` | `boolean` | [src/core/business-mgt/menu-config.schema.ts:137](https://github.com/wiil-io/core-js/blob/f45aa5ab8c493a625bfd18afa3598271cb04182d/src/core/business-mgt/menu-config.schema.ts#L137) |
+| <a id="isavailable"></a> `isAvailable?` | `boolean` | [src/core/business-mgt/menu-config.schema.ts:138](https://github.com/wiil-io/core-js/blob/f45aa5ab8c493a625bfd18afa3598271cb04182d/src/core/business-mgt/menu-config.schema.ts#L138) |
+| <a id="allergens"></a> `allergens?` | `string`[] | [src/core/business-mgt/menu-config.schema.ts:139](https://github.com/wiil-io/core-js/blob/f45aa5ab8c493a625bfd18afa3598271cb04182d/src/core/business-mgt/menu-config.schema.ts#L139) |
+| <a id="pricerange"></a> `priceRange?` | \{ `min?`: `number`; `max?`: `number`; \} | [src/core/business-mgt/menu-config.schema.ts:140](https://github.com/wiil-io/core-js/blob/f45aa5ab8c493a625bfd18afa3598271cb04182d/src/core/business-mgt/menu-config.schema.ts#L140) |
+| `priceRange.min?` | `number` | [src/core/business-mgt/menu-config.schema.ts:140](https://github.com/wiil-io/core-js/blob/f45aa5ab8c493a625bfd18afa3598271cb04182d/src/core/business-mgt/menu-config.schema.ts#L140) |
+| `priceRange.max?` | `number` | [src/core/business-mgt/menu-config.schema.ts:140](https://github.com/wiil-io/core-js/blob/f45aa5ab8c493a625bfd18afa3598271cb04182d/src/core/business-mgt/menu-config.schema.ts#L140) |

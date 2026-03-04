@@ -81,28 +81,45 @@ export const DynamicTTSModelConfigurationSchema = DynamicModelConfigurationSchem
 
 
 /**
+ * Agent processing state schema for tracking long-running setup operations.
+ *
+ * @typedef {Object} DynamicAgentProcessingState
+ * @property {string} status - Current processing status (pending, in_progress, completed, failed)
+ * @property {number} progressPercentage - Progress percentage (0-100)
+ * @property {string} [message] - Additional details about current state
+ */
+export const DynamicAgentProcessingStateSchema = z.object({
+    status: z.enum(["pending", "in_progress", "completed", "failed"]).describe("Current processing status of the agent setup"),
+    progressPercentage: z.number().min(0).max(100).describe("Progress percentage of the agent setup process"),
+    message: z.string().optional().describe("Optional message providing additional details about the current processing state"),
+}).describe("Schema for representing the processing state of a dynamic agent setup, useful for tracking long-running setup operations");
+
+/**
  * Agent setup result schema.
+ * Extends BaseModelSchema to include id, createdAt, and updatedAt fields.
  *
  * @typedef {Object} DynamicAgentSetupResult
- * @property {boolean} success - Whether the setup was successful
- * @property {string} agentConfigurationId - ID of the created agent configuration
- * @property {string} instructionConfigurationId - ID of the created instruction configuration
+ * @property {Object} processingState - Real-time processing state for async operations
+ * @property {boolean} [success] - Whether the setup was successful (nullable during processing)
+ * @property {string} [agentConfigurationId] - ID of the created agent configuration
+ * @property {string} [instructionConfigurationId] - ID of the created instruction configuration
  * @property {string} [errorMessage] - Error message if setup failed
  * @property {Object} [metadata] - Additional metadata about the setup
  */
 export const DynamicAgentSetupResultSchema = BaseModelSchema.safeExtend({
-    success: z.boolean().describe("Indicates if the phone assistant setup was successful"),
-    agentConfigurationId: z.string().describe("ID of the agent configuration created for this phone assistant"),
-    instructionConfigurationId: z.string().describe("ID of the instruction configuration created for this phone assistant"),
+    processingState: DynamicAgentProcessingStateSchema.describe("Optional field to provide real-time processing state of the agent setup, useful for asynchronous operations"),
+    success: z.boolean().nullable().optional().describe("Indicates if the assistant setup was successful"),
+    agentConfigurationId: z.string().nullable().optional().describe("ID of the agent configuration created for this assistant"),
+    instructionConfigurationId: z.string().nullable().optional().describe("ID of the instruction configuration created for this assistant"),
     errorMessage: z.string().optional().describe("Error message if the setup failed, otherwise undefined"),
-    metadata: z.record(z.string(), z.any()).nullable().optional().describe("Additional metadata about the phone assistant setup, if any"),
-}).describe("Schema for the result of creating or setting up a new phone AI assistant with dynamic setup");
-
+    metadata: z.record(z.string(), z.any()).nullable().optional().describe("Additional metadata about the assistant setup, if any"),
+}).describe("Schema for the result of creating or setting up a new AI assistant with dynamic setup");
 
 export type DynamicBaseAgentSetup = z.infer<typeof DynamicBaseAgentSetupSchema>;
-export type DynamicModelConfiguration    = z.infer<typeof DynamicModelConfigurationSchema>;
+export type DynamicModelConfiguration = z.infer<typeof DynamicModelConfigurationSchema>;
 export type DynamicSTTModelConfiguration = z.infer<typeof DynamicSTTModelConfigurationSchema>;
 export type DynamicTTSModelConfiguration = z.infer<typeof DynamicTTSModelConfigurationSchema>;
+export type DynamicAgentProcessingState = z.infer<typeof DynamicAgentProcessingStateSchema>;
 export type DynamicAgentSetupResult = z.infer<typeof DynamicAgentSetupResultSchema>;
 
 

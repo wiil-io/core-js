@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.37**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.38**](../../README.md)
 
 ***
 
@@ -13,11 +13,11 @@ type AgentConfigurationDeleteRequest = {
 };
 ```
 
-Defined in: [src/core/service-configuration/agent-config.schema.ts:177](https://github.com/wiil-io/core-js/blob/9e9f9b9f49a3a42821de5b04e0cb59fe40e957fc/src/core/service-configuration/agent-config.schema.ts#L177)
+Defined in: [src/core/service-configuration/agent-config.schema.ts:177](https://github.com/wiil-io/core-js/blob/f45aa5ab8c493a625bfd18afa3598271cb04182d/src/core/service-configuration/agent-config.schema.ts#L177)
 
 ## Type Declaration
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="id"></a> `id` | `string` | [src/core/service-configuration/agent-config.schema.ts:173](https://github.com/wiil-io/core-js/blob/9e9f9b9f49a3a42821de5b04e0cb59fe40e957fc/src/core/service-configuration/agent-config.schema.ts#L173) |
-| <a id="deletephoneconfig"></a> `deletePhoneConfig` | `boolean` | [src/core/service-configuration/agent-config.schema.ts:174](https://github.com/wiil-io/core-js/blob/9e9f9b9f49a3a42821de5b04e0cb59fe40e957fc/src/core/service-configuration/agent-config.schema.ts#L174) |
+| <a id="id"></a> `id` | `string` | [src/core/service-configuration/agent-config.schema.ts:173](https://github.com/wiil-io/core-js/blob/f45aa5ab8c493a625bfd18afa3598271cb04182d/src/core/service-configuration/agent-config.schema.ts#L173) |
+| <a id="deletephoneconfig"></a> `deletePhoneConfig` | `boolean` | [src/core/service-configuration/agent-config.schema.ts:174](https://github.com/wiil-io/core-js/blob/f45aa5ab8c493a625bfd18afa3598271cb04182d/src/core/service-configuration/agent-config.schema.ts#L174) |

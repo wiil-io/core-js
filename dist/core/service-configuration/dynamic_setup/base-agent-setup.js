@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DynamicAgentSetupResultSchema = exports.DynamicTTSModelConfigurationSchema = exports.DynamicSTTModelConfigurationSchema = exports.DynamicModelConfigurationSchema = exports.DynamicBaseAgentSetupSchema = void 0;
+exports.DynamicAgentSetupResultSchema = exports.DynamicAgentProcessingStateSchema = exports.DynamicTTSModelConfigurationSchema = exports.DynamicSTTModelConfigurationSchema = exports.DynamicModelConfigurationSchema = exports.DynamicBaseAgentSetupSchema = void 0;
 const zod_1 = __importDefault(require("zod"));
 const type_definitions_1 = require("../../type-definitions");
 const base_schema_1 = require("../../base.schema");
@@ -76,19 +76,35 @@ exports.DynamicTTSModelConfigurationSchema = exports.DynamicModelConfigurationSc
     voiceId: zod_1.default.string().optional().describe("Voice ID for the text-to-speech model, if applicable"),
 }).describe("Schema for text-to-speech model configuration, extending the base model configuration with language and voice support");
 /**
+ * Agent processing state schema for tracking long-running setup operations.
+ *
+ * @typedef {Object} DynamicAgentProcessingState
+ * @property {string} status - Current processing status (pending, in_progress, completed, failed)
+ * @property {number} progressPercentage - Progress percentage (0-100)
+ * @property {string} [message] - Additional details about current state
+ */
+exports.DynamicAgentProcessingStateSchema = zod_1.default.object({
+    status: zod_1.default.enum(["pending", "in_progress", "completed", "failed"]).describe("Current processing status of the agent setup"),
+    progressPercentage: zod_1.default.number().min(0).max(100).describe("Progress percentage of the agent setup process"),
+    message: zod_1.default.string().optional().describe("Optional message providing additional details about the current processing state"),
+}).describe("Schema for representing the processing state of a dynamic agent setup, useful for tracking long-running setup operations");
+/**
  * Agent setup result schema.
+ * Extends BaseModelSchema to include id, createdAt, and updatedAt fields.
  *
  * @typedef {Object} DynamicAgentSetupResult
- * @property {boolean} success - Whether the setup was successful
- * @property {string} agentConfigurationId - ID of the created agent configuration
- * @property {string} instructionConfigurationId - ID of the created instruction configuration
+ * @property {Object} processingState - Real-time processing state for async operations
+ * @property {boolean} [success] - Whether the setup was successful (nullable during processing)
+ * @property {string} [agentConfigurationId] - ID of the created agent configuration
+ * @property {string} [instructionConfigurationId] - ID of the created instruction configuration
  * @property {string} [errorMessage] - Error message if setup failed
  * @property {Object} [metadata] - Additional metadata about the setup
  */
 exports.DynamicAgentSetupResultSchema = base_schema_1.BaseModelSchema.safeExtend({
-    success: zod_1.default.boolean().describe("Indicates if the phone assistant setup was successful"),
-    agentConfigurationId: zod_1.default.string().describe("ID of the agent configuration created for this phone assistant"),
-    instructionConfigurationId: zod_1.default.string().describe("ID of the instruction configuration created for this phone assistant"),
+    processingState: exports.DynamicAgentProcessingStateSchema.describe("Optional field to provide real-time processing state of the agent setup, useful for asynchronous operations"),
+    success: zod_1.default.boolean().nullable().optional().describe("Indicates if the assistant setup was successful"),
+    agentConfigurationId: zod_1.default.string().nullable().optional().describe("ID of the agent configuration created for this assistant"),
+    instructionConfigurationId: zod_1.default.string().nullable().optional().describe("ID of the instruction configuration created for this assistant"),
     errorMessage: zod_1.default.string().optional().describe("Error message if the setup failed, otherwise undefined"),
-    metadata: zod_1.default.record(zod_1.default.string(), zod_1.default.any()).nullable().optional().describe("Additional metadata about the phone assistant setup, if any"),
-}).describe("Schema for the result of creating or setting up a new phone AI assistant with dynamic setup");
+    metadata: zod_1.default.record(zod_1.default.string(), zod_1.default.any()).nullable().optional().describe("Additional metadata about the assistant setup, if any"),
+}).describe("Schema for the result of creating or setting up a new AI assistant with dynamic setup");
