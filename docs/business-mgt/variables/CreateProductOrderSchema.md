@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.35**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.36**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const CreateProductOrderSchema: ZodObject<CreateProductOrder>;
 ```
 
-Defined in: [src/core/business-mgt/product-order.schema.ts:117](https://github.com/wiil-io/core-js/blob/a6d3ab8237aae22c03e6a31e70688247453a5ec5/src/core/business-mgt/product-order.schema.ts#L117)
+Defined in: [src/core/business-mgt/product-order.schema.ts:117](https://github.com/wiil-io/core-js/blob/fb13aab2cdb27f890ccfbc762905c0de67688751/src/core/business-mgt/product-order.schema.ts#L117)
 
 Schema for creating a new product order.
 Omits auto-generated fields and uses base items without IDs.

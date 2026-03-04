@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.35**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.36**](../../README.md)
 
 ***
 
@@ -6,12 +6,12 @@
 
 # Enumeration: ProductOrderType
 
-Defined in: [src/core/type-definitions/business-definitions.ts:89](https://github.com/wiil-io/core-js/blob/a6d3ab8237aae22c03e6a31e70688247453a5ec5/src/core/type-definitions/business-definitions.ts#L89)
+Defined in: [src/core/type-definitions/business-definitions.ts:89](https://github.com/wiil-io/core-js/blob/fb13aab2cdb27f890ccfbc762905c0de67688751/src/core/type-definitions/business-definitions.ts#L89)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="pickup"></a> `PICKUP` | `"pickup"` | [src/core/type-definitions/business-definitions.ts:90](https://github.com/wiil-io/core-js/blob/a6d3ab8237aae22c03e6a31e70688247453a5ec5/src/core/type-definitions/business-definitions.ts#L90) |
-| <a id="delivery"></a> `DELIVERY` | `"delivery"` | [src/core/type-definitions/business-definitions.ts:91](https://github.com/wiil-io/core-js/blob/a6d3ab8237aae22c03e6a31e70688247453a5ec5/src/core/type-definitions/business-definitions.ts#L91) |
-| <a id="shipping"></a> `SHIPPING` | `"shipping"` | [src/core/type-definitions/business-definitions.ts:92](https://github.com/wiil-io/core-js/blob/a6d3ab8237aae22c03e6a31e70688247453a5ec5/src/core/type-definitions/business-definitions.ts#L92) |
+| <a id="pickup"></a> `PICKUP` | `"pickup"` | [src/core/type-definitions/business-definitions.ts:90](https://github.com/wiil-io/core-js/blob/fb13aab2cdb27f890ccfbc762905c0de67688751/src/core/type-definitions/business-definitions.ts#L90) |
+| <a id="delivery"></a> `DELIVERY` | `"delivery"` | [src/core/type-definitions/business-definitions.ts:91](https://github.com/wiil-io/core-js/blob/fb13aab2cdb27f890ccfbc762905c0de67688751/src/core/type-definitions/business-definitions.ts#L91) |
+| <a id="shipping"></a> `SHIPPING` | `"shipping"` | [src/core/type-definitions/business-definitions.ts:92](https://github.com/wiil-io/core-js/blob/fb13aab2cdb27f890ccfbc762905c0de67688751/src/core/type-definitions/business-definitions.ts#L92) |

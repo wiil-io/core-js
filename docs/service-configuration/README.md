@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.35**](../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.36**](../README.md)
 
 ***
 
@@ -25,17 +25,17 @@ Central export point for all service configuration schemas.
 | [UpdateDeploymentConfiguration](type-aliases/UpdateDeploymentConfiguration.md) | Type definition for updating an existing deployment configuration. |
 | [DeploymentConfigurationResult](type-aliases/DeploymentConfigurationResult.md) | Type definition for deployment configuration result. |
 | [DeploymentConfigurationDetails](type-aliases/DeploymentConfigurationDetails.md) | Type definition for deployment configuration details. |
-| [DynamicBaseAgentSetup](type-aliases/DynamicBaseAgentSetup.md) | - |
-| [DynamicModelConfiguration](type-aliases/DynamicModelConfiguration.md) | - |
-| [DynamicSTTModelConfiguration](type-aliases/DynamicSTTModelConfiguration.md) | - |
-| [DynamicTTSModelConfiguration](type-aliases/DynamicTTSModelConfiguration.md) | - |
-| [DynamicAgentSetupResult](type-aliases/DynamicAgentSetupResult.md) | - |
-| [DynamicPhoneAgentSetup](type-aliases/DynamicPhoneAgentSetup.md) | - |
-| [UpdateDynamicPhoneAgent](type-aliases/UpdateDynamicPhoneAgent.md) | - |
-| [DynamicPhoneAgentSetupResult](type-aliases/DynamicPhoneAgentSetupResult.md) | - |
-| [DynamicWebAgentSetup](type-aliases/DynamicWebAgentSetup.md) | - |
-| [UpdateDynamicWebAgent](type-aliases/UpdateDynamicWebAgent.md) | - |
-| [DynamicWebAgentSetupResult](type-aliases/DynamicWebAgentSetupResult.md) | - |
+| [DynamicBaseAgentSetup](type-aliases/DynamicBaseAgentSetup.md) | Base agent setup schema. |
+| [DynamicModelConfiguration](type-aliases/DynamicModelConfiguration.md) | Model configuration schema. |
+| [DynamicSTTModelConfiguration](type-aliases/DynamicSTTModelConfiguration.md) | Speech-to-text model configuration schema. |
+| [DynamicTTSModelConfiguration](type-aliases/DynamicTTSModelConfiguration.md) | Text-to-speech model configuration schema. |
+| [DynamicAgentSetupResult](type-aliases/DynamicAgentSetupResult.md) | Agent setup result schema. |
+| [DynamicPhoneAgentSetup](type-aliases/DynamicPhoneAgentSetup.md) | Phone agent setup schema. |
+| [UpdateDynamicPhoneAgent](type-aliases/UpdateDynamicPhoneAgent.md) | Schema for updating an existing phone agent configuration. All fields are optional except id. |
+| [DynamicPhoneAgentSetupResult](type-aliases/DynamicPhoneAgentSetupResult.md) | Phone agent setup result schema. |
+| [DynamicWebAgentSetup](type-aliases/DynamicWebAgentSetup.md) | Web agent setup schema. |
+| [UpdateDynamicWebAgent](type-aliases/UpdateDynamicWebAgent.md) | Schema for updating an existing web agent configuration. All fields are optional except id. |
+| [DynamicWebAgentSetupResult](type-aliases/DynamicWebAgentSetupResult.md) | Web agent setup result schema. |
 | [InstructionConfiguration](type-aliases/InstructionConfiguration.md) | Type definition for Instruction Configuration. |
 | [CreateInstructionConfiguration](type-aliases/CreateInstructionConfiguration.md) | Type definition for creating a new instruction configuration. |
 | [UpdateInstructionConfiguration](type-aliases/UpdateInstructionConfiguration.md) | Type definition for updating an existing instruction configuration. |
@@ -102,17 +102,17 @@ Central export point for all service configuration schemas.
 | [UpdateDeploymentConfigurationSchema](variables/UpdateDeploymentConfigurationSchema.md) | Zod schema for updating an existing deployment configuration. |
 | [DeploymentConfigurationResultSchema](variables/DeploymentConfigurationResultSchema.md) | Zod schema for deployment configuration result (lightweight version). |
 | [DeploymentConfigurationDetailsSchema](variables/DeploymentConfigurationDetailsSchema.md) | Zod schema for deployment configuration details (full version with all relations). |
-| [DynamicBaseAgentSetupSchema](variables/DynamicBaseAgentSetupSchema.md) | - |
-| [DynamicModelConfigurationSchema](variables/DynamicModelConfigurationSchema.md) | - |
-| [DynamicSTTModelConfigurationSchema](variables/DynamicSTTModelConfigurationSchema.md) | - |
-| [DynamicTTSModelConfigurationSchema](variables/DynamicTTSModelConfigurationSchema.md) | - |
-| [DynamicAgentSetupResultSchema](variables/DynamicAgentSetupResultSchema.md) | - |
-| [DynamicPhoneAgentSchema](variables/DynamicPhoneAgentSchema.md) | - |
-| [DynamicPhoneAgentSetupResultSchema](variables/DynamicPhoneAgentSetupResultSchema.md) | - |
-| [UpdateDynamicPhoneAgentSchema](variables/UpdateDynamicPhoneAgentSchema.md) | - |
-| [DynamicWebAgentSchema](variables/DynamicWebAgentSchema.md) | - |
-| [DynamicWebAgentSetupResultSchema](variables/DynamicWebAgentSetupResultSchema.md) | - |
-| [UpdateDynamicWebAgentSchema](variables/UpdateDynamicWebAgentSchema.md) | - |
+| [DynamicBaseAgentSetupSchema](variables/DynamicBaseAgentSetupSchema.md) | Base agent setup schema. |
+| [DynamicModelConfigurationSchema](variables/DynamicModelConfigurationSchema.md) | Model configuration schema. |
+| [DynamicSTTModelConfigurationSchema](variables/DynamicSTTModelConfigurationSchema.md) | Speech-to-text model configuration schema. |
+| [DynamicTTSModelConfigurationSchema](variables/DynamicTTSModelConfigurationSchema.md) | Text-to-speech model configuration schema. |
+| [DynamicAgentSetupResultSchema](variables/DynamicAgentSetupResultSchema.md) | Agent setup result schema. |
+| [DynamicPhoneAgentSchema](variables/DynamicPhoneAgentSchema.md) | Phone agent setup schema. |
+| [DynamicPhoneAgentSetupResultSchema](variables/DynamicPhoneAgentSetupResultSchema.md) | Phone agent setup result schema. |
+| [UpdateDynamicPhoneAgentSchema](variables/UpdateDynamicPhoneAgentSchema.md) | Schema for updating an existing phone agent configuration. All fields are optional except id. |
+| [DynamicWebAgentSchema](variables/DynamicWebAgentSchema.md) | Web agent setup schema. |
+| [DynamicWebAgentSetupResultSchema](variables/DynamicWebAgentSetupResultSchema.md) | Web agent setup result schema. |
+| [UpdateDynamicWebAgentSchema](variables/UpdateDynamicWebAgentSchema.md) | Schema for updating an existing web agent configuration. All fields are optional except id. |
 | [InstructionConfigurationSchema](variables/InstructionConfigurationSchema.md) | Zod schema for Instruction Configuration validation. |
 | [CreateInstructionConfigurationSchema](variables/CreateInstructionConfigurationSchema.md) | Zod schema for creating a new instruction configuration. |
 | [UpdateInstructionConfigurationSchema](variables/UpdateInstructionConfigurationSchema.md) | Zod schema for updating an existing instruction configuration. |

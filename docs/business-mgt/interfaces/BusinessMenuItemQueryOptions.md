@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.35**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.36**](../../README.md)
 
 ***
 
@@ -6,13 +6,13 @@
 
 # Interface: BusinessMenuItemQueryOptions
 
-Defined in: [src/core/business-mgt/menu-config.schema.ts:148](https://github.com/wiil-io/core-js/blob/a6d3ab8237aae22c03e6a31e70688247453a5ec5/src/core/business-mgt/menu-config.schema.ts#L148)
+Defined in: [src/core/business-mgt/menu-config.schema.ts:148](https://github.com/wiil-io/core-js/blob/fb13aab2cdb27f890ccfbc762905c0de67688751/src/core/business-mgt/menu-config.schema.ts#L148)
 
 ## Properties
 
 | Property | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | [src/core/business-mgt/menu-config.schema.ts:149](https://github.com/wiil-io/core-js/blob/a6d3ab8237aae22c03e6a31e70688247453a5ec5/src/core/business-mgt/menu-config.schema.ts#L149) |
-| <a id="pagesize"></a> `pageSize` | `number` | [src/core/business-mgt/menu-config.schema.ts:150](https://github.com/wiil-io/core-js/blob/a6d3ab8237aae22c03e6a31e70688247453a5ec5/src/core/business-mgt/menu-config.schema.ts#L150) |
-| <a id="filters"></a> `filters?` | [`BusinessMenuItemFilters`](BusinessMenuItemFilters.md) | [src/core/business-mgt/menu-config.schema.ts:151](https://github.com/wiil-io/core-js/blob/a6d3ab8237aae22c03e6a31e70688247453a5ec5/src/core/business-mgt/menu-config.schema.ts#L151) |
-| <a id="sorting"></a> `sorting?` | [`BusinessMenuItemSorting`](BusinessMenuItemSorting.md) | [src/core/business-mgt/menu-config.schema.ts:152](https://github.com/wiil-io/core-js/blob/a6d3ab8237aae22c03e6a31e70688247453a5ec5/src/core/business-mgt/menu-config.schema.ts#L152) |
+| <a id="page"></a> `page` | `number` | [src/core/business-mgt/menu-config.schema.ts:149](https://github.com/wiil-io/core-js/blob/fb13aab2cdb27f890ccfbc762905c0de67688751/src/core/business-mgt/menu-config.schema.ts#L149) |
+| <a id="pagesize"></a> `pageSize` | `number` | [src/core/business-mgt/menu-config.schema.ts:150](https://github.com/wiil-io/core-js/blob/fb13aab2cdb27f890ccfbc762905c0de67688751/src/core/business-mgt/menu-config.schema.ts#L150) |
+| <a id="filters"></a> `filters?` | [`BusinessMenuItemFilters`](BusinessMenuItemFilters.md) | [src/core/business-mgt/menu-config.schema.ts:151](https://github.com/wiil-io/core-js/blob/fb13aab2cdb27f890ccfbc762905c0de67688751/src/core/business-mgt/menu-config.schema.ts#L151) |
+| <a id="sorting"></a> `sorting?` | [`BusinessMenuItemSorting`](BusinessMenuItemSorting.md) | [src/core/business-mgt/menu-config.schema.ts:152](https://github.com/wiil-io/core-js/blob/fb13aab2cdb27f890ccfbc762905c0de67688751/src/core/business-mgt/menu-config.schema.ts#L152) |

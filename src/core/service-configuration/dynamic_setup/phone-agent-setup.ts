@@ -1,6 +1,24 @@
 import z from "zod";
 import { DynamicAgentSetupResultSchema, DynamicBaseAgentSetupSchema, DynamicSTTModelConfigurationSchema, DynamicTTSModelConfigurationSchema } from "./base-agent-setup";
 
+/**
+ * @fileoverview Phone agent setup schemas for AI assistant configuration.
+ * @module service-configuration/dynamic_setup/phone-agent-setup
+ *
+ * Provides schemas for configuring AI assistants deployed on phone/telephony channels.
+ * Extends the base agent setup with phone-specific settings like phone configuration,
+ * test numbers, and required voice interaction configurations (STT/TTS).
+ */
+
+/**
+ * Phone agent setup schema.
+ *
+ * @typedef {Object} DynamicPhoneAgentSetup
+ * @property {string} [phoneConfigurationId] - ID of the phone configuration
+ * @property {string} [testPhoneNumber] - Phone number for testing
+ * @property {Object} [sttConfiguration] - Speech-to-text configuration (required for voice)
+ * @property {Object} [ttsConfiguration] - Text-to-speech configuration (required for voice)
+ */
 export const DynamicPhoneAgentSchema = DynamicBaseAgentSetupSchema.safeExtend({
     phoneConfigurationId: z.string().nullable().optional().describe("ID of the phone configuration to use for this assistant, defining telephony settings and integrations"),
     testPhoneNumber: z.string().nullable().optional().describe("Optional phone number to use for testing the phone assistant setup, if applicable"),
@@ -16,11 +34,23 @@ export const DynamicPhoneAgentSchema = DynamicBaseAgentSetupSchema.safeExtend({
 ).describe("Schema for setting up a phone AI assistant with optional chain configuration capabilities");
 
 
-
+/**
+ * Phone agent setup result schema.
+ *
+ * @typedef {Object} DynamicPhoneAgentSetupResult
+ * @property {boolean} success - Whether the setup was successful
+ * @property {string} agentConfigurationId - ID of the created agent configuration
+ * @property {string} instructionConfigurationId - ID of the created instruction configuration
+ * @property {string} phoneNumber - Phone number associated with the configuration
+ */
 export const DynamicPhoneAgentSetupResultSchema = DynamicAgentSetupResultSchema.safeExtend({
     phoneNumber: z.string().describe("Phone number associated with the phone configuration used for this assistant"),
 }).describe("Schema for the result of creating or setting up a new phone AI assistant with dynamic setup");
 
+/**
+ * Schema for updating an existing phone agent configuration.
+ * All fields are optional except id.
+ */
 export const UpdateDynamicPhoneAgentSchema = DynamicPhoneAgentSchema.partial().extend({
     id: z.string().describe("ID of the existing phone agent configuration to update"),
 }).describe("Schema for updating a phone AI assistant configuration, allowing partial updates to phone-specific fields");

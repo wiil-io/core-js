@@ -1,4 +1,12 @@
 "use strict";
+/**
+ * @fileoverview Central export point for dynamic agent setup schemas.
+ * @module service-configuration/dynamic_setup
+ *
+ * Provides schemas for dynamically configuring AI assistants across different
+ * communication channels (phone, web). Includes base configuration schemas
+ * and channel-specific extensions for voice and text interactions.
+ */
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     var desc = Object.getOwnPropertyDescriptor(m, k);

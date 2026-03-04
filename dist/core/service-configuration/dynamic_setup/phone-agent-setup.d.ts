@@ -1,4 +1,21 @@
 import z from "zod";
+/**
+ * @fileoverview Phone agent setup schemas for AI assistant configuration.
+ * @module service-configuration/dynamic_setup/phone-agent-setup
+ *
+ * Provides schemas for configuring AI assistants deployed on phone/telephony channels.
+ * Extends the base agent setup with phone-specific settings like phone configuration,
+ * test numbers, and required voice interaction configurations (STT/TTS).
+ */
+/**
+ * Phone agent setup schema.
+ *
+ * @typedef {Object} DynamicPhoneAgentSetup
+ * @property {string} [phoneConfigurationId] - ID of the phone configuration
+ * @property {string} [testPhoneNumber] - Phone number for testing
+ * @property {Object} [sttConfiguration] - Speech-to-text configuration (required for voice)
+ * @property {Object} [ttsConfiguration] - Text-to-speech configuration (required for voice)
+ */
 export declare const DynamicPhoneAgentSchema: z.ZodObject<{
     assistantName: z.ZodString;
     instructionConfigurationId: z.ZodOptional<z.ZodString>;
@@ -23,6 +40,15 @@ export declare const DynamicPhoneAgentSchema: z.ZodObject<{
         voiceId: z.ZodOptional<z.ZodString>;
     }, z.core.$strip>>>;
 }, z.core.$strip>;
+/**
+ * Phone agent setup result schema.
+ *
+ * @typedef {Object} DynamicPhoneAgentSetupResult
+ * @property {boolean} success - Whether the setup was successful
+ * @property {string} agentConfigurationId - ID of the created agent configuration
+ * @property {string} instructionConfigurationId - ID of the created instruction configuration
+ * @property {string} phoneNumber - Phone number associated with the configuration
+ */
 export declare const DynamicPhoneAgentSetupResultSchema: z.ZodObject<{
     success: z.ZodBoolean;
     agentConfigurationId: z.ZodString;
@@ -31,6 +57,10 @@ export declare const DynamicPhoneAgentSetupResultSchema: z.ZodObject<{
     metadata: z.ZodOptional<z.ZodNullable<z.ZodRecord<z.ZodString, z.ZodAny>>>;
     phoneNumber: z.ZodString;
 }, z.core.$strip>;
+/**
+ * Schema for updating an existing phone agent configuration.
+ * All fields are optional except id.
+ */
 export declare const UpdateDynamicPhoneAgentSchema: z.ZodObject<{
     assistantName: z.ZodOptional<z.ZodString>;
     instructionConfigurationId: z.ZodOptional<z.ZodOptional<z.ZodString>>;

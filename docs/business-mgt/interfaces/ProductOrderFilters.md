@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.35**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.36**](../../README.md)
 
 ***
 
@@ -6,18 +6,18 @@
 
 # Interface: ProductOrderFilters
 
-Defined in: [src/core/business-mgt/product-order.schema.ts:176](https://github.com/wiil-io/core-js/blob/a6d3ab8237aae22c03e6a31e70688247453a5ec5/src/core/business-mgt/product-order.schema.ts#L176)
+Defined in: [src/core/business-mgt/product-order.schema.ts:176](https://github.com/wiil-io/core-js/blob/fb13aab2cdb27f890ccfbc762905c0de67688751/src/core/business-mgt/product-order.schema.ts#L176)
 
 ## Properties
 
 | Property | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="search"></a> `search?` | `string` | [src/core/business-mgt/product-order.schema.ts:177](https://github.com/wiil-io/core-js/blob/a6d3ab8237aae22c03e6a31e70688247453a5ec5/src/core/business-mgt/product-order.schema.ts#L177) |
-| <a id="status"></a> `status?` | [`OrderStatus`](../../type-definitions/enumerations/OrderStatus.md)[] | [src/core/business-mgt/product-order.schema.ts:178](https://github.com/wiil-io/core-js/blob/a6d3ab8237aae22c03e6a31e70688247453a5ec5/src/core/business-mgt/product-order.schema.ts#L178) |
-| <a id="paymentstatus"></a> `paymentStatus?` | [`PaymentStatus`](../../type-definitions/enumerations/PaymentStatus.md)[] | [src/core/business-mgt/product-order.schema.ts:179](https://github.com/wiil-io/core-js/blob/a6d3ab8237aae22c03e6a31e70688247453a5ec5/src/core/business-mgt/product-order.schema.ts#L179) |
-| <a id="customerid"></a> `customerId?` | `string` | [src/core/business-mgt/product-order.schema.ts:180](https://github.com/wiil-io/core-js/blob/a6d3ab8237aae22c03e6a31e70688247453a5ec5/src/core/business-mgt/product-order.schema.ts#L180) |
-| <a id="shippingmethod"></a> `shippingMethod?` | `string` | [src/core/business-mgt/product-order.schema.ts:181](https://github.com/wiil-io/core-js/blob/a6d3ab8237aae22c03e6a31e70688247453a5ec5/src/core/business-mgt/product-order.schema.ts#L181) |
-| <a id="source"></a> `source?` | `string` | [src/core/business-mgt/product-order.schema.ts:182](https://github.com/wiil-io/core-js/blob/a6d3ab8237aae22c03e6a31e70688247453a5ec5/src/core/business-mgt/product-order.schema.ts#L182) |
-| <a id="daterange"></a> `dateRange?` | \{ `start?`: `number`; `end?`: `number`; \} | [src/core/business-mgt/product-order.schema.ts:183](https://github.com/wiil-io/core-js/blob/a6d3ab8237aae22c03e6a31e70688247453a5ec5/src/core/business-mgt/product-order.schema.ts#L183) |
-| `dateRange.start?` | `number` | [src/core/business-mgt/product-order.schema.ts:183](https://github.com/wiil-io/core-js/blob/a6d3ab8237aae22c03e6a31e70688247453a5ec5/src/core/business-mgt/product-order.schema.ts#L183) |
-| `dateRange.end?` | `number` | [src/core/business-mgt/product-order.schema.ts:183](https://github.com/wiil-io/core-js/blob/a6d3ab8237aae22c03e6a31e70688247453a5ec5/src/core/business-mgt/product-order.schema.ts#L183) |
+| <a id="search"></a> `search?` | `string` | [src/core/business-mgt/product-order.schema.ts:177](https://github.com/wiil-io/core-js/blob/fb13aab2cdb27f890ccfbc762905c0de67688751/src/core/business-mgt/product-order.schema.ts#L177) |
+| <a id="status"></a> `status?` | [`OrderStatus`](../../type-definitions/enumerations/OrderStatus.md)[] | [src/core/business-mgt/product-order.schema.ts:178](https://github.com/wiil-io/core-js/blob/fb13aab2cdb27f890ccfbc762905c0de67688751/src/core/business-mgt/product-order.schema.ts#L178) |
+| <a id="paymentstatus"></a> `paymentStatus?` | [`PaymentStatus`](../../type-definitions/enumerations/PaymentStatus.md)[] | [src/core/business-mgt/product-order.schema.ts:179](https://github.com/wiil-io/core-js/blob/fb13aab2cdb27f890ccfbc762905c0de67688751/src/core/business-mgt/product-order.schema.ts#L179) |
+| <a id="customerid"></a> `customerId?` | `string` | [src/core/business-mgt/product-order.schema.ts:180](https://github.com/wiil-io/core-js/blob/fb13aab2cdb27f890ccfbc762905c0de67688751/src/core/business-mgt/product-order.schema.ts#L180) |
+| <a id="shippingmethod"></a> `shippingMethod?` | `string` | [src/core/business-mgt/product-order.schema.ts:181](https://github.com/wiil-io/core-js/blob/fb13aab2cdb27f890ccfbc762905c0de67688751/src/core/business-mgt/product-order.schema.ts#L181) |
+| <a id="source"></a> `source?` | `string` | [src/core/business-mgt/product-order.schema.ts:182](https://github.com/wiil-io/core-js/blob/fb13aab2cdb27f890ccfbc762905c0de67688751/src/core/business-mgt/product-order.schema.ts#L182) |
+| <a id="daterange"></a> `dateRange?` | \{ `start?`: `number`; `end?`: `number`; \} | [src/core/business-mgt/product-order.schema.ts:183](https://github.com/wiil-io/core-js/blob/fb13aab2cdb27f890ccfbc762905c0de67688751/src/core/business-mgt/product-order.schema.ts#L183) |
+| `dateRange.start?` | `number` | [src/core/business-mgt/product-order.schema.ts:183](https://github.com/wiil-io/core-js/blob/fb13aab2cdb27f890ccfbc762905c0de67688751/src/core/business-mgt/product-order.schema.ts#L183) |
+| `dateRange.end?` | `number` | [src/core/business-mgt/product-order.schema.ts:183](https://github.com/wiil-io/core-js/blob/fb13aab2cdb27f890ccfbc762905c0de67688751/src/core/business-mgt/product-order.schema.ts#L183) |

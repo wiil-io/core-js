@@ -1,5 +1,22 @@
 import z from "zod";
 import { OttCommunicationType } from "../../type-definitions";
+/**
+ * @fileoverview Web agent setup schemas for AI assistant configuration.
+ * @module service-configuration/dynamic_setup/web-agent-setup
+ *
+ * Provides schemas for configuring AI assistants deployed on web channels.
+ * Extends the base agent setup with web-specific settings like website URL,
+ * communication type, and optional voice interaction configurations.
+ */
+/**
+ * Web agent setup schema.
+ *
+ * @typedef {Object} DynamicWebAgentSetup
+ * @property {string} websiteUrl - URL of the website for this assistant
+ * @property {OttCommunicationType} [communicationType] - Communication method (text, voice, unified)
+ * @property {Object} [sttConfiguration] - Speech-to-text configuration for voice
+ * @property {Object} [ttsConfiguration] - Text-to-speech configuration for voice
+ */
 export declare const DynamicWebAgentSchema: z.ZodObject<{
     assistantName: z.ZodString;
     instructionConfigurationId: z.ZodOptional<z.ZodString>;
@@ -24,6 +41,15 @@ export declare const DynamicWebAgentSchema: z.ZodObject<{
         voiceId: z.ZodOptional<z.ZodString>;
     }, z.core.$strip>>>;
 }, z.core.$strip>;
+/**
+ * Web agent setup result schema.
+ *
+ * @typedef {Object} DynamicWebAgentSetupResult
+ * @property {boolean} success - Whether the setup was successful
+ * @property {string} agentConfigurationId - ID of the created agent configuration
+ * @property {string} instructionConfigurationId - ID of the created instruction configuration
+ * @property {string[]} integrationSnippets - Code snippets for deploying the web assistant
+ */
 export declare const DynamicWebAgentSetupResultSchema: z.ZodObject<{
     success: z.ZodBoolean;
     agentConfigurationId: z.ZodString;
@@ -32,6 +58,10 @@ export declare const DynamicWebAgentSetupResultSchema: z.ZodObject<{
     metadata: z.ZodOptional<z.ZodNullable<z.ZodRecord<z.ZodString, z.ZodAny>>>;
     integrationSnippets: z.ZodArray<z.ZodString>;
 }, z.core.$strip>;
+/**
+ * Schema for updating an existing web agent configuration.
+ * All fields are optional except id.
+ */
 export declare const UpdateDynamicWebAgentSchema: z.ZodObject<{
     assistantName: z.ZodOptional<z.ZodString>;
     instructionConfigurationId: z.ZodOptional<z.ZodOptional<z.ZodString>>;
