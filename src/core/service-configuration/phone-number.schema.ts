@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { PhoneNumberType, PhonePurchaseStatus, ProviderType } from "../type-definitions/service-config.definitions";
+import { PhoneNumberType, PhonePurchaseStatus } from "../type-definitions/service-config.definitions";
 import { BaseModelSchema, PhoneNumberSchema } from "../base.schema";
 
 /**
@@ -11,49 +11,6 @@ import { BaseModelSchema, PhoneNumberSchema } from "../base.schema";
  *
  * @module service-configuration/phone-number
  */
-
-/**
- * Zod schema for phone provider region information.
- *
- * Represents geographic region information from telephony providers, used for filtering and
- * searching available phone numbers by location.
- *
- * @remarks
- * **Architecture Context:**
- * - **Usage**: Phone number discovery and filtering
- * - **Provider Integration**: Maps to provider regional offerings
- * - **Search**: Used to narrow number searches by geographic area
- *
- * @typedef {Object} PhoneProviderRegionProperties
- * @property {string} regionId - Unique identifier for the region from provider (e.g., 'us-west', 'uk-london')
- * @property {string} regionName - Human-readable region name (e.g., 'US West', 'United Kingdom')
- * @property {string | null} [countryCode] - ISO 3166-1 alpha-2 country code (e.g., 'US', 'GB', 'CA')
- * @property {string | null} [countryName] - Full country name (e.g., 'United States', 'United Kingdom')
- * @property {ProviderType} providerType - Telephony provider offering numbers in this region
- *
- * @example
- * ```typescript
- * const region: PhoneProviderRegion = {
- *   regionId: 'us-west',
- *   regionName: 'US West',
- *   countryCode: 'US',
- *   countryName: 'United States',
- *   providerType: ProviderType.TWILIO
- * };
- * ```
- */
-export const PhoneProviderRegionSchema = z.object({
-    regionId: z.string().describe("Unique identifier for this geographic region from the provider's system (e.g., 'us-west', 'us-ny', 'uk-london')"),
-    regionName: z.string().describe("Human-readable name for the geographic region (e.g., 'US West', 'New York', 'United Kingdom')"),
-    countryCode: z.string().optional().nullable().describe("ISO 3166-1 alpha-2 country code for this region (e.g., 'US', 'GB', 'CA', 'AU')"),
-    countryName: z.string().optional().nullable().describe("Full country name for user display (e.g., 'United States', 'United Kingdom', 'Canada')"),
-    providerType: z.enum(ProviderType).describe("Telephony provider offering phone numbers in this region (SIGNALWIRE, TWILIO, VONAGE, etc.)")
-});
-
-/**
- * Type definition for phone provider region.
- */
-export type PhoneProviderRegion = z.infer<typeof PhoneProviderRegionSchema>;
 
 /**
  * Zod schema for base phone number information.
@@ -109,92 +66,6 @@ export const BasePhoneNumberInfoSchema = z.object({
  */
 export type BasePhoneNumberInfo = z.infer<typeof BasePhoneNumberInfoSchema>;
 
-/**
- * Zod schema for SignalWire-specific phone number information.
- *
- * Extends base phone number schema with SignalWire-specific fields.
- *
- * @example
- * ```typescript
- * const swPhone: SWPhoneNumberInfo = {
- *   friendlyName: 'SW Support Line',
- *   phoneNumber: '+12125551234',
- *   countryCode: 'US',
- *   capabilities: { voice: true, SMS: true, MMS: false },
- *   beta: false,
- *   numberType: PhoneNumberType.LOCAL,
- *   latitude: '40.7128',
- *   longitude: '-74.0060',
- *   providerType: ProviderType.SIGNALWIRE
- * };
- * ```
- */
-export const swPhoneNumberInfoSchema = BasePhoneNumberInfoSchema.safeExtend({
-    latitude: z.string().optional(),
-    longitude: z.string().optional(),
-    providerType: z.literal(ProviderType.SIGNALWIRE).default(ProviderType.SIGNALWIRE),
-});
-
-/**
- * Type definition for SignalWire phone number information.
- */
-export type SWPhoneNumberInfo = z.infer<typeof swPhoneNumberInfoSchema>;
-
-/**
- * Zod schema for Twilio-specific phone number information.
- *
- * Extends base phone number schema with Twilio-specific fields.
- *
- * @example
- * ```typescript
- * const twilioPhone: TwilioPhoneNumberInfo = {
- *   friendlyName: 'Twilio Support Line',
- *   phoneNumber: '+12125551234',
- *   countryCode: 'US',
- *   capabilities: { voice: true, SMS: true, MMS: true },
- *   beta: false,
- *   numberType: PhoneNumberType.LOCAL,
- *   locality: 'New York',
- *   latitude: 40.7128,
- *   longitude: -74.0060,
- *   providerType: ProviderType.TWILIO
- * };
- * ```
- */
-export const twilioPhoneNumberInfoSchema = BasePhoneNumberInfoSchema.safeExtend({
-    locality: z.string().optional(),
-    latitude: z.number().optional(),
-    longitude: z.number().optional(),
-    providerType: z.literal(ProviderType.TWILIO).default(ProviderType.TWILIO),
-});
-
-/**
- * Type definition for Twilio phone number information.
- */
-export type TwilioPhoneNumberInfo = z.infer<typeof twilioPhoneNumberInfoSchema>;
-
-/**
- * Zod schema for phone provider request.
- *
- * Used to request available phone numbers from a specific provider and region.
- *
- * @example
- * ```typescript
- * const request: PhoneProviderRequest = {
- *   providerType: ProviderType.TWILIO,
- *   region: 'us-west'
- * };
- * ```
- */
-export const PhoneProviderRequestSchema = z.object({
-    providerType: z.enum(ProviderType),
-    region: z.string()
-});
-
-/**
- * Type definition for phone provider request.
- */
-export type PhoneProviderRequest = z.infer<typeof PhoneProviderRequestSchema>;
 
 /**
  * Zod schema for phone provider response.
@@ -204,7 +75,6 @@ export type PhoneProviderRequest = z.infer<typeof PhoneProviderRequestSchema>;
  * @example
  * ```typescript
  * const response: PhoneProviderResponse = {
- *   providerType: ProviderType.TWILIO,
  *   success: true,
  *   status: 200,
  *   data: { availableNumbers: [...] }
@@ -212,7 +82,6 @@ export type PhoneProviderRequest = z.infer<typeof PhoneProviderRequestSchema>;
  * ```
  */
 export const PhoneProviderResponseSchema = z.object({
-    providerType: z.enum(ProviderType),
     success: z.boolean(),
     status: z.number().optional(),
     data: z.unknown(),
@@ -251,7 +120,6 @@ export type PhoneProviderResponse = z.infer<typeof PhoneProviderResponseSchema>;
  *   friendlyName: 'Main Support Line',
  *   phoneNumber: '+12125551234',
  *   countryCode: 'US',
- *   providerType: ProviderType.TWILIO,
  *   chargedCredits: 1500,
  *   status: PhonePurchaseStatus.COMPLETED,
  *   numberType: PhoneNumberType.LOCAL,
@@ -264,7 +132,6 @@ export type PhoneProviderResponse = z.infer<typeof PhoneProviderResponseSchema>;
 export const PhoneNumberPurchaseSchema = BaseModelSchema.safeExtend({
     friendlyName: z.string().describe("Human-readable name for the phone number being purchased (e.g., 'Customer Support Line', 'Sales Main Number')"),
     phoneNumber: PhoneNumberSchema.describe("Phone number in E.164 international format being purchased (e.g., '+12125551234')"),
-    providerType: z.enum(ProviderType).describe("Telephony provider from which the number is being purchased (SIGNALWIRE, TWILIO, etc.)"),
     countryCode: z.string().length(2).describe("ISO 3166-1 alpha-2 country code for the phone number (e.g., 'US', 'GB', 'CA')"),
     chargedCredits: z.number().positive().describe("Amount charged for the phone number purchase (must be a positive number)"),
     status: z.enum(PhonePurchaseStatus).default(PhonePurchaseStatus.PENDING).describe("Current status of the purchase transaction (PENDING, PROCESSING, COMPLETED, FAILED, CANCELLED)"),
@@ -349,7 +216,6 @@ export type PhoneNumberPurchaseRequest = CreatePhoneNumberPurchase;
  * @property {Array} phoneNumberPrices - Array of pricing tiers
  * @property {number} price - Final price for the number
  * @property {string} priceUnit - Unit of pricing (e.g., "per month")
- * @property {ProviderType} providerType - Provider offering the number
  * @property {string} currency - Currency code (3 characters, default: "USD")
  *
  * @example
@@ -363,7 +229,6 @@ export type PhoneNumberPurchaseRequest = CreatePhoneNumberPurchase;
  *   ],
  *   price: 1.00,
  *   priceUnit: 'per month',
- *   providerType: ProviderType.TWILIO,
  *   currency: 'USD'
  * };
  * ```
@@ -378,7 +243,6 @@ export const PhoneNumberPricingSchema = z.object({
     })),
     price: z.number(),
     priceUnit: z.string(),
-    providerType: z.enum(ProviderType),
     currency: z.string().length(3).default('USD'),
 });
 

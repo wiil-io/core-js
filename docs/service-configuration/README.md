@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.39**](../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.40**](../README.md)
 
 ***
 
@@ -60,11 +60,7 @@ Central export point for all service configuration schemas.
 | [KnowledgeSource](type-aliases/KnowledgeSource.md) | Type definition for Knowledge Source. |
 | [PhoneConfiguration](type-aliases/PhoneConfiguration.md) | Type definition for Phone Configuration. |
 | [UpdatePhoneConfiguration](type-aliases/UpdatePhoneConfiguration.md) | Type definition for updating an existing phone configuration. |
-| [PhoneProviderRegion](type-aliases/PhoneProviderRegion.md) | Type definition for phone provider region. |
 | [BasePhoneNumberInfo](type-aliases/BasePhoneNumberInfo.md) | Type definition for base phone number information. |
-| [SWPhoneNumberInfo](type-aliases/SWPhoneNumberInfo.md) | Type definition for SignalWire phone number information. |
-| [TwilioPhoneNumberInfo](type-aliases/TwilioPhoneNumberInfo.md) | Type definition for Twilio phone number information. |
-| [PhoneProviderRequest](type-aliases/PhoneProviderRequest.md) | Type definition for phone provider request. |
 | [PhoneProviderResponse](type-aliases/PhoneProviderResponse.md) | Type definition for phone provider response. |
 | [PhoneNumberPurchase](type-aliases/PhoneNumberPurchase.md) | Type definition for phone number purchase. |
 | [CreatePhoneNumberPurchase](type-aliases/CreatePhoneNumberPurchase.md) | Type definition for creating a phone number purchase. |
@@ -139,11 +135,7 @@ Central export point for all service configuration schemas.
 | [KnowledgeSourceSchema](variables/KnowledgeSourceSchema.md) | Zod schema for Knowledge Source validation. |
 | [PhoneConfigurationSchema](variables/PhoneConfigurationSchema.md) | Zod schema for Phone Configuration validation. |
 | [UpdatePhoneConfigurationSchema](variables/UpdatePhoneConfigurationSchema.md) | Zod schema for updating an existing phone configuration. |
-| [PhoneProviderRegionSchema](variables/PhoneProviderRegionSchema.md) | Zod schema for phone provider region information. |
 | [BasePhoneNumberInfoSchema](variables/BasePhoneNumberInfoSchema.md) | Zod schema for base phone number information. |
-| [swPhoneNumberInfoSchema](variables/swPhoneNumberInfoSchema.md) | Zod schema for SignalWire-specific phone number information. |
-| [twilioPhoneNumberInfoSchema](variables/twilioPhoneNumberInfoSchema.md) | Zod schema for Twilio-specific phone number information. |
-| [PhoneProviderRequestSchema](variables/PhoneProviderRequestSchema.md) | Zod schema for phone provider request. |
 | [PhoneProviderResponseSchema](variables/PhoneProviderResponseSchema.md) | Zod schema for phone provider response. |
 | [PhoneNumberPurchaseSchema](variables/PhoneNumberPurchaseSchema.md) | Zod schema for phone number purchase transaction. |
 | [CreatePhoneNumberPurchaseSchema](variables/CreatePhoneNumberPurchaseSchema.md) | Zod schema for creating a new phone number purchase. |

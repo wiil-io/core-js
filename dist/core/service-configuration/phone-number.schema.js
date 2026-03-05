@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.PhoneNumberPricingSchema = exports.PhoneNumberPurchaseRequestSchema = exports.BusinessPhoneNumberPurchaseRequestSchema = exports.CreatePhoneNumberPurchaseSchema = exports.PhoneNumberPurchaseSchema = exports.PhoneProviderResponseSchema = exports.PhoneProviderRequestSchema = exports.twilioPhoneNumberInfoSchema = exports.swPhoneNumberInfoSchema = exports.BasePhoneNumberInfoSchema = exports.PhoneProviderRegionSchema = void 0;
+exports.PhoneNumberPricingSchema = exports.PhoneNumberPurchaseRequestSchema = exports.BusinessPhoneNumberPurchaseRequestSchema = exports.CreatePhoneNumberPurchaseSchema = exports.PhoneNumberPurchaseSchema = exports.PhoneProviderResponseSchema = exports.BasePhoneNumberInfoSchema = void 0;
 const zod_1 = require("zod");
 const service_config_definitions_1 = require("../type-definitions/service-config.definitions");
 const base_schema_1 = require("../base.schema");
@@ -13,43 +13,6 @@ const base_schema_1 = require("../base.schema");
  *
  * @module service-configuration/phone-number
  */
-/**
- * Zod schema for phone provider region information.
- *
- * Represents geographic region information from telephony providers, used for filtering and
- * searching available phone numbers by location.
- *
- * @remarks
- * **Architecture Context:**
- * - **Usage**: Phone number discovery and filtering
- * - **Provider Integration**: Maps to provider regional offerings
- * - **Search**: Used to narrow number searches by geographic area
- *
- * @typedef {Object} PhoneProviderRegionProperties
- * @property {string} regionId - Unique identifier for the region from provider (e.g., 'us-west', 'uk-london')
- * @property {string} regionName - Human-readable region name (e.g., 'US West', 'United Kingdom')
- * @property {string | null} [countryCode] - ISO 3166-1 alpha-2 country code (e.g., 'US', 'GB', 'CA')
- * @property {string | null} [countryName] - Full country name (e.g., 'United States', 'United Kingdom')
- * @property {ProviderType} providerType - Telephony provider offering numbers in this region
- *
- * @example
- * ```typescript
- * const region: PhoneProviderRegion = {
- *   regionId: 'us-west',
- *   regionName: 'US West',
- *   countryCode: 'US',
- *   countryName: 'United States',
- *   providerType: ProviderType.TWILIO
- * };
- * ```
- */
-exports.PhoneProviderRegionSchema = zod_1.z.object({
-    regionId: zod_1.z.string().describe("Unique identifier for this geographic region from the provider's system (e.g., 'us-west', 'us-ny', 'uk-london')"),
-    regionName: zod_1.z.string().describe("Human-readable name for the geographic region (e.g., 'US West', 'New York', 'United Kingdom')"),
-    countryCode: zod_1.z.string().optional().nullable().describe("ISO 3166-1 alpha-2 country code for this region (e.g., 'US', 'GB', 'CA', 'AU')"),
-    countryName: zod_1.z.string().optional().nullable().describe("Full country name for user display (e.g., 'United States', 'United Kingdom', 'Canada')"),
-    providerType: zod_1.z.enum(service_config_definitions_1.ProviderType).describe("Telephony provider offering phone numbers in this region (SIGNALWIRE, TWILIO, VONAGE, etc.)")
-});
 /**
  * Zod schema for base phone number information.
  *
@@ -99,75 +62,6 @@ exports.BasePhoneNumberInfoSchema = zod_1.z.object({
     numberType: zod_1.z.enum(service_config_definitions_1.PhoneNumberType).describe("Type of phone number (LOCAL for geographic, TOLL_FREE for 1-800 numbers, MOBILE for cellular, etc.)"),
 });
 /**
- * Zod schema for SignalWire-specific phone number information.
- *
- * Extends base phone number schema with SignalWire-specific fields.
- *
- * @example
- * ```typescript
- * const swPhone: SWPhoneNumberInfo = {
- *   friendlyName: 'SW Support Line',
- *   phoneNumber: '+12125551234',
- *   countryCode: 'US',
- *   capabilities: { voice: true, SMS: true, MMS: false },
- *   beta: false,
- *   numberType: PhoneNumberType.LOCAL,
- *   latitude: '40.7128',
- *   longitude: '-74.0060',
- *   providerType: ProviderType.SIGNALWIRE
- * };
- * ```
- */
-exports.swPhoneNumberInfoSchema = exports.BasePhoneNumberInfoSchema.safeExtend({
-    latitude: zod_1.z.string().optional(),
-    longitude: zod_1.z.string().optional(),
-    providerType: zod_1.z.literal(service_config_definitions_1.ProviderType.SIGNALWIRE).default(service_config_definitions_1.ProviderType.SIGNALWIRE),
-});
-/**
- * Zod schema for Twilio-specific phone number information.
- *
- * Extends base phone number schema with Twilio-specific fields.
- *
- * @example
- * ```typescript
- * const twilioPhone: TwilioPhoneNumberInfo = {
- *   friendlyName: 'Twilio Support Line',
- *   phoneNumber: '+12125551234',
- *   countryCode: 'US',
- *   capabilities: { voice: true, SMS: true, MMS: true },
- *   beta: false,
- *   numberType: PhoneNumberType.LOCAL,
- *   locality: 'New York',
- *   latitude: 40.7128,
- *   longitude: -74.0060,
- *   providerType: ProviderType.TWILIO
- * };
- * ```
- */
-exports.twilioPhoneNumberInfoSchema = exports.BasePhoneNumberInfoSchema.safeExtend({
-    locality: zod_1.z.string().optional(),
-    latitude: zod_1.z.number().optional(),
-    longitude: zod_1.z.number().optional(),
-    providerType: zod_1.z.literal(service_config_definitions_1.ProviderType.TWILIO).default(service_config_definitions_1.ProviderType.TWILIO),
-});
-/**
- * Zod schema for phone provider request.
- *
- * Used to request available phone numbers from a specific provider and region.
- *
- * @example
- * ```typescript
- * const request: PhoneProviderRequest = {
- *   providerType: ProviderType.TWILIO,
- *   region: 'us-west'
- * };
- * ```
- */
-exports.PhoneProviderRequestSchema = zod_1.z.object({
-    providerType: zod_1.z.enum(service_config_definitions_1.ProviderType),
-    region: zod_1.z.string()
-});
-/**
  * Zod schema for phone provider response.
  *
  * Response from phone number provider API calls.
@@ -175,7 +69,6 @@ exports.PhoneProviderRequestSchema = zod_1.z.object({
  * @example
  * ```typescript
  * const response: PhoneProviderResponse = {
- *   providerType: ProviderType.TWILIO,
  *   success: true,
  *   status: 200,
  *   data: { availableNumbers: [...] }
@@ -183,7 +76,6 @@ exports.PhoneProviderRequestSchema = zod_1.z.object({
  * ```
  */
 exports.PhoneProviderResponseSchema = zod_1.z.object({
-    providerType: zod_1.z.enum(service_config_definitions_1.ProviderType),
     success: zod_1.z.boolean(),
     status: zod_1.z.number().optional(),
     data: zod_1.z.unknown(),
@@ -216,7 +108,6 @@ exports.PhoneProviderResponseSchema = zod_1.z.object({
  *   friendlyName: 'Main Support Line',
  *   phoneNumber: '+12125551234',
  *   countryCode: 'US',
- *   providerType: ProviderType.TWILIO,
  *   chargedCredits: 1500,
  *   status: PhonePurchaseStatus.COMPLETED,
  *   numberType: PhoneNumberType.LOCAL,
@@ -229,7 +120,6 @@ exports.PhoneProviderResponseSchema = zod_1.z.object({
 exports.PhoneNumberPurchaseSchema = base_schema_1.BaseModelSchema.safeExtend({
     friendlyName: zod_1.z.string().describe("Human-readable name for the phone number being purchased (e.g., 'Customer Support Line', 'Sales Main Number')"),
     phoneNumber: base_schema_1.PhoneNumberSchema.describe("Phone number in E.164 international format being purchased (e.g., '+12125551234')"),
-    providerType: zod_1.z.enum(service_config_definitions_1.ProviderType).describe("Telephony provider from which the number is being purchased (SIGNALWIRE, TWILIO, etc.)"),
     countryCode: zod_1.z.string().length(2).describe("ISO 3166-1 alpha-2 country code for the phone number (e.g., 'US', 'GB', 'CA')"),
     chargedCredits: zod_1.z.number().positive().describe("Amount charged for the phone number purchase (must be a positive number)"),
     status: zod_1.z.enum(service_config_definitions_1.PhonePurchaseStatus).default(service_config_definitions_1.PhonePurchaseStatus.PENDING).describe("Current status of the purchase transaction (PENDING, PROCESSING, COMPLETED, FAILED, CANCELLED)"),
@@ -290,7 +180,6 @@ exports.PhoneNumberPurchaseRequestSchema = exports.CreatePhoneNumberPurchaseSche
  * @property {Array} phoneNumberPrices - Array of pricing tiers
  * @property {number} price - Final price for the number
  * @property {string} priceUnit - Unit of pricing (e.g., "per month")
- * @property {ProviderType} providerType - Provider offering the number
  * @property {string} currency - Currency code (3 characters, default: "USD")
  *
  * @example
@@ -304,7 +193,6 @@ exports.PhoneNumberPurchaseRequestSchema = exports.CreatePhoneNumberPurchaseSche
  *   ],
  *   price: 1.00,
  *   priceUnit: 'per month',
- *   providerType: ProviderType.TWILIO,
  *   currency: 'USD'
  * };
  * ```
@@ -319,6 +207,5 @@ exports.PhoneNumberPricingSchema = zod_1.z.object({
     })),
     price: zod_1.z.number(),
     priceUnit: zod_1.z.string(),
-    providerType: zod_1.z.enum(service_config_definitions_1.ProviderType),
     currency: zod_1.z.string().length(3).default('USD'),
 });

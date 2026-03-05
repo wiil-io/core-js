@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.39**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.40**](../../README.md)
 
 ***
 
@@ -6,18 +6,18 @@
 
 # Interface: BusinessProductFilters
 
-Defined in: [src/core/business-mgt/product-config.schema.ts:124](https://github.com/wiil-io/core-js/blob/26d2b631ba1acb31c0e66c5e63fa8ed5c49cb11b/src/core/business-mgt/product-config.schema.ts#L124)
+Defined in: [src/core/business-mgt/product-config.schema.ts:124](https://github.com/wiil-io/core-js/blob/09a3d6d4c398397e9996a8872999fad3282747ce/src/core/business-mgt/product-config.schema.ts#L124)
 
 ## Properties
 
 | Property | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="search"></a> `search?` | `string` | [src/core/business-mgt/product-config.schema.ts:125](https://github.com/wiil-io/core-js/blob/26d2b631ba1acb31c0e66c5e63fa8ed5c49cb11b/src/core/business-mgt/product-config.schema.ts#L125) |
-| <a id="categoryid"></a> `categoryId?` | `string` | [src/core/business-mgt/product-config.schema.ts:126](https://github.com/wiil-io/core-js/blob/26d2b631ba1acb31c0e66c5e63fa8ed5c49cb11b/src/core/business-mgt/product-config.schema.ts#L126) |
-| <a id="isactive"></a> `isActive?` | `boolean` | [src/core/business-mgt/product-config.schema.ts:127](https://github.com/wiil-io/core-js/blob/26d2b631ba1acb31c0e66c5e63fa8ed5c49cb11b/src/core/business-mgt/product-config.schema.ts#L127) |
-| <a id="brand"></a> `brand?` | `string` | [src/core/business-mgt/product-config.schema.ts:128](https://github.com/wiil-io/core-js/blob/26d2b631ba1acb31c0e66c5e63fa8ed5c49cb11b/src/core/business-mgt/product-config.schema.ts#L128) |
-| <a id="trackinventory"></a> `trackInventory?` | `boolean` | [src/core/business-mgt/product-config.schema.ts:129](https://github.com/wiil-io/core-js/blob/26d2b631ba1acb31c0e66c5e63fa8ed5c49cb11b/src/core/business-mgt/product-config.schema.ts#L129) |
-| <a id="pricerange"></a> `priceRange?` | \{ `min?`: `number`; `max?`: `number`; \} | [src/core/business-mgt/product-config.schema.ts:130](https://github.com/wiil-io/core-js/blob/26d2b631ba1acb31c0e66c5e63fa8ed5c49cb11b/src/core/business-mgt/product-config.schema.ts#L130) |
-| `priceRange.min?` | `number` | [src/core/business-mgt/product-config.schema.ts:130](https://github.com/wiil-io/core-js/blob/26d2b631ba1acb31c0e66c5e63fa8ed5c49cb11b/src/core/business-mgt/product-config.schema.ts#L130) |
-| `priceRange.max?` | `number` | [src/core/business-mgt/product-config.schema.ts:130](https://github.com/wiil-io/core-js/blob/26d2b631ba1acb31c0e66c5e63fa8ed5c49cb11b/src/core/business-mgt/product-config.schema.ts#L130) |
-| <a id="lowstock"></a> `lowStock?` | `boolean` | [src/core/business-mgt/product-config.schema.ts:131](https://github.com/wiil-io/core-js/blob/26d2b631ba1acb31c0e66c5e63fa8ed5c49cb11b/src/core/business-mgt/product-config.schema.ts#L131) |
+| <a id="search"></a> `search?` | `string` | [src/core/business-mgt/product-config.schema.ts:125](https://github.com/wiil-io/core-js/blob/09a3d6d4c398397e9996a8872999fad3282747ce/src/core/business-mgt/product-config.schema.ts#L125) |
+| <a id="categoryid"></a> `categoryId?` | `string` | [src/core/business-mgt/product-config.schema.ts:126](https://github.com/wiil-io/core-js/blob/09a3d6d4c398397e9996a8872999fad3282747ce/src/core/business-mgt/product-config.schema.ts#L126) |
+| <a id="isactive"></a> `isActive?` | `boolean` | [src/core/business-mgt/product-config.schema.ts:127](https://github.com/wiil-io/core-js/blob/09a3d6d4c398397e9996a8872999fad3282747ce/src/core/business-mgt/product-config.schema.ts#L127) |
+| <a id="brand"></a> `brand?` | `string` | [src/core/business-mgt/product-config.schema.ts:128](https://github.com/wiil-io/core-js/blob/09a3d6d4c398397e9996a8872999fad3282747ce/src/core/business-mgt/product-config.schema.ts#L128) |
+| <a id="trackinventory"></a> `trackInventory?` | `boolean` | [src/core/business-mgt/product-config.schema.ts:129](https://github.com/wiil-io/core-js/blob/09a3d6d4c398397e9996a8872999fad3282747ce/src/core/business-mgt/product-config.schema.ts#L129) |
+| <a id="pricerange"></a> `priceRange?` | \{ `min?`: `number`; `max?`: `number`; \} | [src/core/business-mgt/product-config.schema.ts:130](https://github.com/wiil-io/core-js/blob/09a3d6d4c398397e9996a8872999fad3282747ce/src/core/business-mgt/product-config.schema.ts#L130) |
+| `priceRange.min?` | `number` | [src/core/business-mgt/product-config.schema.ts:130](https://github.com/wiil-io/core-js/blob/09a3d6d4c398397e9996a8872999fad3282747ce/src/core/business-mgt/product-config.schema.ts#L130) |
+| `priceRange.max?` | `number` | [src/core/business-mgt/product-config.schema.ts:130](https://github.com/wiil-io/core-js/blob/09a3d6d4c398397e9996a8872999fad3282747ce/src/core/business-mgt/product-config.schema.ts#L130) |
+| <a id="lowstock"></a> `lowStock?` | `boolean` | [src/core/business-mgt/product-config.schema.ts:131](https://github.com/wiil-io/core-js/blob/09a3d6d4c398397e9996a8872999fad3282747ce/src/core/business-mgt/product-config.schema.ts#L131) |
