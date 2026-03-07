@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.44**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.45**](../../README.md)
 
 ***
 
@@ -6,13 +6,13 @@
 
 # Enumeration: DepositStatus
 
-Defined in: [src/core/type-definitions/business-definitions.ts:280](https://github.com/wiil-io/core-js/blob/c98f65374adc98a7a53d84869a4ded3c42acf443/src/core/type-definitions/business-definitions.ts#L280)
+Defined in: [src/core/type-definitions/business-definitions.ts:280](https://github.com/wiil-io/core-js/blob/ae110e467f185fc0bb9c7f87238dd2972a8fac8a/src/core/type-definitions/business-definitions.ts#L280)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="pending"></a> `PENDING` | `"pending"` | [src/core/type-definitions/business-definitions.ts:281](https://github.com/wiil-io/core-js/blob/c98f65374adc98a7a53d84869a4ded3c42acf443/src/core/type-definitions/business-definitions.ts#L281) |
-| <a id="paid"></a> `PAID` | `"paid"` | [src/core/type-definitions/business-definitions.ts:282](https://github.com/wiil-io/core-js/blob/c98f65374adc98a7a53d84869a4ded3c42acf443/src/core/type-definitions/business-definitions.ts#L282) |
-| <a id="returned"></a> `RETURNED` | `"returned"` | [src/core/type-definitions/business-definitions.ts:283](https://github.com/wiil-io/core-js/blob/c98f65374adc98a7a53d84869a4ded3c42acf443/src/core/type-definitions/business-definitions.ts#L283) |
-| <a id="forfeited"></a> `FORFEITED` | `"forfeited"` | [src/core/type-definitions/business-definitions.ts:284](https://github.com/wiil-io/core-js/blob/c98f65374adc98a7a53d84869a4ded3c42acf443/src/core/type-definitions/business-definitions.ts#L284) |
+| <a id="pending"></a> `PENDING` | `"pending"` | [src/core/type-definitions/business-definitions.ts:281](https://github.com/wiil-io/core-js/blob/ae110e467f185fc0bb9c7f87238dd2972a8fac8a/src/core/type-definitions/business-definitions.ts#L281) |
+| <a id="paid"></a> `PAID` | `"paid"` | [src/core/type-definitions/business-definitions.ts:282](https://github.com/wiil-io/core-js/blob/ae110e467f185fc0bb9c7f87238dd2972a8fac8a/src/core/type-definitions/business-definitions.ts#L282) |
+| <a id="returned"></a> `RETURNED` | `"returned"` | [src/core/type-definitions/business-definitions.ts:283](https://github.com/wiil-io/core-js/blob/ae110e467f185fc0bb9c7f87238dd2972a8fac8a/src/core/type-definitions/business-definitions.ts#L283) |
+| <a id="forfeited"></a> `FORFEITED` | `"forfeited"` | [src/core/type-definitions/business-definitions.ts:284](https://github.com/wiil-io/core-js/blob/ae110e467f185fc0bb9c7f87238dd2972a8fac8a/src/core/type-definitions/business-definitions.ts#L284) |

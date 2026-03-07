@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.44**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.45**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const CallChannelSchema: ZodObject<CallChannelType>;
 ```
 
-Defined in: [src/core/service-configuration/interaction-channels.schema.ts:128](https://github.com/wiil-io/core-js/blob/c98f65374adc98a7a53d84869a4ded3c42acf443/src/core/service-configuration/interaction-channels.schema.ts#L128)
+Defined in: [src/core/service-configuration/interaction-channels.schema.ts:128](https://github.com/wiil-io/core-js/blob/ae110e467f185fc0bb9c7f87238dd2972a8fac8a/src/core/service-configuration/interaction-channels.schema.ts#L128)
 
 Zod schema for call-based deployment channel.
 

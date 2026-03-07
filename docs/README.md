@@ -1,4 +1,4 @@
-**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.44**
+**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.45**
 
 ***
 

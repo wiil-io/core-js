@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.44**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.45**](../../README.md)
 
 ***
 
@@ -6,13 +6,13 @@
 
 # Enumeration: ReservationSlotStatus
 
-Defined in: [src/core/type-definitions/business-definitions.ts:46](https://github.com/wiil-io/core-js/blob/c98f65374adc98a7a53d84869a4ded3c42acf443/src/core/type-definitions/business-definitions.ts#L46)
+Defined in: [src/core/type-definitions/business-definitions.ts:46](https://github.com/wiil-io/core-js/blob/ae110e467f185fc0bb9c7f87238dd2972a8fac8a/src/core/type-definitions/business-definitions.ts#L46)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="available"></a> `AVAILABLE` | `"available"` | [src/core/type-definitions/business-definitions.ts:47](https://github.com/wiil-io/core-js/blob/c98f65374adc98a7a53d84869a4ded3c42acf443/src/core/type-definitions/business-definitions.ts#L47) |
-| <a id="booked"></a> `BOOKED` | `"booked"` | [src/core/type-definitions/business-definitions.ts:48](https://github.com/wiil-io/core-js/blob/c98f65374adc98a7a53d84869a4ded3c42acf443/src/core/type-definitions/business-definitions.ts#L48) |
-| <a id="blocked"></a> `BLOCKED` | `"blocked"` | [src/core/type-definitions/business-definitions.ts:49](https://github.com/wiil-io/core-js/blob/c98f65374adc98a7a53d84869a4ded3c42acf443/src/core/type-definitions/business-definitions.ts#L49) |
-| <a id="maintenance"></a> `MAINTENANCE` | `"maintenance"` | [src/core/type-definitions/business-definitions.ts:50](https://github.com/wiil-io/core-js/blob/c98f65374adc98a7a53d84869a4ded3c42acf443/src/core/type-definitions/business-definitions.ts#L50) |
+| <a id="available"></a> `AVAILABLE` | `"available"` | [src/core/type-definitions/business-definitions.ts:47](https://github.com/wiil-io/core-js/blob/ae110e467f185fc0bb9c7f87238dd2972a8fac8a/src/core/type-definitions/business-definitions.ts#L47) |
+| <a id="booked"></a> `BOOKED` | `"booked"` | [src/core/type-definitions/business-definitions.ts:48](https://github.com/wiil-io/core-js/blob/ae110e467f185fc0bb9c7f87238dd2972a8fac8a/src/core/type-definitions/business-definitions.ts#L48) |
+| <a id="blocked"></a> `BLOCKED` | `"blocked"` | [src/core/type-definitions/business-definitions.ts:49](https://github.com/wiil-io/core-js/blob/ae110e467f185fc0bb9c7f87238dd2972a8fac8a/src/core/type-definitions/business-definitions.ts#L49) |
+| <a id="maintenance"></a> `MAINTENANCE` | `"maintenance"` | [src/core/type-definitions/business-definitions.ts:50](https://github.com/wiil-io/core-js/blob/ae110e467f185fc0bb9c7f87238dd2972a8fac8a/src/core/type-definitions/business-definitions.ts#L50) |

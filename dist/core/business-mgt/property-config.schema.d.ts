@@ -22,7 +22,6 @@ export declare const PropertyCategorySchema: z.ZodObject<{
     description: z.ZodOptional<z.ZodString>;
     propertyType: z.ZodEnum<typeof PropertyType>;
     displayOrder: z.ZodOptional<z.ZodNumber>;
-    isDefault: z.ZodDefault<z.ZodBoolean>;
 }, z.core.$strip>;
 /**
  * Property address schema (standalone entity).
@@ -140,7 +139,6 @@ export declare const PropertySchema: z.ZodObject<{
         description: z.ZodOptional<z.ZodString>;
         propertyType: z.ZodEnum<typeof PropertyType>;
         displayOrder: z.ZodOptional<z.ZodNumber>;
-        isDefault: z.ZodDefault<z.ZodBoolean>;
     }, z.core.$strip>>;
     title: z.ZodString;
     description: z.ZodOptional<z.ZodString>;
@@ -212,7 +210,6 @@ export declare const PropertySchema: z.ZodObject<{
 export declare const CreatePropertyCategorySchema: z.ZodObject<{
     name: z.ZodString;
     description: z.ZodOptional<z.ZodString>;
-    isDefault: z.ZodDefault<z.ZodBoolean>;
     displayOrder: z.ZodOptional<z.ZodNumber>;
     propertyType: z.ZodEnum<typeof PropertyType>;
 }, z.core.$strip>;
@@ -223,7 +220,6 @@ export declare const CreatePropertyCategorySchema: z.ZodObject<{
 export declare const UpdatePropertyCategorySchema: z.ZodObject<{
     name: z.ZodOptional<z.ZodString>;
     description: z.ZodOptional<z.ZodOptional<z.ZodString>>;
-    isDefault: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
     displayOrder: z.ZodOptional<z.ZodOptional<z.ZodNumber>>;
     propertyType: z.ZodOptional<z.ZodEnum<typeof PropertyType>>;
     id: z.ZodString;
@@ -387,7 +383,6 @@ export declare const PropertyCatalogSchema: z.ZodObject<{
         description: z.ZodOptional<z.ZodString>;
         propertyType: z.ZodEnum<typeof PropertyType>;
         displayOrder: z.ZodOptional<z.ZodNumber>;
-        isDefault: z.ZodDefault<z.ZodBoolean>;
     }, z.core.$strip>;
     items: z.ZodArray<z.ZodObject<{
         id: z.ZodString;
@@ -402,7 +397,6 @@ export declare const PropertyCatalogSchema: z.ZodObject<{
             description: z.ZodOptional<z.ZodString>;
             propertyType: z.ZodEnum<typeof PropertyType>;
             displayOrder: z.ZodOptional<z.ZodNumber>;
-            isDefault: z.ZodDefault<z.ZodBoolean>;
         }, z.core.$strip>>;
         title: z.ZodString;
         description: z.ZodOptional<z.ZodString>;
@@ -477,7 +471,6 @@ export declare const BusinessPropertyCatalogSchema: z.ZodArray<z.ZodObject<{
         description: z.ZodOptional<z.ZodString>;
         propertyType: z.ZodEnum<typeof PropertyType>;
         displayOrder: z.ZodOptional<z.ZodNumber>;
-        isDefault: z.ZodDefault<z.ZodBoolean>;
     }, z.core.$strip>;
     items: z.ZodArray<z.ZodObject<{
         id: z.ZodString;
@@ -492,7 +485,6 @@ export declare const BusinessPropertyCatalogSchema: z.ZodArray<z.ZodObject<{
             description: z.ZodOptional<z.ZodString>;
             propertyType: z.ZodEnum<typeof PropertyType>;
             displayOrder: z.ZodOptional<z.ZodNumber>;
-            isDefault: z.ZodDefault<z.ZodBoolean>;
         }, z.core.$strip>>;
         title: z.ZodString;
         description: z.ZodOptional<z.ZodString>;

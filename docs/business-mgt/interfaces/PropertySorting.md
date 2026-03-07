@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.44**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.45**](../../README.md)
 
 ***
 
@@ -6,11 +6,11 @@
 
 # Interface: PropertySorting
 
-Defined in: [src/core/business-mgt/property-config.schema.ts:296](https://github.com/wiil-io/core-js/blob/c98f65374adc98a7a53d84869a4ded3c42acf443/src/core/business-mgt/property-config.schema.ts#L296)
+Defined in: [src/core/business-mgt/property-config.schema.ts:295](https://github.com/wiil-io/core-js/blob/ae110e467f185fc0bb9c7f87238dd2972a8fac8a/src/core/business-mgt/property-config.schema.ts#L295)
 
 ## Properties
 
 | Property | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="field"></a> `field` | \| `"createdAt"` \| `"title"` \| `"displayOrder"` \| `"squareFootage"` \| `"salePrice"` \| `"rentalPrice"` | [src/core/business-mgt/property-config.schema.ts:297](https://github.com/wiil-io/core-js/blob/c98f65374adc98a7a53d84869a4ded3c42acf443/src/core/business-mgt/property-config.schema.ts#L297) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | [src/core/business-mgt/property-config.schema.ts:298](https://github.com/wiil-io/core-js/blob/c98f65374adc98a7a53d84869a4ded3c42acf443/src/core/business-mgt/property-config.schema.ts#L298) |
+| <a id="field"></a> `field` | \| `"createdAt"` \| `"title"` \| `"displayOrder"` \| `"squareFootage"` \| `"salePrice"` \| `"rentalPrice"` | [src/core/business-mgt/property-config.schema.ts:296](https://github.com/wiil-io/core-js/blob/ae110e467f185fc0bb9c7f87238dd2972a8fac8a/src/core/business-mgt/property-config.schema.ts#L296) |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | [src/core/business-mgt/property-config.schema.ts:297](https://github.com/wiil-io/core-js/blob/ae110e467f185fc0bb9c7f87238dd2972a8fac8a/src/core/business-mgt/property-config.schema.ts#L297) |

@@ -25,15 +25,15 @@ export declare const MenuOrderItemBaseSchema: z.ZodObject<{
     quantity: z.ZodNumber;
     unitPrice: z.ZodNumber;
     totalPrice: z.ZodNumber;
-    specialInstructions: z.ZodOptional<z.ZodString>;
-    customizations: z.ZodOptional<z.ZodArray<z.ZodObject<{
+    specialInstructions: z.ZodDefault<z.ZodNullable<z.ZodString>>;
+    customizations: z.ZodDefault<z.ZodNullable<z.ZodArray<z.ZodObject<{
         name: z.ZodString;
         value: z.ZodString;
         additionalCost: z.ZodDefault<z.ZodNumber>;
-    }, z.core.$strip>>>;
+    }, z.core.$strip>>>>;
     status: z.ZodDefault<z.ZodEnum<typeof OrderStatus>>;
-    preparationTime: z.ZodOptional<z.ZodNumber>;
-    notes: z.ZodOptional<z.ZodString>;
+    preparationTime: z.ZodDefault<z.ZodNullable<z.ZodNumber>>;
+    notes: z.ZodDefault<z.ZodNullable<z.ZodString>>;
 }, z.core.$strip>;
 /**
  * Menu order item schema with IDs (for existing items).
@@ -44,15 +44,15 @@ export declare const MenuOrderItemSchema: z.ZodObject<{
     quantity: z.ZodNumber;
     unitPrice: z.ZodNumber;
     totalPrice: z.ZodNumber;
-    specialInstructions: z.ZodOptional<z.ZodString>;
-    customizations: z.ZodOptional<z.ZodArray<z.ZodObject<{
+    specialInstructions: z.ZodDefault<z.ZodNullable<z.ZodString>>;
+    customizations: z.ZodDefault<z.ZodNullable<z.ZodArray<z.ZodObject<{
         name: z.ZodString;
         value: z.ZodString;
         additionalCost: z.ZodDefault<z.ZodNumber>;
-    }, z.core.$strip>>>;
+    }, z.core.$strip>>>>;
     status: z.ZodDefault<z.ZodEnum<typeof OrderStatus>>;
-    preparationTime: z.ZodOptional<z.ZodNumber>;
-    notes: z.ZodOptional<z.ZodString>;
+    preparationTime: z.ZodDefault<z.ZodNullable<z.ZodNumber>>;
+    notes: z.ZodDefault<z.ZodNullable<z.ZodString>>;
     id: z.ZodString;
     menuOrderId: z.ZodString;
 }, z.core.$strip>;
@@ -83,12 +83,13 @@ export declare const MenuOrderItemSchema: z.ZodObject<{
  * @property {string} [notes] - Additional notes
  * @property {string} [serviceConversationConfigId] - Service conversation config ID
  * @property {Object} [deliveryAddress] - Delivery address if applicable
+ * @property {number} [tip] - Tip amount for the order
  */
 export declare const MenuOrderSchema: z.ZodObject<{
     id: z.ZodString;
     createdAt: z.ZodOptional<z.ZodNumber>;
     updatedAt: z.ZodOptional<z.ZodNumber>;
-    orderNumber: z.ZodOptional<z.ZodString>;
+    orderNumber: z.ZodDefault<z.ZodNullable<z.ZodString>>;
     type: z.ZodEnum<typeof MenuOrderType>;
     status: z.ZodDefault<z.ZodEnum<typeof OrderStatus>>;
     items: z.ZodArray<z.ZodObject<{
@@ -97,143 +98,20 @@ export declare const MenuOrderSchema: z.ZodObject<{
         quantity: z.ZodNumber;
         unitPrice: z.ZodNumber;
         totalPrice: z.ZodNumber;
-        specialInstructions: z.ZodOptional<z.ZodString>;
-        customizations: z.ZodOptional<z.ZodArray<z.ZodObject<{
+        specialInstructions: z.ZodDefault<z.ZodNullable<z.ZodString>>;
+        customizations: z.ZodDefault<z.ZodNullable<z.ZodArray<z.ZodObject<{
             name: z.ZodString;
             value: z.ZodString;
             additionalCost: z.ZodDefault<z.ZodNumber>;
-        }, z.core.$strip>>>;
+        }, z.core.$strip>>>>;
         status: z.ZodDefault<z.ZodEnum<typeof OrderStatus>>;
-        preparationTime: z.ZodOptional<z.ZodNumber>;
-        notes: z.ZodOptional<z.ZodString>;
+        preparationTime: z.ZodDefault<z.ZodNullable<z.ZodNumber>>;
+        notes: z.ZodDefault<z.ZodNullable<z.ZodString>>;
         id: z.ZodString;
         menuOrderId: z.ZodString;
     }, z.core.$strip>>;
     customerId: z.ZodString;
-    customer: z.ZodOptional<z.ZodObject<{
-        customerId: z.ZodOptional<z.ZodString>;
-        name: z.ZodString;
-        phone: z.ZodOptional<z.ZodString>;
-        email: z.ZodOptional<z.ZodEmail>;
-        address: z.ZodOptional<z.ZodObject<{
-            street: z.ZodString;
-            street2: z.ZodOptional<z.ZodString>;
-            city: z.ZodString;
-            state: z.ZodString;
-            postalCode: z.ZodString;
-            country: z.ZodString;
-            deliveryInstructions: z.ZodOptional<z.ZodString>;
-        }, z.core.$strip>>;
-    }, z.core.$strip>>;
-    pricing: z.ZodObject<{
-        subtotal: z.ZodNumber;
-        tax: z.ZodDefault<z.ZodNumber>;
-        tip: z.ZodDefault<z.ZodNumber>;
-        shippingAmount: z.ZodDefault<z.ZodNumber>;
-        discount: z.ZodDefault<z.ZodNumber>;
-        total: z.ZodNumber;
-        currency: z.ZodDefault<z.ZodString>;
-    }, z.core.$strip>;
-    paymentStatus: z.ZodDefault<z.ZodEnum<typeof PaymentStatus>>;
-    paymentMethod: z.ZodOptional<z.ZodString>;
-    paymentReference: z.ZodOptional<z.ZodString>;
-    orderDate: z.ZodNumber;
-    requestedTime: z.ZodOptional<z.ZodNumber>;
-    estimatedReadyTime: z.ZodOptional<z.ZodNumber>;
-    actualReadyTime: z.ZodOptional<z.ZodNumber>;
-    specialInstructions: z.ZodOptional<z.ZodString>;
-    allergies: z.ZodOptional<z.ZodArray<z.ZodString>>;
-    tableNumber: z.ZodOptional<z.ZodString>;
-    externalOrderId: z.ZodOptional<z.ZodString>;
-    source: z.ZodDefault<z.ZodString>;
-    cancelReason: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-    notes: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-    serviceConversationConfigId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-    deliveryAddress: z.ZodOptional<z.ZodObject<{
-        street: z.ZodString;
-        city: z.ZodOptional<z.ZodString>;
-        postalCode: z.ZodOptional<z.ZodString>;
-    }, z.core.$strip>>;
-}, z.core.$strip>;
-/**
- * Schema for creating a new menu order.
- * Omits auto-generated fields and uses base items without IDs.
- */
-export declare const CreateMenuOrderSchema: z.ZodObject<{
-    type: z.ZodEnum<typeof MenuOrderType>;
-    status: z.ZodDefault<z.ZodEnum<typeof OrderStatus>>;
-    customerId: z.ZodString;
-    notes: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-    tableNumber: z.ZodOptional<z.ZodString>;
-    specialInstructions: z.ZodOptional<z.ZodString>;
-    customer: z.ZodOptional<z.ZodObject<{
-        customerId: z.ZodOptional<z.ZodString>;
-        name: z.ZodString;
-        phone: z.ZodOptional<z.ZodString>;
-        email: z.ZodOptional<z.ZodEmail>;
-        address: z.ZodOptional<z.ZodObject<{
-            street: z.ZodString;
-            street2: z.ZodOptional<z.ZodString>;
-            city: z.ZodString;
-            state: z.ZodString;
-            postalCode: z.ZodString;
-            country: z.ZodString;
-            deliveryInstructions: z.ZodOptional<z.ZodString>;
-        }, z.core.$strip>>;
-    }, z.core.$strip>>;
-    pricing: z.ZodObject<{
-        subtotal: z.ZodNumber;
-        tax: z.ZodDefault<z.ZodNumber>;
-        tip: z.ZodDefault<z.ZodNumber>;
-        shippingAmount: z.ZodDefault<z.ZodNumber>;
-        discount: z.ZodDefault<z.ZodNumber>;
-        total: z.ZodNumber;
-        currency: z.ZodDefault<z.ZodString>;
-    }, z.core.$strip>;
-    paymentStatus: z.ZodDefault<z.ZodEnum<typeof PaymentStatus>>;
-    paymentMethod: z.ZodOptional<z.ZodString>;
-    paymentReference: z.ZodOptional<z.ZodString>;
-    orderDate: z.ZodNumber;
-    requestedTime: z.ZodOptional<z.ZodNumber>;
-    estimatedReadyTime: z.ZodOptional<z.ZodNumber>;
-    allergies: z.ZodOptional<z.ZodArray<z.ZodString>>;
-    externalOrderId: z.ZodOptional<z.ZodString>;
-    source: z.ZodDefault<z.ZodString>;
-    deliveryAddress: z.ZodOptional<z.ZodObject<{
-        street: z.ZodString;
-        city: z.ZodOptional<z.ZodString>;
-        postalCode: z.ZodOptional<z.ZodString>;
-    }, z.core.$strip>>;
-    items: z.ZodArray<z.ZodObject<{
-        menuItemId: z.ZodString;
-        itemName: z.ZodString;
-        quantity: z.ZodNumber;
-        unitPrice: z.ZodNumber;
-        totalPrice: z.ZodNumber;
-        specialInstructions: z.ZodOptional<z.ZodString>;
-        customizations: z.ZodOptional<z.ZodArray<z.ZodObject<{
-            name: z.ZodString;
-            value: z.ZodString;
-            additionalCost: z.ZodDefault<z.ZodNumber>;
-        }, z.core.$strip>>>;
-        status: z.ZodDefault<z.ZodEnum<typeof OrderStatus>>;
-        preparationTime: z.ZodOptional<z.ZodNumber>;
-        notes: z.ZodOptional<z.ZodString>;
-    }, z.core.$strip>>;
-    cancelReason: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-}, z.core.$strip>;
-/**
- * Schema for updating an existing menu order.
- * All fields are optional except id.
- */
-export declare const UpdateMenuOrderSchema: z.ZodObject<{
-    type: z.ZodOptional<z.ZodEnum<typeof MenuOrderType>>;
-    status: z.ZodOptional<z.ZodDefault<z.ZodEnum<typeof OrderStatus>>>;
-    customerId: z.ZodOptional<z.ZodString>;
-    notes: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
-    tableNumber: z.ZodOptional<z.ZodOptional<z.ZodString>>;
-    specialInstructions: z.ZodOptional<z.ZodOptional<z.ZodString>>;
-    customer: z.ZodOptional<z.ZodOptional<z.ZodObject<{
+    customer: z.ZodDefault<z.ZodNullable<z.ZodObject<{
         customerId: z.ZodOptional<z.ZodString>;
         name: z.ZodString;
         phone: z.ZodOptional<z.ZodString>;
@@ -248,6 +126,132 @@ export declare const UpdateMenuOrderSchema: z.ZodObject<{
             deliveryInstructions: z.ZodOptional<z.ZodString>;
         }, z.core.$strip>>;
     }, z.core.$strip>>>;
+    pricing: z.ZodObject<{
+        subtotal: z.ZodNumber;
+        tax: z.ZodDefault<z.ZodNumber>;
+        tip: z.ZodDefault<z.ZodNumber>;
+        shippingAmount: z.ZodDefault<z.ZodNumber>;
+        discount: z.ZodDefault<z.ZodNumber>;
+        total: z.ZodNumber;
+        currency: z.ZodDefault<z.ZodString>;
+    }, z.core.$strip>;
+    paymentStatus: z.ZodDefault<z.ZodEnum<typeof PaymentStatus>>;
+    paymentMethod: z.ZodDefault<z.ZodNullable<z.ZodString>>;
+    paymentReference: z.ZodDefault<z.ZodNullable<z.ZodString>>;
+    orderDate: z.ZodNumber;
+    requestedTime: z.ZodDefault<z.ZodNullable<z.ZodNumber>>;
+    estimatedReadyTime: z.ZodDefault<z.ZodNullable<z.ZodNumber>>;
+    actualReadyTime: z.ZodDefault<z.ZodNullable<z.ZodNumber>>;
+    specialInstructions: z.ZodDefault<z.ZodNullable<z.ZodString>>;
+    allergies: z.ZodDefault<z.ZodNullable<z.ZodArray<z.ZodString>>>;
+    tableNumber: z.ZodDefault<z.ZodNullable<z.ZodString>>;
+    externalOrderId: z.ZodDefault<z.ZodNullable<z.ZodString>>;
+    source: z.ZodDefault<z.ZodString>;
+    cancelReason: z.ZodDefault<z.ZodNullable<z.ZodString>>;
+    notes: z.ZodDefault<z.ZodNullable<z.ZodString>>;
+    serviceConversationConfigId: z.ZodDefault<z.ZodNullable<z.ZodString>>;
+    deliveryAddress: z.ZodDefault<z.ZodNullable<z.ZodObject<{
+        street: z.ZodString;
+        city: z.ZodDefault<z.ZodNullable<z.ZodString>>;
+        postalCode: z.ZodDefault<z.ZodNullable<z.ZodString>>;
+    }, z.core.$strip>>>;
+    tip: z.ZodDefault<z.ZodNullable<z.ZodNumber>>;
+}, z.core.$strip>;
+/**
+ * Schema for creating a new menu order.
+ * Omits auto-generated fields and uses base items without IDs.
+ */
+export declare const CreateMenuOrderSchema: z.ZodObject<{
+    type: z.ZodEnum<typeof MenuOrderType>;
+    status: z.ZodDefault<z.ZodEnum<typeof OrderStatus>>;
+    customerId: z.ZodString;
+    notes: z.ZodDefault<z.ZodNullable<z.ZodString>>;
+    tableNumber: z.ZodDefault<z.ZodNullable<z.ZodString>>;
+    tip: z.ZodDefault<z.ZodNullable<z.ZodNumber>>;
+    specialInstructions: z.ZodDefault<z.ZodNullable<z.ZodString>>;
+    customer: z.ZodDefault<z.ZodNullable<z.ZodObject<{
+        customerId: z.ZodOptional<z.ZodString>;
+        name: z.ZodString;
+        phone: z.ZodOptional<z.ZodString>;
+        email: z.ZodOptional<z.ZodEmail>;
+        address: z.ZodOptional<z.ZodObject<{
+            street: z.ZodString;
+            street2: z.ZodOptional<z.ZodString>;
+            city: z.ZodString;
+            state: z.ZodString;
+            postalCode: z.ZodString;
+            country: z.ZodString;
+            deliveryInstructions: z.ZodOptional<z.ZodString>;
+        }, z.core.$strip>>;
+    }, z.core.$strip>>>;
+    pricing: z.ZodObject<{
+        subtotal: z.ZodNumber;
+        tax: z.ZodDefault<z.ZodNumber>;
+        tip: z.ZodDefault<z.ZodNumber>;
+        shippingAmount: z.ZodDefault<z.ZodNumber>;
+        discount: z.ZodDefault<z.ZodNumber>;
+        total: z.ZodNumber;
+        currency: z.ZodDefault<z.ZodString>;
+    }, z.core.$strip>;
+    paymentStatus: z.ZodDefault<z.ZodEnum<typeof PaymentStatus>>;
+    paymentMethod: z.ZodDefault<z.ZodNullable<z.ZodString>>;
+    paymentReference: z.ZodDefault<z.ZodNullable<z.ZodString>>;
+    orderDate: z.ZodNumber;
+    requestedTime: z.ZodDefault<z.ZodNullable<z.ZodNumber>>;
+    estimatedReadyTime: z.ZodDefault<z.ZodNullable<z.ZodNumber>>;
+    allergies: z.ZodDefault<z.ZodNullable<z.ZodArray<z.ZodString>>>;
+    externalOrderId: z.ZodDefault<z.ZodNullable<z.ZodString>>;
+    source: z.ZodDefault<z.ZodString>;
+    deliveryAddress: z.ZodDefault<z.ZodNullable<z.ZodObject<{
+        street: z.ZodString;
+        city: z.ZodDefault<z.ZodNullable<z.ZodString>>;
+        postalCode: z.ZodDefault<z.ZodNullable<z.ZodString>>;
+    }, z.core.$strip>>>;
+    items: z.ZodArray<z.ZodObject<{
+        menuItemId: z.ZodString;
+        itemName: z.ZodString;
+        quantity: z.ZodNumber;
+        unitPrice: z.ZodNumber;
+        totalPrice: z.ZodNumber;
+        specialInstructions: z.ZodDefault<z.ZodNullable<z.ZodString>>;
+        customizations: z.ZodDefault<z.ZodNullable<z.ZodArray<z.ZodObject<{
+            name: z.ZodString;
+            value: z.ZodString;
+            additionalCost: z.ZodDefault<z.ZodNumber>;
+        }, z.core.$strip>>>>;
+        status: z.ZodDefault<z.ZodEnum<typeof OrderStatus>>;
+        preparationTime: z.ZodDefault<z.ZodNullable<z.ZodNumber>>;
+        notes: z.ZodDefault<z.ZodNullable<z.ZodString>>;
+    }, z.core.$strip>>;
+    cancelReason: z.ZodDefault<z.ZodNullable<z.ZodString>>;
+}, z.core.$strip>;
+/**
+ * Schema for updating an existing menu order.
+ * All fields are optional except id.
+ */
+export declare const UpdateMenuOrderSchema: z.ZodObject<{
+    type: z.ZodOptional<z.ZodEnum<typeof MenuOrderType>>;
+    status: z.ZodOptional<z.ZodDefault<z.ZodEnum<typeof OrderStatus>>>;
+    customerId: z.ZodOptional<z.ZodString>;
+    notes: z.ZodOptional<z.ZodDefault<z.ZodNullable<z.ZodString>>>;
+    tableNumber: z.ZodOptional<z.ZodDefault<z.ZodNullable<z.ZodString>>>;
+    tip: z.ZodOptional<z.ZodDefault<z.ZodNullable<z.ZodNumber>>>;
+    specialInstructions: z.ZodOptional<z.ZodDefault<z.ZodNullable<z.ZodString>>>;
+    customer: z.ZodOptional<z.ZodDefault<z.ZodNullable<z.ZodObject<{
+        customerId: z.ZodOptional<z.ZodString>;
+        name: z.ZodString;
+        phone: z.ZodOptional<z.ZodString>;
+        email: z.ZodOptional<z.ZodEmail>;
+        address: z.ZodOptional<z.ZodObject<{
+            street: z.ZodString;
+            street2: z.ZodOptional<z.ZodString>;
+            city: z.ZodString;
+            state: z.ZodString;
+            postalCode: z.ZodString;
+            country: z.ZodString;
+            deliveryInstructions: z.ZodOptional<z.ZodString>;
+        }, z.core.$strip>>;
+    }, z.core.$strip>>>>;
     pricing: z.ZodOptional<z.ZodObject<{
         subtotal: z.ZodNumber;
         tax: z.ZodDefault<z.ZodNumber>;
@@ -258,36 +262,36 @@ export declare const UpdateMenuOrderSchema: z.ZodObject<{
         currency: z.ZodDefault<z.ZodString>;
     }, z.core.$strip>>;
     paymentStatus: z.ZodOptional<z.ZodDefault<z.ZodEnum<typeof PaymentStatus>>>;
-    paymentMethod: z.ZodOptional<z.ZodOptional<z.ZodString>>;
-    paymentReference: z.ZodOptional<z.ZodOptional<z.ZodString>>;
+    paymentMethod: z.ZodOptional<z.ZodDefault<z.ZodNullable<z.ZodString>>>;
+    paymentReference: z.ZodOptional<z.ZodDefault<z.ZodNullable<z.ZodString>>>;
     orderDate: z.ZodOptional<z.ZodNumber>;
-    requestedTime: z.ZodOptional<z.ZodOptional<z.ZodNumber>>;
-    estimatedReadyTime: z.ZodOptional<z.ZodOptional<z.ZodNumber>>;
-    allergies: z.ZodOptional<z.ZodOptional<z.ZodArray<z.ZodString>>>;
-    externalOrderId: z.ZodOptional<z.ZodOptional<z.ZodString>>;
+    requestedTime: z.ZodOptional<z.ZodDefault<z.ZodNullable<z.ZodNumber>>>;
+    estimatedReadyTime: z.ZodOptional<z.ZodDefault<z.ZodNullable<z.ZodNumber>>>;
+    allergies: z.ZodOptional<z.ZodDefault<z.ZodNullable<z.ZodArray<z.ZodString>>>>;
+    externalOrderId: z.ZodOptional<z.ZodDefault<z.ZodNullable<z.ZodString>>>;
     source: z.ZodOptional<z.ZodDefault<z.ZodString>>;
-    deliveryAddress: z.ZodOptional<z.ZodOptional<z.ZodObject<{
+    deliveryAddress: z.ZodOptional<z.ZodDefault<z.ZodNullable<z.ZodObject<{
         street: z.ZodString;
-        city: z.ZodOptional<z.ZodString>;
-        postalCode: z.ZodOptional<z.ZodString>;
-    }, z.core.$strip>>>;
+        city: z.ZodDefault<z.ZodNullable<z.ZodString>>;
+        postalCode: z.ZodDefault<z.ZodNullable<z.ZodString>>;
+    }, z.core.$strip>>>>;
     items: z.ZodOptional<z.ZodArray<z.ZodObject<{
         menuItemId: z.ZodString;
         itemName: z.ZodString;
         quantity: z.ZodNumber;
         unitPrice: z.ZodNumber;
         totalPrice: z.ZodNumber;
-        specialInstructions: z.ZodOptional<z.ZodString>;
-        customizations: z.ZodOptional<z.ZodArray<z.ZodObject<{
+        specialInstructions: z.ZodDefault<z.ZodNullable<z.ZodString>>;
+        customizations: z.ZodDefault<z.ZodNullable<z.ZodArray<z.ZodObject<{
             name: z.ZodString;
             value: z.ZodString;
             additionalCost: z.ZodDefault<z.ZodNumber>;
-        }, z.core.$strip>>>;
+        }, z.core.$strip>>>>;
         status: z.ZodDefault<z.ZodEnum<typeof OrderStatus>>;
-        preparationTime: z.ZodOptional<z.ZodNumber>;
-        notes: z.ZodOptional<z.ZodString>;
+        preparationTime: z.ZodDefault<z.ZodNullable<z.ZodNumber>>;
+        notes: z.ZodDefault<z.ZodNullable<z.ZodString>>;
     }, z.core.$strip>>>;
-    cancelReason: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
+    cancelReason: z.ZodOptional<z.ZodDefault<z.ZodNullable<z.ZodString>>>;
     id: z.ZodString;
 }, z.core.$strip>;
 /**
@@ -296,8 +300,8 @@ export declare const UpdateMenuOrderSchema: z.ZodObject<{
 export declare const UpdateMenuOrderStatusSchema: z.ZodObject<{
     id: z.ZodString;
     status: z.ZodEnum<typeof OrderStatus>;
-    estimatedReadyTime: z.ZodOptional<z.ZodNumber>;
-    actualReadyTime: z.ZodOptional<z.ZodNumber>;
+    estimatedReadyTime: z.ZodDefault<z.ZodNullable<z.ZodNumber>>;
+    actualReadyTime: z.ZodDefault<z.ZodNullable<z.ZodNumber>>;
 }, z.core.$strip>;
 export type MenuOrderItemBase = z.infer<typeof MenuOrderItemBaseSchema>;
 export type MenuOrderItem = z.infer<typeof MenuOrderItemSchema>;

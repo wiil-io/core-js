@@ -46,7 +46,7 @@ export const PropertyInquirySchema = BaseModelSchema.safeExtend({
 
     // Contact Information
     customerId: z.string().describe("ID of existing contact in system"),
-    customer: CustomerSchema.describe("Contact details of the inquirer"),
+    customer: CustomerSchema.nullable().optional().describe("Contact details of the inquirer"),
 
     // Inquiry Details
     inquiryType: z.enum(PropertyInquiryType).describe("Type of inquiry"),

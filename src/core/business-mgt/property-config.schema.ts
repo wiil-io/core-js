@@ -29,8 +29,7 @@ export const PropertyCategorySchema = BaseModelSchema.safeExtend({
     name: z.string().min(1, "Category name is required").describe("Category name (e.g., Luxury Homes, Commercial Offices)"),
     description: z.string().optional().describe("Category description"),
     propertyType: z.enum(PropertyType).describe("Type of property (residential, commercial, land)"),
-    displayOrder: z.number().int().optional().describe("Display order in listing"),
-    isDefault: z.boolean().default(false).describe("Whether this is the default category"),
+    displayOrder: z.number().int().optional().describe("Display order in listing")
 });
 
 /**

@@ -25,8 +25,7 @@ exports.PropertyCategorySchema = base_schema_1.BaseModelSchema.safeExtend({
     name: zod_1.default.string().min(1, "Category name is required").describe("Category name (e.g., Luxury Homes, Commercial Offices)"),
     description: zod_1.default.string().optional().describe("Category description"),
     propertyType: zod_1.default.enum(type_definitions_1.PropertyType).describe("Type of property (residential, commercial, land)"),
-    displayOrder: zod_1.default.number().int().optional().describe("Display order in listing"),
-    isDefault: zod_1.default.boolean().default(false).describe("Whether this is the default category"),
+    displayOrder: zod_1.default.number().int().optional().describe("Display order in listing")
 });
 /**
  * Property address schema (standalone entity).

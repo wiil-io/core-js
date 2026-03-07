@@ -38,7 +38,7 @@ export declare const PropertyInquirySchema: z.ZodObject<{
     updatedAt: z.ZodOptional<z.ZodNumber>;
     propertyId: z.ZodString;
     customerId: z.ZodString;
-    customer: z.ZodObject<{
+    customer: z.ZodOptional<z.ZodNullable<z.ZodObject<{
         id: z.ZodString;
         createdAt: z.ZodOptional<z.ZodNumber>;
         updatedAt: z.ZodOptional<z.ZodNumber>;
@@ -65,7 +65,7 @@ export declare const PropertyInquirySchema: z.ZodObject<{
             country: z.ZodString;
         }, z.core.$strip>>;
         isValidatedNames: z.ZodDefault<z.ZodBoolean>;
-    }, z.core.$strip>;
+    }, z.core.$strip>>>;
     inquiryType: z.ZodEnum<typeof PropertyInquiryType>;
     message: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     source: z.ZodDefault<z.ZodString>;

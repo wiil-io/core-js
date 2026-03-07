@@ -44,7 +44,7 @@ exports.PropertyInquirySchema = base_schema_1.BaseModelSchema.safeExtend({
     propertyId: zod_1.default.string().describe("ID of the property being inquired about"),
     // Contact Information
     customerId: zod_1.default.string().describe("ID of existing contact in system"),
-    customer: customer_schema_1.CustomerSchema.describe("Contact details of the inquirer"),
+    customer: customer_schema_1.CustomerSchema.nullable().optional().describe("Contact details of the inquirer"),
     // Inquiry Details
     inquiryType: zod_1.default.enum(type_definitions_1.PropertyInquiryType).describe("Type of inquiry"),
     message: zod_1.default.string().nullable().optional().describe("Inquiry message from the contact"),
