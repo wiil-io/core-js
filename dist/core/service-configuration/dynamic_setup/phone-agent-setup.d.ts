@@ -68,7 +68,7 @@ export declare const DynamicPhoneAgentSetupResultSchema: z.ZodObject<{
     instructionConfigurationId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     errorMessage: z.ZodOptional<z.ZodString>;
     metadata: z.ZodOptional<z.ZodNullable<z.ZodRecord<z.ZodString, z.ZodAny>>>;
-    phoneNumber: z.ZodString;
+    phoneNumber: z.ZodOptional<z.ZodNullable<z.ZodString>>;
 }, z.core.$strip>;
 /**
  * Schema for updating an existing phone agent configuration.

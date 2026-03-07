@@ -44,7 +44,7 @@ exports.DynamicWebAgentSchema = base_agent_setup_1.DynamicBaseAgentSetupSchema.s
  * @property {string[]} integrationSnippets - Code snippets for deploying the web assistant
  */
 exports.DynamicWebAgentSetupResultSchema = base_agent_setup_1.DynamicAgentSetupResultSchema.safeExtend({
-    integrationSnippets: zod_1.default.array(zod_1.default.string()).describe("List of code snippets or integration details for deploying the web assistant on the specified website, if applicable"),
+    integrationSnippets: zod_1.default.array(zod_1.default.string()).nullable().optional().describe("List of code snippets or integration details for deploying the web assistant on the specified website, if applicable"),
 }).describe("Schema for the result of creating or setting up a new web AI assistant with dynamic setup");
 /**
  * Schema for updating an existing web agent configuration.

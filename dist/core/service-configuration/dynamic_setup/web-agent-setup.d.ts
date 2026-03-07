@@ -69,7 +69,7 @@ export declare const DynamicWebAgentSetupResultSchema: z.ZodObject<{
     instructionConfigurationId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     errorMessage: z.ZodOptional<z.ZodString>;
     metadata: z.ZodOptional<z.ZodNullable<z.ZodRecord<z.ZodString, z.ZodAny>>>;
-    integrationSnippets: z.ZodArray<z.ZodString>;
+    integrationSnippets: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodString>>>;
 }, z.core.$strip>;
 /**
  * Schema for updating an existing web agent configuration.

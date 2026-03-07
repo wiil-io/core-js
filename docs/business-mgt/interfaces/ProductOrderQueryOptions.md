@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.40**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.41**](../../README.md)
 
 ***
 
@@ -6,13 +6,13 @@
 
 # Interface: ProductOrderQueryOptions
 
-Defined in: [src/core/business-mgt/product-order.schema.ts:191](https://github.com/wiil-io/core-js/blob/09a3d6d4c398397e9996a8872999fad3282747ce/src/core/business-mgt/product-order.schema.ts#L191)
+Defined in: [src/core/business-mgt/product-order.schema.ts:191](https://github.com/wiil-io/core-js/blob/be8beb340b9bef4c811fca6103ccb9448b36b797/src/core/business-mgt/product-order.schema.ts#L191)
 
 ## Properties
 
 | Property | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | [src/core/business-mgt/product-order.schema.ts:192](https://github.com/wiil-io/core-js/blob/09a3d6d4c398397e9996a8872999fad3282747ce/src/core/business-mgt/product-order.schema.ts#L192) |
-| <a id="pagesize"></a> `pageSize` | `number` | [src/core/business-mgt/product-order.schema.ts:193](https://github.com/wiil-io/core-js/blob/09a3d6d4c398397e9996a8872999fad3282747ce/src/core/business-mgt/product-order.schema.ts#L193) |
-| <a id="filters"></a> `filters?` | [`ProductOrderFilters`](ProductOrderFilters.md) | [src/core/business-mgt/product-order.schema.ts:194](https://github.com/wiil-io/core-js/blob/09a3d6d4c398397e9996a8872999fad3282747ce/src/core/business-mgt/product-order.schema.ts#L194) |
-| <a id="sorting"></a> `sorting?` | [`ProductOrderSorting`](ProductOrderSorting.md) | [src/core/business-mgt/product-order.schema.ts:195](https://github.com/wiil-io/core-js/blob/09a3d6d4c398397e9996a8872999fad3282747ce/src/core/business-mgt/product-order.schema.ts#L195) |
+| <a id="page"></a> `page` | `number` | [src/core/business-mgt/product-order.schema.ts:192](https://github.com/wiil-io/core-js/blob/be8beb340b9bef4c811fca6103ccb9448b36b797/src/core/business-mgt/product-order.schema.ts#L192) |
+| <a id="pagesize"></a> `pageSize` | `number` | [src/core/business-mgt/product-order.schema.ts:193](https://github.com/wiil-io/core-js/blob/be8beb340b9bef4c811fca6103ccb9448b36b797/src/core/business-mgt/product-order.schema.ts#L193) |
+| <a id="filters"></a> `filters?` | [`ProductOrderFilters`](ProductOrderFilters.md) | [src/core/business-mgt/product-order.schema.ts:194](https://github.com/wiil-io/core-js/blob/be8beb340b9bef4c811fca6103ccb9448b36b797/src/core/business-mgt/product-order.schema.ts#L194) |
+| <a id="sorting"></a> `sorting?` | [`ProductOrderSorting`](ProductOrderSorting.md) | [src/core/business-mgt/product-order.schema.ts:195](https://github.com/wiil-io/core-js/blob/be8beb340b9bef4c811fca6103ccb9448b36b797/src/core/business-mgt/product-order.schema.ts#L195) |

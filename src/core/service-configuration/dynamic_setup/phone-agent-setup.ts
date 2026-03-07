@@ -44,7 +44,7 @@ export const DynamicPhoneAgentSchema = DynamicBaseAgentSetupSchema.safeExtend({
  * @property {string} phoneNumber - Phone number associated with the configuration
  */
 export const DynamicPhoneAgentSetupResultSchema = DynamicAgentSetupResultSchema.safeExtend({
-    phoneNumber: z.string().describe("Phone number associated with the phone configuration used for this assistant"),
+    phoneNumber: z.string().nullable().optional().describe("Phone number associated with the phone configuration used for this assistant"),
 }).describe("Schema for the result of creating or setting up a new phone AI assistant with dynamic setup");
 
 /**

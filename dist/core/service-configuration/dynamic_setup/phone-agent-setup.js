@@ -43,7 +43,7 @@ exports.DynamicPhoneAgentSchema = base_agent_setup_1.DynamicBaseAgentSetupSchema
  * @property {string} phoneNumber - Phone number associated with the configuration
  */
 exports.DynamicPhoneAgentSetupResultSchema = base_agent_setup_1.DynamicAgentSetupResultSchema.safeExtend({
-    phoneNumber: zod_1.default.string().describe("Phone number associated with the phone configuration used for this assistant"),
+    phoneNumber: zod_1.default.string().nullable().optional().describe("Phone number associated with the phone configuration used for this assistant"),
 }).describe("Schema for the result of creating or setting up a new phone AI assistant with dynamic setup");
 /**
  * Schema for updating an existing phone agent configuration.

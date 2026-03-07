@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.40**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.41**](../../README.md)
 
 ***
 
@@ -21,7 +21,7 @@ type PhoneNumberPricing = {
 };
 ```
 
-Defined in: [src/core/service-configuration/phone-number.schema.ts:252](https://github.com/wiil-io/core-js/blob/09a3d6d4c398397e9996a8872999fad3282747ce/src/core/service-configuration/phone-number.schema.ts#L252)
+Defined in: [src/core/service-configuration/phone-number.schema.ts:252](https://github.com/wiil-io/core-js/blob/be8beb340b9bef4c811fca6103ccb9448b36b797/src/core/service-configuration/phone-number.schema.ts#L252)
 
 Type definition for phone number pricing.
 
@@ -29,10 +29,10 @@ Type definition for phone number pricing.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="number_type"></a> `number_type` | [`PhoneNumberType`](../../type-definitions/enumerations/PhoneNumberType.md) | [src/core/service-configuration/phone-number.schema.ts:237](https://github.com/wiil-io/core-js/blob/09a3d6d4c398397e9996a8872999fad3282747ce/src/core/service-configuration/phone-number.schema.ts#L237) |
-| <a id="country"></a> `country` | `string` | [src/core/service-configuration/phone-number.schema.ts:238](https://github.com/wiil-io/core-js/blob/09a3d6d4c398397e9996a8872999fad3282747ce/src/core/service-configuration/phone-number.schema.ts#L238) |
-| <a id="countrycode"></a> `countryCode` | `string` | [src/core/service-configuration/phone-number.schema.ts:239](https://github.com/wiil-io/core-js/blob/09a3d6d4c398397e9996a8872999fad3282747ce/src/core/service-configuration/phone-number.schema.ts#L239) |
-| <a id="phonenumberprices"></a> `phoneNumberPrices` | \{ `base_price`: `string`; `current_price`: `string`; \}[] | [src/core/service-configuration/phone-number.schema.ts:240](https://github.com/wiil-io/core-js/blob/09a3d6d4c398397e9996a8872999fad3282747ce/src/core/service-configuration/phone-number.schema.ts#L240) |
-| <a id="price"></a> `price` | `number` | [src/core/service-configuration/phone-number.schema.ts:244](https://github.com/wiil-io/core-js/blob/09a3d6d4c398397e9996a8872999fad3282747ce/src/core/service-configuration/phone-number.schema.ts#L244) |
-| <a id="priceunit"></a> `priceUnit` | `string` | [src/core/service-configuration/phone-number.schema.ts:245](https://github.com/wiil-io/core-js/blob/09a3d6d4c398397e9996a8872999fad3282747ce/src/core/service-configuration/phone-number.schema.ts#L245) |
-| <a id="currency"></a> `currency` | `string` | [src/core/service-configuration/phone-number.schema.ts:246](https://github.com/wiil-io/core-js/blob/09a3d6d4c398397e9996a8872999fad3282747ce/src/core/service-configuration/phone-number.schema.ts#L246) |
+| <a id="number_type"></a> `number_type` | [`PhoneNumberType`](../../type-definitions/enumerations/PhoneNumberType.md) | [src/core/service-configuration/phone-number.schema.ts:237](https://github.com/wiil-io/core-js/blob/be8beb340b9bef4c811fca6103ccb9448b36b797/src/core/service-configuration/phone-number.schema.ts#L237) |
+| <a id="country"></a> `country` | `string` | [src/core/service-configuration/phone-number.schema.ts:238](https://github.com/wiil-io/core-js/blob/be8beb340b9bef4c811fca6103ccb9448b36b797/src/core/service-configuration/phone-number.schema.ts#L238) |
+| <a id="countrycode"></a> `countryCode` | `string` | [src/core/service-configuration/phone-number.schema.ts:239](https://github.com/wiil-io/core-js/blob/be8beb340b9bef4c811fca6103ccb9448b36b797/src/core/service-configuration/phone-number.schema.ts#L239) |
+| <a id="phonenumberprices"></a> `phoneNumberPrices` | \{ `base_price`: `string`; `current_price`: `string`; \}[] | [src/core/service-configuration/phone-number.schema.ts:240](https://github.com/wiil-io/core-js/blob/be8beb340b9bef4c811fca6103ccb9448b36b797/src/core/service-configuration/phone-number.schema.ts#L240) |
+| <a id="price"></a> `price` | `number` | [src/core/service-configuration/phone-number.schema.ts:244](https://github.com/wiil-io/core-js/blob/be8beb340b9bef4c811fca6103ccb9448b36b797/src/core/service-configuration/phone-number.schema.ts#L244) |
+| <a id="priceunit"></a> `priceUnit` | `string` | [src/core/service-configuration/phone-number.schema.ts:245](https://github.com/wiil-io/core-js/blob/be8beb340b9bef4c811fca6103ccb9448b36b797/src/core/service-configuration/phone-number.schema.ts#L245) |
+| <a id="currency"></a> `currency` | `string` | [src/core/service-configuration/phone-number.schema.ts:246](https://github.com/wiil-io/core-js/blob/be8beb340b9bef4c811fca6103ccb9448b36b797/src/core/service-configuration/phone-number.schema.ts#L246) |

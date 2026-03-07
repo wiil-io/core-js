@@ -1,4 +1,4 @@
-import z from "zod";
+import z, { nullable } from "zod";
 import { DynamicAgentSetupResultSchema, DynamicBaseAgentSetupSchema, DynamicSTTModelConfigurationSchema, DynamicTTSModelConfigurationSchema } from "./base-agent-setup";
 import { OttCommunicationType } from "../../type-definitions";
 
@@ -45,7 +45,7 @@ export const DynamicWebAgentSchema = DynamicBaseAgentSetupSchema.safeExtend({
  * @property {string[]} integrationSnippets - Code snippets for deploying the web assistant
  */
 export const DynamicWebAgentSetupResultSchema = DynamicAgentSetupResultSchema.safeExtend({
- integrationSnippets: z.array(z.string()).describe("List of code snippets or integration details for deploying the web assistant on the specified website, if applicable"),
+ integrationSnippets: z.array(z.string()).nullable().optional().describe("List of code snippets or integration details for deploying the web assistant on the specified website, if applicable"),
 }).describe("Schema for the result of creating or setting up a new web AI assistant with dynamic setup");
 
 /**

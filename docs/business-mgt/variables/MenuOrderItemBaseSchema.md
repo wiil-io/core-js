@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.40**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.41**](../../README.md)
 
 ***
 
@@ -10,6 +10,6 @@
 const MenuOrderItemBaseSchema: ZodObject<CreateMenuOrderItem>;
 ```
 
-Defined in: [src/core/business-mgt/menu.order.schema.ts:26](https://github.com/wiil-io/core-js/blob/09a3d6d4c398397e9996a8872999fad3282747ce/src/core/business-mgt/menu.order.schema.ts#L26)
+Defined in: [src/core/business-mgt/menu.order.schema.ts:26](https://github.com/wiil-io/core-js/blob/be8beb340b9bef4c811fca6103ccb9448b36b797/src/core/business-mgt/menu.order.schema.ts#L26)
 
 Base menu order item schema (without IDs for creation).
