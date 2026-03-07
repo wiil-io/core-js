@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.42**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.43**](../../README.md)
 
 ***
 
@@ -10,6 +10,6 @@
 const MenuOrderSchema: ZodObject<MenuOrder>;
 ```
 
-Defined in: [src/core/business-mgt/menu.order.schema.ts:82](https://github.com/wiil-io/core-js/blob/04b4b4a882ec18acfbfc1d773d3f01653525db24/src/core/business-mgt/menu.order.schema.ts#L82)
+Defined in: [src/core/business-mgt/menu.order.schema.ts:82](https://github.com/wiil-io/core-js/blob/042f5887f500e78f6e451a45268f58c38e51ac7e/src/core/business-mgt/menu.order.schema.ts#L82)
 
 Menu order schema - for restaurants/food service.

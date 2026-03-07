@@ -51,4 +51,6 @@ exports.DynamicPhoneAgentSetupResultSchema = base_agent_setup_1.DynamicAgentSetu
  */
 exports.UpdateDynamicPhoneAgentSchema = exports.DynamicPhoneAgentSchema.partial().extend({
     id: zod_1.default.string().describe("ID of the existing phone agent configuration to update"),
+}).omit({
+    phoneConfigurationId: true, // Phone configuration cannot be changed after creation 
 }).describe("Schema for updating a phone AI assistant configuration, allowing partial updates to phone-specific fields");

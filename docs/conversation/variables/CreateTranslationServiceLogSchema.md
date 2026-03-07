@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.42**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.43**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const CreateTranslationServiceLogSchema: ZodObject<CreateTranslationServiceLog>;
 ```
 
-Defined in: [src/core/conversation/translation-conversation.schema.ts:168](https://github.com/wiil-io/core-js/blob/04b4b4a882ec18acfbfc1d773d3f01653525db24/src/core/conversation/translation-conversation.schema.ts#L168)
+Defined in: [src/core/conversation/translation-conversation.schema.ts:168](https://github.com/wiil-io/core-js/blob/042f5887f500e78f6e451a45268f58c38e51ac7e/src/core/conversation/translation-conversation.schema.ts#L168)
 
 Schema for creating a new translation service log.
 Omits auto-generated fields.

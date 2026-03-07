@@ -53,6 +53,8 @@ export const DynamicPhoneAgentSetupResultSchema = DynamicAgentSetupResultSchema.
  */
 export const UpdateDynamicPhoneAgentSchema = DynamicPhoneAgentSchema.partial().extend({
     id: z.string().describe("ID of the existing phone agent configuration to update"),
+}).omit({
+    phoneConfigurationId: true, // Phone configuration cannot be changed after creation 
 }).describe("Schema for updating a phone AI assistant configuration, allowing partial updates to phone-specific fields");
 
 
