@@ -17,7 +17,6 @@ import { CustomerSchema } from "./customer.schema";
  * Property inquiry schema for tracking customer interest in properties.
  *
  * @typedef {Object} PropertyInquiry
- * @property {string} organizationId - Business account ID
  * @property {string} propertyId - ID of the property being inquired about
  * @property {string} [customerId] - ID of existing contact in system
  * @property {Object} customer - Contact details of the inquirer
@@ -43,7 +42,6 @@ import { CustomerSchema } from "./customer.schema";
  * @property {string} [notes] - Internal notes about the inquiry
  */
 export const PropertyInquirySchema = BaseModelSchema.safeExtend({
-    organizationId: z.string().describe("Business account ID"),
     propertyId: z.string().describe("ID of the property being inquired about"),
 
     // Contact Information

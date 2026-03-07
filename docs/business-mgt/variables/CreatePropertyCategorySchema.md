@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.43**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.44**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const CreatePropertyCategorySchema: ZodObject<CreatePropertyCategory>;
 ```
 
-Defined in: [src/core/business-mgt/property-config.schema.ts:199](https://github.com/wiil-io/core-js/blob/042f5887f500e78f6e451a45268f58c38e51ac7e/src/core/business-mgt/property-config.schema.ts#L199)
+Defined in: [src/core/business-mgt/property-config.schema.ts:193](https://github.com/wiil-io/core-js/blob/c98f65374adc98a7a53d84869a4ded3c42acf443/src/core/business-mgt/property-config.schema.ts#L193)
 
 Schema for creating a new property category.
 Omits auto-generated fields.

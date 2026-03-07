@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.43**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.44**](../../README.md)
 
 ***
 
@@ -6,13 +6,13 @@
 
 # Enumeration: StockStatus
 
-Defined in: [src/core/type-definitions/business-definitions.ts:121](https://github.com/wiil-io/core-js/blob/042f5887f500e78f6e451a45268f58c38e51ac7e/src/core/type-definitions/business-definitions.ts#L121)
+Defined in: [src/core/type-definitions/business-definitions.ts:121](https://github.com/wiil-io/core-js/blob/c98f65374adc98a7a53d84869a4ded3c42acf443/src/core/type-definitions/business-definitions.ts#L121)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="in_stock"></a> `IN_STOCK` | `"in_stock"` | [src/core/type-definitions/business-definitions.ts:122](https://github.com/wiil-io/core-js/blob/042f5887f500e78f6e451a45268f58c38e51ac7e/src/core/type-definitions/business-definitions.ts#L122) |
-| <a id="low_stock"></a> `LOW_STOCK` | `"low_stock"` | [src/core/type-definitions/business-definitions.ts:123](https://github.com/wiil-io/core-js/blob/042f5887f500e78f6e451a45268f58c38e51ac7e/src/core/type-definitions/business-definitions.ts#L123) |
-| <a id="out_of_stock"></a> `OUT_OF_STOCK` | `"out_of_stock"` | [src/core/type-definitions/business-definitions.ts:124](https://github.com/wiil-io/core-js/blob/042f5887f500e78f6e451a45268f58c38e51ac7e/src/core/type-definitions/business-definitions.ts#L124) |
-| <a id="discontinued"></a> `DISCONTINUED` | `"discontinued"` | [src/core/type-definitions/business-definitions.ts:125](https://github.com/wiil-io/core-js/blob/042f5887f500e78f6e451a45268f58c38e51ac7e/src/core/type-definitions/business-definitions.ts#L125) |
+| <a id="in_stock"></a> `IN_STOCK` | `"in_stock"` | [src/core/type-definitions/business-definitions.ts:122](https://github.com/wiil-io/core-js/blob/c98f65374adc98a7a53d84869a4ded3c42acf443/src/core/type-definitions/business-definitions.ts#L122) |
+| <a id="low_stock"></a> `LOW_STOCK` | `"low_stock"` | [src/core/type-definitions/business-definitions.ts:123](https://github.com/wiil-io/core-js/blob/c98f65374adc98a7a53d84869a4ded3c42acf443/src/core/type-definitions/business-definitions.ts#L123) |
+| <a id="out_of_stock"></a> `OUT_OF_STOCK` | `"out_of_stock"` | [src/core/type-definitions/business-definitions.ts:124](https://github.com/wiil-io/core-js/blob/c98f65374adc98a7a53d84869a4ded3c42acf443/src/core/type-definitions/business-definitions.ts#L124) |
+| <a id="discontinued"></a> `DISCONTINUED` | `"discontinued"` | [src/core/type-definitions/business-definitions.ts:125](https://github.com/wiil-io/core-js/blob/c98f65374adc98a7a53d84869a4ded3c42acf443/src/core/type-definitions/business-definitions.ts#L125) |

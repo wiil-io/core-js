@@ -8,7 +8,6 @@ import { PreferredContactMethod, PropertyInquiryType, PropertyInquiryStatus, Cal
  * Property inquiry schema for tracking customer interest in properties.
  *
  * @typedef {Object} PropertyInquiry
- * @property {string} organizationId - Business account ID
  * @property {string} propertyId - ID of the property being inquired about
  * @property {string} [customerId] - ID of existing contact in system
  * @property {Object} customer - Contact details of the inquirer
@@ -37,7 +36,6 @@ export declare const PropertyInquirySchema: z.ZodObject<{
     id: z.ZodString;
     createdAt: z.ZodOptional<z.ZodNumber>;
     updatedAt: z.ZodOptional<z.ZodNumber>;
-    organizationId: z.ZodString;
     propertyId: z.ZodString;
     customerId: z.ZodString;
     customer: z.ZodObject<{
@@ -105,7 +103,6 @@ export declare const PropertyInquirySchema: z.ZodObject<{
 export declare const CreatePropertyInquirySchema: z.ZodObject<{
     message: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     status: z.ZodDefault<z.ZodEnum<typeof PropertyInquiryStatus>>;
-    organizationId: z.ZodString;
     customerId: z.ZodString;
     notes: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     source: z.ZodDefault<z.ZodString>;
@@ -143,7 +140,6 @@ export declare const CreatePropertyInquirySchema: z.ZodObject<{
 export declare const UpdatePropertyInquirySchema: z.ZodObject<{
     message: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     status: z.ZodOptional<z.ZodDefault<z.ZodEnum<typeof PropertyInquiryStatus>>>;
-    organizationId: z.ZodOptional<z.ZodString>;
     customerId: z.ZodOptional<z.ZodString>;
     notes: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     source: z.ZodOptional<z.ZodDefault<z.ZodString>>;

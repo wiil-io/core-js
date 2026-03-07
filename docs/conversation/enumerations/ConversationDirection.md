@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.43**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.44**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: ConversationDirection
 
-Defined in: [src/core/conversation/conversation-config.schema.ts:78](https://github.com/wiil-io/core-js/blob/042f5887f500e78f6e451a45268f58c38e51ac7e/src/core/conversation/conversation-config.schema.ts#L78)
+Defined in: [src/core/conversation/conversation-config.schema.ts:78](https://github.com/wiil-io/core-js/blob/c98f65374adc98a7a53d84869a4ded3c42acf443/src/core/conversation/conversation-config.schema.ts#L78)
 
 Conversation direction enum.
 
@@ -14,5 +14,5 @@ Conversation direction enum.
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="inbound"></a> `INBOUND` | `"inbound"` | [src/core/conversation/conversation-config.schema.ts:79](https://github.com/wiil-io/core-js/blob/042f5887f500e78f6e451a45268f58c38e51ac7e/src/core/conversation/conversation-config.schema.ts#L79) |
-| <a id="outbound"></a> `OUTBOUND` | `"outbound"` | [src/core/conversation/conversation-config.schema.ts:80](https://github.com/wiil-io/core-js/blob/042f5887f500e78f6e451a45268f58c38e51ac7e/src/core/conversation/conversation-config.schema.ts#L80) |
+| <a id="inbound"></a> `INBOUND` | `"inbound"` | [src/core/conversation/conversation-config.schema.ts:79](https://github.com/wiil-io/core-js/blob/c98f65374adc98a7a53d84869a4ded3c42acf443/src/core/conversation/conversation-config.schema.ts#L79) |
+| <a id="outbound"></a> `OUTBOUND` | `"outbound"` | [src/core/conversation/conversation-config.schema.ts:80](https://github.com/wiil-io/core-js/blob/c98f65374adc98a7a53d84869a4ded3c42acf443/src/core/conversation/conversation-config.schema.ts#L80) |

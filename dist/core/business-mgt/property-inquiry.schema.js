@@ -16,7 +16,6 @@ const customer_schema_1 = require("./customer.schema");
  * Property inquiry schema for tracking customer interest in properties.
  *
  * @typedef {Object} PropertyInquiry
- * @property {string} organizationId - Business account ID
  * @property {string} propertyId - ID of the property being inquired about
  * @property {string} [customerId] - ID of existing contact in system
  * @property {Object} customer - Contact details of the inquirer
@@ -42,7 +41,6 @@ const customer_schema_1 = require("./customer.schema");
  * @property {string} [notes] - Internal notes about the inquiry
  */
 exports.PropertyInquirySchema = base_schema_1.BaseModelSchema.safeExtend({
-    organizationId: zod_1.default.string().describe("Business account ID"),
     propertyId: zod_1.default.string().describe("ID of the property being inquired about"),
     // Contact Information
     customerId: zod_1.default.string().describe("ID of existing contact in system"),

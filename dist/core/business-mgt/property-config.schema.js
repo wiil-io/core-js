@@ -15,7 +15,6 @@ const type_definitions_1 = require("../type-definitions");
  * Property category schema.
  *
  * @typedef {Object} PropertyCategory
- * @property {string} organizationId - Business account ID
  * @property {string} name - Category name (e.g., Luxury Homes, Commercial Offices)
  * @property {string} [description] - Category description
  * @property {PropertyType} propertyType - Type of property (residential, commercial, land)
@@ -23,7 +22,6 @@ const type_definitions_1 = require("../type-definitions");
  * @property {boolean} isDefault - Whether this is the default category
  */
 exports.PropertyCategorySchema = base_schema_1.BaseModelSchema.safeExtend({
-    organizationId: zod_1.default.string().describe("Business account ID"),
     name: zod_1.default.string().min(1, "Category name is required").describe("Category name (e.g., Luxury Homes, Commercial Offices)"),
     description: zod_1.default.string().optional().describe("Category description"),
     propertyType: zod_1.default.enum(type_definitions_1.PropertyType).describe("Type of property (residential, commercial, land)"),
@@ -34,7 +32,6 @@ exports.PropertyCategorySchema = base_schema_1.BaseModelSchema.safeExtend({
  * Property address schema (standalone entity).
  *
  * @typedef {Object} PropertyAddress
- * @property {string} organizationId - Business account ID
  * @property {string} street - Street address
  * @property {string} [unit] - Unit or apartment number
  * @property {string} city - City name
@@ -49,7 +46,6 @@ exports.PropertyCategorySchema = base_schema_1.BaseModelSchema.safeExtend({
  * @property {string} [primaryUserAccountId] - User account managing the property
  */
 exports.PropertyAddressSchema = base_schema_1.BaseModelSchema.safeExtend({
-    organizationId: zod_1.default.string().describe("Business account ID"),
     street: zod_1.default.string().min(1, "Street address is required").describe("Street address"),
     unit: zod_1.default.string().nullable().optional().describe("Unit or apartment number"),
     city: zod_1.default.string().min(1, "City is required").describe("City name"),
@@ -97,7 +93,6 @@ exports.PropertyFeaturesSchema = zod_1.default.object({
  * Main property schema for real estate listings.
  *
  * @typedef {Object} Property
- * @property {string} organizationId - Business account ID
  * @property {string} categoryId - ID of the category this property belongs to
  * @property {Object} [category] - Property category (populated)
  * @property {string} title - Property listing title
@@ -129,7 +124,6 @@ exports.PropertyFeaturesSchema = zod_1.default.object({
  * @property {string} [mlsNumber] - MLS listing number
  */
 exports.PropertySchema = base_schema_1.BaseModelSchema.safeExtend({
-    organizationId: zod_1.default.string().describe("Business account ID"),
     categoryId: zod_1.default.string().describe("ID of the category this property belongs to"),
     category: exports.PropertyCategorySchema.optional().describe("Property category"),
     // Basic Info

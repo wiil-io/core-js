@@ -8,7 +8,6 @@ import { PropertyType, PropertySubType, ListingType, ListingStatus, PropertyCond
  * Property category schema.
  *
  * @typedef {Object} PropertyCategory
- * @property {string} organizationId - Business account ID
  * @property {string} name - Category name (e.g., Luxury Homes, Commercial Offices)
  * @property {string} [description] - Category description
  * @property {PropertyType} propertyType - Type of property (residential, commercial, land)
@@ -19,7 +18,6 @@ export declare const PropertyCategorySchema: z.ZodObject<{
     id: z.ZodString;
     createdAt: z.ZodOptional<z.ZodNumber>;
     updatedAt: z.ZodOptional<z.ZodNumber>;
-    organizationId: z.ZodString;
     name: z.ZodString;
     description: z.ZodOptional<z.ZodString>;
     propertyType: z.ZodEnum<typeof PropertyType>;
@@ -30,7 +28,6 @@ export declare const PropertyCategorySchema: z.ZodObject<{
  * Property address schema (standalone entity).
  *
  * @typedef {Object} PropertyAddress
- * @property {string} organizationId - Business account ID
  * @property {string} street - Street address
  * @property {string} [unit] - Unit or apartment number
  * @property {string} city - City name
@@ -48,7 +45,6 @@ export declare const PropertyAddressSchema: z.ZodObject<{
     id: z.ZodString;
     createdAt: z.ZodOptional<z.ZodNumber>;
     updatedAt: z.ZodOptional<z.ZodNumber>;
-    organizationId: z.ZodString;
     street: z.ZodString;
     unit: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     city: z.ZodString;
@@ -101,7 +97,6 @@ export declare const PropertyFeaturesSchema: z.ZodObject<{
  * Main property schema for real estate listings.
  *
  * @typedef {Object} Property
- * @property {string} organizationId - Business account ID
  * @property {string} categoryId - ID of the category this property belongs to
  * @property {Object} [category] - Property category (populated)
  * @property {string} title - Property listing title
@@ -136,13 +131,11 @@ export declare const PropertySchema: z.ZodObject<{
     id: z.ZodString;
     createdAt: z.ZodOptional<z.ZodNumber>;
     updatedAt: z.ZodOptional<z.ZodNumber>;
-    organizationId: z.ZodString;
     categoryId: z.ZodString;
     category: z.ZodOptional<z.ZodObject<{
         id: z.ZodString;
         createdAt: z.ZodOptional<z.ZodNumber>;
         updatedAt: z.ZodOptional<z.ZodNumber>;
-        organizationId: z.ZodString;
         name: z.ZodString;
         description: z.ZodOptional<z.ZodString>;
         propertyType: z.ZodEnum<typeof PropertyType>;
@@ -158,7 +151,6 @@ export declare const PropertySchema: z.ZodObject<{
         id: z.ZodString;
         createdAt: z.ZodOptional<z.ZodNumber>;
         updatedAt: z.ZodOptional<z.ZodNumber>;
-        organizationId: z.ZodString;
         street: z.ZodString;
         unit: z.ZodOptional<z.ZodNullable<z.ZodString>>;
         city: z.ZodString;
@@ -221,7 +213,6 @@ export declare const CreatePropertyCategorySchema: z.ZodObject<{
     name: z.ZodString;
     description: z.ZodOptional<z.ZodString>;
     isDefault: z.ZodDefault<z.ZodBoolean>;
-    organizationId: z.ZodString;
     displayOrder: z.ZodOptional<z.ZodNumber>;
     propertyType: z.ZodEnum<typeof PropertyType>;
 }, z.core.$strip>;
@@ -233,7 +224,6 @@ export declare const UpdatePropertyCategorySchema: z.ZodObject<{
     name: z.ZodOptional<z.ZodString>;
     description: z.ZodOptional<z.ZodOptional<z.ZodString>>;
     isDefault: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
-    organizationId: z.ZodOptional<z.ZodString>;
     displayOrder: z.ZodOptional<z.ZodOptional<z.ZodNumber>>;
     propertyType: z.ZodOptional<z.ZodEnum<typeof PropertyType>>;
     id: z.ZodString;
@@ -248,7 +238,6 @@ export declare const CreatePropertyAddressSchema: z.ZodObject<{
     state: z.ZodString;
     postalCode: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     country: z.ZodString;
-    organizationId: z.ZodString;
     unit: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     coordinates: z.ZodOptional<z.ZodNullable<z.ZodObject<{
         latitude: z.ZodNumber;
@@ -269,7 +258,6 @@ export declare const UpdatePropertyAddressSchema: z.ZodObject<{
     state: z.ZodOptional<z.ZodString>;
     postalCode: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     country: z.ZodOptional<z.ZodString>;
-    organizationId: z.ZodOptional<z.ZodString>;
     unit: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     coordinates: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodObject<{
         latitude: z.ZodNumber;
@@ -289,7 +277,6 @@ export declare const CreatePropertySchema: z.ZodObject<{
     description: z.ZodOptional<z.ZodString>;
     isActive: z.ZodDefault<z.ZodBoolean>;
     title: z.ZodString;
-    organizationId: z.ZodString;
     condition: z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof PropertyCondition>>>;
     categoryId: z.ZodString;
     propertyType: z.ZodEnum<typeof PropertyType>;
@@ -339,7 +326,6 @@ export declare const UpdatePropertySchema: z.ZodObject<{
     description: z.ZodOptional<z.ZodOptional<z.ZodString>>;
     isActive: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
     title: z.ZodOptional<z.ZodString>;
-    organizationId: z.ZodOptional<z.ZodString>;
     condition: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof PropertyCondition>>>>;
     categoryId: z.ZodOptional<z.ZodString>;
     propertyType: z.ZodOptional<z.ZodEnum<typeof PropertyType>>;
@@ -397,7 +383,6 @@ export declare const PropertyCatalogSchema: z.ZodObject<{
         id: z.ZodString;
         createdAt: z.ZodOptional<z.ZodNumber>;
         updatedAt: z.ZodOptional<z.ZodNumber>;
-        organizationId: z.ZodString;
         name: z.ZodString;
         description: z.ZodOptional<z.ZodString>;
         propertyType: z.ZodEnum<typeof PropertyType>;
@@ -408,13 +393,11 @@ export declare const PropertyCatalogSchema: z.ZodObject<{
         id: z.ZodString;
         createdAt: z.ZodOptional<z.ZodNumber>;
         updatedAt: z.ZodOptional<z.ZodNumber>;
-        organizationId: z.ZodString;
         categoryId: z.ZodString;
         category: z.ZodOptional<z.ZodObject<{
             id: z.ZodString;
             createdAt: z.ZodOptional<z.ZodNumber>;
             updatedAt: z.ZodOptional<z.ZodNumber>;
-            organizationId: z.ZodString;
             name: z.ZodString;
             description: z.ZodOptional<z.ZodString>;
             propertyType: z.ZodEnum<typeof PropertyType>;
@@ -430,7 +413,6 @@ export declare const PropertyCatalogSchema: z.ZodObject<{
             id: z.ZodString;
             createdAt: z.ZodOptional<z.ZodNumber>;
             updatedAt: z.ZodOptional<z.ZodNumber>;
-            organizationId: z.ZodString;
             street: z.ZodString;
             unit: z.ZodOptional<z.ZodNullable<z.ZodString>>;
             city: z.ZodString;
@@ -491,7 +473,6 @@ export declare const BusinessPropertyCatalogSchema: z.ZodArray<z.ZodObject<{
         id: z.ZodString;
         createdAt: z.ZodOptional<z.ZodNumber>;
         updatedAt: z.ZodOptional<z.ZodNumber>;
-        organizationId: z.ZodString;
         name: z.ZodString;
         description: z.ZodOptional<z.ZodString>;
         propertyType: z.ZodEnum<typeof PropertyType>;
@@ -502,13 +483,11 @@ export declare const BusinessPropertyCatalogSchema: z.ZodArray<z.ZodObject<{
         id: z.ZodString;
         createdAt: z.ZodOptional<z.ZodNumber>;
         updatedAt: z.ZodOptional<z.ZodNumber>;
-        organizationId: z.ZodString;
         categoryId: z.ZodString;
         category: z.ZodOptional<z.ZodObject<{
             id: z.ZodString;
             createdAt: z.ZodOptional<z.ZodNumber>;
             updatedAt: z.ZodOptional<z.ZodNumber>;
-            organizationId: z.ZodString;
             name: z.ZodString;
             description: z.ZodOptional<z.ZodString>;
             propertyType: z.ZodEnum<typeof PropertyType>;
@@ -524,7 +503,6 @@ export declare const BusinessPropertyCatalogSchema: z.ZodArray<z.ZodObject<{
             id: z.ZodString;
             createdAt: z.ZodOptional<z.ZodNumber>;
             updatedAt: z.ZodOptional<z.ZodNumber>;
-            organizationId: z.ZodString;
             street: z.ZodString;
             unit: z.ZodOptional<z.ZodNullable<z.ZodString>>;
             city: z.ZodString;

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.43**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.44**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const TranslationConversationConfigSchema: ZodObject<TranslationConversationConfig>;
 ```
 
-Defined in: [src/core/conversation/translation-config.schema.ts:72](https://github.com/wiil-io/core-js/blob/042f5887f500e78f6e451a45268f58c38e51ac7e/src/core/conversation/translation-config.schema.ts#L72)
+Defined in: [src/core/conversation/translation-config.schema.ts:72](https://github.com/wiil-io/core-js/blob/c98f65374adc98a7a53d84869a4ded3c42acf443/src/core/conversation/translation-config.schema.ts#L72)
 
 Translation conversation configuration schema.
 

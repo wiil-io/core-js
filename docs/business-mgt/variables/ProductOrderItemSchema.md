@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.43**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.44**](../../README.md)
 
 ***
 
@@ -10,6 +10,6 @@
 const ProductOrderItemSchema: ZodObject<ProductOrderItem>;
 ```
 
-Defined in: [src/core/business-mgt/product-order.schema.ts:45](https://github.com/wiil-io/core-js/blob/042f5887f500e78f6e451a45268f58c38e51ac7e/src/core/business-mgt/product-order.schema.ts#L45)
+Defined in: [src/core/business-mgt/product-order.schema.ts:45](https://github.com/wiil-io/core-js/blob/c98f65374adc98a7a53d84869a4ded3c42acf443/src/core/business-mgt/product-order.schema.ts#L45)
 
 Product order item schema with IDs (for existing items).

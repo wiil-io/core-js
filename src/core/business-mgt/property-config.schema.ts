@@ -19,7 +19,6 @@ import {
  * Property category schema.
  *
  * @typedef {Object} PropertyCategory
- * @property {string} organizationId - Business account ID
  * @property {string} name - Category name (e.g., Luxury Homes, Commercial Offices)
  * @property {string} [description] - Category description
  * @property {PropertyType} propertyType - Type of property (residential, commercial, land)
@@ -27,7 +26,6 @@ import {
  * @property {boolean} isDefault - Whether this is the default category
  */
 export const PropertyCategorySchema = BaseModelSchema.safeExtend({
-    organizationId: z.string().describe("Business account ID"),
     name: z.string().min(1, "Category name is required").describe("Category name (e.g., Luxury Homes, Commercial Offices)"),
     description: z.string().optional().describe("Category description"),
     propertyType: z.enum(PropertyType).describe("Type of property (residential, commercial, land)"),
@@ -39,7 +37,6 @@ export const PropertyCategorySchema = BaseModelSchema.safeExtend({
  * Property address schema (standalone entity).
  *
  * @typedef {Object} PropertyAddress
- * @property {string} organizationId - Business account ID
  * @property {string} street - Street address
  * @property {string} [unit] - Unit or apartment number
  * @property {string} city - City name
@@ -54,7 +51,6 @@ export const PropertyCategorySchema = BaseModelSchema.safeExtend({
  * @property {string} [primaryUserAccountId] - User account managing the property
  */
 export const PropertyAddressSchema = BaseModelSchema.safeExtend({
-    organizationId: z.string().describe("Business account ID"),
     street: z.string().min(1, "Street address is required").describe("Street address"),
     unit: z.string().nullable().optional().describe("Unit or apartment number"),
     city: z.string().min(1, "City is required").describe("City name"),
@@ -104,7 +100,6 @@ export const PropertyFeaturesSchema = z.object({
  * Main property schema for real estate listings.
  *
  * @typedef {Object} Property
- * @property {string} organizationId - Business account ID
  * @property {string} categoryId - ID of the category this property belongs to
  * @property {Object} [category] - Property category (populated)
  * @property {string} title - Property listing title
@@ -136,7 +131,6 @@ export const PropertyFeaturesSchema = z.object({
  * @property {string} [mlsNumber] - MLS listing number
  */
 export const PropertySchema = BaseModelSchema.safeExtend({
-    organizationId: z.string().describe("Business account ID"),
     categoryId: z.string().describe("ID of the category this property belongs to"),
     category: PropertyCategorySchema.optional().describe("Property category"),
 
