@@ -15,7 +15,7 @@ import { BaseModelSchema } from "../../base.schema";
  * Base agent setup schema.
  *
  * @typedef {Object} DynamicBaseAgentSetup
- * @property {string} assistantName - Name of the AI assistant
+ * @property {string} assistantName - Name of the AI assistant (max 30 characters)
  * @property {string} [instructionConfigurationId] - ID of the instruction configuration
  * @property {AgentRoleTemplateIdentifier} [role_template_identifier] - Role/persona for the agent
  * @property {AgentCapabilities[]} [capabilities] - List of enabled platform services
@@ -26,7 +26,7 @@ import { BaseModelSchema } from "../../base.schema";
  * @property {string} [providerModelId] - Specific model ID from the provider
  */
 export const DynamicBaseAgentSetupSchema = z.object({
-    assistantName: z.string().describe("Name of the AI assistant to use in conversations"),
+    assistantName: z.string().max(30).describe("Name of the AI assistant to use in conversations"),
     instructionConfigurationId: z.string().optional().describe("ID of the instruction configuration to use for this assistant"),
     role_template_identifier: z.enum(AgentRoleTemplateIdentifier).optional().describe("The role or persona that the agent adopts with this instruction set"),
     capabilities : z.array(z.enum(AgentCapabilities)).optional().default([]).describe("List of platform services (tools) enabled for this agent configuration"),

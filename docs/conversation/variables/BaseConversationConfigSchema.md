@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.41**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.42**](../../README.md)
 
 ***
 
@@ -77,7 +77,7 @@ const BaseConversationConfigSchema: ZodObject<{
 }, $strip>;
 ```
 
-Defined in: [src/core/conversation/conversation-config.schema.ts:172](https://github.com/wiil-io/core-js/blob/be8beb340b9bef4c811fca6103ccb9448b36b797/src/core/conversation/conversation-config.schema.ts#L172)
+Defined in: [src/core/conversation/conversation-config.schema.ts:172](https://github.com/wiil-io/core-js/blob/04b4b4a882ec18acfbfc1d773d3f01653525db24/src/core/conversation/conversation-config.schema.ts#L172)
 
 Base conversation configuration schema.
 

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.41**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.42**](../../README.md)
 
 ***
 
@@ -6,12 +6,12 @@
 
 # Enumeration: CalendarProvider
 
-Defined in: [src/core/type-definitions/business-definitions.ts:11](https://github.com/wiil-io/core-js/blob/be8beb340b9bef4c811fca6103ccb9448b36b797/src/core/type-definitions/business-definitions.ts#L11)
+Defined in: [src/core/type-definitions/business-definitions.ts:11](https://github.com/wiil-io/core-js/blob/04b4b4a882ec18acfbfc1d773d3f01653525db24/src/core/type-definitions/business-definitions.ts#L11)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="google"></a> `GOOGLE` | `"google"` | [src/core/type-definitions/business-definitions.ts:12](https://github.com/wiil-io/core-js/blob/be8beb340b9bef4c811fca6103ccb9448b36b797/src/core/type-definitions/business-definitions.ts#L12) |
-| <a id="outlook"></a> `OUTLOOK` | `"outlook"` | [src/core/type-definitions/business-definitions.ts:13](https://github.com/wiil-io/core-js/blob/be8beb340b9bef4c811fca6103ccb9448b36b797/src/core/type-definitions/business-definitions.ts#L13) |
-| <a id="calendly"></a> `CALENDLY` | `"calendly"` | [src/core/type-definitions/business-definitions.ts:14](https://github.com/wiil-io/core-js/blob/be8beb340b9bef4c811fca6103ccb9448b36b797/src/core/type-definitions/business-definitions.ts#L14) |
+| <a id="google"></a> `GOOGLE` | `"google"` | [src/core/type-definitions/business-definitions.ts:12](https://github.com/wiil-io/core-js/blob/04b4b4a882ec18acfbfc1d773d3f01653525db24/src/core/type-definitions/business-definitions.ts#L12) |
+| <a id="outlook"></a> `OUTLOOK` | `"outlook"` | [src/core/type-definitions/business-definitions.ts:13](https://github.com/wiil-io/core-js/blob/04b4b4a882ec18acfbfc1d773d3f01653525db24/src/core/type-definitions/business-definitions.ts#L13) |
+| <a id="calendly"></a> `CALENDLY` | `"calendly"` | [src/core/type-definitions/business-definitions.ts:14](https://github.com/wiil-io/core-js/blob/04b4b4a882ec18acfbfc1d773d3f01653525db24/src/core/type-definitions/business-definitions.ts#L14) |

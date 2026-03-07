@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.41**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.42**](../../README.md)
 
 ***
 
@@ -6,13 +6,13 @@
 
 # Enumeration: PhoneStatus
 
-Defined in: [src/core/type-definitions/service-config.definitions.ts:35](https://github.com/wiil-io/core-js/blob/be8beb340b9bef4c811fca6103ccb9448b36b797/src/core/type-definitions/service-config.definitions.ts#L35)
+Defined in: [src/core/type-definitions/service-config.definitions.ts:35](https://github.com/wiil-io/core-js/blob/04b4b4a882ec18acfbfc1d773d3f01653525db24/src/core/type-definitions/service-config.definitions.ts#L35)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="active"></a> `ACTIVE` | `"ACTIVE"` | [src/core/type-definitions/service-config.definitions.ts:36](https://github.com/wiil-io/core-js/blob/be8beb340b9bef4c811fca6103ccb9448b36b797/src/core/type-definitions/service-config.definitions.ts#L36) |
-| <a id="inactive"></a> `INACTIVE` | `"INACTIVE"` | [src/core/type-definitions/service-config.definitions.ts:37](https://github.com/wiil-io/core-js/blob/be8beb340b9bef4c811fca6103ccb9448b36b797/src/core/type-definitions/service-config.definitions.ts#L37) |
-| <a id="sms_active"></a> `SMS_ACTIVE` | `"SMS_ACTIVE"` | [src/core/type-definitions/service-config.definitions.ts:38](https://github.com/wiil-io/core-js/blob/be8beb340b9bef4c811fca6103ccb9448b36b797/src/core/type-definitions/service-config.definitions.ts#L38) |
-| <a id="call_active"></a> `CALL_ACTIVE` | `"CALL_ACTIVE"` | [src/core/type-definitions/service-config.definitions.ts:39](https://github.com/wiil-io/core-js/blob/be8beb340b9bef4c811fca6103ccb9448b36b797/src/core/type-definitions/service-config.definitions.ts#L39) |
+| <a id="active"></a> `ACTIVE` | `"ACTIVE"` | [src/core/type-definitions/service-config.definitions.ts:36](https://github.com/wiil-io/core-js/blob/04b4b4a882ec18acfbfc1d773d3f01653525db24/src/core/type-definitions/service-config.definitions.ts#L36) |
+| <a id="inactive"></a> `INACTIVE` | `"INACTIVE"` | [src/core/type-definitions/service-config.definitions.ts:37](https://github.com/wiil-io/core-js/blob/04b4b4a882ec18acfbfc1d773d3f01653525db24/src/core/type-definitions/service-config.definitions.ts#L37) |
+| <a id="sms_active"></a> `SMS_ACTIVE` | `"SMS_ACTIVE"` | [src/core/type-definitions/service-config.definitions.ts:38](https://github.com/wiil-io/core-js/blob/04b4b4a882ec18acfbfc1d773d3f01653525db24/src/core/type-definitions/service-config.definitions.ts#L38) |
+| <a id="call_active"></a> `CALL_ACTIVE` | `"CALL_ACTIVE"` | [src/core/type-definitions/service-config.definitions.ts:39](https://github.com/wiil-io/core-js/blob/04b4b4a882ec18acfbfc1d773d3f01653525db24/src/core/type-definitions/service-config.definitions.ts#L39) |

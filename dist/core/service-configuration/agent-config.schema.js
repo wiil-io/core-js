@@ -39,7 +39,7 @@ const call_transfer_config_schema_1 = require("./call-transfer-config.schema");
  * @typedef {Object} AgentConfigurationProperties
  * @property {string} id - Unique identifier for the agent configuration
  * @property {string} modelId - Identifier of the LLM model from Wiil Support Registry (e.g., '2323*', 'EYUW&*EU@H$#'). References WiilSupportModel.modelId
- * @property {string} name - Human-readable name for the agent configuration (e.g., 'Customer Support Agent', 'Sales Assistant')
+ * @property {string} name - Personal name for the AI agent (max 30 characters) (e.g., 'Sarah', 'James')
  * @property {LLMType} defaultFunctionState - Default operational mode (TEXT, VOICE, MULTI_MODE) (default: MULTI_MODE)
  * @property {boolean} [usesWiilSupportModel=true] - Whether this agent uses Wiil's supported model registry
  * @property {Record<string, any>} [requiredModelConfig] - Additional model parameters (e.g., { voiceId: 'adam', languageId: 'en-US' })
@@ -56,7 +56,7 @@ const call_transfer_config_schema_1 = require("./call-transfer-config.schema");
  * const agentConfig: AgentConfiguration = {
  *   id: '123*',
  *   modelId: 'YUSI21217J1',
- *   name: 'Customer Support Agent',
+ *   name: 'Sarah',
  *   defaultFunctionState: LLMType.MULTI_MODE,
  *   usesWiilSupportModel: true,
  *   instructionConfigurationId: '456*',
@@ -76,7 +76,7 @@ const call_transfer_config_schema_1 = require("./call-transfer-config.schema");
  */
 exports.AgentConfigurationSchema = base_schema_1.BaseModelSchema.safeExtend({
     modelId: zod_1.z.string().describe("Identifier of the LLM model from Wiil Support Registry to power this agent (e.g., 'YUSI21217J1', 'EYUW&*EU@H$#'). References WiilSupportModel.modelId"),
-    name: zod_1.z.string().describe("Human-readable name for the agent configuration used in administrative interfaces (e.g., 'Customer Support Agent', 'Sales Assistant')"),
+    name: zod_1.z.string().max(30).describe("Personal name for the AI agent used in conversations (e.g., 'Sarah', 'James', 'Alex')"),
     defaultFunctionState: zod_1.z.enum(service_config_definitions_1.LLMType).default(service_config_definitions_1.LLMType.MULTI_MODE).describe("Default operational mode (TEXT for text-only, VOICE for speech, MULTI_MODE for combined text/voice capabilities)"),
     usesWiilSupportModel: zod_1.z.boolean().optional().default(true).describe("Whether this agent uses a model from Wiil's curated registry (true) or a custom external model (false)"),
     requiredModelConfig: zod_1.z.record(zod_1.z.string(), zod_1.z.any()).optional().describe("Model-specific configuration parameters as key-value pairs (e.g., { voiceId: 'adam', languageId: 'en-US', temperature: 0.7 })"),
@@ -100,7 +100,7 @@ exports.AgentConfigurationSchema = base_schema_1.BaseModelSchema.safeExtend({
  * ```typescript
  * const newAgent: CreateAgentConfiguration = {
  *   modelId: 'gpt-4-turbo',
- *   name: 'Sales Assistant',
+ *   name: 'James',
  *   defaultFunctionState: LLMType.MULTI_MODE,
  *   usesWiilSupportModel: true,
  *   instructionConfigurationId: '789*',
@@ -134,7 +134,7 @@ exports.CreateAgentConfigurationSchema = exports.AgentConfigurationSchema.omit({
  * ```typescript
  * const updatePayload: UpdateAgentConfiguration = {
  *   id: '123*',
- *   name: 'Updated Sales Assistant',
+ *   name: 'Alex',
  *   metadata: { team: 'enterprise-sales' }
  * };
  * ```

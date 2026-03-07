@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.41**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.42**](../../README.md)
 
 ***
 
@@ -6,13 +6,13 @@
 
 # Enumeration: RestockStatus
 
-Defined in: [src/core/type-definitions/business-definitions.ts:128](https://github.com/wiil-io/core-js/blob/be8beb340b9bef4c811fca6103ccb9448b36b797/src/core/type-definitions/business-definitions.ts#L128)
+Defined in: [src/core/type-definitions/business-definitions.ts:128](https://github.com/wiil-io/core-js/blob/04b4b4a882ec18acfbfc1d773d3f01653525db24/src/core/type-definitions/business-definitions.ts#L128)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="needed"></a> `NEEDED` | `"needed"` | [src/core/type-definitions/business-definitions.ts:129](https://github.com/wiil-io/core-js/blob/be8beb340b9bef4c811fca6103ccb9448b36b797/src/core/type-definitions/business-definitions.ts#L129) |
-| <a id="ordered"></a> `ORDERED` | `"ordered"` | [src/core/type-definitions/business-definitions.ts:130](https://github.com/wiil-io/core-js/blob/be8beb340b9bef4c811fca6103ccb9448b36b797/src/core/type-definitions/business-definitions.ts#L130) |
-| <a id="received"></a> `RECEIVED` | `"received"` | [src/core/type-definitions/business-definitions.ts:131](https://github.com/wiil-io/core-js/blob/be8beb340b9bef4c811fca6103ccb9448b36b797/src/core/type-definitions/business-definitions.ts#L131) |
-| <a id="cancelled"></a> `CANCELLED` | `"cancelled"` | [src/core/type-definitions/business-definitions.ts:132](https://github.com/wiil-io/core-js/blob/be8beb340b9bef4c811fca6103ccb9448b36b797/src/core/type-definitions/business-definitions.ts#L132) |
+| <a id="needed"></a> `NEEDED` | `"needed"` | [src/core/type-definitions/business-definitions.ts:129](https://github.com/wiil-io/core-js/blob/04b4b4a882ec18acfbfc1d773d3f01653525db24/src/core/type-definitions/business-definitions.ts#L129) |
+| <a id="ordered"></a> `ORDERED` | `"ordered"` | [src/core/type-definitions/business-definitions.ts:130](https://github.com/wiil-io/core-js/blob/04b4b4a882ec18acfbfc1d773d3f01653525db24/src/core/type-definitions/business-definitions.ts#L130) |
+| <a id="received"></a> `RECEIVED` | `"received"` | [src/core/type-definitions/business-definitions.ts:131](https://github.com/wiil-io/core-js/blob/04b4b4a882ec18acfbfc1d773d3f01653525db24/src/core/type-definitions/business-definitions.ts#L131) |
+| <a id="cancelled"></a> `CANCELLED` | `"cancelled"` | [src/core/type-definitions/business-definitions.ts:132](https://github.com/wiil-io/core-js/blob/04b4b4a882ec18acfbfc1d773d3f01653525db24/src/core/type-definitions/business-definitions.ts#L132) |

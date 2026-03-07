@@ -33,7 +33,7 @@ import { AssistantType, LLMType } from "../type-definitions/service-config.defin
  * @typedef {Object} AgentConfigurationProperties
  * @property {string} id - Unique identifier for the agent configuration
  * @property {string} modelId - Identifier of the LLM model from Wiil Support Registry (e.g., '2323*', 'EYUW&*EU@H$#'). References WiilSupportModel.modelId
- * @property {string} name - Human-readable name for the agent configuration (e.g., 'Customer Support Agent', 'Sales Assistant')
+ * @property {string} name - Personal name for the AI agent (max 30 characters) (e.g., 'Sarah', 'James')
  * @property {LLMType} defaultFunctionState - Default operational mode (TEXT, VOICE, MULTI_MODE) (default: MULTI_MODE)
  * @property {boolean} [usesWiilSupportModel=true] - Whether this agent uses Wiil's supported model registry
  * @property {Record<string, any>} [requiredModelConfig] - Additional model parameters (e.g., { voiceId: 'adam', languageId: 'en-US' })
@@ -50,7 +50,7 @@ import { AssistantType, LLMType } from "../type-definitions/service-config.defin
  * const agentConfig: AgentConfiguration = {
  *   id: '123*',
  *   modelId: 'YUSI21217J1',
- *   name: 'Customer Support Agent',
+ *   name: 'Sarah',
  *   defaultFunctionState: LLMType.MULTI_MODE,
  *   usesWiilSupportModel: true,
  *   instructionConfigurationId: '456*',
@@ -138,7 +138,7 @@ export type AgentConfiguration = z.infer<typeof AgentConfigurationSchema>;
  * ```typescript
  * const newAgent: CreateAgentConfiguration = {
  *   modelId: 'gpt-4-turbo',
- *   name: 'Sales Assistant',
+ *   name: 'James',
  *   defaultFunctionState: LLMType.MULTI_MODE,
  *   usesWiilSupportModel: true,
  *   instructionConfigurationId: '789*',
@@ -191,7 +191,7 @@ export type CreateAgentConfiguration = z.infer<typeof CreateAgentConfigurationSc
  * ```typescript
  * const updatePayload: UpdateAgentConfiguration = {
  *   id: '123*',
- *   name: 'Updated Sales Assistant',
+ *   name: 'Alex',
  *   metadata: { team: 'enterprise-sales' }
  * };
  * ```

@@ -12,7 +12,7 @@ import { AgentRoleTemplateIdentifier, SupportedProprietor } from "../../type-def
  * Base agent setup schema.
  *
  * @typedef {Object} DynamicBaseAgentSetup
- * @property {string} assistantName - Name of the AI assistant
+ * @property {string} assistantName - Name of the AI assistant (max 30 characters)
  * @property {string} [instructionConfigurationId] - ID of the instruction configuration
  * @property {AgentRoleTemplateIdentifier} [role_template_identifier] - Role/persona for the agent
  * @property {AgentCapabilities[]} [capabilities] - List of enabled platform services

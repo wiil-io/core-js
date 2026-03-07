@@ -19,7 +19,7 @@ const base_schema_1 = require("../../base.schema");
  * Base agent setup schema.
  *
  * @typedef {Object} DynamicBaseAgentSetup
- * @property {string} assistantName - Name of the AI assistant
+ * @property {string} assistantName - Name of the AI assistant (max 30 characters)
  * @property {string} [instructionConfigurationId] - ID of the instruction configuration
  * @property {AgentRoleTemplateIdentifier} [role_template_identifier] - Role/persona for the agent
  * @property {AgentCapabilities[]} [capabilities] - List of enabled platform services
@@ -30,7 +30,7 @@ const base_schema_1 = require("../../base.schema");
  * @property {string} [providerModelId] - Specific model ID from the provider
  */
 exports.DynamicBaseAgentSetupSchema = zod_1.default.object({
-    assistantName: zod_1.default.string().describe("Name of the AI assistant to use in conversations"),
+    assistantName: zod_1.default.string().max(30).describe("Name of the AI assistant to use in conversations"),
     instructionConfigurationId: zod_1.default.string().optional().describe("ID of the instruction configuration to use for this assistant"),
     role_template_identifier: zod_1.default.enum(type_definitions_1.AgentRoleTemplateIdentifier).optional().describe("The role or persona that the agent adopts with this instruction set"),
     capabilities: zod_1.default.array(zod_1.default.enum(type_definitions_1.AgentCapabilities)).optional().default([]).describe("List of platform services (tools) enabled for this agent configuration"),
