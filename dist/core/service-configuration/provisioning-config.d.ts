@@ -165,31 +165,40 @@ export type ProvisioningConfigChain = z.infer<typeof ProvisioningConfigChainSche
  *   chainName: 'New Voice Chain',
  *   description: 'Processing chain for multilingual support',
  *   sttConfig: {
- *     modelId: 'whisper-v3',
- *     defaultLanguage: 'en-US'
+ *     providerType: 'Deepgram',
+ *     providerModelId: 'nova-2',
+ *     languageId: 'en'
  *   },
- *   agentConfigurationId: 'agent-789',
+ *   processingConfig: {
+ *     providerType: 'OpenAI',
+ *     providerModelId: 'gpt-4o-mini'
+ *   },
  *   ttsConfig: {
- *     modelId: 'eleven-labs-v2',
- *     voiceId: 'rachel',
- *     defaultLanguage: 'en-US'
+ *     providerType: 'ElevenLabs',
+ *     providerModelId: 'eleven_multilingual_v2',
+ *     languageId: 'en',
+ *     voiceId: 'rachel'
  *   }
  * };
  * ```
  */
 export declare const CreateProvisioningConfigSchema: z.ZodObject<{
-    description: z.ZodOptional<z.ZodString>;
-    agentConfigurationId: z.ZodString;
     chainName: z.ZodString;
+    description: z.ZodOptional<z.ZodString>;
     sttConfig: z.ZodObject<{
-        modelId: z.ZodString;
-        defaultLanguage: z.ZodDefault<z.ZodString>;
+        providerType: z.ZodEnum<typeof import("..").SupportedProprietor>;
+        providerModelId: z.ZodString;
+        languageId: z.ZodDefault<z.ZodOptional<z.ZodString>>;
+    }, z.core.$strip>;
+    processingConfig: z.ZodObject<{
+        providerType: z.ZodEnum<typeof import("..").SupportedProprietor>;
+        providerModelId: z.ZodString;
     }, z.core.$strip>;
     ttsConfig: z.ZodObject<{
-        modelId: z.ZodString;
-        voiceId: z.ZodString;
-        defaultLanguage: z.ZodDefault<z.ZodString>;
-        voiceSettings: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodAny>>;
+        providerType: z.ZodEnum<typeof import("..").SupportedProprietor>;
+        providerModelId: z.ZodString;
+        languageId: z.ZodDefault<z.ZodOptional<z.ZodString>>;
+        voiceId: z.ZodOptional<z.ZodString>;
     }, z.core.$strip>;
 }, z.core.$strip>;
 /**
@@ -214,18 +223,22 @@ export type CreateProvisioningConfig = z.infer<typeof CreateProvisioningConfigSc
  * ```
  */
 export declare const UpdateProvisioningConfigSchema: z.ZodObject<{
-    description: z.ZodOptional<z.ZodOptional<z.ZodString>>;
-    agentConfigurationId: z.ZodOptional<z.ZodString>;
     chainName: z.ZodOptional<z.ZodString>;
+    description: z.ZodOptional<z.ZodOptional<z.ZodString>>;
     sttConfig: z.ZodOptional<z.ZodObject<{
-        modelId: z.ZodString;
-        defaultLanguage: z.ZodDefault<z.ZodString>;
+        providerType: z.ZodEnum<typeof import("..").SupportedProprietor>;
+        providerModelId: z.ZodString;
+        languageId: z.ZodDefault<z.ZodOptional<z.ZodString>>;
+    }, z.core.$strip>>;
+    processingConfig: z.ZodOptional<z.ZodObject<{
+        providerType: z.ZodEnum<typeof import("..").SupportedProprietor>;
+        providerModelId: z.ZodString;
     }, z.core.$strip>>;
     ttsConfig: z.ZodOptional<z.ZodObject<{
-        modelId: z.ZodString;
-        voiceId: z.ZodString;
-        defaultLanguage: z.ZodDefault<z.ZodString>;
-        voiceSettings: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodAny>>;
+        providerType: z.ZodEnum<typeof import("..").SupportedProprietor>;
+        providerModelId: z.ZodString;
+        languageId: z.ZodDefault<z.ZodOptional<z.ZodString>>;
+        voiceId: z.ZodOptional<z.ZodString>;
     }, z.core.$strip>>;
     id: z.ZodString;
 }, z.core.$strip>;
@@ -318,33 +331,42 @@ export type TranslationChainConfig = z.infer<typeof TranslationChainConfigSchema
  *   chainName: 'FR-EN Translation',
  *   description: 'French to English translation chain',
  *   sttConfig: {
- *     modelId: 'whisper-v3',
- *     defaultLanguage: 'fr-FR'
+ *     providerType: 'Deepgram',
+ *     providerModelId: 'nova-2',
+ *     languageId: 'fr'
  *   },
- *   processingModelId: 'gpt-4-translator',
+ *   processingConfig: {
+ *     providerType: 'OpenAI',
+ *     providerModelId: 'gpt-4o-mini'
+ *   },
  *   ttsConfig: {
- *     modelId: 'eleven-labs-v2',
- *     voiceId: 'english-voice',
- *     defaultLanguage: 'en-US'
+ *     providerType: 'ElevenLabs',
+ *     providerModelId: 'eleven_multilingual_v2',
+ *     languageId: 'en',
+ *     voiceId: 'english-voice'
  *   },
  *   isTranslation: true
  * };
  * ```
  */
 export declare const CreateTranslationChainConfigSchema: z.ZodObject<{
-    description: z.ZodOptional<z.ZodString>;
     chainName: z.ZodString;
+    description: z.ZodOptional<z.ZodString>;
     sttConfig: z.ZodObject<{
-        modelId: z.ZodString;
-        defaultLanguage: z.ZodDefault<z.ZodString>;
+        providerType: z.ZodEnum<typeof import("..").SupportedProprietor>;
+        providerModelId: z.ZodString;
+        languageId: z.ZodDefault<z.ZodOptional<z.ZodString>>;
+    }, z.core.$strip>;
+    processingConfig: z.ZodObject<{
+        providerType: z.ZodEnum<typeof import("..").SupportedProprietor>;
+        providerModelId: z.ZodString;
     }, z.core.$strip>;
     ttsConfig: z.ZodObject<{
-        modelId: z.ZodString;
-        voiceId: z.ZodString;
-        defaultLanguage: z.ZodDefault<z.ZodString>;
-        voiceSettings: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodAny>>;
+        providerType: z.ZodEnum<typeof import("..").SupportedProprietor>;
+        providerModelId: z.ZodString;
+        languageId: z.ZodDefault<z.ZodOptional<z.ZodString>>;
+        voiceId: z.ZodOptional<z.ZodString>;
     }, z.core.$strip>;
-    processingModelId: z.ZodString;
     isTranslation: z.ZodDefault<z.ZodBoolean>;
 }, z.core.$strip>;
 /**
@@ -361,24 +383,31 @@ export type CreateTranslationChainConfig = z.infer<typeof CreateTranslationChain
  * const updateTranslationChain: UpdateTranslationChainConfig = {
  *   id: 'chain-123',
  *   chainName: 'Updated Translation Chain',
- *   processingModelId: 'new-model-id'
+ *   processingConfig: {
+ *     providerType: 'OpenAI',
+ *     providerModelId: 'gpt-4.1-mini'
+ *   }
  * };
  * ```
  */
 export declare const UpdateTranslationChainConfigSchema: z.ZodObject<{
-    description: z.ZodOptional<z.ZodOptional<z.ZodString>>;
     chainName: z.ZodOptional<z.ZodString>;
+    description: z.ZodOptional<z.ZodOptional<z.ZodString>>;
     sttConfig: z.ZodOptional<z.ZodObject<{
-        modelId: z.ZodString;
-        defaultLanguage: z.ZodDefault<z.ZodString>;
+        providerType: z.ZodEnum<typeof import("..").SupportedProprietor>;
+        providerModelId: z.ZodString;
+        languageId: z.ZodDefault<z.ZodOptional<z.ZodString>>;
+    }, z.core.$strip>>;
+    processingConfig: z.ZodOptional<z.ZodObject<{
+        providerType: z.ZodEnum<typeof import("..").SupportedProprietor>;
+        providerModelId: z.ZodString;
     }, z.core.$strip>>;
     ttsConfig: z.ZodOptional<z.ZodObject<{
-        modelId: z.ZodString;
-        voiceId: z.ZodString;
-        defaultLanguage: z.ZodDefault<z.ZodString>;
-        voiceSettings: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodAny>>;
+        providerType: z.ZodEnum<typeof import("..").SupportedProprietor>;
+        providerModelId: z.ZodString;
+        languageId: z.ZodDefault<z.ZodOptional<z.ZodString>>;
+        voiceId: z.ZodOptional<z.ZodString>;
     }, z.core.$strip>>;
-    processingModelId: z.ZodOptional<z.ZodString>;
     isTranslation: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
     id: z.ZodString;
 }, z.core.$strip>;

@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.UpdateTranslationChainConfigSchema = exports.CreateTranslationChainConfigSchema = exports.TranslationChainConfigSchema = exports.UpdateProvisioningConfigSchema = exports.CreateProvisioningConfigSchema = exports.ProvisioningConfigChainSchema = exports.TtsModelConfigSchema = exports.SttModelConfigSchema = void 0;
 const zod_1 = __importDefault(require("zod"));
 const base_schema_1 = require("../base.schema");
+const base_agent_setup_1 = require("./base-agent-setup");
 /**
  * @fileoverview Provisioning configuration chain schema definitions.
  *
@@ -149,22 +150,29 @@ exports.ProvisioningConfigChainSchema = base_schema_1.BaseModelSchema.safeExtend
  *   chainName: 'New Voice Chain',
  *   description: 'Processing chain for multilingual support',
  *   sttConfig: {
- *     modelId: 'whisper-v3',
- *     defaultLanguage: 'en-US'
+ *     providerType: 'Deepgram',
+ *     providerModelId: 'nova-2',
+ *     languageId: 'en'
  *   },
- *   agentConfigurationId: 'agent-789',
+ *   processingConfig: {
+ *     providerType: 'OpenAI',
+ *     providerModelId: 'gpt-4o-mini'
+ *   },
  *   ttsConfig: {
- *     modelId: 'eleven-labs-v2',
- *     voiceId: 'rachel',
- *     defaultLanguage: 'en-US'
+ *     providerType: 'ElevenLabs',
+ *     providerModelId: 'eleven_multilingual_v2',
+ *     languageId: 'en',
+ *     voiceId: 'rachel'
  *   }
  * };
  * ```
  */
-exports.CreateProvisioningConfigSchema = exports.ProvisioningConfigChainSchema.omit({
-    id: true,
-    createdAt: true,
-    updatedAt: true,
+exports.CreateProvisioningConfigSchema = zod_1.default.object({
+    chainName: zod_1.default.string().describe("Human-readable name for the provisioning chain used in administrative interfaces and deployment configuration (e.g., 'Customer Support Voice Chain', 'Multilingual Sales Pipeline')"),
+    description: zod_1.default.string().optional().describe("Optional description of the chain's purpose, use case, language support, and configuration details for documentation"),
+    sttConfig: base_agent_setup_1.DynamicSTTModelConfigurationSchema.describe("Speech-to-Text provider configuration used when creating a provisioning chain"),
+    processingConfig: base_agent_setup_1.DynamicModelConfigurationSchema.describe("LLM provider configuration used for the agent processing stage in the provisioning chain, defining which model handles text interactions"),
+    ttsConfig: base_agent_setup_1.DynamicTTSModelConfigurationSchema.describe("Text-to-Speech provider configuration used when creating a provisioning chain"),
 });
 /**
  * Zod schema for updating an existing provisioning configuration chain.
@@ -256,24 +264,25 @@ exports.TranslationChainConfigSchema = base_schema_1.BaseModelSchema.safeExtend(
  *   chainName: 'FR-EN Translation',
  *   description: 'French to English translation chain',
  *   sttConfig: {
- *     modelId: 'whisper-v3',
- *     defaultLanguage: 'fr-FR'
+ *     providerType: 'Deepgram',
+ *     providerModelId: 'nova-2',
+ *     languageId: 'fr'
  *   },
- *   processingModelId: 'gpt-4-translator',
+ *   processingConfig: {
+ *     providerType: 'OpenAI',
+ *     providerModelId: 'gpt-4o-mini'
+ *   },
  *   ttsConfig: {
- *     modelId: 'eleven-labs-v2',
- *     voiceId: 'english-voice',
- *     defaultLanguage: 'en-US'
+ *     providerType: 'ElevenLabs',
+ *     providerModelId: 'eleven_multilingual_v2',
+ *     languageId: 'en',
+ *     voiceId: 'english-voice'
  *   },
  *   isTranslation: true
  * };
  * ```
  */
-exports.CreateTranslationChainConfigSchema = exports.TranslationChainConfigSchema.omit({
-    id: true,
-    createdAt: true,
-    updatedAt: true,
-}).safeExtend({
+exports.CreateTranslationChainConfigSchema = exports.CreateProvisioningConfigSchema.safeExtend({
     isTranslation: zod_1.default.boolean().default(true),
 });
 /**
@@ -286,7 +295,10 @@ exports.CreateTranslationChainConfigSchema = exports.TranslationChainConfigSchem
  * const updateTranslationChain: UpdateTranslationChainConfig = {
  *   id: 'chain-123',
  *   chainName: 'Updated Translation Chain',
- *   processingModelId: 'new-model-id'
+ *   processingConfig: {
+ *     providerType: 'OpenAI',
+ *     providerModelId: 'gpt-4.1-mini'
+ *   }
  * };
  * ```
  */

@@ -1,5 +1,5 @@
-import z, { nullable } from "zod";
-import { DynamicAgentSetupResultSchema, DynamicBaseAgentSetupSchema, DynamicSTTModelConfigurationSchema, DynamicTTSModelConfigurationSchema } from "./base-agent-setup";
+import z from "zod";
+import { DynamicAgentSetupResultSchema, DynamicBaseAgentSetupSchema, DynamicSTTModelConfigurationSchema, DynamicTTSModelConfigurationSchema } from "../base-agent-setup";
 import { OttCommunicationType } from "../../type-definitions";
 
 /**

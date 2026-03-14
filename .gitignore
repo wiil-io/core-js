@@ -1,6 +1,7 @@
 # compiled output
 /node_modules
 /build
+/python-models
 
 # Logs
 logs
@@ -59,3 +60,4 @@ session-instr.txt
 /scripts
 dev.txt
 /background
+/.claude

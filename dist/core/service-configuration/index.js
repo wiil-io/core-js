@@ -19,6 +19,7 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./agent-config.schema"), exports);
+__exportStar(require("./base-agent-setup"), exports);
 __exportStar(require("./call-transfer-config.schema"), exports);
 __exportStar(require("./deployment-config.schema"), exports);
 __exportStar(require("./instruction-config.schema"), exports);

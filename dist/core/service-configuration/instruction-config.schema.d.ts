@@ -118,6 +118,7 @@ export type InstructionConfiguration = z.infer<typeof InstructionConfigurationSc
  */
 export declare const CreateInstructionConfigurationSchema: z.ZodObject<{
     metadata: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodAny>>;
+    knowledgeSourceIds: z.ZodDefault<z.ZodOptional<z.ZodArray<z.ZodString>>>;
     instructionName: z.ZodString;
     role: z.ZodString;
     introductionMessage: z.ZodString;
@@ -130,7 +131,6 @@ export declare const CreateInstructionConfigurationSchema: z.ZodObject<{
     tools: z.ZodOptional<z.ZodArray<z.ZodString>>;
     isTemplate: z.ZodDefault<z.ZodOptional<z.ZodBoolean>>;
     isPrimary: z.ZodDefault<z.ZodBoolean>;
-    knowledgeSourceIds: z.ZodDefault<z.ZodOptional<z.ZodArray<z.ZodString>>>;
 }, z.core.$strip>;
 /**
  * Type definition for creating a new instruction configuration.
@@ -160,6 +160,7 @@ export type CreateInstructionConfiguration = z.infer<typeof CreateInstructionCon
  */
 export declare const UpdateInstructionConfigurationSchema: z.ZodObject<{
     metadata: z.ZodOptional<z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodAny>>>;
+    knowledgeSourceIds: z.ZodOptional<z.ZodDefault<z.ZodOptional<z.ZodArray<z.ZodString>>>>;
     instructionName: z.ZodOptional<z.ZodString>;
     role: z.ZodOptional<z.ZodString>;
     introductionMessage: z.ZodOptional<z.ZodString>;
@@ -172,7 +173,6 @@ export declare const UpdateInstructionConfigurationSchema: z.ZodObject<{
     tools: z.ZodOptional<z.ZodOptional<z.ZodArray<z.ZodString>>>;
     isTemplate: z.ZodOptional<z.ZodDefault<z.ZodOptional<z.ZodBoolean>>>;
     isPrimary: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
-    knowledgeSourceIds: z.ZodOptional<z.ZodDefault<z.ZodOptional<z.ZodArray<z.ZodString>>>>;
     id: z.ZodString;
 }, z.core.$strip>;
 /**

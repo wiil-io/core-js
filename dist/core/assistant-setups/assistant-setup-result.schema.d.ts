@@ -98,8 +98,8 @@ export declare const AssistantSetupResultSchema: z.ZodObject<{
         createdAt: z.ZodOptional<z.ZodNumber>;
         updatedAt: z.ZodOptional<z.ZodNumber>;
         instructionConfigurationId: z.ZodString;
-        projectId: z.ZodString;
         agentConfigurationId: z.ZodString;
+        projectId: z.ZodString;
         deploymentChannelId: z.ZodString;
         deploymentName: z.ZodOptional<z.ZodString>;
         provisioningConfigChainId: z.ZodNullable<z.ZodOptional<z.ZodString>>;

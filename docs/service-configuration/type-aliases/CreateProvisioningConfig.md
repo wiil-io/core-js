@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.45**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.46**](../../README.md)
 
 ***
 
@@ -11,20 +11,24 @@ type CreateProvisioningConfig = {
   chainName: string;
   description?: string;
   sttConfig: {
-     modelId: string;
-     defaultLanguage: string;
+     providerType: SupportedProprietor;
+     providerModelId: string;
+     languageId: string;
   };
-  agentConfigurationId: string;
+  processingConfig: {
+     providerType: SupportedProprietor;
+     providerModelId: string;
+  };
   ttsConfig: {
-     modelId: string;
-     voiceId: string;
-     defaultLanguage: string;
-     voiceSettings?: Record<string, any>;
+     providerType: SupportedProprietor;
+     providerModelId: string;
+     languageId: string;
+     voiceId?: string;
   };
 };
 ```
 
-Defined in: [src/core/service-configuration/provisioning-config.ts:187](https://github.com/wiil-io/core-js/blob/ae110e467f185fc0bb9c7f87238dd2972a8fac8a/src/core/service-configuration/provisioning-config.ts#L187)
+Defined in: [src/core/service-configuration/provisioning-config.ts:195](https://github.com/wiil-io/core-js/blob/80f3e7bb8af537b810af6933b5a8f088a8518682/src/core/service-configuration/provisioning-config.ts#L195)
 
 Type definition for creating a provisioning configuration chain.
 
@@ -32,14 +36,17 @@ Type definition for creating a provisioning configuration chain.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="chainname"></a> `chainName` | `string` | [src/core/service-configuration/provisioning-config.ts:140](https://github.com/wiil-io/core-js/blob/ae110e467f185fc0bb9c7f87238dd2972a8fac8a/src/core/service-configuration/provisioning-config.ts#L140) |
-| <a id="description"></a> `description?` | `string` | [src/core/service-configuration/provisioning-config.ts:141](https://github.com/wiil-io/core-js/blob/ae110e467f185fc0bb9c7f87238dd2972a8fac8a/src/core/service-configuration/provisioning-config.ts#L141) |
-| <a id="sttconfig"></a> `sttConfig` | \{ `modelId`: `string`; `defaultLanguage`: `string`; \} | [src/core/service-configuration/provisioning-config.ts:142](https://github.com/wiil-io/core-js/blob/ae110e467f185fc0bb9c7f87238dd2972a8fac8a/src/core/service-configuration/provisioning-config.ts#L142) |
-| `sttConfig.modelId` | `string` | [src/core/service-configuration/provisioning-config.ts:39](https://github.com/wiil-io/core-js/blob/ae110e467f185fc0bb9c7f87238dd2972a8fac8a/src/core/service-configuration/provisioning-config.ts#L39) |
-| `sttConfig.defaultLanguage` | `string` | [src/core/service-configuration/provisioning-config.ts:40](https://github.com/wiil-io/core-js/blob/ae110e467f185fc0bb9c7f87238dd2972a8fac8a/src/core/service-configuration/provisioning-config.ts#L40) |
-| <a id="agentconfigurationid"></a> `agentConfigurationId` | `string` | [src/core/service-configuration/provisioning-config.ts:143](https://github.com/wiil-io/core-js/blob/ae110e467f185fc0bb9c7f87238dd2972a8fac8a/src/core/service-configuration/provisioning-config.ts#L143) |
-| <a id="ttsconfig"></a> `ttsConfig` | \{ `modelId`: `string`; `voiceId`: `string`; `defaultLanguage`: `string`; `voiceSettings?`: `Record`\<`string`, `any`\>; \} | [src/core/service-configuration/provisioning-config.ts:144](https://github.com/wiil-io/core-js/blob/ae110e467f185fc0bb9c7f87238dd2972a8fac8a/src/core/service-configuration/provisioning-config.ts#L144) |
-| `ttsConfig.modelId` | `string` | [src/core/service-configuration/provisioning-config.ts:78](https://github.com/wiil-io/core-js/blob/ae110e467f185fc0bb9c7f87238dd2972a8fac8a/src/core/service-configuration/provisioning-config.ts#L78) |
-| `ttsConfig.voiceId` | `string` | [src/core/service-configuration/provisioning-config.ts:79](https://github.com/wiil-io/core-js/blob/ae110e467f185fc0bb9c7f87238dd2972a8fac8a/src/core/service-configuration/provisioning-config.ts#L79) |
-| `ttsConfig.defaultLanguage` | `string` | [src/core/service-configuration/provisioning-config.ts:80](https://github.com/wiil-io/core-js/blob/ae110e467f185fc0bb9c7f87238dd2972a8fac8a/src/core/service-configuration/provisioning-config.ts#L80) |
-| `ttsConfig.voiceSettings?` | `Record`\<`string`, `any`\> | [src/core/service-configuration/provisioning-config.ts:81](https://github.com/wiil-io/core-js/blob/ae110e467f185fc0bb9c7f87238dd2972a8fac8a/src/core/service-configuration/provisioning-config.ts#L81) |
+| <a id="chainname"></a> `chainName` | `string` | [src/core/service-configuration/provisioning-config.ts:185](https://github.com/wiil-io/core-js/blob/80f3e7bb8af537b810af6933b5a8f088a8518682/src/core/service-configuration/provisioning-config.ts#L185) |
+| <a id="description"></a> `description?` | `string` | [src/core/service-configuration/provisioning-config.ts:186](https://github.com/wiil-io/core-js/blob/80f3e7bb8af537b810af6933b5a8f088a8518682/src/core/service-configuration/provisioning-config.ts#L186) |
+| <a id="sttconfig"></a> `sttConfig` | \{ `providerType`: [`SupportedProprietor`](../../type-definitions/enumerations/SupportedProprietor.md); `providerModelId`: `string`; `languageId`: `string`; \} | [src/core/service-configuration/provisioning-config.ts:187](https://github.com/wiil-io/core-js/blob/80f3e7bb8af537b810af6933b5a8f088a8518682/src/core/service-configuration/provisioning-config.ts#L187) |
+| `sttConfig.providerType` | [`SupportedProprietor`](../../type-definitions/enumerations/SupportedProprietor.md) | src/core/service-configuration/base-agent-setup.ts:47 |
+| `sttConfig.providerModelId` | `string` | src/core/service-configuration/base-agent-setup.ts:48 |
+| `sttConfig.languageId` | `string` | src/core/service-configuration/base-agent-setup.ts:60 |
+| <a id="processingconfig"></a> `processingConfig` | \{ `providerType`: [`SupportedProprietor`](../../type-definitions/enumerations/SupportedProprietor.md); `providerModelId`: `string`; \} | [src/core/service-configuration/provisioning-config.ts:188](https://github.com/wiil-io/core-js/blob/80f3e7bb8af537b810af6933b5a8f088a8518682/src/core/service-configuration/provisioning-config.ts#L188) |
+| `processingConfig.providerType` | [`SupportedProprietor`](../../type-definitions/enumerations/SupportedProprietor.md) | src/core/service-configuration/base-agent-setup.ts:47 |
+| `processingConfig.providerModelId` | `string` | src/core/service-configuration/base-agent-setup.ts:48 |
+| <a id="ttsconfig"></a> `ttsConfig` | \{ `providerType`: [`SupportedProprietor`](../../type-definitions/enumerations/SupportedProprietor.md); `providerModelId`: `string`; `languageId`: `string`; `voiceId?`: `string`; \} | [src/core/service-configuration/provisioning-config.ts:189](https://github.com/wiil-io/core-js/blob/80f3e7bb8af537b810af6933b5a8f088a8518682/src/core/service-configuration/provisioning-config.ts#L189) |
+| `ttsConfig.providerType` | [`SupportedProprietor`](../../type-definitions/enumerations/SupportedProprietor.md) | src/core/service-configuration/base-agent-setup.ts:47 |
+| `ttsConfig.providerModelId` | `string` | src/core/service-configuration/base-agent-setup.ts:48 |
+| `ttsConfig.languageId` | `string` | src/core/service-configuration/base-agent-setup.ts:73 |
+| `ttsConfig.voiceId?` | `string` | src/core/service-configuration/base-agent-setup.ts:74 |

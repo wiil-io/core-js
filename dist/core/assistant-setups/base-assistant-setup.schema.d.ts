@@ -7,6 +7,7 @@ export declare const BaseAssistantSchema: z.ZodObject<{
     instructionConfigurationId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     customInstructionConfiguration: z.ZodOptional<z.ZodNullable<z.ZodObject<{
         metadata: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodAny>>;
+        knowledgeSourceIds: z.ZodDefault<z.ZodOptional<z.ZodArray<z.ZodString>>>;
         instructionName: z.ZodString;
         role: z.ZodString;
         introductionMessage: z.ZodString;
@@ -19,7 +20,6 @@ export declare const BaseAssistantSchema: z.ZodObject<{
         tools: z.ZodOptional<z.ZodArray<z.ZodString>>;
         isTemplate: z.ZodDefault<z.ZodOptional<z.ZodBoolean>>;
         isPrimary: z.ZodDefault<z.ZodBoolean>;
-        knowledgeSourceIds: z.ZodDefault<z.ZodOptional<z.ZodArray<z.ZodString>>>;
     }, z.core.$strip>>>;
     knowledgeSourceIds: z.ZodDefault<z.ZodArray<z.ZodString>>;
 }, z.core.$strip>;
@@ -31,6 +31,7 @@ export declare const AdvanceBaseAssistantSchema: z.ZodObject<{
     instructionConfigurationId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     customInstructionConfiguration: z.ZodOptional<z.ZodNullable<z.ZodObject<{
         metadata: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodAny>>;
+        knowledgeSourceIds: z.ZodDefault<z.ZodOptional<z.ZodArray<z.ZodString>>>;
         instructionName: z.ZodString;
         role: z.ZodString;
         introductionMessage: z.ZodString;
@@ -43,7 +44,6 @@ export declare const AdvanceBaseAssistantSchema: z.ZodObject<{
         tools: z.ZodOptional<z.ZodArray<z.ZodString>>;
         isTemplate: z.ZodDefault<z.ZodOptional<z.ZodBoolean>>;
         isPrimary: z.ZodDefault<z.ZodBoolean>;
-        knowledgeSourceIds: z.ZodDefault<z.ZodOptional<z.ZodArray<z.ZodString>>>;
     }, z.core.$strip>>>;
     knowledgeSourceIds: z.ZodDefault<z.ZodArray<z.ZodString>>;
     sttConfig: z.ZodObject<{

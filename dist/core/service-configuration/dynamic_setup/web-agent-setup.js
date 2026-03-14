@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UpdateDynamicWebAgentSchema = exports.DynamicWebAgentSetupResultSchema = exports.DynamicWebAgentSchema = void 0;
 const zod_1 = __importDefault(require("zod"));
-const base_agent_setup_1 = require("./base-agent-setup");
+const base_agent_setup_1 = require("../base-agent-setup");
 const type_definitions_1 = require("../../type-definitions");
 /**
  * @fileoverview Web agent setup schemas for AI assistant configuration.

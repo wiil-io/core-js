@@ -1,5 +1,5 @@
 import z from "zod";
-import { DynamicAgentSetupResultSchema, DynamicBaseAgentSetupSchema, DynamicSTTModelConfigurationSchema, DynamicTTSModelConfigurationSchema } from "./base-agent-setup";
+import { DynamicAgentSetupResultSchema, DynamicBaseAgentSetupSchema, DynamicSTTModelConfigurationSchema, DynamicTTSModelConfigurationSchema } from "../base-agent-setup";
 
 /**
  * @fileoverview Phone agent setup schemas for AI assistant configuration.

@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UpdateDynamicPhoneAgentSchema = exports.DynamicPhoneAgentSetupResultSchema = exports.DynamicPhoneAgentSchema = void 0;
 const zod_1 = __importDefault(require("zod"));
-const base_agent_setup_1 = require("./base-agent-setup");
+const base_agent_setup_1 = require("../base-agent-setup");
 /**
  * @fileoverview Phone agent setup schemas for AI assistant configuration.
  * @module service-configuration/dynamic_setup/phone-agent-setup

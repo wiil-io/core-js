@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.45**](../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.46**](../README.md)
 
 ***
 
@@ -18,6 +18,12 @@ Central export point for all service configuration schemas.
 | [CreateAgentConfiguration](type-aliases/CreateAgentConfiguration.md) | Type definition for creating a new agent configuration. |
 | [UpdateAgentConfiguration](type-aliases/UpdateAgentConfiguration.md) | Type definition for updating an existing agent configuration. |
 | [AgentConfigurationDeleteRequest](type-aliases/AgentConfigurationDeleteRequest.md) | - |
+| [DynamicBaseAgentSetup](type-aliases/DynamicBaseAgentSetup.md) | Base agent setup schema. |
+| [DynamicModelConfiguration](type-aliases/DynamicModelConfiguration.md) | Model configuration schema. |
+| [DynamicSTTModelConfiguration](type-aliases/DynamicSTTModelConfiguration.md) | Speech-to-text model configuration schema. |
+| [DynamicTTSModelConfiguration](type-aliases/DynamicTTSModelConfiguration.md) | Text-to-speech model configuration schema. |
+| [DynamicAgentProcessingState](type-aliases/DynamicAgentProcessingState.md) | Agent processing state schema for tracking long-running setup operations. |
+| [DynamicAgentSetupResult](type-aliases/DynamicAgentSetupResult.md) | Agent setup result schema. Extends BaseModelSchema to include id, createdAt, and updatedAt fields. |
 | [CallTransferConfig](type-aliases/CallTransferConfig.md) | Type definition for call transfer configuration. |
 | [DeploymentConfiguration](type-aliases/DeploymentConfiguration.md) | Type definition for deployment configuration. |
 | [CreateDeploymentConfiguration](type-aliases/CreateDeploymentConfiguration.md) | Type definition for creating a new deployment configuration. |
@@ -25,12 +31,6 @@ Central export point for all service configuration schemas.
 | [UpdateDeploymentConfiguration](type-aliases/UpdateDeploymentConfiguration.md) | Type definition for updating an existing deployment configuration. |
 | [DeploymentConfigurationResult](type-aliases/DeploymentConfigurationResult.md) | Type definition for deployment configuration result. |
 | [DeploymentConfigurationDetails](type-aliases/DeploymentConfigurationDetails.md) | Type definition for deployment configuration details. |
-| [DynamicBaseAgentSetup](type-aliases/DynamicBaseAgentSetup.md) | Base agent setup schema. |
-| [DynamicModelConfiguration](type-aliases/DynamicModelConfiguration.md) | Model configuration schema. |
-| [DynamicSTTModelConfiguration](type-aliases/DynamicSTTModelConfiguration.md) | Speech-to-text model configuration schema. |
-| [DynamicTTSModelConfiguration](type-aliases/DynamicTTSModelConfiguration.md) | Text-to-speech model configuration schema. |
-| [DynamicAgentProcessingState](type-aliases/DynamicAgentProcessingState.md) | Agent processing state schema for tracking long-running setup operations. |
-| [DynamicAgentSetupResult](type-aliases/DynamicAgentSetupResult.md) | Agent setup result schema. Extends BaseModelSchema to include id, createdAt, and updatedAt fields. |
 | [DynamicPhoneAgentSetup](type-aliases/DynamicPhoneAgentSetup.md) | Phone agent setup schema. |
 | [UpdateDynamicPhoneAgent](type-aliases/UpdateDynamicPhoneAgent.md) | Schema for updating an existing phone agent configuration. All fields are optional except id. |
 | [DynamicPhoneAgentSetupResult](type-aliases/DynamicPhoneAgentSetupResult.md) | Phone agent setup result schema. |
@@ -93,6 +93,12 @@ Central export point for all service configuration schemas.
 | [CreateAgentConfigurationSchema](variables/CreateAgentConfigurationSchema.md) | Zod schema for creating a new agent configuration. |
 | [UpdateAgentConfigurationSchema](variables/UpdateAgentConfigurationSchema.md) | Zod schema for updating an existing agent configuration. |
 | [AgentConfigurationDeleteRequestSchema](variables/AgentConfigurationDeleteRequestSchema.md) | - |
+| [DynamicBaseAgentSetupSchema](variables/DynamicBaseAgentSetupSchema.md) | Base agent setup schema. |
+| [DynamicModelConfigurationSchema](variables/DynamicModelConfigurationSchema.md) | Model configuration schema. |
+| [DynamicSTTModelConfigurationSchema](variables/DynamicSTTModelConfigurationSchema.md) | Speech-to-text model configuration schema. |
+| [DynamicTTSModelConfigurationSchema](variables/DynamicTTSModelConfigurationSchema.md) | Text-to-speech model configuration schema. |
+| [DynamicAgentProcessingStateSchema](variables/DynamicAgentProcessingStateSchema.md) | Agent processing state schema for tracking long-running setup operations. |
+| [DynamicAgentSetupResultSchema](variables/DynamicAgentSetupResultSchema.md) | Agent setup result schema. Extends BaseModelSchema to include id, createdAt, and updatedAt fields. |
 | [CallTransferConfigSchema](variables/CallTransferConfigSchema.md) | Zod schema for individual call transfer configuration. |
 | [DeploymentConfigurationSchema](variables/DeploymentConfigurationSchema.md) | Zod schema for deployment configuration validation. |
 | [CreateDeploymentConfigurationSchema](variables/CreateDeploymentConfigurationSchema.md) | Zod schema for creating a new deployment configuration. |
@@ -100,12 +106,6 @@ Central export point for all service configuration schemas.
 | [UpdateDeploymentConfigurationSchema](variables/UpdateDeploymentConfigurationSchema.md) | Zod schema for updating an existing deployment configuration. |
 | [DeploymentConfigurationResultSchema](variables/DeploymentConfigurationResultSchema.md) | Zod schema for deployment configuration result (lightweight version). |
 | [DeploymentConfigurationDetailsSchema](variables/DeploymentConfigurationDetailsSchema.md) | Zod schema for deployment configuration details (full version with all relations). |
-| [DynamicBaseAgentSetupSchema](variables/DynamicBaseAgentSetupSchema.md) | Base agent setup schema. |
-| [DynamicModelConfigurationSchema](variables/DynamicModelConfigurationSchema.md) | Model configuration schema. |
-| [DynamicSTTModelConfigurationSchema](variables/DynamicSTTModelConfigurationSchema.md) | Speech-to-text model configuration schema. |
-| [DynamicTTSModelConfigurationSchema](variables/DynamicTTSModelConfigurationSchema.md) | Text-to-speech model configuration schema. |
-| [DynamicAgentProcessingStateSchema](variables/DynamicAgentProcessingStateSchema.md) | Agent processing state schema for tracking long-running setup operations. |
-| [DynamicAgentSetupResultSchema](variables/DynamicAgentSetupResultSchema.md) | Agent setup result schema. Extends BaseModelSchema to include id, createdAt, and updatedAt fields. |
 | [DynamicPhoneAgentSchema](variables/DynamicPhoneAgentSchema.md) | Phone agent setup schema. |
 | [DynamicPhoneAgentSetupResultSchema](variables/DynamicPhoneAgentSetupResultSchema.md) | Phone agent setup result schema. |
 | [UpdateDynamicPhoneAgentSchema](variables/UpdateDynamicPhoneAgentSchema.md) | Schema for updating an existing phone agent configuration. All fields are optional except id. |

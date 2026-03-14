@@ -79,11 +79,11 @@ export declare const UpdateDynamicPhoneAgentSchema: z.ZodObject<{
     voice: z.ZodOptional<z.ZodOptional<z.ZodString>>;
     language: z.ZodOptional<z.ZodDefault<z.ZodOptional<z.ZodString>>>;
     instructionConfigurationId: z.ZodOptional<z.ZodOptional<z.ZodString>>;
-    knowledgeSourceIds: z.ZodOptional<z.ZodOptional<z.ZodArray<z.ZodString>>>;
-    providerType: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof import("../..").SupportedProprietor>>>>;
-    capabilities: z.ZodOptional<z.ZodDefault<z.ZodOptional<z.ZodArray<z.ZodEnum<typeof import("../..").BusinessSupportServices>>>>>;
     assistantName: z.ZodOptional<z.ZodString>;
     role_template_identifier: z.ZodOptional<z.ZodOptional<z.ZodEnum<typeof import("../..").AgentRoleTemplateIdentifier>>>;
+    capabilities: z.ZodOptional<z.ZodDefault<z.ZodOptional<z.ZodArray<z.ZodEnum<typeof import("../..").BusinessSupportServices>>>>>;
+    knowledgeSourceIds: z.ZodOptional<z.ZodOptional<z.ZodArray<z.ZodString>>>;
+    providerType: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof import("../..").SupportedProprietor>>>>;
     providerModelId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     testPhoneNumber: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     sttConfiguration: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodObject<{

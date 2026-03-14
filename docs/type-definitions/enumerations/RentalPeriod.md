@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.45**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.46**](../../README.md)
 
 ***
 
@@ -6,13 +6,13 @@
 
 # Enumeration: RentalPeriod
 
-Defined in: [src/core/type-definitions/business-definitions.ts:257](https://github.com/wiil-io/core-js/blob/ae110e467f185fc0bb9c7f87238dd2972a8fac8a/src/core/type-definitions/business-definitions.ts#L257)
+Defined in: [src/core/type-definitions/business-definitions.ts:257](https://github.com/wiil-io/core-js/blob/80f3e7bb8af537b810af6933b5a8f088a8518682/src/core/type-definitions/business-definitions.ts#L257)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="daily"></a> `DAILY` | `"daily"` | [src/core/type-definitions/business-definitions.ts:258](https://github.com/wiil-io/core-js/blob/ae110e467f185fc0bb9c7f87238dd2972a8fac8a/src/core/type-definitions/business-definitions.ts#L258) |
-| <a id="weekly"></a> `WEEKLY` | `"weekly"` | [src/core/type-definitions/business-definitions.ts:259](https://github.com/wiil-io/core-js/blob/ae110e467f185fc0bb9c7f87238dd2972a8fac8a/src/core/type-definitions/business-definitions.ts#L259) |
-| <a id="monthly"></a> `MONTHLY` | `"monthly"` | [src/core/type-definitions/business-definitions.ts:260](https://github.com/wiil-io/core-js/blob/ae110e467f185fc0bb9c7f87238dd2972a8fac8a/src/core/type-definitions/business-definitions.ts#L260) |
-| <a id="yearly"></a> `YEARLY` | `"yearly"` | [src/core/type-definitions/business-definitions.ts:261](https://github.com/wiil-io/core-js/blob/ae110e467f185fc0bb9c7f87238dd2972a8fac8a/src/core/type-definitions/business-definitions.ts#L261) |
+| <a id="daily"></a> `DAILY` | `"daily"` | [src/core/type-definitions/business-definitions.ts:258](https://github.com/wiil-io/core-js/blob/80f3e7bb8af537b810af6933b5a8f088a8518682/src/core/type-definitions/business-definitions.ts#L258) |
+| <a id="weekly"></a> `WEEKLY` | `"weekly"` | [src/core/type-definitions/business-definitions.ts:259](https://github.com/wiil-io/core-js/blob/80f3e7bb8af537b810af6933b5a8f088a8518682/src/core/type-definitions/business-definitions.ts#L259) |
+| <a id="monthly"></a> `MONTHLY` | `"monthly"` | [src/core/type-definitions/business-definitions.ts:260](https://github.com/wiil-io/core-js/blob/80f3e7bb8af537b810af6933b5a8f088a8518682/src/core/type-definitions/business-definitions.ts#L260) |
+| <a id="yearly"></a> `YEARLY` | `"yearly"` | [src/core/type-definitions/business-definitions.ts:261](https://github.com/wiil-io/core-js/blob/80f3e7bb8af537b810af6933b5a8f088a8518682/src/core/type-definitions/business-definitions.ts#L261) |

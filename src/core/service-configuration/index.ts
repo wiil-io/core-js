@@ -4,6 +4,7 @@
  */
 
 export * from './agent-config.schema';
+export * from './base-agent-setup';
 export * from './call-transfer-config.schema';
 export * from './deployment-config.schema';
 export * from './instruction-config.schema';

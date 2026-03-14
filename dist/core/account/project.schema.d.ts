@@ -16,7 +16,6 @@ import { ServiceStatus } from '../type-definitions';
  * @property {string | undefined} [regionId] - Geographic region ID for this project (optional, can inherit from organization)
  * @property {string} [description] - Optional description of the project's purpose
  * @property {string[]} [compliance] - Optional array of compliance standards this project adheres to
- * @property {string | null} [currentSubscriptionId] - ID of the current subscription plan for this project
  * @property {boolean} isDefault - Whether this is the default project for the organization
  * @property {ServiceStatus} serviceStatus - Current service status (default: ACTIVE)
  * @property {Record<string, any>} [metadata] - Additional custom metadata for the project
@@ -33,7 +32,6 @@ import { ServiceStatus } from '../type-definitions';
  *   compliance: ['SOC2', 'HIPAA'],
  *   isDefault: true,
  *   serviceStatus: ServiceStatus.ACTIVE,
- *   currentSubscriptionId: '789*',
  *   metadata: { environment: 'production' },
  *   createdAt: Date.now(),
  *   updatedAt: Date.now()
@@ -48,7 +46,6 @@ export declare const ProjectSchema: z.ZodObject<{
     regionId: z.ZodOptional<z.ZodString>;
     description: z.ZodOptional<z.ZodString>;
     compliance: z.ZodOptional<z.ZodArray<z.ZodString>>;
-    currentSubscriptionId: z.ZodNullable<z.ZodOptional<z.ZodString>>;
     isDefault: z.ZodBoolean;
     serviceStatus: z.ZodDefault<z.ZodEnum<typeof ServiceStatus>>;
     metadata: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodAny>>;
@@ -82,7 +79,6 @@ export declare const CreateProjectSchema: z.ZodObject<{
     regionId: z.ZodOptional<z.ZodString>;
     description: z.ZodOptional<z.ZodString>;
     compliance: z.ZodOptional<z.ZodArray<z.ZodString>>;
-    currentSubscriptionId: z.ZodNullable<z.ZodOptional<z.ZodString>>;
 }, z.core.$strip>;
 /**
  * Zod schema for updating an existing project.
@@ -109,7 +105,6 @@ export declare const UpdateProjectSchema: z.ZodObject<{
     regionId: z.ZodOptional<z.ZodOptional<z.ZodString>>;
     description: z.ZodOptional<z.ZodOptional<z.ZodString>>;
     compliance: z.ZodOptional<z.ZodOptional<z.ZodArray<z.ZodString>>>;
-    currentSubscriptionId: z.ZodOptional<z.ZodNullable<z.ZodOptional<z.ZodString>>>;
     id: z.ZodString;
 }, z.core.$strip>;
 /**

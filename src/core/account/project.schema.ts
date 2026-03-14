@@ -19,7 +19,6 @@ import { ServiceStatus } from '../type-definitions';
  * @property {string | undefined} [regionId] - Geographic region ID for this project (optional, can inherit from organization)
  * @property {string} [description] - Optional description of the project's purpose
  * @property {string[]} [compliance] - Optional array of compliance standards this project adheres to
- * @property {string | null} [currentSubscriptionId] - ID of the current subscription plan for this project
  * @property {boolean} isDefault - Whether this is the default project for the organization
  * @property {ServiceStatus} serviceStatus - Current service status (default: ACTIVE)
  * @property {Record<string, any>} [metadata] - Additional custom metadata for the project
@@ -36,7 +35,6 @@ import { ServiceStatus } from '../type-definitions';
  *   compliance: ['SOC2', 'HIPAA'],
  *   isDefault: true,
  *   serviceStatus: ServiceStatus.ACTIVE,
- *   currentSubscriptionId: '789*',
  *   metadata: { environment: 'production' },
  *   createdAt: Date.now(),
  *   updatedAt: Date.now()
@@ -48,7 +46,6 @@ export const ProjectSchema = BaseModelSchema.safeExtend({
     regionId: z.string().optional().describe("Geographic region ID for this project (optional, can inherit from organization)"),
     description: z.string().optional().describe("Optional description of the project's purpose"),
     compliance: z.string().array().optional().describe("Array of compliance standards this project adheres to (e.g., SOC2, HIPAA)"),
-    currentSubscriptionId: z.string().optional().nullable().describe("ID of the current subscription plan for this project"),
     isDefault: z.boolean().describe("Whether this is the default project for the organization (system-managed flag, set automatically on creation)"),
     serviceStatus: z.enum(ServiceStatus).default(ServiceStatus.ACTIVE).describe("Current service status of the project"),
     metadata: z.record(z.string(), z.any()).optional().describe("Additional custom metadata for the project"),

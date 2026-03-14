@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.45**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.46**](../../README.md)
 
 ***
 
@@ -6,13 +6,13 @@
 
 # Enumeration: BestTimeToCall
 
-Defined in: [src/core/type-definitions/business-definitions.ts:200](https://github.com/wiil-io/core-js/blob/ae110e467f185fc0bb9c7f87238dd2972a8fac8a/src/core/type-definitions/business-definitions.ts#L200)
+Defined in: [src/core/type-definitions/business-definitions.ts:200](https://github.com/wiil-io/core-js/blob/80f3e7bb8af537b810af6933b5a8f088a8518682/src/core/type-definitions/business-definitions.ts#L200)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="morning"></a> `MORNING` | `"morning"` | [src/core/type-definitions/business-definitions.ts:201](https://github.com/wiil-io/core-js/blob/ae110e467f185fc0bb9c7f87238dd2972a8fac8a/src/core/type-definitions/business-definitions.ts#L201) |
-| <a id="afternoon"></a> `AFTERNOON` | `"afternoon"` | [src/core/type-definitions/business-definitions.ts:202](https://github.com/wiil-io/core-js/blob/ae110e467f185fc0bb9c7f87238dd2972a8fac8a/src/core/type-definitions/business-definitions.ts#L202) |
-| <a id="evening"></a> `EVENING` | `"evening"` | [src/core/type-definitions/business-definitions.ts:203](https://github.com/wiil-io/core-js/blob/ae110e467f185fc0bb9c7f87238dd2972a8fac8a/src/core/type-definitions/business-definitions.ts#L203) |
-| <a id="anytime"></a> `ANYTIME` | `"anytime"` | [src/core/type-definitions/business-definitions.ts:204](https://github.com/wiil-io/core-js/blob/ae110e467f185fc0bb9c7f87238dd2972a8fac8a/src/core/type-definitions/business-definitions.ts#L204) |
+| <a id="morning"></a> `MORNING` | `"morning"` | [src/core/type-definitions/business-definitions.ts:201](https://github.com/wiil-io/core-js/blob/80f3e7bb8af537b810af6933b5a8f088a8518682/src/core/type-definitions/business-definitions.ts#L201) |
+| <a id="afternoon"></a> `AFTERNOON` | `"afternoon"` | [src/core/type-definitions/business-definitions.ts:202](https://github.com/wiil-io/core-js/blob/80f3e7bb8af537b810af6933b5a8f088a8518682/src/core/type-definitions/business-definitions.ts#L202) |
+| <a id="evening"></a> `EVENING` | `"evening"` | [src/core/type-definitions/business-definitions.ts:203](https://github.com/wiil-io/core-js/blob/80f3e7bb8af537b810af6933b5a8f088a8518682/src/core/type-definitions/business-definitions.ts#L203) |
+| <a id="anytime"></a> `ANYTIME` | `"anytime"` | [src/core/type-definitions/business-definitions.ts:204](https://github.com/wiil-io/core-js/blob/80f3e7bb8af537b810af6933b5a8f088a8518682/src/core/type-definitions/business-definitions.ts#L204) |

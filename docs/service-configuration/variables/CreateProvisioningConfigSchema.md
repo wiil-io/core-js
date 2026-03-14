@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.45**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.46**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const CreateProvisioningConfigSchema: ZodObject<CreateProvisioningConfig>;
 ```
 
-Defined in: [src/core/service-configuration/provisioning-config.ts:178](https://github.com/wiil-io/core-js/blob/ae110e467f185fc0bb9c7f87238dd2972a8fac8a/src/core/service-configuration/provisioning-config.ts#L178)
+Defined in: [src/core/service-configuration/provisioning-config.ts:184](https://github.com/wiil-io/core-js/blob/80f3e7bb8af537b810af6933b5a8f088a8518682/src/core/service-configuration/provisioning-config.ts#L184)
 
 Zod schema for creating a new provisioning configuration chain.
 
@@ -27,14 +27,19 @@ const newChain: CreateProvisioningConfig = {
   chainName: 'New Voice Chain',
   description: 'Processing chain for multilingual support',
   sttConfig: {
-    modelId: 'whisper-v3',
-    defaultLanguage: 'en-US'
+    providerType: 'Deepgram',
+    providerModelId: 'nova-2',
+    languageId: 'en'
   },
-  agentConfigurationId: 'agent-789',
+  processingConfig: {
+    providerType: 'OpenAI',
+    providerModelId: 'gpt-4o-mini'
+  },
   ttsConfig: {
-    modelId: 'eleven-labs-v2',
-    voiceId: 'rachel',
-    defaultLanguage: 'en-US'
+    providerType: 'ElevenLabs',
+    providerModelId: 'eleven_multilingual_v2',
+    languageId: 'en',
+    voiceId: 'rachel'
   }
 };
 ```

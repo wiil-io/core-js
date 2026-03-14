@@ -115,7 +115,6 @@ export declare const DeploymentConfigurationSchema: z.ZodObject<{
         regionId: z.ZodOptional<z.ZodString>;
         description: z.ZodOptional<z.ZodString>;
         compliance: z.ZodOptional<z.ZodArray<z.ZodString>>;
-        currentSubscriptionId: z.ZodNullable<z.ZodOptional<z.ZodString>>;
         isDefault: z.ZodBoolean;
         serviceStatus: z.ZodDefault<z.ZodEnum<typeof import("../type-definitions").ServiceStatus>>;
         metadata: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodAny>>;
@@ -222,8 +221,8 @@ export type DeploymentConfiguration = z.infer<typeof DeploymentConfigurationSche
  */
 export declare const CreateDeploymentConfigurationSchema: z.ZodObject<{
     instructionConfigurationId: z.ZodString;
-    projectId: z.ZodString;
     agentConfigurationId: z.ZodString;
+    projectId: z.ZodString;
     deploymentChannelId: z.ZodString;
     deploymentName: z.ZodOptional<z.ZodString>;
     provisioningConfigChainId: z.ZodNullable<z.ZodOptional<z.ZodString>>;
@@ -265,8 +264,8 @@ export type CreateDeploymentConfiguration = z.infer<typeof CreateDeploymentConfi
  */
 export declare const CreateChainDeploymentConfigurationSchema: z.ZodObject<{
     instructionConfigurationId: z.ZodString;
-    projectId: z.ZodString;
     agentConfigurationId: z.ZodString;
+    projectId: z.ZodString;
     deploymentChannelId: z.ZodString;
     deploymentName: z.ZodOptional<z.ZodString>;
     isActive: z.ZodDefault<z.ZodBoolean>;
@@ -302,8 +301,8 @@ export type CreateChainDeploymentConfiguration = z.infer<typeof CreateChainDeplo
  */
 export declare const UpdateDeploymentConfigurationSchema: z.ZodObject<{
     instructionConfigurationId: z.ZodOptional<z.ZodString>;
-    projectId: z.ZodOptional<z.ZodString>;
     agentConfigurationId: z.ZodOptional<z.ZodString>;
+    projectId: z.ZodOptional<z.ZodString>;
     deploymentChannelId: z.ZodOptional<z.ZodString>;
     deploymentName: z.ZodOptional<z.ZodOptional<z.ZodString>>;
     isActive: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
@@ -350,8 +349,8 @@ export declare const DeploymentConfigurationResultSchema: z.ZodObject<{
     createdAt: z.ZodOptional<z.ZodNumber>;
     updatedAt: z.ZodOptional<z.ZodNumber>;
     instructionConfigurationId: z.ZodString;
-    projectId: z.ZodString;
     agentConfigurationId: z.ZodString;
+    projectId: z.ZodString;
     deploymentChannelId: z.ZodString;
     deploymentName: z.ZodOptional<z.ZodString>;
     provisioningConfigChainId: z.ZodNullable<z.ZodOptional<z.ZodString>>;
@@ -402,8 +401,8 @@ export declare const DeploymentConfigurationDetailsSchema: z.ZodObject<{
     createdAt: z.ZodOptional<z.ZodNumber>;
     updatedAt: z.ZodOptional<z.ZodNumber>;
     instructionConfigurationId: z.ZodString;
-    projectId: z.ZodString;
     agentConfigurationId: z.ZodString;
+    projectId: z.ZodString;
     deploymentChannelId: z.ZodString;
     deploymentName: z.ZodOptional<z.ZodString>;
     provisioningConfigChainId: z.ZodNullable<z.ZodOptional<z.ZodString>>;
@@ -442,7 +441,6 @@ export declare const DeploymentConfigurationDetailsSchema: z.ZodObject<{
         regionId: z.ZodOptional<z.ZodString>;
         description: z.ZodOptional<z.ZodString>;
         compliance: z.ZodOptional<z.ZodArray<z.ZodString>>;
-        currentSubscriptionId: z.ZodNullable<z.ZodOptional<z.ZodString>>;
         isDefault: z.ZodBoolean;
         serviceStatus: z.ZodDefault<z.ZodEnum<typeof import("../type-definitions").ServiceStatus>>;
         metadata: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodAny>>;
