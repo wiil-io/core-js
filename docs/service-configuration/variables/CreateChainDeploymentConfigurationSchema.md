@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.46**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.47**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const CreateChainDeploymentConfigurationSchema: ZodObject<CreateChainDeploymentConfiguration>;
 ```
 
-Defined in: [src/core/service-configuration/deployment-config.schema.ts:176](https://github.com/wiil-io/core-js/blob/80f3e7bb8af537b810af6933b5a8f088a8518682/src/core/service-configuration/deployment-config.schema.ts#L176)
+Defined in: [src/core/service-configuration/deployment-config.schema.ts:173](https://github.com/wiil-io/core-js/blob/81a2e002271d89bdaa7b84f1befea192faa0209f/src/core/service-configuration/deployment-config.schema.ts#L173)
 
 Zod schema for creating a chained deployment configuration.
 

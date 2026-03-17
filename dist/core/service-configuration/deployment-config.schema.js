@@ -127,9 +127,6 @@ exports.CreateDeploymentConfigurationSchema = exports.DeploymentConfigurationSch
     instruction: true,
     deploymentStatus: true,
     provisioningType: true,
-}).safeExtend({
-    deploymentStatus: zod_1.z.literal(type_definitions_1.DeploymentStatus.PENDING),
-    provisioningType: zod_1.z.enum(type_definitions_1.DeploymentProvisioningType).default(type_definitions_1.DeploymentProvisioningType.DIRECT),
 });
 /**
  * Zod schema for creating a chained deployment configuration.

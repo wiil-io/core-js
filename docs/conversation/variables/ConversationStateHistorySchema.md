@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.46**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.47**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const ConversationStateHistorySchema: ZodObject<ConversationStateHistory>;
 ```
 
-Defined in: [src/core/conversation/conversation-config.schema.ts:119](https://github.com/wiil-io/core-js/blob/80f3e7bb8af537b810af6933b5a8f088a8518682/src/core/conversation/conversation-config.schema.ts#L119)
+Defined in: [src/core/conversation/conversation-config.schema.ts:119](https://github.com/wiil-io/core-js/blob/81a2e002271d89bdaa7b84f1befea192faa0209f/src/core/conversation/conversation-config.schema.ts#L119)
 
 Conversation state history schema for tracking status changes.
 

@@ -135,10 +135,7 @@ export const CreateDeploymentConfigurationSchema = DeploymentConfigurationSchema
     instruction: true,
     deploymentStatus: true,
     provisioningType: true,
-}).safeExtend({
-    deploymentStatus: z.literal(DeploymentStatus.PENDING),
-    provisioningType: z.enum(DeploymentProvisioningType).default(DeploymentProvisioningType.DIRECT),
-});
+})
 
 /**
  * Type definition for creating a new deployment configuration.

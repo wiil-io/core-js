@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.46**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.47**](../../README.md)
 
 ***
 
@@ -6,11 +6,11 @@
 
 # Interface: ReservationSorting
 
-Defined in: [src/core/business-mgt/service-appointment.schema.ts:85](https://github.com/wiil-io/core-js/blob/80f3e7bb8af537b810af6933b5a8f088a8518682/src/core/business-mgt/service-appointment.schema.ts#L85)
+Defined in: [src/core/business-mgt/service-appointment.schema.ts:85](https://github.com/wiil-io/core-js/blob/81a2e002271d89bdaa7b84f1befea192faa0209f/src/core/business-mgt/service-appointment.schema.ts#L85)
 
 ## Properties
 
 | Property | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="field"></a> `field` | `"createdAt"` \| `"startTime"` \| `"endTime"` | [src/core/business-mgt/service-appointment.schema.ts:86](https://github.com/wiil-io/core-js/blob/80f3e7bb8af537b810af6933b5a8f088a8518682/src/core/business-mgt/service-appointment.schema.ts#L86) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | [src/core/business-mgt/service-appointment.schema.ts:87](https://github.com/wiil-io/core-js/blob/80f3e7bb8af537b810af6933b5a8f088a8518682/src/core/business-mgt/service-appointment.schema.ts#L87) |
+| <a id="field"></a> `field` | `"createdAt"` \| `"startTime"` \| `"endTime"` | [src/core/business-mgt/service-appointment.schema.ts:86](https://github.com/wiil-io/core-js/blob/81a2e002271d89bdaa7b84f1befea192faa0209f/src/core/business-mgt/service-appointment.schema.ts#L86) |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | [src/core/business-mgt/service-appointment.schema.ts:87](https://github.com/wiil-io/core-js/blob/81a2e002271d89bdaa7b84f1befea192faa0209f/src/core/business-mgt/service-appointment.schema.ts#L87) |

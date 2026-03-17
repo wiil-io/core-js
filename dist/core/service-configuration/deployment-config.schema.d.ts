@@ -227,8 +227,6 @@ export declare const CreateDeploymentConfigurationSchema: z.ZodObject<{
     deploymentName: z.ZodOptional<z.ZodString>;
     provisioningConfigChainId: z.ZodNullable<z.ZodOptional<z.ZodString>>;
     isActive: z.ZodDefault<z.ZodBoolean>;
-    deploymentStatus: z.ZodLiteral<DeploymentStatus.PENDING>;
-    provisioningType: z.ZodDefault<z.ZodEnum<typeof DeploymentProvisioningType>>;
 }, z.core.$strip>;
 /**
  * Type definition for creating a new deployment configuration.
@@ -306,8 +304,6 @@ export declare const UpdateDeploymentConfigurationSchema: z.ZodObject<{
     deploymentChannelId: z.ZodOptional<z.ZodString>;
     deploymentName: z.ZodOptional<z.ZodOptional<z.ZodString>>;
     isActive: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
-    deploymentStatus: z.ZodOptional<z.ZodLiteral<DeploymentStatus.PENDING>>;
-    provisioningType: z.ZodOptional<z.ZodDefault<z.ZodEnum<typeof DeploymentProvisioningType>>>;
     id: z.ZodString;
     provisioningConfigChainId: z.ZodOptional<z.ZodString>;
 }, z.core.$strip>;

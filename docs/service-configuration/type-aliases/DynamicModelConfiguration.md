@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.46**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.47**](../../README.md)
 
 ***
 
@@ -13,7 +13,7 @@ type DynamicModelConfiguration = {
 };
 ```
 
-Defined in: src/core/service-configuration/base-agent-setup.ts:113
+Defined in: [src/core/service-configuration/base-agent-setup.ts:113](https://github.com/wiil-io/core-js/blob/81a2e002271d89bdaa7b84f1befea192faa0209f/src/core/service-configuration/base-agent-setup.ts#L113)
 
 Model configuration schema.
 
@@ -21,5 +21,5 @@ Model configuration schema.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="providertype"></a> `providerType` | [`SupportedProprietor`](../../type-definitions/enumerations/SupportedProprietor.md) | src/core/service-configuration/base-agent-setup.ts:47 |
-| <a id="providermodelid"></a> `providerModelId` | `string` | src/core/service-configuration/base-agent-setup.ts:48 |
+| <a id="providertype"></a> `providerType` | [`SupportedProprietor`](../../type-definitions/enumerations/SupportedProprietor.md) | [src/core/service-configuration/base-agent-setup.ts:47](https://github.com/wiil-io/core-js/blob/81a2e002271d89bdaa7b84f1befea192faa0209f/src/core/service-configuration/base-agent-setup.ts#L47) |
+| <a id="providermodelid"></a> `providerModelId` | `string` | [src/core/service-configuration/base-agent-setup.ts:48](https://github.com/wiil-io/core-js/blob/81a2e002271d89bdaa7b84f1befea192faa0209f/src/core/service-configuration/base-agent-setup.ts#L48) |
