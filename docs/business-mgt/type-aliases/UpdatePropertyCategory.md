@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.48**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.49**](../../README.md)
 
 ***
 
@@ -18,7 +18,7 @@ type UpdatePropertyCategory = {
 };
 ```
 
-Defined in: [src/core/business-mgt/property-config.schema.ts:248](https://github.com/wiil-io/core-js/blob/bcef8c50093e853c7d56e25bed9c820baafd1593/src/core/business-mgt/property-config.schema.ts#L248)
+Defined in: [src/core/business-mgt/property-config.schema.ts:248](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/business-mgt/property-config.schema.ts#L248)
 
 Schema for updating an existing property category.
 All fields are optional except id.
@@ -27,8 +27,8 @@ All fields are optional except id.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="name"></a> `name?` | `string` | [src/core/business-mgt/property-config.schema.ts:29](https://github.com/wiil-io/core-js/blob/bcef8c50093e853c7d56e25bed9c820baafd1593/src/core/business-mgt/property-config.schema.ts#L29) |
-| <a id="description"></a> `description?` | `string` | [src/core/business-mgt/property-config.schema.ts:30](https://github.com/wiil-io/core-js/blob/bcef8c50093e853c7d56e25bed9c820baafd1593/src/core/business-mgt/property-config.schema.ts#L30) |
-| <a id="propertytype"></a> `propertyType?` | \| [`RESIDENTIAL`](../../type-definitions/enumerations/PropertyType.md#residential) \| [`COMMERCIAL`](../../type-definitions/enumerations/PropertyType.md#commercial) \| [`LAND`](../../type-definitions/enumerations/PropertyType.md#land) | [src/core/business-mgt/property-config.schema.ts:31](https://github.com/wiil-io/core-js/blob/bcef8c50093e853c7d56e25bed9c820baafd1593/src/core/business-mgt/property-config.schema.ts#L31) |
-| <a id="displayorder"></a> `displayOrder?` | `number` | [src/core/business-mgt/property-config.schema.ts:32](https://github.com/wiil-io/core-js/blob/bcef8c50093e853c7d56e25bed9c820baafd1593/src/core/business-mgt/property-config.schema.ts#L32) |
-| <a id="id"></a> `id` | `string` | [src/core/business-mgt/property-config.schema.ts:203](https://github.com/wiil-io/core-js/blob/bcef8c50093e853c7d56e25bed9c820baafd1593/src/core/business-mgt/property-config.schema.ts#L203) |
+| <a id="name"></a> `name?` | `string` | [src/core/business-mgt/property-config.schema.ts:29](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/business-mgt/property-config.schema.ts#L29) |
+| <a id="description"></a> `description?` | `string` | [src/core/business-mgt/property-config.schema.ts:30](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/business-mgt/property-config.schema.ts#L30) |
+| <a id="propertytype"></a> `propertyType?` | \| [`RESIDENTIAL`](../../type-definitions/enumerations/PropertyType.md#residential) \| [`COMMERCIAL`](../../type-definitions/enumerations/PropertyType.md#commercial) \| [`LAND`](../../type-definitions/enumerations/PropertyType.md#land) | [src/core/business-mgt/property-config.schema.ts:31](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/business-mgt/property-config.schema.ts#L31) |
+| <a id="displayorder"></a> `displayOrder?` | `number` | [src/core/business-mgt/property-config.schema.ts:32](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/business-mgt/property-config.schema.ts#L32) |
+| <a id="id"></a> `id` | `string` | [src/core/business-mgt/property-config.schema.ts:203](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/business-mgt/property-config.schema.ts#L203) |

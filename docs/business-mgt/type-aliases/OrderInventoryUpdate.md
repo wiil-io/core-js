@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.48**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.49**](../../README.md)
 
 ***
 
@@ -17,7 +17,7 @@ type OrderInventoryUpdate = {
 };
 ```
 
-Defined in: [src/core/business-mgt/product-order.schema.ts:172](https://github.com/wiil-io/core-js/blob/bcef8c50093e853c7d56e25bed9c820baafd1593/src/core/business-mgt/product-order.schema.ts#L172)
+Defined in: [src/core/business-mgt/product-order.schema.ts:172](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/business-mgt/product-order.schema.ts#L172)
 
 Schema for inventory updates triggered by order fulfillment.
 
@@ -25,5 +25,5 @@ Schema for inventory updates triggered by order fulfillment.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="orderid"></a> `orderId` | `string` | [src/core/business-mgt/product-order.schema.ts:156](https://github.com/wiil-io/core-js/blob/bcef8c50093e853c7d56e25bed9c820baafd1593/src/core/business-mgt/product-order.schema.ts#L156) |
-| <a id="inventoryadjustments"></a> `inventoryAdjustments` | \{ `productId`: `string`; `quantityUsed`: `number`; `reason`: `"order_fulfillment"`; \}[] | [src/core/business-mgt/product-order.schema.ts:157](https://github.com/wiil-io/core-js/blob/bcef8c50093e853c7d56e25bed9c820baafd1593/src/core/business-mgt/product-order.schema.ts#L157) |
+| <a id="orderid"></a> `orderId` | `string` | [src/core/business-mgt/product-order.schema.ts:156](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/business-mgt/product-order.schema.ts#L156) |
+| <a id="inventoryadjustments"></a> `inventoryAdjustments` | \{ `productId`: `string`; `quantityUsed`: `number`; `reason`: `"order_fulfillment"`; \}[] | [src/core/business-mgt/product-order.schema.ts:157](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/business-mgt/product-order.schema.ts#L157) |

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.48**](../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.49**](../README.md)
 
 ***
 
@@ -49,7 +49,6 @@ Central export point for all type definitions.
 | [DepositStatus](enumerations/DepositStatus.md) | - |
 | [PropertyInquiryType](enumerations/PropertyInquiryType.md) | - |
 | [PropertyInquiryStatus](enumerations/PropertyInquiryStatus.md) | - |
-| [ConversationEventType](enumerations/ConversationEventType.md) | Conversation event types for webhook and analytics tracking. |
 | [ServiceConversationType](enumerations/ServiceConversationType.md) | Service conversation channel types. |
 | [ConversationStatus](enumerations/ConversationStatus.md) | Conversation lifecycle status. |
 | [TranslationDirection](enumerations/TranslationDirection.md) | Translation direction for multilingual conversations. |

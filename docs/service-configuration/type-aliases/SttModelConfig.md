@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.48**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.49**](../../README.md)
 
 ***
 
@@ -13,7 +13,7 @@ type SttModelConfig = {
 };
 ```
 
-Defined in: [src/core/service-configuration/provisioning-config.ts:47](https://github.com/wiil-io/core-js/blob/bcef8c50093e853c7d56e25bed9c820baafd1593/src/core/service-configuration/provisioning-config.ts#L47)
+Defined in: [src/core/service-configuration/provisioning-config.ts:47](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/service-configuration/provisioning-config.ts#L47)
 
 Type definition for STT model configuration.
 
@@ -21,5 +21,5 @@ Type definition for STT model configuration.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="modelid"></a> `modelId` | `string` | [src/core/service-configuration/provisioning-config.ts:40](https://github.com/wiil-io/core-js/blob/bcef8c50093e853c7d56e25bed9c820baafd1593/src/core/service-configuration/provisioning-config.ts#L40) |
-| <a id="defaultlanguage"></a> `defaultLanguage` | `string` | [src/core/service-configuration/provisioning-config.ts:41](https://github.com/wiil-io/core-js/blob/bcef8c50093e853c7d56e25bed9c820baafd1593/src/core/service-configuration/provisioning-config.ts#L41) |
+| <a id="modelid"></a> `modelId` | `string` | [src/core/service-configuration/provisioning-config.ts:40](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/service-configuration/provisioning-config.ts#L40) |
+| <a id="defaultlanguage"></a> `defaultLanguage` | `string` | [src/core/service-configuration/provisioning-config.ts:41](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/service-configuration/provisioning-config.ts#L41) |

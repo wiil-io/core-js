@@ -9,28 +9,7 @@
  * @module type-definitions/conversation
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SmsStatus = exports.EmailStatus = exports.ScheduleType = exports.CallRequestStatus = exports.ConversationSummarySentiment = exports.TranslationDirection = exports.ConversationStatus = exports.ServiceConversationType = exports.ConversationEventType = void 0;
-/**
- * Conversation event types for webhook and analytics tracking.
- *
- * Used to categorize events that occur during conversation lifecycles
- * for event-driven architectures and analytics pipelines.
- *
- * @see ServiceConversationConfigSchema - Conversation configuration
- */
-var ConversationEventType;
-(function (ConversationEventType) {
-    /** OTT (Over-The-Top) call completed via WebRTC or similar protocol */
-    ConversationEventType["OTT_CALL_COMPLETED"] = "OTT_CALL_COMPLETED";
-    /** Traditional telephony call completed via PSTN/SIP */
-    ConversationEventType["TELEPHONY_CALL_COMPLETED"] = "TELEPHONY_CALL_COMPLETED";
-    /** Speech-to-text transcription processing completed */
-    ConversationEventType["TRANSCRIPTION_COMPLETED"] = "TRANSCRIPTION_COMPLETED";
-    /** LLM interaction (AI response generation) completed */
-    ConversationEventType["LLM_INTERACTION_COMPLETED"] = "LLM_INTERACTION_COMPLETED";
-    /** SMS message successfully sent to carrier */
-    ConversationEventType["SMS_SENT"] = "SMS_SENT";
-})(ConversationEventType || (exports.ConversationEventType = ConversationEventType = {}));
+exports.SmsStatus = exports.EmailStatus = exports.ScheduleType = exports.CallRequestStatus = exports.ConversationSummarySentiment = exports.TranslationDirection = exports.ConversationStatus = exports.ServiceConversationType = void 0;
 /**
  * Service conversation channel types.
  *

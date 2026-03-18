@@ -8,26 +8,6 @@
  * @module type-definitions/conversation
  */
 /**
- * Conversation event types for webhook and analytics tracking.
- *
- * Used to categorize events that occur during conversation lifecycles
- * for event-driven architectures and analytics pipelines.
- *
- * @see ServiceConversationConfigSchema - Conversation configuration
- */
-export declare enum ConversationEventType {
-    /** OTT (Over-The-Top) call completed via WebRTC or similar protocol */
-    OTT_CALL_COMPLETED = "OTT_CALL_COMPLETED",
-    /** Traditional telephony call completed via PSTN/SIP */
-    TELEPHONY_CALL_COMPLETED = "TELEPHONY_CALL_COMPLETED",
-    /** Speech-to-text transcription processing completed */
-    TRANSCRIPTION_COMPLETED = "TRANSCRIPTION_COMPLETED",
-    /** LLM interaction (AI response generation) completed */
-    LLM_INTERACTION_COMPLETED = "LLM_INTERACTION_COMPLETED",
-    /** SMS message successfully sent to carrier */
-    SMS_SENT = "SMS_SENT"
-}
-/**
  * Service conversation channel types.
  *
  * Identifies the communication channel used for a conversation,

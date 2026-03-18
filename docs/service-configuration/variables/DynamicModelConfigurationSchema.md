@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.48**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.49**](../../README.md)
 
 ***
 
@@ -10,6 +10,6 @@
 const DynamicModelConfigurationSchema: ZodObject<DynamicModelConfiguration>;
 ```
 
-Defined in: [src/core/service-configuration/base-agent-setup.ts:46](https://github.com/wiil-io/core-js/blob/bcef8c50093e853c7d56e25bed9c820baafd1593/src/core/service-configuration/base-agent-setup.ts#L46)
+Defined in: [src/core/service-configuration/base-agent-setup.ts:46](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/service-configuration/base-agent-setup.ts#L46)
 
 Model configuration schema.

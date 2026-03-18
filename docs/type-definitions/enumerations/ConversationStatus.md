@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.48**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.49**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: ConversationStatus
 
-Defined in: [src/core/type-definitions/conversation.type.definition.ts:71](https://github.com/wiil-io/core-js/blob/bcef8c50093e853c7d56e25bed9c820baafd1593/src/core/type-definitions/conversation.type.definition.ts#L71)
+Defined in: [src/core/type-definitions/conversation.type.definition.ts:50](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/type-definitions/conversation.type.definition.ts#L50)
 
 Conversation lifecycle status.
 
@@ -28,10 +28,10 @@ ServiceConversationConfigSchema - Uses this for lifecycle tracking
 
 | Enumeration Member | Value | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="pending"></a> `PENDING` | `"pending"` | Conversation created but not yet started | [src/core/type-definitions/conversation.type.definition.ts:73](https://github.com/wiil-io/core-js/blob/bcef8c50093e853c7d56e25bed9c820baafd1593/src/core/type-definitions/conversation.type.definition.ts#L73) |
-| <a id="started"></a> `STARTED` | `"started"` | Conversation initiated, awaiting participant connection | [src/core/type-definitions/conversation.type.definition.ts:75](https://github.com/wiil-io/core-js/blob/bcef8c50093e853c7d56e25bed9c820baafd1593/src/core/type-definitions/conversation.type.definition.ts#L75) |
-| <a id="active"></a> `ACTIVE` | `"active"` | Conversation actively in progress with connected participants | [src/core/type-definitions/conversation.type.definition.ts:77](https://github.com/wiil-io/core-js/blob/bcef8c50093e853c7d56e25bed9c820baafd1593/src/core/type-definitions/conversation.type.definition.ts#L77) |
-| <a id="paused"></a> `PAUSED` | `"paused"` | Conversation temporarily paused (hold, transfer in progress) | [src/core/type-definitions/conversation.type.definition.ts:79](https://github.com/wiil-io/core-js/blob/bcef8c50093e853c7d56e25bed9c820baafd1593/src/core/type-definitions/conversation.type.definition.ts#L79) |
-| <a id="ended"></a> `ENDED` | `"ended"` | Conversation ended, awaiting post-processing | [src/core/type-definitions/conversation.type.definition.ts:81](https://github.com/wiil-io/core-js/blob/bcef8c50093e853c7d56e25bed9c820baafd1593/src/core/type-definitions/conversation.type.definition.ts#L81) |
-| <a id="summarized"></a> `SUMMARIZED` | `"summarized"` | Initial AI summary generated for the conversation | [src/core/type-definitions/conversation.type.definition.ts:83](https://github.com/wiil-io/core-js/blob/bcef8c50093e853c7d56e25bed9c820baafd1593/src/core/type-definitions/conversation.type.definition.ts#L83) |
-| <a id="updated_summarized"></a> `UPDATED_SUMMARIZED` | `"updated_summarized"` | Summary updated after additional processing or review | [src/core/type-definitions/conversation.type.definition.ts:85](https://github.com/wiil-io/core-js/blob/bcef8c50093e853c7d56e25bed9c820baafd1593/src/core/type-definitions/conversation.type.definition.ts#L85) |
+| <a id="pending"></a> `PENDING` | `"pending"` | Conversation created but not yet started | [src/core/type-definitions/conversation.type.definition.ts:52](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/type-definitions/conversation.type.definition.ts#L52) |
+| <a id="started"></a> `STARTED` | `"started"` | Conversation initiated, awaiting participant connection | [src/core/type-definitions/conversation.type.definition.ts:54](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/type-definitions/conversation.type.definition.ts#L54) |
+| <a id="active"></a> `ACTIVE` | `"active"` | Conversation actively in progress with connected participants | [src/core/type-definitions/conversation.type.definition.ts:56](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/type-definitions/conversation.type.definition.ts#L56) |
+| <a id="paused"></a> `PAUSED` | `"paused"` | Conversation temporarily paused (hold, transfer in progress) | [src/core/type-definitions/conversation.type.definition.ts:58](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/type-definitions/conversation.type.definition.ts#L58) |
+| <a id="ended"></a> `ENDED` | `"ended"` | Conversation ended, awaiting post-processing | [src/core/type-definitions/conversation.type.definition.ts:60](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/type-definitions/conversation.type.definition.ts#L60) |
+| <a id="summarized"></a> `SUMMARIZED` | `"summarized"` | Initial AI summary generated for the conversation | [src/core/type-definitions/conversation.type.definition.ts:62](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/type-definitions/conversation.type.definition.ts#L62) |
+| <a id="updated_summarized"></a> `UPDATED_SUMMARIZED` | `"updated_summarized"` | Summary updated after additional processing or review | [src/core/type-definitions/conversation.type.definition.ts:64](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/type-definitions/conversation.type.definition.ts#L64) |
