@@ -40,7 +40,31 @@ export const PhoneNumberSchema = z.string()
 export const LanguageCodeSchema = z.string().min(2).max(5).describe("ISO 639-1/639-2 language code with optional region (e.g., 'en', 'es', 'zh-CN')"); // e.g., "en", "es", "zh-CN"
 
 
+/**
+ * Extended base model schema with audit trail fields.
+ *
+ * Provides additional tracking for record creation, modification, and deletion
+ * with user attribution and optimistic locking support. Use this schema for
+ * entities requiring full audit compliance.
+ *
+ * @remarks
+ * **Architecture Context:**
+ * - **Extends**: BaseModelSchema with audit and versioning fields
+ * - **Use Cases**: Outbound communications, transactional records, compliance-sensitive data
+ * - **Soft Delete**: Uses deletedAt/deletedBy for recoverable deletion
+ * - **Optimistic Locking**: Version field prevents concurrent modification conflicts
+ */
+export const BaseModelSchemaWithAudit = BaseModelSchema.extend({
+    createdBy: z.string().optional().describe("User ID or system identifier who created this record, used for audit trails and accountability tracking"),
+    updatedBy: z.string().optional().describe("User ID or system identifier who last modified this record, updated on every change for change attribution"),
+    deletedAt: z.number().optional().describe("Unix timestamp in milliseconds when the record was soft-deleted, null if active (supports data recovery and retention policies)"),
+    deletedBy: z.string().optional().describe("User ID or system identifier who deleted this record, used for deletion audit trails and compliance reporting"),
+    uniqueKey: z.string().optional().describe("Business-defined unique key for idempotency and deduplication, prevents duplicate record creation from retry operations"),
+    version: z.number().optional().describe("Optimistic locking version number, incremented on each update to detect and prevent concurrent modification conflicts"),
+});
+
 export type LanguageCode = z.infer<typeof LanguageCodeSchema>;
 export type Address = z.infer<typeof AddressSchema>;
 export type PhoneNumber = z.infer<typeof PhoneNumberSchema>;
-export type BaseModelSchema = z.infer<typeof BaseModelSchema>;
+export type BaseModel = z.infer<typeof BaseModelSchema>;
+export type BaseModelWithAudit = z.infer<typeof BaseModelSchemaWithAudit>;

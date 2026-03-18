@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.47**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.48**](../../README.md)
 
 ***
 
@@ -6,13 +6,13 @@
 
 # Enumeration: DeploymentStatus
 
-Defined in: [src/core/type-definitions/service-config.definitions.ts:14](https://github.com/wiil-io/core-js/blob/81a2e002271d89bdaa7b84f1befea192faa0209f/src/core/type-definitions/service-config.definitions.ts#L14)
+Defined in: [src/core/type-definitions/service-config.definitions.ts:14](https://github.com/wiil-io/core-js/blob/bcef8c50093e853c7d56e25bed9c820baafd1593/src/core/type-definitions/service-config.definitions.ts#L14)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="pending"></a> `PENDING` | `"pending"` | [src/core/type-definitions/service-config.definitions.ts:15](https://github.com/wiil-io/core-js/blob/81a2e002271d89bdaa7b84f1befea192faa0209f/src/core/type-definitions/service-config.definitions.ts#L15) |
-| <a id="active"></a> `ACTIVE` | `"active"` | [src/core/type-definitions/service-config.definitions.ts:16](https://github.com/wiil-io/core-js/blob/81a2e002271d89bdaa7b84f1befea192faa0209f/src/core/type-definitions/service-config.definitions.ts#L16) |
-| <a id="paused"></a> `PAUSED` | `"paused"` | [src/core/type-definitions/service-config.definitions.ts:17](https://github.com/wiil-io/core-js/blob/81a2e002271d89bdaa7b84f1befea192faa0209f/src/core/type-definitions/service-config.definitions.ts#L17) |
-| <a id="archived"></a> `ARCHIVED` | `"archived"` | [src/core/type-definitions/service-config.definitions.ts:18](https://github.com/wiil-io/core-js/blob/81a2e002271d89bdaa7b84f1befea192faa0209f/src/core/type-definitions/service-config.definitions.ts#L18) |
+| <a id="pending"></a> `PENDING` | `"pending"` | [src/core/type-definitions/service-config.definitions.ts:15](https://github.com/wiil-io/core-js/blob/bcef8c50093e853c7d56e25bed9c820baafd1593/src/core/type-definitions/service-config.definitions.ts#L15) |
+| <a id="active"></a> `ACTIVE` | `"active"` | [src/core/type-definitions/service-config.definitions.ts:16](https://github.com/wiil-io/core-js/blob/bcef8c50093e853c7d56e25bed9c820baafd1593/src/core/type-definitions/service-config.definitions.ts#L16) |
+| <a id="paused"></a> `PAUSED` | `"paused"` | [src/core/type-definitions/service-config.definitions.ts:17](https://github.com/wiil-io/core-js/blob/bcef8c50093e853c7d56e25bed9c820baafd1593/src/core/type-definitions/service-config.definitions.ts#L17) |
+| <a id="archived"></a> `ARCHIVED` | `"archived"` | [src/core/type-definitions/service-config.definitions.ts:18](https://github.com/wiil-io/core-js/blob/bcef8c50093e853c7d56e25bed9c820baafd1593/src/core/type-definitions/service-config.definitions.ts#L18) |

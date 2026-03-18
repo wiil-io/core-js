@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.47**](../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.48**](../README.md)
 
 ***
 
@@ -49,11 +49,15 @@ Central export point for all type definitions.
 | [DepositStatus](enumerations/DepositStatus.md) | - |
 | [PropertyInquiryType](enumerations/PropertyInquiryType.md) | - |
 | [PropertyInquiryStatus](enumerations/PropertyInquiryStatus.md) | - |
-| [ConversationEventType](enumerations/ConversationEventType.md) | - |
-| [ServiceConversationType](enumerations/ServiceConversationType.md) | - |
-| [ConversationStatus](enumerations/ConversationStatus.md) | - |
-| [TranslationDirection](enumerations/TranslationDirection.md) | - |
-| [ConversationSummarySentiment](enumerations/ConversationSummarySentiment.md) | - |
+| [ConversationEventType](enumerations/ConversationEventType.md) | Conversation event types for webhook and analytics tracking. |
+| [ServiceConversationType](enumerations/ServiceConversationType.md) | Service conversation channel types. |
+| [ConversationStatus](enumerations/ConversationStatus.md) | Conversation lifecycle status. |
+| [TranslationDirection](enumerations/TranslationDirection.md) | Translation direction for multilingual conversations. |
+| [ConversationSummarySentiment](enumerations/ConversationSummarySentiment.md) | Conversation summary sentiment classification. |
+| [CallRequestStatus](enumerations/CallRequestStatus.md) | Call request status for outbound call lifecycle tracking. |
+| [ScheduleType](enumerations/ScheduleType.md) | Schedule type for outbound call timing configuration. |
+| [EmailStatus](enumerations/EmailStatus.md) | Email delivery status for tracking email lifecycle. |
+| [SmsStatus](enumerations/SmsStatus.md) | SMS delivery status for tracking message lifecycle. |
 | [KnowledgeBaseProcessingStatus](enumerations/KnowledgeBaseProcessingStatus.md) | - |
 | [KnowledgeTypes](enumerations/KnowledgeTypes.md) | - |
 | [StorageTier](enumerations/StorageTier.md) | - |

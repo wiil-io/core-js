@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.47**](../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.48**](../README.md)
 
 ***
 
@@ -40,6 +40,15 @@ Central export point for conversation schemas.
 | [UserEmailMessage](type-aliases/UserEmailMessage.md) | User email message schema. |
 | [AssistantEmailMessage](type-aliases/AssistantEmailMessage.md) | Assistant email message schema. |
 | [ChatMessage](type-aliases/ChatMessage.md) | - |
+| [CallingHours](type-aliases/CallingHours.md) | Calling hours configuration for outbound calls. |
+| [BusinessCallRequest](type-aliases/BusinessCallRequest.md) | Business call request schema. |
+| [CreateCallRequest](type-aliases/CreateCallRequest.md) | Schema for creating a new business service. Omits auto-generated fields. |
+| [EmailRecipient](type-aliases/EmailRecipient.md) | Email recipient schema (embedded in EmailRequestSchema). |
+| [EmailAttachment](type-aliases/EmailAttachment.md) | Email attachment schema (embedded in EmailRequestSchema). |
+| [EmailRequest](type-aliases/EmailRequest.md) | Email request schema. |
+| [CreateEmailRequest](type-aliases/CreateEmailRequest.md) | Schema for creating a new email request. Omits auto-generated fields. |
+| [SmsRequest](type-aliases/SmsRequest.md) | SMS request schema. |
+| [CreateSmsRequest](type-aliases/CreateSmsRequest.md) | Schema for creating a new SMS request. Omits auto-generated fields. |
 | [TranslationServiceRequest](type-aliases/TranslationServiceRequest.md) | Translation service request schema. |
 | [CreateTranslationServiceRequest](type-aliases/CreateTranslationServiceRequest.md) | Schema for creating a new translation service request. Omits auto-generated fields. |
 | [TranslationConversationConfig](type-aliases/TranslationConversationConfig.md) | Translation conversation configuration schema. |
@@ -69,6 +78,15 @@ Central export point for conversation schemas.
 | [AssistantChatMessageSchema](variables/AssistantChatMessageSchema.md) | Assistant chat message schema. |
 | [UserEmailMessageSchema](variables/UserEmailMessageSchema.md) | User email message schema. |
 | [AssistantEmailMessageSchema](variables/AssistantEmailMessageSchema.md) | Assistant email message schema. |
+| [CallingHoursSchema](variables/CallingHoursSchema.md) | Calling hours configuration for outbound calls. |
+| [BusinessCallRequestSchema](variables/BusinessCallRequestSchema.md) | Business call request schema. |
+| [CreateCallRequestSchema](variables/CreateCallRequestSchema.md) | Schema for creating a new business service. Omits auto-generated fields. |
+| [EmailRecipientSchema](variables/EmailRecipientSchema.md) | Email recipient schema (embedded in EmailRequestSchema). |
+| [EmailAttachmentSchema](variables/EmailAttachmentSchema.md) | Email attachment schema (embedded in EmailRequestSchema). |
+| [EmailRequestSchema](variables/EmailRequestSchema.md) | Email request schema. |
+| [CreateEmailRequestSchema](variables/CreateEmailRequestSchema.md) | Schema for creating a new email request. Omits auto-generated fields. |
+| [SmsRequestSchema](variables/SmsRequestSchema.md) | SMS request schema. |
+| [CreateSmsRequestSchema](variables/CreateSmsRequestSchema.md) | Schema for creating a new SMS request. Omits auto-generated fields. |
 | [TranslationServiceRequestSchema](variables/TranslationServiceRequestSchema.md) | Translation service request schema. |
 | [TranslationConversationConfigSchema](variables/TranslationConversationConfigSchema.md) | Translation conversation configuration schema. |
 | [CreateTranslationServiceRequestSchema](variables/CreateTranslationServiceRequestSchema.md) | Schema for creating a new translation service request. Omits auto-generated fields. |

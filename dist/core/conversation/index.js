@@ -22,3 +22,6 @@ __exportStar(require("./conversation-config.schema"), exports);
 __exportStar(require("./conversation-message.schema"), exports);
 __exportStar(require("./translation-config.schema"), exports);
 __exportStar(require("./translation-conversation.schema"), exports);
+__exportStar(require("./outbound-call.schema"), exports);
+__exportStar(require("./outbound-email.schema"), exports);
+__exportStar(require("./outbound-sms.schema"), exports);

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.47**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.48**](../../README.md)
 
 ***
 
@@ -10,6 +10,6 @@
 const PaginationRequestSchema: ZodObject<PaginationRequest>;
 ```
 
-Defined in: [src/request/models/paginated-result.schema.ts:76](https://github.com/wiil-io/core-js/blob/81a2e002271d89bdaa7b84f1befea192faa0209f/src/request/models/paginated-result.schema.ts#L76)
+Defined in: [src/request/models/paginated-result.schema.ts:76](https://github.com/wiil-io/core-js/blob/bcef8c50093e853c7d56e25bed9c820baafd1593/src/request/models/paginated-result.schema.ts#L76)
 
 Generic pagination request schema.
