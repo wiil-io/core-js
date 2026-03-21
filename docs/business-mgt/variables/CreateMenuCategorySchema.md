@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.50**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.51**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const CreateMenuCategorySchema: ZodObject<CreateMenuCategory>;
 ```
 
-Defined in: [src/core/business-mgt/menu-config.schema.ts:56](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/business-mgt/menu-config.schema.ts#L56)
+Defined in: [src/core/business-mgt/menu-config.schema.ts:56](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu-config.schema.ts#L56)
 
 Zod schema for creating a new menu category.
 

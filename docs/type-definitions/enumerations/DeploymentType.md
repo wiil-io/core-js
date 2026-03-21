@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.50**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.51**](../../README.md)
 
 ***
 
@@ -6,15 +6,15 @@
 
 # Enumeration: DeploymentType
 
-Defined in: [src/core/type-definitions/service-config.definitions.ts:4](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/type-definitions/service-config.definitions.ts#L4)
+Defined in: [src/core/type-definitions/service-config.definitions.ts:4](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/service-config.definitions.ts#L4)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="calls"></a> `CALLS` | `"calls"` | [src/core/type-definitions/service-config.definitions.ts:5](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/type-definitions/service-config.definitions.ts#L5) |
-| <a id="sms"></a> `SMS` | `"sms"` | [src/core/type-definitions/service-config.definitions.ts:6](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/type-definitions/service-config.definitions.ts#L6) |
-| <a id="web"></a> `WEB` | `"web"` | [src/core/type-definitions/service-config.definitions.ts:7](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/type-definitions/service-config.definitions.ts#L7) |
-| <a id="mobile"></a> `MOBILE` | `"mobile-app"` | [src/core/type-definitions/service-config.definitions.ts:8](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/type-definitions/service-config.definitions.ts#L8) |
-| <a id="whatsapp"></a> `WHATSAPP` | `"whatsapp"` | [src/core/type-definitions/service-config.definitions.ts:9](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/type-definitions/service-config.definitions.ts#L9) |
-| <a id="email"></a> `EMAIL` | `"email"` | [src/core/type-definitions/service-config.definitions.ts:10](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/type-definitions/service-config.definitions.ts#L10) |
+| <a id="calls"></a> `CALLS` | `"calls"` | [src/core/type-definitions/service-config.definitions.ts:5](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/service-config.definitions.ts#L5) |
+| <a id="sms"></a> `SMS` | `"sms"` | [src/core/type-definitions/service-config.definitions.ts:6](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/service-config.definitions.ts#L6) |
+| <a id="web"></a> `WEB` | `"web"` | [src/core/type-definitions/service-config.definitions.ts:7](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/service-config.definitions.ts#L7) |
+| <a id="mobile"></a> `MOBILE` | `"mobile-app"` | [src/core/type-definitions/service-config.definitions.ts:8](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/service-config.definitions.ts#L8) |
+| <a id="whatsapp"></a> `WHATSAPP` | `"whatsapp"` | [src/core/type-definitions/service-config.definitions.ts:9](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/service-config.definitions.ts#L9) |
+| <a id="email"></a> `EMAIL` | `"email"` | [src/core/type-definitions/service-config.definitions.ts:10](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/service-config.definitions.ts#L10) |

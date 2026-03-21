@@ -35,7 +35,8 @@ export type EmailAttachment = z.infer<typeof EmailAttachmentSchema>;
  * Email request schema.
  *
  * @typedef {Object} EmailRequest
- * @property {string} [emailConfigurationId] - Email configuration for sender settings
+ * @property {string} [emailConfigurationId] - Email configuration for sender settings. May be provided or system falls back to default platform email
+ * @property {string} [configuredEmailAddress] - Configured sender email address. May be provided or system falls back to default platform email
  * @property {string} [templateId] - Pre-defined template ID for structured content
  * @property {Array} to - Primary recipients (required, at least one)
  * @property {Array} [cc] - Carbon copy recipients
@@ -51,7 +52,8 @@ export type EmailAttachment = z.infer<typeof EmailAttachmentSchema>;
  * @property {Object} [metadata] - Additional custom metadata
  */
 export const EmailRequestSchema = BaseModelSchema.safeExtend({
-    emailConfigurationId: z.string().optional().describe("Email configuration ID for sender settings, SMTP/API credentials, and domain authentication (references EmailConfiguration). When omitted, uses organization default."),
+    emailConfigurationId: z.string().optional().describe("Email configuration ID for sender settings, API credentials, and domain authentication (references EmailConfiguration). May be provided or system falls back to default platform email."),
+    configuredEmailAddress: z.string().optional().describe("Configured sender email address for this request. May be provided or system falls back to default platform email."),
     templateId: z.string().optional().describe("Pre-defined email template ID for structured content with variable placeholders (references EmailTemplate). Template content merged with variables field."),
 
     // Recipients

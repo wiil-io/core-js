@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.50**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.51**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const UpdateBusinessServiceSchema: ZodObject<UpdateBusinessService>;
 ```
 
-Defined in: [src/core/business-mgt/service-config.schema.ts:107](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/business-mgt/service-config.schema.ts#L107)
+Defined in: [src/core/business-mgt/service-config.schema.ts:107](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/service-config.schema.ts#L107)
 
 Schema for updating an existing business service.
 All fields are optional except id.

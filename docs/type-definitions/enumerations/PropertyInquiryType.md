@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.50**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.51**](../../README.md)
 
 ***
 
@@ -6,11 +6,11 @@
 
 # Enumeration: PropertyInquiryType
 
-Defined in: [src/core/type-definitions/business-definitions.ts:287](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/type-definitions/business-definitions.ts#L287)
+Defined in: [src/core/type-definitions/business-definitions.ts:287](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/business-definitions.ts#L287)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="offer"></a> `OFFER` | `"offer"` | [src/core/type-definitions/business-definitions.ts:288](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/type-definitions/business-definitions.ts#L288) |
-| <a id="general"></a> `GENERAL` | `"general"` | [src/core/type-definitions/business-definitions.ts:289](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/type-definitions/business-definitions.ts#L289) |
+| <a id="offer"></a> `OFFER` | `"offer"` | [src/core/type-definitions/business-definitions.ts:288](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/business-definitions.ts#L288) |
+| <a id="general"></a> `GENERAL` | `"general"` | [src/core/type-definitions/business-definitions.ts:289](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/business-definitions.ts#L289) |

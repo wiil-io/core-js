@@ -28,7 +28,8 @@ export type EmailAttachment = z.infer<typeof EmailAttachmentSchema>;
  * Email request schema.
  *
  * @typedef {Object} EmailRequest
- * @property {string} [emailConfigurationId] - Email configuration for sender settings
+ * @property {string} [emailConfigurationId] - Email configuration for sender settings. May be provided or system falls back to default platform email
+ * @property {string} [configuredEmailAddress] - Configured sender email address. May be provided or system falls back to default platform email
  * @property {string} [templateId] - Pre-defined template ID for structured content
  * @property {Array} to - Primary recipients (required, at least one)
  * @property {Array} [cc] - Carbon copy recipients
@@ -48,6 +49,7 @@ export declare const EmailRequestSchema: z.ZodObject<{
     createdAt: z.ZodOptional<z.ZodNumber>;
     updatedAt: z.ZodOptional<z.ZodNumber>;
     emailConfigurationId: z.ZodOptional<z.ZodString>;
+    configuredEmailAddress: z.ZodOptional<z.ZodString>;
     templateId: z.ZodOptional<z.ZodString>;
     to: z.ZodArray<z.ZodObject<{
         email: z.ZodString;
@@ -89,6 +91,7 @@ export declare const CreateEmailRequestSchema: z.ZodObject<{
     }, z.core.$strip>>;
     scheduledAt: z.ZodOptional<z.ZodNumber>;
     emailConfigurationId: z.ZodOptional<z.ZodString>;
+    configuredEmailAddress: z.ZodOptional<z.ZodString>;
     templateId: z.ZodOptional<z.ZodString>;
     cc: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodObject<{
         email: z.ZodString;
@@ -115,6 +118,7 @@ export declare const EmailRequestResultSchema: z.ZodObject<{
         createdAt: z.ZodOptional<z.ZodNumber>;
         updatedAt: z.ZodOptional<z.ZodNumber>;
         emailConfigurationId: z.ZodOptional<z.ZodString>;
+        configuredEmailAddress: z.ZodOptional<z.ZodString>;
         templateId: z.ZodOptional<z.ZodString>;
         to: z.ZodArray<z.ZodObject<{
             email: z.ZodString;
