@@ -13,8 +13,6 @@ import { PhoneStatus, ProviderType } from "../type-definitions";
  * @module service-configuration/phone-config
  */
 
-const phoneNumberPattern = /^\+[1-9]\d{1,14}$/;
-
 /**
  * Zod schema for Phone Configuration validation.
  *
@@ -38,9 +36,9 @@ const phoneNumberPattern = /^\+[1-9]\d{1,14}$/;
  *
  * @typedef {Object} PhoneConfigurationProperties
  * @property {string} id - Unique identifier for the phone configuration
- * @property {string} phoneNumber - Phone number in E.164 international format (e.g., '+12125551234' for US, '+442071234567' for UK)
+ * @property {string} phoneNumber - Phone number, short code, or alphanumeric sender ID
  * @property {string} providerPhoneNumberId - Unique identifier from the telephony provider's system for this phone number
- * @property {string} phoneRequestId - Reference ID for the original phone number purchase transaction
+ * @property {string} phoneRequestId - Reference ID for the original phone number request or setup configuration
  * @property {string | null} friendlyName - Human-readable display name for administrative interfaces
  * @property {string | null} [regionId] - Region identifier where this number is registered (provider-specific)
  * @property {number | null} [monthlyPrice] - Monthly recurring cost for maintaining this phone number
@@ -83,9 +81,9 @@ const phoneNumberPattern = /^\+[1-9]\d{1,14}$/;
  * ```
  */
 export const PhoneConfigurationSchema = BaseModelSchema.safeExtend({
-    phoneNumber: z.string().regex(phoneNumberPattern, 'Phone number must be in E.164 format (e.g., +12125551234)').describe("Phone number in E.164 international format (e.g., '+12125551234' for US, '+442071234567' for UK, '+33123456789' for France)"),
+    phoneNumber: z.string().min(1).describe("Phone number, short code, or alphanumeric sender ID"),
     providerPhoneNumberId: z.string().describe("Unique identifier for this phone number from the telephony provider's system (provider-specific format)"),
-    phoneRequestId: z.string().describe("Reference ID for the original phone number purchase or provisioning transaction for tracking and audit"),
+    phoneRequestId: z.string().describe("Reference ID for the original phone number request or setup configuration"),
     friendlyName: z.string().nullable().describe("Human-readable display name for this phone number used in administrative interfaces (e.g., 'Customer Support Line', 'Sales Main Number')"),
     regionId: z.string().optional().nullable().describe("Region identifier where this phone number is registered (provider-specific, e.g., 'us-ny' for New York)"),
     monthlyPrice: z.number().optional().nullable().describe("Monthly recurring cost for maintaining this phone number in USD or provider currency"),

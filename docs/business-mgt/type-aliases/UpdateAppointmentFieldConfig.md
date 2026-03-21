@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.49**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.50**](../../README.md)
 
 ***
 
@@ -63,15 +63,15 @@ type UpdateAppointmentFieldConfig = {
 };
 ```
 
-Defined in: [src/core/business-mgt/appointment-field-config.schema.ts:56](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/business-mgt/appointment-field-config.schema.ts#L56)
+Defined in: [src/core/business-mgt/appointment-field-config.schema.ts:56](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/business-mgt/appointment-field-config.schema.ts#L56)
 
 ## Type Declaration
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="fields"></a> `fields?` | \{ `fieldKey`: `string`; `fieldType`: `DynamicFieldType`; `label`: `string`; `description?`: `string`; `validation?`: \{ `required?`: `boolean`; `minLength?`: `number`; `maxLength?`: `number`; `min?`: `number`; `max?`: `number`; `pattern?`: `string`; `patternMessage?`: `string`; \}; `uiHints?`: \{ `placeholder?`: `string`; `helpText?`: `string`; `displayOrder?`: `number`; `width?`: `"full"` \| `"half"` \| `"third"`; \}; `options?`: \{ `value`: `string`; `label`: `string`; `displayOrder?`: `number`; \}[]; `defaultValue?`: `any`; `isActive?`: `boolean`; `condition?`: \{ `dependsOn`: `string`; `operator`: \| `"equals"` \| `"notEquals"` \| `"contains"` \| `"isEmpty"` \| `"isNotEmpty"` \| `"greaterThan"` \| `"lessThan"`; `value?`: `any`; \}; `groupKey?`: `string`; \}[] | [src/core/business-mgt/appointment-field-config.schema.ts:36](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/business-mgt/appointment-field-config.schema.ts#L36) |
-| <a id="groups"></a> `groups?` | \{ `groupKey`: `string`; `label`: `string`; `description?`: `string`; `displayOrder?`: `number`; `collapsible?`: `boolean`; `defaultCollapsed?`: `boolean`; \}[] | [src/core/business-mgt/appointment-field-config.schema.ts:37](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/business-mgt/appointment-field-config.schema.ts#L37) |
-| <a id="reusedetails"></a> `reuseDetails?` | `boolean` | [src/core/business-mgt/appointment-field-config.schema.ts:38](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/business-mgt/appointment-field-config.schema.ts#L38) |
-| <a id="ensureemail"></a> `ensureEmail?` | `boolean` | [src/core/business-mgt/appointment-field-config.schema.ts:39](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/business-mgt/appointment-field-config.schema.ts#L39) |
-| <a id="ensurephone"></a> `ensurePhone?` | `boolean` | [src/core/business-mgt/appointment-field-config.schema.ts:40](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/business-mgt/appointment-field-config.schema.ts#L40) |
-| <a id="id"></a> `id` | `string` | [src/core/business-mgt/appointment-field-config.schema.ts:53](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/business-mgt/appointment-field-config.schema.ts#L53) |
+| <a id="fields"></a> `fields?` | \{ `fieldKey`: `string`; `fieldType`: `DynamicFieldType`; `label`: `string`; `description?`: `string`; `validation?`: \{ `required?`: `boolean`; `minLength?`: `number`; `maxLength?`: `number`; `min?`: `number`; `max?`: `number`; `pattern?`: `string`; `patternMessage?`: `string`; \}; `uiHints?`: \{ `placeholder?`: `string`; `helpText?`: `string`; `displayOrder?`: `number`; `width?`: `"full"` \| `"half"` \| `"third"`; \}; `options?`: \{ `value`: `string`; `label`: `string`; `displayOrder?`: `number`; \}[]; `defaultValue?`: `any`; `isActive?`: `boolean`; `condition?`: \{ `dependsOn`: `string`; `operator`: \| `"equals"` \| `"notEquals"` \| `"contains"` \| `"isEmpty"` \| `"isNotEmpty"` \| `"greaterThan"` \| `"lessThan"`; `value?`: `any`; \}; `groupKey?`: `string`; \}[] | [src/core/business-mgt/appointment-field-config.schema.ts:36](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/business-mgt/appointment-field-config.schema.ts#L36) |
+| <a id="groups"></a> `groups?` | \{ `groupKey`: `string`; `label`: `string`; `description?`: `string`; `displayOrder?`: `number`; `collapsible?`: `boolean`; `defaultCollapsed?`: `boolean`; \}[] | [src/core/business-mgt/appointment-field-config.schema.ts:37](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/business-mgt/appointment-field-config.schema.ts#L37) |
+| <a id="reusedetails"></a> `reuseDetails?` | `boolean` | [src/core/business-mgt/appointment-field-config.schema.ts:38](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/business-mgt/appointment-field-config.schema.ts#L38) |
+| <a id="ensureemail"></a> `ensureEmail?` | `boolean` | [src/core/business-mgt/appointment-field-config.schema.ts:39](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/business-mgt/appointment-field-config.schema.ts#L39) |
+| <a id="ensurephone"></a> `ensurePhone?` | `boolean` | [src/core/business-mgt/appointment-field-config.schema.ts:40](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/business-mgt/appointment-field-config.schema.ts#L40) |
+| <a id="id"></a> `id` | `string` | [src/core/business-mgt/appointment-field-config.schema.ts:53](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/business-mgt/appointment-field-config.schema.ts#L53) |

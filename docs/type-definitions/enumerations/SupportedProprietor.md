@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.49**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.50**](../../README.md)
 
 ***
 
@@ -6,17 +6,17 @@
 
 # Enumeration: SupportedProprietor
 
-Defined in: [src/core/type-definitions/service-config.definitions.ts:89](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/type-definitions/service-config.definitions.ts#L89)
+Defined in: [src/core/type-definitions/service-config.definitions.ts:100](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/type-definitions/service-config.definitions.ts#L100)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="openai"></a> `OPENAI` | `"OpenAI"` | [src/core/type-definitions/service-config.definitions.ts:90](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/type-definitions/service-config.definitions.ts#L90) |
-| <a id="google"></a> `GOOGLE` | `"Google"` | [src/core/type-definitions/service-config.definitions.ts:91](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/type-definitions/service-config.definitions.ts#L91) |
-| <a id="anthropic"></a> `ANTHROPIC` | `"Anthropic"` | [src/core/type-definitions/service-config.definitions.ts:92](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/type-definitions/service-config.definitions.ts#L92) |
-| <a id="groq"></a> `GROQ` | `"Groq"` | [src/core/type-definitions/service-config.definitions.ts:93](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/type-definitions/service-config.definitions.ts#L93) |
-| <a id="deepgram"></a> `DEEPGRAM` | `"Deepgram"` | [src/core/type-definitions/service-config.definitions.ts:94](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/type-definitions/service-config.definitions.ts#L94) |
-| <a id="elevenlabs"></a> `ELEVENLABS` | `"ElevenLabs"` | [src/core/type-definitions/service-config.definitions.ts:95](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/type-definitions/service-config.definitions.ts#L95) |
-| <a id="deepseek"></a> `DEEPSEEK` | `"DeepSeek"` | [src/core/type-definitions/service-config.definitions.ts:96](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/type-definitions/service-config.definitions.ts#L96) |
-| <a id="cartesia"></a> `CARTESIA` | `"Cartesia"` | [src/core/type-definitions/service-config.definitions.ts:97](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/type-definitions/service-config.definitions.ts#L97) |
+| <a id="openai"></a> `OPENAI` | `"OpenAI"` | [src/core/type-definitions/service-config.definitions.ts:101](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/type-definitions/service-config.definitions.ts#L101) |
+| <a id="google"></a> `GOOGLE` | `"Google"` | [src/core/type-definitions/service-config.definitions.ts:102](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/type-definitions/service-config.definitions.ts#L102) |
+| <a id="anthropic"></a> `ANTHROPIC` | `"Anthropic"` | [src/core/type-definitions/service-config.definitions.ts:103](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/type-definitions/service-config.definitions.ts#L103) |
+| <a id="groq"></a> `GROQ` | `"Groq"` | [src/core/type-definitions/service-config.definitions.ts:104](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/type-definitions/service-config.definitions.ts#L104) |
+| <a id="deepgram"></a> `DEEPGRAM` | `"Deepgram"` | [src/core/type-definitions/service-config.definitions.ts:105](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/type-definitions/service-config.definitions.ts#L105) |
+| <a id="elevenlabs"></a> `ELEVENLABS` | `"ElevenLabs"` | [src/core/type-definitions/service-config.definitions.ts:106](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/type-definitions/service-config.definitions.ts#L106) |
+| <a id="deepseek"></a> `DEEPSEEK` | `"DeepSeek"` | [src/core/type-definitions/service-config.definitions.ts:107](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/type-definitions/service-config.definitions.ts#L107) |
+| <a id="cartesia"></a> `CARTESIA` | `"Cartesia"` | [src/core/type-definitions/service-config.definitions.ts:108](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/type-definitions/service-config.definitions.ts#L108) |

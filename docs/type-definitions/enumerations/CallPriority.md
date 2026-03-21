@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.49**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.50**](../../README.md)
 
 ***
 
@@ -6,12 +6,12 @@
 
 # Enumeration: CallPriority
 
-Defined in: [src/core/type-definitions/business-definitions.ts:188](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/type-definitions/business-definitions.ts#L188)
+Defined in: [src/core/type-definitions/business-definitions.ts:188](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/type-definitions/business-definitions.ts#L188)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="high"></a> `HIGH` | `"high"` | [src/core/type-definitions/business-definitions.ts:189](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/type-definitions/business-definitions.ts#L189) |
-| <a id="medium"></a> `MEDIUM` | `"medium"` | [src/core/type-definitions/business-definitions.ts:190](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/type-definitions/business-definitions.ts#L190) |
-| <a id="low"></a> `LOW` | `"low"` | [src/core/type-definitions/business-definitions.ts:191](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/type-definitions/business-definitions.ts#L191) |
+| <a id="high"></a> `HIGH` | `"high"` | [src/core/type-definitions/business-definitions.ts:189](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/type-definitions/business-definitions.ts#L189) |
+| <a id="medium"></a> `MEDIUM` | `"medium"` | [src/core/type-definitions/business-definitions.ts:190](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/type-definitions/business-definitions.ts#L190) |
+| <a id="low"></a> `LOW` | `"low"` | [src/core/type-definitions/business-definitions.ts:191](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/type-definitions/business-definitions.ts#L191) |

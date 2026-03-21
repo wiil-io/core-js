@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CreateSmsRequestSchema = exports.SmsRequestSchema = void 0;
+exports.SmsRequestResultSchema = exports.CreateSmsRequestSchema = exports.SmsRequestSchema = void 0;
 const zod_1 = require("zod");
 const base_schema_1 = require("../base.schema");
 /**
@@ -21,10 +21,10 @@ const base_schema_1 = require("../base.schema");
  * @property {string} [serviceConversationConfigId] - Linked conversation record
  * @property {Object} [metadata] - Additional custom metadata
  */
-exports.SmsRequestSchema = base_schema_1.BaseModelSchemaWithAudit.safeExtend({
+exports.SmsRequestSchema = base_schema_1.BaseModelSchema.safeExtend({
     phoneConfigurationId: zod_1.z.string().nullable().optional().describe("Phone configuration ID for sender number settings and carrier routing (references PhoneConfiguration). When omitted, uses organization default SMS-enabled number."),
     to: zod_1.z.string().min(1, "Recipient phone number is required").describe("Recipient phone number in E.164 international format (e.g., '+12125551234'). Must be a valid mobile number capable of receiving SMS messages."),
-    from: zod_1.z.string().nullable().optional().describe("Sender phone number in E.164 format displayed to the recipient. Must be a verified SMS-enabled number owned by the organization. Uses default from phoneConfigurationId if omitted."),
+    from: zod_1.z.string().nullable().optional().describe("Sender phone number in E.164 format or short code (e.g., '12345') displayed to the recipient. Must be a verified SMS-enabled number or short code owned by the organization. Uses default from phoneConfigurationId if omitted."),
     // Content
     body: zod_1.z.string().min(1, "Message body is required").describe("Text content of the SMS message. Standard SMS supports 160 characters (GSM-7), unicode messages 70 characters per segment. Longer messages automatically split into multiple segments."),
     templateId: zod_1.z.string().nullable().optional().describe("Pre-defined SMS template ID for structured content with variable placeholders (references SmsTemplate). Template content merged with variables field for personalization."),
@@ -43,10 +43,9 @@ exports.CreateSmsRequestSchema = exports.SmsRequestSchema.omit({
     id: true,
     createdAt: true,
     updatedAt: true,
-    createdBy: true,
-    updatedBy: true,
-    deletedAt: true,
-    deletedBy: true,
-    uniqueKey: true,
-    version: true,
+});
+exports.SmsRequestResultSchema = zod_1.z.object({
+    success: zod_1.z.boolean().optional().default(false).describe("Whether the SMS request was successful"),
+    request: exports.SmsRequestSchema.optional().nullable().describe("Original SMS request details"),
+    error_message: zod_1.z.string().optional().nullable().describe("Error message if the request failed"),
 });

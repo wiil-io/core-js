@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AgentCapabilities = exports.AgentRoleTemplateIdentifier = exports.LLMRequestType = exports.SupportedLLMKit = exports.SupportedProprietor = exports.LLMType = exports.AssistantType = exports.DeploymentProvisioningType = exports.OttCommunicationType = exports.MobilePlatform = exports.PhoneNumberType = exports.PhoneStatus = exports.PhonePurchaseStatus = exports.ProviderType = exports.DeploymentStatus = exports.DeploymentType = void 0;
+exports.AgentCapabilities = exports.AgentRoleTemplateIdentifier = exports.LLMRequestType = exports.SupportedLLMKit = exports.SupportedProprietor = exports.LLMType = exports.AssistantType = exports.DeploymentProvisioningType = exports.OttCommunicationType = exports.MobilePlatform = exports.PhoneNumberType = exports.PhoneStatus = exports.PhonePurchaseStatus = exports.EmailProviderType = exports.ProviderType = exports.DeploymentStatus = exports.DeploymentType = void 0;
 const account_definitions_1 = require("./account-definitions");
 // Enums
 var DeploymentType;
@@ -24,7 +24,19 @@ var ProviderType;
     ProviderType["TWILIO"] = "twilio";
     ProviderType["SIGNALWIRE"] = "signal-wire";
     ProviderType["TELNYX"] = "telnyx";
+    ProviderType["MESSAGEBIRD"] = "messagebird";
+    ProviderType["SNS"] = "sns";
 })(ProviderType || (exports.ProviderType = ProviderType = {}));
+var EmailProviderType;
+(function (EmailProviderType) {
+    EmailProviderType["GOOGLE"] = "google";
+    EmailProviderType["OUTLOOK"] = "outlook";
+    EmailProviderType["SENDGRID"] = "sendgrid";
+    EmailProviderType["SES"] = "ses";
+    EmailProviderType["MAILGUN"] = "mailgun";
+    EmailProviderType["POSTMARK"] = "postmark";
+    EmailProviderType["SMTP"] = "smtp";
+})(EmailProviderType || (exports.EmailProviderType = EmailProviderType = {}));
 var PhonePurchaseStatus;
 (function (PhonePurchaseStatus) {
     PhonePurchaseStatus["PENDING"] = "pending";

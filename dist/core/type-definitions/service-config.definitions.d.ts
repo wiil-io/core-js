@@ -16,7 +16,18 @@ export declare enum DeploymentStatus {
 export declare enum ProviderType {
     TWILIO = "twilio",
     SIGNALWIRE = "signal-wire",
-    TELNYX = "telnyx"
+    TELNYX = "telnyx",
+    MESSAGEBIRD = "messagebird",
+    SNS = "sns"
+}
+export declare enum EmailProviderType {
+    GOOGLE = "google",
+    OUTLOOK = "outlook",
+    SENDGRID = "sendgrid",
+    SES = "ses",
+    MAILGUN = "mailgun",
+    POSTMARK = "postmark",
+    SMTP = "smtp"
 }
 export declare enum PhonePurchaseStatus {
     PENDING = "pending",

@@ -1,6 +1,5 @@
 import { z } from "zod";
-import { BaseModelSchemaWithAudit } from "../base.schema";
-import { EmailStatus } from "../type-definitions";
+import { BaseModelSchema } from "../base.schema";
 
 /**
  * @fileoverview Outbound email request and delivery tracking schema definitions.
@@ -51,7 +50,7 @@ export type EmailAttachment = z.infer<typeof EmailAttachmentSchema>;
  * @property {string} [serviceConversationConfigId] - Linked conversation record
  * @property {Object} [metadata] - Additional custom metadata
  */
-export const EmailRequestSchema = BaseModelSchemaWithAudit.safeExtend({
+export const EmailRequestSchema = BaseModelSchema.safeExtend({
     emailConfigurationId: z.string().optional().describe("Email configuration ID for sender settings, SMTP/API credentials, and domain authentication (references EmailConfiguration). When omitted, uses organization default."),
     templateId: z.string().optional().describe("Pre-defined email template ID for structured content with variable placeholders (references EmailTemplate). Template content merged with variables field."),
 
@@ -84,13 +83,17 @@ export const CreateEmailRequestSchema = EmailRequestSchema.omit({
     id: true,
     createdAt: true,
     updatedAt: true,
-    createdBy: true,
-    updatedBy: true,
-    deletedAt: true,
-    deletedBy: true,
-    uniqueKey: true,
-    version: true,
 });
+
+
+export const EmailRequestResultSchema = z.object({
+    success: z.boolean().optional().default(false).describe("Whether the email request was successful"),
+    request: EmailRequestSchema.optional().nullable().describe("Original email request details"),
+    error_message: z.string().optional().nullable().describe("Error message if the request failed"),
+});
+
 
 export type EmailRequest = z.infer<typeof EmailRequestSchema>;
 export type CreateEmailRequest = z.infer<typeof CreateEmailRequestSchema>;
+
+export type EmailRequestResult = z.infer<typeof EmailRequestResultSchema>;

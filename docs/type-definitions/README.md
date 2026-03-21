@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.49**](../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.50**](../README.md)
 
 ***
 
@@ -64,6 +64,7 @@ Central export point for all type definitions.
 | [DeploymentType](enumerations/DeploymentType.md) | - |
 | [DeploymentStatus](enumerations/DeploymentStatus.md) | - |
 | [ProviderType](enumerations/ProviderType.md) | - |
+| [EmailProviderType](enumerations/EmailProviderType.md) | - |
 | [PhonePurchaseStatus](enumerations/PhonePurchaseStatus.md) | - |
 | [PhoneStatus](enumerations/PhoneStatus.md) | - |
 | [PhoneNumberType](enumerations/PhoneNumberType.md) | - |

@@ -47,12 +47,6 @@ export declare const EmailRequestSchema: z.ZodObject<{
     id: z.ZodString;
     createdAt: z.ZodOptional<z.ZodNumber>;
     updatedAt: z.ZodOptional<z.ZodNumber>;
-    createdBy: z.ZodOptional<z.ZodString>;
-    updatedBy: z.ZodOptional<z.ZodString>;
-    deletedAt: z.ZodOptional<z.ZodNumber>;
-    deletedBy: z.ZodOptional<z.ZodString>;
-    uniqueKey: z.ZodOptional<z.ZodString>;
-    version: z.ZodOptional<z.ZodNumber>;
     emailConfigurationId: z.ZodOptional<z.ZodString>;
     templateId: z.ZodOptional<z.ZodString>;
     to: z.ZodArray<z.ZodObject<{
@@ -114,5 +108,42 @@ export declare const CreateEmailRequestSchema: z.ZodObject<{
         contentType: z.ZodString;
     }, z.core.$strip>>>>;
 }, z.core.$strip>;
+export declare const EmailRequestResultSchema: z.ZodObject<{
+    success: z.ZodDefault<z.ZodOptional<z.ZodBoolean>>;
+    request: z.ZodNullable<z.ZodOptional<z.ZodObject<{
+        id: z.ZodString;
+        createdAt: z.ZodOptional<z.ZodNumber>;
+        updatedAt: z.ZodOptional<z.ZodNumber>;
+        emailConfigurationId: z.ZodOptional<z.ZodString>;
+        templateId: z.ZodOptional<z.ZodString>;
+        to: z.ZodArray<z.ZodObject<{
+            email: z.ZodString;
+            name: z.ZodOptional<z.ZodString>;
+        }, z.core.$strip>>;
+        cc: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodObject<{
+            email: z.ZodString;
+            name: z.ZodOptional<z.ZodString>;
+        }, z.core.$strip>>>>;
+        bcc: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodObject<{
+            email: z.ZodString;
+            name: z.ZodOptional<z.ZodString>;
+        }, z.core.$strip>>>>;
+        replyTo: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+        subject: z.ZodString;
+        bodyHtml: z.ZodString;
+        bodyText: z.ZodOptional<z.ZodString>;
+        variables: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodAny>>;
+        attachments: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodObject<{
+            filename: z.ZodString;
+            content: z.ZodString;
+            contentType: z.ZodString;
+        }, z.core.$strip>>>>;
+        scheduledAt: z.ZodOptional<z.ZodNumber>;
+        serviceConversationConfigId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+        metadata: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodAny>>;
+    }, z.core.$strip>>>;
+    error_message: z.ZodNullable<z.ZodOptional<z.ZodString>>;
+}, z.core.$strip>;
 export type EmailRequest = z.infer<typeof EmailRequestSchema>;
 export type CreateEmailRequest = z.infer<typeof CreateEmailRequestSchema>;
+export type EmailRequestResult = z.infer<typeof EmailRequestResultSchema>;

@@ -2,28 +2,39 @@ import { BusinessSupportServices } from "./account-definitions";
 
 // Enums
 export enum DeploymentType {
-  CALLS = 'calls',
-  SMS = 'sms',
-  WEB = 'web',
-  MOBILE = 'mobile-app',
-  WHATSAPP = 'whatsapp',
-  EMAIL = 'email',
+    CALLS = 'calls',
+    SMS = 'sms',
+    WEB = 'web',
+    MOBILE = 'mobile-app',
+    WHATSAPP = 'whatsapp',
+    EMAIL = 'email',
 }
 
 
 export enum DeploymentStatus {
-  PENDING = 'pending',
-  ACTIVE = 'active',
-  PAUSED = 'paused',
-  ARCHIVED = 'archived'
+    PENDING = 'pending',
+    ACTIVE = 'active',
+    PAUSED = 'paused',
+    ARCHIVED = 'archived'
 }
 
 export enum ProviderType {
     TWILIO = 'twilio',
     SIGNALWIRE = 'signal-wire',
     TELNYX = 'telnyx',
+    MESSAGEBIRD = 'messagebird',
+    SNS = 'sns',
 }
 
+export enum EmailProviderType {
+    GOOGLE = 'google',
+    OUTLOOK = 'outlook',
+    SENDGRID = 'sendgrid',
+    SES = 'ses',
+    MAILGUN = 'mailgun',
+    POSTMARK = 'postmark',
+    SMTP = 'smtp',
+}
 
 export enum PhonePurchaseStatus {
     PENDING = 'pending',
@@ -55,9 +66,9 @@ export enum MobilePlatform {
 
 // Communication types enum
 export enum OttCommunicationType {
-  TEXT = 'text',
-  VOICE = 'voice',
-  UNIFIED = 'unified'
+    TEXT = 'text',
+    VOICE = 'voice',
+    UNIFIED = 'unified'
 }
 
 
@@ -118,11 +129,11 @@ export enum LLMRequestType {
 
 
 export enum AgentRoleTemplateIdentifier {
-  CUSTOMER_SUPPORT_GENERAL = 'customer-support-general',
-  TECHNICAL_SUPPORT_SPECIALIST = 'technical-support-specialist',
-  SALES_REPRESENTATIVE = 'sales-representative',
-  ONBOARDING_SPECIALIST = 'onboarding-specialist',
-  BILLING_SUPPORT_SPECIALIST = 'billing-support-specialist'
+    CUSTOMER_SUPPORT_GENERAL = 'customer-support-general',
+    TECHNICAL_SUPPORT_SPECIALIST = 'technical-support-specialist',
+    SALES_REPRESENTATIVE = 'sales-representative',
+    ONBOARDING_SPECIALIST = 'onboarding-specialist',
+    BILLING_SUPPORT_SPECIALIST = 'billing-support-specialist'
 }
 
 

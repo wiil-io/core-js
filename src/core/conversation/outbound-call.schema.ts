@@ -1,6 +1,6 @@
 import { z } from "zod";
-import { BaseModelSchemaWithAudit } from "../base.schema";
 import { CallRequestStatus, ScheduleType } from "../type-definitions";
+import { BaseModelSchema } from "../base.schema";
 
 /**
  * @fileoverview Business service configuration schema definitions.
@@ -54,7 +54,7 @@ export type CallingHours = z.infer<typeof CallingHoursSchema>;
  * @property {string} status - Current call request status
  * @property {Object} [metadata] - Additional custom metadata
  */
-export const BusinessCallRequestSchema = BaseModelSchemaWithAudit.safeExtend({
+export const BusinessCallRequestSchema = BaseModelSchema.safeExtend({
     phoneConfigurationId: z.string().nullable().optional().describe("Phone configuration ID for caller ID display and telephony routing settings (references PhoneConfiguration). When omitted, uses organization default."),
     to: z.string().min(1, "Destination phone number is required").describe("Destination phone number in E.164 international format (e.g., '+12125551234'). Must be a valid, dialable phone number for outbound calling."),
     from: z.string().min(1, "Caller ID is required").describe("Caller ID phone number in E.164 format displayed to the recipient. Must be a verified number owned by the organization in PhoneConfiguration."),
@@ -88,13 +88,18 @@ export const CreateCallRequestSchema = BusinessCallRequestSchema.omit({
     id: true,
     createdAt: true,
     updatedAt: true,
-    createdBy: true,
-    updatedBy: true,
-    deletedAt: true,
-    deletedBy: true,
-    uniqueKey: true,
-    version: true,
 });
+
+
+export const CallRequestResultSchema = z.object({
+  success: z.boolean().optional().default(false).describe("Whether the telephony request was successful"),
+  request: BusinessCallRequestSchema.optional().nullable().describe("Original call request details"),
+  error_message: z.string().optional().nullable().describe("Error message if the request failed"),
+});
+
 
 export type BusinessCallRequest = z.infer<typeof BusinessCallRequestSchema>;
 export type CreateCallRequest = z.infer<typeof CreateCallRequestSchema>;
+
+export type CallRequestResult = z.infer<typeof CallRequestResultSchema>;
+

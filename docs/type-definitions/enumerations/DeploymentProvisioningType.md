@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.49**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.50**](../../README.md)
 
 ***
 
@@ -6,11 +6,11 @@
 
 # Enumeration: DeploymentProvisioningType
 
-Defined in: [src/core/type-definitions/service-config.definitions.ts:64](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/type-definitions/service-config.definitions.ts#L64)
+Defined in: [src/core/type-definitions/service-config.definitions.ts:75](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/type-definitions/service-config.definitions.ts#L75)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="direct"></a> `DIRECT` | `"direct"` | [src/core/type-definitions/service-config.definitions.ts:65](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/type-definitions/service-config.definitions.ts#L65) |
-| <a id="chained"></a> `CHAINED` | `"chained"` | [src/core/type-definitions/service-config.definitions.ts:66](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/type-definitions/service-config.definitions.ts#L66) |
+| <a id="direct"></a> `DIRECT` | `"direct"` | [src/core/type-definitions/service-config.definitions.ts:76](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/type-definitions/service-config.definitions.ts#L76) |
+| <a id="chained"></a> `CHAINED` | `"chained"` | [src/core/type-definitions/service-config.definitions.ts:77](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/type-definitions/service-config.definitions.ts#L77) |

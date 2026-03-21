@@ -28,33 +28,7 @@ export declare const PhoneNumberSchema: z.ZodString;
  * Language code schema (ISO 639-1 format)
  */
 export declare const LanguageCodeSchema: z.ZodString;
-/**
- * Extended base model schema with audit trail fields.
- *
- * Provides additional tracking for record creation, modification, and deletion
- * with user attribution and optimistic locking support. Use this schema for
- * entities requiring full audit compliance.
- *
- * @remarks
- * **Architecture Context:**
- * - **Extends**: BaseModelSchema with audit and versioning fields
- * - **Use Cases**: Outbound communications, transactional records, compliance-sensitive data
- * - **Soft Delete**: Uses deletedAt/deletedBy for recoverable deletion
- * - **Optimistic Locking**: Version field prevents concurrent modification conflicts
- */
-export declare const BaseModelSchemaWithAudit: z.ZodObject<{
-    id: z.ZodString;
-    createdAt: z.ZodOptional<z.ZodNumber>;
-    updatedAt: z.ZodOptional<z.ZodNumber>;
-    createdBy: z.ZodOptional<z.ZodString>;
-    updatedBy: z.ZodOptional<z.ZodString>;
-    deletedAt: z.ZodOptional<z.ZodNumber>;
-    deletedBy: z.ZodOptional<z.ZodString>;
-    uniqueKey: z.ZodOptional<z.ZodString>;
-    version: z.ZodOptional<z.ZodNumber>;
-}, z.core.$strip>;
 export type LanguageCode = z.infer<typeof LanguageCodeSchema>;
 export type Address = z.infer<typeof AddressSchema>;
 export type PhoneNumber = z.infer<typeof PhoneNumberSchema>;
 export type BaseModel = z.infer<typeof BaseModelSchema>;
-export type BaseModelWithAudit = z.infer<typeof BaseModelSchemaWithAudit>;

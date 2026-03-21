@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.BaseModelSchemaWithAudit = exports.LanguageCodeSchema = exports.PhoneNumberSchema = exports.phoneRegex = exports.AddressSchema = exports.BaseModelSchema = void 0;
+exports.LanguageCodeSchema = exports.PhoneNumberSchema = exports.phoneRegex = exports.AddressSchema = exports.BaseModelSchema = void 0;
 const zod_1 = require("zod");
 // import { TimezoneStringSchema } from './platform-regional-config';
 /**
@@ -34,25 +34,3 @@ exports.PhoneNumberSchema = zod_1.z.string()
  * Language code schema (ISO 639-1 format)
  */
 exports.LanguageCodeSchema = zod_1.z.string().min(2).max(5).describe("ISO 639-1/639-2 language code with optional region (e.g., 'en', 'es', 'zh-CN')"); // e.g., "en", "es", "zh-CN"
-/**
- * Extended base model schema with audit trail fields.
- *
- * Provides additional tracking for record creation, modification, and deletion
- * with user attribution and optimistic locking support. Use this schema for
- * entities requiring full audit compliance.
- *
- * @remarks
- * **Architecture Context:**
- * - **Extends**: BaseModelSchema with audit and versioning fields
- * - **Use Cases**: Outbound communications, transactional records, compliance-sensitive data
- * - **Soft Delete**: Uses deletedAt/deletedBy for recoverable deletion
- * - **Optimistic Locking**: Version field prevents concurrent modification conflicts
- */
-exports.BaseModelSchemaWithAudit = exports.BaseModelSchema.extend({
-    createdBy: zod_1.z.string().optional().describe("User ID or system identifier who created this record, used for audit trails and accountability tracking"),
-    updatedBy: zod_1.z.string().optional().describe("User ID or system identifier who last modified this record, updated on every change for change attribution"),
-    deletedAt: zod_1.z.number().optional().describe("Unix timestamp in milliseconds when the record was soft-deleted, null if active (supports data recovery and retention policies)"),
-    deletedBy: zod_1.z.string().optional().describe("User ID or system identifier who deleted this record, used for deletion audit trails and compliance reporting"),
-    uniqueKey: zod_1.z.string().optional().describe("Business-defined unique key for idempotency and deduplication, prevents duplicate record creation from retry operations"),
-    version: zod_1.z.number().optional().describe("Optimistic locking version number, incremented on each update to detect and prevent concurrent modification conflicts"),
-});

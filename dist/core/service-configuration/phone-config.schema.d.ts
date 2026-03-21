@@ -1,6 +1,15 @@
 import { z } from "zod";
 import { PhoneStatus, ProviderType } from "../type-definitions";
 /**
+ * @fileoverview Phone configuration schema definitions for telephony management.
+ *
+ * Phone Configurations manage telephony resources including phone numbers from various providers
+ * (SignalWire, Twilio). They track provider information, channel associations, and operational status.
+ * Referenced by Phone Channel configurations for call and SMS deployments.
+ *
+ * @module service-configuration/phone-config
+ */
+/**
  * Zod schema for Phone Configuration validation.
  *
  * Manages a phone number resource from a telephony provider, tracking its configuration, status,
@@ -23,9 +32,9 @@ import { PhoneStatus, ProviderType } from "../type-definitions";
  *
  * @typedef {Object} PhoneConfigurationProperties
  * @property {string} id - Unique identifier for the phone configuration
- * @property {string} phoneNumber - Phone number in E.164 international format (e.g., '+12125551234' for US, '+442071234567' for UK)
+ * @property {string} phoneNumber - Phone number, short code, or alphanumeric sender ID
  * @property {string} providerPhoneNumberId - Unique identifier from the telephony provider's system for this phone number
- * @property {string} phoneRequestId - Reference ID for the original phone number purchase transaction
+ * @property {string} phoneRequestId - Reference ID for the original phone number request or setup configuration
  * @property {string | null} friendlyName - Human-readable display name for administrative interfaces
  * @property {string | null} [regionId] - Region identifier where this number is registered (provider-specific)
  * @property {number | null} [monthlyPrice] - Monthly recurring cost for maintaining this phone number

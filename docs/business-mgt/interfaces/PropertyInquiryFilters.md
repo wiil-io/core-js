@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.49**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.50**](../../README.md)
 
 ***
 
@@ -6,27 +6,27 @@
 
 # Interface: PropertyInquiryFilters
 
-Defined in: [src/core/business-mgt/property-inquiry.schema.ts:134](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/business-mgt/property-inquiry.schema.ts#L134)
+Defined in: [src/core/business-mgt/property-inquiry.schema.ts:134](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/business-mgt/property-inquiry.schema.ts#L134)
 
 ## Properties
 
 | Property | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="search"></a> `search?` | `string` | [src/core/business-mgt/property-inquiry.schema.ts:135](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/business-mgt/property-inquiry.schema.ts#L135) |
-| <a id="propertyid"></a> `propertyId?` | `string` | [src/core/business-mgt/property-inquiry.schema.ts:136](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/business-mgt/property-inquiry.schema.ts#L136) |
-| <a id="customerid"></a> `customerId?` | `string` | [src/core/business-mgt/property-inquiry.schema.ts:137](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/business-mgt/property-inquiry.schema.ts#L137) |
-| <a id="status"></a> `status?` | [`PropertyInquiryStatus`](../../type-definitions/enumerations/PropertyInquiryStatus.md)[] | [src/core/business-mgt/property-inquiry.schema.ts:138](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/business-mgt/property-inquiry.schema.ts#L138) |
-| <a id="inquirytype"></a> `inquiryType?` | [`PropertyInquiryType`](../../type-definitions/enumerations/PropertyInquiryType.md) | [src/core/business-mgt/property-inquiry.schema.ts:139](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/business-mgt/property-inquiry.schema.ts#L139) |
-| <a id="assignedagentid"></a> `assignedAgentId?` | `string` | [src/core/business-mgt/property-inquiry.schema.ts:140](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/business-mgt/property-inquiry.schema.ts#L140) |
-| <a id="source"></a> `source?` | `string` | [src/core/business-mgt/property-inquiry.schema.ts:141](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/business-mgt/property-inquiry.schema.ts#L141) |
-| <a id="convertedtotransaction"></a> `convertedToTransaction?` | `boolean` | [src/core/business-mgt/property-inquiry.schema.ts:142](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/business-mgt/property-inquiry.schema.ts#L142) |
-| <a id="interestedinbuying"></a> `interestedInBuying?` | `boolean` | [src/core/business-mgt/property-inquiry.schema.ts:143](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/business-mgt/property-inquiry.schema.ts#L143) |
-| <a id="interestedinrenting"></a> `interestedInRenting?` | `boolean` | [src/core/business-mgt/property-inquiry.schema.ts:144](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/business-mgt/property-inquiry.schema.ts#L144) |
-| <a id="viewingcompleted"></a> `viewingCompleted?` | `boolean` | [src/core/business-mgt/property-inquiry.schema.ts:145](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/business-mgt/property-inquiry.schema.ts#L145) |
-| <a id="daterange"></a> `dateRange?` | \{ `start?`: `number`; `end?`: `number`; \} | [src/core/business-mgt/property-inquiry.schema.ts:146](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/business-mgt/property-inquiry.schema.ts#L146) |
-| `dateRange.start?` | `number` | [src/core/business-mgt/property-inquiry.schema.ts:146](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/business-mgt/property-inquiry.schema.ts#L146) |
-| `dateRange.end?` | `number` | [src/core/business-mgt/property-inquiry.schema.ts:146](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/business-mgt/property-inquiry.schema.ts#L146) |
-| <a id="followupdaterange"></a> `followUpDateRange?` | \{ `start?`: `number`; `end?`: `number`; \} | [src/core/business-mgt/property-inquiry.schema.ts:147](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/business-mgt/property-inquiry.schema.ts#L147) |
-| `followUpDateRange.start?` | `number` | [src/core/business-mgt/property-inquiry.schema.ts:147](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/business-mgt/property-inquiry.schema.ts#L147) |
-| `followUpDateRange.end?` | `number` | [src/core/business-mgt/property-inquiry.schema.ts:147](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/business-mgt/property-inquiry.schema.ts#L147) |
-| <a id="includedeleted"></a> `includeDeleted?` | `boolean` | [src/core/business-mgt/property-inquiry.schema.ts:148](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/business-mgt/property-inquiry.schema.ts#L148) |
+| <a id="search"></a> `search?` | `string` | [src/core/business-mgt/property-inquiry.schema.ts:135](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/business-mgt/property-inquiry.schema.ts#L135) |
+| <a id="propertyid"></a> `propertyId?` | `string` | [src/core/business-mgt/property-inquiry.schema.ts:136](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/business-mgt/property-inquiry.schema.ts#L136) |
+| <a id="customerid"></a> `customerId?` | `string` | [src/core/business-mgt/property-inquiry.schema.ts:137](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/business-mgt/property-inquiry.schema.ts#L137) |
+| <a id="status"></a> `status?` | [`PropertyInquiryStatus`](../../type-definitions/enumerations/PropertyInquiryStatus.md)[] | [src/core/business-mgt/property-inquiry.schema.ts:138](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/business-mgt/property-inquiry.schema.ts#L138) |
+| <a id="inquirytype"></a> `inquiryType?` | [`PropertyInquiryType`](../../type-definitions/enumerations/PropertyInquiryType.md) | [src/core/business-mgt/property-inquiry.schema.ts:139](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/business-mgt/property-inquiry.schema.ts#L139) |
+| <a id="assignedagentid"></a> `assignedAgentId?` | `string` | [src/core/business-mgt/property-inquiry.schema.ts:140](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/business-mgt/property-inquiry.schema.ts#L140) |
+| <a id="source"></a> `source?` | `string` | [src/core/business-mgt/property-inquiry.schema.ts:141](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/business-mgt/property-inquiry.schema.ts#L141) |
+| <a id="convertedtotransaction"></a> `convertedToTransaction?` | `boolean` | [src/core/business-mgt/property-inquiry.schema.ts:142](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/business-mgt/property-inquiry.schema.ts#L142) |
+| <a id="interestedinbuying"></a> `interestedInBuying?` | `boolean` | [src/core/business-mgt/property-inquiry.schema.ts:143](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/business-mgt/property-inquiry.schema.ts#L143) |
+| <a id="interestedinrenting"></a> `interestedInRenting?` | `boolean` | [src/core/business-mgt/property-inquiry.schema.ts:144](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/business-mgt/property-inquiry.schema.ts#L144) |
+| <a id="viewingcompleted"></a> `viewingCompleted?` | `boolean` | [src/core/business-mgt/property-inquiry.schema.ts:145](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/business-mgt/property-inquiry.schema.ts#L145) |
+| <a id="daterange"></a> `dateRange?` | \{ `start?`: `number`; `end?`: `number`; \} | [src/core/business-mgt/property-inquiry.schema.ts:146](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/business-mgt/property-inquiry.schema.ts#L146) |
+| `dateRange.start?` | `number` | [src/core/business-mgt/property-inquiry.schema.ts:146](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/business-mgt/property-inquiry.schema.ts#L146) |
+| `dateRange.end?` | `number` | [src/core/business-mgt/property-inquiry.schema.ts:146](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/business-mgt/property-inquiry.schema.ts#L146) |
+| <a id="followupdaterange"></a> `followUpDateRange?` | \{ `start?`: `number`; `end?`: `number`; \} | [src/core/business-mgt/property-inquiry.schema.ts:147](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/business-mgt/property-inquiry.schema.ts#L147) |
+| `followUpDateRange.start?` | `number` | [src/core/business-mgt/property-inquiry.schema.ts:147](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/business-mgt/property-inquiry.schema.ts#L147) |
+| `followUpDateRange.end?` | `number` | [src/core/business-mgt/property-inquiry.schema.ts:147](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/business-mgt/property-inquiry.schema.ts#L147) |
+| <a id="includedeleted"></a> `includeDeleted?` | `boolean` | [src/core/business-mgt/property-inquiry.schema.ts:148](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/business-mgt/property-inquiry.schema.ts#L148) |

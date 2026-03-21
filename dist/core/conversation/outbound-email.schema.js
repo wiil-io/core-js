@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CreateEmailRequestSchema = exports.EmailRequestSchema = exports.EmailAttachmentSchema = exports.EmailRecipientSchema = void 0;
+exports.EmailRequestResultSchema = exports.CreateEmailRequestSchema = exports.EmailRequestSchema = exports.EmailAttachmentSchema = exports.EmailRecipientSchema = void 0;
 const zod_1 = require("zod");
 const base_schema_1 = require("../base.schema");
 /**
@@ -45,7 +45,7 @@ exports.EmailAttachmentSchema = zod_1.z.object({
  * @property {string} [serviceConversationConfigId] - Linked conversation record
  * @property {Object} [metadata] - Additional custom metadata
  */
-exports.EmailRequestSchema = base_schema_1.BaseModelSchemaWithAudit.safeExtend({
+exports.EmailRequestSchema = base_schema_1.BaseModelSchema.safeExtend({
     emailConfigurationId: zod_1.z.string().optional().describe("Email configuration ID for sender settings, SMTP/API credentials, and domain authentication (references EmailConfiguration). When omitted, uses organization default."),
     templateId: zod_1.z.string().optional().describe("Pre-defined email template ID for structured content with variable placeholders (references EmailTemplate). Template content merged with variables field."),
     // Recipients
@@ -73,10 +73,9 @@ exports.CreateEmailRequestSchema = exports.EmailRequestSchema.omit({
     id: true,
     createdAt: true,
     updatedAt: true,
-    createdBy: true,
-    updatedBy: true,
-    deletedAt: true,
-    deletedBy: true,
-    uniqueKey: true,
-    version: true,
+});
+exports.EmailRequestResultSchema = zod_1.z.object({
+    success: zod_1.z.boolean().optional().default(false).describe("Whether the email request was successful"),
+    request: exports.EmailRequestSchema.optional().nullable().describe("Original email request details"),
+    error_message: zod_1.z.string().optional().nullable().describe("Error message if the request failed"),
 });

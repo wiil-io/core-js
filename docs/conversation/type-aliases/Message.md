@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.49**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.50**](../../README.md)
 
 ***
 
@@ -18,7 +18,7 @@ type Message = {
 };
 ```
 
-Defined in: [src/core/conversation/conversation-config.schema.ts:73](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/conversation/conversation-config.schema.ts#L73)
+Defined in: [src/core/conversation/conversation-config.schema.ts:73](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/conversation/conversation-config.schema.ts#L73)
 
 Message schema for conversation messages.
 
@@ -30,13 +30,13 @@ message arrays.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="id"></a> `id?` | `string` | [src/core/conversation/conversation-config.schema.ts:64](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/conversation/conversation-config.schema.ts#L64) |
-| <a id="messageid"></a> `messageId` | `string` | [src/core/conversation/conversation-config.schema.ts:65](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/conversation/conversation-config.schema.ts#L65) |
-| <a id="content"></a> `content` | `string` | [src/core/conversation/conversation-config.schema.ts:66](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/conversation/conversation-config.schema.ts#L66) |
-| <a id="message_type"></a> `message_type` | [`MessageType`](../enumerations/MessageType.md) | [src/core/conversation/conversation-config.schema.ts:67](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/conversation/conversation-config.schema.ts#L67) |
-| <a id="timestamp"></a> `timestamp` | `Date` | [src/core/conversation/conversation-config.schema.ts:68](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/conversation/conversation-config.schema.ts#L68) |
-| <a id="metadata"></a> `metadata` | `Record`\<`string`, `any`\> | [src/core/conversation/conversation-config.schema.ts:69](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/conversation/conversation-config.schema.ts#L69) |
-| <a id="created_at"></a> `created_at?` | `number` | [src/core/conversation/conversation-config.schema.ts:70](https://github.com/wiil-io/core-js/blob/3a057dbb516d45ce94599e33861c329418b4e5b3/src/core/conversation/conversation-config.schema.ts#L70) |
+| <a id="id"></a> `id?` | `string` | [src/core/conversation/conversation-config.schema.ts:64](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/conversation/conversation-config.schema.ts#L64) |
+| <a id="messageid"></a> `messageId` | `string` | [src/core/conversation/conversation-config.schema.ts:65](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/conversation/conversation-config.schema.ts#L65) |
+| <a id="content"></a> `content` | `string` | [src/core/conversation/conversation-config.schema.ts:66](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/conversation/conversation-config.schema.ts#L66) |
+| <a id="message_type"></a> `message_type` | [`MessageType`](../enumerations/MessageType.md) | [src/core/conversation/conversation-config.schema.ts:67](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/conversation/conversation-config.schema.ts#L67) |
+| <a id="timestamp"></a> `timestamp` | `Date` | [src/core/conversation/conversation-config.schema.ts:68](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/conversation/conversation-config.schema.ts#L68) |
+| <a id="metadata"></a> `metadata` | `Record`\<`string`, `any`\> | [src/core/conversation/conversation-config.schema.ts:69](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/conversation/conversation-config.schema.ts#L69) |
+| <a id="created_at"></a> `created_at?` | `number` | [src/core/conversation/conversation-config.schema.ts:70](https://github.com/wiil-io/core-js/blob/c356ba3a9a37a13c6f0d755e7f4067425ee239b9/src/core/conversation/conversation-config.schema.ts#L70) |
 
 ## Remarks
 

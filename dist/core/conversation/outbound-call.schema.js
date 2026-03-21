@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CreateCallRequestSchema = exports.BusinessCallRequestSchema = exports.CallingHoursSchema = void 0;
+exports.CallRequestResultSchema = exports.CreateCallRequestSchema = exports.BusinessCallRequestSchema = exports.CallingHoursSchema = void 0;
 const zod_1 = require("zod");
-const base_schema_1 = require("../base.schema");
 const type_definitions_1 = require("../type-definitions");
+const base_schema_1 = require("../base.schema");
 /**
  * @fileoverview Business service configuration schema definitions.
  * @module conversation/outbound-call
@@ -52,7 +52,7 @@ exports.CallingHoursSchema = zod_1.z.object({
  * @property {string} status - Current call request status
  * @property {Object} [metadata] - Additional custom metadata
  */
-exports.BusinessCallRequestSchema = base_schema_1.BaseModelSchemaWithAudit.safeExtend({
+exports.BusinessCallRequestSchema = base_schema_1.BaseModelSchema.safeExtend({
     phoneConfigurationId: zod_1.z.string().nullable().optional().describe("Phone configuration ID for caller ID display and telephony routing settings (references PhoneConfiguration). When omitted, uses organization default."),
     to: zod_1.z.string().min(1, "Destination phone number is required").describe("Destination phone number in E.164 international format (e.g., '+12125551234'). Must be a valid, dialable phone number for outbound calling."),
     from: zod_1.z.string().min(1, "Caller ID is required").describe("Caller ID phone number in E.164 format displayed to the recipient. Must be a verified number owned by the organization in PhoneConfiguration."),
@@ -81,10 +81,9 @@ exports.CreateCallRequestSchema = exports.BusinessCallRequestSchema.omit({
     id: true,
     createdAt: true,
     updatedAt: true,
-    createdBy: true,
-    updatedBy: true,
-    deletedAt: true,
-    deletedBy: true,
-    uniqueKey: true,
-    version: true,
+});
+exports.CallRequestResultSchema = zod_1.z.object({
+    success: zod_1.z.boolean().optional().default(false).describe("Whether the telephony request was successful"),
+    request: exports.BusinessCallRequestSchema.optional().nullable().describe("Original call request details"),
+    error_message: zod_1.z.string().optional().nullable().describe("Error message if the request failed"),
 });

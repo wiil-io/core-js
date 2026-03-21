@@ -53,12 +53,6 @@ export declare const BusinessCallRequestSchema: z.ZodObject<{
     id: z.ZodString;
     createdAt: z.ZodOptional<z.ZodNumber>;
     updatedAt: z.ZodOptional<z.ZodNumber>;
-    createdBy: z.ZodOptional<z.ZodString>;
-    updatedBy: z.ZodOptional<z.ZodString>;
-    deletedAt: z.ZodOptional<z.ZodNumber>;
-    deletedBy: z.ZodOptional<z.ZodString>;
-    uniqueKey: z.ZodOptional<z.ZodString>;
-    version: z.ZodOptional<z.ZodNumber>;
     phoneConfigurationId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     to: z.ZodString;
     from: z.ZodString;
@@ -104,5 +98,34 @@ export declare const CreateCallRequestSchema: z.ZodObject<{
     maxRetries: z.ZodOptional<z.ZodNumber>;
     retryDelayMinutes: z.ZodOptional<z.ZodNumber>;
 }, z.core.$strip>;
+export declare const CallRequestResultSchema: z.ZodObject<{
+    success: z.ZodDefault<z.ZodOptional<z.ZodBoolean>>;
+    request: z.ZodNullable<z.ZodOptional<z.ZodObject<{
+        id: z.ZodString;
+        createdAt: z.ZodOptional<z.ZodNumber>;
+        updatedAt: z.ZodOptional<z.ZodNumber>;
+        phoneConfigurationId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+        to: z.ZodString;
+        from: z.ZodString;
+        agentConfigurationId: z.ZodString;
+        instructionConfigurationId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+        maxDuration: z.ZodOptional<z.ZodNumber>;
+        scheduleType: z.ZodEnum<typeof ScheduleType>;
+        serviceConversationConfigId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+        timeZone: z.ZodOptional<z.ZodString>;
+        scheduledAt: z.ZodOptional<z.ZodNumber>;
+        callingHours: z.ZodOptional<z.ZodNullable<z.ZodObject<{
+            startTime: z.ZodString;
+            endTime: z.ZodString;
+            daysOfWeek: z.ZodDefault<z.ZodArray<z.ZodNumber>>;
+        }, z.core.$strip>>>;
+        maxRetries: z.ZodOptional<z.ZodNumber>;
+        retryDelayMinutes: z.ZodOptional<z.ZodNumber>;
+        status: z.ZodDefault<z.ZodEnum<typeof CallRequestStatus>>;
+        metadata: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodAny>>;
+    }, z.core.$strip>>>;
+    error_message: z.ZodNullable<z.ZodOptional<z.ZodString>>;
+}, z.core.$strip>;
 export type BusinessCallRequest = z.infer<typeof BusinessCallRequestSchema>;
 export type CreateCallRequest = z.infer<typeof CreateCallRequestSchema>;
+export type CallRequestResult = z.infer<typeof CallRequestResultSchema>;
