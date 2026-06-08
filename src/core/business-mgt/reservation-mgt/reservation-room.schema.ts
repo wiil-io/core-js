@@ -1,0 +1,160 @@
+import { z } from "zod";
+import { BaseModelSchema } from "../../base.schema";
+import { ExternalRefSchema, PaymentStatus, ReservationStatus } from "../../type-definitions";
+
+/**
+ * @fileoverview Room reservation schema definitions.
+ * @module business-mgt/reservation-mgt/room-reservation
+ */
+
+// ============================================================================
+// ROOM RESERVATION SCHEMAS
+// ============================================================================
+
+/**
+ * Room rate per night schema.
+ * Captures the nightly rate snapshot for a room reservation.
+ *
+ * @typedef {Object} RoomRatePerNight
+ * @property {string} date - Business-local rate date in YYYY-MM-DD format
+ * @property {number} amount - Nightly rate amount for the date
+ */
+export const RoomRatePerNightSchema = z.object({
+    date: z.string().describe("Business-local rate date in YYYY-MM-DD format."),
+    amount: z.number().nonnegative().describe("Nightly room rate amount for this date before aggregation."),
+});
+
+/**
+ * Room reservation schema.
+ * Represents a lodging reservation with check-in/check-out dates and nightly pricing.
+ *
+ * @typedef {Object} RoomReservation
+ * @property {string} [locationId] - Business location where the room reservation is booked
+ * @property {string} [channelId] - Channel that created or owns the booking
+ * @property {string} resourceId - Room resource or category being reserved
+ * @property {string} guestId - Guest or customer who owns the stay
+ * @property {number} personsNumber - Number of guests in the party
+ * @property {number} checkIn - Check-in timestamp
+ * @property {number} checkOut - Check-out timestamp
+ * @property {number} nights - Number of nights in the stay
+ * @property {ReservationStatus} status - Current room reservation status
+ * @property {string} [source] - Source or channel label for the reservation
+ * @property {RoomRatePerNight[]} ratePerNight - Nightly pricing breakdown
+ * @property {number} totalWithTax - Total reservation amount including tax
+ * @property {number} deposit - Deposit amount collected or required
+ * @property {PaymentStatus} [paymentStatus] - Payment status for the stay
+ * @property {string} [notes] - Internal staff notes
+ * @property {Object} [externalRef] - External platform reference
+ */
+export const RoomReservationSchema = BaseModelSchema.safeExtend({
+    locationId: z.string().nullable().optional().describe("Business location ID where the room reservation is booked. Null applies when the reservation is not location-specific."),
+    channelId: z.string().nullable().optional().describe("Channel ID for multi-channel bookings (e.g., web, marketplace, partner)"),
+    resourceId: z.string().describe("Room type/category ID"),
+    guestId: z.string().describe("Guest/customer ID"),
+    personsNumber: z.number().int().positive().describe("Party size"),
+    checkIn: z.number().describe("Check-in timestamp"),
+    checkOut: z.number().describe("Check-out timestamp"),
+    nights: z.number().int().positive().describe("Number of nights"),
+    status: z.enum(ReservationStatus).default(ReservationStatus.PENDING).describe("Room reservation lifecycle status"),
+    source: z.string().nullable().optional().describe("Source/channel of the reservation"),
+    ratePerNight: z.array(RoomRatePerNightSchema).default([]).describe("Per-night pricing"),
+    totalWithTax: z.number().nonnegative().describe("Total amount including tax"),
+    deposit: z.number().nonnegative().default(0).describe("Deposit amount"),
+    paymentStatus: z.enum(PaymentStatus).nullable().optional().describe("Payment status"),
+    notes: z.string().nullable().optional().describe("Internal notes"),
+    externalRef: ExternalRefSchema.nullable().optional().describe("External system reference (when imported/synced)"),
+}).superRefine((data, ctx) => {
+    if (data.checkOut <= data.checkIn) {
+        ctx.addIssue({
+            code: "custom",
+            path: ["checkOut"],
+            message: "checkOut must be greater than checkIn",
+        });
+    }
+});
+
+// ============================================================================
+// CREATE/UPDATE SCHEMAS
+// ============================================================================
+
+/**
+ * Schema for creating a new room reservation.
+ * Omits auto-generated fields.
+ */
+export const CreateRoomReservationSchema = RoomReservationSchema.omit({
+    id: true,
+    createdAt: true,
+    updatedAt: true,
+});
+
+/**
+ * Schema for updating an existing room reservation.
+ * All fields optional except id.
+ */
+export const UpdateRoomReservationSchema = CreateRoomReservationSchema.partial().safeExtend({
+    id: z.string().describe("Unique identifier of the room reservation to update."),
+});
+
+// ============================================================================
+// TYPE EXPORTS
+// ============================================================================
+
+export type RoomRatePerNight = z.infer<typeof RoomRatePerNightSchema>;
+export type RoomReservation = z.infer<typeof RoomReservationSchema>;
+export type CreateRoomReservation = z.infer<typeof CreateRoomReservationSchema>;
+export type UpdateRoomReservation = z.infer<typeof UpdateRoomReservationSchema>;
+
+// ============================================================================
+// QUERY OPTIONS
+// ============================================================================
+
+/**
+ * Room reservation filter options.
+ * @interface RoomReservationFilters
+ */
+export interface RoomReservationFilters {
+    /** Text search across room reservation fields */
+    search?: string;
+    /** Filter by business location ID */
+    locationId?: string;
+    /** Filter by booking channel ID */
+    channelId?: string;
+    /** Filter by room resource ID */
+    resourceId?: string;
+    /** Filter by guest/customer ID */
+    guestId?: string;
+    /** Filter by reservation statuses */
+    status?: ReservationStatus[];
+    /** Filter by payment statuses */
+    paymentStatus?: PaymentStatus[];
+    /** Filter by check-in timestamp range */
+    dateRange?: { start?: number; end?: number };
+    /** Filter by external source platform */
+    externalSource?: string;
+}
+
+/**
+ * Room reservation sorting options.
+ * @interface RoomReservationSorting
+ */
+export interface RoomReservationSorting {
+    /** Field to sort by */
+    field: "checkIn" | "checkOut" | "createdAt";
+    /** Sort direction */
+    direction: "asc" | "desc";
+}
+
+/**
+ * Room reservation query options.
+ * @interface RoomReservationQueryOptions
+ */
+export interface RoomReservationQueryOptions {
+    /** Page number (1-indexed) */
+    page: number;
+    /** Items per page */
+    pageSize: number;
+    /** Optional filters */
+    filters?: RoomReservationFilters;
+    /** Optional sorting */
+    sorting?: RoomReservationSorting;
+}

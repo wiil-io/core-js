@@ -1,0 +1,493 @@
+import z from "zod";
+import { OrderStatus, PaymentStatus } from "../../type-definitions";
+/**
+ * @fileoverview Product order schema definitions for retail/product sales.
+ * @module business-mgt/product-order
+ */
+/**
+ * Base product order item schema (without productOrderId for creation).
+ *
+ * @typedef {Object} ProductOrderItemBase
+ * @property {string} productId - Product ID being ordered
+ * @property {string} itemName - Name of the product
+ * @property {string} [sku] - Product SKU
+ * @property {number} quantity - Quantity ordered
+ * @property {number} unitPrice - Price per unit
+ * @property {number} totalPrice - Total price for this item
+ * @property {string} [selectedVariant] - Selected variant (size, color, etc.)
+ * @property {string} [warrantyInfo] - Warranty information
+ * @property {string} status - Item status
+ * @property {string} [notes] - Additional notes
+ */
+export declare const ProductOrderItemBaseSchema: z.ZodObject<{
+    productId: z.ZodString;
+    variantId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    itemName: z.ZodString;
+    sku: z.ZodOptional<z.ZodString>;
+    quantity: z.ZodNumber;
+    unitPrice: z.ZodNumber;
+    totalPrice: z.ZodNumber;
+    selectedVariant: z.ZodOptional<z.ZodString>;
+    warrantyInfo: z.ZodOptional<z.ZodString>;
+    status: z.ZodDefault<z.ZodEnum<typeof OrderStatus>>;
+    notes: z.ZodOptional<z.ZodString>;
+}, z.core.$strip>;
+/**
+ * Product order item schema with IDs (for existing items).
+ */
+export declare const ProductOrderItemSchema: z.ZodObject<{
+    productId: z.ZodString;
+    variantId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    itemName: z.ZodString;
+    sku: z.ZodOptional<z.ZodString>;
+    quantity: z.ZodNumber;
+    unitPrice: z.ZodNumber;
+    totalPrice: z.ZodNumber;
+    selectedVariant: z.ZodOptional<z.ZodString>;
+    warrantyInfo: z.ZodOptional<z.ZodString>;
+    status: z.ZodDefault<z.ZodEnum<typeof OrderStatus>>;
+    notes: z.ZodOptional<z.ZodString>;
+    id: z.ZodString;
+    productOrderId: z.ZodString;
+}, z.core.$strip>;
+/**
+ * Product order schema - for retail/product sales.
+ *
+ * @typedef {Object} ProductOrder
+ * @property {string} [orderNumber] - Human-readable order number
+ * @property {string} status - Order status
+ * @property {Array} items - Items in the order
+ * @property {string} customerId - Customer ID
+ * @property {Object} [customer] - Customer information
+ * @property {Object} pricing - Pricing details
+ * @property {string} paymentStatus - Payment status
+ * @property {string} [paymentMethod] - Payment method
+ * @property {string} [paymentReference] - Payment reference
+ * @property {Object} [billingAddress] - Billing address
+ * @property {number} orderDate - Order date
+ * @property {number} [requestedDeliveryDate] - Requested delivery date
+ * @property {number} [shippedDate] - Shipped date
+ * @property {Object} [shippingAddress] - Shipping address
+ * @property {number} [deliveredDate] - Delivered date
+ * @property {string} [shippingMethod] - Shipping method
+ * @property {string} [trackingNumber] - Tracking number
+ * @property {string} [shippingCarrier] - Shipping carrier
+ * @property {string} [externalOrderId] - External order ID
+ * @property {string} source - Order source
+ * @property {string} [cancelReason] - Cancellation reason
+ * @property {string} [notes] - Additional notes
+ * @property {string} [serviceConversationConfigId] - Service conversation config ID
+ */
+export declare const ProductOrderSchema: z.ZodObject<{
+    id: z.ZodString;
+    createdAt: z.ZodOptional<z.ZodNumber>;
+    updatedAt: z.ZodOptional<z.ZodNumber>;
+    locationId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    channelId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    terminalId: z.ZodDefault<z.ZodNullable<z.ZodString>>;
+    operatorId: z.ZodDefault<z.ZodNullable<z.ZodString>>;
+    orderNumber: z.ZodDefault<z.ZodNullable<z.ZodString>>;
+    status: z.ZodDefault<z.ZodEnum<typeof OrderStatus>>;
+    items: z.ZodArray<z.ZodObject<{
+        productId: z.ZodString;
+        variantId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+        itemName: z.ZodString;
+        sku: z.ZodOptional<z.ZodString>;
+        quantity: z.ZodNumber;
+        unitPrice: z.ZodNumber;
+        totalPrice: z.ZodNumber;
+        selectedVariant: z.ZodOptional<z.ZodString>;
+        warrantyInfo: z.ZodOptional<z.ZodString>;
+        status: z.ZodDefault<z.ZodEnum<typeof OrderStatus>>;
+        notes: z.ZodOptional<z.ZodString>;
+        id: z.ZodString;
+        productOrderId: z.ZodString;
+    }, z.core.$strip>>;
+    customerId: z.ZodString;
+    pricing: z.ZodObject<{
+        subtotalBeforeTax: z.ZodOptional<z.ZodNumber>;
+        subtotal: z.ZodNumber;
+        appliedPricingRules: z.ZodDefault<z.ZodArray<z.ZodObject<{
+            pricingRuleId: z.ZodOptional<z.ZodString>;
+            externalPricingRuleId: z.ZodOptional<z.ZodString>;
+            name: z.ZodString;
+            applyLevel: z.ZodDefault<z.ZodEnum<typeof import("../../type-definitions").PricingRuleApplyLevel>>;
+            adjustmentType: z.ZodEnum<typeof import("../../type-definitions").PricingRuleAdjustmentType>;
+            adjustmentValue: z.ZodNumber;
+            baseAmount: z.ZodNumber;
+            adjustedAmount: z.ZodNumber;
+            deltaAmount: z.ZodNumber;
+            appliedAt: z.ZodOptional<z.ZodNumber>;
+        }, z.core.$strip>>>;
+        totalPricingAdjustmentAmount: z.ZodDefault<z.ZodNumber>;
+        subtotalAfterPricingRules: z.ZodOptional<z.ZodNumber>;
+        appliedDiscounts: z.ZodDefault<z.ZodArray<z.ZodObject<{
+            discountRuleId: z.ZodOptional<z.ZodString>;
+            externalDiscountId: z.ZodOptional<z.ZodString>;
+            name: z.ZodString;
+            code: z.ZodOptional<z.ZodString>;
+            scope: z.ZodDefault<z.ZodEnum<typeof import("../../type-definitions").DiscountScope>>;
+            type: z.ZodEnum<typeof import("../../type-definitions").DiscountType>;
+            value: z.ZodNumber;
+            discountableAmount: z.ZodNumber;
+            discountAmount: z.ZodNumber;
+            isStacked: z.ZodDefault<z.ZodBoolean>;
+        }, z.core.$strip>>>;
+        totalDiscountAmount: z.ZodDefault<z.ZodNumber>;
+        subtotalAfterDiscount: z.ZodOptional<z.ZodNumber>;
+        appliedTaxes: z.ZodDefault<z.ZodArray<z.ZodObject<{
+            taxRuleId: z.ZodOptional<z.ZodString>;
+            externalTaxId: z.ZodOptional<z.ZodString>;
+            name: z.ZodString;
+            scope: z.ZodDefault<z.ZodEnum<typeof import("../../type-definitions").TaxScope>>;
+            rateType: z.ZodEnum<typeof import("../../type-definitions").TaxRateType>;
+            rateValue: z.ZodNumber;
+            taxableAmount: z.ZodNumber;
+            taxAmount: z.ZodNumber;
+            isInclusive: z.ZodDefault<z.ZodBoolean>;
+        }, z.core.$strip>>>;
+        totalTaxAmount: z.ZodDefault<z.ZodNumber>;
+        tax: z.ZodDefault<z.ZodNumber>;
+        tip: z.ZodDefault<z.ZodNumber>;
+        shippingAmount: z.ZodDefault<z.ZodNumber>;
+        discount: z.ZodDefault<z.ZodNumber>;
+        subtotalAfterTax: z.ZodOptional<z.ZodNumber>;
+        total: z.ZodNumber;
+        currency: z.ZodDefault<z.ZodString>;
+    }, z.core.$strip>;
+    paymentStatus: z.ZodDefault<z.ZodEnum<typeof PaymentStatus>>;
+    paymentMethod: z.ZodOptional<z.ZodString>;
+    paymentReference: z.ZodOptional<z.ZodString>;
+    billingAddress: z.ZodOptional<z.ZodOptional<z.ZodObject<{
+        street: z.ZodString;
+        street2: z.ZodOptional<z.ZodString>;
+        city: z.ZodString;
+        state: z.ZodString;
+        postalCode: z.ZodString;
+        country: z.ZodString;
+        deliveryInstructions: z.ZodOptional<z.ZodString>;
+    }, z.core.$strip>>>;
+    orderDate: z.ZodNumber;
+    requestedDeliveryDate: z.ZodOptional<z.ZodNumber>;
+    shippedDate: z.ZodOptional<z.ZodNumber>;
+    shippingAddress: z.ZodOptional<z.ZodOptional<z.ZodObject<{
+        street: z.ZodString;
+        street2: z.ZodOptional<z.ZodString>;
+        city: z.ZodString;
+        state: z.ZodString;
+        postalCode: z.ZodString;
+        country: z.ZodString;
+        deliveryInstructions: z.ZodOptional<z.ZodString>;
+    }, z.core.$strip>>>;
+    deliveredDate: z.ZodOptional<z.ZodNumber>;
+    shippingMethod: z.ZodOptional<z.ZodString>;
+    trackingNumber: z.ZodOptional<z.ZodString>;
+    shippingCarrier: z.ZodOptional<z.ZodString>;
+    externalRef: z.ZodOptional<z.ZodNullable<z.ZodObject<{
+        externalId: z.ZodString;
+        source: z.ZodString;
+        url: z.ZodOptional<z.ZodNullable<z.ZodURL>>;
+        syncedAt: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
+    }, z.core.$strip>>>;
+    source: z.ZodDefault<z.ZodString>;
+    cancelReason: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    notes: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    serviceConversationConfigId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+}, z.core.$strip>;
+/**
+ * Schema for creating a new product order.
+ * Omits auto-generated fields and uses base items without IDs.
+ */
+export declare const CreateProductOrderSchema: z.ZodObject<{
+    source: z.ZodDefault<z.ZodString>;
+    status: z.ZodDefault<z.ZodEnum<typeof OrderStatus>>;
+    locationId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    customerId: z.ZodString;
+    channelId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    notes: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    terminalId: z.ZodDefault<z.ZodNullable<z.ZodString>>;
+    operatorId: z.ZodDefault<z.ZodNullable<z.ZodString>>;
+    pricing: z.ZodObject<{
+        subtotalBeforeTax: z.ZodOptional<z.ZodNumber>;
+        subtotal: z.ZodNumber;
+        appliedPricingRules: z.ZodDefault<z.ZodArray<z.ZodObject<{
+            pricingRuleId: z.ZodOptional<z.ZodString>;
+            externalPricingRuleId: z.ZodOptional<z.ZodString>;
+            name: z.ZodString;
+            applyLevel: z.ZodDefault<z.ZodEnum<typeof import("../../type-definitions").PricingRuleApplyLevel>>;
+            adjustmentType: z.ZodEnum<typeof import("../../type-definitions").PricingRuleAdjustmentType>;
+            adjustmentValue: z.ZodNumber;
+            baseAmount: z.ZodNumber;
+            adjustedAmount: z.ZodNumber;
+            deltaAmount: z.ZodNumber;
+            appliedAt: z.ZodOptional<z.ZodNumber>;
+        }, z.core.$strip>>>;
+        totalPricingAdjustmentAmount: z.ZodDefault<z.ZodNumber>;
+        subtotalAfterPricingRules: z.ZodOptional<z.ZodNumber>;
+        appliedDiscounts: z.ZodDefault<z.ZodArray<z.ZodObject<{
+            discountRuleId: z.ZodOptional<z.ZodString>;
+            externalDiscountId: z.ZodOptional<z.ZodString>;
+            name: z.ZodString;
+            code: z.ZodOptional<z.ZodString>;
+            scope: z.ZodDefault<z.ZodEnum<typeof import("../../type-definitions").DiscountScope>>;
+            type: z.ZodEnum<typeof import("../../type-definitions").DiscountType>;
+            value: z.ZodNumber;
+            discountableAmount: z.ZodNumber;
+            discountAmount: z.ZodNumber;
+            isStacked: z.ZodDefault<z.ZodBoolean>;
+        }, z.core.$strip>>>;
+        totalDiscountAmount: z.ZodDefault<z.ZodNumber>;
+        subtotalAfterDiscount: z.ZodOptional<z.ZodNumber>;
+        appliedTaxes: z.ZodDefault<z.ZodArray<z.ZodObject<{
+            taxRuleId: z.ZodOptional<z.ZodString>;
+            externalTaxId: z.ZodOptional<z.ZodString>;
+            name: z.ZodString;
+            scope: z.ZodDefault<z.ZodEnum<typeof import("../../type-definitions").TaxScope>>;
+            rateType: z.ZodEnum<typeof import("../../type-definitions").TaxRateType>;
+            rateValue: z.ZodNumber;
+            taxableAmount: z.ZodNumber;
+            taxAmount: z.ZodNumber;
+            isInclusive: z.ZodDefault<z.ZodBoolean>;
+        }, z.core.$strip>>>;
+        totalTaxAmount: z.ZodDefault<z.ZodNumber>;
+        tax: z.ZodDefault<z.ZodNumber>;
+        tip: z.ZodDefault<z.ZodNumber>;
+        shippingAmount: z.ZodDefault<z.ZodNumber>;
+        discount: z.ZodDefault<z.ZodNumber>;
+        subtotalAfterTax: z.ZodOptional<z.ZodNumber>;
+        total: z.ZodNumber;
+        currency: z.ZodDefault<z.ZodString>;
+    }, z.core.$strip>;
+    paymentStatus: z.ZodDefault<z.ZodEnum<typeof PaymentStatus>>;
+    paymentMethod: z.ZodOptional<z.ZodString>;
+    paymentReference: z.ZodOptional<z.ZodString>;
+    orderDate: z.ZodNumber;
+    externalRef: z.ZodOptional<z.ZodNullable<z.ZodObject<{
+        externalId: z.ZodString;
+        source: z.ZodString;
+        url: z.ZodOptional<z.ZodNullable<z.ZodURL>>;
+        syncedAt: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
+    }, z.core.$strip>>>;
+    billingAddress: z.ZodOptional<z.ZodOptional<z.ZodObject<{
+        street: z.ZodString;
+        street2: z.ZodOptional<z.ZodString>;
+        city: z.ZodString;
+        state: z.ZodString;
+        postalCode: z.ZodString;
+        country: z.ZodString;
+        deliveryInstructions: z.ZodOptional<z.ZodString>;
+    }, z.core.$strip>>>;
+    requestedDeliveryDate: z.ZodOptional<z.ZodNumber>;
+    shippingAddress: z.ZodOptional<z.ZodOptional<z.ZodObject<{
+        street: z.ZodString;
+        street2: z.ZodOptional<z.ZodString>;
+        city: z.ZodString;
+        state: z.ZodString;
+        postalCode: z.ZodString;
+        country: z.ZodString;
+        deliveryInstructions: z.ZodOptional<z.ZodString>;
+    }, z.core.$strip>>>;
+    shippingMethod: z.ZodOptional<z.ZodString>;
+    trackingNumber: z.ZodOptional<z.ZodString>;
+    shippingCarrier: z.ZodOptional<z.ZodString>;
+    items: z.ZodArray<z.ZodObject<{
+        productId: z.ZodString;
+        variantId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+        itemName: z.ZodString;
+        sku: z.ZodOptional<z.ZodString>;
+        quantity: z.ZodNumber;
+        unitPrice: z.ZodNumber;
+        totalPrice: z.ZodNumber;
+        selectedVariant: z.ZodOptional<z.ZodString>;
+        warrantyInfo: z.ZodOptional<z.ZodString>;
+        status: z.ZodDefault<z.ZodEnum<typeof OrderStatus>>;
+        notes: z.ZodOptional<z.ZodString>;
+    }, z.core.$strip>>;
+    cancelReason: z.ZodDefault<z.ZodNullable<z.ZodString>>;
+}, z.core.$strip>;
+/**
+ * Schema for updating an existing product order.
+ * All fields are optional except id.
+ */
+export declare const UpdateProductOrderSchema: z.ZodObject<{
+    source: z.ZodOptional<z.ZodDefault<z.ZodString>>;
+    status: z.ZodOptional<z.ZodDefault<z.ZodEnum<typeof OrderStatus>>>;
+    locationId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
+    customerId: z.ZodOptional<z.ZodString>;
+    channelId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
+    notes: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
+    terminalId: z.ZodOptional<z.ZodDefault<z.ZodNullable<z.ZodString>>>;
+    operatorId: z.ZodOptional<z.ZodDefault<z.ZodNullable<z.ZodString>>>;
+    pricing: z.ZodOptional<z.ZodObject<{
+        subtotalBeforeTax: z.ZodOptional<z.ZodNumber>;
+        subtotal: z.ZodNumber;
+        appliedPricingRules: z.ZodDefault<z.ZodArray<z.ZodObject<{
+            pricingRuleId: z.ZodOptional<z.ZodString>;
+            externalPricingRuleId: z.ZodOptional<z.ZodString>;
+            name: z.ZodString;
+            applyLevel: z.ZodDefault<z.ZodEnum<typeof import("../../type-definitions").PricingRuleApplyLevel>>;
+            adjustmentType: z.ZodEnum<typeof import("../../type-definitions").PricingRuleAdjustmentType>;
+            adjustmentValue: z.ZodNumber;
+            baseAmount: z.ZodNumber;
+            adjustedAmount: z.ZodNumber;
+            deltaAmount: z.ZodNumber;
+            appliedAt: z.ZodOptional<z.ZodNumber>;
+        }, z.core.$strip>>>;
+        totalPricingAdjustmentAmount: z.ZodDefault<z.ZodNumber>;
+        subtotalAfterPricingRules: z.ZodOptional<z.ZodNumber>;
+        appliedDiscounts: z.ZodDefault<z.ZodArray<z.ZodObject<{
+            discountRuleId: z.ZodOptional<z.ZodString>;
+            externalDiscountId: z.ZodOptional<z.ZodString>;
+            name: z.ZodString;
+            code: z.ZodOptional<z.ZodString>;
+            scope: z.ZodDefault<z.ZodEnum<typeof import("../../type-definitions").DiscountScope>>;
+            type: z.ZodEnum<typeof import("../../type-definitions").DiscountType>;
+            value: z.ZodNumber;
+            discountableAmount: z.ZodNumber;
+            discountAmount: z.ZodNumber;
+            isStacked: z.ZodDefault<z.ZodBoolean>;
+        }, z.core.$strip>>>;
+        totalDiscountAmount: z.ZodDefault<z.ZodNumber>;
+        subtotalAfterDiscount: z.ZodOptional<z.ZodNumber>;
+        appliedTaxes: z.ZodDefault<z.ZodArray<z.ZodObject<{
+            taxRuleId: z.ZodOptional<z.ZodString>;
+            externalTaxId: z.ZodOptional<z.ZodString>;
+            name: z.ZodString;
+            scope: z.ZodDefault<z.ZodEnum<typeof import("../../type-definitions").TaxScope>>;
+            rateType: z.ZodEnum<typeof import("../../type-definitions").TaxRateType>;
+            rateValue: z.ZodNumber;
+            taxableAmount: z.ZodNumber;
+            taxAmount: z.ZodNumber;
+            isInclusive: z.ZodDefault<z.ZodBoolean>;
+        }, z.core.$strip>>>;
+        totalTaxAmount: z.ZodDefault<z.ZodNumber>;
+        tax: z.ZodDefault<z.ZodNumber>;
+        tip: z.ZodDefault<z.ZodNumber>;
+        shippingAmount: z.ZodDefault<z.ZodNumber>;
+        discount: z.ZodDefault<z.ZodNumber>;
+        subtotalAfterTax: z.ZodOptional<z.ZodNumber>;
+        total: z.ZodNumber;
+        currency: z.ZodDefault<z.ZodString>;
+    }, z.core.$strip>>;
+    paymentStatus: z.ZodOptional<z.ZodDefault<z.ZodEnum<typeof PaymentStatus>>>;
+    paymentMethod: z.ZodOptional<z.ZodOptional<z.ZodString>>;
+    paymentReference: z.ZodOptional<z.ZodOptional<z.ZodString>>;
+    orderDate: z.ZodOptional<z.ZodNumber>;
+    externalRef: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodObject<{
+        externalId: z.ZodString;
+        source: z.ZodString;
+        url: z.ZodOptional<z.ZodNullable<z.ZodURL>>;
+        syncedAt: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
+    }, z.core.$strip>>>>;
+    billingAddress: z.ZodOptional<z.ZodOptional<z.ZodOptional<z.ZodObject<{
+        street: z.ZodString;
+        street2: z.ZodOptional<z.ZodString>;
+        city: z.ZodString;
+        state: z.ZodString;
+        postalCode: z.ZodString;
+        country: z.ZodString;
+        deliveryInstructions: z.ZodOptional<z.ZodString>;
+    }, z.core.$strip>>>>;
+    requestedDeliveryDate: z.ZodOptional<z.ZodOptional<z.ZodNumber>>;
+    shippingAddress: z.ZodOptional<z.ZodOptional<z.ZodOptional<z.ZodObject<{
+        street: z.ZodString;
+        street2: z.ZodOptional<z.ZodString>;
+        city: z.ZodString;
+        state: z.ZodString;
+        postalCode: z.ZodString;
+        country: z.ZodString;
+        deliveryInstructions: z.ZodOptional<z.ZodString>;
+    }, z.core.$strip>>>>;
+    shippingMethod: z.ZodOptional<z.ZodOptional<z.ZodString>>;
+    trackingNumber: z.ZodOptional<z.ZodOptional<z.ZodString>>;
+    shippingCarrier: z.ZodOptional<z.ZodOptional<z.ZodString>>;
+    items: z.ZodOptional<z.ZodArray<z.ZodObject<{
+        productId: z.ZodString;
+        variantId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+        itemName: z.ZodString;
+        sku: z.ZodOptional<z.ZodString>;
+        quantity: z.ZodNumber;
+        unitPrice: z.ZodNumber;
+        totalPrice: z.ZodNumber;
+        selectedVariant: z.ZodOptional<z.ZodString>;
+        warrantyInfo: z.ZodOptional<z.ZodString>;
+        status: z.ZodDefault<z.ZodEnum<typeof OrderStatus>>;
+        notes: z.ZodOptional<z.ZodString>;
+    }, z.core.$strip>>>;
+    id: z.ZodString;
+    cancelReason: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+}, z.core.$strip>;
+/**
+ * Quick status update schema for product orders.
+ */
+export declare const UpdateProductOrderStatusSchema: z.ZodObject<{
+    id: z.ZodString;
+    status: z.ZodEnum<typeof OrderStatus>;
+    shippedDate: z.ZodOptional<z.ZodNumber>;
+    deliveredDate: z.ZodOptional<z.ZodNumber>;
+    trackingNumber: z.ZodOptional<z.ZodString>;
+}, z.core.$strip>;
+export type ProductOrderItemBase = z.infer<typeof ProductOrderItemBaseSchema>;
+export type ProductOrderItem = z.infer<typeof ProductOrderItemSchema>;
+export type ProductOrder = z.infer<typeof ProductOrderSchema>;
+export type CreateProductOrder = z.infer<typeof CreateProductOrderSchema>;
+export type UpdateProductOrder = z.infer<typeof UpdateProductOrderSchema>;
+export type UpdateProductOrderStatus = z.infer<typeof UpdateProductOrderStatusSchema>;
+export type CreateProductOrderItem = z.infer<typeof ProductOrderItemBaseSchema>;
+/**
+ * Product order filter options.
+ * @interface ProductOrderFilters
+ */
+export interface ProductOrderFilters {
+    /** Text search across order fields */
+    search?: string;
+    /** Filter by location ID */
+    locationId?: string;
+    /** Filter by channel ID */
+    channelId?: string;
+    /** Filter by terminal ID */
+    terminalId?: string;
+    /** Filter by operator ID */
+    operatorId?: string;
+    /** Filter by order statuses */
+    status?: OrderStatus[];
+    /** Filter by payment statuses */
+    paymentStatus?: PaymentStatus[];
+    /** Filter by customer ID */
+    customerId?: string;
+    /** Filter by shipping method */
+    shippingMethod?: string;
+    /** Filter by order source */
+    source?: string;
+    /** Filter by external source platform */
+    externalSource?: string;
+    /** Filter by date range */
+    dateRange?: {
+        start?: number;
+        end?: number;
+    };
+}
+/**
+ * Product order sorting options.
+ * @interface ProductOrderSorting
+ */
+export interface ProductOrderSorting {
+    /** Field to sort by */
+    field: 'orderDate' | 'createdAt' | 'totalAmount';
+    /** Sort direction */
+    direction: 'asc' | 'desc';
+}
+/**
+ * Product order query options.
+ * @interface ProductOrderQueryOptions
+ */
+export interface ProductOrderQueryOptions {
+    /** Page number (1-indexed) */
+    page: number;
+    /** Items per page */
+    pageSize: number;
+    /** Optional filters */
+    filters?: ProductOrderFilters;
+    /** Optional sorting */
+    sorting?: ProductOrderSorting;
+}

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.51**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
 
 ***
 
@@ -8,57 +8,150 @@
 
 ```ts
 type CreateResource = {
+  resourceRevisionId?: string;
+  locationId?: string | null;
   resourceType: ResourceType;
+  categoryId?: string | null;
   name: string;
-  description?: string;
-  capacity?: number;
+  description?: string | null;
+  imageUrls?: string[] | null;
+  capacity?: number | null;
+  capacityConfig?:   | {
+     kind: "range";
+     min: number;
+     max: number;
+   }
+     | {
+     kind: "occupancy";
+     standard: number;
+     max: number;
+     extraFee?: number | null;
+   }
+     | {
+     kind: "single";
+     value: number;
+     weightLimit?: number | null;
+     skillLevel?: string | null;
+   }
+     | null;
   isAvailable: boolean;
+  channelMappings?:   | {
+     channelId: string;
+     externalResourceId: string;
+   }[]
+     | null;
   location?: string;
   amenities: string[];
+  instances?: string[] | null;
+  pricing?:   | {
+     kind: "none";
+     holdPolicy?: string | null;
+   }
+     | {
+     kind: "dayOfWeek";
+     rates: {
+        mon: number;
+        tue: number;
+        wed: number;
+        thu: number;
+        fri: number;
+        sat: number;
+        sun: number;
+     };
+   }
+     | {
+     kind: "tiered";
+     tiers: {
+        from: number;
+        to?: number | null;
+        price: number;
+     }[];
+   }
+     | null;
+  turnoverMinutes?: number | null;
+  attributes?:   | {
+     key: string;
+     value: string;
+   }[]
+     | null;
+  bookingRules?:   | {
+     onlineEnabled: boolean;
+     existingOnly: boolean;
+     requiresConsult: boolean;
+     maxDaysOut: number;
+     minNoticeHours: number;
+     lateCancelHours: number;
+   }
+     | null;
+  depositStrategy?:   | NONE
+     | FIXED
+     | PERCENTAGE
+     | null;
   reservationDuration?: number | null;
   reservationDurationUnit?:   | MINUTES
      | HOURS
      | NIGHTS
      | null;
-  calendarId?: string | null;
-  roomResource?:   | {
-     roomNumber: string;
-     roomType: string;
-     pricePerNight: number;
-     view?: string;
-     bedType?: string;
-     isSmoking: boolean;
-     accessibilityFeatures?: string;
-   }
-     | null;
-  rentalResource?:   | {
-     itemType: string;
-     pricePerHour: number;
-   }
-     | null;
+  checklistTemplate: {
+     id: string;
+     label: string;
+     required: boolean;
+     phase: "pickup" | "both" | "return";
+  }[];
+  applicableTierIds: string[];
+  displayOrder?: number | null;
   metadata?: Record<string, any>;
+  placement?: {
+     placementIntent: {
+        mode:   | "BEGINNING"
+           | "END"
+           | "KEEP_CURRENT"
+           | "BEFORE_ITEM"
+           | "AFTER_ITEM"
+           | "ABSOLUTE_INDEX";
+     };
+     anchorItemId?: string | null;
+     absoluteIndex?: number | null;
+  };
 };
 ```
 
-Defined in: [src/core/business-mgt/reservation-resource.schema.ts:111](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/reservation-resource.schema.ts#L111)
+Defined in: src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:369
 
-Schema for creating a new resource.
+Schema for creating a new reservation resource.
 Omits auto-generated fields.
 
 ## Type Declaration
 
-| Name | Type | Defined in |
-| ------ | ------ | ------ |
-| <a id="resourcetype"></a> `resourceType` | [`ResourceType`](../../type-definitions/enumerations/ResourceType.md) | [src/core/business-mgt/reservation-resource.schema.ts:65](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/reservation-resource.schema.ts#L65) |
-| <a id="name"></a> `name` | `string` | [src/core/business-mgt/reservation-resource.schema.ts:66](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/reservation-resource.schema.ts#L66) |
-| <a id="description"></a> `description?` | `string` | [src/core/business-mgt/reservation-resource.schema.ts:67](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/reservation-resource.schema.ts#L67) |
-| <a id="capacity"></a> `capacity?` | `number` | [src/core/business-mgt/reservation-resource.schema.ts:68](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/reservation-resource.schema.ts#L68) |
-| <a id="isavailable"></a> `isAvailable` | `boolean` | [src/core/business-mgt/reservation-resource.schema.ts:69](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/reservation-resource.schema.ts#L69) |
-| <a id="location"></a> `location?` | `string` | [src/core/business-mgt/reservation-resource.schema.ts:71](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/reservation-resource.schema.ts#L71) |
-| <a id="amenities"></a> `amenities` | `string`[] | [src/core/business-mgt/reservation-resource.schema.ts:72](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/reservation-resource.schema.ts#L72) |
-| <a id="reservationduration"></a> `reservationDuration?` | `number` \| `null` | [src/core/business-mgt/reservation-resource.schema.ts:74](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/reservation-resource.schema.ts#L74) |
-| <a id="reservationdurationunit"></a> `reservationDurationUnit?` | \| [`MINUTES`](../../type-definitions/enumerations/ResourceReservationDurationUnit.md#minutes) \| [`HOURS`](../../type-definitions/enumerations/ResourceReservationDurationUnit.md#hours) \| [`NIGHTS`](../../type-definitions/enumerations/ResourceReservationDurationUnit.md#nights) \| `null` | [src/core/business-mgt/reservation-resource.schema.ts:76](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/reservation-resource.schema.ts#L76) |
-| <a id="calendarid"></a> `calendarId?` | `string` \| `null` | [src/core/business-mgt/reservation-resource.schema.ts:79](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/reservation-resource.schema.ts#L79) |
-| <a id="roomresource"></a> `roomResource?` | \| \{ `roomNumber`: `string`; `roomType`: `string`; `pricePerNight`: `number`; `view?`: `string`; `bedType?`: `string`; `isSmoking`: `boolean`; `accessibilityFeatures?`: `string`; \} \| `null` | [src/core/business-mgt/reservation-resource.schema.ts:84](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/reservation-resource.schema.ts#L84) |
-| <a id="rentalresource"></a> `rentalResource?` | \| \{ `itemType`: `string`; `pricePerHour`: `number`; \} \| `null` | [src/core/business-mgt/reservation-resource.schema.ts:85](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/reservation-resource.schema.ts#L85) |
-| <a id="metadata"></a> `metadata?` | `Record`\<`string`, `any`\> | [src/core/business-mgt/reservation-resource.schema.ts:86](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/reservation-resource.schema.ts#L86) |
+| Name | Type | Default value | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="resourcerevisionid"></a> `resourceRevisionId?` | `string` | - | src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:245 |
+| <a id="locationid"></a> `locationId?` | `string` \| `null` | - | src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:246 |
+| <a id="resourcetype"></a> `resourceType` | [`ResourceType`](../../type-definitions/enumerations/ResourceType.md) | - | src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:247 |
+| <a id="categoryid"></a> `categoryId?` | `string` \| `null` | - | src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:248 |
+| <a id="name"></a> `name` | `string` | - | src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:249 |
+| <a id="description"></a> `description?` | `string` \| `null` | - | src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:250 |
+| <a id="imageurls"></a> `imageUrls?` | `string`[] \| `null` | - | src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:251 |
+| <a id="capacity"></a> `capacity?` | `number` \| `null` | - | src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:252 |
+| <a id="capacityconfig"></a> `capacityConfig?` | \| \{ `kind`: `"range"`; `min`: `number`; `max`: `number`; \} \| \{ `kind`: `"occupancy"`; `standard`: `number`; `max`: `number`; `extraFee?`: `number` \| `null`; \} \| \{ `kind`: `"single"`; `value`: `number`; `weightLimit?`: `number` \| `null`; `skillLevel?`: `string` \| `null`; \} \| `null` | - | src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:253 |
+| <a id="isavailable"></a> `isAvailable` | `boolean` | - | src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:254 |
+| <a id="channelmappings"></a> `channelMappings?` | \| \{ `channelId`: `string`; `externalResourceId`: `string`; \}[] \| `null` | - | src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:255 |
+| <a id="location"></a> `location?` | `string` | - | src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:256 |
+| <a id="amenities"></a> `amenities` | `string`[] | - | src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:257 |
+| <a id="instances"></a> `instances?` | `string`[] \| `null` | - | src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:258 |
+| <a id="pricing"></a> `pricing?` | \| \{ `kind`: `"none"`; `holdPolicy?`: `string` \| `null`; \} \| \{ `kind`: `"dayOfWeek"`; `rates`: \{ `mon`: `number`; `tue`: `number`; `wed`: `number`; `thu`: `number`; `fri`: `number`; `sat`: `number`; `sun`: `number`; \}; \} \| \{ `kind`: `"tiered"`; `tiers`: \{ `from`: `number`; `to?`: `number` \| `null`; `price`: `number`; \}[]; \} \| `null` | - | src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:259 |
+| <a id="turnoverminutes"></a> `turnoverMinutes?` | `number` \| `null` | - | src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:260 |
+| <a id="attributes"></a> `attributes?` | \| \{ `key`: `string`; `value`: `string`; \}[] \| `null` | - | src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:261 |
+| <a id="bookingrules"></a> `bookingRules?` | \| \{ `onlineEnabled`: `boolean`; `existingOnly`: `boolean`; `requiresConsult`: `boolean`; `maxDaysOut`: `number`; `minNoticeHours`: `number`; `lateCancelHours`: `number`; \} \| `null` | - | src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:262 |
+| <a id="depositstrategy"></a> `depositStrategy?` | \| [`NONE`](../enumerations/ServiceDepositStrategy.md#none) \| [`FIXED`](../enumerations/ServiceDepositStrategy.md#fixed) \| [`PERCENTAGE`](../enumerations/ServiceDepositStrategy.md#percentage) \| `null` | - | src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:263 |
+| <a id="reservationduration"></a> `reservationDuration?` | `number` \| `null` | - | src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:264 |
+| <a id="reservationdurationunit"></a> `reservationDurationUnit?` | \| [`MINUTES`](../../type-definitions/enumerations/ResourceReservationDurationUnit.md#minutes) \| [`HOURS`](../../type-definitions/enumerations/ResourceReservationDurationUnit.md#hours) \| [`NIGHTS`](../../type-definitions/enumerations/ResourceReservationDurationUnit.md#nights) \| `null` | - | src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:265 |
+| <a id="checklisttemplate"></a> `checklistTemplate` | \{ `id`: `string`; `label`: `string`; `required`: `boolean`; `phase`: `"pickup"` \| `"both"` \| `"return"`; \}[] | - | src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:266 |
+| <a id="applicabletierids"></a> `applicableTierIds` | `string`[] | - | src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:267 |
+| <a id="displayorder"></a> `displayOrder?` | `number` \| `null` | - | src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:268 |
+| <a id="metadata"></a> `metadata?` | `Record`\<`string`, `any`\> | - | src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:269 |
+| <a id="placement"></a> `placement?` | \{ `placementIntent`: \{ `mode`: \| `"BEGINNING"` \| `"END"` \| `"KEEP_CURRENT"` \| `"BEFORE_ITEM"` \| `"AFTER_ITEM"` \| `"ABSOLUTE_INDEX"`; \}; `anchorItemId?`: `string` \| `null`; `absoluteIndex?`: `number` \| `null`; \} | - | src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:352 |
+| `placement.placementIntent` | \{ `mode`: \| `"BEGINNING"` \| `"END"` \| `"KEEP_CURRENT"` \| `"BEFORE_ITEM"` \| `"AFTER_ITEM"` \| `"ABSOLUTE_INDEX"`; \} | `DisplayOrderPositionIntentSchema` | src/core/type-definitions/display-order.ts:104 |
+| `placement.placementIntent.mode` | \| `"BEGINNING"` \| `"END"` \| `"KEEP_CURRENT"` \| `"BEFORE_ITEM"` \| `"AFTER_ITEM"` \| `"ABSOLUTE_INDEX"` | - | src/core/type-definitions/display-order.ts:24 |
+| `placement.anchorItemId?` | `string` \| `null` | - | src/core/type-definitions/display-order.ts:105 |
+| `placement.absoluteIndex?` | `number` \| `null` | - | src/core/type-definitions/display-order.ts:106 |

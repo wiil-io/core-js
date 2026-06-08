@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.51**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
 
 ***
 
@@ -9,6 +9,8 @@
 ```ts
 type CreateMenuOrderItem = {
   menuItemId: string;
+  variantId: string;
+  menuSetId?: string | null;
   itemName: string;
   quantity: number;
   unitPrice: number;
@@ -20,27 +22,41 @@ type CreateMenuOrderItem = {
      additionalCost: number;
    }[]
      | null;
+  modifiers?:   | {
+     modifierGroupId?: string | null;
+     modifierOptionId?: string | null;
+     externalModifierGroupId?: string | null;
+     externalModifierOptionId?: string | null;
+     groupName: string;
+     optionName: string;
+     quantity: number;
+     priceDelta: number;
+   }[]
+     | null;
   status: OrderStatus;
   preparationTime: number | null;
   notes: string | null;
 };
 ```
 
-Defined in: [src/core/business-mgt/menu.order.schema.ts:166](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu.order.schema.ts#L166)
+Defined in: src/core/business-mgt/menu-management/menu.order.schema.ts:229
 
-Base menu order item schema (without IDs for creation).
+Base menu order item schema.
 
 ## Type Declaration
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="menuitemid"></a> `menuItemId` | `string` | [src/core/business-mgt/menu.order.schema.ts:27](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu.order.schema.ts#L27) |
-| <a id="itemname"></a> `itemName` | `string` | [src/core/business-mgt/menu.order.schema.ts:28](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu.order.schema.ts#L28) |
-| <a id="quantity"></a> `quantity` | `number` | [src/core/business-mgt/menu.order.schema.ts:29](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu.order.schema.ts#L29) |
-| <a id="unitprice"></a> `unitPrice` | `number` | [src/core/business-mgt/menu.order.schema.ts:30](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu.order.schema.ts#L30) |
-| <a id="totalprice"></a> `totalPrice` | `number` | [src/core/business-mgt/menu.order.schema.ts:31](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu.order.schema.ts#L31) |
-| <a id="specialinstructions"></a> `specialInstructions` | `string` \| `null` | [src/core/business-mgt/menu.order.schema.ts:34](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu.order.schema.ts#L34) |
-| <a id="customizations"></a> `customizations` | \| \{ `name`: `string`; `value`: `string`; `additionalCost`: `number`; \}[] \| `null` | [src/core/business-mgt/menu.order.schema.ts:35](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu.order.schema.ts#L35) |
-| <a id="status"></a> `status` | [`OrderStatus`](../../type-definitions/enumerations/OrderStatus.md) | [src/core/business-mgt/menu.order.schema.ts:41](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu.order.schema.ts#L41) |
-| <a id="preparationtime"></a> `preparationTime` | `number` \| `null` | [src/core/business-mgt/menu.order.schema.ts:42](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu.order.schema.ts#L42) |
-| <a id="notes"></a> `notes` | `string` \| `null` | [src/core/business-mgt/menu.order.schema.ts:43](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu.order.schema.ts#L43) |
+| <a id="menuitemid"></a> `menuItemId` | `string` | src/core/business-mgt/menu-management/menu.order.schema.ts:38 |
+| <a id="variantid"></a> `variantId` | `string` | src/core/business-mgt/menu-management/menu.order.schema.ts:39 |
+| <a id="menusetid"></a> `menuSetId?` | `string` \| `null` | src/core/business-mgt/menu-management/menu.order.schema.ts:40 |
+| <a id="itemname"></a> `itemName` | `string` | src/core/business-mgt/menu-management/menu.order.schema.ts:41 |
+| <a id="quantity"></a> `quantity` | `number` | src/core/business-mgt/menu-management/menu.order.schema.ts:42 |
+| <a id="unitprice"></a> `unitPrice` | `number` | src/core/business-mgt/menu-management/menu.order.schema.ts:43 |
+| <a id="totalprice"></a> `totalPrice` | `number` | src/core/business-mgt/menu-management/menu.order.schema.ts:44 |
+| <a id="specialinstructions"></a> `specialInstructions` | `string` \| `null` | src/core/business-mgt/menu-management/menu.order.schema.ts:47 |
+| <a id="customizations"></a> `customizations` | \| \{ `name`: `string`; `value`: `string`; `additionalCost`: `number`; \}[] \| `null` | src/core/business-mgt/menu-management/menu.order.schema.ts:48 |
+| <a id="modifiers"></a> `modifiers?` | \| \{ `modifierGroupId?`: `string` \| `null`; `modifierOptionId?`: `string` \| `null`; `externalModifierGroupId?`: `string` \| `null`; `externalModifierOptionId?`: `string` \| `null`; `groupName`: `string`; `optionName`: `string`; `quantity`: `number`; `priceDelta`: `number`; \}[] \| `null` | src/core/business-mgt/menu-management/menu.order.schema.ts:53 |
+| <a id="status"></a> `status` | [`OrderStatus`](../../type-definitions/enumerations/OrderStatus.md) | src/core/business-mgt/menu-management/menu.order.schema.ts:55 |
+| <a id="preparationtime"></a> `preparationTime` | `number` \| `null` | src/core/business-mgt/menu-management/menu.order.schema.ts:56 |
+| <a id="notes"></a> `notes` | `string` \| `null` | src/core/business-mgt/menu-management/menu.order.schema.ts:57 |

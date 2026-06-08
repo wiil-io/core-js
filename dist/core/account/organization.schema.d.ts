@@ -66,23 +66,13 @@ export type OrganizationServiceStatusRecord = z.infer<typeof OrganizationService
  * @property {number | null} [lastServiceStatusChanged] - Timestamp of last service status change
  * @property {OrganizationServiceStatusRecord[] | null} [serviceStatusHistory] - Complete history of service status changes
  * @property {string | null} [platformEmail] - Organization's platform contact email
+ * @property {string | null} [primarySlug] - Primary URL slug identifier for the organization
+ * @property {string | null} [primaryWiilUrl] - Primary Wiil URL for the organization
+ * @property {string | null} [transactionsCurrency] - Default currency for transactions
+ * @property {string | null} [businessInformation] - Brief business description (max 160 characters)
+ * @property {string | null} [detailedBusinessInformation] - Detailed business description (max 1000 characters)
  * @property {number} [createdAt] - Timestamp when the organization was created
  * @property {number} [updatedAt] - Timestamp when the organization was last updated
- *
- * @example
- * ```typescript
- * const organization: Organization = {
- *   id: '123*',
- *   companyName: 'Acme Corporation',
- *   primaryRegionId: 'us-west',
- *   businessVerticalId: 'technology',
- *   serviceStatus: ServiceStatus.ACTIVE,
- *   platformEmail: 'admin@acme.com',
- *   metadata: { industry: 'technology' },
- *   createdAt: Date.now(),
- *   updatedAt: Date.now()
- * };
- * ```
  */
 export declare const OrganizationSchema: z.ZodObject<{
     id: z.ZodString;
@@ -119,5 +109,10 @@ export declare const OrganizationSchema: z.ZodObject<{
         isCurrent: z.ZodDefault<z.ZodBoolean>;
     }, z.core.$strip>>>>;
     platformEmail: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    primarySlug: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    primaryWiilUrl: z.ZodOptional<z.ZodNullable<z.ZodURL>>;
+    transactionsCurrency: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    businessInformation: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    detailedBusinessInformation: z.ZodOptional<z.ZodNullable<z.ZodString>>;
 }, z.core.$strip>;
 export type Organization = z.infer<typeof OrganizationSchema>;

@@ -1,13 +1,27 @@
 import { z } from "zod";
-import { AssistantChatMessageSchema, AssistantEmailMessageSchema, MessageType, UserChatMessageSchema, UserEmailMessageSchema } from "./conversation-message.schema";
-import { ConversationStatus, ConversationSummarySentiment, ServiceConversationType } from "../type-definitions";
+import {
+    AssistantChatMessageSchema,
+    AssistantEmailMessageSchema,
+    HumanAgentChatMessageSchema,
+    HumanAgentEmailMessageSchema,
+    MessageType,
+    SystemMessageSchema,
+    UserChatMessageSchema,
+    UserEmailMessageSchema
+} from "./conversation-message.schema";
+import {
+    ConversationDirection,
+    ConversationStatus,
+    ConversationSummarySentiment,
+    ServiceConversationType
+} from "../type-definitions";
 
 /**
  * @fileoverview Conversation configuration schema definitions.
  *
  * Conversations represent individual interaction sessions between users and AI agents through various channels
  * (phone, SMS, web chat, email). They track message history, status progression, call metadata, and relationship
- * to deployment configurations. Each conversation is scoped to a project and organization.
+ * to deployment configurations. Each conversation is scoped to a project.
  *
  * @module conversation/conversation-config
  */
@@ -72,22 +86,86 @@ export const MessageSchema = z.object({
 
 export type Message = z.infer<typeof MessageSchema>;
 
+// ============================================================================
+// DISPLAY MESSAGE SCHEMA
+// ============================================================================
+
 /**
- * Conversation direction enum.
+ * Display message schema.
+ *
+ * Simplified message format for UI display purposes, containing only the
+ * essential fields needed for rendering messages in chat interfaces.
+ *
+ * @typedef {Object} DisplayMessage
+ * @property {string} id - Unique identifier for display purposes
+ * @property {string} sender - Who sent this message (user or assistant)
+ * @property {string} content - Message content to display
+ * @property {Date} timestamp - When the message was sent
  */
-export enum ConversationDirection {
-    INBOUND = 'inbound',
-    OUTBOUND = 'outbound'
-}
+export const DisplayMessageSchema = z.object({
+    id: z.string().describe("Unique identifier for display purposes"),
+    sender: z.union([
+        z.literal('user'),
+        z.literal('assistant')
+    ]).describe("Who sent this message - user or AI assistant"),
+    content: z.string().describe("Message content to display to users"),
+    timestamp: z.date().describe("When the message was sent")
+});
+
+export type DisplayMessage = z.infer<typeof DisplayMessageSchema>;
+
+// ============================================================================
+// CONVERSATION CONTEXT SCHEMA
+// ============================================================================
+
+/**
+ * Conversation context schema.
+ *
+ * Optional context to guide conversations, enabling deep-linking to specific
+ * products, services, or resources. Used to pre-populate conversation context
+ * when users click through from specific pages or marketing campaigns.
+ *
+ * @typedef {Object} ConversationContext
+ * @property {string} [message] - Auto-sends as the user's first message
+ * @property {string} [productId] - Deep-link to a product
+ * @property {string} [menuItemId] - Deep-link to a menu item
+ * @property {string} [serviceId] - Deep-link to a service
+ * @property {string} [propertyId] - Deep-link to a property
+ * @property {string} [resourceId] - Deep-link to a resource (rental/room)
+ * @property {string} [requiredServiceId] - Pre-select a required service
+ * @property {string} [locationId] - Context of a specific business location
+ */
+export const ConversationContextSchema = z.object({
+    message: z.string().optional().describe("Auto-sends as the user's first message when conversation starts"),
+    productId: z.string().optional().describe("Deep-link to a specific product for product inquiries"),
+    menuItemId: z.string().optional().describe("Deep-link to a specific menu item for food/beverage inquiries"),
+    serviceId: z.string().optional().describe("Deep-link to a specific service for service booking"),
+    propertyId: z.string().optional().describe("Deep-link to a specific property for real estate inquiries"),
+    resourceId: z.string().optional().describe("Deep-link to a specific resource (rental item, room) for reservations"),
+    requiredServiceId: z.string().optional().describe("Pre-select a required service for the conversation"),
+    locationId: z.string().optional().describe("Context of a specific business location for multi-location businesses"),
+});
+
+export type ConversationContext = z.infer<typeof ConversationContextSchema>;
+
+// ============================================================================
+// CONVERSATION MESSAGE UNION
+// ============================================================================
 
 /**
  * Union of all conversation message types.
+ *
+ * Discriminated union supporting user, AI agent, human agent, and system messages
+ * for both chat and email channels.
  */
 export const ConversationMessageSchema = z.union([
     UserChatMessageSchema,
     AssistantChatMessageSchema,
     UserEmailMessageSchema,
-    AssistantEmailMessageSchema
+    AssistantEmailMessageSchema,
+    HumanAgentChatMessageSchema,
+    HumanAgentEmailMessageSchema,
+    SystemMessageSchema,
 ]);
 
 /**
@@ -171,7 +249,6 @@ export const ConversationStateHistorySchema = z.object({
  */
 export const BaseConversationConfigSchema = z.object({
     channel_id: z.string().describe("ID of the deployment channel through which this conversation is conducted (references DeploymentChannel for phone, SMS, web, or email configuration)"),
-    organization_id: z.string().describe("ID of the organization that owns this conversation for multi-tenant data isolation, access control, and billing attribution"),
     project_id: z.string().describe("ID of the project this conversation is associated with for organizational grouping, reporting, and access control (N:1 relationship with Project)"),
     deployment_config_id: z.string().describe("ID of the deployment configuration that powers this conversation including agent, instruction, and channel settings (N:1 relationship with DeploymentConfiguration)"),
     channel_identifier: z.string().describe("Unique identifier for the specific communication endpoint: phone number in E.164 format (+12125551234), chat widget ID, email address, or WhatsApp number"),
@@ -184,6 +261,7 @@ export const BaseConversationConfigSchema = z.object({
     messages: z.array(ConversationMessageSchema).optional().nullable().describe("Array of messages exchanged in this conversation embedded for quick access without separate database queries (includes user and assistant messages with metadata)"),
     is_campaign: z.boolean().default(false).describe("Flag indicating if this conversation is part of a marketing or outbound campaign (true) or an inbound customer-initiated interaction (false, default)"),
     customer_id: z.string().optional().nullable().describe("Customer or contact ID from CRM or external system for customer relationship tracking, conversation history aggregation, and personalization"),
+    location_id: z.string().optional().nullable().describe("Business location ID associated with this conversation for multi-location businesses, enables location-specific analytics and routing"),
     status: z.enum(ConversationStatus).nullable().optional().describe("Current operational status of the conversation (ACTIVE: ongoing, COMPLETED: concluded successfully, FAILED: errors, ABANDONED: user left, TRANSFERRED: escalated to human)"),
     durationInSeconds: z.number().nonnegative().optional().default(15).describe("Duration of the conversation in seconds for billing calculations, analytics reporting, and average handling time (AHT) metrics (default: 15 for minimum billing)"),
     stt_model_id: z.string().optional().nullable().describe("Speech-to-Text model ID used for voice conversations to transcribe user speech into text (e.g., 'whisper-v3', 'google-stt-enhanced', references WiilSupportModel)"),
@@ -192,7 +270,9 @@ export const BaseConversationConfigSchema = z.object({
     created_day: z.string().optional().describe("The day the conversation was created in YYYY-MM-DD ISO format for efficient daily aggregation queries, analytics partitioning, and time-series reporting"),
     state_history: z.array(ConversationStateHistorySchema).nullable().optional().describe("Historical audit trail of status changes throughout the conversation lifecycle for flow analysis, troubleshooting, and measuring time-to-resolution"),
     updated_at: z.number().optional().nullable().describe("Unix timestamp in milliseconds when conversation was last modified (message added, status changed, summary generated, metadata updated) for change tracking"),
-    deleted_at: z.number().optional().nullable().describe("Unix timestamp in milliseconds when conversation was soft-deleted for data retention compliance, null if active (enables GDPR right-to-be-forgotten while preserving analytics)")
+    deleted_at: z.number().optional().nullable().describe("Unix timestamp in milliseconds when conversation was soft-deleted for data retention compliance, null if active (enables GDPR right-to-be-forgotten while preserving analytics)"),
+    is_test_conversation: z.boolean().default(false).describe("Flag indicating if this conversation is for testing purposes (true) or a real customer interaction (false, default)"),
+    conversation_context: ConversationContextSchema.optional().nullable().describe("Optional context to guide the conversation including deep-links to products, services, or resources"),
 });
 
 /**
@@ -279,35 +359,117 @@ export const DecommissionConfigSchema = z.object({
     decommission_service_id: z.string().describe("Service ID of the active conversation session to decommission and shut down gracefully, releases resources and closes all active connections"),
 });
 
+// ============================================================================
+// TEST AND EVALUATION SCHEMAS
+// ============================================================================
+
+/**
+ * Test configuration schema.
+ * Base configuration for testing AI agents.
+ */
+export const TestConfigSchema = z.object({
+    account_id: z.string().describe("Account ID for the test configuration"),
+    project_id: z.string().describe("Project ID where the test will run"),
+    agent_id: z.string().describe("AI agent ID to test"),
+    instruction_config_id: z.string().describe("Instruction configuration ID for agent behavior"),
+});
+
+/**
+ * Evaluation schema for running AI agent evaluations.
+ */
+export const EvaluationSchema = z.object({
+    instructionId: z.string().describe("Instruction configuration ID for evaluation"),
+    agentId: z.string().describe("Agent ID to evaluate"),
+    evaluationConfigId: z.string().describe("Evaluation configuration ID with test parameters"),
+    speechConfig: z.object({}).optional().nullable().describe("Speech settings for voice-based evaluations"),
+});
+
+// ============================================================================
+// OTT CONVERSATION CONFIG SCHEMA
+// ============================================================================
+
+/**
+ * OTT conversation configuration schema.
+ * Configuration for OTT (over-the-top) chat widget connections.
+ */
+export const ConversationConfigSchema = z.object({
+    platform_user_id: z.number().optional().describe("Internal platform user ID for this conversation"),
+    channel_identifier: z.string().describe("Unique identifier for the communication channel (phone number, chat ID, etc.)"),
+    partner_user_id: z.string().optional().describe("External user/partner identifier for integration purposes"),
+});
+
+/**
+ * OTT conversation configuration with connection details.
+ */
+export const OttConversationConfigSchema = ConversationConfigSchema.safeExtend({
+    sdrtn_id: z.string().optional().nullable().describe("SDRTN (Session Description and Real-Time Networking) identifier for WebRTC connections"),
+    channel_token: z.string().describe("Authentication token for the communication channel"),
+    connection_url: z.string().optional().nullable().describe("WebSocket or connection URL for real-time communication"),
+});
+
+// ============================================================================
+// TYPE EXPORTS
+// ============================================================================
+
 export type ConversationSummary = z.infer<typeof ConversationSummarySchema>;
 export type ServiceConversationConfigType = z.infer<typeof ServiceConversationConfigSchema>;
 export type DecommissionRequest = z.infer<typeof DecommissionConfigSchema>;
 export type CallTransfer = z.infer<typeof CallTransferSchema>;
 export type ConversationStateHistory = z.infer<typeof ConversationStateHistorySchema>;
+export type TestConfig = z.infer<typeof TestConfigSchema>;
+export type Evaluation = z.infer<typeof EvaluationSchema>;
+export type OttConversationConfig = z.infer<typeof OttConversationConfigSchema>;
+
+// ============================================================================
+// QUERY OPTIONS
+// ============================================================================
 
 /**
- * Enhanced interfaces for filtering and sorting conversations.
+ * Conversation filter options.
+ * @interface ConversationFilters
  */
 export interface ConversationFilters {
+    /** Text search across conversation content */
     search?: string;
+    /** Filter by conversation type(s) */
     conversationType?: ServiceConversationType[];
+    /** Filter by channel ID */
     channelId?: string;
+    /** Filter by location ID */
+    locationId?: string;
+    /** Filter by customer ID */
     customerId?: string;
+    /** Filter by presence of messages */
     hasMessages?: boolean;
+    /** Filter by date range */
     dateRange?: {
         start?: Date;
         end?: Date;
     };
 }
 
+/**
+ * Conversation sorting options.
+ * @interface ConversationSorting
+ */
 export interface ConversationSorting {
+    /** Field to sort by */
     field: 'created_at' | 'customer_id';
+    /** Sort direction */
     direction: 'asc' | 'desc';
 }
 
+/**
+ * Conversation query options.
+ * @interface ConversationQueryOptions
+ */
 export interface ConversationQueryOptions {
+    /** Page number (1-indexed) */
     page: number;
+    /** Items per page */
     pageSize: number;
+    /** Optional filters */
     filters?: ConversationFilters;
+    /** Optional sorting */
     sorting?: ConversationSorting;
 }

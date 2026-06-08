@@ -67,23 +67,13 @@ exports.OrganizationServiceStatusRecordSchema = base_schema_1.BaseModelSchema.sa
  * @property {number | null} [lastServiceStatusChanged] - Timestamp of last service status change
  * @property {OrganizationServiceStatusRecord[] | null} [serviceStatusHistory] - Complete history of service status changes
  * @property {string | null} [platformEmail] - Organization's platform contact email
+ * @property {string | null} [primarySlug] - Primary URL slug identifier for the organization
+ * @property {string | null} [primaryWiilUrl] - Primary Wiil URL for the organization
+ * @property {string | null} [transactionsCurrency] - Default currency for transactions
+ * @property {string | null} [businessInformation] - Brief business description (max 160 characters)
+ * @property {string | null} [detailedBusinessInformation] - Detailed business description (max 1000 characters)
  * @property {number} [createdAt] - Timestamp when the organization was created
  * @property {number} [updatedAt] - Timestamp when the organization was last updated
- *
- * @example
- * ```typescript
- * const organization: Organization = {
- *   id: '123*',
- *   companyName: 'Acme Corporation',
- *   primaryRegionId: 'us-west',
- *   businessVerticalId: 'technology',
- *   serviceStatus: ServiceStatus.ACTIVE,
- *   platformEmail: 'admin@acme.com',
- *   metadata: { industry: 'technology' },
- *   createdAt: Date.now(),
- *   updatedAt: Date.now()
- * };
- * ```
  */
 exports.OrganizationSchema = base_schema_1.BaseModelSchema.safeExtend({
     companyName: zod_1.z.string().min(2).describe("Organization's company name (minimum 2 characters)"),
@@ -93,4 +83,9 @@ exports.OrganizationSchema = base_schema_1.BaseModelSchema.safeExtend({
     lastServiceStatusChanged: zod_1.z.number().nullable().optional().describe("Timestamp of last service status change"),
     serviceStatusHistory: zod_1.z.array(exports.OrganizationServiceStatusRecordSchema).nullable().optional().describe("Complete history of service status changes"),
     platformEmail: zod_1.z.string().nullable().optional().describe("Organization's platform contact email"),
+    primarySlug: zod_1.z.string().nullable().optional().describe("Primary URL slug identifier for the organization"),
+    primaryWiilUrl: zod_1.z.url().nullable().optional().describe("Primary Wiil URL for the organization"),
+    transactionsCurrency: zod_1.z.string().nullable().optional().describe("Default currency for transactions"),
+    businessInformation: zod_1.z.string().max(160).nullable().optional().describe("Brief business description (max 160 characters)"),
+    detailedBusinessInformation: zod_1.z.string().max(1000).nullable().optional().describe("Detailed business description (max 1000 characters)"),
 });

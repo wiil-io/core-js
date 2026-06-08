@@ -1,0 +1,21 @@
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
+
+***
+
+[Wiil Platform JavaScript Data Model Definitions - API Reference](../../README.md) / [business-mgt](../README.md) / ItemModifierBindingQueryOptions
+
+# Interface: ItemModifierBindingQueryOptions
+
+Defined in: src/core/business-mgt/menu-management/modifier.schema.ts:511
+
+Item modifier binding query options.
+ ItemModifierBindingQueryOptions
+
+## Properties
+
+| Property | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | src/core/business-mgt/menu-management/modifier.schema.ts:513 |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | src/core/business-mgt/menu-management/modifier.schema.ts:515 |
+| <a id="filters"></a> `filters?` | [`ItemModifierBindingFilters`](ItemModifierBindingFilters.md) | Optional filters | src/core/business-mgt/menu-management/modifier.schema.ts:517 |
+| <a id="sorting"></a> `sorting?` | [`ItemModifierBindingSorting`](ItemModifierBindingSorting.md) | Optional sorting | src/core/business-mgt/menu-management/modifier.schema.ts:519 |

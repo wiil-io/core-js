@@ -1,13 +1,20 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CallRequestResultSchema = exports.CreateCallRequestSchema = exports.BusinessCallRequestSchema = exports.CallingHoursSchema = void 0;
+exports.CallRequestResultSchema = exports.UpdateCallRequestSchema = exports.CreateCallRequestSchema = exports.BusinessCallRequestSchema = exports.CallingHoursSchema = void 0;
 const zod_1 = require("zod");
 const type_definitions_1 = require("../type-definitions");
 const base_schema_1 = require("../base.schema");
 /**
- * @fileoverview Business service configuration schema definitions.
+ * @fileoverview Outbound call request schema definitions.
  * @module conversation/outbound-call
+ *
+ * Outbound call requests represent scheduled or immediate AI-powered voice calls
+ * to customers. Supports scheduling, retry logic, calling hours compliance, and
+ * integration with agent configurations for AI behavior.
  */
+// ============================================================================
+// CALLING HOURS SCHEMA
+// ============================================================================
 /**
  * Calling hours configuration for outbound calls.
  *
@@ -32,6 +39,9 @@ exports.CallingHoursSchema = zod_1.z.object({
     endTime: zod_1.z.string().regex(/^([01]?[0-9]|2[0-3]):[0-5][0-9]$/).describe("End time for permitted calling window in HH:MM 24-hour format (e.g., '17:00' for 5 PM). Calls after this time are queued until the next available window."),
     daysOfWeek: zod_1.z.array(zod_1.z.number().int().min(0).max(6)).default([1, 2, 3, 4, 5]).describe("Array of permitted days of week for calling (0=Sunday through 6=Saturday). Defaults to weekdays [1,2,3,4,5]. Use [0,1,2,3,4,5,6] for all days."),
 });
+// ============================================================================
+// BUSINESS CALL REQUEST SCHEMA
+// ============================================================================
 /**
  * Business call request schema.
  *
@@ -73,8 +83,11 @@ exports.BusinessCallRequestSchema = base_schema_1.BaseModelSchema.safeExtend({
     // Extensibility
     metadata: zod_1.z.record(zod_1.z.string(), zod_1.z.any()).optional().describe("Additional custom metadata as key-value pairs for campaign tracking, CRM integration, or application-specific data. Not processed by the platform."),
 });
+// ============================================================================
+// CREATE/UPDATE SCHEMAS
+// ============================================================================
 /**
- * Schema for creating a new business service.
+ * Schema for creating a new call request.
  * Omits auto-generated fields.
  */
 exports.CreateCallRequestSchema = exports.BusinessCallRequestSchema.omit({
@@ -82,6 +95,20 @@ exports.CreateCallRequestSchema = exports.BusinessCallRequestSchema.omit({
     createdAt: true,
     updatedAt: true,
 });
+/**
+ * Schema for updating an existing call request.
+ * All fields optional except id (required).
+ */
+exports.UpdateCallRequestSchema = exports.CreateCallRequestSchema.partial().safeExtend({
+    id: zod_1.z.string().describe("Unique identifier of the CallRequest to update"),
+});
+// ============================================================================
+// CALL REQUEST RESULT SCHEMA
+// ============================================================================
+/**
+ * Call request result schema.
+ * Response payload from telephony provider after initiating a call.
+ */
 exports.CallRequestResultSchema = zod_1.z.object({
     success: zod_1.z.boolean().optional().default(false).describe("Whether the telephony request was successful"),
     request: exports.BusinessCallRequestSchema.optional().nullable().describe("Original call request details"),

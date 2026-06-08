@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.51**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
 
 ***
 
@@ -21,6 +21,10 @@ type SmsRequestResult = {
      variables?: Record<string, any> | null;
      scheduledAt?: number;
      serviceConversationConfigId?: string | null;
+     status: SmsStatus;
+     maxRetries?: number;
+     retryCount: number;
+     retryDelayMinutes?: number;
      metadata?: Record<string, any> | null;
    }
      | null;
@@ -28,12 +32,15 @@ type SmsRequestResult = {
 };
 ```
 
-Defined in: [src/core/conversation/outbound-sms.schema.ts:62](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/conversation/outbound-sms.schema.ts#L62)
+Defined in: [src/core/conversation/outbound-sms.schema.ts:104](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/conversation/outbound-sms.schema.ts#L104)
+
+SMS request result schema.
+Response payload after submitting an SMS request.
 
 ## Type Declaration
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="success"></a> `success` | `boolean` | [src/core/conversation/outbound-sms.schema.ts:53](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/conversation/outbound-sms.schema.ts#L53) |
-| <a id="request"></a> `request?` | \| \{ `id`: `string`; `createdAt?`: `number`; `updatedAt?`: `number`; `phoneConfigurationId?`: `string` \| `null`; `to`: `string`; `from?`: `string` \| `null`; `body`: `string`; `templateId?`: `string` \| `null`; `variables?`: `Record`\<`string`, `any`\> \| `null`; `scheduledAt?`: `number`; `serviceConversationConfigId?`: `string` \| `null`; `metadata?`: `Record`\<`string`, `any`\> \| `null`; \} \| `null` | [src/core/conversation/outbound-sms.schema.ts:54](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/conversation/outbound-sms.schema.ts#L54) |
-| <a id="error_message"></a> `error_message?` | `string` \| `null` | [src/core/conversation/outbound-sms.schema.ts:55](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/conversation/outbound-sms.schema.ts#L55) |
+| <a id="success"></a> `success` | `boolean` | [src/core/conversation/outbound-sms.schema.ts:92](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/conversation/outbound-sms.schema.ts#L92) |
+| <a id="request"></a> `request?` | \| \{ `id`: `string`; `createdAt?`: `number`; `updatedAt?`: `number`; `phoneConfigurationId?`: `string` \| `null`; `to`: `string`; `from?`: `string` \| `null`; `body`: `string`; `templateId?`: `string` \| `null`; `variables?`: `Record`\<`string`, `any`\> \| `null`; `scheduledAt?`: `number`; `serviceConversationConfigId?`: `string` \| `null`; `status`: [`SmsStatus`](../../type-definitions/enumerations/SmsStatus.md); `maxRetries?`: `number`; `retryCount`: `number`; `retryDelayMinutes?`: `number`; `metadata?`: `Record`\<`string`, `any`\> \| `null`; \} \| `null` | [src/core/conversation/outbound-sms.schema.ts:93](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/conversation/outbound-sms.schema.ts#L93) |
+| <a id="error_message"></a> `error_message?` | `string` \| `null` | [src/core/conversation/outbound-sms.schema.ts:94](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/conversation/outbound-sms.schema.ts#L94) |

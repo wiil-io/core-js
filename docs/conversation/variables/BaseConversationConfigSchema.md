@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.51**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
 
 ***
 
@@ -9,7 +9,6 @@
 ```ts
 const BaseConversationConfigSchema: ZodObject<{
   channel_id: ZodString;
-  organization_id: ZodString;
   project_id: ZodString;
   deployment_config_id: ZodString;
   channel_identifier: ZodString;
@@ -52,9 +51,37 @@ const BaseConversationConfigSchema: ZodObject<{
      subject: ZodString;
      isEmail: ZodDefault<ZodLiteral<...>>;
      message_type: ZodDefault<ZodLiteral<...>>;
+   }, $strip>, ZodObject<{
+     conversation_config_id: ZodString;
+     message: ZodString;
+     timestamp: ZodDefault<ZodNumber>;
+     llm_conversation_id: ZodNullable<ZodOptional<...>>;
+     message_type: ZodDefault<ZodLiteral<...>>;
+     agent_message_id: ZodString;
+     agent_session_id: ZodString;
+     last_user_message_id: ZodOptional<ZodString>;
+   }, $strip>, ZodObject<{
+     conversation_config_id: ZodString;
+     message: ZodString;
+     timestamp: ZodDefault<ZodNumber>;
+     llm_conversation_id: ZodNullable<ZodOptional<...>>;
+     subject: ZodString;
+     isEmail: ZodDefault<ZodLiteral<...>>;
+     message_type: ZodDefault<ZodLiteral<...>>;
+     agent_session_id: ZodString;
+   }, $strip>, ZodObject<{
+     conversation_config_id: ZodString;
+     message: ZodString;
+     timestamp: ZodDefault<ZodNumber>;
+     llm_conversation_id: ZodNullable<ZodOptional<...>>;
+     message_type: ZodDefault<ZodLiteral<...>>;
+     system_message_id: ZodString;
+     event_type: ZodEnum<typeof SystemMessageEventType>;
+     metadata: ZodOptional<ZodRecord<..., ...>>;
   }, $strip>]>>>>;
   is_campaign: ZodDefault<ZodBoolean>;
   customer_id: ZodNullable<ZodOptional<ZodString>>;
+  location_id: ZodNullable<ZodOptional<ZodString>>;
   status: ZodOptional<ZodNullable<ZodEnum<typeof ConversationStatus>>>;
   durationInSeconds: ZodDefault<ZodOptional<ZodNumber>>;
   stt_model_id: ZodNullable<ZodOptional<ZodString>>;
@@ -74,10 +101,21 @@ const BaseConversationConfigSchema: ZodObject<{
   }, $strip>>>>;
   updated_at: ZodNullable<ZodOptional<ZodNumber>>;
   deleted_at: ZodNullable<ZodOptional<ZodNumber>>;
+  is_test_conversation: ZodDefault<ZodBoolean>;
+  conversation_context: ZodNullable<ZodOptional<ZodObject<{
+     message: ZodOptional<ZodString>;
+     productId: ZodOptional<ZodString>;
+     menuItemId: ZodOptional<ZodString>;
+     serviceId: ZodOptional<ZodString>;
+     propertyId: ZodOptional<ZodString>;
+     resourceId: ZodOptional<ZodString>;
+     requiredServiceId: ZodOptional<ZodString>;
+     locationId: ZodOptional<ZodString>;
+  }, $strip>>>;
 }, $strip>;
 ```
 
-Defined in: [src/core/conversation/conversation-config.schema.ts:172](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/conversation/conversation-config.schema.ts#L172)
+Defined in: [src/core/conversation/conversation-config.schema.ts:250](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/conversation/conversation-config.schema.ts#L250)
 
 Base conversation configuration schema.
 

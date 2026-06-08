@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DecommissionConfigSchema = exports.ServiceConversationConfigSchema = exports.CallTransferSchema = exports.BaseConversationConfigSchema = exports.ConversationStateHistorySchema = exports.ConversationMessageSchema = exports.ConversationDirection = exports.MessageSchema = exports.ConversationSummarySchema = void 0;
+exports.OttConversationConfigSchema = exports.ConversationConfigSchema = exports.EvaluationSchema = exports.TestConfigSchema = exports.DecommissionConfigSchema = exports.ServiceConversationConfigSchema = exports.CallTransferSchema = exports.BaseConversationConfigSchema = exports.ConversationStateHistorySchema = exports.ConversationMessageSchema = exports.ConversationContextSchema = exports.DisplayMessageSchema = exports.MessageSchema = exports.ConversationSummarySchema = void 0;
 const zod_1 = require("zod");
 const conversation_message_schema_1 = require("./conversation-message.schema");
 const type_definitions_1 = require("../type-definitions");
@@ -9,7 +9,7 @@ const type_definitions_1 = require("../type-definitions");
  *
  * Conversations represent individual interaction sessions between users and AI agents through various channels
  * (phone, SMS, web chat, email). They track message history, status progression, call metadata, and relationship
- * to deployment configurations. Each conversation is scoped to a project and organization.
+ * to deployment configurations. Each conversation is scoped to a project.
  *
  * @module conversation/conversation-config
  */
@@ -69,22 +69,77 @@ exports.MessageSchema = zod_1.z.object({
     metadata: zod_1.z.record(zod_1.z.string(), zod_1.z.any()).describe("Additional message-specific metadata as key-value pairs including attachments, formatting, media URLs, delivery status, read receipts, or channel-specific attributes"),
     created_at: zod_1.z.number().optional().describe("Unix timestamp in milliseconds when the message was created, used for chronological sorting and time-based filtering in queries")
 });
+// ============================================================================
+// DISPLAY MESSAGE SCHEMA
+// ============================================================================
 /**
- * Conversation direction enum.
+ * Display message schema.
+ *
+ * Simplified message format for UI display purposes, containing only the
+ * essential fields needed for rendering messages in chat interfaces.
+ *
+ * @typedef {Object} DisplayMessage
+ * @property {string} id - Unique identifier for display purposes
+ * @property {string} sender - Who sent this message (user or assistant)
+ * @property {string} content - Message content to display
+ * @property {Date} timestamp - When the message was sent
  */
-var ConversationDirection;
-(function (ConversationDirection) {
-    ConversationDirection["INBOUND"] = "inbound";
-    ConversationDirection["OUTBOUND"] = "outbound";
-})(ConversationDirection || (exports.ConversationDirection = ConversationDirection = {}));
+exports.DisplayMessageSchema = zod_1.z.object({
+    id: zod_1.z.string().describe("Unique identifier for display purposes"),
+    sender: zod_1.z.union([
+        zod_1.z.literal('user'),
+        zod_1.z.literal('assistant')
+    ]).describe("Who sent this message - user or AI assistant"),
+    content: zod_1.z.string().describe("Message content to display to users"),
+    timestamp: zod_1.z.date().describe("When the message was sent")
+});
+// ============================================================================
+// CONVERSATION CONTEXT SCHEMA
+// ============================================================================
+/**
+ * Conversation context schema.
+ *
+ * Optional context to guide conversations, enabling deep-linking to specific
+ * products, services, or resources. Used to pre-populate conversation context
+ * when users click through from specific pages or marketing campaigns.
+ *
+ * @typedef {Object} ConversationContext
+ * @property {string} [message] - Auto-sends as the user's first message
+ * @property {string} [productId] - Deep-link to a product
+ * @property {string} [menuItemId] - Deep-link to a menu item
+ * @property {string} [serviceId] - Deep-link to a service
+ * @property {string} [propertyId] - Deep-link to a property
+ * @property {string} [resourceId] - Deep-link to a resource (rental/room)
+ * @property {string} [requiredServiceId] - Pre-select a required service
+ * @property {string} [locationId] - Context of a specific business location
+ */
+exports.ConversationContextSchema = zod_1.z.object({
+    message: zod_1.z.string().optional().describe("Auto-sends as the user's first message when conversation starts"),
+    productId: zod_1.z.string().optional().describe("Deep-link to a specific product for product inquiries"),
+    menuItemId: zod_1.z.string().optional().describe("Deep-link to a specific menu item for food/beverage inquiries"),
+    serviceId: zod_1.z.string().optional().describe("Deep-link to a specific service for service booking"),
+    propertyId: zod_1.z.string().optional().describe("Deep-link to a specific property for real estate inquiries"),
+    resourceId: zod_1.z.string().optional().describe("Deep-link to a specific resource (rental item, room) for reservations"),
+    requiredServiceId: zod_1.z.string().optional().describe("Pre-select a required service for the conversation"),
+    locationId: zod_1.z.string().optional().describe("Context of a specific business location for multi-location businesses"),
+});
+// ============================================================================
+// CONVERSATION MESSAGE UNION
+// ============================================================================
 /**
  * Union of all conversation message types.
+ *
+ * Discriminated union supporting user, AI agent, human agent, and system messages
+ * for both chat and email channels.
  */
 exports.ConversationMessageSchema = zod_1.z.union([
     conversation_message_schema_1.UserChatMessageSchema,
     conversation_message_schema_1.AssistantChatMessageSchema,
     conversation_message_schema_1.UserEmailMessageSchema,
-    conversation_message_schema_1.AssistantEmailMessageSchema
+    conversation_message_schema_1.AssistantEmailMessageSchema,
+    conversation_message_schema_1.HumanAgentChatMessageSchema,
+    conversation_message_schema_1.HumanAgentEmailMessageSchema,
+    conversation_message_schema_1.SystemMessageSchema,
 ]);
 /**
  * Conversation state history schema for tracking status changes.
@@ -166,7 +221,6 @@ exports.ConversationStateHistorySchema = zod_1.z.object({
  */
 exports.BaseConversationConfigSchema = zod_1.z.object({
     channel_id: zod_1.z.string().describe("ID of the deployment channel through which this conversation is conducted (references DeploymentChannel for phone, SMS, web, or email configuration)"),
-    organization_id: zod_1.z.string().describe("ID of the organization that owns this conversation for multi-tenant data isolation, access control, and billing attribution"),
     project_id: zod_1.z.string().describe("ID of the project this conversation is associated with for organizational grouping, reporting, and access control (N:1 relationship with Project)"),
     deployment_config_id: zod_1.z.string().describe("ID of the deployment configuration that powers this conversation including agent, instruction, and channel settings (N:1 relationship with DeploymentConfiguration)"),
     channel_identifier: zod_1.z.string().describe("Unique identifier for the specific communication endpoint: phone number in E.164 format (+12125551234), chat widget ID, email address, or WhatsApp number"),
@@ -179,6 +233,7 @@ exports.BaseConversationConfigSchema = zod_1.z.object({
     messages: zod_1.z.array(exports.ConversationMessageSchema).optional().nullable().describe("Array of messages exchanged in this conversation embedded for quick access without separate database queries (includes user and assistant messages with metadata)"),
     is_campaign: zod_1.z.boolean().default(false).describe("Flag indicating if this conversation is part of a marketing or outbound campaign (true) or an inbound customer-initiated interaction (false, default)"),
     customer_id: zod_1.z.string().optional().nullable().describe("Customer or contact ID from CRM or external system for customer relationship tracking, conversation history aggregation, and personalization"),
+    location_id: zod_1.z.string().optional().nullable().describe("Business location ID associated with this conversation for multi-location businesses, enables location-specific analytics and routing"),
     status: zod_1.z.enum(type_definitions_1.ConversationStatus).nullable().optional().describe("Current operational status of the conversation (ACTIVE: ongoing, COMPLETED: concluded successfully, FAILED: errors, ABANDONED: user left, TRANSFERRED: escalated to human)"),
     durationInSeconds: zod_1.z.number().nonnegative().optional().default(15).describe("Duration of the conversation in seconds for billing calculations, analytics reporting, and average handling time (AHT) metrics (default: 15 for minimum billing)"),
     stt_model_id: zod_1.z.string().optional().nullable().describe("Speech-to-Text model ID used for voice conversations to transcribe user speech into text (e.g., 'whisper-v3', 'google-stt-enhanced', references WiilSupportModel)"),
@@ -187,7 +242,9 @@ exports.BaseConversationConfigSchema = zod_1.z.object({
     created_day: zod_1.z.string().optional().describe("The day the conversation was created in YYYY-MM-DD ISO format for efficient daily aggregation queries, analytics partitioning, and time-series reporting"),
     state_history: zod_1.z.array(exports.ConversationStateHistorySchema).nullable().optional().describe("Historical audit trail of status changes throughout the conversation lifecycle for flow analysis, troubleshooting, and measuring time-to-resolution"),
     updated_at: zod_1.z.number().optional().nullable().describe("Unix timestamp in milliseconds when conversation was last modified (message added, status changed, summary generated, metadata updated) for change tracking"),
-    deleted_at: zod_1.z.number().optional().nullable().describe("Unix timestamp in milliseconds when conversation was soft-deleted for data retention compliance, null if active (enables GDPR right-to-be-forgotten while preserving analytics)")
+    deleted_at: zod_1.z.number().optional().nullable().describe("Unix timestamp in milliseconds when conversation was soft-deleted for data retention compliance, null if active (enables GDPR right-to-be-forgotten while preserving analytics)"),
+    is_test_conversation: zod_1.z.boolean().default(false).describe("Flag indicating if this conversation is for testing purposes (true) or a real customer interaction (false, default)"),
+    conversation_context: exports.ConversationContextSchema.optional().nullable().describe("Optional context to guide the conversation including deep-links to products, services, or resources"),
 });
 /**
  * Call transfer schema for tracking call transfer details in telephony conversations.
@@ -245,7 +302,7 @@ exports.ServiceConversationConfigSchema = exports.BaseConversationConfigSchema.s
     id: zod_1.z.string().describe("Unique identifier for this conversation record (typically UUID), used as primary key for database queries and cross-system references"),
     record_id: zod_1.z.string().optional().nullable().describe("Optional external record ID for integration with partner systems, CRM platforms, or help desk software for conversation linkage and data synchronization"),
     provider_message_id: zod_1.z.string().optional().nullable().describe("Provider-specific email message ID from email service providers (Gmail message ID, Outlook message ID, SendGrid ID) for email conversation tracking and threading"),
-    direction: zod_1.z.enum(ConversationDirection).nullable().optional().describe("Direction of the telephony call: 'inbound' for customer-initiated calls, 'outbound' for agent-initiated or campaign calls (null for non-voice channels like chat/email)"),
+    direction: zod_1.z.enum(type_definitions_1.ConversationDirection).nullable().optional().describe("Direction of the telephony call: 'inbound' for customer-initiated calls, 'outbound' for agent-initiated or campaign calls (null for non-voice channels like chat/email)"),
     resource_url: zod_1.z.string().nullable().optional().describe("Resource URL for the call recording or conversation details from telephony provider (SignalWire recording URL, Twilio media URL) for compliance, quality assurance, and dispute resolution"),
     call_transfer: exports.CallTransferSchema.nullable().optional().describe("Call transfer details if the conversation was transferred to a human agent including transfer type, destination, timing, and outcome (null if no transfer occurred)")
 });
@@ -269,4 +326,46 @@ exports.ServiceConversationConfigSchema = exports.BaseConversationConfigSchema.s
  */
 exports.DecommissionConfigSchema = zod_1.z.object({
     decommission_service_id: zod_1.z.string().describe("Service ID of the active conversation session to decommission and shut down gracefully, releases resources and closes all active connections"),
+});
+// ============================================================================
+// TEST AND EVALUATION SCHEMAS
+// ============================================================================
+/**
+ * Test configuration schema.
+ * Base configuration for testing AI agents.
+ */
+exports.TestConfigSchema = zod_1.z.object({
+    account_id: zod_1.z.string().describe("Account ID for the test configuration"),
+    project_id: zod_1.z.string().describe("Project ID where the test will run"),
+    agent_id: zod_1.z.string().describe("AI agent ID to test"),
+    instruction_config_id: zod_1.z.string().describe("Instruction configuration ID for agent behavior"),
+});
+/**
+ * Evaluation schema for running AI agent evaluations.
+ */
+exports.EvaluationSchema = zod_1.z.object({
+    instructionId: zod_1.z.string().describe("Instruction configuration ID for evaluation"),
+    agentId: zod_1.z.string().describe("Agent ID to evaluate"),
+    evaluationConfigId: zod_1.z.string().describe("Evaluation configuration ID with test parameters"),
+    speechConfig: zod_1.z.object({}).optional().nullable().describe("Speech settings for voice-based evaluations"),
+});
+// ============================================================================
+// OTT CONVERSATION CONFIG SCHEMA
+// ============================================================================
+/**
+ * OTT conversation configuration schema.
+ * Configuration for OTT (over-the-top) chat widget connections.
+ */
+exports.ConversationConfigSchema = zod_1.z.object({
+    platform_user_id: zod_1.z.number().optional().describe("Internal platform user ID for this conversation"),
+    channel_identifier: zod_1.z.string().describe("Unique identifier for the communication channel (phone number, chat ID, etc.)"),
+    partner_user_id: zod_1.z.string().optional().describe("External user/partner identifier for integration purposes"),
+});
+/**
+ * OTT conversation configuration with connection details.
+ */
+exports.OttConversationConfigSchema = exports.ConversationConfigSchema.safeExtend({
+    sdrtn_id: zod_1.z.string().optional().nullable().describe("SDRTN (Session Description and Real-Time Networking) identifier for WebRTC connections"),
+    channel_token: zod_1.z.string().describe("Authentication token for the communication channel"),
+    connection_url: zod_1.z.string().optional().nullable().describe("WebSocket or connection URL for real-time communication"),
 });

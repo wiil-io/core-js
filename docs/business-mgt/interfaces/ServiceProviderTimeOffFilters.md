@@ -1,0 +1,22 @@
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
+
+***
+
+[Wiil Platform JavaScript Data Model Definitions - API Reference](../../README.md) / [business-mgt](../README.md) / ServiceProviderTimeOffFilters
+
+# Interface: ServiceProviderTimeOffFilters
+
+Defined in: src/core/business-mgt/service-management/service-time-off.schema.ts:121
+
+Service provider time off filter options.
+ ServiceProviderTimeOffFilters
+
+## Properties
+
+| Property | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="providerid"></a> `providerId?` | `string` | Filter by provider ID | src/core/business-mgt/service-management/service-time-off.schema.ts:123 |
+| <a id="type"></a> `type?` | [`ServiceProviderTimeOffType`](../../type-definitions/enumerations/ServiceProviderTimeOffType.md) | Filter by time-off type | src/core/business-mgt/service-management/service-time-off.schema.ts:125 |
+| <a id="status"></a> `status?` | [`ServiceProviderTimeOffStatus`](../../type-definitions/enumerations/ServiceProviderTimeOffStatus.md) | Filter by approval status | src/core/business-mgt/service-management/service-time-off.schema.ts:127 |
+| <a id="fromdate"></a> `fromDate?` | `number` | Filter by start date (Unix timestamp) | src/core/business-mgt/service-management/service-time-off.schema.ts:129 |
+| <a id="todate"></a> `toDate?` | `number` | Filter by end date (Unix timestamp) | src/core/business-mgt/service-management/service-time-off.schema.ts:131 |

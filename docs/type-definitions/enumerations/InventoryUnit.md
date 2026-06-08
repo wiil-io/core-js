@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.51**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
 
 ***
 
@@ -6,25 +6,25 @@
 
 # Enumeration: InventoryUnit
 
-Defined in: [src/core/type-definitions/business-definitions.ts:95](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/business-definitions.ts#L95)
+Defined in: [src/core/type-definitions/business-definitions.ts:140](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/type-definitions/business-definitions.ts#L140)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="each"></a> `EACH` | `"each"` | [src/core/type-definitions/business-definitions.ts:96](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/business-definitions.ts#L96) |
-| <a id="pack"></a> `PACK` | `"pack"` | [src/core/type-definitions/business-definitions.ts:97](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/business-definitions.ts#L97) |
-| <a id="box"></a> `BOX` | `"box"` | [src/core/type-definitions/business-definitions.ts:98](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/business-definitions.ts#L98) |
-| <a id="case"></a> `CASE` | `"case"` | [src/core/type-definitions/business-definitions.ts:99](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/business-definitions.ts#L99) |
-| <a id="dozen"></a> `DOZEN` | `"dozen"` | [src/core/type-definitions/business-definitions.ts:100](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/business-definitions.ts#L100) |
-| <a id="pair"></a> `PAIR` | `"pair"` | [src/core/type-definitions/business-definitions.ts:101](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/business-definitions.ts#L101) |
-| <a id="gram"></a> `GRAM` | `"gram"` | [src/core/type-definitions/business-definitions.ts:102](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/business-definitions.ts#L102) |
-| <a id="pounds"></a> `POUNDS` | `"lbs"` | [src/core/type-definitions/business-definitions.ts:103](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/business-definitions.ts#L103) |
-| <a id="kilogram"></a> `KILOGRAM` | `"kg"` | [src/core/type-definitions/business-definitions.ts:104](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/business-definitions.ts#L104) |
-| <a id="milliliter"></a> `MILLILITER` | `"ml"` | [src/core/type-definitions/business-definitions.ts:105](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/business-definitions.ts#L105) |
-| <a id="liter"></a> `LITER` | `"l"` | [src/core/type-definitions/business-definitions.ts:106](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/business-definitions.ts#L106) |
-| <a id="meter"></a> `METER` | `"m"` | [src/core/type-definitions/business-definitions.ts:107](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/business-definitions.ts#L107) |
-| <a id="centimeter"></a> `CENTIMETER` | `"cm"` | [src/core/type-definitions/business-definitions.ts:108](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/business-definitions.ts#L108) |
-| <a id="roll"></a> `ROLL` | `"rl"` | [src/core/type-definitions/business-definitions.ts:109](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/business-definitions.ts#L109) |
-| <a id="set"></a> `SET` | `"set"` | [src/core/type-definitions/business-definitions.ts:110](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/business-definitions.ts#L110) |
-| <a id="other"></a> `OTHER` | `"other"` | [src/core/type-definitions/business-definitions.ts:111](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/business-definitions.ts#L111) |
+| <a id="each"></a> `EACH` | `"each"` | [src/core/type-definitions/business-definitions.ts:141](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/type-definitions/business-definitions.ts#L141) |
+| <a id="pack"></a> `PACK` | `"pack"` | [src/core/type-definitions/business-definitions.ts:142](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/type-definitions/business-definitions.ts#L142) |
+| <a id="box"></a> `BOX` | `"box"` | [src/core/type-definitions/business-definitions.ts:143](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/type-definitions/business-definitions.ts#L143) |
+| <a id="case"></a> `CASE` | `"case"` | [src/core/type-definitions/business-definitions.ts:144](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/type-definitions/business-definitions.ts#L144) |
+| <a id="dozen"></a> `DOZEN` | `"dozen"` | [src/core/type-definitions/business-definitions.ts:145](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/type-definitions/business-definitions.ts#L145) |
+| <a id="pair"></a> `PAIR` | `"pair"` | [src/core/type-definitions/business-definitions.ts:146](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/type-definitions/business-definitions.ts#L146) |
+| <a id="gram"></a> `GRAM` | `"gram"` | [src/core/type-definitions/business-definitions.ts:147](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/type-definitions/business-definitions.ts#L147) |
+| <a id="pounds"></a> `POUNDS` | `"lbs"` | [src/core/type-definitions/business-definitions.ts:148](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/type-definitions/business-definitions.ts#L148) |
+| <a id="kilogram"></a> `KILOGRAM` | `"kg"` | [src/core/type-definitions/business-definitions.ts:149](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/type-definitions/business-definitions.ts#L149) |
+| <a id="milliliter"></a> `MILLILITER` | `"ml"` | [src/core/type-definitions/business-definitions.ts:150](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/type-definitions/business-definitions.ts#L150) |
+| <a id="liter"></a> `LITER` | `"l"` | [src/core/type-definitions/business-definitions.ts:151](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/type-definitions/business-definitions.ts#L151) |
+| <a id="meter"></a> `METER` | `"m"` | [src/core/type-definitions/business-definitions.ts:152](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/type-definitions/business-definitions.ts#L152) |
+| <a id="centimeter"></a> `CENTIMETER` | `"cm"` | [src/core/type-definitions/business-definitions.ts:153](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/type-definitions/business-definitions.ts#L153) |
+| <a id="roll"></a> `ROLL` | `"rl"` | [src/core/type-definitions/business-definitions.ts:154](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/type-definitions/business-definitions.ts#L154) |
+| <a id="set"></a> `SET` | `"set"` | [src/core/type-definitions/business-definitions.ts:155](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/type-definitions/business-definitions.ts#L155) |
+| <a id="other"></a> `OTHER` | `"other"` | [src/core/type-definitions/business-definitions.ts:156](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/type-definitions/business-definitions.ts#L156) |

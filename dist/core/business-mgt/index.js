@@ -18,18 +18,20 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-__exportStar(require("./appointment-additional-info.schema"), exports);
-__exportStar(require("./appointment-field-config.schema"), exports);
-__exportStar(require("./customer.schema"), exports);
-__exportStar(require("./menu-config.schema"), exports);
-__exportStar(require("./menu.order.schema"), exports);
+// ============================================================================
+// SHARED SCHEMAS
+// ============================================================================
+__exportStar(require("./bookings.shared.schema"), exports);
+__exportStar(require("./discount-rule.schema"), exports);
 __exportStar(require("./order.schema"), exports);
-__exportStar(require("./product-config.schema"), exports);
-__exportStar(require("./product-order.schema"), exports);
-__exportStar(require("./property-config.schema"), exports);
-__exportStar(require("./property-inquiry.schema"), exports);
-__exportStar(require("./reservation.schema"), exports);
-__exportStar(require("./reservation-resource.schema"), exports);
-__exportStar(require("./service-appointment.schema"), exports);
-__exportStar(require("./service-config.schema"), exports);
-__exportStar(require("./service-person.schema"), exports);
+__exportStar(require("./pricing-rule.shared.schema"), exports);
+__exportStar(require("./tax-rule.schema"), exports);
+// ============================================================================
+// DOMAIN MODULES
+// ============================================================================
+__exportStar(require("./customer-management"), exports);
+__exportStar(require("./menu-management"), exports);
+__exportStar(require("./product-management"), exports);
+__exportStar(require("./property-management"), exports);
+__exportStar(require("./reservation-mgt"), exports);
+__exportStar(require("./service-management"), exports);

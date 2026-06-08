@@ -1,3 +1,14 @@
+import z from "zod";
+/**
+ * External reference schema for synchronization with external systems.
+ */
+export declare const ExternalRefSchema: z.ZodObject<{
+    externalId: z.ZodString;
+    source: z.ZodString;
+    url: z.ZodOptional<z.ZodNullable<z.ZodURL>>;
+    syncedAt: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
+}, z.core.$strip>;
+export type ExternalRef = z.infer<typeof ExternalRefSchema>;
 export declare enum BusinessServiceType {
     MENU = "menu",// Restaurant/food
     SERVICE = "service",// Professional services
@@ -9,9 +20,16 @@ export declare enum CalendarProvider {
     OUTLOOK = "outlook",
     CALENDLY = "calendly"
 }
+/**
+ * Reservation resource type.
+ * Identifies the kind of resource used by reservation and resource-management schemas.
+ *
+ * @enum {string}
+ */
 export declare enum ResourceType {
     TABLE = "table",
     ROOM = "room",
+    RENTAL = "rental",
     RENTALS = "rentals",
     RESOURCE = "resource"
 }
@@ -24,12 +42,36 @@ export declare enum ReservationSettingType {
     CAPACITY = "capacity",
     RESOURCE_SPECIFIC = "resource_specific"
 }
+/**
+ * Reservation lifecycle status.
+ * Shared status enum for table and room reservation workflows.
+ *
+ * @enum {string}
+ */
+export declare enum ReservationStatus {
+    PENDING = "pending",
+    CONFIRMED = "confirmed",
+    SEATED = "seated",
+    CHECKED_IN = "checked_in",
+    COMPLETED = "completed",
+    CANCELLED = "cancelled",
+    NO_SHOW = "no_show"
+}
 export declare enum AppointmentStatus {
     PENDING = "pending",
     CONFIRMED = "confirmed",
     CANCELLED = "cancelled",
     COMPLETED = "completed",
     NO_SHOW = "no_show"
+}
+export declare enum ServiceProviderTimeOffType {
+    RECURRING = "recurring",
+    SPECIFIC = "specific"
+}
+export declare enum ServiceProviderTimeOffStatus {
+    APPROVED = "approved",
+    PENDING = "pending",
+    REJECTED = "rejected"
 }
 export declare enum ReservationSlotStatus {
     AVAILABLE = "available",
@@ -228,4 +270,60 @@ export declare enum PropertyInquiryStatus {
     FOLLOW_UP = "follow_up",
     CONVERTED = "converted",
     CLOSED = "closed"
+}
+export declare enum TaxScope {
+    ORDER = "ORDER",
+    ITEM = "ITEM",
+    SERVICE = "SERVICE",
+    DELIVERY = "DELIVERY"
+}
+export declare enum TaxRateType {
+    PERCENTAGE = "PERCENTAGE",
+    FIXED = "FIXED"
+}
+export declare enum TaxCatalogScope {
+    ALL = "ALL",
+    MENU = "MENU",
+    PRODUCT = "PRODUCT",
+    SERVICE = "SERVICE",
+    SET = "SET"
+}
+export declare enum DiscountScope {
+    ORDER = "ORDER",
+    ITEM = "ITEM",
+    SHIPPING = "SHIPPING",
+    SET = "SET"
+}
+export declare enum DiscountType {
+    PERCENTAGE = "PERCENTAGE",
+    FIXED = "FIXED"
+}
+export declare enum DiscountCatalogScope {
+    ALL = "ALL",
+    MENU = "MENU",
+    PRODUCT = "PRODUCT",
+    SERVICE = "SERVICE",
+    SET = "SET"
+}
+export declare enum PricingRuleApplyLevel {
+    ITEM = "ITEM",
+    ORDER = "ORDER"
+}
+export declare enum PricingRuleAdjustmentType {
+    PERCENTAGE = "PERCENTAGE",
+    FIXED = "FIXED",
+    OVERRIDE = "OVERRIDE"
+}
+export declare enum PricingChannel {
+    ALL = "ALL",
+    DIRECT = "DIRECT",
+    ONLINE = "ONLINE",
+    PHONE = "PHONE",
+    WALK_IN = "WALK_IN"
+}
+export declare enum VariantAxisType {
+    SWATCH = "swatch",
+    TEXT = "text",
+    IMAGE = "image",
+    NUMERIC = "numeric"
 }

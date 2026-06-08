@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.51**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
 
 ***
 
@@ -10,6 +10,7 @@
 const ServicePersonSchema: ZodObject<ServicePerson>;
 ```
 
-Defined in: [src/core/business-mgt/service-person.schema.ts:17](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/service-person.schema.ts#L17)
+Defined in: src/core/business-mgt/service-management/service-person.schema.ts:32
 
-Service person schema - Complete service person record.
+Service Person schema.
+Represents a staff member or provider who can perform services.

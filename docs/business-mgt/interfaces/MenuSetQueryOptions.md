@@ -1,0 +1,21 @@
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
+
+***
+
+[Wiil Platform JavaScript Data Model Definitions - API Reference](../../README.md) / [business-mgt](../README.md) / MenuSetQueryOptions
+
+# Interface: MenuSetQueryOptions
+
+Defined in: src/core/business-mgt/menu-management/menu-set.schema.ts:361
+
+Menu set query options.
+ MenuSetQueryOptions
+
+## Properties
+
+| Property | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | src/core/business-mgt/menu-management/menu-set.schema.ts:363 |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | src/core/business-mgt/menu-management/menu-set.schema.ts:365 |
+| <a id="filters"></a> `filters?` | [`MenuSetFilters`](MenuSetFilters.md) | Optional filters | src/core/business-mgt/menu-management/menu-set.schema.ts:367 |
+| <a id="sorting"></a> `sorting?` | [`MenuSetSorting`](MenuSetSorting.md) | Optional sorting | src/core/business-mgt/menu-management/menu-set.schema.ts:369 |

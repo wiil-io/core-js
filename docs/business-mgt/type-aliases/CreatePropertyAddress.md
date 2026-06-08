@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.51**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
 
 ***
 
@@ -26,23 +26,22 @@ type CreatePropertyAddress = {
 };
 ```
 
-Defined in: [src/core/business-mgt/property-config.schema.ts:251](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-config.schema.ts#L251)
+Defined in: src/core/business-mgt/property-management/property-config.schema.ts:395
 
 Schema for creating a new property address.
-Omits auto-generated fields.
 
 ## Type Declaration
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="street"></a> `street` | `string` | [src/core/business-mgt/property-config.schema.ts:53](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-config.schema.ts#L53) |
-| <a id="unit"></a> `unit?` | `string` \| `null` | [src/core/business-mgt/property-config.schema.ts:54](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-config.schema.ts#L54) |
-| <a id="city"></a> `city` | `string` | [src/core/business-mgt/property-config.schema.ts:55](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-config.schema.ts#L55) |
-| <a id="state"></a> `state` | `string` | [src/core/business-mgt/property-config.schema.ts:56](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-config.schema.ts#L56) |
-| <a id="postalcode"></a> `postalCode?` | `string` \| `null` | [src/core/business-mgt/property-config.schema.ts:57](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-config.schema.ts#L57) |
-| <a id="country"></a> `country` | `string` | [src/core/business-mgt/property-config.schema.ts:58](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-config.schema.ts#L58) |
-| <a id="coordinates"></a> `coordinates?` | \| \{ `latitude`: `number`; `longitude`: `number`; \} \| `null` | [src/core/business-mgt/property-config.schema.ts:59](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-config.schema.ts#L59) |
-| <a id="neighborhood"></a> `neighborhood?` | `string` \| `null` | [src/core/business-mgt/property-config.schema.ts:63](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-config.schema.ts#L63) |
-| <a id="district"></a> `district?` | `string` \| `null` | [src/core/business-mgt/property-config.schema.ts:64](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-config.schema.ts#L64) |
-| <a id="isverified"></a> `isVerified` | `boolean` | [src/core/business-mgt/property-config.schema.ts:65](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-config.schema.ts#L65) |
-| <a id="primaryuseraccountid"></a> `primaryUserAccountId?` | `string` \| `null` | [src/core/business-mgt/property-config.schema.ts:67](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-config.schema.ts#L67) |
+| <a id="street"></a> `street` | `string` | src/core/business-mgt/property-management/property-config.schema.ts:67 |
+| <a id="unit"></a> `unit?` | `string` \| `null` | src/core/business-mgt/property-management/property-config.schema.ts:68 |
+| <a id="city"></a> `city` | `string` | src/core/business-mgt/property-management/property-config.schema.ts:69 |
+| <a id="state"></a> `state` | `string` | src/core/business-mgt/property-management/property-config.schema.ts:70 |
+| <a id="postalcode"></a> `postalCode?` | `string` \| `null` | src/core/business-mgt/property-management/property-config.schema.ts:71 |
+| <a id="country"></a> `country` | `string` | src/core/business-mgt/property-management/property-config.schema.ts:72 |
+| <a id="coordinates"></a> `coordinates?` | \| \{ `latitude`: `number`; `longitude`: `number`; \} \| `null` | src/core/business-mgt/property-management/property-config.schema.ts:73 |
+| <a id="neighborhood"></a> `neighborhood?` | `string` \| `null` | src/core/business-mgt/property-management/property-config.schema.ts:77 |
+| <a id="district"></a> `district?` | `string` \| `null` | src/core/business-mgt/property-management/property-config.schema.ts:78 |
+| <a id="isverified"></a> `isVerified` | `boolean` | src/core/business-mgt/property-management/property-config.schema.ts:79 |
+| <a id="primaryuseraccountid"></a> `primaryUserAccountId?` | `string` \| `null` | src/core/business-mgt/property-management/property-config.schema.ts:81 |

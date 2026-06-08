@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.51**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
 
 ***
 
@@ -6,11 +6,14 @@
 
 # Interface: ProductOrderSorting
 
-Defined in: [src/core/business-mgt/product-order.schema.ts:186](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/product-order.schema.ts#L186)
+Defined in: src/core/business-mgt/product-management/product-order.schema.ts:222
+
+Product order sorting options.
+ ProductOrderSorting
 
 ## Properties
 
-| Property | Type | Defined in |
-| ------ | ------ | ------ |
-| <a id="field"></a> `field` | `"createdAt"` \| `"orderDate"` \| `"totalAmount"` | [src/core/business-mgt/product-order.schema.ts:187](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/product-order.schema.ts#L187) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | [src/core/business-mgt/product-order.schema.ts:188](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/product-order.schema.ts#L188) |
+| Property | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="field"></a> `field` | `"createdAt"` \| `"orderDate"` \| `"totalAmount"` | Field to sort by | src/core/business-mgt/product-management/product-order.schema.ts:224 |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | src/core/business-mgt/product-management/product-order.schema.ts:226 |

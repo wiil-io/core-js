@@ -1,0 +1,21 @@
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
+
+***
+
+[Wiil Platform JavaScript Data Model Definitions - API Reference](../../README.md) / [business-mgt](../README.md) / ResourceInstanceQueryOptions
+
+# Interface: ResourceInstanceQueryOptions
+
+Defined in: src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:142
+
+Resource instance query options.
+ ResourceInstanceQueryOptions
+
+## Properties
+
+| Property | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:144 |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:146 |
+| <a id="filters"></a> `filters?` | [`ResourceInstanceFilters`](ResourceInstanceFilters.md) | Optional filters | src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:148 |
+| <a id="sorting"></a> `sorting?` | [`ResourceInstanceSorting`](ResourceInstanceSorting.md) | Optional sorting | src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:150 |

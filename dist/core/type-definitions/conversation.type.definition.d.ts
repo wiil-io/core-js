@@ -192,3 +192,32 @@ export declare enum SmsStatus {
     /** SMS could not be delivered (invalid number, blocked, etc.) */
     UNDELIVERED = "undelivered"
 }
+/**
+ * Outbound template channel types.
+ *
+ * Identifies the communication channel for outbound message templates.
+ *
+ * @see OutboundTemplateSchema - Uses this for channel identification
+ */
+export declare enum OutboundTemplateChannel {
+    /** Email template */
+    EMAIL = "EMAIL",
+    /** SMS text template */
+    SMS = "SMS",
+    /** WhatsApp message template */
+    WHATSAPP = "WHATSAPP"
+}
+/**
+ * Conversation direction for tracking inbound/outbound interactions.
+ *
+ * Identifies whether a conversation was initiated by the customer (inbound)
+ * or by the business (outbound) for analytics, routing, and billing purposes.
+ *
+ * @see ServiceConversationConfigSchema - Uses this for direction tracking
+ */
+export declare enum ConversationDirection {
+    /** Customer-initiated conversation (incoming call, received email, etc.) */
+    INBOUND = "inbound",
+    /** Business-initiated conversation (outbound call, campaign, etc.) */
+    OUTBOUND = "outbound"
+}

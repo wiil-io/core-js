@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.51**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
 
 ***
 
@@ -6,13 +6,16 @@
 
 # Interface: MenuOrderQueryOptions
 
-Defined in: [src/core/business-mgt/menu.order.schema.ts:188](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu.order.schema.ts#L188)
+Defined in: src/core/business-mgt/menu-management/menu.order.schema.ts:281
+
+Menu order query options.
+ MenuOrderQueryOptions
 
 ## Properties
 
-| Property | Type | Defined in |
-| ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | [src/core/business-mgt/menu.order.schema.ts:189](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu.order.schema.ts#L189) |
-| <a id="pagesize"></a> `pageSize` | `number` | [src/core/business-mgt/menu.order.schema.ts:190](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu.order.schema.ts#L190) |
-| <a id="filters"></a> `filters?` | [`MenuOrderFilters`](MenuOrderFilters.md) | [src/core/business-mgt/menu.order.schema.ts:191](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu.order.schema.ts#L191) |
-| <a id="sorting"></a> `sorting?` | [`MenuOrderSorting`](MenuOrderSorting.md) | [src/core/business-mgt/menu.order.schema.ts:192](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu.order.schema.ts#L192) |
+| Property | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | src/core/business-mgt/menu-management/menu.order.schema.ts:283 |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | src/core/business-mgt/menu-management/menu.order.schema.ts:285 |
+| <a id="filters"></a> `filters?` | [`MenuOrderFilters`](MenuOrderFilters.md) | Optional filters | src/core/business-mgt/menu-management/menu.order.schema.ts:287 |
+| <a id="sorting"></a> `sorting?` | [`MenuOrderSorting`](MenuOrderSorting.md) | Optional sorting | src/core/business-mgt/menu-management/menu.order.schema.ts:289 |

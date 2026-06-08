@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.51**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const UpdateProductOrderSchema: ZodObject<UpdateProductOrder>;
 ```
 
-Defined in: [src/core/business-mgt/product-order.schema.ts:136](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/product-order.schema.ts#L136)
+Defined in: src/core/business-mgt/product-management/product-order.schema.ts:151
 
 Schema for updating an existing product order.
 All fields are optional except id.

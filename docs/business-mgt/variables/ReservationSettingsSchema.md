@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.51**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
 
 ***
 
@@ -10,6 +10,7 @@
 const ReservationSettingsSchema: ZodObject<ReservationSettings>;
 ```
 
-Defined in: [src/core/business-mgt/reservation.schema.ts:20](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/reservation.schema.ts#L20)
+Defined in: src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:105
 
 Reservation settings schema.
+Stores location-level reservation configuration for table, room, and rental bookings.

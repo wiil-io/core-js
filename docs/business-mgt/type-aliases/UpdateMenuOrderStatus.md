@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.51**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
 
 ***
 
@@ -15,15 +15,16 @@ type UpdateMenuOrderStatus = {
 };
 ```
 
-Defined in: [src/core/business-mgt/menu.order.schema.ts:165](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu.order.schema.ts#L165)
+Defined in: src/core/business-mgt/menu-management/menu.order.schema.ts:227
 
 Quick status update schema for menu orders.
+Streamlined update for status transitions.
 
 ## Type Declaration
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="id"></a> `id` | `string` | [src/core/business-mgt/menu.order.schema.ts:153](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu.order.schema.ts#L153) |
-| <a id="status"></a> `status` | [`OrderStatus`](../../type-definitions/enumerations/OrderStatus.md) | [src/core/business-mgt/menu.order.schema.ts:154](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu.order.schema.ts#L154) |
-| <a id="estimatedreadytime"></a> `estimatedReadyTime` | `number` \| `null` | [src/core/business-mgt/menu.order.schema.ts:155](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu.order.schema.ts#L155) |
-| <a id="actualreadytime"></a> `actualReadyTime` | `number` \| `null` | [src/core/business-mgt/menu.order.schema.ts:156](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu.order.schema.ts#L156) |
+| <a id="id"></a> `id` | `string` | src/core/business-mgt/menu-management/menu.order.schema.ts:193 |
+| <a id="status"></a> `status` | [`OrderStatus`](../../type-definitions/enumerations/OrderStatus.md) | src/core/business-mgt/menu-management/menu.order.schema.ts:194 |
+| <a id="estimatedreadytime"></a> `estimatedReadyTime` | `number` \| `null` | src/core/business-mgt/menu-management/menu.order.schema.ts:195 |
+| <a id="actualreadytime"></a> `actualReadyTime` | `number` \| `null` | src/core/business-mgt/menu-management/menu.order.schema.ts:196 |

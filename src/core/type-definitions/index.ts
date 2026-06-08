@@ -7,4 +7,5 @@ export * from './account-definitions';
 export * from './service-config.definitions';
 export * from './business-definitions';
 export * from './conversation.type.definition';
-export  * from './knowledge-definitions';
+export * from './knowledge-definitions';
+export * from './display-order';

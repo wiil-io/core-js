@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.51**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
 
 ***
 
@@ -6,11 +6,14 @@
 
 # Interface: MenuOrderSorting
 
-Defined in: [src/core/business-mgt/menu.order.schema.ts:183](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu.order.schema.ts#L183)
+Defined in: src/core/business-mgt/menu-management/menu.order.schema.ts:270
+
+Menu order sorting options.
+ MenuOrderSorting
 
 ## Properties
 
-| Property | Type | Defined in |
-| ------ | ------ | ------ |
-| <a id="field"></a> `field` | `"createdAt"` \| `"orderDate"` \| `"totalAmount"` | [src/core/business-mgt/menu.order.schema.ts:184](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu.order.schema.ts#L184) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | [src/core/business-mgt/menu.order.schema.ts:185](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu.order.schema.ts#L185) |
+| Property | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="field"></a> `field` | `"createdAt"` \| `"orderDate"` \| `"totalAmount"` | Field to sort by | src/core/business-mgt/menu-management/menu.order.schema.ts:272 |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | src/core/business-mgt/menu-management/menu.order.schema.ts:274 |

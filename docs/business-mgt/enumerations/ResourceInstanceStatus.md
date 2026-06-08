@@ -1,0 +1,22 @@
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
+
+***
+
+[Wiil Platform JavaScript Data Model Definitions - API Reference](../../README.md) / [business-mgt](../README.md) / ResourceInstanceStatus
+
+# Enumeration: ResourceInstanceStatus
+
+Defined in: src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:18
+
+Operational status of a physical resource instance.
+
+## Enumeration Members
+
+| Enumeration Member | Value | Defined in |
+| ------ | ------ | ------ |
+| <a id="available"></a> `AVAILABLE` | `"available"` | src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:19 |
+| <a id="reserved"></a> `RESERVED` | `"reserved"` | src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:20 |
+| <a id="occupied"></a> `OCCUPIED` | `"occupied"` | src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:21 |
+| <a id="maintenance"></a> `MAINTENANCE` | `"maintenance"` | src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:22 |
+| <a id="cleaning"></a> `CLEANING` | `"cleaning"` | src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:23 |
+| <a id="out_of_service"></a> `OUT_OF_SERVICE` | `"out_of_service"` | src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:24 |

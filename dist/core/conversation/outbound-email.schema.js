@@ -1,12 +1,19 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.EmailRequestResultSchema = exports.CreateEmailRequestSchema = exports.EmailRequestSchema = exports.EmailAttachmentSchema = exports.EmailRecipientSchema = void 0;
+exports.EmailRequestResultSchema = exports.EmailRecordSchema = exports.UpdateEmailRequestSchema = exports.CreateEmailRequestSchema = exports.EmailRequestSchema = exports.EmailAttachmentSchema = exports.EmailRecipientSchema = void 0;
 const zod_1 = require("zod");
 const base_schema_1 = require("../base.schema");
+const type_definitions_1 = require("../type-definitions");
 /**
  * @fileoverview Outbound email request and delivery tracking schema definitions.
  * @module conversation/outbound-email
+ *
+ * Email requests represent outbound email communications sent through the platform.
+ * Supports scheduling, templates, attachments, and delivery tracking with retry logic.
  */
+// ============================================================================
+// EMAIL RECIPIENT SCHEMA
+// ============================================================================
 /**
  * Email recipient schema (embedded in EmailRequestSchema).
  *
@@ -16,6 +23,9 @@ exports.EmailRecipientSchema = zod_1.z.object({
     email: zod_1.z.string().email("Must be a valid email address").describe("Email address of the recipient in standard format (e.g., 'user@example.com'). Must be a valid, deliverable email address."),
     name: zod_1.z.string().optional().describe("Optional display name for the recipient shown in email clients (e.g., 'John Smith'). When provided, email displays as 'John Smith <user@example.com>'."),
 });
+// ============================================================================
+// EMAIL ATTACHMENT SCHEMA
+// ============================================================================
 /**
  * Email attachment schema (embedded in EmailRequestSchema).
  *
@@ -26,6 +36,9 @@ exports.EmailAttachmentSchema = zod_1.z.object({
     content: zod_1.z.string().min(1, "Content is required").describe("Base64-encoded file content. Encode binary files to base64 string for safe transmission in JSON payloads."),
     contentType: zod_1.z.string().min(1, "Content type is required").describe("MIME type of the attachment indicating file format (e.g., 'application/pdf', 'image/png', 'text/csv'). Ensures correct handling by email clients."),
 });
+// ============================================================================
+// EMAIL REQUEST SCHEMA
+// ============================================================================
 /**
  * Email request schema.
  *
@@ -64,9 +77,18 @@ exports.EmailRequestSchema = base_schema_1.BaseModelSchema.safeExtend({
     // Scheduling
     scheduledAt: zod_1.z.number().optional().describe("Unix timestamp in milliseconds for scheduled email delivery. Email queued until this time, then sent automatically. Omit for immediate delivery."),
     serviceConversationConfigId: zod_1.z.string().nullable().optional().describe("Linked conversation record ID for email thread tracking and conversation history aggregation (references ServiceConversationConfig). Enables email conversation threading."),
+    // Status
+    status: zod_1.z.enum(type_definitions_1.EmailStatus).default(type_definitions_1.EmailStatus.QUEUED).describe("Current delivery status of the email request (queued, sent, delivered, bounced, failed, complained)."),
+    // Retry configuration
+    maxRetries: zod_1.z.number().int().min(0).max(5).optional().describe("Maximum number of retry attempts if email delivery fails (0-5). Set to 0 to disable retries."),
+    retryCount: zod_1.z.number().int().min(0).max(5).default(0).describe("Current count of retry attempts made for this email request."),
+    retryDelayMinutes: zod_1.z.number().int().positive().optional().describe("Delay in minutes between retry attempts for failed deliveries."),
     // Extensibility
     metadata: zod_1.z.record(zod_1.z.string(), zod_1.z.any()).optional().describe("Additional custom metadata as key-value pairs for campaign tracking, CRM integration, or application-specific data. Not processed by the platform."),
 });
+// ============================================================================
+// CREATE/UPDATE SCHEMAS
+// ============================================================================
 /**
  * Schema for creating a new email request.
  * Omits auto-generated fields.
@@ -76,6 +98,51 @@ exports.CreateEmailRequestSchema = exports.EmailRequestSchema.omit({
     createdAt: true,
     updatedAt: true,
 });
+/**
+ * Schema for updating an existing email request.
+ * All fields optional except id (required).
+ */
+exports.UpdateEmailRequestSchema = exports.CreateEmailRequestSchema.partial().safeExtend({
+    id: zod_1.z.string().describe("Unique identifier of the EmailRequest to update"),
+});
+// ============================================================================
+// EMAIL RECORD SCHEMA (DELIVERY TRACKING)
+// ============================================================================
+/**
+ * Email record schema for tracking delivery status.
+ *
+ * Records individual delivery events and status updates from email providers.
+ * Links to the original EmailRequest and tracks provider-specific message IDs.
+ *
+ * @typedef {Object} EmailRecord
+ * @property {string} emailRequestId - Reference to the original email request
+ * @property {string} providerMessageId - Provider-specific message ID
+ * @property {EmailStatus} status - Current delivery status
+ * @property {number} [sentAt] - Timestamp when email was sent
+ * @property {number} [deliveredAt] - Timestamp when email was delivered
+ * @property {number} [bouncedAt] - Timestamp when email bounced
+ * @property {string} [errorCode] - Provider error code if failed
+ * @property {string} [errorMessage] - Provider error message if failed
+ * @property {Object} [metadata] - Additional provider metadata
+ */
+exports.EmailRecordSchema = base_schema_1.BaseModelSchema.safeExtend({
+    emailRequestId: zod_1.z.string().describe("Reference to the original EmailRequest this record tracks"),
+    providerMessageId: zod_1.z.string().describe("Provider-specific message ID from the email service (SendGrid, SES, etc.)"),
+    status: zod_1.z.enum(type_definitions_1.EmailStatus).describe("Current delivery status from provider webhooks"),
+    sentAt: zod_1.z.number().optional().describe("Unix timestamp when email was sent to provider"),
+    deliveredAt: zod_1.z.number().optional().describe("Unix timestamp when email was confirmed delivered"),
+    bouncedAt: zod_1.z.number().optional().describe("Unix timestamp when email bounced"),
+    errorCode: zod_1.z.string().optional().describe("Provider-specific error code if delivery failed"),
+    errorMessage: zod_1.z.string().optional().describe("Provider error message describing failure reason"),
+    metadata: zod_1.z.record(zod_1.z.string(), zod_1.z.any()).optional().describe("Additional provider-specific metadata from webhooks"),
+});
+// ============================================================================
+// EMAIL REQUEST RESULT SCHEMA
+// ============================================================================
+/**
+ * Email request result schema.
+ * Response payload after submitting an email request.
+ */
 exports.EmailRequestResultSchema = zod_1.z.object({
     success: zod_1.z.boolean().optional().default(false).describe("Whether the email request was successful"),
     request: exports.EmailRequestSchema.optional().nullable().describe("Original email request details"),

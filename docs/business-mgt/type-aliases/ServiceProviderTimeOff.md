@@ -1,0 +1,45 @@
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
+
+***
+
+[Wiil Platform JavaScript Data Model Definitions - API Reference](../../README.md) / [business-mgt](../README.md) / ServiceProviderTimeOff
+
+# Type Alias: ServiceProviderTimeOff
+
+```ts
+type ServiceProviderTimeOff = {
+  id: string;
+  createdAt?: number;
+  updatedAt?: number;
+  providerId: string;
+  type: ServiceProviderTimeOffType;
+  startDate: number;
+  endDate: number;
+  reason?: string | null;
+  status: ServiceProviderTimeOffStatus;
+  recurrence?:   | {
+     dayOfWeek: string[];
+   }
+     | null;
+};
+```
+
+Defined in: src/core/business-mgt/service-management/service-time-off.schema.ts:109
+
+Service Provider Time Off schema.
+Represents a time period when a provider is unavailable for appointments.
+
+## Type Declaration
+
+| Name | Type | Defined in |
+| ------ | ------ | ------ |
+| <a id="id"></a> `id` | `string` | [src/core/base.schema.ts:8](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/base.schema.ts#L8) |
+| <a id="createdat"></a> `createdAt?` | `number` | [src/core/base.schema.ts:9](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/base.schema.ts#L9) |
+| <a id="updatedat"></a> `updatedAt?` | `number` | [src/core/base.schema.ts:10](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/base.schema.ts#L10) |
+| <a id="providerid"></a> `providerId` | `string` | src/core/business-mgt/service-management/service-time-off.schema.ts:49 |
+| <a id="type"></a> `type` | [`ServiceProviderTimeOffType`](../../type-definitions/enumerations/ServiceProviderTimeOffType.md) | src/core/business-mgt/service-management/service-time-off.schema.ts:50 |
+| <a id="startdate"></a> `startDate` | `number` | src/core/business-mgt/service-management/service-time-off.schema.ts:51 |
+| <a id="enddate"></a> `endDate` | `number` | src/core/business-mgt/service-management/service-time-off.schema.ts:52 |
+| <a id="reason"></a> `reason?` | `string` \| `null` | src/core/business-mgt/service-management/service-time-off.schema.ts:53 |
+| <a id="status"></a> `status` | [`ServiceProviderTimeOffStatus`](../../type-definitions/enumerations/ServiceProviderTimeOffStatus.md) | src/core/business-mgt/service-management/service-time-off.schema.ts:54 |
+| <a id="recurrence"></a> `recurrence?` | \| \{ `dayOfWeek`: `string`[]; \} \| `null` | src/core/business-mgt/service-management/service-time-off.schema.ts:55 |

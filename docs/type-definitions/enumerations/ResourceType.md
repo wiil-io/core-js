@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.51**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
 
 ***
 
@@ -6,13 +6,17 @@
 
 # Enumeration: ResourceType
 
-Defined in: [src/core/type-definitions/business-definitions.ts:18](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/business-definitions.ts#L18)
+Defined in: [src/core/type-definitions/business-definitions.ts:36](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/type-definitions/business-definitions.ts#L36)
+
+Reservation resource type.
+Identifies the kind of resource used by reservation and resource-management schemas.
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="table"></a> `TABLE` | `"table"` | [src/core/type-definitions/business-definitions.ts:19](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/business-definitions.ts#L19) |
-| <a id="room"></a> `ROOM` | `"room"` | [src/core/type-definitions/business-definitions.ts:20](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/business-definitions.ts#L20) |
-| <a id="rentals"></a> `RENTALS` | `"rentals"` | [src/core/type-definitions/business-definitions.ts:21](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/business-definitions.ts#L21) |
-| <a id="resource"></a> `RESOURCE` | `"resource"` | [src/core/type-definitions/business-definitions.ts:22](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/business-definitions.ts#L22) |
+| <a id="table"></a> `TABLE` | `"table"` | [src/core/type-definitions/business-definitions.ts:37](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/type-definitions/business-definitions.ts#L37) |
+| <a id="room"></a> `ROOM` | `"room"` | [src/core/type-definitions/business-definitions.ts:38](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/type-definitions/business-definitions.ts#L38) |
+| <a id="rental"></a> `RENTAL` | `"rental"` | [src/core/type-definitions/business-definitions.ts:39](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/type-definitions/business-definitions.ts#L39) |
+| <a id="rentals"></a> `RENTALS` | `"rentals"` | [src/core/type-definitions/business-definitions.ts:40](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/type-definitions/business-definitions.ts#L40) |
+| <a id="resource"></a> `RESOURCE` | `"resource"` | [src/core/type-definitions/business-definitions.ts:41](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/type-definitions/business-definitions.ts#L41) |

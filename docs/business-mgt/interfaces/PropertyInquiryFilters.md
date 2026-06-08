@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.51**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
 
 ***
 
@@ -6,27 +6,29 @@
 
 # Interface: PropertyInquiryFilters
 
-Defined in: [src/core/business-mgt/property-inquiry.schema.ts:134](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-inquiry.schema.ts#L134)
+Defined in: src/core/business-mgt/property-management/property-inquiry.schema.ts:151
+
+Property inquiry filter options.
+ PropertyInquiryFilters
 
 ## Properties
 
-| Property | Type | Defined in |
-| ------ | ------ | ------ |
-| <a id="search"></a> `search?` | `string` | [src/core/business-mgt/property-inquiry.schema.ts:135](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-inquiry.schema.ts#L135) |
-| <a id="propertyid"></a> `propertyId?` | `string` | [src/core/business-mgt/property-inquiry.schema.ts:136](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-inquiry.schema.ts#L136) |
-| <a id="customerid"></a> `customerId?` | `string` | [src/core/business-mgt/property-inquiry.schema.ts:137](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-inquiry.schema.ts#L137) |
-| <a id="status"></a> `status?` | [`PropertyInquiryStatus`](../../type-definitions/enumerations/PropertyInquiryStatus.md)[] | [src/core/business-mgt/property-inquiry.schema.ts:138](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-inquiry.schema.ts#L138) |
-| <a id="inquirytype"></a> `inquiryType?` | [`PropertyInquiryType`](../../type-definitions/enumerations/PropertyInquiryType.md) | [src/core/business-mgt/property-inquiry.schema.ts:139](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-inquiry.schema.ts#L139) |
-| <a id="assignedagentid"></a> `assignedAgentId?` | `string` | [src/core/business-mgt/property-inquiry.schema.ts:140](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-inquiry.schema.ts#L140) |
-| <a id="source"></a> `source?` | `string` | [src/core/business-mgt/property-inquiry.schema.ts:141](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-inquiry.schema.ts#L141) |
-| <a id="convertedtotransaction"></a> `convertedToTransaction?` | `boolean` | [src/core/business-mgt/property-inquiry.schema.ts:142](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-inquiry.schema.ts#L142) |
-| <a id="interestedinbuying"></a> `interestedInBuying?` | `boolean` | [src/core/business-mgt/property-inquiry.schema.ts:143](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-inquiry.schema.ts#L143) |
-| <a id="interestedinrenting"></a> `interestedInRenting?` | `boolean` | [src/core/business-mgt/property-inquiry.schema.ts:144](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-inquiry.schema.ts#L144) |
-| <a id="viewingcompleted"></a> `viewingCompleted?` | `boolean` | [src/core/business-mgt/property-inquiry.schema.ts:145](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-inquiry.schema.ts#L145) |
-| <a id="daterange"></a> `dateRange?` | \{ `start?`: `number`; `end?`: `number`; \} | [src/core/business-mgt/property-inquiry.schema.ts:146](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-inquiry.schema.ts#L146) |
-| `dateRange.start?` | `number` | [src/core/business-mgt/property-inquiry.schema.ts:146](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-inquiry.schema.ts#L146) |
-| `dateRange.end?` | `number` | [src/core/business-mgt/property-inquiry.schema.ts:146](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-inquiry.schema.ts#L146) |
-| <a id="followupdaterange"></a> `followUpDateRange?` | \{ `start?`: `number`; `end?`: `number`; \} | [src/core/business-mgt/property-inquiry.schema.ts:147](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-inquiry.schema.ts#L147) |
-| `followUpDateRange.start?` | `number` | [src/core/business-mgt/property-inquiry.schema.ts:147](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-inquiry.schema.ts#L147) |
-| `followUpDateRange.end?` | `number` | [src/core/business-mgt/property-inquiry.schema.ts:147](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-inquiry.schema.ts#L147) |
-| <a id="includedeleted"></a> `includeDeleted?` | `boolean` | [src/core/business-mgt/property-inquiry.schema.ts:148](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-inquiry.schema.ts#L148) |
+| Property | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="search"></a> `search?` | `string` | Text search across message/notes | src/core/business-mgt/property-management/property-inquiry.schema.ts:153 |
+| <a id="propertyid"></a> `propertyId?` | `string` | Filter by property ID | src/core/business-mgt/property-management/property-inquiry.schema.ts:155 |
+| <a id="customerid"></a> `customerId?` | `string` | Filter by customer ID | src/core/business-mgt/property-management/property-inquiry.schema.ts:157 |
+| <a id="status"></a> `status?` | [`PropertyInquiryStatus`](../../type-definitions/enumerations/PropertyInquiryStatus.md)[] | Filter by status(es) | src/core/business-mgt/property-management/property-inquiry.schema.ts:159 |
+| <a id="inquirytype"></a> `inquiryType?` | [`PropertyInquiryType`](../../type-definitions/enumerations/PropertyInquiryType.md) | Filter by inquiry type | src/core/business-mgt/property-management/property-inquiry.schema.ts:161 |
+| <a id="assignedagentid"></a> `assignedAgentId?` | `string` | Filter by assigned agent | src/core/business-mgt/property-management/property-inquiry.schema.ts:163 |
+| <a id="source"></a> `source?` | `string` | Filter by source | src/core/business-mgt/property-management/property-inquiry.schema.ts:165 |
+| <a id="convertedtotransaction"></a> `convertedToTransaction?` | `boolean` | Filter by conversion status | src/core/business-mgt/property-management/property-inquiry.schema.ts:167 |
+| <a id="interestedinbuying"></a> `interestedInBuying?` | `boolean` | Filter by buying interest | src/core/business-mgt/property-management/property-inquiry.schema.ts:169 |
+| <a id="interestedinrenting"></a> `interestedInRenting?` | `boolean` | Filter by renting interest | src/core/business-mgt/property-management/property-inquiry.schema.ts:171 |
+| <a id="viewingcompleted"></a> `viewingCompleted?` | `boolean` | Filter by viewing completed status | src/core/business-mgt/property-management/property-inquiry.schema.ts:173 |
+| <a id="daterange"></a> `dateRange?` | \{ `start?`: `number`; `end?`: `number`; \} | Filter by date range | src/core/business-mgt/property-management/property-inquiry.schema.ts:175 |
+| `dateRange.start?` | `number` | - | src/core/business-mgt/property-management/property-inquiry.schema.ts:175 |
+| `dateRange.end?` | `number` | - | src/core/business-mgt/property-management/property-inquiry.schema.ts:175 |
+| <a id="followupdaterange"></a> `followUpDateRange?` | \{ `start?`: `number`; `end?`: `number`; \} | Filter by follow-up date range | src/core/business-mgt/property-management/property-inquiry.schema.ts:177 |
+| `followUpDateRange.start?` | `number` | - | src/core/business-mgt/property-management/property-inquiry.schema.ts:177 |
+| `followUpDateRange.end?` | `number` | - | src/core/business-mgt/property-management/property-inquiry.schema.ts:177 |

@@ -1,6 +1,19 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.PropertyInquiryStatus = exports.PropertyInquiryType = exports.DepositStatus = exports.PropertyLeaseStatus = exports.PropertyPurchaseStatus = exports.RentalPeriod = exports.PropertyCondition = exports.ListingStatus = exports.ListingType = exports.PropertySubType = exports.PropertyType = exports.BestTimeToCall = exports.PreferredContactMethod = exports.CallPriority = exports.TIMEZONES = exports.DAYS_OF_WEEK = exports.BusinessDocumentTypes = exports.BusinessServiceDocumentTypes = exports.RestockStatus = exports.StockStatus = exports.StockAdjustmentType = exports.InventoryUnit = exports.ProductOrderType = exports.MenuOrderType = exports.PaymentStatus = exports.OrderStatus = exports.RecurrenceType = exports.ReservationSlotStatus = exports.AppointmentStatus = exports.ReservationSettingType = exports.ResourceReservationDurationUnit = exports.ResourceType = exports.CalendarProvider = exports.BusinessServiceType = void 0;
+exports.VariantAxisType = exports.PricingChannel = exports.PricingRuleAdjustmentType = exports.PricingRuleApplyLevel = exports.DiscountCatalogScope = exports.DiscountType = exports.DiscountScope = exports.TaxCatalogScope = exports.TaxRateType = exports.TaxScope = exports.PropertyInquiryStatus = exports.PropertyInquiryType = exports.DepositStatus = exports.PropertyLeaseStatus = exports.PropertyPurchaseStatus = exports.RentalPeriod = exports.PropertyCondition = exports.ListingStatus = exports.ListingType = exports.PropertySubType = exports.PropertyType = exports.BestTimeToCall = exports.PreferredContactMethod = exports.CallPriority = exports.TIMEZONES = exports.DAYS_OF_WEEK = exports.BusinessDocumentTypes = exports.BusinessServiceDocumentTypes = exports.RestockStatus = exports.StockStatus = exports.StockAdjustmentType = exports.InventoryUnit = exports.ProductOrderType = exports.MenuOrderType = exports.PaymentStatus = exports.OrderStatus = exports.RecurrenceType = exports.ReservationSlotStatus = exports.ServiceProviderTimeOffStatus = exports.ServiceProviderTimeOffType = exports.AppointmentStatus = exports.ReservationStatus = exports.ReservationSettingType = exports.ResourceReservationDurationUnit = exports.ResourceType = exports.CalendarProvider = exports.BusinessServiceType = exports.ExternalRefSchema = void 0;
+const zod_1 = __importDefault(require("zod"));
+/**
+ * External reference schema for synchronization with external systems.
+ */
+exports.ExternalRefSchema = zod_1.default.object({
+    externalId: zod_1.default.string().describe("Record ID in external system"),
+    source: zod_1.default.string().describe("External platform identifier (e.g., doordash, uber-eats, opentable, resy)"),
+    url: zod_1.default.url().nullable().optional().describe("Direct link to record in external system"),
+    syncedAt: zod_1.default.number().nullable().optional().describe("Last sync timestamp"),
+}).describe("External system reference for imported/synced records");
 var BusinessServiceType;
 (function (BusinessServiceType) {
     BusinessServiceType["MENU"] = "menu";
@@ -15,11 +28,17 @@ var CalendarProvider;
     CalendarProvider["OUTLOOK"] = "outlook";
     CalendarProvider["CALENDLY"] = "calendly";
 })(CalendarProvider || (exports.CalendarProvider = CalendarProvider = {}));
-// Resource type enum
+/**
+ * Reservation resource type.
+ * Identifies the kind of resource used by reservation and resource-management schemas.
+ *
+ * @enum {string}
+ */
 var ResourceType;
 (function (ResourceType) {
     ResourceType["TABLE"] = "table";
     ResourceType["ROOM"] = "room";
+    ResourceType["RENTAL"] = "rental";
     ResourceType["RENTALS"] = "rentals";
     ResourceType["RESOURCE"] = "resource";
 })(ResourceType || (exports.ResourceType = ResourceType = {}));
@@ -34,6 +53,22 @@ var ReservationSettingType;
     ReservationSettingType["CAPACITY"] = "capacity";
     ReservationSettingType["RESOURCE_SPECIFIC"] = "resource_specific";
 })(ReservationSettingType || (exports.ReservationSettingType = ReservationSettingType = {}));
+/**
+ * Reservation lifecycle status.
+ * Shared status enum for table and room reservation workflows.
+ *
+ * @enum {string}
+ */
+var ReservationStatus;
+(function (ReservationStatus) {
+    ReservationStatus["PENDING"] = "pending";
+    ReservationStatus["CONFIRMED"] = "confirmed";
+    ReservationStatus["SEATED"] = "seated";
+    ReservationStatus["CHECKED_IN"] = "checked_in";
+    ReservationStatus["COMPLETED"] = "completed";
+    ReservationStatus["CANCELLED"] = "cancelled";
+    ReservationStatus["NO_SHOW"] = "no_show";
+})(ReservationStatus || (exports.ReservationStatus = ReservationStatus = {}));
 var AppointmentStatus;
 (function (AppointmentStatus) {
     AppointmentStatus["PENDING"] = "pending";
@@ -42,6 +77,17 @@ var AppointmentStatus;
     AppointmentStatus["COMPLETED"] = "completed";
     AppointmentStatus["NO_SHOW"] = "no_show"; // For revenue tracking
 })(AppointmentStatus || (exports.AppointmentStatus = AppointmentStatus = {}));
+var ServiceProviderTimeOffType;
+(function (ServiceProviderTimeOffType) {
+    ServiceProviderTimeOffType["RECURRING"] = "recurring";
+    ServiceProviderTimeOffType["SPECIFIC"] = "specific";
+})(ServiceProviderTimeOffType || (exports.ServiceProviderTimeOffType = ServiceProviderTimeOffType = {}));
+var ServiceProviderTimeOffStatus;
+(function (ServiceProviderTimeOffStatus) {
+    ServiceProviderTimeOffStatus["APPROVED"] = "approved";
+    ServiceProviderTimeOffStatus["PENDING"] = "pending";
+    ServiceProviderTimeOffStatus["REJECTED"] = "rejected";
+})(ServiceProviderTimeOffStatus || (exports.ServiceProviderTimeOffStatus = ServiceProviderTimeOffStatus = {}));
 var ReservationSlotStatus;
 (function (ReservationSlotStatus) {
     ReservationSlotStatus["AVAILABLE"] = "available";
@@ -287,3 +333,73 @@ var PropertyInquiryStatus;
     PropertyInquiryStatus["CONVERTED"] = "converted";
     PropertyInquiryStatus["CLOSED"] = "closed";
 })(PropertyInquiryStatus || (exports.PropertyInquiryStatus = PropertyInquiryStatus = {}));
+// Tax Rule Enums
+var TaxScope;
+(function (TaxScope) {
+    TaxScope["ORDER"] = "ORDER";
+    TaxScope["ITEM"] = "ITEM";
+    TaxScope["SERVICE"] = "SERVICE";
+    TaxScope["DELIVERY"] = "DELIVERY";
+})(TaxScope || (exports.TaxScope = TaxScope = {}));
+var TaxRateType;
+(function (TaxRateType) {
+    TaxRateType["PERCENTAGE"] = "PERCENTAGE";
+    TaxRateType["FIXED"] = "FIXED";
+})(TaxRateType || (exports.TaxRateType = TaxRateType = {}));
+var TaxCatalogScope;
+(function (TaxCatalogScope) {
+    TaxCatalogScope["ALL"] = "ALL";
+    TaxCatalogScope["MENU"] = "MENU";
+    TaxCatalogScope["PRODUCT"] = "PRODUCT";
+    TaxCatalogScope["SERVICE"] = "SERVICE";
+    TaxCatalogScope["SET"] = "SET";
+})(TaxCatalogScope || (exports.TaxCatalogScope = TaxCatalogScope = {}));
+// Discount Rule Enums
+var DiscountScope;
+(function (DiscountScope) {
+    DiscountScope["ORDER"] = "ORDER";
+    DiscountScope["ITEM"] = "ITEM";
+    DiscountScope["SHIPPING"] = "SHIPPING";
+    DiscountScope["SET"] = "SET";
+})(DiscountScope || (exports.DiscountScope = DiscountScope = {}));
+var DiscountType;
+(function (DiscountType) {
+    DiscountType["PERCENTAGE"] = "PERCENTAGE";
+    DiscountType["FIXED"] = "FIXED";
+})(DiscountType || (exports.DiscountType = DiscountType = {}));
+var DiscountCatalogScope;
+(function (DiscountCatalogScope) {
+    DiscountCatalogScope["ALL"] = "ALL";
+    DiscountCatalogScope["MENU"] = "MENU";
+    DiscountCatalogScope["PRODUCT"] = "PRODUCT";
+    DiscountCatalogScope["SERVICE"] = "SERVICE";
+    DiscountCatalogScope["SET"] = "SET";
+})(DiscountCatalogScope || (exports.DiscountCatalogScope = DiscountCatalogScope = {}));
+// Pricing Rule Enums
+var PricingRuleApplyLevel;
+(function (PricingRuleApplyLevel) {
+    PricingRuleApplyLevel["ITEM"] = "ITEM";
+    PricingRuleApplyLevel["ORDER"] = "ORDER";
+})(PricingRuleApplyLevel || (exports.PricingRuleApplyLevel = PricingRuleApplyLevel = {}));
+var PricingRuleAdjustmentType;
+(function (PricingRuleAdjustmentType) {
+    PricingRuleAdjustmentType["PERCENTAGE"] = "PERCENTAGE";
+    PricingRuleAdjustmentType["FIXED"] = "FIXED";
+    PricingRuleAdjustmentType["OVERRIDE"] = "OVERRIDE";
+})(PricingRuleAdjustmentType || (exports.PricingRuleAdjustmentType = PricingRuleAdjustmentType = {}));
+var PricingChannel;
+(function (PricingChannel) {
+    PricingChannel["ALL"] = "ALL";
+    PricingChannel["DIRECT"] = "DIRECT";
+    PricingChannel["ONLINE"] = "ONLINE";
+    PricingChannel["PHONE"] = "PHONE";
+    PricingChannel["WALK_IN"] = "WALK_IN";
+})(PricingChannel || (exports.PricingChannel = PricingChannel = {}));
+// Variant Axis Enums
+var VariantAxisType;
+(function (VariantAxisType) {
+    VariantAxisType["SWATCH"] = "swatch";
+    VariantAxisType["TEXT"] = "text";
+    VariantAxisType["IMAGE"] = "image";
+    VariantAxisType["NUMERIC"] = "numeric";
+})(VariantAxisType || (exports.VariantAxisType = VariantAxisType = {}));

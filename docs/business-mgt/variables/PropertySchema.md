@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.51**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
 
 ***
 
@@ -10,6 +10,7 @@
 const PropertySchema: ZodObject<Property>;
 ```
 
-Defined in: [src/core/business-mgt/property-config.schema.ts:132](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-config.schema.ts#L132)
+Defined in: src/core/business-mgt/property-management/property-config.schema.ts:268
 
-Main property schema for real estate listings.
+Property schema.
+Main property listing with pricing, details, and type-specific information.

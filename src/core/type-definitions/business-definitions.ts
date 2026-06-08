@@ -1,3 +1,16 @@
+import z from "zod";
+
+/**
+ * External reference schema for synchronization with external systems.
+ */
+export const ExternalRefSchema = z.object({
+    externalId: z.string().describe("Record ID in external system"),
+    source: z.string().describe("External platform identifier (e.g., doordash, uber-eats, opentable, resy)"),
+    url: z.url().nullable().optional().describe("Direct link to record in external system"),
+    syncedAt: z.number().nullable().optional().describe("Last sync timestamp"),
+}).describe("External system reference for imported/synced records");
+
+export type ExternalRef = z.infer<typeof ExternalRefSchema>;
 
 export enum BusinessServiceType {
     MENU = 'menu',           // Restaurant/food
@@ -14,10 +27,16 @@ export enum CalendarProvider {
   CALENDLY = 'calendly'
 }
  
-// Resource type enum
+/**
+ * Reservation resource type.
+ * Identifies the kind of resource used by reservation and resource-management schemas.
+ *
+ * @enum {string}
+ */
 export enum ResourceType {
     TABLE = "table",
     ROOM = "room",
+    RENTAL = "rental",
     RENTALS = "rentals",
     RESOURCE = "resource",
 }
@@ -33,6 +52,22 @@ export enum ReservationSettingType {
     RESOURCE_SPECIFIC = "resource_specific",
 }
 
+/**
+ * Reservation lifecycle status.
+ * Shared status enum for table and room reservation workflows.
+ *
+ * @enum {string}
+ */
+export enum ReservationStatus {
+    PENDING = "pending",
+    CONFIRMED = "confirmed",
+    SEATED = "seated",
+    CHECKED_IN = "checked_in",
+    COMPLETED = "completed",
+    CANCELLED = "cancelled",
+    NO_SHOW = "no_show",
+}
+
 
 export enum AppointmentStatus {
     PENDING = 'pending',
@@ -42,6 +77,16 @@ export enum AppointmentStatus {
     NO_SHOW = 'no_show'     // For revenue tracking
 }
 
+export enum ServiceProviderTimeOffType {
+    RECURRING = "recurring",
+    SPECIFIC = "specific",
+}
+
+export enum ServiceProviderTimeOffStatus {
+    APPROVED = "approved",
+    PENDING = "pending",
+    REJECTED = "rejected",
+}
 
 export enum ReservationSlotStatus {
     AVAILABLE = "available",
@@ -296,4 +341,74 @@ export enum PropertyInquiryStatus {
     FOLLOW_UP = 'follow_up',
     CONVERTED = 'converted',
     CLOSED = 'closed'
+}
+
+// Tax Rule Enums
+export enum TaxScope {
+    ORDER = "ORDER",
+    ITEM = "ITEM",
+    SERVICE = "SERVICE",
+    DELIVERY = "DELIVERY",
+}
+
+export enum TaxRateType {
+    PERCENTAGE = "PERCENTAGE",
+    FIXED = "FIXED",
+}
+
+export enum TaxCatalogScope {
+    ALL = "ALL",
+    MENU = "MENU",
+    PRODUCT = "PRODUCT",
+    SERVICE = "SERVICE",
+    SET = "SET",
+}
+
+// Discount Rule Enums
+export enum DiscountScope {
+    ORDER = "ORDER",
+    ITEM = "ITEM",
+    SHIPPING = "SHIPPING",
+    SET = "SET",
+}
+
+export enum DiscountType {
+    PERCENTAGE = "PERCENTAGE",
+    FIXED = "FIXED",
+}
+
+export enum DiscountCatalogScope {
+    ALL = "ALL",
+    MENU = "MENU",
+    PRODUCT = "PRODUCT",
+    SERVICE = "SERVICE",
+    SET = "SET",
+}
+
+// Pricing Rule Enums
+export enum PricingRuleApplyLevel {
+    ITEM = "ITEM",
+    ORDER = "ORDER",
+}
+
+export enum PricingRuleAdjustmentType {
+    PERCENTAGE = "PERCENTAGE",
+    FIXED = "FIXED",
+    OVERRIDE = "OVERRIDE",
+}
+
+export enum PricingChannel {
+    ALL = "ALL",
+    DIRECT = "DIRECT",
+    ONLINE = "ONLINE",
+    PHONE = "PHONE",
+    WALK_IN = "WALK_IN",
+}
+
+// Variant Axis Enums
+export enum VariantAxisType {
+    SWATCH = "swatch",
+    TEXT = "text",
+    IMAGE = "image",
+    NUMERIC = "numeric",
 }

@@ -1,0 +1,21 @@
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
+
+***
+
+[Wiil Platform JavaScript Data Model Definitions - API Reference](../../README.md) / [conversation](../README.md) / OutboundTemplateFilters
+
+# Interface: OutboundTemplateFilters
+
+Defined in: src/core/conversation/outbound-template.schema.ts:201
+
+Outbound template filter options.
+ OutboundTemplateFilters
+
+## Properties
+
+| Property | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="search"></a> `search?` | `string` | Text search across name/code/description | src/core/conversation/outbound-template.schema.ts:203 |
+| <a id="channel"></a> `channel?` | [`OutboundTemplateChannel`](../../type-definitions/enumerations/OutboundTemplateChannel.md) | Filter by channel type | src/core/conversation/outbound-template.schema.ts:205 |
+| <a id="isactive"></a> `isActive?` | `boolean` | Filter by active status | src/core/conversation/outbound-template.schema.ts:207 |
+| <a id="tags"></a> `tags?` | `string`[] | Filter by tags | src/core/conversation/outbound-template.schema.ts:209 |

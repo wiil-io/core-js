@@ -1,0 +1,28 @@
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
+
+***
+
+[Wiil Platform JavaScript Data Model Definitions - API Reference](../../README.md) / [business-mgt](../README.md) / ProductVariantChannelMapping
+
+# Type Alias: ProductVariantChannelMapping
+
+```ts
+type ProductVariantChannelMapping = {
+  channelId: string;
+  externalVariantId: string;
+  externalProductId?: string | null;
+};
+```
+
+Defined in: src/core/business-mgt/product-management/product-variant.schema.ts:145
+
+Product variant channel mapping schema.
+Maps variants to external platform identifiers for multi-channel synchronization.
+
+## Type Declaration
+
+| Name | Type | Defined in |
+| ------ | ------ | ------ |
+| <a id="channelid"></a> `channelId` | `string` | src/core/business-mgt/product-management/product-variant.schema.ts:28 |
+| <a id="externalvariantid"></a> `externalVariantId` | `string` | src/core/business-mgt/product-management/product-variant.schema.ts:29 |
+| <a id="externalproductid"></a> `externalProductId?` | `string` \| `null` | src/core/business-mgt/product-management/product-variant.schema.ts:30 |

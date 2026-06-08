@@ -1,12 +1,12 @@
 import { z } from "zod";
 import { MessageType } from "./conversation-message.schema";
-import { ConversationStatus, ConversationSummarySentiment, ServiceConversationType } from "../type-definitions";
+import { ConversationDirection, ConversationStatus, ConversationSummarySentiment, ServiceConversationType } from "../type-definitions";
 /**
  * @fileoverview Conversation configuration schema definitions.
  *
  * Conversations represent individual interaction sessions between users and AI agents through various channels
  * (phone, SMS, web chat, email). They track message history, status progression, call metadata, and relationship
- * to deployment configurations. Each conversation is scoped to a project and organization.
+ * to deployment configurations. Each conversation is scoped to a project.
  *
  * @module conversation/conversation-config
  */
@@ -68,14 +68,57 @@ export declare const MessageSchema: z.ZodObject<{
 }, z.core.$strip>;
 export type Message = z.infer<typeof MessageSchema>;
 /**
- * Conversation direction enum.
+ * Display message schema.
+ *
+ * Simplified message format for UI display purposes, containing only the
+ * essential fields needed for rendering messages in chat interfaces.
+ *
+ * @typedef {Object} DisplayMessage
+ * @property {string} id - Unique identifier for display purposes
+ * @property {string} sender - Who sent this message (user or assistant)
+ * @property {string} content - Message content to display
+ * @property {Date} timestamp - When the message was sent
  */
-export declare enum ConversationDirection {
-    INBOUND = "inbound",
-    OUTBOUND = "outbound"
-}
+export declare const DisplayMessageSchema: z.ZodObject<{
+    id: z.ZodString;
+    sender: z.ZodUnion<readonly [z.ZodLiteral<"user">, z.ZodLiteral<"assistant">]>;
+    content: z.ZodString;
+    timestamp: z.ZodDate;
+}, z.core.$strip>;
+export type DisplayMessage = z.infer<typeof DisplayMessageSchema>;
+/**
+ * Conversation context schema.
+ *
+ * Optional context to guide conversations, enabling deep-linking to specific
+ * products, services, or resources. Used to pre-populate conversation context
+ * when users click through from specific pages or marketing campaigns.
+ *
+ * @typedef {Object} ConversationContext
+ * @property {string} [message] - Auto-sends as the user's first message
+ * @property {string} [productId] - Deep-link to a product
+ * @property {string} [menuItemId] - Deep-link to a menu item
+ * @property {string} [serviceId] - Deep-link to a service
+ * @property {string} [propertyId] - Deep-link to a property
+ * @property {string} [resourceId] - Deep-link to a resource (rental/room)
+ * @property {string} [requiredServiceId] - Pre-select a required service
+ * @property {string} [locationId] - Context of a specific business location
+ */
+export declare const ConversationContextSchema: z.ZodObject<{
+    message: z.ZodOptional<z.ZodString>;
+    productId: z.ZodOptional<z.ZodString>;
+    menuItemId: z.ZodOptional<z.ZodString>;
+    serviceId: z.ZodOptional<z.ZodString>;
+    propertyId: z.ZodOptional<z.ZodString>;
+    resourceId: z.ZodOptional<z.ZodString>;
+    requiredServiceId: z.ZodOptional<z.ZodString>;
+    locationId: z.ZodOptional<z.ZodString>;
+}, z.core.$strip>;
+export type ConversationContext = z.infer<typeof ConversationContextSchema>;
 /**
  * Union of all conversation message types.
+ *
+ * Discriminated union supporting user, AI agent, human agent, and system messages
+ * for both chat and email channels.
  */
 export declare const ConversationMessageSchema: z.ZodUnion<readonly [z.ZodObject<{
     conversation_config_id: z.ZodString;
@@ -110,6 +153,33 @@ export declare const ConversationMessageSchema: z.ZodUnion<readonly [z.ZodObject
     subject: z.ZodString;
     isEmail: z.ZodDefault<z.ZodLiteral<true>>;
     message_type: z.ZodDefault<z.ZodLiteral<MessageType.AGENT>>;
+}, z.core.$strip>, z.ZodObject<{
+    conversation_config_id: z.ZodString;
+    message: z.ZodString;
+    timestamp: z.ZodDefault<z.ZodNumber>;
+    llm_conversation_id: z.ZodNullable<z.ZodOptional<z.ZodString>>;
+    message_type: z.ZodDefault<z.ZodLiteral<MessageType.HUMAN_AGENT>>;
+    agent_message_id: z.ZodString;
+    agent_session_id: z.ZodString;
+    last_user_message_id: z.ZodOptional<z.ZodString>;
+}, z.core.$strip>, z.ZodObject<{
+    conversation_config_id: z.ZodString;
+    message: z.ZodString;
+    timestamp: z.ZodDefault<z.ZodNumber>;
+    llm_conversation_id: z.ZodNullable<z.ZodOptional<z.ZodString>>;
+    subject: z.ZodString;
+    isEmail: z.ZodDefault<z.ZodLiteral<true>>;
+    message_type: z.ZodDefault<z.ZodLiteral<MessageType.HUMAN_AGENT>>;
+    agent_session_id: z.ZodString;
+}, z.core.$strip>, z.ZodObject<{
+    conversation_config_id: z.ZodString;
+    message: z.ZodString;
+    timestamp: z.ZodDefault<z.ZodNumber>;
+    llm_conversation_id: z.ZodNullable<z.ZodOptional<z.ZodString>>;
+    message_type: z.ZodDefault<z.ZodLiteral<MessageType.SYSTEM>>;
+    system_message_id: z.ZodString;
+    event_type: z.ZodEnum<typeof import("./conversation-message.schema").SystemMessageEventType>;
+    metadata: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodUnknown>>;
 }, z.core.$strip>]>;
 /**
  * Conversation state history schema for tracking status changes.
@@ -191,7 +261,6 @@ export declare const ConversationStateHistorySchema: z.ZodObject<{
  */
 export declare const BaseConversationConfigSchema: z.ZodObject<{
     channel_id: z.ZodString;
-    organization_id: z.ZodString;
     project_id: z.ZodString;
     deployment_config_id: z.ZodString;
     channel_identifier: z.ZodString;
@@ -234,9 +303,37 @@ export declare const BaseConversationConfigSchema: z.ZodObject<{
         subject: z.ZodString;
         isEmail: z.ZodDefault<z.ZodLiteral<true>>;
         message_type: z.ZodDefault<z.ZodLiteral<MessageType.AGENT>>;
+    }, z.core.$strip>, z.ZodObject<{
+        conversation_config_id: z.ZodString;
+        message: z.ZodString;
+        timestamp: z.ZodDefault<z.ZodNumber>;
+        llm_conversation_id: z.ZodNullable<z.ZodOptional<z.ZodString>>;
+        message_type: z.ZodDefault<z.ZodLiteral<MessageType.HUMAN_AGENT>>;
+        agent_message_id: z.ZodString;
+        agent_session_id: z.ZodString;
+        last_user_message_id: z.ZodOptional<z.ZodString>;
+    }, z.core.$strip>, z.ZodObject<{
+        conversation_config_id: z.ZodString;
+        message: z.ZodString;
+        timestamp: z.ZodDefault<z.ZodNumber>;
+        llm_conversation_id: z.ZodNullable<z.ZodOptional<z.ZodString>>;
+        subject: z.ZodString;
+        isEmail: z.ZodDefault<z.ZodLiteral<true>>;
+        message_type: z.ZodDefault<z.ZodLiteral<MessageType.HUMAN_AGENT>>;
+        agent_session_id: z.ZodString;
+    }, z.core.$strip>, z.ZodObject<{
+        conversation_config_id: z.ZodString;
+        message: z.ZodString;
+        timestamp: z.ZodDefault<z.ZodNumber>;
+        llm_conversation_id: z.ZodNullable<z.ZodOptional<z.ZodString>>;
+        message_type: z.ZodDefault<z.ZodLiteral<MessageType.SYSTEM>>;
+        system_message_id: z.ZodString;
+        event_type: z.ZodEnum<typeof import("./conversation-message.schema").SystemMessageEventType>;
+        metadata: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodUnknown>>;
     }, z.core.$strip>]>>>>;
     is_campaign: z.ZodDefault<z.ZodBoolean>;
     customer_id: z.ZodNullable<z.ZodOptional<z.ZodString>>;
+    location_id: z.ZodNullable<z.ZodOptional<z.ZodString>>;
     status: z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof ConversationStatus>>>;
     durationInSeconds: z.ZodDefault<z.ZodOptional<z.ZodNumber>>;
     stt_model_id: z.ZodNullable<z.ZodOptional<z.ZodString>>;
@@ -256,6 +353,17 @@ export declare const BaseConversationConfigSchema: z.ZodObject<{
     }, z.core.$strip>>>>;
     updated_at: z.ZodNullable<z.ZodOptional<z.ZodNumber>>;
     deleted_at: z.ZodNullable<z.ZodOptional<z.ZodNumber>>;
+    is_test_conversation: z.ZodDefault<z.ZodBoolean>;
+    conversation_context: z.ZodNullable<z.ZodOptional<z.ZodObject<{
+        message: z.ZodOptional<z.ZodString>;
+        productId: z.ZodOptional<z.ZodString>;
+        menuItemId: z.ZodOptional<z.ZodString>;
+        serviceId: z.ZodOptional<z.ZodString>;
+        propertyId: z.ZodOptional<z.ZodString>;
+        resourceId: z.ZodOptional<z.ZodString>;
+        requiredServiceId: z.ZodOptional<z.ZodString>;
+        locationId: z.ZodOptional<z.ZodString>;
+    }, z.core.$strip>>>;
 }, z.core.$strip>;
 /**
  * Call transfer schema for tracking call transfer details in telephony conversations.
@@ -319,7 +427,6 @@ export declare const CallTransferSchema: z.ZodObject<{
  */
 export declare const ServiceConversationConfigSchema: z.ZodObject<{
     channel_id: z.ZodString;
-    organization_id: z.ZodString;
     project_id: z.ZodString;
     deployment_config_id: z.ZodString;
     channel_identifier: z.ZodString;
@@ -362,9 +469,37 @@ export declare const ServiceConversationConfigSchema: z.ZodObject<{
         subject: z.ZodString;
         isEmail: z.ZodDefault<z.ZodLiteral<true>>;
         message_type: z.ZodDefault<z.ZodLiteral<MessageType.AGENT>>;
+    }, z.core.$strip>, z.ZodObject<{
+        conversation_config_id: z.ZodString;
+        message: z.ZodString;
+        timestamp: z.ZodDefault<z.ZodNumber>;
+        llm_conversation_id: z.ZodNullable<z.ZodOptional<z.ZodString>>;
+        message_type: z.ZodDefault<z.ZodLiteral<MessageType.HUMAN_AGENT>>;
+        agent_message_id: z.ZodString;
+        agent_session_id: z.ZodString;
+        last_user_message_id: z.ZodOptional<z.ZodString>;
+    }, z.core.$strip>, z.ZodObject<{
+        conversation_config_id: z.ZodString;
+        message: z.ZodString;
+        timestamp: z.ZodDefault<z.ZodNumber>;
+        llm_conversation_id: z.ZodNullable<z.ZodOptional<z.ZodString>>;
+        subject: z.ZodString;
+        isEmail: z.ZodDefault<z.ZodLiteral<true>>;
+        message_type: z.ZodDefault<z.ZodLiteral<MessageType.HUMAN_AGENT>>;
+        agent_session_id: z.ZodString;
+    }, z.core.$strip>, z.ZodObject<{
+        conversation_config_id: z.ZodString;
+        message: z.ZodString;
+        timestamp: z.ZodDefault<z.ZodNumber>;
+        llm_conversation_id: z.ZodNullable<z.ZodOptional<z.ZodString>>;
+        message_type: z.ZodDefault<z.ZodLiteral<MessageType.SYSTEM>>;
+        system_message_id: z.ZodString;
+        event_type: z.ZodEnum<typeof import("./conversation-message.schema").SystemMessageEventType>;
+        metadata: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodUnknown>>;
     }, z.core.$strip>]>>>>;
     is_campaign: z.ZodDefault<z.ZodBoolean>;
     customer_id: z.ZodNullable<z.ZodOptional<z.ZodString>>;
+    location_id: z.ZodNullable<z.ZodOptional<z.ZodString>>;
     status: z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof ConversationStatus>>>;
     durationInSeconds: z.ZodDefault<z.ZodOptional<z.ZodNumber>>;
     stt_model_id: z.ZodNullable<z.ZodOptional<z.ZodString>>;
@@ -384,6 +519,17 @@ export declare const ServiceConversationConfigSchema: z.ZodObject<{
     }, z.core.$strip>>>>;
     updated_at: z.ZodNullable<z.ZodOptional<z.ZodNumber>>;
     deleted_at: z.ZodNullable<z.ZodOptional<z.ZodNumber>>;
+    is_test_conversation: z.ZodDefault<z.ZodBoolean>;
+    conversation_context: z.ZodNullable<z.ZodOptional<z.ZodObject<{
+        message: z.ZodOptional<z.ZodString>;
+        productId: z.ZodOptional<z.ZodString>;
+        menuItemId: z.ZodOptional<z.ZodString>;
+        serviceId: z.ZodOptional<z.ZodString>;
+        propertyId: z.ZodOptional<z.ZodString>;
+        resourceId: z.ZodOptional<z.ZodString>;
+        requiredServiceId: z.ZodOptional<z.ZodString>;
+        locationId: z.ZodOptional<z.ZodString>;
+    }, z.core.$strip>>>;
     id: z.ZodString;
     record_id: z.ZodNullable<z.ZodOptional<z.ZodString>>;
     provider_message_id: z.ZodNullable<z.ZodOptional<z.ZodString>>;
@@ -427,32 +573,97 @@ export declare const ServiceConversationConfigSchema: z.ZodObject<{
 export declare const DecommissionConfigSchema: z.ZodObject<{
     decommission_service_id: z.ZodString;
 }, z.core.$strip>;
+/**
+ * Test configuration schema.
+ * Base configuration for testing AI agents.
+ */
+export declare const TestConfigSchema: z.ZodObject<{
+    account_id: z.ZodString;
+    project_id: z.ZodString;
+    agent_id: z.ZodString;
+    instruction_config_id: z.ZodString;
+}, z.core.$strip>;
+/**
+ * Evaluation schema for running AI agent evaluations.
+ */
+export declare const EvaluationSchema: z.ZodObject<{
+    instructionId: z.ZodString;
+    agentId: z.ZodString;
+    evaluationConfigId: z.ZodString;
+    speechConfig: z.ZodNullable<z.ZodOptional<z.ZodObject<{}, z.core.$strip>>>;
+}, z.core.$strip>;
+/**
+ * OTT conversation configuration schema.
+ * Configuration for OTT (over-the-top) chat widget connections.
+ */
+export declare const ConversationConfigSchema: z.ZodObject<{
+    platform_user_id: z.ZodOptional<z.ZodNumber>;
+    channel_identifier: z.ZodString;
+    partner_user_id: z.ZodOptional<z.ZodString>;
+}, z.core.$strip>;
+/**
+ * OTT conversation configuration with connection details.
+ */
+export declare const OttConversationConfigSchema: z.ZodObject<{
+    platform_user_id: z.ZodOptional<z.ZodNumber>;
+    channel_identifier: z.ZodString;
+    partner_user_id: z.ZodOptional<z.ZodString>;
+    sdrtn_id: z.ZodNullable<z.ZodOptional<z.ZodString>>;
+    channel_token: z.ZodString;
+    connection_url: z.ZodNullable<z.ZodOptional<z.ZodString>>;
+}, z.core.$strip>;
 export type ConversationSummary = z.infer<typeof ConversationSummarySchema>;
 export type ServiceConversationConfigType = z.infer<typeof ServiceConversationConfigSchema>;
 export type DecommissionRequest = z.infer<typeof DecommissionConfigSchema>;
 export type CallTransfer = z.infer<typeof CallTransferSchema>;
 export type ConversationStateHistory = z.infer<typeof ConversationStateHistorySchema>;
+export type TestConfig = z.infer<typeof TestConfigSchema>;
+export type Evaluation = z.infer<typeof EvaluationSchema>;
+export type OttConversationConfig = z.infer<typeof OttConversationConfigSchema>;
 /**
- * Enhanced interfaces for filtering and sorting conversations.
+ * Conversation filter options.
+ * @interface ConversationFilters
  */
 export interface ConversationFilters {
+    /** Text search across conversation content */
     search?: string;
+    /** Filter by conversation type(s) */
     conversationType?: ServiceConversationType[];
+    /** Filter by channel ID */
     channelId?: string;
+    /** Filter by location ID */
+    locationId?: string;
+    /** Filter by customer ID */
     customerId?: string;
+    /** Filter by presence of messages */
     hasMessages?: boolean;
+    /** Filter by date range */
     dateRange?: {
         start?: Date;
         end?: Date;
     };
 }
+/**
+ * Conversation sorting options.
+ * @interface ConversationSorting
+ */
 export interface ConversationSorting {
+    /** Field to sort by */
     field: 'created_at' | 'customer_id';
+    /** Sort direction */
     direction: 'asc' | 'desc';
 }
+/**
+ * Conversation query options.
+ * @interface ConversationQueryOptions
+ */
 export interface ConversationQueryOptions {
+    /** Page number (1-indexed) */
     page: number;
+    /** Items per page */
     pageSize: number;
+    /** Optional filters */
     filters?: ConversationFilters;
+    /** Optional sorting */
     sorting?: ConversationSorting;
 }

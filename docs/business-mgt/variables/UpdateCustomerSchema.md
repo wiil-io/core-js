@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.51**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const UpdateCustomerSchema: ZodObject<UpdateCustomer>;
 ```
 
-Defined in: [src/core/business-mgt/customer.schema.ts:72](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/customer.schema.ts#L72)
+Defined in: src/core/business-mgt/customer-management/customer.schema.ts:93
 
 Schema for updating an existing customer.
-All fields are optional except id.
+All fields optional except id (required).

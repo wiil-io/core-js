@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.51**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
 
 ***
 
@@ -43,6 +43,10 @@ type EmailRequestResult = {
         | null;
      scheduledAt?: number;
      serviceConversationConfigId?: string | null;
+     status: EmailStatus;
+     maxRetries?: number;
+     retryCount: number;
+     retryDelayMinutes?: number;
      metadata?: Record<string, any>;
    }
      | null;
@@ -50,12 +54,15 @@ type EmailRequestResult = {
 };
 ```
 
-Defined in: [src/core/conversation/outbound-email.schema.ts:101](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/conversation/outbound-email.schema.ts#L101)
+Defined in: [src/core/conversation/outbound-email.schema.ts:181](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/conversation/outbound-email.schema.ts#L181)
+
+Email request result schema.
+Response payload after submitting an email request.
 
 ## Type Declaration
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="success"></a> `success` | `boolean` | [src/core/conversation/outbound-email.schema.ts:92](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/conversation/outbound-email.schema.ts#L92) |
-| <a id="request"></a> `request?` | \| \{ `id`: `string`; `createdAt?`: `number`; `updatedAt?`: `number`; `emailConfigurationId?`: `string`; `configuredEmailAddress?`: `string`; `templateId?`: `string`; `to`: \{ `email`: `string`; `name?`: `string`; \}[]; `cc?`: \| \{ `email`: `string`; `name?`: `string`; \}[] \| `null`; `bcc?`: \| \{ `email`: `string`; `name?`: `string`; \}[] \| `null`; `replyTo?`: `string` \| `null`; `subject`: `string`; `bodyHtml`: `string`; `bodyText?`: `string`; `variables?`: `Record`\<`string`, `any`\>; `attachments?`: \| \{ `filename`: `string`; `content`: `string`; `contentType`: `string`; \}[] \| `null`; `scheduledAt?`: `number`; `serviceConversationConfigId?`: `string` \| `null`; `metadata?`: `Record`\<`string`, `any`\>; \} \| `null` | [src/core/conversation/outbound-email.schema.ts:93](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/conversation/outbound-email.schema.ts#L93) |
-| <a id="error_message"></a> `error_message?` | `string` \| `null` | [src/core/conversation/outbound-email.schema.ts:94](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/conversation/outbound-email.schema.ts#L94) |
+| <a id="success"></a> `success` | `boolean` | [src/core/conversation/outbound-email.schema.ts:168](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/conversation/outbound-email.schema.ts#L168) |
+| <a id="request"></a> `request?` | \| \{ `id`: `string`; `createdAt?`: `number`; `updatedAt?`: `number`; `emailConfigurationId?`: `string`; `configuredEmailAddress?`: `string`; `templateId?`: `string`; `to`: \{ `email`: `string`; `name?`: `string`; \}[]; `cc?`: \| \{ `email`: `string`; `name?`: `string`; \}[] \| `null`; `bcc?`: \| \{ `email`: `string`; `name?`: `string`; \}[] \| `null`; `replyTo?`: `string` \| `null`; `subject`: `string`; `bodyHtml`: `string`; `bodyText?`: `string`; `variables?`: `Record`\<`string`, `any`\>; `attachments?`: \| \{ `filename`: `string`; `content`: `string`; `contentType`: `string`; \}[] \| `null`; `scheduledAt?`: `number`; `serviceConversationConfigId?`: `string` \| `null`; `status`: [`EmailStatus`](../../type-definitions/enumerations/EmailStatus.md); `maxRetries?`: `number`; `retryCount`: `number`; `retryDelayMinutes?`: `number`; `metadata?`: `Record`\<`string`, `any`\>; \} \| `null` | [src/core/conversation/outbound-email.schema.ts:169](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/conversation/outbound-email.schema.ts#L169) |
+| <a id="error_message"></a> `error_message?` | `string` \| `null` | [src/core/conversation/outbound-email.schema.ts:170](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/conversation/outbound-email.schema.ts#L170) |

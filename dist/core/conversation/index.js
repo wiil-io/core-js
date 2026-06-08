@@ -25,3 +25,4 @@ __exportStar(require("./translation-conversation.schema"), exports);
 __exportStar(require("./outbound-call.schema"), exports);
 __exportStar(require("./outbound-email.schema"), exports);
 __exportStar(require("./outbound-sms.schema"), exports);
+__exportStar(require("./outbound-template.schema"), exports);

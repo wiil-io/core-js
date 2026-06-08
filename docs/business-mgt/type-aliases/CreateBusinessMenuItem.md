@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.51**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
 
 ***
 
@@ -23,30 +23,46 @@ type CreateBusinessMenuItem = {
   preparationTime?: number;
   isActive: boolean;
   displayOrder?: number;
+  channelMappings?:   | {
+     channelId: string;
+     externalMenuItemId: string;
+     externalCategoryId?: string | null;
+   }[]
+     | null;
+  dayParts?:   | {
+     name: string;
+     startTime: string;
+     endTime: string;
+     daysOfWeek?: string[];
+   }[]
+     | null;
   categoryId?: string | null;
 };
 ```
 
-Defined in: [src/core/business-mgt/menu-config.schema.ts:119](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu-config.schema.ts#L119)
+Defined in: src/core/business-mgt/menu-management/menu-config.schema.ts:184
 
-Type definition for creating a business menu item.
+Schema for creating a new business menu item.
+Omits auto-generated fields and allows optional category specification.
 
 ## Type Declaration
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="name"></a> `name` | `string` | [src/core/business-mgt/menu-config.schema.ts:17](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu-config.schema.ts#L17) |
-| <a id="description"></a> `description?` | `string` | [src/core/business-mgt/menu-config.schema.ts:18](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu-config.schema.ts#L18) |
-| <a id="price"></a> `price` | `number` | [src/core/business-mgt/menu-config.schema.ts:21](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu-config.schema.ts#L21) |
-| <a id="ingredients"></a> `ingredients?` | `string`[] | [src/core/business-mgt/menu-config.schema.ts:24](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu-config.schema.ts#L24) |
-| <a id="allergens"></a> `allergens?` | `string`[] | [src/core/business-mgt/menu-config.schema.ts:25](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu-config.schema.ts#L25) |
-| <a id="nutritionalinfo"></a> `nutritionalInfo?` | \{ `calories?`: `number`; `protein?`: `number`; `carbs?`: `number`; `fat?`: `number`; \} | [src/core/business-mgt/menu-config.schema.ts:26](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu-config.schema.ts#L26) |
-| `nutritionalInfo.calories?` | `number` | [src/core/business-mgt/menu-config.schema.ts:27](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu-config.schema.ts#L27) |
-| `nutritionalInfo.protein?` | `number` | [src/core/business-mgt/menu-config.schema.ts:28](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu-config.schema.ts#L28) |
-| `nutritionalInfo.carbs?` | `number` | [src/core/business-mgt/menu-config.schema.ts:29](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu-config.schema.ts#L29) |
-| `nutritionalInfo.fat?` | `number` | [src/core/business-mgt/menu-config.schema.ts:30](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu-config.schema.ts#L30) |
-| <a id="isavailable"></a> `isAvailable` | `boolean` | [src/core/business-mgt/menu-config.schema.ts:34](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu-config.schema.ts#L34) |
-| <a id="preparationtime"></a> `preparationTime?` | `number` | [src/core/business-mgt/menu-config.schema.ts:35](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu-config.schema.ts#L35) |
-| <a id="isactive"></a> `isActive` | `boolean` | [src/core/business-mgt/menu-config.schema.ts:38](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu-config.schema.ts#L38) |
-| <a id="displayorder"></a> `displayOrder?` | `number` | [src/core/business-mgt/menu-config.schema.ts:39](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu-config.schema.ts#L39) |
-| <a id="categoryid"></a> `categoryId?` | `string` \| `null` | [src/core/business-mgt/menu-config.schema.ts:75](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu-config.schema.ts#L75) |
+| <a id="name"></a> `name` | `string` | src/core/business-mgt/menu-management/menu-config.schema.ts:94 |
+| <a id="description"></a> `description?` | `string` | src/core/business-mgt/menu-management/menu-config.schema.ts:95 |
+| <a id="price"></a> `price` | `number` | src/core/business-mgt/menu-management/menu-config.schema.ts:98 |
+| <a id="ingredients"></a> `ingredients?` | `string`[] | src/core/business-mgt/menu-management/menu-config.schema.ts:101 |
+| <a id="allergens"></a> `allergens?` | `string`[] | src/core/business-mgt/menu-management/menu-config.schema.ts:102 |
+| <a id="nutritionalinfo"></a> `nutritionalInfo?` | \{ `calories?`: `number`; `protein?`: `number`; `carbs?`: `number`; `fat?`: `number`; \} | src/core/business-mgt/menu-management/menu-config.schema.ts:103 |
+| `nutritionalInfo.calories?` | `number` | src/core/business-mgt/menu-management/menu-config.schema.ts:104 |
+| `nutritionalInfo.protein?` | `number` | src/core/business-mgt/menu-management/menu-config.schema.ts:105 |
+| `nutritionalInfo.carbs?` | `number` | src/core/business-mgt/menu-management/menu-config.schema.ts:106 |
+| `nutritionalInfo.fat?` | `number` | src/core/business-mgt/menu-management/menu-config.schema.ts:107 |
+| <a id="isavailable"></a> `isAvailable` | `boolean` | src/core/business-mgt/menu-management/menu-config.schema.ts:111 |
+| <a id="preparationtime"></a> `preparationTime?` | `number` | src/core/business-mgt/menu-management/menu-config.schema.ts:112 |
+| <a id="isactive"></a> `isActive` | `boolean` | src/core/business-mgt/menu-management/menu-config.schema.ts:115 |
+| <a id="displayorder"></a> `displayOrder?` | `number` | src/core/business-mgt/menu-management/menu-config.schema.ts:116 |
+| <a id="channelmappings"></a> `channelMappings?` | \| \{ `channelId`: `string`; `externalMenuItemId`: `string`; `externalCategoryId?`: `string` \| `null`; \}[] \| `null` | src/core/business-mgt/menu-management/menu-config.schema.ts:117 |
+| <a id="dayparts"></a> `dayParts?` | \| \{ `name`: `string`; `startTime`: `string`; `endTime`: `string`; `daysOfWeek?`: `string`[]; \}[] \| `null` | src/core/business-mgt/menu-management/menu-config.schema.ts:120 |
+| <a id="categoryid"></a> `categoryId?` | `string` \| `null` | src/core/business-mgt/menu-management/menu-config.schema.ts:158 |

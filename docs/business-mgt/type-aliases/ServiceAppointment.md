@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.51**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
 
 ***
 
@@ -12,13 +12,71 @@ type ServiceAppointment = {
   createdAt?: number;
   updatedAt?: number;
   businessServiceId: string;
+  locationId?: string | null;
+  channelId?: string | null;
   customerId: string;
+  customerName?: string;
+  customerEmail?: string;
   startTime: number;
   endTime?: number;
   duration?: number;
   totalPrice?: number;
+  pricing?: {
+     subtotalBeforeTax?: number;
+     subtotal: number;
+     appliedPricingRules: {
+        pricingRuleId?: string;
+        externalPricingRuleId?: string;
+        name: string;
+        applyLevel: PricingRuleApplyLevel;
+        adjustmentType: PricingRuleAdjustmentType;
+        adjustmentValue: number;
+        baseAmount: number;
+        adjustedAmount: number;
+        deltaAmount: number;
+        appliedAt?: number;
+     }[];
+     totalPricingAdjustmentAmount: number;
+     subtotalAfterPricingRules?: number;
+     appliedDiscounts: {
+        discountRuleId?: string;
+        externalDiscountId?: string;
+        name: string;
+        code?: string;
+        scope: DiscountScope;
+        type: DiscountType;
+        value: number;
+        discountableAmount: number;
+        discountAmount: number;
+        isStacked: boolean;
+     }[];
+     totalDiscountAmount: number;
+     subtotalAfterDiscount?: number;
+     appliedTaxes: {
+        taxRuleId?: string;
+        externalTaxId?: string;
+        name: string;
+        scope: TaxScope;
+        rateType: TaxRateType;
+        rateValue: number;
+        taxableAmount: number;
+        taxAmount: number;
+        isInclusive: boolean;
+     }[];
+     totalTaxAmount: number;
+     tax: number;
+     tip: number;
+     shippingAmount: number;
+     discount: number;
+     subtotalAfterTax?: number;
+     total: number;
+     currency: string;
+  };
   depositPaid: number;
   status: AppointmentStatus;
+  providerId?: string | null;
+  serviceProviderId?: string | null;
+  slotIndex?: number | null;
   assignedUserAccountId?: string | null;
   calendarId?: string | null;
   calendarEventId?: string | null;
@@ -28,31 +86,65 @@ type ServiceAppointment = {
      | null;
   cancelReason?: string | null;
   serviceConversationConfigId?: string | null;
+  externalRef?:   | {
+     externalId: string;
+     source: string;
+     url?: string | null;
+     syncedAt?: number | null;
+   }
+     | null;
 };
 ```
 
-Defined in: [src/core/business-mgt/service-appointment.schema.ts:70](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/service-appointment.schema.ts#L70)
+Defined in: src/core/business-mgt/service-management/service-appointment.schema.ts:104
 
-Service appointment schema.
+Service Appointment schema.
+Represents a scheduled appointment for a service.
 
 ## Type Declaration
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="id"></a> `id` | `string` | [src/core/base.schema.ts:8](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/base.schema.ts#L8) |
-| <a id="createdat"></a> `createdAt?` | `number` | [src/core/base.schema.ts:9](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/base.schema.ts#L9) |
-| <a id="updatedat"></a> `updatedAt?` | `number` | [src/core/base.schema.ts:10](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/base.schema.ts#L10) |
-| <a id="businessserviceid"></a> `businessServiceId` | `string` | [src/core/business-mgt/service-appointment.schema.ts:30](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/service-appointment.schema.ts#L30) |
-| <a id="customerid"></a> `customerId` | `string` | [src/core/business-mgt/service-appointment.schema.ts:31](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/service-appointment.schema.ts#L31) |
-| <a id="starttime"></a> `startTime` | `number` | [src/core/business-mgt/service-appointment.schema.ts:32](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/service-appointment.schema.ts#L32) |
-| <a id="endtime"></a> `endTime?` | `number` | [src/core/business-mgt/service-appointment.schema.ts:33](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/service-appointment.schema.ts#L33) |
-| <a id="duration"></a> `duration?` | `number` | [src/core/business-mgt/service-appointment.schema.ts:34](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/service-appointment.schema.ts#L34) |
-| <a id="totalprice"></a> `totalPrice?` | `number` | [src/core/business-mgt/service-appointment.schema.ts:35](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/service-appointment.schema.ts#L35) |
-| <a id="depositpaid"></a> `depositPaid` | `number` | [src/core/business-mgt/service-appointment.schema.ts:36](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/service-appointment.schema.ts#L36) |
-| <a id="status"></a> `status` | [`AppointmentStatus`](../../type-definitions/enumerations/AppointmentStatus.md) | [src/core/business-mgt/service-appointment.schema.ts:37](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/service-appointment.schema.ts#L37) |
-| <a id="assigneduseraccountid"></a> `assignedUserAccountId?` | `string` \| `null` | [src/core/business-mgt/service-appointment.schema.ts:40](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/service-appointment.schema.ts#L40) |
-| <a id="calendarid"></a> `calendarId?` | `string` \| `null` | [src/core/business-mgt/service-appointment.schema.ts:41](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/service-appointment.schema.ts#L41) |
-| <a id="calendareventid"></a> `calendarEventId?` | `string` \| `null` | [src/core/business-mgt/service-appointment.schema.ts:42](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/service-appointment.schema.ts#L42) |
-| <a id="calendarprovider"></a> `calendarProvider?` | \| [`GOOGLE`](../../type-definitions/enumerations/CalendarProvider.md#google) \| [`OUTLOOK`](../../type-definitions/enumerations/CalendarProvider.md#outlook) \| [`CALENDLY`](../../type-definitions/enumerations/CalendarProvider.md#calendly) \| `null` | [src/core/business-mgt/service-appointment.schema.ts:43](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/service-appointment.schema.ts#L43) |
-| <a id="cancelreason"></a> `cancelReason?` | `string` \| `null` | [src/core/business-mgt/service-appointment.schema.ts:44](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/service-appointment.schema.ts#L44) |
-| <a id="serviceconversationconfigid"></a> `serviceConversationConfigId?` | `string` \| `null` | [src/core/business-mgt/service-appointment.schema.ts:45](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/service-appointment.schema.ts#L45) |
+| <a id="id"></a> `id` | `string` | [src/core/base.schema.ts:8](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/base.schema.ts#L8) |
+| <a id="createdat"></a> `createdAt?` | `number` | [src/core/base.schema.ts:9](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/base.schema.ts#L9) |
+| <a id="updatedat"></a> `updatedAt?` | `number` | [src/core/base.schema.ts:10](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/base.schema.ts#L10) |
+| <a id="businessserviceid"></a> `businessServiceId` | `string` | src/core/business-mgt/service-management/service-appointment.schema.ts:49 |
+| <a id="locationid"></a> `locationId?` | `string` \| `null` | src/core/business-mgt/service-management/service-appointment.schema.ts:50 |
+| <a id="channelid"></a> `channelId?` | `string` \| `null` | src/core/business-mgt/service-management/service-appointment.schema.ts:51 |
+| <a id="customerid"></a> `customerId` | `string` | src/core/business-mgt/service-management/service-appointment.schema.ts:52 |
+| <a id="customername"></a> `customerName?` | `string` | src/core/business-mgt/service-management/service-appointment.schema.ts:53 |
+| <a id="customeremail"></a> `customerEmail?` | `string` | src/core/business-mgt/service-management/service-appointment.schema.ts:54 |
+| <a id="starttime"></a> `startTime` | `number` | src/core/business-mgt/service-management/service-appointment.schema.ts:55 |
+| <a id="endtime"></a> `endTime?` | `number` | src/core/business-mgt/service-management/service-appointment.schema.ts:56 |
+| <a id="duration"></a> `duration?` | `number` | src/core/business-mgt/service-management/service-appointment.schema.ts:57 |
+| <a id="totalprice"></a> `totalPrice?` | `number` | src/core/business-mgt/service-management/service-appointment.schema.ts:58 |
+| <a id="pricing"></a> `pricing?` | \{ `subtotalBeforeTax?`: `number`; `subtotal`: `number`; `appliedPricingRules`: \{ `pricingRuleId?`: `string`; `externalPricingRuleId?`: `string`; `name`: `string`; `applyLevel`: [`PricingRuleApplyLevel`](../../type-definitions/enumerations/PricingRuleApplyLevel.md); `adjustmentType`: [`PricingRuleAdjustmentType`](../../type-definitions/enumerations/PricingRuleAdjustmentType.md); `adjustmentValue`: `number`; `baseAmount`: `number`; `adjustedAmount`: `number`; `deltaAmount`: `number`; `appliedAt?`: `number`; \}[]; `totalPricingAdjustmentAmount`: `number`; `subtotalAfterPricingRules?`: `number`; `appliedDiscounts`: \{ `discountRuleId?`: `string`; `externalDiscountId?`: `string`; `name`: `string`; `code?`: `string`; `scope`: [`DiscountScope`](../../type-definitions/enumerations/DiscountScope.md); `type`: [`DiscountType`](../../type-definitions/enumerations/DiscountType.md); `value`: `number`; `discountableAmount`: `number`; `discountAmount`: `number`; `isStacked`: `boolean`; \}[]; `totalDiscountAmount`: `number`; `subtotalAfterDiscount?`: `number`; `appliedTaxes`: \{ `taxRuleId?`: `string`; `externalTaxId?`: `string`; `name`: `string`; `scope`: [`TaxScope`](../../type-definitions/enumerations/TaxScope.md); `rateType`: [`TaxRateType`](../../type-definitions/enumerations/TaxRateType.md); `rateValue`: `number`; `taxableAmount`: `number`; `taxAmount`: `number`; `isInclusive`: `boolean`; \}[]; `totalTaxAmount`: `number`; `tax`: `number`; `tip`: `number`; `shippingAmount`: `number`; `discount`: `number`; `subtotalAfterTax?`: `number`; `total`: `number`; `currency`: `string`; \} | src/core/business-mgt/service-management/service-appointment.schema.ts:59 |
+| `pricing.subtotalBeforeTax?` | `number` | [src/core/business-mgt/order.schema.ts:176](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/business-mgt/order.schema.ts#L176) |
+| `pricing.subtotal` | `number` | [src/core/business-mgt/order.schema.ts:177](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/business-mgt/order.schema.ts#L177) |
+| `pricing.appliedPricingRules` | \{ `pricingRuleId?`: `string`; `externalPricingRuleId?`: `string`; `name`: `string`; `applyLevel`: [`PricingRuleApplyLevel`](../../type-definitions/enumerations/PricingRuleApplyLevel.md); `adjustmentType`: [`PricingRuleAdjustmentType`](../../type-definitions/enumerations/PricingRuleAdjustmentType.md); `adjustmentValue`: `number`; `baseAmount`: `number`; `adjustedAmount`: `number`; `deltaAmount`: `number`; `appliedAt?`: `number`; \}[] | [src/core/business-mgt/order.schema.ts:178](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/business-mgt/order.schema.ts#L178) |
+| `pricing.totalPricingAdjustmentAmount` | `number` | [src/core/business-mgt/order.schema.ts:179](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/business-mgt/order.schema.ts#L179) |
+| `pricing.subtotalAfterPricingRules?` | `number` | [src/core/business-mgt/order.schema.ts:180](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/business-mgt/order.schema.ts#L180) |
+| `pricing.appliedDiscounts` | \{ `discountRuleId?`: `string`; `externalDiscountId?`: `string`; `name`: `string`; `code?`: `string`; `scope`: [`DiscountScope`](../../type-definitions/enumerations/DiscountScope.md); `type`: [`DiscountType`](../../type-definitions/enumerations/DiscountType.md); `value`: `number`; `discountableAmount`: `number`; `discountAmount`: `number`; `isStacked`: `boolean`; \}[] | [src/core/business-mgt/order.schema.ts:181](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/business-mgt/order.schema.ts#L181) |
+| `pricing.totalDiscountAmount` | `number` | [src/core/business-mgt/order.schema.ts:182](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/business-mgt/order.schema.ts#L182) |
+| `pricing.subtotalAfterDiscount?` | `number` | [src/core/business-mgt/order.schema.ts:183](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/business-mgt/order.schema.ts#L183) |
+| `pricing.appliedTaxes` | \{ `taxRuleId?`: `string`; `externalTaxId?`: `string`; `name`: `string`; `scope`: [`TaxScope`](../../type-definitions/enumerations/TaxScope.md); `rateType`: [`TaxRateType`](../../type-definitions/enumerations/TaxRateType.md); `rateValue`: `number`; `taxableAmount`: `number`; `taxAmount`: `number`; `isInclusive`: `boolean`; \}[] | [src/core/business-mgt/order.schema.ts:184](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/business-mgt/order.schema.ts#L184) |
+| `pricing.totalTaxAmount` | `number` | [src/core/business-mgt/order.schema.ts:185](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/business-mgt/order.schema.ts#L185) |
+| `pricing.tax` | `number` | [src/core/business-mgt/order.schema.ts:186](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/business-mgt/order.schema.ts#L186) |
+| `pricing.tip` | `number` | [src/core/business-mgt/order.schema.ts:187](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/business-mgt/order.schema.ts#L187) |
+| `pricing.shippingAmount` | `number` | [src/core/business-mgt/order.schema.ts:188](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/business-mgt/order.schema.ts#L188) |
+| `pricing.discount` | `number` | [src/core/business-mgt/order.schema.ts:189](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/business-mgt/order.schema.ts#L189) |
+| `pricing.subtotalAfterTax?` | `number` | [src/core/business-mgt/order.schema.ts:190](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/business-mgt/order.schema.ts#L190) |
+| `pricing.total` | `number` | [src/core/business-mgt/order.schema.ts:191](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/business-mgt/order.schema.ts#L191) |
+| `pricing.currency` | `string` | [src/core/business-mgt/order.schema.ts:192](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/business-mgt/order.schema.ts#L192) |
+| <a id="depositpaid"></a> `depositPaid` | `number` | src/core/business-mgt/service-management/service-appointment.schema.ts:60 |
+| <a id="status"></a> `status` | [`AppointmentStatus`](../../type-definitions/enumerations/AppointmentStatus.md) | src/core/business-mgt/service-management/service-appointment.schema.ts:61 |
+| <a id="providerid"></a> `providerId?` | `string` \| `null` | src/core/business-mgt/service-management/service-appointment.schema.ts:62 |
+| <a id="serviceproviderid"></a> `serviceProviderId?` | `string` \| `null` | src/core/business-mgt/service-management/service-appointment.schema.ts:63 |
+| <a id="slotindex"></a> `slotIndex?` | `number` \| `null` | src/core/business-mgt/service-management/service-appointment.schema.ts:64 |
+| <a id="assigneduseraccountid"></a> `assignedUserAccountId?` | `string` \| `null` | src/core/business-mgt/service-management/service-appointment.schema.ts:67 |
+| <a id="calendarid"></a> `calendarId?` | `string` \| `null` | src/core/business-mgt/service-management/service-appointment.schema.ts:68 |
+| <a id="calendareventid"></a> `calendarEventId?` | `string` \| `null` | src/core/business-mgt/service-management/service-appointment.schema.ts:69 |
+| <a id="calendarprovider"></a> `calendarProvider?` | \| [`GOOGLE`](../../type-definitions/enumerations/CalendarProvider.md#google) \| [`OUTLOOK`](../../type-definitions/enumerations/CalendarProvider.md#outlook) \| [`CALENDLY`](../../type-definitions/enumerations/CalendarProvider.md#calendly) \| `null` | src/core/business-mgt/service-management/service-appointment.schema.ts:70 |
+| <a id="cancelreason"></a> `cancelReason?` | `string` \| `null` | src/core/business-mgt/service-management/service-appointment.schema.ts:71 |
+| <a id="serviceconversationconfigid"></a> `serviceConversationConfigId?` | `string` \| `null` | src/core/business-mgt/service-management/service-appointment.schema.ts:72 |
+| <a id="externalref"></a> `externalRef?` | \| \{ `externalId`: `string`; `source`: `string`; `url?`: `string` \| `null`; `syncedAt?`: `number` \| `null`; \} \| `null` | src/core/business-mgt/service-management/service-appointment.schema.ts:73 |

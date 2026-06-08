@@ -1,0 +1,51 @@
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
+
+***
+
+[Wiil Platform JavaScript Data Model Definitions - API Reference](../../README.md) / [business-mgt](../README.md) / FloorPlan
+
+# Type Alias: FloorPlan
+
+```ts
+type FloorPlan = {
+  id: string;
+  createdAt?: number;
+  updatedAt?: number;
+  locationId?: string | null;
+  name: string;
+  description: string;
+  imageUrls?: string[] | null;
+  isActive: boolean;
+  canvasDimensions: {
+     width: number;
+     height: number;
+     unit: CanvasUnit;
+  };
+  capacity: number;
+  metadata?: Record<string, any> | null;
+};
+```
+
+Defined in: src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts:95
+
+Floor plan schema.
+Represents a table layout canvas for a reservable business location.
+
+## Type Declaration
+
+| Name | Type | Defined in |
+| ------ | ------ | ------ |
+| <a id="id"></a> `id` | `string` | [src/core/base.schema.ts:8](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/base.schema.ts#L8) |
+| <a id="createdat"></a> `createdAt?` | `number` | [src/core/base.schema.ts:9](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/base.schema.ts#L9) |
+| <a id="updatedat"></a> `updatedAt?` | `number` | [src/core/base.schema.ts:10](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/base.schema.ts#L10) |
+| <a id="locationid"></a> `locationId?` | `string` \| `null` | src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts:58 |
+| <a id="name"></a> `name` | `string` | src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts:59 |
+| <a id="description"></a> `description` | `string` | src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts:60 |
+| <a id="imageurls"></a> `imageUrls?` | `string`[] \| `null` | src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts:61 |
+| <a id="isactive"></a> `isActive` | `boolean` | src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts:62 |
+| <a id="canvasdimensions"></a> `canvasDimensions` | \{ `width`: `number`; `height`: `number`; `unit`: [`CanvasUnit`](../enumerations/CanvasUnit.md); \} | src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts:63 |
+| `canvasDimensions.width` | `number` | src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts:38 |
+| `canvasDimensions.height` | `number` | src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts:39 |
+| `canvasDimensions.unit` | [`CanvasUnit`](../enumerations/CanvasUnit.md) | src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts:40 |
+| <a id="capacity"></a> `capacity` | `number` | src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts:64 |
+| <a id="metadata"></a> `metadata?` | `Record`\<`string`, `any`\> \| `null` | src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts:65 |

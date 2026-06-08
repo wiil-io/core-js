@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.51**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
 
 ***
 
@@ -10,6 +10,6 @@
 const ProductCategorySchema: ZodObject<ProductCategory>;
 ```
 
-Defined in: [src/core/business-mgt/product-config.schema.ts:17](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/product-config.schema.ts#L17)
+Defined in: src/core/business-mgt/product-management/product-config.schema.ts:174
 
 Product category schema.

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.51**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
 
 ***
 
@@ -6,16 +6,16 @@
 
 # Enumeration: BusinessServiceDocumentTypes
 
-Defined in: [src/core/type-definitions/business-definitions.ts:135](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/business-definitions.ts#L135)
+Defined in: [src/core/type-definitions/business-definitions.ts:180](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/type-definitions/business-definitions.ts#L180)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="customers"></a> `CUSTOMERS` | `"customers"` | [src/core/type-definitions/business-definitions.ts:136](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/business-definitions.ts#L136) |
-| <a id="menu_catalog"></a> `MENU_CATALOG` | `"menu_catalog"` | [src/core/type-definitions/business-definitions.ts:137](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/business-definitions.ts#L137) |
-| <a id="product_catalog"></a> `PRODUCT_CATALOG` | `"product_catalog"` | [src/core/type-definitions/business-definitions.ts:138](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/business-definitions.ts#L138) |
-| <a id="service_catalog"></a> `SERVICE_CATALOG` | `"service_catalog"` | [src/core/type-definitions/business-definitions.ts:139](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/business-definitions.ts#L139) |
-| <a id="resource_catalog"></a> `RESOURCE_CATALOG` | `"resource_catalog"` | [src/core/type-definitions/business-definitions.ts:140](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/business-definitions.ts#L140) |
-| <a id="inventory_catalog"></a> `INVENTORY_CATALOG` | `"inventory_catalog"` | [src/core/type-definitions/business-definitions.ts:141](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/business-definitions.ts#L141) |
-| <a id="supplier"></a> `SUPPLIER` | `"suppliers"` | [src/core/type-definitions/business-definitions.ts:142](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/type-definitions/business-definitions.ts#L142) |
+| <a id="customers"></a> `CUSTOMERS` | `"customers"` | [src/core/type-definitions/business-definitions.ts:181](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/type-definitions/business-definitions.ts#L181) |
+| <a id="menu_catalog"></a> `MENU_CATALOG` | `"menu_catalog"` | [src/core/type-definitions/business-definitions.ts:182](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/type-definitions/business-definitions.ts#L182) |
+| <a id="product_catalog"></a> `PRODUCT_CATALOG` | `"product_catalog"` | [src/core/type-definitions/business-definitions.ts:183](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/type-definitions/business-definitions.ts#L183) |
+| <a id="service_catalog"></a> `SERVICE_CATALOG` | `"service_catalog"` | [src/core/type-definitions/business-definitions.ts:184](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/type-definitions/business-definitions.ts#L184) |
+| <a id="resource_catalog"></a> `RESOURCE_CATALOG` | `"resource_catalog"` | [src/core/type-definitions/business-definitions.ts:185](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/type-definitions/business-definitions.ts#L185) |
+| <a id="inventory_catalog"></a> `INVENTORY_CATALOG` | `"inventory_catalog"` | [src/core/type-definitions/business-definitions.ts:186](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/type-definitions/business-definitions.ts#L186) |
+| <a id="supplier"></a> `SUPPLIER` | `"suppliers"` | [src/core/type-definitions/business-definitions.ts:187](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/type-definitions/business-definitions.ts#L187) |

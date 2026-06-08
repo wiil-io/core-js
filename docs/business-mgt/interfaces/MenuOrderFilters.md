@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.51**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
 
 ***
 
@@ -6,19 +6,26 @@
 
 # Interface: MenuOrderFilters
 
-Defined in: [src/core/business-mgt/menu.order.schema.ts:172](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu.order.schema.ts#L172)
+Defined in: src/core/business-mgt/menu-management/menu.order.schema.ts:239
+
+Menu order filter options.
+ MenuOrderFilters
 
 ## Properties
 
-| Property | Type | Defined in |
-| ------ | ------ | ------ |
-| <a id="search"></a> `search?` | `string` | [src/core/business-mgt/menu.order.schema.ts:173](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu.order.schema.ts#L173) |
-| <a id="type"></a> `type?` | [`MenuOrderType`](../../type-definitions/enumerations/MenuOrderType.md)[] | [src/core/business-mgt/menu.order.schema.ts:174](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu.order.schema.ts#L174) |
-| <a id="status"></a> `status?` | [`OrderStatus`](../../type-definitions/enumerations/OrderStatus.md)[] | [src/core/business-mgt/menu.order.schema.ts:175](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu.order.schema.ts#L175) |
-| <a id="paymentstatus"></a> `paymentStatus?` | [`PaymentStatus`](../../type-definitions/enumerations/PaymentStatus.md)[] | [src/core/business-mgt/menu.order.schema.ts:176](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu.order.schema.ts#L176) |
-| <a id="customerid"></a> `customerId?` | `string` | [src/core/business-mgt/menu.order.schema.ts:177](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu.order.schema.ts#L177) |
-| <a id="tablenumber"></a> `tableNumber?` | `string` | [src/core/business-mgt/menu.order.schema.ts:178](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu.order.schema.ts#L178) |
-| <a id="source"></a> `source?` | `string` | [src/core/business-mgt/menu.order.schema.ts:179](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu.order.schema.ts#L179) |
-| <a id="daterange"></a> `dateRange?` | \{ `start?`: `number`; `end?`: `number`; \} | [src/core/business-mgt/menu.order.schema.ts:180](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu.order.schema.ts#L180) |
-| `dateRange.start?` | `number` | [src/core/business-mgt/menu.order.schema.ts:180](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu.order.schema.ts#L180) |
-| `dateRange.end?` | `number` | [src/core/business-mgt/menu.order.schema.ts:180](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu.order.schema.ts#L180) |
+| Property | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="search"></a> `search?` | `string` | Text search across order number/customer | src/core/business-mgt/menu-management/menu.order.schema.ts:241 |
+| <a id="locationid"></a> `locationId?` | `string` | Filter by location ID | src/core/business-mgt/menu-management/menu.order.schema.ts:243 |
+| <a id="channelid"></a> `channelId?` | `string` | Filter by channel ID | src/core/business-mgt/menu-management/menu.order.schema.ts:245 |
+| <a id="terminalid"></a> `terminalId?` | `string` | Filter by terminal ID | src/core/business-mgt/menu-management/menu.order.schema.ts:247 |
+| <a id="operatorid"></a> `operatorId?` | `string` | Filter by operator ID | src/core/business-mgt/menu-management/menu.order.schema.ts:249 |
+| <a id="type"></a> `type?` | [`MenuOrderType`](../../type-definitions/enumerations/MenuOrderType.md)[] | Filter by order type(s) | src/core/business-mgt/menu-management/menu.order.schema.ts:251 |
+| <a id="status"></a> `status?` | [`OrderStatus`](../../type-definitions/enumerations/OrderStatus.md)[] | Filter by order status(es) | src/core/business-mgt/menu-management/menu.order.schema.ts:253 |
+| <a id="paymentstatus"></a> `paymentStatus?` | [`PaymentStatus`](../../type-definitions/enumerations/PaymentStatus.md)[] | Filter by payment status(es) | src/core/business-mgt/menu-management/menu.order.schema.ts:255 |
+| <a id="customerid"></a> `customerId?` | `string` | Filter by customer ID | src/core/business-mgt/menu-management/menu.order.schema.ts:257 |
+| <a id="tablenumber"></a> `tableNumber?` | `string` | Filter by table number | src/core/business-mgt/menu-management/menu.order.schema.ts:259 |
+| <a id="externalsource"></a> `externalSource?` | `string` | Filter by external source | src/core/business-mgt/menu-management/menu.order.schema.ts:261 |
+| <a id="daterange"></a> `dateRange?` | \{ `start?`: `number`; `end?`: `number`; \} | Filter by date range | src/core/business-mgt/menu-management/menu.order.schema.ts:263 |
+| `dateRange.start?` | `number` | - | src/core/business-mgt/menu-management/menu.order.schema.ts:263 |
+| `dateRange.end?` | `number` | - | src/core/business-mgt/menu-management/menu.order.schema.ts:263 |

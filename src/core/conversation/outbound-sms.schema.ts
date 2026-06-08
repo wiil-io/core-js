@@ -1,10 +1,18 @@
 import { z } from "zod";
 import { BaseModelSchema } from "../base.schema";
+import { SmsStatus } from "../type-definitions";
 
 /**
  * @fileoverview Outbound SMS request schema definitions.
  * @module conversation/outbound-sms
+ *
+ * SMS requests represent outbound text message communications sent through the platform.
+ * Supports scheduling, templates, delivery tracking, and retry logic for failed deliveries.
  */
+
+// ============================================================================
+// SMS REQUEST SCHEMA
+// ============================================================================
 
 /**
  * SMS request schema.
@@ -17,7 +25,11 @@ import { BaseModelSchema } from "../base.schema";
  * @property {string} [templateId] - Pre-defined template ID for structured content
  * @property {Object} [variables] - Template variable substitutions
  * @property {number} [scheduledAt] - Unix timestamp for scheduled delivery
+ * @property {SmsStatus} status - Current delivery status
  * @property {string} [serviceConversationConfigId] - Linked conversation record
+ * @property {number} [maxRetries] - Maximum retry attempts (0-5)
+ * @property {number} retryCount - Current retry attempt count
+ * @property {number} [retryDelayMinutes] - Delay between retries in minutes
  * @property {Object} [metadata] - Additional custom metadata
  */
 export const SmsRequestSchema = BaseModelSchema.safeExtend({
@@ -34,9 +46,21 @@ export const SmsRequestSchema = BaseModelSchema.safeExtend({
     scheduledAt: z.number().optional().describe("Unix timestamp in milliseconds for scheduled SMS delivery. Message queued until this time, then sent automatically. Omit for immediate delivery."),
     serviceConversationConfigId: z.string().nullable().optional().describe("Linked conversation record ID for SMS thread tracking and conversation history aggregation (references ServiceConversationConfig). Enables SMS conversation threading."),
 
+    // Status
+    status: z.enum(SmsStatus).default(SmsStatus.QUEUED).describe("Current delivery status of the SMS request (queued, sent, delivered, failed, undelivered)."),
+
+    // Retry configuration
+    maxRetries: z.number().int().min(0).max(5).optional().describe("Maximum number of retry attempts if SMS delivery fails (0-5). Set to 0 to disable retries."),
+    retryCount: z.number().int().min(0).max(5).default(0).describe("Current count of retry attempts made for this SMS request."),
+    retryDelayMinutes: z.number().int().positive().optional().describe("Delay in minutes between retry attempts for failed deliveries."),
+
     // Extensibility
     metadata: z.record(z.string(), z.any()).nullable().optional().describe("Additional custom metadata as key-value pairs for campaign tracking, CRM integration, or application-specific data. Not processed by the platform."),
 });
+
+// ============================================================================
+// CREATE/UPDATE SCHEMAS
+// ============================================================================
 
 /**
  * Schema for creating a new SMS request.
@@ -48,15 +72,86 @@ export const CreateSmsRequestSchema = SmsRequestSchema.omit({
     updatedAt: true,
 });
 
+/**
+ * Schema for updating an existing SMS request.
+ * All fields optional except id (required).
+ */
+export const UpdateSmsRequestSchema = CreateSmsRequestSchema.partial().safeExtend({
+    id: z.string().describe("Unique identifier of the SmsRequest to update"),
+});
 
+// ============================================================================
+// SMS REQUEST RESULT SCHEMA
+// ============================================================================
+
+/**
+ * SMS request result schema.
+ * Response payload after submitting an SMS request.
+ */
 export const SmsRequestResultSchema = z.object({
     success: z.boolean().optional().default(false).describe("Whether the SMS request was successful"),
     request: SmsRequestSchema.optional().nullable().describe("Original SMS request details"),
     error_message: z.string().optional().nullable().describe("Error message if the request failed"),
 });
 
+// ============================================================================
+// TYPE EXPORTS
+// ============================================================================
 
 export type SmsRequest = z.infer<typeof SmsRequestSchema>;
 export type CreateSmsRequest = z.infer<typeof CreateSmsRequestSchema>;
-
+export type UpdateSmsRequest = z.infer<typeof UpdateSmsRequestSchema>;
 export type SmsRequestResult = z.infer<typeof SmsRequestResultSchema>;
+
+// ============================================================================
+// QUERY OPTIONS
+// ============================================================================
+
+/**
+ * SMS request filter options.
+ * @interface SmsRequestFilters
+ */
+export interface SmsRequestFilters {
+    /** Text search across phone numbers and body */
+    search?: string;
+    /** Filter by phone configuration ID */
+    phoneConfigurationId?: string;
+    /** Filter by recipient phone number */
+    to?: string;
+    /** Filter by sender phone number */
+    from?: string;
+    /** Filter by template ID */
+    templateId?: string;
+    /** Filter by delivery status */
+    status?: SmsStatus;
+    /** Filter by linked conversation ID */
+    serviceConversationConfigId?: string;
+    /** Filter by scheduled date range */
+    scheduledAtRange?: { from?: number; to?: number };
+}
+
+/**
+ * SMS request sorting options.
+ * @interface SmsRequestSorting
+ */
+export interface SmsRequestSorting {
+    /** Field to sort by */
+    field: "createdAt" | "scheduledAt" | "status" | "retryCount";
+    /** Sort direction */
+    direction: "asc" | "desc";
+}
+
+/**
+ * SMS request query options.
+ * @interface SmsRequestQueryOptions
+ */
+export interface SmsRequestQueryOptions {
+    /** Page number (1-indexed) */
+    page: number;
+    /** Items per page */
+    pageSize: number;
+    /** Optional filters */
+    filters?: SmsRequestFilters;
+    /** Optional sorting */
+    sorting?: SmsRequestSorting;
+}

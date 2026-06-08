@@ -3,9 +3,17 @@ import { CallRequestStatus, ScheduleType } from "../type-definitions";
 import { BaseModelSchema } from "../base.schema";
 
 /**
- * @fileoverview Business service configuration schema definitions.
+ * @fileoverview Outbound call request schema definitions.
  * @module conversation/outbound-call
+ *
+ * Outbound call requests represent scheduled or immediate AI-powered voice calls
+ * to customers. Supports scheduling, retry logic, calling hours compliance, and
+ * integration with agent configurations for AI behavior.
  */
+
+// ============================================================================
+// CALLING HOURS SCHEMA
+// ============================================================================
 
 /**
  * Calling hours configuration for outbound calls.
@@ -33,6 +41,10 @@ export const CallingHoursSchema = z.object({
 });
 
 export type CallingHours = z.infer<typeof CallingHoursSchema>;
+
+// ============================================================================
+// BUSINESS CALL REQUEST SCHEMA
+// ============================================================================
 
 /**
  * Business call request schema.
@@ -80,8 +92,12 @@ export const BusinessCallRequestSchema = BaseModelSchema.safeExtend({
     metadata: z.record(z.string(), z.any()).optional().describe("Additional custom metadata as key-value pairs for campaign tracking, CRM integration, or application-specific data. Not processed by the platform."),
 });
 
+// ============================================================================
+// CREATE/UPDATE SCHEMAS
+// ============================================================================
+
 /**
- * Schema for creating a new business service.
+ * Schema for creating a new call request.
  * Omits auto-generated fields.
  */
 export const CreateCallRequestSchema = BusinessCallRequestSchema.omit({
@@ -90,16 +106,84 @@ export const CreateCallRequestSchema = BusinessCallRequestSchema.omit({
     updatedAt: true,
 });
 
-
-export const CallRequestResultSchema = z.object({
-  success: z.boolean().optional().default(false).describe("Whether the telephony request was successful"),
-  request: BusinessCallRequestSchema.optional().nullable().describe("Original call request details"),
-  error_message: z.string().optional().nullable().describe("Error message if the request failed"),
+/**
+ * Schema for updating an existing call request.
+ * All fields optional except id (required).
+ */
+export const UpdateCallRequestSchema = CreateCallRequestSchema.partial().safeExtend({
+    id: z.string().describe("Unique identifier of the CallRequest to update"),
 });
 
+// ============================================================================
+// CALL REQUEST RESULT SCHEMA
+// ============================================================================
+
+/**
+ * Call request result schema.
+ * Response payload from telephony provider after initiating a call.
+ */
+export const CallRequestResultSchema = z.object({
+    success: z.boolean().optional().default(false).describe("Whether the telephony request was successful"),
+    request: BusinessCallRequestSchema.optional().nullable().describe("Original call request details"),
+    error_message: z.string().optional().nullable().describe("Error message if the request failed"),
+});
+
+// ============================================================================
+// TYPE EXPORTS
+// ============================================================================
 
 export type BusinessCallRequest = z.infer<typeof BusinessCallRequestSchema>;
 export type CreateCallRequest = z.infer<typeof CreateCallRequestSchema>;
-
+export type UpdateCallRequest = z.infer<typeof UpdateCallRequestSchema>;
 export type CallRequestResult = z.infer<typeof CallRequestResultSchema>;
+
+// ============================================================================
+// QUERY OPTIONS
+// ============================================================================
+
+/**
+ * Call request filter options.
+ * @interface CallRequestFilters
+ */
+export interface CallRequestFilters {
+    /** Text search across phone numbers */
+    search?: string;
+    /** Filter by call status */
+    status?: CallRequestStatus;
+    /** Filter by schedule type */
+    scheduleType?: ScheduleType;
+    /** Filter by agent configuration ID */
+    agentConfigurationId?: string;
+    /** Filter by date range (scheduledAt) */
+    dateRange?: {
+        start?: Date;
+        end?: Date;
+    };
+}
+
+/**
+ * Call request sorting options.
+ * @interface CallRequestSorting
+ */
+export interface CallRequestSorting {
+    /** Field to sort by */
+    field: "scheduledAt" | "status" | "createdAt";
+    /** Sort direction */
+    direction: "asc" | "desc";
+}
+
+/**
+ * Call request query options.
+ * @interface CallRequestQueryOptions
+ */
+export interface CallRequestQueryOptions {
+    /** Page number (1-indexed) */
+    page: number;
+    /** Items per page */
+    pageSize: number;
+    /** Optional filters */
+    filters?: CallRequestFilters;
+    /** Optional sorting */
+    sorting?: CallRequestSorting;
+}
 

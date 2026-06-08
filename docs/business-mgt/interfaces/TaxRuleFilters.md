@@ -1,0 +1,24 @@
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
+
+***
+
+[Wiil Platform JavaScript Data Model Definitions - API Reference](../../README.md) / [business-mgt](../README.md) / TaxRuleFilters
+
+# Interface: TaxRuleFilters
+
+Defined in: src/core/business-mgt/tax-rule.schema.ts:111
+
+Tax rule filter options.
+ TaxRuleFilters
+
+## Properties
+
+| Property | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="search"></a> `search?` | `string` | Text search across tax name | src/core/business-mgt/tax-rule.schema.ts:113 |
+| <a id="locationid"></a> `locationId?` | `string` | Filter by business location ID | src/core/business-mgt/tax-rule.schema.ts:115 |
+| <a id="scope"></a> `scope?` | [`TaxScope`](../../type-definitions/enumerations/TaxScope.md) | Filter by tax scope | src/core/business-mgt/tax-rule.schema.ts:117 |
+| <a id="ratetype"></a> `rateType?` | [`TaxRateType`](../../type-definitions/enumerations/TaxRateType.md) | Filter by tax rate type | src/core/business-mgt/tax-rule.schema.ts:119 |
+| <a id="catalogscope"></a> `catalogScope?` | [`TaxCatalogScope`](../../type-definitions/enumerations/TaxCatalogScope.md) | Filter by catalog scope | src/core/business-mgt/tax-rule.schema.ts:121 |
+| <a id="isinclusive"></a> `isInclusive?` | `boolean` | Filter by inclusive status | src/core/business-mgt/tax-rule.schema.ts:123 |
+| <a id="isactive"></a> `isActive?` | `boolean` | Filter by active status | src/core/business-mgt/tax-rule.schema.ts:125 |

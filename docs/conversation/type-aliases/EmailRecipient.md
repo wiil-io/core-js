@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.51**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
 
 ***
 
@@ -13,7 +13,7 @@ type EmailRecipient = {
 };
 ```
 
-Defined in: [src/core/conversation/outbound-email.schema.ts:19](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/conversation/outbound-email.schema.ts#L19)
+Defined in: [src/core/conversation/outbound-email.schema.ts:27](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/conversation/outbound-email.schema.ts#L27)
 
 Email recipient schema (embedded in EmailRequestSchema).
 
@@ -21,8 +21,8 @@ Email recipient schema (embedded in EmailRequestSchema).
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="email"></a> `email` | `string` | [src/core/conversation/outbound-email.schema.ts:15](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/conversation/outbound-email.schema.ts#L15) |
-| <a id="name"></a> `name?` | `string` | [src/core/conversation/outbound-email.schema.ts:16](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/conversation/outbound-email.schema.ts#L16) |
+| <a id="email"></a> `email` | `string` | [src/core/conversation/outbound-email.schema.ts:23](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/conversation/outbound-email.schema.ts#L23) |
+| <a id="name"></a> `name?` | `string` | [src/core/conversation/outbound-email.schema.ts:24](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/conversation/outbound-email.schema.ts#L24) |
 
 ## See
 

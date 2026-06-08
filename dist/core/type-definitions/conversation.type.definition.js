@@ -9,7 +9,7 @@
  * @module type-definitions/conversation
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SmsStatus = exports.EmailStatus = exports.ScheduleType = exports.CallRequestStatus = exports.ConversationSummarySentiment = exports.TranslationDirection = exports.ConversationStatus = exports.ServiceConversationType = void 0;
+exports.ConversationDirection = exports.OutboundTemplateChannel = exports.SmsStatus = exports.EmailStatus = exports.ScheduleType = exports.CallRequestStatus = exports.ConversationSummarySentiment = exports.TranslationDirection = exports.ConversationStatus = exports.ServiceConversationType = void 0;
 /**
  * Service conversation channel types.
  *
@@ -203,3 +203,34 @@ var SmsStatus;
     /** SMS could not be delivered (invalid number, blocked, etc.) */
     SmsStatus["UNDELIVERED"] = "undelivered";
 })(SmsStatus || (exports.SmsStatus = SmsStatus = {}));
+/**
+ * Outbound template channel types.
+ *
+ * Identifies the communication channel for outbound message templates.
+ *
+ * @see OutboundTemplateSchema - Uses this for channel identification
+ */
+var OutboundTemplateChannel;
+(function (OutboundTemplateChannel) {
+    /** Email template */
+    OutboundTemplateChannel["EMAIL"] = "EMAIL";
+    /** SMS text template */
+    OutboundTemplateChannel["SMS"] = "SMS";
+    /** WhatsApp message template */
+    OutboundTemplateChannel["WHATSAPP"] = "WHATSAPP";
+})(OutboundTemplateChannel || (exports.OutboundTemplateChannel = OutboundTemplateChannel = {}));
+/**
+ * Conversation direction for tracking inbound/outbound interactions.
+ *
+ * Identifies whether a conversation was initiated by the customer (inbound)
+ * or by the business (outbound) for analytics, routing, and billing purposes.
+ *
+ * @see ServiceConversationConfigSchema - Uses this for direction tracking
+ */
+var ConversationDirection;
+(function (ConversationDirection) {
+    /** Customer-initiated conversation (incoming call, received email, etc.) */
+    ConversationDirection["INBOUND"] = "inbound";
+    /** Business-initiated conversation (outbound call, campaign, etc.) */
+    ConversationDirection["OUTBOUND"] = "outbound";
+})(ConversationDirection || (exports.ConversationDirection = ConversationDirection = {}));

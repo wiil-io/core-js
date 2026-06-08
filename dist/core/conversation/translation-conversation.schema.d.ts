@@ -130,6 +130,33 @@ export declare const TranslationParticipantSchema: z.ZodObject<{
         subject: z.ZodString;
         isEmail: z.ZodDefault<z.ZodLiteral<true>>;
         message_type: z.ZodDefault<z.ZodLiteral<import("./conversation-message.schema").MessageType.AGENT>>;
+    }, z.core.$strip>, z.ZodObject<{
+        conversation_config_id: z.ZodString;
+        message: z.ZodString;
+        timestamp: z.ZodDefault<z.ZodNumber>;
+        llm_conversation_id: z.ZodNullable<z.ZodOptional<z.ZodString>>;
+        message_type: z.ZodDefault<z.ZodLiteral<import("./conversation-message.schema").MessageType.HUMAN_AGENT>>;
+        agent_message_id: z.ZodString;
+        agent_session_id: z.ZodString;
+        last_user_message_id: z.ZodOptional<z.ZodString>;
+    }, z.core.$strip>, z.ZodObject<{
+        conversation_config_id: z.ZodString;
+        message: z.ZodString;
+        timestamp: z.ZodDefault<z.ZodNumber>;
+        llm_conversation_id: z.ZodNullable<z.ZodOptional<z.ZodString>>;
+        subject: z.ZodString;
+        isEmail: z.ZodDefault<z.ZodLiteral<true>>;
+        message_type: z.ZodDefault<z.ZodLiteral<import("./conversation-message.schema").MessageType.HUMAN_AGENT>>;
+        agent_session_id: z.ZodString;
+    }, z.core.$strip>, z.ZodObject<{
+        conversation_config_id: z.ZodString;
+        message: z.ZodString;
+        timestamp: z.ZodDefault<z.ZodNumber>;
+        llm_conversation_id: z.ZodNullable<z.ZodOptional<z.ZodString>>;
+        message_type: z.ZodDefault<z.ZodLiteral<import("./conversation-message.schema").MessageType.SYSTEM>>;
+        system_message_id: z.ZodString;
+        event_type: z.ZodEnum<typeof import("./conversation-message.schema").SystemMessageEventType>;
+        metadata: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodUnknown>>;
     }, z.core.$strip>]>>>;
 }, z.core.$strip>;
 /**
@@ -189,6 +216,33 @@ export declare const CreateTranslationParticipantSchema: z.ZodObject<{
         subject: z.ZodString;
         isEmail: z.ZodDefault<z.ZodLiteral<true>>;
         message_type: z.ZodDefault<z.ZodLiteral<import("./conversation-message.schema").MessageType.AGENT>>;
+    }, z.core.$strip>, z.ZodObject<{
+        conversation_config_id: z.ZodString;
+        message: z.ZodString;
+        timestamp: z.ZodDefault<z.ZodNumber>;
+        llm_conversation_id: z.ZodNullable<z.ZodOptional<z.ZodString>>;
+        message_type: z.ZodDefault<z.ZodLiteral<import("./conversation-message.schema").MessageType.HUMAN_AGENT>>;
+        agent_message_id: z.ZodString;
+        agent_session_id: z.ZodString;
+        last_user_message_id: z.ZodOptional<z.ZodString>;
+    }, z.core.$strip>, z.ZodObject<{
+        conversation_config_id: z.ZodString;
+        message: z.ZodString;
+        timestamp: z.ZodDefault<z.ZodNumber>;
+        llm_conversation_id: z.ZodNullable<z.ZodOptional<z.ZodString>>;
+        subject: z.ZodString;
+        isEmail: z.ZodDefault<z.ZodLiteral<true>>;
+        message_type: z.ZodDefault<z.ZodLiteral<import("./conversation-message.schema").MessageType.HUMAN_AGENT>>;
+        agent_session_id: z.ZodString;
+    }, z.core.$strip>, z.ZodObject<{
+        conversation_config_id: z.ZodString;
+        message: z.ZodString;
+        timestamp: z.ZodDefault<z.ZodNumber>;
+        llm_conversation_id: z.ZodNullable<z.ZodOptional<z.ZodString>>;
+        message_type: z.ZodDefault<z.ZodLiteral<import("./conversation-message.schema").MessageType.SYSTEM>>;
+        system_message_id: z.ZodString;
+        event_type: z.ZodEnum<typeof import("./conversation-message.schema").SystemMessageEventType>;
+        metadata: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodUnknown>>;
     }, z.core.$strip>]>>>;
 }, z.core.$strip>;
 /**
@@ -248,6 +302,33 @@ export declare const UpdateTranslationParticipantSchema: z.ZodObject<{
         subject: z.ZodString;
         isEmail: z.ZodDefault<z.ZodLiteral<true>>;
         message_type: z.ZodDefault<z.ZodLiteral<import("./conversation-message.schema").MessageType.AGENT>>;
+    }, z.core.$strip>, z.ZodObject<{
+        conversation_config_id: z.ZodString;
+        message: z.ZodString;
+        timestamp: z.ZodDefault<z.ZodNumber>;
+        llm_conversation_id: z.ZodNullable<z.ZodOptional<z.ZodString>>;
+        message_type: z.ZodDefault<z.ZodLiteral<import("./conversation-message.schema").MessageType.HUMAN_AGENT>>;
+        agent_message_id: z.ZodString;
+        agent_session_id: z.ZodString;
+        last_user_message_id: z.ZodOptional<z.ZodString>;
+    }, z.core.$strip>, z.ZodObject<{
+        conversation_config_id: z.ZodString;
+        message: z.ZodString;
+        timestamp: z.ZodDefault<z.ZodNumber>;
+        llm_conversation_id: z.ZodNullable<z.ZodOptional<z.ZodString>>;
+        subject: z.ZodString;
+        isEmail: z.ZodDefault<z.ZodLiteral<true>>;
+        message_type: z.ZodDefault<z.ZodLiteral<import("./conversation-message.schema").MessageType.HUMAN_AGENT>>;
+        agent_session_id: z.ZodString;
+    }, z.core.$strip>, z.ZodObject<{
+        conversation_config_id: z.ZodString;
+        message: z.ZodString;
+        timestamp: z.ZodDefault<z.ZodNumber>;
+        llm_conversation_id: z.ZodNullable<z.ZodOptional<z.ZodString>>;
+        message_type: z.ZodDefault<z.ZodLiteral<import("./conversation-message.schema").MessageType.SYSTEM>>;
+        system_message_id: z.ZodString;
+        event_type: z.ZodEnum<typeof import("./conversation-message.schema").SystemMessageEventType>;
+        metadata: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodUnknown>>;
     }, z.core.$strip>]>>>>;
     id: z.ZodString;
 }, z.core.$strip>;
@@ -322,12 +403,12 @@ export declare const TranslationServiceLogSchema: z.ZodObject<{
  */
 export declare const CreateTranslationServiceLogSchema: z.ZodObject<{
     status: z.ZodDefault<z.ZodEnum<typeof ConversationStatus>>;
-    organization_id: z.ZodString;
     project_id: z.ZodOptional<z.ZodString>;
     durationInSeconds: z.ZodDefault<z.ZodOptional<z.ZodNumber>>;
     created_day: z.ZodOptional<z.ZodString>;
     direction: z.ZodDefault<z.ZodEnum<typeof TranslationDirection>>;
     sdrtn_id: z.ZodOptional<z.ZodString>;
+    organization_id: z.ZodString;
     partner_initiator_id: z.ZodString;
     partner_session_id: z.ZodOptional<z.ZodString>;
     translationConfigId: z.ZodNullable<z.ZodOptional<z.ZodString>>;
@@ -353,12 +434,12 @@ export declare const CreateTranslationServiceLogSchema: z.ZodObject<{
  */
 export declare const UpdateTranslationServiceLogSchema: z.ZodObject<{
     status: z.ZodOptional<z.ZodDefault<z.ZodEnum<typeof ConversationStatus>>>;
-    organization_id: z.ZodOptional<z.ZodString>;
     project_id: z.ZodOptional<z.ZodOptional<z.ZodString>>;
     durationInSeconds: z.ZodOptional<z.ZodDefault<z.ZodOptional<z.ZodNumber>>>;
     created_day: z.ZodOptional<z.ZodOptional<z.ZodString>>;
     direction: z.ZodOptional<z.ZodDefault<z.ZodEnum<typeof TranslationDirection>>>;
     sdrtn_id: z.ZodOptional<z.ZodOptional<z.ZodString>>;
+    organization_id: z.ZodOptional<z.ZodString>;
     partner_initiator_id: z.ZodOptional<z.ZodString>;
     partner_session_id: z.ZodOptional<z.ZodOptional<z.ZodString>>;
     translationConfigId: z.ZodOptional<z.ZodNullable<z.ZodOptional<z.ZodString>>>;

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.51**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
 
 ***
 
@@ -6,11 +6,14 @@
 
 # Interface: PropertySorting
 
-Defined in: [src/core/business-mgt/property-config.schema.ts:295](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-config.schema.ts#L295)
+Defined in: src/core/business-mgt/property-management/property-config.schema.ts:478
+
+Property sorting options.
+ PropertySorting
 
 ## Properties
 
-| Property | Type | Defined in |
-| ------ | ------ | ------ |
-| <a id="field"></a> `field` | \| `"createdAt"` \| `"title"` \| `"displayOrder"` \| `"squareFootage"` \| `"salePrice"` \| `"rentalPrice"` | [src/core/business-mgt/property-config.schema.ts:296](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-config.schema.ts#L296) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | [src/core/business-mgt/property-config.schema.ts:297](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-config.schema.ts#L297) |
+| Property | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="field"></a> `field` | \| `"createdAt"` \| `"displayOrder"` \| `"title"` \| `"squareFootage"` \| `"salePrice"` \| `"rentalPrice"` | Field to sort by | src/core/business-mgt/property-management/property-config.schema.ts:480 |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | src/core/business-mgt/property-management/property-config.schema.ts:482 |

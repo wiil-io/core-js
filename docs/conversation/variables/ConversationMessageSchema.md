@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.51**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
 
 ***
 
@@ -40,9 +40,39 @@ const ConversationMessageSchema: ZodUnion<readonly [ZodObject<{
   subject: ZodString;
   isEmail: ZodDefault<ZodLiteral<true>>;
   message_type: ZodDefault<ZodLiteral<AGENT>>;
+}, $strip>, ZodObject<{
+  conversation_config_id: ZodString;
+  message: ZodString;
+  timestamp: ZodDefault<ZodNumber>;
+  llm_conversation_id: ZodNullable<ZodOptional<ZodString>>;
+  message_type: ZodDefault<ZodLiteral<HUMAN_AGENT>>;
+  agent_message_id: ZodString;
+  agent_session_id: ZodString;
+  last_user_message_id: ZodOptional<ZodString>;
+}, $strip>, ZodObject<{
+  conversation_config_id: ZodString;
+  message: ZodString;
+  timestamp: ZodDefault<ZodNumber>;
+  llm_conversation_id: ZodNullable<ZodOptional<ZodString>>;
+  subject: ZodString;
+  isEmail: ZodDefault<ZodLiteral<true>>;
+  message_type: ZodDefault<ZodLiteral<HUMAN_AGENT>>;
+  agent_session_id: ZodString;
+}, $strip>, ZodObject<{
+  conversation_config_id: ZodString;
+  message: ZodString;
+  timestamp: ZodDefault<ZodNumber>;
+  llm_conversation_id: ZodNullable<ZodOptional<ZodString>>;
+  message_type: ZodDefault<ZodLiteral<SYSTEM>>;
+  system_message_id: ZodString;
+  event_type: ZodEnum<typeof SystemMessageEventType>;
+  metadata: ZodOptional<ZodRecord<ZodString, ZodUnknown>>;
 }, $strip>]>;
 ```
 
-Defined in: [src/core/conversation/conversation-config.schema.ts:86](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/conversation/conversation-config.schema.ts#L86)
+Defined in: [src/core/conversation/conversation-config.schema.ts:161](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/conversation/conversation-config.schema.ts#L161)
 
 Union of all conversation message types.
+
+Discriminated union supporting user, AI agent, human agent, and system messages
+for both chat and email channels.

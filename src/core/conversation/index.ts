@@ -10,3 +10,4 @@ export * from './translation-conversation.schema';
 export * from './outbound-call.schema';
 export * from './outbound-email.schema';
 export * from './outbound-sms.schema';
+export * from './outbound-template.schema';

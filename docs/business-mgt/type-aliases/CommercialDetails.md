@@ -1,0 +1,52 @@
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
+
+***
+
+[Wiil Platform JavaScript Data Model Definitions - API Reference](../../README.md) / [business-mgt](../README.md) / CommercialDetails
+
+# Type Alias: CommercialDetails
+
+```ts
+type CommercialDetails = {
+  squareFootage: number;
+  usableSquareFootage?: number | null;
+  floors?: number | null;
+  ceilingHeight?: number | null;
+  loadingDocks?: number | null;
+  driveInDoors?: number | null;
+  freightElevator: boolean;
+  passengerElevator: boolean;
+  zoningType: string;
+  yearBuilt?: number | null;
+  previousUse?: string | null;
+  buildOutStatus?: "partial" | "shell" | "turnkey" | null;
+  hvacType?: string | null;
+  powerCapacity?: string | null;
+  sprinklerSystem: boolean;
+};
+```
+
+Defined in: src/core/business-mgt/property-management/property-config.schema.ts:400
+
+Commercial details schema.
+Details for office, retail, warehouse, industrial properties.
+
+## Type Declaration
+
+| Name | Type | Defined in |
+| ------ | ------ | ------ |
+| <a id="squarefootage"></a> `squareFootage` | `number` | src/core/business-mgt/property-management/property-config.schema.ts:168 |
+| <a id="usablesquarefootage"></a> `usableSquareFootage?` | `number` \| `null` | src/core/business-mgt/property-management/property-config.schema.ts:169 |
+| <a id="floors"></a> `floors?` | `number` \| `null` | src/core/business-mgt/property-management/property-config.schema.ts:170 |
+| <a id="ceilingheight"></a> `ceilingHeight?` | `number` \| `null` | src/core/business-mgt/property-management/property-config.schema.ts:171 |
+| <a id="loadingdocks"></a> `loadingDocks?` | `number` \| `null` | src/core/business-mgt/property-management/property-config.schema.ts:172 |
+| <a id="driveindoors"></a> `driveInDoors?` | `number` \| `null` | src/core/business-mgt/property-management/property-config.schema.ts:173 |
+| <a id="freightelevator"></a> `freightElevator` | `boolean` | src/core/business-mgt/property-management/property-config.schema.ts:174 |
+| <a id="passengerelevator"></a> `passengerElevator` | `boolean` | src/core/business-mgt/property-management/property-config.schema.ts:175 |
+| <a id="zoningtype"></a> `zoningType` | `string` | src/core/business-mgt/property-management/property-config.schema.ts:176 |
+| <a id="yearbuilt"></a> `yearBuilt?` | `number` \| `null` | src/core/business-mgt/property-management/property-config.schema.ts:177 |
+| <a id="previoususe"></a> `previousUse?` | `string` \| `null` | src/core/business-mgt/property-management/property-config.schema.ts:178 |
+| <a id="buildoutstatus"></a> `buildOutStatus?` | `"partial"` \| `"shell"` \| `"turnkey"` \| `null` | src/core/business-mgt/property-management/property-config.schema.ts:179 |
+| <a id="hvactype"></a> `hvacType?` | `string` \| `null` | src/core/business-mgt/property-management/property-config.schema.ts:180 |
+| <a id="powercapacity"></a> `powerCapacity?` | `string` \| `null` | src/core/business-mgt/property-management/property-config.schema.ts:181 |
+| <a id="sprinklersystem"></a> `sprinklerSystem` | `boolean` | src/core/business-mgt/property-management/property-config.schema.ts:182 |

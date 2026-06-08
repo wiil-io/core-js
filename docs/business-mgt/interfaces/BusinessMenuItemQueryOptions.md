@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.51**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
 
 ***
 
@@ -6,13 +6,16 @@
 
 # Interface: BusinessMenuItemQueryOptions
 
-Defined in: [src/core/business-mgt/menu-config.schema.ts:148](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu-config.schema.ts#L148)
+Defined in: src/core/business-mgt/menu-management/menu-config.schema.ts:228
+
+Business menu item query options.
+ BusinessMenuItemQueryOptions
 
 ## Properties
 
-| Property | Type | Defined in |
-| ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | [src/core/business-mgt/menu-config.schema.ts:149](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu-config.schema.ts#L149) |
-| <a id="pagesize"></a> `pageSize` | `number` | [src/core/business-mgt/menu-config.schema.ts:150](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu-config.schema.ts#L150) |
-| <a id="filters"></a> `filters?` | [`BusinessMenuItemFilters`](BusinessMenuItemFilters.md) | [src/core/business-mgt/menu-config.schema.ts:151](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu-config.schema.ts#L151) |
-| <a id="sorting"></a> `sorting?` | [`BusinessMenuItemSorting`](BusinessMenuItemSorting.md) | [src/core/business-mgt/menu-config.schema.ts:152](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/menu-config.schema.ts#L152) |
+| Property | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | src/core/business-mgt/menu-management/menu-config.schema.ts:230 |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | src/core/business-mgt/menu-management/menu-config.schema.ts:232 |
+| <a id="filters"></a> `filters?` | [`BusinessMenuItemFilters`](BusinessMenuItemFilters.md) | Optional filters | src/core/business-mgt/menu-management/menu-config.schema.ts:234 |
+| <a id="sorting"></a> `sorting?` | [`BusinessMenuItemSorting`](BusinessMenuItemSorting.md) | Optional sorting | src/core/business-mgt/menu-management/menu-config.schema.ts:236 |

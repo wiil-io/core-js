@@ -1,0 +1,23 @@
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
+
+***
+
+[Wiil Platform JavaScript Data Model Definitions - API Reference](../../README.md) / [business-mgt](../README.md) / TableShape
+
+# Enumeration: TableShape
+
+Defined in: src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:18
+
+Rendered table shape for floor plan layouts.
+
+## Enumeration Members
+
+| Enumeration Member | Value | Defined in |
+| ------ | ------ | ------ |
+| <a id="round"></a> `ROUND` | `"round"` | src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:19 |
+| <a id="square"></a> `SQUARE` | `"square"` | src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:20 |
+| <a id="booth"></a> `BOOTH` | `"booth"` | src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:21 |
+| <a id="rect"></a> `RECT` | `"rect"` | src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:22 |
+| <a id="curved"></a> `CURVED` | `"curved"` | src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:23 |
+| <a id="high_top"></a> `HIGH_TOP` | `"high_top"` | src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:24 |
+| <a id="bar"></a> `BAR` | `"bar"` | src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:25 |

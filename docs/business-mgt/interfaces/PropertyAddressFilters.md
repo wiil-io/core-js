@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.51**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
 
 ***
 
@@ -6,21 +6,23 @@
 
 # Interface: PropertyAddressFilters
 
-Defined in: [src/core/business-mgt/property-config.schema.ts:307](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-config.schema.ts#L307)
+Defined in: src/core/business-mgt/property-management/property-config.schema.ts:504
+
+Property address filter options.
+ PropertyAddressFilters
 
 ## Properties
 
-| Property | Type | Defined in |
-| ------ | ------ | ------ |
-| <a id="search"></a> `search?` | `string` | [src/core/business-mgt/property-config.schema.ts:308](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-config.schema.ts#L308) |
-| <a id="city"></a> `city?` | `string` | [src/core/business-mgt/property-config.schema.ts:309](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-config.schema.ts#L309) |
-| <a id="state"></a> `state?` | `string` | [src/core/business-mgt/property-config.schema.ts:310](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-config.schema.ts#L310) |
-| <a id="country"></a> `country?` | `string` | [src/core/business-mgt/property-config.schema.ts:311](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-config.schema.ts#L311) |
-| <a id="neighborhood"></a> `neighborhood?` | `string` | [src/core/business-mgt/property-config.schema.ts:312](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-config.schema.ts#L312) |
-| <a id="district"></a> `district?` | `string` | [src/core/business-mgt/property-config.schema.ts:313](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-config.schema.ts#L313) |
-| <a id="geolocation"></a> `geolocation?` | \{ `latitude`: `number`; `longitude`: `number`; `radiusKm`: `number`; \} | [src/core/business-mgt/property-config.schema.ts:314](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-config.schema.ts#L314) |
-| `geolocation.latitude` | `number` | [src/core/business-mgt/property-config.schema.ts:315](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-config.schema.ts#L315) |
-| `geolocation.longitude` | `number` | [src/core/business-mgt/property-config.schema.ts:316](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-config.schema.ts#L316) |
-| `geolocation.radiusKm` | `number` | [src/core/business-mgt/property-config.schema.ts:317](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-config.schema.ts#L317) |
-| <a id="isverified"></a> `isVerified?` | `boolean` | [src/core/business-mgt/property-config.schema.ts:319](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-config.schema.ts#L319) |
-| <a id="includedeleted"></a> `includeDeleted?` | `boolean` | [src/core/business-mgt/property-config.schema.ts:320](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-config.schema.ts#L320) |
+| Property | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="search"></a> `search?` | `string` | Text search across street/city/state | src/core/business-mgt/property-management/property-config.schema.ts:506 |
+| <a id="city"></a> `city?` | `string` | Filter by city | src/core/business-mgt/property-management/property-config.schema.ts:508 |
+| <a id="state"></a> `state?` | `string` | Filter by state | src/core/business-mgt/property-management/property-config.schema.ts:510 |
+| <a id="country"></a> `country?` | `string` | Filter by country | src/core/business-mgt/property-management/property-config.schema.ts:512 |
+| <a id="neighborhood"></a> `neighborhood?` | `string` | Filter by neighborhood | src/core/business-mgt/property-management/property-config.schema.ts:514 |
+| <a id="district"></a> `district?` | `string` | Filter by district | src/core/business-mgt/property-management/property-config.schema.ts:516 |
+| <a id="geolocation"></a> `geolocation?` | \{ `latitude`: `number`; `longitude`: `number`; `radiusKm`: `number`; \} | Filter by geolocation radius | src/core/business-mgt/property-management/property-config.schema.ts:518 |
+| `geolocation.latitude` | `number` | - | src/core/business-mgt/property-management/property-config.schema.ts:519 |
+| `geolocation.longitude` | `number` | - | src/core/business-mgt/property-management/property-config.schema.ts:520 |
+| `geolocation.radiusKm` | `number` | - | src/core/business-mgt/property-management/property-config.schema.ts:521 |
+| <a id="isverified"></a> `isVerified?` | `boolean` | Filter by verified status | src/core/business-mgt/property-management/property-config.schema.ts:524 |

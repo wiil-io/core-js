@@ -1,0 +1,35 @@
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
+
+***
+
+[Wiil Platform JavaScript Data Model Definitions - API Reference](../../README.md) / [business-mgt](../README.md) / RentalReservationSettings
+
+# Type Alias: RentalReservationSettings
+
+```ts
+type RentalReservationSettings = {
+  tiers: {
+     id: string;
+     name: string;
+     durationMinutes: number;
+     sortOrder: number;
+  }[];
+  requireWaiver: boolean;
+  requireIdVerification: boolean;
+  defaultDepositPercent?: number | null;
+};
+```
+
+Defined in: src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:144
+
+Rental reservation settings schema.
+Configures rental tiers, waiver requirements, identity verification, and deposits.
+
+## Type Declaration
+
+| Name | Type | Defined in |
+| ------ | ------ | ------ |
+| <a id="tiers"></a> `tiers` | \{ `id`: `string`; `name`: `string`; `durationMinutes`: `number`; `sortOrder`: `number`; \}[] | src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:82 |
+| <a id="requirewaiver"></a> `requireWaiver` | `boolean` | src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:83 |
+| <a id="requireidverification"></a> `requireIdVerification` | `boolean` | src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:84 |
+| <a id="defaultdepositpercent"></a> `defaultDepositPercent?` | `number` \| `null` | src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:85 |

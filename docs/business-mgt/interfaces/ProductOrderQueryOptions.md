@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.51**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
 
 ***
 
@@ -6,13 +6,16 @@
 
 # Interface: ProductOrderQueryOptions
 
-Defined in: [src/core/business-mgt/product-order.schema.ts:191](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/product-order.schema.ts#L191)
+Defined in: src/core/business-mgt/product-management/product-order.schema.ts:233
+
+Product order query options.
+ ProductOrderQueryOptions
 
 ## Properties
 
-| Property | Type | Defined in |
-| ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | [src/core/business-mgt/product-order.schema.ts:192](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/product-order.schema.ts#L192) |
-| <a id="pagesize"></a> `pageSize` | `number` | [src/core/business-mgt/product-order.schema.ts:193](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/product-order.schema.ts#L193) |
-| <a id="filters"></a> `filters?` | [`ProductOrderFilters`](ProductOrderFilters.md) | [src/core/business-mgt/product-order.schema.ts:194](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/product-order.schema.ts#L194) |
-| <a id="sorting"></a> `sorting?` | [`ProductOrderSorting`](ProductOrderSorting.md) | [src/core/business-mgt/product-order.schema.ts:195](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/product-order.schema.ts#L195) |
+| Property | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | src/core/business-mgt/product-management/product-order.schema.ts:235 |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | src/core/business-mgt/product-management/product-order.schema.ts:237 |
+| <a id="filters"></a> `filters?` | [`ProductOrderFilters`](ProductOrderFilters.md) | Optional filters | src/core/business-mgt/product-management/product-order.schema.ts:239 |
+| <a id="sorting"></a> `sorting?` | [`ProductOrderSorting`](ProductOrderSorting.md) | Optional sorting | src/core/business-mgt/product-management/product-order.schema.ts:241 |

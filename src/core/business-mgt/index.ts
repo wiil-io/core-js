@@ -3,18 +3,23 @@
  * @module business-mgt
  */
 
-export * from './appointment-additional-info.schema';
-export * from './appointment-field-config.schema';
-export * from './customer.schema';
-export * from './menu-config.schema';
-export * from './menu.order.schema';
+// ============================================================================
+// SHARED SCHEMAS
+// ============================================================================
+
+export * from './bookings.shared.schema';
+export * from './discount-rule.schema';
 export * from './order.schema';
-export * from './product-config.schema';
-export * from './product-order.schema';
-export * from './property-config.schema';
-export * from './property-inquiry.schema';
-export * from './reservation.schema';
-export * from './reservation-resource.schema';
-export * from './service-appointment.schema';
-export * from './service-config.schema';
-export * from './service-person.schema';
+export * from './pricing-rule.shared.schema';
+export * from './tax-rule.schema';
+
+// ============================================================================
+// DOMAIN MODULES
+// ============================================================================
+
+export * from './customer-management';
+export * from './menu-management';
+export * from './product-management';
+export * from './property-management';
+export * from './reservation-mgt';
+export * from './service-management';

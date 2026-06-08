@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.51**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
 
 ***
 
@@ -6,13 +6,16 @@
 
 # Interface: PropertyQueryOptions
 
-Defined in: [src/core/business-mgt/property-config.schema.ts:300](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-config.schema.ts#L300)
+Defined in: src/core/business-mgt/property-management/property-config.schema.ts:489
+
+Property query options.
+ PropertyQueryOptions
 
 ## Properties
 
-| Property | Type | Defined in |
-| ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | [src/core/business-mgt/property-config.schema.ts:301](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-config.schema.ts#L301) |
-| <a id="pagesize"></a> `pageSize` | `number` | [src/core/business-mgt/property-config.schema.ts:302](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-config.schema.ts#L302) |
-| <a id="filters"></a> `filters?` | [`PropertyFilters`](PropertyFilters.md) | [src/core/business-mgt/property-config.schema.ts:303](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-config.schema.ts#L303) |
-| <a id="sorting"></a> `sorting?` | [`PropertySorting`](PropertySorting.md) | [src/core/business-mgt/property-config.schema.ts:304](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/property-config.schema.ts#L304) |
+| Property | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | src/core/business-mgt/property-management/property-config.schema.ts:491 |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | src/core/business-mgt/property-management/property-config.schema.ts:493 |
+| <a id="filters"></a> `filters?` | [`PropertyFilters`](PropertyFilters.md) | Optional filters | src/core/business-mgt/property-management/property-config.schema.ts:495 |
+| <a id="sorting"></a> `sorting?` | [`PropertySorting`](PropertySorting.md) | Optional sorting | src/core/business-mgt/property-management/property-config.schema.ts:497 |

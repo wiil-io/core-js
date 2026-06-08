@@ -10,11 +10,42 @@ import z from 'zod';
  * @module conversation/conversation-message
  */
 /**
- * Message type enum for distinguishing between user and assistant messages.
+ * Message type enum for distinguishing message senders.
+ *
+ * Identifies who sent a message in a conversation to enable proper message
+ * routing, formatting, and context tracking.
  */
 export declare enum MessageType {
+    /** Message sent by end user/customer */
     USER = "user",
-    AGENT = "assistant"
+    /** Message sent by AI agent */
+    AGENT = "assistant",
+    /** Message sent by human agent (live support) */
+    HUMAN_AGENT = "human_agent",
+    /** System-generated message (events, notifications) */
+    SYSTEM = "system"
+}
+/**
+ * System message event type enum.
+ *
+ * Identifies the type of system event that triggered a system message,
+ * used for handover tracking, agent status, and conversation transfers.
+ */
+export declare enum SystemMessageEventType {
+    /** User or AI requested handover to human agent */
+    HANDOVER_REQUESTED = "handover_requested",
+    /** Human agent accepted the handover request */
+    HANDOVER_ACCEPTED = "handover_accepted",
+    /** Handover to human agent completed successfully */
+    HANDOVER_COMPLETED = "handover_completed",
+    /** Handover attempt failed */
+    HANDOVER_FAILED = "handover_failed",
+    /** Human agent joined the conversation */
+    AGENT_JOINED = "agent_joined",
+    /** Human agent left the conversation */
+    AGENT_LEFT = "agent_left",
+    /** Conversation transferred to another agent or queue */
+    CONVERSATION_TRANSFERRED = "conversation_transferred"
 }
 /**
  * Base chat message schema.
@@ -178,8 +209,99 @@ export declare const AssistantEmailMessageSchema: z.ZodObject<{
     isEmail: z.ZodDefault<z.ZodLiteral<true>>;
     message_type: z.ZodDefault<z.ZodLiteral<MessageType.AGENT>>;
 }, z.core.$strip>;
+/**
+ * Human agent chat message schema.
+ *
+ * Represents a message sent by a human support agent in a chat conversation.
+ * Used when conversations are handed over from AI to live agents for complex
+ * issue resolution or customer preference.
+ *
+ * @remarks
+ * **Architecture Context:**
+ * - **Extends**: BaseChatMessageSchema with human agent-specific fields
+ * - **Message Type**: Always 'human_agent' (MessageType.HUMAN_AGENT)
+ * - **Triggered By**: Handover from AI agent or direct human agent assignment
+ * - **Session Tracking**: agent_session_id links to workforce management system
+ *
+ * @typedef {Object} HumanAgentChatMessage
+ * @property {string} message_type - Fixed to 'human_agent'
+ * @property {string} agent_message_id - Unique identifier for this human agent message
+ * @property {string} agent_session_id - Agent workforce session ID for tracking
+ * @property {string} [last_user_message_id] - ID of the user message being responded to
+ */
+export declare const HumanAgentChatMessageSchema: z.ZodObject<{
+    conversation_config_id: z.ZodString;
+    message: z.ZodString;
+    timestamp: z.ZodDefault<z.ZodNumber>;
+    llm_conversation_id: z.ZodNullable<z.ZodOptional<z.ZodString>>;
+    message_type: z.ZodDefault<z.ZodLiteral<MessageType.HUMAN_AGENT>>;
+    agent_message_id: z.ZodString;
+    agent_session_id: z.ZodString;
+    last_user_message_id: z.ZodOptional<z.ZodString>;
+}, z.core.$strip>;
+/**
+ * Human agent email message schema.
+ *
+ * Represents an email message sent by a human support agent. Used when email
+ * conversations require human intervention for complex issues, escalations,
+ * or sensitive customer interactions.
+ *
+ * @remarks
+ * **Architecture Context:**
+ * - **Extends**: BaseEmailMessageSchema with human agent-specific fields
+ * - **Message Type**: Always 'human_agent' (MessageType.HUMAN_AGENT)
+ * - **Channel**: Used exclusively for EMAIL conversation type
+ * - **Session Tracking**: agent_session_id links to workforce management system
+ *
+ * @typedef {Object} HumanAgentEmailMessage
+ * @property {string} message_type - Fixed to 'human_agent'
+ * @property {string} agent_session_id - Agent workforce session ID
+ */
+export declare const HumanAgentEmailMessageSchema: z.ZodObject<{
+    conversation_config_id: z.ZodString;
+    message: z.ZodString;
+    timestamp: z.ZodDefault<z.ZodNumber>;
+    llm_conversation_id: z.ZodNullable<z.ZodOptional<z.ZodString>>;
+    subject: z.ZodString;
+    isEmail: z.ZodDefault<z.ZodLiteral<true>>;
+    message_type: z.ZodDefault<z.ZodLiteral<MessageType.HUMAN_AGENT>>;
+    agent_session_id: z.ZodString;
+}, z.core.$strip>;
+/**
+ * System message schema.
+ *
+ * Represents system-generated messages for tracking conversation events such as
+ * handovers, agent joins/leaves, and transfers. Not directly visible to users
+ * but recorded for audit trails and conversation state tracking.
+ *
+ * @remarks
+ * **Architecture Context:**
+ * - **Extends**: BaseChatMessageSchema with system-specific fields
+ * - **Message Type**: Always 'system' (MessageType.SYSTEM)
+ * - **Purpose**: Audit trail, conversation state tracking, event logging
+ * - **Visibility**: Typically hidden from end users, visible in admin dashboards
+ *
+ * @typedef {Object} SystemMessage
+ * @property {string} message_type - Fixed to 'system'
+ * @property {string} system_message_id - Unique identifier for this system message
+ * @property {SystemMessageEventType} event_type - Type of system event
+ * @property {Object} [metadata] - Additional event-specific metadata
+ */
+export declare const SystemMessageSchema: z.ZodObject<{
+    conversation_config_id: z.ZodString;
+    message: z.ZodString;
+    timestamp: z.ZodDefault<z.ZodNumber>;
+    llm_conversation_id: z.ZodNullable<z.ZodOptional<z.ZodString>>;
+    message_type: z.ZodDefault<z.ZodLiteral<MessageType.SYSTEM>>;
+    system_message_id: z.ZodString;
+    event_type: z.ZodEnum<typeof SystemMessageEventType>;
+    metadata: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodUnknown>>;
+}, z.core.$strip>;
 export type UserChatMessage = z.infer<typeof UserChatMessageSchema>;
 export type AssistantChatMessage = z.infer<typeof AssistantChatMessageSchema>;
 export type UserEmailMessage = z.infer<typeof UserEmailMessageSchema>;
 export type AssistantEmailMessage = z.infer<typeof AssistantEmailMessageSchema>;
-export type ChatMessage = UserChatMessage | AssistantChatMessage | UserEmailMessage | AssistantEmailMessage;
+export type HumanAgentChatMessage = z.infer<typeof HumanAgentChatMessageSchema>;
+export type HumanAgentEmailMessage = z.infer<typeof HumanAgentEmailMessageSchema>;
+export type SystemMessage = z.infer<typeof SystemMessageSchema>;
+export type ChatMessage = UserChatMessage | AssistantChatMessage | UserEmailMessage | AssistantEmailMessage | HumanAgentChatMessage | HumanAgentEmailMessage | SystemMessage;

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.51**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
 
 ***
 
@@ -6,18 +6,26 @@
 
 # Interface: ProductOrderFilters
 
-Defined in: [src/core/business-mgt/product-order.schema.ts:176](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/product-order.schema.ts#L176)
+Defined in: src/core/business-mgt/product-management/product-order.schema.ts:191
+
+Product order filter options.
+ ProductOrderFilters
 
 ## Properties
 
-| Property | Type | Defined in |
-| ------ | ------ | ------ |
-| <a id="search"></a> `search?` | `string` | [src/core/business-mgt/product-order.schema.ts:177](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/product-order.schema.ts#L177) |
-| <a id="status"></a> `status?` | [`OrderStatus`](../../type-definitions/enumerations/OrderStatus.md)[] | [src/core/business-mgt/product-order.schema.ts:178](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/product-order.schema.ts#L178) |
-| <a id="paymentstatus"></a> `paymentStatus?` | [`PaymentStatus`](../../type-definitions/enumerations/PaymentStatus.md)[] | [src/core/business-mgt/product-order.schema.ts:179](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/product-order.schema.ts#L179) |
-| <a id="customerid"></a> `customerId?` | `string` | [src/core/business-mgt/product-order.schema.ts:180](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/product-order.schema.ts#L180) |
-| <a id="shippingmethod"></a> `shippingMethod?` | `string` | [src/core/business-mgt/product-order.schema.ts:181](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/product-order.schema.ts#L181) |
-| <a id="source"></a> `source?` | `string` | [src/core/business-mgt/product-order.schema.ts:182](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/product-order.schema.ts#L182) |
-| <a id="daterange"></a> `dateRange?` | \{ `start?`: `number`; `end?`: `number`; \} | [src/core/business-mgt/product-order.schema.ts:183](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/product-order.schema.ts#L183) |
-| `dateRange.start?` | `number` | [src/core/business-mgt/product-order.schema.ts:183](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/product-order.schema.ts#L183) |
-| `dateRange.end?` | `number` | [src/core/business-mgt/product-order.schema.ts:183](https://github.com/wiil-io/core-js/blob/5c8d967933edfe6fc001aa769a11443695981d49/src/core/business-mgt/product-order.schema.ts#L183) |
+| Property | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="search"></a> `search?` | `string` | Text search across order fields | src/core/business-mgt/product-management/product-order.schema.ts:193 |
+| <a id="locationid"></a> `locationId?` | `string` | Filter by location ID | src/core/business-mgt/product-management/product-order.schema.ts:195 |
+| <a id="channelid"></a> `channelId?` | `string` | Filter by channel ID | src/core/business-mgt/product-management/product-order.schema.ts:197 |
+| <a id="terminalid"></a> `terminalId?` | `string` | Filter by terminal ID | src/core/business-mgt/product-management/product-order.schema.ts:199 |
+| <a id="operatorid"></a> `operatorId?` | `string` | Filter by operator ID | src/core/business-mgt/product-management/product-order.schema.ts:201 |
+| <a id="status"></a> `status?` | [`OrderStatus`](../../type-definitions/enumerations/OrderStatus.md)[] | Filter by order statuses | src/core/business-mgt/product-management/product-order.schema.ts:203 |
+| <a id="paymentstatus"></a> `paymentStatus?` | [`PaymentStatus`](../../type-definitions/enumerations/PaymentStatus.md)[] | Filter by payment statuses | src/core/business-mgt/product-management/product-order.schema.ts:205 |
+| <a id="customerid"></a> `customerId?` | `string` | Filter by customer ID | src/core/business-mgt/product-management/product-order.schema.ts:207 |
+| <a id="shippingmethod"></a> `shippingMethod?` | `string` | Filter by shipping method | src/core/business-mgt/product-management/product-order.schema.ts:209 |
+| <a id="source"></a> `source?` | `string` | Filter by order source | src/core/business-mgt/product-management/product-order.schema.ts:211 |
+| <a id="externalsource"></a> `externalSource?` | `string` | Filter by external source platform | src/core/business-mgt/product-management/product-order.schema.ts:213 |
+| <a id="daterange"></a> `dateRange?` | \{ `start?`: `number`; `end?`: `number`; \} | Filter by date range | src/core/business-mgt/product-management/product-order.schema.ts:215 |
+| `dateRange.start?` | `number` | - | src/core/business-mgt/product-management/product-order.schema.ts:215 |
+| `dateRange.end?` | `number` | - | src/core/business-mgt/product-management/product-order.schema.ts:215 |
