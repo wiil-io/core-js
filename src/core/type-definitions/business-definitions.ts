@@ -229,6 +229,67 @@ export const TIMEZONES = [
     'Australia/Sydney',
 ]
 
+// ============================================================================
+// SHARED TIME AND SCHEDULE SCHEMAS
+// ============================================================================
+
+/**
+ * Time slot schema for scheduling.
+ * Defines a start and end time in HH:MM format.
+ */
+export const TimeSlotSchema = z.object({
+    start: z.string().regex(/^([01]?[0-9]|2[0-3]):[0-5][0-9]$/, 'Invalid time format (HH:MM)').describe("Start time in HH:MM format"),
+    end: z.string().regex(/^([01]?[0-9]|2[0-3]):[0-5][0-9]$/, 'Invalid time format (HH:MM)').describe("End time in HH:MM format"),
+});
+
+/**
+ * Break time schema (alias for TimeSlotSchema).
+ */
+export const BreakTimeSchema = TimeSlotSchema;
+
+/**
+ * Simple day schedule schema.
+ * Defines basic availability for a single day.
+ */
+export const SimpleDayScheduleSchema = z.object({
+    isOpen: z.boolean().describe("Whether available this day"),
+    startTime: z.string().regex(/^([01]?[0-9]|2[0-3]):[0-5][0-9]$/, 'Invalid time format (HH:MM)').describe("Start time"),
+    endTime: z.string().regex(/^([01]?[0-9]|2[0-3]):[0-5][0-9]$/, 'Invalid time format (HH:MM)').describe("End time"),
+});
+
+/**
+ * Day schedule schema with break times.
+ * Extends simple day schedule with break periods.
+ */
+export const DayScheduleSchema = SimpleDayScheduleSchema.extend({
+    breakTimes: z.array(BreakTimeSchema).optional().describe("Break periods during the day"),
+});
+
+/**
+ * Simple weekly schedule schema.
+ * Record of day index (0-6) to simple day schedule.
+ */
+export const SimpleWeeklyScheduleSchema = z.record(
+    z.string().regex(/^[0-6]$/, 'Day must be 0-6'),
+    SimpleDayScheduleSchema
+).describe("Weekly schedule without breaks");
+
+/**
+ * Weekly schedule schema with breaks.
+ * Record of day index (0-6) to full day schedule with breaks.
+ */
+export const WeeklyScheduleSchema = z.record(
+    z.string().regex(/^[0-6]$/, 'Day must be 0-6'),
+    DayScheduleSchema
+).describe("Weekly business hours schedule with breaks");
+
+export type TimeSlot = z.infer<typeof TimeSlotSchema>;
+export type BreakTime = z.infer<typeof BreakTimeSchema>;
+export type SimpleDaySchedule = z.infer<typeof SimpleDayScheduleSchema>;
+export type DaySchedule = z.infer<typeof DayScheduleSchema>;
+export type SimpleWeeklySchedule = z.infer<typeof SimpleWeeklyScheduleSchema>;
+export type WeeklySchedule = z.infer<typeof WeeklyScheduleSchema>;
+
 // Customer-related enums
 export enum CallPriority {
     HIGH = 'high',

@@ -1,15 +1,16 @@
 # Service Management System Overview
 
-This document provides a high-level overview of the Service Management system. For detailed schema documentation, see the domain-specific files in the [service-order-management](./service-order-management/) directory.
+This document provides a high-level overview of the Service Management system. For detailed schema documentation, see the domain-specific files in the [service-appointment-management](./service-appointment-management/) directory.
 
 ## Table of Contents
 
 1. [Overview](#overview)
 2. [Architecture](#architecture)
-3. [Domain Aggregates](#domain-aggregates)
-4. [Schema Relationships](#schema-relationships)
-5. [External Integrations](#external-integrations)
-6. [Best Practices](#best-practices)
+3. [Core Schemas](#core-schemas)
+4. [Domain Aggregates](#domain-aggregates)
+5. [Schema Relationships](#schema-relationships)
+6. [External Integrations](#external-integrations)
+7. [Best Practices](#best-practices)
 
 ---
 
@@ -17,6 +18,7 @@ This document provides a high-level overview of the Service Management system. F
 
 The Service Management system provides a comprehensive solution for managing service-based businesses (salons, spas, consultations, etc.). It supports:
 
+- **Service catalog management** with categories, pricing, and availability
 - **Service providers (staff)** with skills, schedules, and commission tracking
 - **Appointment booking** with calendar integration and multi-channel support
 - **Dynamic field configurations** for customizable booking forms
@@ -34,25 +36,25 @@ The Service Management system provides a comprehensive solution for managing ser
 │                      SERVICE MANAGEMENT SYSTEM                       │
 ├─────────────────────────────────────────────────────────────────────┤
 │                                                                      │
+│  ┌──────────────────┐    ┌──────────────────┐    ┌──────────────┐  │
+│  │  ServiceCategory │───▶│ BusinessService  │───▶│ServiceProvider│  │
+│  │   (grouping)     │    │   (offering)     │    │ (assignment) │  │
+│  └──────────────────┘    └──────────────────┘    └──────────────┘  │
+│                                  │                       │          │
+│                                  │                       │          │
+│                                  ▼                       ▼          │
+│                          ┌──────────────────┐    ┌──────────────┐  │
+│                          │    Service       │    │ServicePerson │  │
+│                          │   Appointment    │    │   (staff)    │  │
+│                          └──────────────────┘    └──────────────┘  │
+│                                  │                       │          │
+│         ┌────────────────────────┼───────────────────────┤          │
+│         │                        │                       │          │
+│         ▼                        ▼                       ▼          │
 │  ┌──────────────┐    ┌──────────────────┐    ┌──────────────────┐  │
-│  │   Service    │───▶│  ServiceProvider │───▶│  ServicePerson   │  │
-│  │  (external)  │    │  (assignment)    │    │     (staff)      │  │
-│  └──────────────┘    └──────────────────┘    └──────────────────┘  │
-│                              │                        │             │
-│                              │                        │             │
-│                              ▼                        ▼             │
-│                      ┌──────────────────┐    ┌──────────────────┐  │
-│                      │    Service       │    │  ServiceProvider │  │
-│                      │   Appointment    │    │    TimeOff       │  │
-│                      └──────────────────┘    └──────────────────┘  │
-│                              │                                      │
-│         ┌────────────────────┼────────────────────┐                │
-│         │                    │                    │                │
-│         ▼                    ▼                    ▼                │
-│  ┌──────────────┐    ┌──────────────────┐    ┌──────────────────┐  │
-│  │ Appointment  │    │  Appointment     │    │  ServiceSlot     │  │
-│  │ FieldConfig  │    │ AdditionalInfo   │    │    Query         │  │
-│  │  (org-level) │    │  (field values)  │    │  (availability)  │  │
+│  │ Appointment  │    │  Appointment     │    │  ServiceProvider │  │
+│  │ FieldConfig  │    │ AdditionalInfo   │    │    TimeOff       │  │
+│  │  (org-level) │    │  (field values)  │    │                  │  │
 │  └──────────────┘    └──────────────────┘    └──────────────────┘  │
 │                                                                      │
 │  ┌──────────────────────────────────────────────────────────────┐  │
@@ -65,11 +67,223 @@ The Service Management system provides a comprehensive solution for managing ser
 
 ---
 
+## Core Schemas
+
+### BusinessServiceConfig
+
+Defines a service offering with pricing, scheduling, and booking rules.
+
+#### Fields
+
+| Field | Type | Required | Default | Description |
+|-------|------|----------|---------|-------------|
+| `id` | string | Yes | auto | Unique identifier |
+| `organizationId` | string | Yes | - | Business account ID |
+| `serviceRevisionId` | string | No | - | Version-scoped data reference |
+| `name` | string | Yes | - | Service name |
+| `description` | string \| null | No | - | Detailed description |
+| `imageUrl` | string \| null | No | - | Service image URL |
+| `categoryId` | string \| null | No | - | Service category ID |
+| `bookingCode` | string \| null | No | - | Short booking code |
+| `duration` | number | Yes | 60 | Duration in minutes (max 480) |
+| `durationSegments` | object \| null | No | - | Segmented duration breakdown |
+| `bufferBefore` | number | Yes | 0 | Buffer before appointment (minutes) |
+| `bufferAfter` | number | Yes | 0 | Buffer after appointment (minutes) |
+| `isBookable` | boolean | Yes | true | Can be booked online |
+| `allowsProcessingChairSwap` | boolean \| null | No | - | Allow resource swap during processing |
+| `serviceAvailability` | object \| null | No | - | Service-specific availability |
+| `maxConcurrentBookings` | number \| null | No | - | Max simultaneous bookings |
+| `basePrice` | number | Yes | 0 | Base price in account currency |
+| `priceMode` | enum \| null | No | - | Pricing mode |
+| `gratuityMode` | enum \| null | No | - | Gratuity policy |
+| `isActive` | boolean | Yes | true | Currently available |
+| `displayOrder` | number \| null | No | - | Display order in listings |
+| `channelMappings` | array \| null | No | - | Per-channel service ID mappings |
+| `primaryServiceUserAccountId` | string \| null | No | - | Primary responsible user |
+| `requiredResources` | string[] | Yes | [] | Required resource IDs |
+| `bookingRules` | object \| null | No | - | Booking constraints |
+| `depositStrategy` | enum \| null | No | - | Deposit strategy |
+| `depositValue` | number \| null | No | - | Deposit amount/percentage |
+| `lateCancelFeePercent` | number | Yes | 0 | Late cancellation fee % |
+| `noShowFeePercent` | number | Yes | 0 | No-show fee % |
+| `requiredDatafieldConfig` | object \| null | No | - | Dynamic field configuration |
+
+#### Example
+
+```json
+{
+  "id": "svc_haircut",
+  "organizationId": "org_salon",
+  "name": "Women's Haircut",
+  "description": "Professional haircut with styling",
+  "categoryId": "cat_hair",
+  "duration": 60,
+  "durationSegments": {
+    "prep": 5,
+    "active": 45,
+    "processing": 0,
+    "finish": 10,
+    "turnover": 5
+  },
+  "bufferBefore": 0,
+  "bufferAfter": 15,
+  "isBookable": true,
+  "basePrice": 75.00,
+  "priceMode": "FIXED",
+  "gratuityMode": "OPTIONAL",
+  "isActive": true,
+  "displayOrder": 1,
+  "bookingRules": {
+    "onlineEnabled": true,
+    "existingOnly": false,
+    "requiresConsult": false,
+    "maxDaysOut": 30,
+    "minNoticeHours": 2,
+    "lateCancelHours": 24
+  },
+  "depositStrategy": "PERCENTAGE",
+  "depositValue": 25,
+  "lateCancelFeePercent": 50,
+  "noShowFeePercent": 100,
+  "createdAt": 1699900000,
+  "updatedAt": 1699900000
+}
+```
+
+---
+
+### ServiceCategory
+
+Groups related services for organization and display.
+
+#### Fields
+
+| Field | Type | Required | Default | Description |
+|-------|------|----------|---------|-------------|
+| `id` | string | Yes | auto | Unique identifier |
+| `organizationId` | string | Yes | - | Business account ID |
+| `serviceRevisionId` | string | No | - | Version-scoped data reference |
+| `name` | string | Yes | - | Category name |
+| `description` | string \| null | No | - | Category description |
+| `imageUrl` | string \| null | No | - | Category image URL |
+| `channelMappings` | array \| null | No | - | Per-channel category ID mappings |
+| `displayOrder` | number \| null | No | - | Display order in listing |
+| `isActive` | boolean | Yes | true | Whether category is active |
+
+#### Example
+
+```json
+{
+  "id": "cat_hair",
+  "organizationId": "org_salon",
+  "name": "Hair Services",
+  "description": "Cuts, coloring, and styling",
+  "imageUrl": "https://cdn.example.com/hair.jpg",
+  "displayOrder": 1,
+  "isActive": true,
+  "createdAt": 1699900000,
+  "updatedAt": 1699900000
+}
+```
+
+---
+
+### ServiceDurationSegments
+
+Breaks down service time into distinct phases.
+
+| Field | Type | Default | Description |
+|-------|------|---------|-------------|
+| `prep` | number | 0 | Preparation time in minutes |
+| `active` | number | 60 | Hands-on active service time |
+| `processing` | number | 0 | Processing/wait time |
+| `finish` | number | 0 | Finishing time |
+| `turnover` | number | 0 | Turnover/reset time |
+
+---
+
+### ServiceAvailability
+
+Configures when a service is available for booking.
+
+| Field | Type | Default | Description |
+|-------|------|---------|-------------|
+| `mode` | enum | INHERIT | Availability mode |
+| `weeklySchedule` | object | - | Weekly schedule (required when SCHEDULED) |
+| `dateRanges` | array | - | Seasonal availability or blackout periods |
+
+---
+
+### ServiceBookingRules
+
+Configures booking constraints and policies.
+
+| Field | Type | Default | Description |
+|-------|------|---------|-------------|
+| `onlineEnabled` | boolean | true | Online booking enabled |
+| `existingOnly` | boolean | false | Only existing customers can book |
+| `requiresConsult` | boolean | false | Consultation required first |
+| `maxDaysOut` | number | 30 | Max days in advance |
+| `minNoticeHours` | number | 0 | Minimum booking notice (hours) |
+| `lateCancelHours` | number | 24 | Late cancellation threshold (hours) |
+
+---
+
+### ServiceAppointmentFieldConfig
+
+Service-level field configuration (embedded in BusinessServiceConfig).
+
+| Field | Type | Default | Description |
+|-------|------|---------|-------------|
+| `inheritedFieldKeys` | string[] | [] | Field keys inherited from org-level |
+| `fieldOverrides` | array | [] | Service-specific field overrides |
+| `additionalFields` | array | [] | Additional service-specific fields |
+| `isActive` | boolean | true | Whether config is active |
+| `reuseDetails` | boolean | false | Reuse customer details |
+
+---
+
+## Enums
+
+### ServicePriceMode
+
+| Value | Description |
+|-------|-------------|
+| `FIXED` | Fixed price for the service |
+| `STARTS_AT` | Starting price, final may vary |
+| `VARIABLE` | Variable pricing based on factors |
+
+### ServiceGratuityMode
+
+| Value | Description |
+|-------|-------------|
+| `NONE` | No gratuity accepted |
+| `OPTIONAL` | Gratuity is optional |
+| `REQUIRED` | Gratuity is required |
+
+### ServiceAvailabilityMode
+
+| Value | Description |
+|-------|-------------|
+| `ALWAYS` | Service available 24/7 |
+| `SCHEDULED` | Service follows custom schedule |
+| `INHERIT` | Service inherits business hours |
+
+### ServiceDepositStrategy
+
+| Value | Description |
+|-------|-------------|
+| `NONE` | No deposit required |
+| `FIXED` | Fixed deposit amount |
+| `PERCENTAGE` | Percentage of service price |
+
+---
+
 ## Domain Aggregates
 
 The Service Management system is organized into distinct domain aggregates:
 
-### [Service Providers](./service-order-management/service-providers.md)
+### [Service Providers](./service-appointment-management/service-providers.md)
 
 Staff members who perform services.
 
@@ -90,7 +304,7 @@ Staff members who perform services.
 
 ---
 
-### [Service Appointments](./service-order-management/service-appointments.md)
+### [Service Appointments](./service-appointment-management/service-appointments.md)
 
 Booking management and calendar integration.
 
@@ -112,7 +326,7 @@ Booking management and calendar integration.
 
 ---
 
-### [Dynamic Field Configuration](./service-order-management/appointment-fields.md)
+### [Dynamic Field Configuration](./service-appointment-management/appointment-fields.md)
 
 Customizable booking form fields.
 
@@ -131,7 +345,7 @@ Customizable booking form fields.
 
 ---
 
-### [Service Pricing Rules](./service-order-management/service-pricing-rules.md)
+### [Service Pricing Rules](./service-appointment-management/service-pricing-rules.md)
 
 Conditional pricing and promotions.
 
@@ -158,39 +372,48 @@ Conditional pricing and promotions.
 │                           SCHEMA RELATIONSHIPS                               │
 └─────────────────────────────────────────────────────────────────────────────┘
 
-                    ┌──────────────────┐
-                    │  ServicePerson   │
-                    │  (staff member)  │
-                    └────────┬─────────┘
-                             │
-            ┌────────────────┼────────────────┐
-            │                │                │
-            ▼                ▼                ▼
-   ┌─────────────────┐  ┌─────────────┐  ┌─────────────────┐
-   │ ServiceProvider │  │ TimeOff     │  │ ServiceSlot     │
-   │ (service join)  │  │ (absence)   │  │ Query           │
-   └────────┬────────┘  └─────────────┘  └─────────────────┘
-            │
-            │ references
-            ▼
-   ┌─────────────────┐     ┌──────────────────────┐
-   │ Service         │     │ AppointmentFieldConfig│
-   │ (external)      │     │ (org-level fields)   │
-   └────────┬────────┘     └──────────┬───────────┘
-            │                         │
-            │                         │ defines fields for
-            ▼                         ▼
-   ┌─────────────────┐     ┌──────────────────────┐
-   │ ServiceAppoint- │────▶│ AppointmentAdditional│
-   │ ment            │     │ Info (field values)  │
-   └────────┬────────┘     └──────────────────────┘
-            │
-            │ applies
-            ▼
-   ┌─────────────────┐
-   │ServicePricing   │
-   │Rule             │
-   └─────────────────┘
+         ┌──────────────────┐
+         │ ServiceCategory  │
+         │   (grouping)     │
+         └────────┬─────────┘
+                  │ 1:N
+                  ▼
+         ┌──────────────────┐
+         │ BusinessService  │───────────────────────┐
+         │   (offering)     │                       │
+         └────────┬─────────┘                       │
+                  │                                 │
+     ┌────────────┼────────────┐                    │
+     │            │            │                    │
+     ▼            ▼            ▼                    │
+┌─────────────┐ ┌─────────────┐ ┌─────────────────┐ │
+│ServiceAvail-│ │ServiceDura- │ │ServiceBooking   │ │
+│ability      │ │tionSegments │ │Rules            │ │
+└─────────────┘ └─────────────┘ └─────────────────┘ │
+                                                    │
+                  ┌─────────────────────────────────┘
+                  │
+                  ▼
+         ┌──────────────────┐
+         │ ServiceProvider  │
+         │  (assignment)    │
+         └────────┬─────────┘
+                  │
+     ┌────────────┼────────────┐
+     │            │            │
+     ▼            ▼            ▼
+┌─────────────┐ ┌─────────────┐ ┌─────────────────┐
+│ServicePerson│ │ServiceAppt  │ │ServiceProvider  │
+│  (staff)    │ │             │ │TimeOff          │
+└─────────────┘ └─────────────┘ └─────────────────┘
+                      │
+         ┌────────────┼────────────┐
+         │            │            │
+         ▼            ▼            ▼
+┌─────────────┐ ┌─────────────────┐ ┌─────────────────┐
+│Appointment  │ │AppointmentAddi- │ │ServicePricing   │
+│FieldConfig  │ │tionalInfo       │ │Rule             │
+└─────────────┘ └─────────────────┘ └─────────────────┘
 ```
 
 ---
@@ -207,18 +430,23 @@ The system supports integration with external calendar and booking platforms:
 | Outlook | Microsoft Outlook calendar sync |
 | Calendly | Calendly integration for external bookings |
 
-### External Reference (Appointments)
+### Channel Mappings
 
-For appointments synced from external platforms:
+For services synced with external platforms:
 
 ```json
 {
-  "externalRef": {
-    "externalId": "calendly_event_12345",
-    "source": "calendly",
-    "url": "https://calendly.com/event/12345",
-    "syncedAt": 1699900000
-  }
+  "channelMappings": [
+    {
+      "channelId": "mindbody",
+      "externalServiceId": "mb_12345",
+      "externalCategoryId": "mb_cat_hair"
+    },
+    {
+      "channelId": "yelp",
+      "externalServiceId": "yelp_service_abc"
+    }
+  ]
 }
 ```
 
@@ -226,50 +454,66 @@ For appointments synced from external platforms:
 
 ## Best Practices
 
+### Service Configuration
+
+1. **Organize with categories** - Group related services into categories for better navigation.
+
+2. **Use duration segments** - Break down complex services into prep/active/processing/finish/turnover phases.
+
+3. **Set appropriate buffers** - Use `bufferBefore` and `bufferAfter` to prevent scheduling conflicts.
+
+4. **Configure booking rules** - Set `maxDaysOut`, `minNoticeHours`, and `lateCancelHours` to match business policies.
+
+5. **Use deposit strategies** - Require deposits for high-value or frequently cancelled services.
+
 ### Provider Management
 
-1. **Always link user accounts** - Connect ServicePerson to userAccountId for calendar sync and staff login.
+6. **Always link user accounts** - Connect ServicePerson to userAccountId for calendar sync and staff login.
 
-2. **Define skills consistently** - Use organization-level skill definitions and assign to providers.
+7. **Define skills consistently** - Use organization-level skill definitions and assign to providers.
 
-3. **Set explicit schedules** - Link providers to scheduleId for accurate availability calculations.
+8. **Set explicit schedules** - Link providers to scheduleId for accurate availability calculations.
 
-4. **Use location assignments** - Assign providers to specific locations or leave null for all-location availability.
+9. **Use location assignments** - Assign providers to specific locations or leave null for all-location availability.
 
 ### Appointments
 
-5. **Capture customer info at booking** - Store customerName and customerEmail for communication.
+10. **Capture customer info at booking** - Store customerName and customerEmail for communication.
 
-6. **Use pricing breakdowns** - Store detailed pricing in the `pricing` field for transparency.
+11. **Use pricing breakdowns** - Store detailed pricing in the `pricing` field for transparency.
 
-7. **Track deposits separately** - Use `depositPaid` field for partial payment tracking.
+12. **Track deposits separately** - Use `depositPaid` field for partial payment tracking.
 
-8. **Record cancellation reasons** - Always populate `cancelReason` when cancelling.
+13. **Record cancellation reasons** - Always populate `cancelReason` when cancelling.
 
 ### Dynamic Fields
 
-9. **Design fields at org level** - Define reusable field configurations that services can inherit.
+14. **Design fields at org level** - Define reusable field configurations that services can inherit.
 
-10. **Enable data reuse** - Set `reuseDetails: true` to pre-populate forms for returning customers.
+15. **Enable data reuse** - Set `reuseDetails: true` to pre-populate forms for returning customers.
 
-11. **Group related fields** - Use field groups for logical form sections.
+16. **Group related fields** - Use field groups for logical form sections.
 
 ### Pricing Rules
 
-12. **Use effective dates** - Schedule promotions with `effectiveFrom`/`effectiveTo` timestamps.
+17. **Use effective dates** - Schedule promotions with `effectiveFrom`/`effectiveTo` timestamps.
 
-13. **Set appropriate priorities** - Higher priority rules take precedence.
+18. **Set appropriate priorities** - Higher priority rules take precedence.
 
-14. **Consider stackability** - Decide if rules should combine or be exclusive.
+19. **Consider stackability** - Decide if rules should combine or be exclusive.
 
 ---
 
 ## Quick Reference
 
-### Enums
+### All Enums
 
 | Enum | Values |
 |------|--------|
+| ServicePriceMode | FIXED, STARTS_AT, VARIABLE |
+| ServiceGratuityMode | NONE, OPTIONAL, REQUIRED |
+| ServiceAvailabilityMode | ALWAYS, SCHEDULED, INHERIT |
+| ServiceDepositStrategy | NONE, FIXED, PERCENTAGE |
 | AppointmentStatus | pending, confirmed, completed, cancelled, no_show |
 | CalendarProvider | google, outlook, calendly |
 | ServiceProviderTimeOffType | recurring, specific |

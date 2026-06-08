@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.53**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ProductVariantQueryOptions
 
-Defined in: src/core/business-mgt/product-management/product-variant.schema.ts:186
+Defined in: [src/core/business-mgt/product-management/product-variant.schema.ts:186](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/product-management/product-variant.schema.ts#L186)
 
 Product variant query options.
  ProductVariantQueryOptions
@@ -15,7 +15,7 @@ Product variant query options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | Page number (1-indexed) | src/core/business-mgt/product-management/product-variant.schema.ts:188 |
-| <a id="pagesize"></a> `pageSize` | `number` | Items per page | src/core/business-mgt/product-management/product-variant.schema.ts:190 |
-| <a id="filters"></a> `filters?` | [`ProductVariantFilters`](ProductVariantFilters.md) | Optional filters | src/core/business-mgt/product-management/product-variant.schema.ts:192 |
-| <a id="sorting"></a> `sorting?` | [`ProductVariantSorting`](ProductVariantSorting.md) | Optional sorting | src/core/business-mgt/product-management/product-variant.schema.ts:194 |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/product-management/product-variant.schema.ts:188](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/product-management/product-variant.schema.ts#L188) |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/product-management/product-variant.schema.ts:190](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/product-management/product-variant.schema.ts#L190) |
+| <a id="filters"></a> `filters?` | [`ProductVariantFilters`](ProductVariantFilters.md) | Optional filters | [src/core/business-mgt/product-management/product-variant.schema.ts:192](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/product-management/product-variant.schema.ts#L192) |
+| <a id="sorting"></a> `sorting?` | [`ProductVariantSorting`](ProductVariantSorting.md) | Optional sorting | [src/core/business-mgt/product-management/product-variant.schema.ts:194](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/product-management/product-variant.schema.ts#L194) |

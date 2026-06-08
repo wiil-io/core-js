@@ -67,13 +67,14 @@ ServicePricingRuleSchema = BaseModelSchema.safeExtend({
 
 ```typescript
 enum PricingRuleApplyLevel {
+    ITEM = "ITEM",    // Apply to each matching line item
     ORDER = "ORDER",  // Apply once to entire order
-    LINE = "LINE",    // Apply to each matching line item
 }
 
 enum PricingRuleAdjustmentType {
     PERCENTAGE = "PERCENTAGE",  // Percentage discount (0-100)
     FIXED = "FIXED",            // Fixed amount discount
+    OVERRIDE = "OVERRIDE",      // Override the price entirely
 }
 
 enum PricingChannel {
@@ -90,7 +91,9 @@ enum PricingChannel {
 ```typescript
 interface PricingRuleAction {
     adjustmentType: PricingRuleAdjustmentType;
-    adjustmentValue: number;  // Percentage (0-100) or fixed amount
+    adjustmentValue: number;        // Percentage (0-100) or fixed amount
+    currency: string;               // Currency code (default: "USD")
+    maxAdjustmentAmount?: number;   // Maximum adjustment cap
 }
 ```
 
@@ -114,16 +117,15 @@ interface PricingRuleAction {
     "allServices": true,
     "serviceIdsAny": [],
     "serviceIdsAll": [],
-    "daysOfWeek": ["1", "2", "3", "4", "5"],
-    "timeRange": {
-      "startMinute": 840,
-      "endMinute": 1020
-    },
+    "daysOfWeek": [1, 2, 3, 4, 5],
+    "startMinute": 840,
+    "endMinute": 1020,
     "channel": "ALL"
   },
   "action": {
     "adjustmentType": "PERCENTAGE",
-    "adjustmentValue": 20
+    "adjustmentValue": 20,
+    "currency": "USD"
   },
   "effectiveFrom": 1704067200,
   "effectiveTo": 1735689600,
@@ -156,20 +158,21 @@ ServicePricingRuleConditionSchema = PricingRuleCommonConditionSchema.safeExtend(
 | `allServices` | boolean | Yes | Apply to all services (default: false) |
 | `serviceIdsAny` | string[] | Yes | Match if ANY of these services (default: []) |
 | `serviceIdsAll` | string[] | Yes | Match only if ALL these services present (default: []) |
-| `daysOfWeek` | string[] | No | Days of week (0=Sunday, 6=Saturday) |
-| `timeRange` | object | No | Time range within day |
+| `daysOfWeek` | number[] | No | Days of week (0=Sunday, 6=Saturday) |
+| `startMinute` | number | No | Start minute of day (0-1439) |
+| `endMinute` | number | No | End minute of day (0-1439) |
+| `customerSegmentIds` | string[] | No | Target customer segment IDs |
 | `channel` | enum | Yes | Pricing channel (default: ALL) |
 
 ### Common Condition Fields (inherited)
 
 ```typescript
 interface PricingRuleCommonCondition {
-    daysOfWeek?: string[];  // ["0", "1", "2", "3", "4", "5", "6"]
-    timeRange?: {
-        startMinute: number;  // Minutes from midnight (0-1439)
-        endMinute: number;    // Minutes from midnight (1-1440)
-    };
-    channel: PricingChannel;
+    daysOfWeek?: number[];           // [0, 1, 2, 3, 4, 5, 6] (0=Sunday, 6=Saturday)
+    startMinute?: number;            // Minutes from midnight (0-1439)
+    endMinute?: number;              // Minutes from midnight (0-1439)
+    customerSegmentIds?: string[];   // Target customer segment IDs
+    channel: PricingChannel;         // Default: ALL
 }
 ```
 
@@ -217,11 +220,9 @@ interface PricingRuleCommonCondition {
   "allServices": true,
   "serviceIdsAny": [],
   "serviceIdsAll": [],
-  "daysOfWeek": ["1", "2", "3", "4", "5"],
-  "timeRange": {
-    "startMinute": 840,
-    "endMinute": 1020
-  },
+  "daysOfWeek": [1, 2, 3, 4, 5],
+  "startMinute": 840,
+  "endMinute": 1020,
   "channel": "ALL"
 }
 ```

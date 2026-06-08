@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.53**](../README.md)
 
 ***
 
@@ -98,6 +98,12 @@ Central export point for all type definitions.
 | Type Alias | Description |
 | ------ | ------ |
 | [ExternalRef](type-aliases/ExternalRef.md) | External reference schema for synchronization with external systems. |
+| [TimeSlot](type-aliases/TimeSlot.md) | Time slot schema for scheduling. Defines a start and end time in HH:MM format. |
+| [BreakTime](type-aliases/BreakTime.md) | Break time schema (alias for TimeSlotSchema). |
+| [SimpleDaySchedule](type-aliases/SimpleDaySchedule.md) | Simple day schedule schema. Defines basic availability for a single day. |
+| [DaySchedule](type-aliases/DaySchedule.md) | Day schedule schema with break times. Extends simple day schedule with break periods. |
+| [SimpleWeeklySchedule](type-aliases/SimpleWeeklySchedule.md) | Simple weekly schedule schema. Record of day index (0-6) to simple day schedule. |
+| [WeeklySchedule](type-aliases/WeeklySchedule.md) | Weekly schedule schema with breaks. Record of day index (0-6) to full day schedule with breaks. |
 | [DisplayOrderPositionMode](type-aliases/DisplayOrderPositionMode.md) | Display order position mode enum. |
 | [DisplayOrderPositionIntent](type-aliases/DisplayOrderPositionIntent.md) | Display order position intent schema. |
 | [CreateDisplayOrderPlacement](type-aliases/CreateDisplayOrderPlacement.md) | Create display order placement schema for create-time positioning. |
@@ -118,6 +124,12 @@ Central export point for all type definitions.
 | [ExternalRefSchema](variables/ExternalRefSchema.md) | External reference schema for synchronization with external systems. |
 | [DAYS\_OF\_WEEK](variables/DAYS_OF_WEEK.md) | - |
 | [TIMEZONES](variables/TIMEZONES.md) | - |
+| [TimeSlotSchema](variables/TimeSlotSchema.md) | Time slot schema for scheduling. Defines a start and end time in HH:MM format. |
+| [BreakTimeSchema](variables/BreakTimeSchema.md) | Break time schema (alias for TimeSlotSchema). |
+| [SimpleDayScheduleSchema](variables/SimpleDayScheduleSchema.md) | Simple day schedule schema. Defines basic availability for a single day. |
+| [DayScheduleSchema](variables/DayScheduleSchema.md) | Day schedule schema with break times. Extends simple day schedule with break periods. |
+| [SimpleWeeklyScheduleSchema](variables/SimpleWeeklyScheduleSchema.md) | Simple weekly schedule schema. Record of day index (0-6) to simple day schedule. |
+| [WeeklyScheduleSchema](variables/WeeklyScheduleSchema.md) | Weekly schedule schema with breaks. Record of day index (0-6) to full day schedule with breaks. |
 | [DisplayOrderPositionModeSchema](variables/DisplayOrderPositionModeSchema.md) | Display order position mode enum. |
 | [DisplayOrderPositionIntentSchema](variables/DisplayOrderPositionIntentSchema.md) | Display order position intent schema. |
 | [DisplayOrderRequestSchema](variables/DisplayOrderRequestSchema.md) | Display order request schema for item positioning. |

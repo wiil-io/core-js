@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.53**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ResourceInstanceSorting
 
-Defined in: src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:131
+Defined in: [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:131](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L131)
 
 Resource instance sorting options.
  ResourceInstanceSorting
@@ -15,5 +15,5 @@ Resource instance sorting options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="field"></a> `field` | `"createdAt"` \| `"status"` \| `"name"` | Field to sort by | src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:133 |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:135 |
+| <a id="field"></a> `field` | `"createdAt"` \| `"status"` \| `"name"` | Field to sort by | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:133](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L133) |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:135](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L135) |

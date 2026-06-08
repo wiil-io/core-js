@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.53**](../../README.md)
 
 ***
 
@@ -17,7 +17,7 @@ type CreateAttributeDef = {
 };
 ```
 
-Defined in: src/core/business-mgt/product-management/product-config.schema.ts:449
+Defined in: [src/core/business-mgt/product-management/product-config.schema.ts:449](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/product-management/product-config.schema.ts#L449)
 
 Schema for creating a new attribute definition.
 Omits auto-generated fields.
@@ -26,9 +26,9 @@ Omits auto-generated fields.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="name"></a> `name` | `string` | src/core/business-mgt/product-management/product-config.schema.ts:79 |
-| <a id="slug"></a> `slug` | `string` | src/core/business-mgt/product-management/product-config.schema.ts:80 |
-| <a id="type"></a> `type` | [`AttributeDefType`](../enumerations/AttributeDefType.md) | src/core/business-mgt/product-management/product-config.schema.ts:81 |
-| <a id="unit"></a> `unit?` | `string` \| `null` | src/core/business-mgt/product-management/product-config.schema.ts:82 |
-| <a id="enumvalues"></a> `enumValues?` | `string`[] \| `null` | src/core/business-mgt/product-management/product-config.schema.ts:83 |
-| <a id="isactive"></a> `isActive` | `boolean` | src/core/business-mgt/product-management/product-config.schema.ts:84 |
+| <a id="name"></a> `name` | `string` | [src/core/business-mgt/product-management/product-config.schema.ts:79](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/product-management/product-config.schema.ts#L79) |
+| <a id="slug"></a> `slug` | `string` | [src/core/business-mgt/product-management/product-config.schema.ts:80](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/product-management/product-config.schema.ts#L80) |
+| <a id="type"></a> `type` | [`AttributeDefType`](../enumerations/AttributeDefType.md) | [src/core/business-mgt/product-management/product-config.schema.ts:81](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/product-management/product-config.schema.ts#L81) |
+| <a id="unit"></a> `unit?` | `string` \| `null` | [src/core/business-mgt/product-management/product-config.schema.ts:82](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/product-management/product-config.schema.ts#L82) |
+| <a id="enumvalues"></a> `enumValues?` | `string`[] \| `null` | [src/core/business-mgt/product-management/product-config.schema.ts:83](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/product-management/product-config.schema.ts#L83) |
+| <a id="isactive"></a> `isActive` | `boolean` | [src/core/business-mgt/product-management/product-config.schema.ts:84](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/product-management/product-config.schema.ts#L84) |

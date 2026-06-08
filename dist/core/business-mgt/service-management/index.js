@@ -20,6 +20,7 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./appointment-additional-info.schema"), exports);
 __exportStar(require("./appointment-field-config.schema"), exports);
+__exportStar(require("./business-service-config.schema"), exports);
 __exportStar(require("./service-appointment.schema"), exports);
 __exportStar(require("./service-person.schema"), exports);
 __exportStar(require("./service-pricing-rule.schema"), exports);

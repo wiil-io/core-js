@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.53**](../../README.md)
 
 ***
 
@@ -13,7 +13,7 @@ type MenuCategoryChannelMapping = {
 };
 ```
 
-Defined in: src/core/business-mgt/menu-management/menu-config.schema.ts:187
+Defined in: [src/core/business-mgt/menu-management/menu-config.schema.ts:187](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/menu-management/menu-config.schema.ts#L187)
 
 Menu category channel mapping schema.
 Maps menu categories to external platform identifiers.
@@ -22,5 +22,5 @@ Maps menu categories to external platform identifiers.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="channelid"></a> `channelId` | `string` | src/core/business-mgt/menu-management/menu-config.schema.ts:26 |
-| <a id="externalcategoryid"></a> `externalCategoryId` | `string` | src/core/business-mgt/menu-management/menu-config.schema.ts:27 |
+| <a id="channelid"></a> `channelId` | `string` | [src/core/business-mgt/menu-management/menu-config.schema.ts:26](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/menu-management/menu-config.schema.ts#L26) |
+| <a id="externalcategoryid"></a> `externalCategoryId` | `string` | [src/core/business-mgt/menu-management/menu-config.schema.ts:27](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/menu-management/menu-config.schema.ts#L27) |

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.53**](../../README.md)
 
 ***
 
@@ -27,7 +27,7 @@ type UpdateTableAssignment = {
 };
 ```
 
-Defined in: src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:99
+Defined in: [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:99](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L99)
 
 Schema for updating an existing table assignment.
 All fields optional except id.
@@ -36,16 +36,16 @@ All fields optional except id.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="locationid"></a> `locationId?` | `string` \| `null` | src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:57 |
-| <a id="reservationid"></a> `reservationId?` | `string` | src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:58 |
-| <a id="tableinstanceid"></a> `tableInstanceId?` | `string` | src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:59 |
-| <a id="floorplanid"></a> `floorPlanId?` | `string` | src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:60 |
-| <a id="floorplansectionid"></a> `floorPlanSectionId?` | `string` \| `null` | src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:61 |
-| <a id="assignmenttype"></a> `assignmentType?` | \| [`SOFT`](../enumerations/TableAssignmentType.md#soft) \| [`HARD`](../enumerations/TableAssignmentType.md#hard) | src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:62 |
-| <a id="status"></a> `status?` | \| [`ASSIGNED`](../enumerations/TableAssignmentStatus.md#assigned) \| [`REASSIGNED`](../enumerations/TableAssignmentStatus.md#reassigned) \| [`RELEASED`](../enumerations/TableAssignmentStatus.md#released) | src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:63 |
-| <a id="assignedat"></a> `assignedAt?` | `number` | src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:64 |
-| <a id="assignedby"></a> `assignedBy?` | `string` \| `null` | src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:65 |
-| <a id="releasedat"></a> `releasedAt?` | `number` \| `null` | src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:66 |
-| <a id="releasedby"></a> `releasedBy?` | `string` \| `null` | src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:67 |
-| <a id="notes"></a> `notes?` | `string` \| `null` | src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:68 |
-| <a id="id"></a> `id` | `string` | src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:90 |
+| <a id="locationid"></a> `locationId?` | `string` \| `null` | [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:57](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L57) |
+| <a id="reservationid"></a> `reservationId?` | `string` | [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:58](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L58) |
+| <a id="tableinstanceid"></a> `tableInstanceId?` | `string` | [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:59](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L59) |
+| <a id="floorplanid"></a> `floorPlanId?` | `string` | [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:60](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L60) |
+| <a id="floorplansectionid"></a> `floorPlanSectionId?` | `string` \| `null` | [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:61](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L61) |
+| <a id="assignmenttype"></a> `assignmentType?` | \| [`SOFT`](../enumerations/TableAssignmentType.md#soft) \| [`HARD`](../enumerations/TableAssignmentType.md#hard) | [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:62](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L62) |
+| <a id="status"></a> `status?` | \| [`ASSIGNED`](../enumerations/TableAssignmentStatus.md#assigned) \| [`REASSIGNED`](../enumerations/TableAssignmentStatus.md#reassigned) \| [`RELEASED`](../enumerations/TableAssignmentStatus.md#released) | [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:63](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L63) |
+| <a id="assignedat"></a> `assignedAt?` | `number` | [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:64](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L64) |
+| <a id="assignedby"></a> `assignedBy?` | `string` \| `null` | [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:65](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L65) |
+| <a id="releasedat"></a> `releasedAt?` | `number` \| `null` | [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:66](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L66) |
+| <a id="releasedby"></a> `releasedBy?` | `string` \| `null` | [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:67](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L67) |
+| <a id="notes"></a> `notes?` | `string` \| `null` | [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:68](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L68) |
+| <a id="id"></a> `id` | `string` | [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:90](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L90) |

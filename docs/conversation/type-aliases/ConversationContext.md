@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.53**](../../README.md)
 
 ***
 
@@ -19,7 +19,7 @@ type ConversationContext = {
 };
 ```
 
-Defined in: [src/core/conversation/conversation-config.schema.ts:149](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/conversation/conversation-config.schema.ts#L149)
+Defined in: [src/core/conversation/conversation-config.schema.ts:149](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/conversation/conversation-config.schema.ts#L149)
 
 Conversation context schema.
 
@@ -31,11 +31,11 @@ when users click through from specific pages or marketing campaigns.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="message"></a> `message?` | `string` | [src/core/conversation/conversation-config.schema.ts:139](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/conversation/conversation-config.schema.ts#L139) |
-| <a id="productid"></a> `productId?` | `string` | [src/core/conversation/conversation-config.schema.ts:140](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/conversation/conversation-config.schema.ts#L140) |
-| <a id="menuitemid"></a> `menuItemId?` | `string` | [src/core/conversation/conversation-config.schema.ts:141](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/conversation/conversation-config.schema.ts#L141) |
-| <a id="serviceid"></a> `serviceId?` | `string` | [src/core/conversation/conversation-config.schema.ts:142](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/conversation/conversation-config.schema.ts#L142) |
-| <a id="propertyid"></a> `propertyId?` | `string` | [src/core/conversation/conversation-config.schema.ts:143](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/conversation/conversation-config.schema.ts#L143) |
-| <a id="resourceid"></a> `resourceId?` | `string` | [src/core/conversation/conversation-config.schema.ts:144](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/conversation/conversation-config.schema.ts#L144) |
-| <a id="requiredserviceid"></a> `requiredServiceId?` | `string` | [src/core/conversation/conversation-config.schema.ts:145](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/conversation/conversation-config.schema.ts#L145) |
-| <a id="locationid"></a> `locationId?` | `string` | [src/core/conversation/conversation-config.schema.ts:146](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/conversation/conversation-config.schema.ts#L146) |
+| <a id="message"></a> `message?` | `string` | [src/core/conversation/conversation-config.schema.ts:139](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/conversation/conversation-config.schema.ts#L139) |
+| <a id="productid"></a> `productId?` | `string` | [src/core/conversation/conversation-config.schema.ts:140](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/conversation/conversation-config.schema.ts#L140) |
+| <a id="menuitemid"></a> `menuItemId?` | `string` | [src/core/conversation/conversation-config.schema.ts:141](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/conversation/conversation-config.schema.ts#L141) |
+| <a id="serviceid"></a> `serviceId?` | `string` | [src/core/conversation/conversation-config.schema.ts:142](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/conversation/conversation-config.schema.ts#L142) |
+| <a id="propertyid"></a> `propertyId?` | `string` | [src/core/conversation/conversation-config.schema.ts:143](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/conversation/conversation-config.schema.ts#L143) |
+| <a id="resourceid"></a> `resourceId?` | `string` | [src/core/conversation/conversation-config.schema.ts:144](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/conversation/conversation-config.schema.ts#L144) |
+| <a id="requiredserviceid"></a> `requiredServiceId?` | `string` | [src/core/conversation/conversation-config.schema.ts:145](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/conversation/conversation-config.schema.ts#L145) |
+| <a id="locationid"></a> `locationId?` | `string` | [src/core/conversation/conversation-config.schema.ts:146](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/conversation/conversation-config.schema.ts#L146) |

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.53**](../../README.md)
 
 ***
 
@@ -17,7 +17,7 @@ type SupportedVoices = {
 }[];
 ```
 
-Defined in: [src/core/service-configuration/voice-language.schema.ts:142](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/service-configuration/voice-language.schema.ts#L142)
+Defined in: [src/core/service-configuration/voice-language.schema.ts:142](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/service-configuration/voice-language.schema.ts#L142)
 
 Type definition for supported voices array.
 
@@ -25,9 +25,9 @@ Type definition for supported voices array.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| `voiceId` | `string` | [src/core/service-configuration/voice-language.schema.ts:70](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/service-configuration/voice-language.schema.ts#L70) |
-| `name` | `string` | [src/core/service-configuration/voice-language.schema.ts:71](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/service-configuration/voice-language.schema.ts#L71) |
-| `description` | `string` | [src/core/service-configuration/voice-language.schema.ts:72](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/service-configuration/voice-language.schema.ts#L72) |
-| `gender` | `"neutral"` \| `"male"` \| `"female"` | [src/core/service-configuration/voice-language.schema.ts:73](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/service-configuration/voice-language.schema.ts#L73) |
-| `language?` | `string` \| `null` | [src/core/service-configuration/voice-language.schema.ts:74](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/service-configuration/voice-language.schema.ts#L74) |
-| `isDefault` | `boolean` | [src/core/service-configuration/voice-language.schema.ts:75](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/service-configuration/voice-language.schema.ts#L75) |
+| `voiceId` | `string` | [src/core/service-configuration/voice-language.schema.ts:70](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/service-configuration/voice-language.schema.ts#L70) |
+| `name` | `string` | [src/core/service-configuration/voice-language.schema.ts:71](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/service-configuration/voice-language.schema.ts#L71) |
+| `description` | `string` | [src/core/service-configuration/voice-language.schema.ts:72](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/service-configuration/voice-language.schema.ts#L72) |
+| `gender` | `"neutral"` \| `"male"` \| `"female"` | [src/core/service-configuration/voice-language.schema.ts:73](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/service-configuration/voice-language.schema.ts#L73) |
+| `language?` | `string` \| `null` | [src/core/service-configuration/voice-language.schema.ts:74](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/service-configuration/voice-language.schema.ts#L74) |
+| `isDefault` | `boolean` | [src/core/service-configuration/voice-language.schema.ts:75](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/service-configuration/voice-language.schema.ts#L75) |

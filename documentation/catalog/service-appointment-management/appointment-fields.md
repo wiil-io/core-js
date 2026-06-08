@@ -63,30 +63,54 @@ AppointmentFieldConfigSchema = BaseModelSchema.safeExtend({
 
 ```typescript
 interface FieldDefinition {
-    fieldKey: string;           // Unique key within config
-    fieldType: DynamicFieldType; // Field type
-    label: string;              // Display label
-    placeholder?: string;       // Placeholder text
-    helpText?: string;          // Help/description text
-    required?: boolean;         // Is field required
-    groupKey?: string;          // Group this field belongs to
-    displayOrder?: number;      // Sort order within group
-    options?: SelectOption[];   // For select/multiselect types
-    validation?: FieldValidation; // Validation rules
+    fieldKey: string;               // Unique key (lowercase alphanumeric with underscores)
+    fieldType: DynamicFieldType;    // Field type
+    label: string;                  // Display label
+    description?: string;           // Field description
+    groupKey?: string;              // Group this field belongs to
+    options?: FieldOption[];        // For select/multiselect types
+    defaultValue?: any;             // Default value
+    isActive?: boolean;             // Whether field is active
+    condition?: FieldCondition;     // Conditional visibility
+    validation?: FieldValidationRules; // Validation rules
+    uiHints?: FieldUIHints;         // UI rendering hints
+}
+
+interface FieldValidationRules {
+    required?: boolean;
+    minLength?: number;
+    maxLength?: number;
+    min?: number;
+    max?: number;
+    pattern?: string;
+    patternMessage?: string;
+}
+
+interface FieldUIHints {
+    placeholder?: string;
+    helpText?: string;
+    displayOrder?: number;
+    width?: "full" | "half" | "third";
+}
+
+interface FieldCondition {
+    dependsOn: string;              // Field key this depends on
+    operator: ConditionOperator;    // Condition operator
+    value?: any;                    // Value to compare
 }
 
 enum DynamicFieldType {
     TEXT = "text",
+    TEXTAREA = "textarea",
     NUMBER = "number",
     BOOLEAN = "boolean",
     DATE = "date",
+    TIME = "time",
     DATETIME = "datetime",
-    SELECT = "select",
-    MULTISELECT = "multiselect",
     EMAIL = "email",
     PHONE = "phone",
-    URL = "url",
-    TEXTAREA = "textarea",
+    SELECT = "select",
+    MULTISELECT = "multiselect",
 }
 ```
 
@@ -94,11 +118,12 @@ enum DynamicFieldType {
 
 ```typescript
 interface FieldGroup {
-    groupKey: string;       // Unique key
-    label: string;          // Display label
-    description?: string;   // Group description
-    collapsible?: boolean;  // Can group collapse
-    displayOrder?: number;  // Sort order
+    groupKey: string;           // Unique key
+    label: string;              // Display label
+    description?: string;       // Group description
+    displayOrder?: number;      // Sort order
+    collapsible?: boolean;      // Can group collapse
+    defaultCollapsed?: boolean; // Initial collapsed state
 }
 ```
 
@@ -112,37 +137,43 @@ interface FieldGroup {
       "fieldKey": "preferred_stylist",
       "fieldType": "select",
       "label": "Preferred Stylist",
-      "required": false,
       "groupKey": "preferences",
-      "displayOrder": 1,
       "options": [
-        { "value": "no_preference", "label": "No Preference" },
-        { "value": "jane", "label": "Jane Smith" },
-        { "value": "john", "label": "John Doe" }
-      ]
+        { "value": "no_preference", "label": "No Preference", "displayOrder": 0 },
+        { "value": "jane", "label": "Jane Smith", "displayOrder": 1 },
+        { "value": "john", "label": "John Doe", "displayOrder": 2 }
+      ],
+      "uiHints": {
+        "displayOrder": 1
+      }
     },
     {
       "fieldKey": "special_requests",
       "fieldType": "textarea",
       "label": "Special Requests",
-      "placeholder": "Any allergies, preferences, or special requests?",
-      "required": false,
       "groupKey": "preferences",
-      "displayOrder": 2
+      "uiHints": {
+        "placeholder": "Any allergies, preferences, or special requests?",
+        "displayOrder": 2
+      }
     },
     {
       "fieldKey": "referral_source",
       "fieldType": "select",
       "label": "How did you hear about us?",
-      "required": true,
       "groupKey": "marketing",
-      "displayOrder": 1,
       "options": [
         { "value": "google", "label": "Google Search" },
         { "value": "social", "label": "Social Media" },
         { "value": "friend", "label": "Friend/Family" },
         { "value": "other", "label": "Other" }
-      ]
+      ],
+      "validation": {
+        "required": true
+      },
+      "uiHints": {
+        "displayOrder": 1
+      }
     }
   ],
   "groups": [
@@ -150,14 +181,15 @@ interface FieldGroup {
       "groupKey": "preferences",
       "label": "Your Preferences",
       "description": "Help us personalize your experience",
-      "collapsible": false,
-      "displayOrder": 1
+      "displayOrder": 1,
+      "collapsible": false
     },
     {
       "groupKey": "marketing",
       "label": "About You",
+      "displayOrder": 2,
       "collapsible": true,
-      "displayOrder": 2
+      "defaultCollapsed": false
     }
   ],
   "reuseDetails": true,
@@ -200,10 +232,12 @@ AppointmentAdditionalInfoSchema = BaseModelSchema.safeExtend({
 The `data` field is a key-value map where:
 - **Keys** correspond to `fieldKey` values from the FieldDefinition
 - **Values** are typed according to the field's `fieldType`:
-  - `text`, `textarea`, `email`, `phone`, `url` → string
+  - `text`, `textarea`, `email`, `phone` → string
   - `number` → number
   - `boolean` → boolean
-  - `date`, `datetime` → string (ISO format) or number (timestamp)
+  - `date` → string (ISO format YYYY-MM-DD)
+  - `time` → string (24-hour format HH:MM)
+  - `datetime` → string (ISO format YYYY-MM-DDTHH:MM:SS)
   - `select` → string (selected value)
   - `multiselect` → string[] (selected values)
 

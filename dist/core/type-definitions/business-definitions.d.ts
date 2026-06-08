@@ -178,6 +178,71 @@ export declare const DAYS_OF_WEEK: {
     short: string;
 }[];
 export declare const TIMEZONES: string[];
+/**
+ * Time slot schema for scheduling.
+ * Defines a start and end time in HH:MM format.
+ */
+export declare const TimeSlotSchema: z.ZodObject<{
+    start: z.ZodString;
+    end: z.ZodString;
+}, z.core.$strip>;
+/**
+ * Break time schema (alias for TimeSlotSchema).
+ */
+export declare const BreakTimeSchema: z.ZodObject<{
+    start: z.ZodString;
+    end: z.ZodString;
+}, z.core.$strip>;
+/**
+ * Simple day schedule schema.
+ * Defines basic availability for a single day.
+ */
+export declare const SimpleDayScheduleSchema: z.ZodObject<{
+    isOpen: z.ZodBoolean;
+    startTime: z.ZodString;
+    endTime: z.ZodString;
+}, z.core.$strip>;
+/**
+ * Day schedule schema with break times.
+ * Extends simple day schedule with break periods.
+ */
+export declare const DayScheduleSchema: z.ZodObject<{
+    isOpen: z.ZodBoolean;
+    startTime: z.ZodString;
+    endTime: z.ZodString;
+    breakTimes: z.ZodOptional<z.ZodArray<z.ZodObject<{
+        start: z.ZodString;
+        end: z.ZodString;
+    }, z.core.$strip>>>;
+}, z.core.$strip>;
+/**
+ * Simple weekly schedule schema.
+ * Record of day index (0-6) to simple day schedule.
+ */
+export declare const SimpleWeeklyScheduleSchema: z.ZodRecord<z.ZodString, z.ZodObject<{
+    isOpen: z.ZodBoolean;
+    startTime: z.ZodString;
+    endTime: z.ZodString;
+}, z.core.$strip>>;
+/**
+ * Weekly schedule schema with breaks.
+ * Record of day index (0-6) to full day schedule with breaks.
+ */
+export declare const WeeklyScheduleSchema: z.ZodRecord<z.ZodString, z.ZodObject<{
+    isOpen: z.ZodBoolean;
+    startTime: z.ZodString;
+    endTime: z.ZodString;
+    breakTimes: z.ZodOptional<z.ZodArray<z.ZodObject<{
+        start: z.ZodString;
+        end: z.ZodString;
+    }, z.core.$strip>>>;
+}, z.core.$strip>>;
+export type TimeSlot = z.infer<typeof TimeSlotSchema>;
+export type BreakTime = z.infer<typeof BreakTimeSchema>;
+export type SimpleDaySchedule = z.infer<typeof SimpleDayScheduleSchema>;
+export type DaySchedule = z.infer<typeof DayScheduleSchema>;
+export type SimpleWeeklySchedule = z.infer<typeof SimpleWeeklyScheduleSchema>;
+export type WeeklySchedule = z.infer<typeof WeeklyScheduleSchema>;
 export declare enum CallPriority {
     HIGH = "high",
     MEDIUM = "medium",

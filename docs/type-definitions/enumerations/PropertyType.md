@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.53**](../../README.md)
 
 ***
 
@@ -6,12 +6,12 @@
 
 # Enumeration: PropertyType
 
-Defined in: [src/core/type-definitions/business-definitions.ts:255](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/type-definitions/business-definitions.ts#L255)
+Defined in: [src/core/type-definitions/business-definitions.ts:316](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/type-definitions/business-definitions.ts#L316)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="residential"></a> `RESIDENTIAL` | `"residential"` | [src/core/type-definitions/business-definitions.ts:256](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/type-definitions/business-definitions.ts#L256) |
-| <a id="commercial"></a> `COMMERCIAL` | `"commercial"` | [src/core/type-definitions/business-definitions.ts:257](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/type-definitions/business-definitions.ts#L257) |
-| <a id="land"></a> `LAND` | `"land"` | [src/core/type-definitions/business-definitions.ts:258](https://github.com/wiil-io/core-js/blob/ebd04cb73529c8832076df82c008bfdf400ced2a/src/core/type-definitions/business-definitions.ts#L258) |
+| <a id="residential"></a> `RESIDENTIAL` | `"residential"` | [src/core/type-definitions/business-definitions.ts:317](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/type-definitions/business-definitions.ts#L317) |
+| <a id="commercial"></a> `COMMERCIAL` | `"commercial"` | [src/core/type-definitions/business-definitions.ts:318](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/type-definitions/business-definitions.ts#L318) |
+| <a id="land"></a> `LAND` | `"land"` | [src/core/type-definitions/business-definitions.ts:319](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/type-definitions/business-definitions.ts#L319) |

@@ -3,7 +3,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.VariantAxisType = exports.PricingChannel = exports.PricingRuleAdjustmentType = exports.PricingRuleApplyLevel = exports.DiscountCatalogScope = exports.DiscountType = exports.DiscountScope = exports.TaxCatalogScope = exports.TaxRateType = exports.TaxScope = exports.PropertyInquiryStatus = exports.PropertyInquiryType = exports.DepositStatus = exports.PropertyLeaseStatus = exports.PropertyPurchaseStatus = exports.RentalPeriod = exports.PropertyCondition = exports.ListingStatus = exports.ListingType = exports.PropertySubType = exports.PropertyType = exports.BestTimeToCall = exports.PreferredContactMethod = exports.CallPriority = exports.TIMEZONES = exports.DAYS_OF_WEEK = exports.BusinessDocumentTypes = exports.BusinessServiceDocumentTypes = exports.RestockStatus = exports.StockStatus = exports.StockAdjustmentType = exports.InventoryUnit = exports.ProductOrderType = exports.MenuOrderType = exports.PaymentStatus = exports.OrderStatus = exports.RecurrenceType = exports.ReservationSlotStatus = exports.ServiceProviderTimeOffStatus = exports.ServiceProviderTimeOffType = exports.AppointmentStatus = exports.ReservationStatus = exports.ReservationSettingType = exports.ResourceReservationDurationUnit = exports.ResourceType = exports.CalendarProvider = exports.BusinessServiceType = exports.ExternalRefSchema = void 0;
+exports.DiscountCatalogScope = exports.DiscountType = exports.DiscountScope = exports.TaxCatalogScope = exports.TaxRateType = exports.TaxScope = exports.PropertyInquiryStatus = exports.PropertyInquiryType = exports.DepositStatus = exports.PropertyLeaseStatus = exports.PropertyPurchaseStatus = exports.RentalPeriod = exports.PropertyCondition = exports.ListingStatus = exports.ListingType = exports.PropertySubType = exports.PropertyType = exports.BestTimeToCall = exports.PreferredContactMethod = exports.CallPriority = exports.WeeklyScheduleSchema = exports.SimpleWeeklyScheduleSchema = exports.DayScheduleSchema = exports.SimpleDayScheduleSchema = exports.BreakTimeSchema = exports.TimeSlotSchema = exports.TIMEZONES = exports.DAYS_OF_WEEK = exports.BusinessDocumentTypes = exports.BusinessServiceDocumentTypes = exports.RestockStatus = exports.StockStatus = exports.StockAdjustmentType = exports.InventoryUnit = exports.ProductOrderType = exports.MenuOrderType = exports.PaymentStatus = exports.OrderStatus = exports.RecurrenceType = exports.ReservationSlotStatus = exports.ServiceProviderTimeOffStatus = exports.ServiceProviderTimeOffType = exports.AppointmentStatus = exports.ReservationStatus = exports.ReservationSettingType = exports.ResourceReservationDurationUnit = exports.ResourceType = exports.CalendarProvider = exports.BusinessServiceType = exports.ExternalRefSchema = void 0;
+exports.VariantAxisType = exports.PricingChannel = exports.PricingRuleAdjustmentType = exports.PricingRuleApplyLevel = void 0;
 const zod_1 = __importDefault(require("zod"));
 /**
  * External reference schema for synchronization with external systems.
@@ -221,6 +222,47 @@ exports.TIMEZONES = [
     'Asia/Shanghai',
     'Australia/Sydney',
 ];
+// ============================================================================
+// SHARED TIME AND SCHEDULE SCHEMAS
+// ============================================================================
+/**
+ * Time slot schema for scheduling.
+ * Defines a start and end time in HH:MM format.
+ */
+exports.TimeSlotSchema = zod_1.default.object({
+    start: zod_1.default.string().regex(/^([01]?[0-9]|2[0-3]):[0-5][0-9]$/, 'Invalid time format (HH:MM)').describe("Start time in HH:MM format"),
+    end: zod_1.default.string().regex(/^([01]?[0-9]|2[0-3]):[0-5][0-9]$/, 'Invalid time format (HH:MM)').describe("End time in HH:MM format"),
+});
+/**
+ * Break time schema (alias for TimeSlotSchema).
+ */
+exports.BreakTimeSchema = exports.TimeSlotSchema;
+/**
+ * Simple day schedule schema.
+ * Defines basic availability for a single day.
+ */
+exports.SimpleDayScheduleSchema = zod_1.default.object({
+    isOpen: zod_1.default.boolean().describe("Whether available this day"),
+    startTime: zod_1.default.string().regex(/^([01]?[0-9]|2[0-3]):[0-5][0-9]$/, 'Invalid time format (HH:MM)').describe("Start time"),
+    endTime: zod_1.default.string().regex(/^([01]?[0-9]|2[0-3]):[0-5][0-9]$/, 'Invalid time format (HH:MM)').describe("End time"),
+});
+/**
+ * Day schedule schema with break times.
+ * Extends simple day schedule with break periods.
+ */
+exports.DayScheduleSchema = exports.SimpleDayScheduleSchema.extend({
+    breakTimes: zod_1.default.array(exports.BreakTimeSchema).optional().describe("Break periods during the day"),
+});
+/**
+ * Simple weekly schedule schema.
+ * Record of day index (0-6) to simple day schedule.
+ */
+exports.SimpleWeeklyScheduleSchema = zod_1.default.record(zod_1.default.string().regex(/^[0-6]$/, 'Day must be 0-6'), exports.SimpleDayScheduleSchema).describe("Weekly schedule without breaks");
+/**
+ * Weekly schedule schema with breaks.
+ * Record of day index (0-6) to full day schedule with breaks.
+ */
+exports.WeeklyScheduleSchema = zod_1.default.record(zod_1.default.string().regex(/^[0-6]$/, 'Day must be 0-6'), exports.DayScheduleSchema).describe("Weekly business hours schedule with breaks");
 // Customer-related enums
 var CallPriority;
 (function (CallPriority) {

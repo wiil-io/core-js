@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.53**](../README.md)
 
 ***
 
@@ -35,6 +35,9 @@ Central export point for business management schemas.
 | [ResourceInstanceStatus](enumerations/ResourceInstanceStatus.md) | Operational status of a physical resource instance. |
 | [ResourceRevisionStatus](enumerations/ResourceRevisionStatus.md) | Resource revision lifecycle status. |
 | [ResourceRevisionDeriveStrategy](enumerations/ResourceRevisionDeriveStrategy.md) | Strategy for deriving a new resource revision. |
+| [ServicePriceMode](enumerations/ServicePriceMode.md) | Service pricing mode options. |
+| [ServiceGratuityMode](enumerations/ServiceGratuityMode.md) | Service gratuity mode options. |
+| [ServiceAvailabilityMode](enumerations/ServiceAvailabilityMode.md) | Service availability mode options. |
 
 ## Interfaces
 
@@ -151,6 +154,9 @@ Central export point for business management schemas.
 | [AppointmentFieldConfigFilters](interfaces/AppointmentFieldConfigFilters.md) | Appointment field config filter options. AppointmentFieldConfigFilters |
 | [AppointmentFieldConfigSorting](interfaces/AppointmentFieldConfigSorting.md) | Appointment field config sorting options. AppointmentFieldConfigSorting |
 | [AppointmentFieldConfigQueryOptions](interfaces/AppointmentFieldConfigQueryOptions.md) | Appointment field config query options. AppointmentFieldConfigQueryOptions |
+| [BusinessServiceFilters](interfaces/BusinessServiceFilters.md) | Business service filter options. BusinessServiceFilters |
+| [BusinessServiceSorting](interfaces/BusinessServiceSorting.md) | Business service sorting options. BusinessServiceSorting |
+| [BusinessServiceQueryOptions](interfaces/BusinessServiceQueryOptions.md) | Business service query options. BusinessServiceQueryOptions |
 | [ServiceAppointmentFilters](interfaces/ServiceAppointmentFilters.md) | Service appointment filter options. ServiceAppointmentFilters |
 | [ServiceAppointmentSorting](interfaces/ServiceAppointmentSorting.md) | Service appointment sorting options. ServiceAppointmentSorting |
 | [ServiceAppointmentQueryOptions](interfaces/ServiceAppointmentQueryOptions.md) | Service appointment query options. ServiceAppointmentQueryOptions |
@@ -414,6 +420,20 @@ Central export point for business management schemas.
 | [AppointmentFieldConfig](type-aliases/AppointmentFieldConfig.md) | Appointment Field Config schema. Organization-level field library for appointment booking forms. |
 | [CreateAppointmentFieldConfig](type-aliases/CreateAppointmentFieldConfig.md) | Schema for creating an appointment field config. Omits auto-generated fields. |
 | [UpdateAppointmentFieldConfig](type-aliases/UpdateAppointmentFieldConfig.md) | Schema for updating an appointment field config. All fields optional except id (required). |
+| [ServiceDateRange](type-aliases/ServiceDateRange.md) | Service date range schema. Defines seasonal availability or blackout periods. |
+| [ServiceAvailability](type-aliases/ServiceAvailability.md) | Service availability schema. Configures when a service is available for booking. |
+| [ServiceAppointmentFieldConfig](type-aliases/ServiceAppointmentFieldConfig.md) | Service-level appointment field configuration (embedded). Inherits from organization-level config and allows service-specific customization. |
+| [ServiceCategoryChannelMapping](type-aliases/ServiceCategoryChannelMapping.md) | Per-channel service category ID mapping. |
+| [ServiceChannelMapping](type-aliases/ServiceChannelMapping.md) | Per-channel external service ID mapping. |
+| [ServiceCategory](type-aliases/ServiceCategory.md) | Service Category schema. Groups related services for organization and display. |
+| [CreateServiceCategory](type-aliases/CreateServiceCategory.md) | Schema for creating a new service category. Omits auto-generated fields. |
+| [UpdateServiceCategory](type-aliases/UpdateServiceCategory.md) | Schema for updating an existing service category. All fields optional except id (required). |
+| [BusinessService](type-aliases/BusinessService.md) | Business Service Configuration schema. Defines a service offering with pricing, scheduling, and booking rules. |
+| [CreateBusinessService](type-aliases/CreateBusinessService.md) | Schema for creating a new business service. Omits auto-generated fields. |
+| [UpdateBusinessService](type-aliases/UpdateBusinessService.md) | Schema for updating an existing business service. All fields optional except id (required). |
+| [ServiceDurationSegments](type-aliases/ServiceDurationSegments.md) | Service duration segments schema. Breaks down service time into distinct phases. |
+| [ServiceCatalog](type-aliases/ServiceCatalog.md) | Service catalog schema. Represents a category with its associated services. |
+| [BusinessServiceCatalog](type-aliases/BusinessServiceCatalog.md) | Business service catalog schema. Array of service categories with their services. |
 | [ServiceAppointment](type-aliases/ServiceAppointment.md) | Service Appointment schema. Represents a scheduled appointment for a service. |
 | [CreateServiceAppointment](type-aliases/CreateServiceAppointment.md) | Schema for creating a new service appointment. Omits auto-generated fields and cancelReason (set during cancellation). |
 | [UpdateServiceAppointment](type-aliases/UpdateServiceAppointment.md) | Schema for updating an existing service appointment. All fields optional except id (required). Includes cancelReason for cancellation updates. |
@@ -693,6 +713,20 @@ Central export point for business management schemas.
 | [AppointmentFieldConfigSchema](variables/AppointmentFieldConfigSchema.md) | Appointment Field Config schema. Organization-level field library for appointment booking forms. |
 | [CreateAppointmentFieldConfigSchema](variables/CreateAppointmentFieldConfigSchema.md) | Schema for creating an appointment field config. Omits auto-generated fields. |
 | [UpdateAppointmentFieldConfigSchema](variables/UpdateAppointmentFieldConfigSchema.md) | Schema for updating an appointment field config. All fields optional except id (required). |
+| [ServiceCategoryChannelMappingSchema](variables/ServiceCategoryChannelMappingSchema.md) | Per-channel service category ID mapping. |
+| [ServiceChannelMappingSchema](variables/ServiceChannelMappingSchema.md) | Per-channel external service ID mapping. |
+| [ServiceDurationSegmentsSchema](variables/ServiceDurationSegmentsSchema.md) | Service duration segments schema. Breaks down service time into distinct phases. |
+| [ServiceDateRangeSchema](variables/ServiceDateRangeSchema.md) | Service date range schema. Defines seasonal availability or blackout periods. |
+| [ServiceAvailabilitySchema](variables/ServiceAvailabilitySchema.md) | Service availability schema. Configures when a service is available for booking. |
+| [ServiceAppointmentFieldConfigSchema](variables/ServiceAppointmentFieldConfigSchema.md) | Service-level appointment field configuration (embedded). Inherits from organization-level config and allows service-specific customization. |
+| [ServiceCategorySchema](variables/ServiceCategorySchema.md) | Service Category schema. Groups related services for organization and display. |
+| [CreateServiceCategorySchema](variables/CreateServiceCategorySchema.md) | Schema for creating a new service category. Omits auto-generated fields. |
+| [UpdateServiceCategorySchema](variables/UpdateServiceCategorySchema.md) | Schema for updating an existing service category. All fields optional except id (required). |
+| [BusinessServiceConfigSchema](variables/BusinessServiceConfigSchema.md) | Business Service Configuration schema. Defines a service offering with pricing, scheduling, and booking rules. |
+| [CreateBusinessServiceSchema](variables/CreateBusinessServiceSchema.md) | Schema for creating a new business service. Omits auto-generated fields. |
+| [UpdateBusinessServiceSchema](variables/UpdateBusinessServiceSchema.md) | Schema for updating an existing business service. All fields optional except id (required). |
+| [ServiceCatalogSchema](variables/ServiceCatalogSchema.md) | Service catalog schema. Represents a category with its associated services. |
+| [BusinessServiceCatalogSchema](variables/BusinessServiceCatalogSchema.md) | Business service catalog schema. Array of service categories with their services. |
 | [ServiceAppointmentSchema](variables/ServiceAppointmentSchema.md) | Service Appointment schema. Represents a scheduled appointment for a service. |
 | [CreateServiceAppointmentSchema](variables/CreateServiceAppointmentSchema.md) | Schema for creating a new service appointment. Omits auto-generated fields and cancelReason (set during cancellation). |
 | [UpdateServiceAppointmentSchema](variables/UpdateServiceAppointmentSchema.md) | Schema for updating an existing service appointment. All fields optional except id (required). Includes cancelReason for cancellation updates. |

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.53**](../../README.md)
 
 ***
 
@@ -13,7 +13,7 @@ type ResourceChannelMapping = {
 };
 ```
 
-Defined in: src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:367
+Defined in: [src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:367](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts#L367)
 
 Resource channel mapping schema.
 Maps a reservation resource to an external platform resource ID.
@@ -22,5 +22,5 @@ Maps a reservation resource to an external platform resource ID.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="channelid"></a> `channelId` | `string` | src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:26 |
-| <a id="externalresourceid"></a> `externalResourceId` | `string` | src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:27 |
+| <a id="channelid"></a> `channelId` | `string` | [src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:26](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts#L26) |
+| <a id="externalresourceid"></a> `externalResourceId` | `string` | [src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:27](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts#L27) |

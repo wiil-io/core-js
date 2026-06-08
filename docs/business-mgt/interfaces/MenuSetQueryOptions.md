@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.53**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: MenuSetQueryOptions
 
-Defined in: src/core/business-mgt/menu-management/menu-set.schema.ts:361
+Defined in: [src/core/business-mgt/menu-management/menu-set.schema.ts:361](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/menu-management/menu-set.schema.ts#L361)
 
 Menu set query options.
  MenuSetQueryOptions
@@ -15,7 +15,7 @@ Menu set query options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | Page number (1-indexed) | src/core/business-mgt/menu-management/menu-set.schema.ts:363 |
-| <a id="pagesize"></a> `pageSize` | `number` | Items per page | src/core/business-mgt/menu-management/menu-set.schema.ts:365 |
-| <a id="filters"></a> `filters?` | [`MenuSetFilters`](MenuSetFilters.md) | Optional filters | src/core/business-mgt/menu-management/menu-set.schema.ts:367 |
-| <a id="sorting"></a> `sorting?` | [`MenuSetSorting`](MenuSetSorting.md) | Optional sorting | src/core/business-mgt/menu-management/menu-set.schema.ts:369 |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/menu-management/menu-set.schema.ts:363](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/menu-management/menu-set.schema.ts#L363) |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/menu-management/menu-set.schema.ts:365](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/menu-management/menu-set.schema.ts#L365) |
+| <a id="filters"></a> `filters?` | [`MenuSetFilters`](MenuSetFilters.md) | Optional filters | [src/core/business-mgt/menu-management/menu-set.schema.ts:367](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/menu-management/menu-set.schema.ts#L367) |
+| <a id="sorting"></a> `sorting?` | [`MenuSetSorting`](MenuSetSorting.md) | Optional sorting | [src/core/business-mgt/menu-management/menu-set.schema.ts:369](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/menu-management/menu-set.schema.ts#L369) |

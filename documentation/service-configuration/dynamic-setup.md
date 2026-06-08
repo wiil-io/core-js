@@ -5,13 +5,12 @@ This document covers the Dynamic Agent Setup schemas for streamlined AI assistan
 ## Table of Contents
 
 1. [Overview](#overview)
-2. [Base Setup Schemas](#base-setup-schemas)
-3. [Phone Agent Setup](#phone-agent-setup)
-4. [Web Agent Setup](#web-agent-setup)
-5. [Model Configuration](#model-configuration)
-6. [Processing State](#processing-state)
-7. [Relationships](#relationships)
-8. [Best Practices](#best-practices)
+2. [Phone Agent Setup](#phone-agent-setup)
+3. [Web Agent Setup](#web-agent-setup)
+4. [Model Configuration](#model-configuration)
+5. [Processing State](#processing-state)
+6. [Relationships](#relationships)
+7. [Best Practices](#best-practices)
 
 ---
 
@@ -23,100 +22,6 @@ Dynamic Agent Setup provides a simplified interface for creating and configuring
 - **Channel-Specific Settings** - Phone and web channels have tailored options
 - **Async Processing** - Track progress for long-running setup operations
 - **Partial Updates** - Modify existing configurations with partial data
-
----
-
-## Base Setup Schemas
-
-### DynamicBaseAgentSetup
-
-Base schema shared by all channel-specific agent setup schemas.
-
-#### Fields
-
-| Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
-| assistantName | string | Yes | - | Name of the AI assistant (max 30 chars) |
-| instructionConfigurationId | string | No | - | Existing instruction config to use |
-| role_template_identifier | enum | No | - | Role/persona template for the agent |
-| capabilities | array | No | [] | List of enabled platform services |
-| knowledgeSourceIds | array | No | - | Knowledge sources to associate |
-| language | string | No | en | Language ID (e.g., en, es, fr) |
-| voice | string | No | - | Voice ID for voice interactions |
-| providerType | enum | No | - | AI model provider (OPENAI, etc.) |
-| providerModelId | string | No | - | Specific model ID from provider |
-
-#### Example
-
-```json
-{
-  "assistantName": "Sarah",
-  "role_template_identifier": "CUSTOMER_SUPPORT",
-  "capabilities": ["APPOINTMENT_BOOKING", "FAQ_ANSWERING"],
-  "knowledgeSourceIds": ["knowledge_product_docs", "knowledge_faq"],
-  "language": "en",
-  "voice": "rachel",
-  "providerType": "OPENAI",
-  "providerModelId": "gpt-4o"
-}
-```
-
-### DynamicAgentSetupResult
-
-Result schema returned after agent setup operations.
-
-#### Fields
-
-| Field | Type | Required | Description |
-|-------|------|----------|-------------|
-| id | string | Yes | Unique identifier for the setup result |
-| processingState | object | Yes | Real-time processing state |
-| success | boolean | No | Whether setup was successful |
-| agentConfigurationId | string | No | ID of created agent config |
-| instructionConfigurationId | string | No | ID of created instruction config |
-| errorMessage | string | No | Error message if setup failed |
-| metadata | object | No | Additional metadata |
-| createdAt | number | Yes | Creation timestamp |
-| updatedAt | number | No | Last update timestamp |
-
-#### Example (Success)
-
-```json
-{
-  "id": "setup_result_abc123",
-  "processingState": {
-    "status": "completed",
-    "progressPercentage": 100,
-    "message": "Agent setup completed successfully"
-  },
-  "success": true,
-  "agentConfigurationId": "agent_sarah_v1",
-  "instructionConfigurationId": "instr_support_sarah",
-  "metadata": {
-    "setupDuration": 3500,
-    "channel": "phone"
-  },
-  "createdAt": 1699900000000,
-  "updatedAt": 1699900003500
-}
-```
-
-#### Example (In Progress)
-
-```json
-{
-  "id": "setup_result_xyz789",
-  "processingState": {
-    "status": "in_progress",
-    "progressPercentage": 45,
-    "message": "Processing knowledge sources..."
-  },
-  "success": null,
-  "agentConfigurationId": null,
-  "instructionConfigurationId": null,
-  "createdAt": 1699900000000
-}
-```
 
 ---
 
@@ -142,8 +47,8 @@ Extends base setup with phone-specific configuration options.
 ```json
 {
   "assistantName": "Alex",
-  "role_template_identifier": "SALES_REPRESENTATIVE",
-  "capabilities": ["LEAD_CAPTURE", "APPOINTMENT_BOOKING"],
+  "role_template_identifier": "sales-representative",
+  "capabilities": ["appointment_management", "product_order_management"],
   "language": "en",
   "phoneConfigurationId": "phone_config_main",
   "testPhoneNumber": "+15551234567",
@@ -201,7 +106,7 @@ Schema for updating existing phone agent configurations. All fields are optional
 {
   "id": "agent_alex_phone",
   "assistantName": "Alex Updated",
-  "capabilities": ["LEAD_CAPTURE", "APPOINTMENT_BOOKING", "ORDER_TAKING"],
+  "capabilities": ["appointment_management", "product_order_management", "menu_order_management"],
   "ttsConfiguration": {
     "providerType": "ELEVENLABS",
     "providerModelId": "eleven_turbo_v2_5",
@@ -243,8 +148,8 @@ Extends base setup with web-specific configuration options.
 ```json
 {
   "assistantName": "Maya",
-  "role_template_identifier": "CUSTOMER_SUPPORT",
-  "capabilities": ["FAQ_ANSWERING", "TICKET_CREATION"],
+  "role_template_identifier": "customer-support-general",
+  "capabilities": ["appointment_management"],
   "knowledgeSourceIds": ["knowledge_help_center"],
   "language": "en",
   "websiteUrl": "https://www.example.com",
@@ -257,8 +162,8 @@ Extends base setup with web-specific configuration options.
 ```json
 {
   "assistantName": "James",
-  "role_template_identifier": "SALES_REPRESENTATIVE",
-  "capabilities": ["LEAD_CAPTURE", "PRODUCT_RECOMMENDATIONS"],
+  "role_template_identifier": "sales-representative",
+  "capabilities": ["product_order_management"],
   "websiteUrl": "https://shop.example.com",
   "communicationType": "UNIFIED",
   "sttConfiguration": {
@@ -316,7 +221,7 @@ Schema for updating existing web agent configurations. All fields are optional e
 {
   "id": "agent_maya_web",
   "assistantName": "Maya 2.0",
-  "capabilities": ["FAQ_ANSWERING", "TICKET_CREATION", "LIVE_CHAT_HANDOFF"],
+  "capabilities": ["appointment_management", "reservation_management"],
   "communicationType": "MEDIA_ENABLED"
 }
 ```
@@ -605,5 +510,5 @@ Create Request --> Processing (pending)
 |----------|------|------------------|
 | OPENAI | LLM | gpt-4o, gpt-4-turbo |
 | ANTHROPIC | LLM | claude-3-sonnet |
-| DEEPGRAM | STT | nova-2, whisper |
+| DEEPGRAM | STT | nova-2, nova-3 |
 | ELEVENLABS | TTS | eleven_multilingual_v2 |

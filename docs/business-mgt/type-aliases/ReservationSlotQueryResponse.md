@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.53**](../../README.md)
 
 ***
 
@@ -67,7 +67,7 @@ type ReservationSlotQueryResponse =
 };
 ```
 
-Defined in: src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:361
+Defined in: [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:361](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L361)
 
 Reservation slot query response schema.
 Discriminated union of supported slot query response types.

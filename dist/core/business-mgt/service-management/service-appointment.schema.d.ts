@@ -124,12 +124,12 @@ export declare const ServiceAppointmentSchema: z.ZodObject<{
  * Omits auto-generated fields and cancelReason (set during cancellation).
  */
 export declare const CreateServiceAppointmentSchema: z.ZodObject<{
+    startTime: z.ZodNumber;
+    endTime: z.ZodOptional<z.ZodNumber>;
     duration: z.ZodOptional<z.ZodDefault<z.ZodNumber>>;
     status: z.ZodDefault<z.ZodEnum<typeof AppointmentStatus>>;
     locationId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     customerId: z.ZodString;
-    startTime: z.ZodNumber;
-    endTime: z.ZodOptional<z.ZodNumber>;
     channelId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     totalPrice: z.ZodOptional<z.ZodDefault<z.ZodNumber>>;
     pricing: z.ZodOptional<z.ZodObject<{
@@ -207,12 +207,12 @@ export declare const CreateServiceAppointmentSchema: z.ZodObject<{
  * All fields optional except id (required). Includes cancelReason for cancellation updates.
  */
 export declare const UpdateServiceAppointmentSchema: z.ZodObject<{
+    startTime: z.ZodOptional<z.ZodNumber>;
+    endTime: z.ZodOptional<z.ZodOptional<z.ZodNumber>>;
     duration: z.ZodOptional<z.ZodOptional<z.ZodDefault<z.ZodNumber>>>;
     status: z.ZodOptional<z.ZodDefault<z.ZodEnum<typeof AppointmentStatus>>>;
     locationId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     customerId: z.ZodOptional<z.ZodString>;
-    startTime: z.ZodOptional<z.ZodNumber>;
-    endTime: z.ZodOptional<z.ZodOptional<z.ZodNumber>>;
     channelId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     totalPrice: z.ZodOptional<z.ZodOptional<z.ZodDefault<z.ZodNumber>>>;
     pricing: z.ZodOptional<z.ZodOptional<z.ZodObject<{
@@ -296,12 +296,12 @@ export type UpdateServiceAppointment = z.infer<typeof UpdateServiceAppointmentSc
  */
 export declare const CreateServiceAppointmentWithCustomDataSchema: z.ZodObject<{
     appointment: z.ZodObject<{
+        startTime: z.ZodNumber;
+        endTime: z.ZodOptional<z.ZodNumber>;
         duration: z.ZodOptional<z.ZodDefault<z.ZodNumber>>;
         status: z.ZodDefault<z.ZodEnum<typeof AppointmentStatus>>;
         locationId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
         customerId: z.ZodString;
-        startTime: z.ZodNumber;
-        endTime: z.ZodOptional<z.ZodNumber>;
         channelId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
         totalPrice: z.ZodOptional<z.ZodDefault<z.ZodNumber>>;
         pricing: z.ZodOptional<z.ZodObject<{

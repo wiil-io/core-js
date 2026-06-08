@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.52**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.53**](../../README.md)
 
 ***
 
@@ -13,7 +13,7 @@ type ResourceInstanceAttribute = {
 };
 ```
 
-Defined in: src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:103
+Defined in: [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:103](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L103)
 
 Resource instance attribute schema.
 Stores flexible key/value attributes on physical reservation inventory.
@@ -22,5 +22,5 @@ Stores flexible key/value attributes on physical reservation inventory.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="key"></a> `key` | `string` | src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:40 |
-| <a id="value"></a> `value` | `string` | src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:41 |
+| <a id="key"></a> `key` | `string` | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:40](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L40) |
+| <a id="value"></a> `value` | `string` | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:41](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L41) |
