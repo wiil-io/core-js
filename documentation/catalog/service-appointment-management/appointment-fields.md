@@ -38,14 +38,29 @@ Organization-level field library for appointment booking forms.
 
 ### Schema Definition
 
-```typescript
-AppointmentFieldConfigSchema = BaseModelSchema.safeExtend({
-    fields: z.array(FieldDefinitionSchema).default([]),
-    groups: z.array(FieldGroupSchema).default([]),
-    reuseDetails: z.boolean().default(false),
-    ensureEmail: z.boolean().default(false),
-    ensurePhone: z.boolean().default(false),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "createdAt": { "type": "integer" },
+    "updatedAt": { "type": "integer" },
+    "fields": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/FieldDefinition" },
+      "default": []
+    },
+    "groups": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/FieldGroup" },
+      "default": []
+    },
+    "reuseDetails": { "type": "boolean", "default": false },
+    "ensureEmail": { "type": "boolean", "default": false },
+    "ensurePhone": { "type": "boolean", "default": false }
+  },
+  "required": ["id"]
+}
 ```
 
 ### Fields
@@ -61,69 +76,86 @@ AppointmentFieldConfigSchema = BaseModelSchema.safeExtend({
 
 ### FieldDefinition Structure
 
-```typescript
-interface FieldDefinition {
-    fieldKey: string;               // Unique key (lowercase alphanumeric with underscores)
-    fieldType: DynamicFieldType;    // Field type
-    label: string;                  // Display label
-    description?: string;           // Field description
-    groupKey?: string;              // Group this field belongs to
-    options?: FieldOption[];        // For select/multiselect types
-    defaultValue?: any;             // Default value
-    isActive?: boolean;             // Whether field is active
-    condition?: FieldCondition;     // Conditional visibility
-    validation?: FieldValidationRules; // Validation rules
-    uiHints?: FieldUIHints;         // UI rendering hints
-}
-
-interface FieldValidationRules {
-    required?: boolean;
-    minLength?: number;
-    maxLength?: number;
-    min?: number;
-    max?: number;
-    pattern?: string;
-    patternMessage?: string;
-}
-
-interface FieldUIHints {
-    placeholder?: string;
-    helpText?: string;
-    displayOrder?: number;
-    width?: "full" | "half" | "third";
-}
-
-interface FieldCondition {
-    dependsOn: string;              // Field key this depends on
-    operator: ConditionOperator;    // Condition operator
-    value?: any;                    // Value to compare
-}
-
-enum DynamicFieldType {
-    TEXT = "text",
-    TEXTAREA = "textarea",
-    NUMBER = "number",
-    BOOLEAN = "boolean",
-    DATE = "date",
-    TIME = "time",
-    DATETIME = "datetime",
-    EMAIL = "email",
-    PHONE = "phone",
-    SELECT = "select",
-    MULTISELECT = "multiselect",
+```json
+{
+  "$id": "#/$defs/FieldDefinition",
+  "type": "object",
+  "properties": {
+    "fieldKey": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
+    "fieldType": {
+      "type": "string",
+      "enum": ["text", "textarea", "number", "boolean", "date", "time", "datetime", "email", "phone", "select", "multiselect"]
+    },
+    "label": { "type": "string", "minLength": 1 },
+    "description": { "type": "string" },
+    "groupKey": { "type": "string" },
+    "options": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string" },
+          "label": { "type": "string" },
+          "displayOrder": { "type": "integer" }
+        },
+        "required": ["value", "label"]
+      }
+    },
+    "defaultValue": true,
+    "isActive": { "type": "boolean" },
+    "condition": {
+      "type": "object",
+      "properties": {
+        "dependsOn": { "type": "string" },
+        "operator": {
+          "type": "string",
+          "enum": ["equals", "notEquals", "contains", "isEmpty", "isNotEmpty", "greaterThan", "lessThan"]
+        },
+        "value": true
+      },
+      "required": ["dependsOn", "operator"]
+    },
+    "validation": {
+      "type": "object",
+      "properties": {
+        "required": { "type": "boolean" },
+        "minLength": { "type": "integer", "exclusiveMinimum": 0 },
+        "maxLength": { "type": "integer", "exclusiveMinimum": 0 },
+        "min": { "type": "number" },
+        "max": { "type": "number" },
+        "pattern": { "type": "string" },
+        "patternMessage": { "type": "string" }
+      }
+    },
+    "uiHints": {
+      "type": "object",
+      "properties": {
+        "placeholder": { "type": "string" },
+        "helpText": { "type": "string" },
+        "displayOrder": { "type": "integer" },
+        "width": { "type": "string", "enum": ["full", "half", "third"] }
+      }
+    }
+  },
+  "required": ["fieldKey", "fieldType", "label"]
 }
 ```
 
 ### FieldGroup Structure
 
-```typescript
-interface FieldGroup {
-    groupKey: string;           // Unique key
-    label: string;              // Display label
-    description?: string;       // Group description
-    displayOrder?: number;      // Sort order
-    collapsible?: boolean;      // Can group collapse
-    defaultCollapsed?: boolean; // Initial collapsed state
+```json
+{
+  "$id": "#/$defs/FieldGroup",
+  "type": "object",
+  "properties": {
+    "groupKey": { "type": "string" },
+    "label": { "type": "string" },
+    "description": { "type": "string" },
+    "displayOrder": { "type": "integer" },
+    "collapsible": { "type": "boolean" },
+    "defaultCollapsed": { "type": "boolean" }
+  },
+  "required": ["groupKey", "label"]
 }
 ```
 
@@ -208,13 +240,24 @@ Stores dynamic field values captured during appointment booking.
 
 ### Schema Definition
 
-```typescript
-AppointmentAdditionalInfoSchema = BaseModelSchema.safeExtend({
-    businessServiceId: z.string(),
-    appointmentId: z.string(),
-    customerId: z.string(),
-    data: z.record(z.string(), z.any()).default({}),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "createdAt": { "type": "integer" },
+    "updatedAt": { "type": "integer" },
+    "businessServiceId": { "type": "string" },
+    "appointmentId": { "type": "string" },
+    "customerId": { "type": "string" },
+    "data": {
+      "type": "object",
+      "additionalProperties": true,
+      "default": {}
+    }
+  },
+  "required": ["id", "businessServiceId", "appointmentId", "customerId"]
+}
 ```
 
 ### Fields
@@ -266,39 +309,53 @@ The `data` field is a key-value map where:
 
 ### AppointmentFieldConfigFilters
 
-```typescript
-interface AppointmentFieldConfigFilters {
-    reuseDetails?: boolean;  // Filter by reuse setting
-    ensureEmail?: boolean;   // Filter by email requirement
-    ensurePhone?: boolean;   // Filter by phone requirement
+```json
+{
+  "type": "object",
+  "properties": {
+    "reuseDetails": { "type": "boolean" },
+    "ensureEmail": { "type": "boolean" },
+    "ensurePhone": { "type": "boolean" }
+  }
 }
 ```
 
 ### AppointmentFieldConfigSorting
 
-```typescript
-interface AppointmentFieldConfigSorting {
-    field: "createdAt" | "updatedAt";
-    direction: "asc" | "desc";
+```json
+{
+  "type": "object",
+  "properties": {
+    "field": { "type": "string", "enum": ["createdAt", "updatedAt"] },
+    "direction": { "type": "string", "enum": ["asc", "desc"] }
+  },
+  "required": ["field", "direction"]
 }
 ```
 
 ### AppointmentAdditionalInfoFilters
 
-```typescript
-interface AppointmentAdditionalInfoFilters {
-    businessServiceId?: string;  // Filter by service
-    appointmentId?: string;      // Filter by appointment
-    customerId?: string;         // Filter by customer
+```json
+{
+  "type": "object",
+  "properties": {
+    "businessServiceId": { "type": "string" },
+    "appointmentId": { "type": "string" },
+    "customerId": { "type": "string" }
+  }
 }
 ```
 
 ### AppointmentAdditionalInfoSorting
 
-```typescript
-interface AppointmentAdditionalInfoSorting {
-    field: "createdAt" | "updatedAt";
-    direction: "asc" | "desc";
+```json
+{
+  "type": "object",
+  "properties": {
+    "field": { "type": "string", "enum": ["createdAt", "updatedAt"] },
+    "direction": { "type": "string", "enum": ["asc", "desc"] }
+  },
+  "required": ["field", "direction"]
 }
 ```
 

@@ -17,20 +17,27 @@ Represents a staff member or provider who can perform services.
 
 ### Schema Definition
 
-```typescript
-ServicePersonSchema = BaseModelSchema.safeExtend({
-    locationId: z.string().nullable().optional(),
-    userAccountId: z.string().nullable().optional(),
-    name: z.string().min(1),
-    avatar: z.url().nullable().optional(),
-    description: z.string().nullable().optional(),
-    skills: z.array(z.string()).nullable().optional(),
-    commissionPercent: z.number().min(0).max(100).nullable().optional(),
-    scheduleId: z.string().nullable().optional(),
-    bookableOnline: z.boolean().default(true),
-    bookableByStaff: z.boolean().default(true),
-    isActive: z.boolean().default(true),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "createdAt": { "type": "integer" },
+    "updatedAt": { "type": "integer" },
+    "locationId": { "type": ["string", "null"] },
+    "userAccountId": { "type": ["string", "null"] },
+    "name": { "type": "string", "minLength": 1 },
+    "avatar": { "type": ["string", "null"], "format": "uri" },
+    "description": { "type": ["string", "null"] },
+    "skills": { "type": ["array", "null"], "items": { "type": "string" } },
+    "commissionPercent": { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
+    "scheduleId": { "type": ["string", "null"] },
+    "bookableOnline": { "type": "boolean", "default": true },
+    "bookableByStaff": { "type": "boolean", "default": true },
+    "isActive": { "type": "boolean", "default": true }
+  },
+  "required": ["id", "name"]
+}
 ```
 
 ### Fields
@@ -81,14 +88,21 @@ Links services to providers with optional price/duration overrides.
 
 ### Schema Definition
 
-```typescript
-ServiceProviderSchema = BaseModelSchema.safeExtend({
-    serviceId: z.string(),
-    providerId: z.string(),
-    priceOverride: z.number().nonnegative().nullable().optional(),
-    durationOverride: z.number().int().positive().nullable().optional(),
-    active: z.boolean().default(true),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "createdAt": { "type": "integer" },
+    "updatedAt": { "type": "integer" },
+    "serviceId": { "type": "string" },
+    "providerId": { "type": "string" },
+    "priceOverride": { "type": ["number", "null"], "minimum": 0 },
+    "durationOverride": { "type": ["integer", "null"], "exclusiveMinimum": 0 },
+    "active": { "type": "boolean", "default": true }
+  },
+  "required": ["id", "serviceId", "providerId"]
+}
 ```
 
 ### Fields
@@ -125,35 +139,47 @@ Time-off records for periods when providers are unavailable.
 
 ### Enums
 
-```typescript
-enum ServiceProviderTimeOffType {
-    RECURRING = "recurring",  // Weekly recurring time off
-    SPECIFIC = "specific",    // One-time time off
-}
-
-enum ServiceProviderTimeOffStatus {
-    APPROVED = "approved",
-    PENDING = "pending",
-    REJECTED = "rejected",
+```json
+{
+  "type": ["recurring", "specific"],
+  "status": ["approved", "pending", "rejected"]
 }
 ```
 
 ### Schema Definition
 
-```typescript
-ServiceProviderTimeOffRecurrenceSchema = z.object({
-    dayOfWeek: z.array(z.string().regex(/^[0-6]$/)).min(1),
-});
-
-ServiceProviderTimeOffSchema = BaseModelSchema.safeExtend({
-    providerId: z.string(),
-    type: z.enum(ServiceProviderTimeOffType),
-    startDate: z.number().int().positive(),
-    endDate: z.number().int().positive(),
-    reason: z.string().nullable().optional(),
-    status: z.enum(ServiceProviderTimeOffStatus).default("pending"),
-    recurrence: ServiceProviderTimeOffRecurrenceSchema.nullable().optional(),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "createdAt": { "type": "integer" },
+    "updatedAt": { "type": "integer" },
+    "providerId": { "type": "string" },
+    "type": { "type": "string", "enum": ["recurring", "specific"] },
+    "startDate": { "type": "integer", "exclusiveMinimum": 0 },
+    "endDate": { "type": "integer", "exclusiveMinimum": 0 },
+    "reason": { "type": ["string", "null"] },
+    "status": { "type": "string", "enum": ["approved", "pending", "rejected"], "default": "pending" },
+    "recurrence": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "dayOfWeek": {
+              "type": "array",
+              "minItems": 1,
+              "items": { "type": "string", "pattern": "^[0-6]$" }
+            }
+          },
+          "required": ["dayOfWeek"]
+        },
+        { "type": "null" }
+      ]
+    }
+  },
+  "required": ["id", "providerId", "type", "startDate", "endDate"]
+}
 ```
 
 ### Fields
@@ -219,45 +245,58 @@ ServiceProviderTimeOffSchema = BaseModelSchema.safeExtend({
 
 ### ServicePersonFilters
 
-```typescript
-interface ServicePersonFilters {
-    search?: string;           // Text search across name/description
-    locationId?: string;       // Filter by location
-    userAccountId?: string;    // Filter by linked user account
-    skillId?: string;          // Filter by skill
-    bookableOnline?: boolean;  // Filter by online bookability
-    bookableByStaff?: boolean; // Filter by staff bookability
-    isActive?: boolean;        // Filter by active status
+```json
+{
+  "type": "object",
+  "properties": {
+    "search": { "type": "string" },
+    "locationId": { "type": "string" },
+    "userAccountId": { "type": "string" },
+    "skillId": { "type": "string" },
+    "bookableOnline": { "type": "boolean" },
+    "bookableByStaff": { "type": "boolean" },
+    "isActive": { "type": "boolean" }
+  }
 }
 ```
 
 ### ServicePersonSorting
 
-```typescript
-interface ServicePersonSorting {
-    field: "name" | "commissionPercent" | "createdAt";
-    direction: "asc" | "desc";
+```json
+{
+  "type": "object",
+  "properties": {
+    "field": { "type": "string", "enum": ["name", "commissionPercent", "createdAt"] },
+    "direction": { "type": "string", "enum": ["asc", "desc"] }
+  },
+  "required": ["field", "direction"]
 }
 ```
 
 ### ServiceProviderFilters
 
-```typescript
-interface ServiceProviderFilters {
-    serviceId?: string;   // Filter by service
-    providerId?: string;  // Filter by provider
-    active?: boolean;     // Filter by active status
+```json
+{
+  "type": "object",
+  "properties": {
+    "serviceId": { "type": "string" },
+    "providerId": { "type": "string" },
+    "active": { "type": "boolean" }
+  }
 }
 ```
 
 ### ServiceProviderTimeOffFilters
 
-```typescript
-interface ServiceProviderTimeOffFilters {
-    providerId?: string;                    // Filter by provider
-    type?: ServiceProviderTimeOffType;      // Filter by type
-    status?: ServiceProviderTimeOffStatus;  // Filter by status
-    fromDate?: number;                      // Filter by start date
-    toDate?: number;                        // Filter by end date
+```json
+{
+  "type": "object",
+  "properties": {
+    "providerId": { "type": "string" },
+    "type": { "type": "string", "enum": ["recurring", "specific"] },
+    "status": { "type": "string", "enum": ["approved", "pending", "rejected"] },
+    "fromDate": { "type": "number" },
+    "toDate": { "type": "number" }
+  }
 }
 ```

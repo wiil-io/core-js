@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.56**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.57**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: ProductSetPricingMode
 
-Defined in: [src/core/business-mgt/product-management/product-set.schema.ts:26](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/business-mgt/product-management/product-set.schema.ts#L26)
+Defined in: [src/core/business-mgt/product-management/product-set.schema.ts:26](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/business-mgt/product-management/product-set.schema.ts#L26)
 
 Product set pricing mode.
 Determines how the set price is calculated.
@@ -15,5 +15,5 @@ Determines how the set price is calculated.
 
 | Enumeration Member | Value | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="fixed"></a> `FIXED` | `"FIXED"` | Set has a fixed price regardless of component prices | [src/core/business-mgt/product-management/product-set.schema.ts:28](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/business-mgt/product-management/product-set.schema.ts#L28) |
-| <a id="sum_of_items"></a> `SUM_OF_ITEMS` | `"SUM_OF_ITEMS"` | Set price is sum of included product prices | [src/core/business-mgt/product-management/product-set.schema.ts:30](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/business-mgt/product-management/product-set.schema.ts#L30) |
+| <a id="fixed"></a> `FIXED` | `"FIXED"` | Set has a fixed price regardless of component prices | [src/core/business-mgt/product-management/product-set.schema.ts:28](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/business-mgt/product-management/product-set.schema.ts#L28) |
+| <a id="sum_of_items"></a> `SUM_OF_ITEMS` | `"SUM_OF_ITEMS"` | Set price is sum of included product prices | [src/core/business-mgt/product-management/product-set.schema.ts:30](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/business-mgt/product-management/product-set.schema.ts#L30) |

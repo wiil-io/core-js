@@ -41,16 +41,22 @@ Slot queries should be treated as read models. They do not create reservations o
 
 Business-local date string in `YYYY-MM-DD` format.
 
-```typescript
-ReservationLocalDateSchema = z.string().regex(/^\d{4}-\d{2}-\d{2}$/);
+```json
+{
+  "type": "string",
+  "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+}
 ```
 
 ### ReservationTimeOfDayValue
 
 Human-readable business-local time of day such as `6:00 PM`.
 
-```typescript
-ReservationTimeOfDayValueSchema = z.string().min(1);
+```json
+{
+  "type": "string",
+  "pattern": "^(0?[1-9]|1[0-2]):[0-5]\\d\\s?(AM|PM)$"
+}
 ```
 
 ---
@@ -59,12 +65,17 @@ ReservationTimeOfDayValueSchema = z.string().min(1);
 
 ### Request Union
 
-```typescript
-ReservationSlotQueryRequestSchema = z.discriminatedUnion("resourceType", [
-    TableReservationSlotQueryRequestSchema,
-    RoomReservationSlotQueryRequestSchema,
-    RentalReservationSlotQueryRequestSchema,
-]);
+```json
+{
+  "oneOf": [
+    { "$ref": "#/$defs/TableReservationSlotQueryRequest" },
+    { "$ref": "#/$defs/RoomReservationSlotQueryRequest" },
+    { "$ref": "#/$defs/RentalReservationSlotQueryRequest" }
+  ],
+  "discriminator": {
+    "propertyName": "resourceType"
+  }
+}
 ```
 
 ### Shared Request Fields
@@ -85,29 +96,43 @@ Table slot queries search a single business-local date for time windows that can
 
 ### Request Schema
 
-```typescript
-TableReservationSlotQueryRequestSchema = ReservationSlotQueryRequestBaseSchema.extend({
-    resourceType: z.literal(ResourceType.TABLE),
-    partySize: z.number().int().positive(),
-    floorPlanId: z.string().nullable().optional(),
-    floorPlanSectionId: z.string().nullable().optional(),
-});
+```json
+{
+  "$id": "#/$defs/TableReservationSlotQueryRequest",
+  "type": "object",
+  "properties": {
+    "resourceType": { "type": "string", "const": "table" },
+    "locationId": { "type": ["string", "null"] },
+    "resourceId": { "type": ["string", "null"] },
+    "localDate": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "maxResults": { "type": "integer", "exclusiveMinimum": 0, "maximum": 1000, "default": 20 },
+    "partySize": { "type": "integer", "exclusiveMinimum": 0 },
+    "floorPlanId": { "type": ["string", "null"] },
+    "floorPlanSectionId": { "type": ["string", "null"] }
+  },
+  "required": ["resourceType", "localDate", "partySize"]
+}
 ```
 
 ### Candidate Schema
 
-```typescript
-ReservationCandidateSlotSchema = z.object({
-    resourceId: z.string(),
-    startTimeOfDay: ReservationTimeOfDayValueSchema,
-    startMinuteOfDay: z.number().int().min(0).max(1439),
-    endMinuteOfDay: z.number().int().min(1).max(1440),
-    startTimeUtcSec: z.number(),
-    endTimeUtcSec: z.number(),
-    isAvailable: z.boolean().default(true),
-    capacityRemaining: z.number().int().nonnegative().nullable().optional(),
-    priceQuote: z.number().nonnegative().nullable().optional(),
-});
+```json
+{
+  "$id": "#/$defs/ReservationCandidateSlot",
+  "type": "object",
+  "properties": {
+    "resourceId": { "type": "string" },
+    "startTimeOfDay": { "type": "string", "pattern": "^(0?[1-9]|1[0-2]):[0-5]\\d\\s?(AM|PM)$" },
+    "startMinuteOfDay": { "type": "integer", "minimum": 0, "maximum": 1439 },
+    "endMinuteOfDay": { "type": "integer", "minimum": 1, "maximum": 1440 },
+    "startTimeUtcSec": { "type": "number" },
+    "endTimeUtcSec": { "type": "number" },
+    "isAvailable": { "type": "boolean", "default": true },
+    "capacityRemaining": { "type": ["integer", "null"], "minimum": 0 },
+    "priceQuote": { "type": ["number", "null"], "minimum": 0 }
+  },
+  "required": ["resourceId", "startTimeOfDay", "startMinuteOfDay", "endMinuteOfDay", "startTimeUtcSec", "endTimeUtcSec"]
+}
 ```
 
 ### Example Request
@@ -156,28 +181,53 @@ Room slot queries search a check-in date and stay length for room resources that
 
 ### Request Schema
 
-```typescript
-RoomReservationSlotQueryRequestSchema = ReservationSlotQueryRequestBaseSchema.extend({
-    resourceType: z.literal(ResourceType.ROOM),
-    nights: z.number().int().positive().default(1),
-    occupancy: z.number().int().positive().nullable().optional(),
-});
+```json
+{
+  "$id": "#/$defs/RoomReservationSlotQueryRequest",
+  "type": "object",
+  "properties": {
+    "resourceType": { "type": "string", "const": "room" },
+    "locationId": { "type": ["string", "null"] },
+    "resourceId": { "type": ["string", "null"] },
+    "localDate": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "maxResults": { "type": "integer", "exclusiveMinimum": 0, "maximum": 1000, "default": 20 },
+    "nights": { "type": "integer", "exclusiveMinimum": 0, "default": 1 },
+    "occupancy": { "type": ["integer", "null"], "exclusiveMinimum": 0 }
+  },
+  "required": ["resourceType", "localDate"]
+}
 ```
 
 ### Candidate Schema
 
-```typescript
-RoomCandidateSlotSchema = z.object({
-    resourceId: z.string(),
-    checkInDate: ReservationLocalDateSchema,
-    checkOutDate: ReservationLocalDateSchema,
-    nights: z.number().int().positive(),
-    occupancy: z.number().int().positive().nullable().optional(),
-    roomsAvailable: z.number().int().nonnegative(),
-    ratePerNight: z.array(RoomRatePerNightSchema).default([]),
-    totalWithTax: z.number().nonnegative(),
-    isAvailable: z.boolean().default(true),
-});
+```json
+{
+  "$id": "#/$defs/RoomCandidateSlot",
+  "type": "object",
+  "properties": {
+    "resourceId": { "type": "string" },
+    "checkInDate": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "checkOutDate": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "nights": { "type": "integer", "exclusiveMinimum": 0 },
+    "occupancy": { "type": ["integer", "null"], "exclusiveMinimum": 0 },
+    "roomsAvailable": { "type": "integer", "minimum": 0 },
+    "ratePerNight": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "date": { "type": "string" },
+          "amount": { "type": "number", "minimum": 0 }
+        },
+        "required": ["date", "amount"]
+      },
+      "default": []
+    },
+    "totalWithTax": { "type": "number", "minimum": 0 },
+    "isAvailable": { "type": "boolean", "default": true }
+  },
+  "required": ["resourceId", "checkInDate", "checkOutDate", "nights", "roomsAvailable", "totalWithTax"]
+}
 ```
 
 ### Example Request
@@ -230,32 +280,46 @@ Rental slot queries search pickup and return availability for rental resources a
 
 ### Request Schema
 
-```typescript
-RentalReservationSlotQueryRequestSchema = ReservationSlotQueryRequestBaseSchema.extend({
-    resourceType: z.literal(ResourceType.RENTAL),
-    returnDate: ReservationLocalDateSchema.nullable().optional(),
-    tierId: z.string().nullable().optional(),
-    durationMinutes: z.number().int().positive().nullable().optional(),
-});
+```json
+{
+  "$id": "#/$defs/RentalReservationSlotQueryRequest",
+  "type": "object",
+  "properties": {
+    "resourceType": { "type": "string", "const": "rental" },
+    "locationId": { "type": ["string", "null"] },
+    "resourceId": { "type": ["string", "null"] },
+    "localDate": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "maxResults": { "type": "integer", "exclusiveMinimum": 0, "maximum": 1000, "default": 20 },
+    "returnDate": { "type": ["string", "null"], "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "tierId": { "type": ["string", "null"] },
+    "durationMinutes": { "type": ["integer", "null"], "exclusiveMinimum": 0 }
+  },
+  "required": ["resourceType", "localDate"]
+}
 ```
 
 ### Candidate Schema
 
-```typescript
-RentalCandidateSlotSchema = z.object({
-    resourceId: z.string(),
-    pickupDate: ReservationLocalDateSchema,
-    returnDate: ReservationLocalDateSchema,
-    pickupTimeOfDay: ReservationTimeOfDayValueSchema.nullable().optional(),
-    returnTimeOfDay: ReservationTimeOfDayValueSchema.nullable().optional(),
-    durationMinutes: z.number().int().positive().nullable().optional(),
-    startTimeUtcSec: z.number(),
-    endTimeUtcSec: z.number(),
-    unitsAvailable: z.number().int().nonnegative(),
-    totalWithTax: z.number().nonnegative(),
-    priceQuote: z.number().nonnegative().nullable().optional(),
-    isAvailable: z.boolean().default(true),
-});
+```json
+{
+  "$id": "#/$defs/RentalCandidateSlot",
+  "type": "object",
+  "properties": {
+    "resourceId": { "type": "string" },
+    "pickupDate": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "returnDate": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "pickupTimeOfDay": { "type": ["string", "null"], "pattern": "^(0?[1-9]|1[0-2]):[0-5]\\d\\s?(AM|PM)$" },
+    "returnTimeOfDay": { "type": ["string", "null"], "pattern": "^(0?[1-9]|1[0-2]):[0-5]\\d\\s?(AM|PM)$" },
+    "durationMinutes": { "type": ["integer", "null"], "exclusiveMinimum": 0 },
+    "startTimeUtcSec": { "type": "number" },
+    "endTimeUtcSec": { "type": "number" },
+    "unitsAvailable": { "type": "integer", "minimum": 0 },
+    "totalWithTax": { "type": "number", "minimum": 0 },
+    "priceQuote": { "type": ["number", "null"], "minimum": 0 },
+    "isAvailable": { "type": "boolean", "default": true }
+  },
+  "required": ["resourceId", "pickupDate", "returnDate", "startTimeUtcSec", "endTimeUtcSec", "unitsAvailable", "totalWithTax"]
+}
 ```
 
 ### Example Request

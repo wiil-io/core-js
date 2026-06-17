@@ -34,21 +34,30 @@ Assigns a table reservation to a physical table instance and optional floor-plan
 
 ### Schema Definition
 
-```typescript
-TableAssignmentSchema = BaseModelSchema.safeExtend({
-    locationId: z.string().nullable().optional(),
-    reservationId: z.string(),
-    tableInstanceId: z.string(),
-    floorPlanId: z.string(),
-    floorPlanSectionId: z.string().nullable().optional(),
-    assignmentType: z.enum(TableAssignmentType).default("soft"),
-    status: z.enum(TableAssignmentStatus).default("assigned"),
-    assignedBy: z.string().nullable().optional(),
-    assignedAt: z.number().int().positive(),
-    releasedAt: z.number().int().positive().nullable().optional(),
-    releasedBy: z.string().nullable().optional(),
-    notes: z.string().nullable().optional(),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "createdAt": { "type": "integer" },
+    "updatedAt": { "type": "integer" },
+    "locationId": { "type": ["string", "null"] },
+    "reservationId": { "type": "string" },
+    "tableInstanceId": { "type": "string" },
+    "floorPlanId": { "type": "string" },
+    "floorPlanSectionId": { "type": ["string", "null"] },
+    "slotStart": { "type": "integer", "exclusiveMinimum": 0 },
+    "slotEnd": { "type": "integer", "exclusiveMinimum": 0 },
+    "assignmentType": { "type": "string", "enum": ["soft", "hard"], "default": "soft" },
+    "status": { "type": "string", "enum": ["assigned", "reassigned", "released"], "default": "assigned" },
+    "assignedBy": { "type": ["string", "null"] },
+    "assignedAt": { "type": "integer", "exclusiveMinimum": 0 },
+    "releasedAt": { "type": ["integer", "null"], "exclusiveMinimum": 0 },
+    "releasedBy": { "type": ["string", "null"] },
+    "notes": { "type": ["string", "null"] }
+  },
+  "required": ["id", "reservationId", "tableInstanceId", "floorPlanId", "slotStart", "slotEnd", "assignedAt"]
+}
 ```
 
 ### Status Values
@@ -76,6 +85,8 @@ TableAssignmentSchema = BaseModelSchema.safeExtend({
   "tableInstanceId": "table_12",
   "floorPlanId": "fp_main",
   "floorPlanSectionId": "sec_window",
+  "slotStart": 1705392000,
+  "slotEnd": 1705399200,
   "assignmentType": "hard",
   "status": "assigned",
   "assignedBy": "user_host",
@@ -94,20 +105,29 @@ Assigns a lodging reservation to a physical room instance.
 
 ### Schema Definition
 
-```typescript
-RoomAssignmentSchema = BaseModelSchema.safeExtend({
-    locationId: z.string().nullable().optional(),
-    reservationId: z.string(),
-    roomInstanceId: z.string(),
-    assignmentType: z.enum(RoomAssignmentType).default("soft"),
-    status: z.enum(RoomAssignmentStatus).default("assigned"),
-    assignedBy: z.string().nullable().optional(),
-    assignedAt: z.number().int().positive(),
-    releasedAt: z.number().int().positive().nullable().optional(),
-    releasedBy: z.string().nullable().optional(),
-    housekeepingNotes: z.string().nullable().optional(),
-    notes: z.string().nullable().optional(),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "createdAt": { "type": "integer" },
+    "updatedAt": { "type": "integer" },
+    "locationId": { "type": ["string", "null"] },
+    "reservationId": { "type": "string" },
+    "roomInstanceId": { "type": "string" },
+    "slotStart": { "type": "integer", "exclusiveMinimum": 0 },
+    "slotEnd": { "type": "integer", "exclusiveMinimum": 0 },
+    "assignmentType": { "type": "string", "enum": ["soft", "hard"], "default": "soft" },
+    "status": { "type": "string", "enum": ["assigned", "reassigned", "released"], "default": "assigned" },
+    "assignedBy": { "type": ["string", "null"] },
+    "assignedAt": { "type": "integer", "exclusiveMinimum": 0 },
+    "releasedAt": { "type": ["integer", "null"], "exclusiveMinimum": 0 },
+    "releasedBy": { "type": ["string", "null"] },
+    "housekeepingNotes": { "type": ["string", "null"] },
+    "notes": { "type": ["string", "null"] }
+  },
+  "required": ["id", "reservationId", "roomInstanceId", "slotStart", "slotEnd", "assignedAt"]
+}
 ```
 
 ### Status Values
@@ -133,6 +153,8 @@ RoomAssignmentSchema = BaseModelSchema.safeExtend({
   "locationId": "loc_hotel",
   "reservationId": "room_res_123",
   "roomInstanceId": "room_204",
+  "slotStart": 1705464000,
+  "slotEnd": 1705550400,
   "assignmentType": "hard",
   "status": "assigned",
   "assignedBy": "user_frontdesk",
@@ -152,21 +174,43 @@ Assigns a rental reservation to a physical rental unit and captures condition at
 
 ### Schema Definition
 
-```typescript
-RentalAssignmentSchema = BaseModelSchema.safeExtend({
-    locationId: z.string().nullable().optional(),
-    reservationId: z.string(),
-    rentalInstanceId: z.string(),
-    assignmentType: z.enum(RentalAssignmentType).default("soft"),
-    status: z.enum(RentalAssignmentStatus).default("assigned"),
-    assignedBy: z.string().nullable().optional(),
-    assignedAt: z.number().int().positive(),
-    releasedAt: z.number().int().positive().nullable().optional(),
-    releasedBy: z.string().nullable().optional(),
-    conditionAtPickup: RentalUnitConditionSchema.nullable().optional(),
-    conditionAtReturn: RentalUnitConditionSchema.nullable().optional(),
-    notes: z.string().nullable().optional(),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "createdAt": { "type": "integer" },
+    "updatedAt": { "type": "integer" },
+    "locationId": { "type": ["string", "null"] },
+    "reservationId": { "type": "string" },
+    "rentalInstanceId": { "type": "string" },
+    "slotStart": { "type": "integer", "exclusiveMinimum": 0 },
+    "slotEnd": { "type": "integer", "exclusiveMinimum": 0 },
+    "assignmentType": { "type": "string", "enum": ["soft", "hard"], "default": "soft" },
+    "status": { "type": "string", "enum": ["assigned", "reassigned", "released"], "default": "assigned" },
+    "assignedBy": { "type": ["string", "null"] },
+    "assignedAt": { "type": "integer", "exclusiveMinimum": 0 },
+    "releasedAt": { "type": ["integer", "null"], "exclusiveMinimum": 0 },
+    "releasedBy": { "type": ["string", "null"] },
+    "conditionAtPickup": { "$ref": "#/$defs/RentalUnitCondition", "nullable": true },
+    "conditionAtReturn": { "$ref": "#/$defs/RentalUnitCondition", "nullable": true },
+    "notes": { "type": ["string", "null"] }
+  },
+  "required": ["id", "reservationId", "rentalInstanceId", "slotStart", "slotEnd", "assignedAt"],
+  "$defs": {
+    "RentalUnitCondition": {
+      "type": "object",
+      "properties": {
+        "recordedAt": { "type": "integer", "exclusiveMinimum": 0 },
+        "recordedBy": { "type": "string" },
+        "notes": { "type": ["string", "null"] },
+        "damageReported": { "type": "boolean", "default": false },
+        "imageUrls": { "type": ["array", "null"], "items": { "type": "string", "format": "uri" } }
+      },
+      "required": ["recordedAt", "recordedBy", "damageReported"]
+    }
+  }
+}
 ```
 
 ### Status Values
@@ -185,6 +229,8 @@ RentalAssignmentSchema = BaseModelSchema.safeExtend({
   "locationId": "loc_marina",
   "reservationId": "rental_res_123",
   "rentalInstanceId": "bike_17",
+  "slotStart": 1705357800,
+  "slotEnd": 1705377600,
   "assignmentType": "hard",
   "status": "assigned",
   "assignedBy": "user_counter",
@@ -239,64 +285,106 @@ After return:
 
 ### TableAssignmentQueryOptions
 
-```typescript
-interface TableAssignmentQueryOptions {
-    page: number;
-    pageSize: number;
-    filters?: {
-        reservationId?: string;
-        tableInstanceId?: string;
-        status?: TableAssignmentStatus[];
-        assignedBy?: string;
-        locationId?: string;
-    };
-    sorting?: {
-        field: keyof TableAssignment;
-        direction: "asc" | "desc";
-    };
+```json
+{
+  "type": "object",
+  "properties": {
+    "page": { "type": "integer", "minimum": 1 },
+    "pageSize": { "type": "integer", "minimum": 1 },
+    "filters": {
+      "type": "object",
+      "properties": {
+        "reservationId": { "type": "string" },
+        "tableInstanceId": { "type": "string" },
+        "status": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["assigned", "reassigned", "released"] }
+        },
+        "assignedBy": { "type": "string" },
+        "locationId": { "type": "string" }
+      }
+    },
+    "sorting": {
+      "type": "object",
+      "properties": {
+        "field": { "type": "string", "enum": ["assignedAt", "releasedAt", "createdAt"] },
+        "direction": { "type": "string", "enum": ["asc", "desc"] }
+      },
+      "required": ["field", "direction"]
+    }
+  },
+  "required": ["page", "pageSize"]
 }
 ```
 
 ### RoomAssignmentQueryOptions
 
-```typescript
-interface RoomAssignmentQueryOptions {
-    page: number;
-    pageSize: number;
-    filters?: {
-        reservationId?: string;
-        roomInstanceId?: string;
-        status?: RoomAssignmentStatus[];
-        assignmentType?: RoomAssignmentType;
-        assignedBy?: string;
-        locationId?: string;
-    };
-    sorting?: {
-        field: keyof RoomAssignment;
-        direction: "asc" | "desc";
-    };
+```json
+{
+  "type": "object",
+  "properties": {
+    "page": { "type": "integer", "minimum": 1 },
+    "pageSize": { "type": "integer", "minimum": 1 },
+    "filters": {
+      "type": "object",
+      "properties": {
+        "reservationId": { "type": "string" },
+        "roomInstanceId": { "type": "string" },
+        "status": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["assigned", "reassigned", "released"] }
+        },
+        "assignmentType": { "type": "string", "enum": ["soft", "hard"] },
+        "assignedBy": { "type": "string" },
+        "locationId": { "type": "string" }
+      }
+    },
+    "sorting": {
+      "type": "object",
+      "properties": {
+        "field": { "type": "string", "enum": ["assignedAt", "releasedAt", "createdAt"] },
+        "direction": { "type": "string", "enum": ["asc", "desc"] }
+      },
+      "required": ["field", "direction"]
+    }
+  },
+  "required": ["page", "pageSize"]
 }
 ```
 
 ### RentalAssignmentQueryOptions
 
-```typescript
-interface RentalAssignmentQueryOptions {
-    page: number;
-    pageSize: number;
-    filters?: {
-        reservationId?: string;
-        rentalInstanceId?: string;
-        status?: RentalAssignmentStatus[];
-        assignmentType?: RentalAssignmentType;
-        assignedBy?: string;
-        locationId?: string;
-        damageReported?: boolean;
-    };
-    sorting?: {
-        field: keyof RentalAssignment;
-        direction: "asc" | "desc";
-    };
+```json
+{
+  "type": "object",
+  "properties": {
+    "page": { "type": "integer", "minimum": 1 },
+    "pageSize": { "type": "integer", "minimum": 1 },
+    "filters": {
+      "type": "object",
+      "properties": {
+        "reservationId": { "type": "string" },
+        "rentalInstanceId": { "type": "string" },
+        "status": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["assigned", "reassigned", "released"] }
+        },
+        "assignmentType": { "type": "string", "enum": ["soft", "hard"] },
+        "assignedBy": { "type": "string" },
+        "locationId": { "type": "string" },
+        "damageReported": { "type": "boolean" }
+      }
+    },
+    "sorting": {
+      "type": "object",
+      "properties": {
+        "field": { "type": "string", "enum": ["assignedAt", "releasedAt", "createdAt"] },
+        "direction": { "type": "string", "enum": ["asc", "desc"] }
+      },
+      "required": ["field", "direction"]
+    }
+  },
+  "required": ["page", "pageSize"]
 }
 ```
 

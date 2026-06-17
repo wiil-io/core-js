@@ -40,24 +40,40 @@ Represents a time-window booking for table-based businesses.
 
 ### Schema Definition
 
-```typescript
-TableReservationSchema = BaseModelSchema.safeExtend({
-    locationId: z.string().nullable().optional(),
-    channelId: z.string().nullable().optional(),
-    resourceId: z.string(),
-    customerId: z.string(),
-    floorPlanId: z.string().nullable().optional(),
-    floorPlanSectionId: z.string().nullable().optional(),
-    personsNumber: z.number().int().positive(),
-    time: z.number(),
-    duration: z.number().int().positive(),
-    status: z.enum(ReservationStatus).default("pending"),
-    source: z.string().nullable().optional(),
-    notes: z.string().nullable().optional(),
-    isVip: z.boolean().default(false),
-    specialRequests: z.string().nullable().optional(),
-    externalRef: ExternalRefSchema.nullable().optional(),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "createdAt": { "type": "integer" },
+    "updatedAt": { "type": "integer" },
+    "locationId": { "type": ["string", "null"] },
+    "channelId": { "type": ["string", "null"] },
+    "resourceId": { "type": "string" },
+    "customerId": { "type": "string" },
+    "floorPlanId": { "type": ["string", "null"] },
+    "floorPlanSectionId": { "type": ["string", "null"] },
+    "personsNumber": { "type": "integer", "exclusiveMinimum": 0 },
+    "time": { "type": "number" },
+    "duration": { "type": "integer", "exclusiveMinimum": 0 },
+    "status": {
+      "type": "string",
+      "enum": ["pending", "confirmed", "seated", "checked_in", "completed", "cancelled", "no_show"],
+      "default": "pending"
+    },
+    "source": { "type": ["string", "null"] },
+    "notes": { "type": ["string", "null"] },
+    "isVip": { "type": "boolean", "default": false },
+    "specialRequests": { "type": ["string", "null"] },
+    "externalRef": {
+      "oneOf": [
+        { "$ref": "#/$defs/ExternalRef" },
+        { "type": "null" }
+      ]
+    }
+  },
+  "required": ["id", "resourceId", "customerId", "personsNumber", "time", "duration"]
+}
 ```
 
 ### Fields
@@ -116,25 +132,55 @@ Represents a lodging reservation with date-range stay details, guest information
 
 ### Schema Definition
 
-```typescript
-RoomReservationSchema = BaseModelSchema.safeExtend({
-    locationId: z.string().nullable().optional(),
-    channelId: z.string().nullable().optional(),
-    resourceId: z.string(),
-    guestId: z.string(),
-    personsNumber: z.number().int().positive(),
-    checkIn: z.number(),
-    checkOut: z.number(),
-    nights: z.number().int().positive(),
-    status: z.enum(ReservationStatus).default("pending"),
-    source: z.string().nullable().optional(),
-    ratePerNight: z.array(RoomRatePerNightSchema).default([]),
-    totalWithTax: z.number().nonnegative(),
-    deposit: z.number().nonnegative().default(0),
-    paymentStatus: z.enum(PaymentStatus).nullable().optional(),
-    notes: z.string().nullable().optional(),
-    externalRef: ExternalRefSchema.nullable().optional(),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "createdAt": { "type": "integer" },
+    "updatedAt": { "type": "integer" },
+    "locationId": { "type": ["string", "null"] },
+    "channelId": { "type": ["string", "null"] },
+    "resourceId": { "type": "string" },
+    "guestId": { "type": "string" },
+    "personsNumber": { "type": "integer", "exclusiveMinimum": 0 },
+    "checkIn": { "type": "number" },
+    "checkOut": { "type": "number" },
+    "nights": { "type": "integer", "exclusiveMinimum": 0 },
+    "status": {
+      "type": "string",
+      "enum": ["pending", "confirmed", "seated", "checked_in", "completed", "cancelled", "no_show"],
+      "default": "pending"
+    },
+    "source": { "type": ["string", "null"] },
+    "ratePerNight": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "date": { "type": "string" },
+          "amount": { "type": "number", "minimum": 0 }
+        },
+        "required": ["date", "amount"]
+      },
+      "default": []
+    },
+    "totalWithTax": { "type": "number", "minimum": 0 },
+    "deposit": { "type": "number", "minimum": 0, "default": 0 },
+    "paymentStatus": {
+      "type": ["string", "null"],
+      "enum": ["pending", "paid", "partial", "failed", "refunded", null]
+    },
+    "notes": { "type": ["string", "null"] },
+    "externalRef": {
+      "oneOf": [
+        { "$ref": "#/$defs/ExternalRef" },
+        { "type": "null" }
+      ]
+    }
+  },
+  "required": ["id", "resourceId", "guestId", "personsNumber", "checkIn", "checkOut", "nights", "totalWithTax"]
+}
 ```
 
 ### Fields
@@ -188,24 +234,88 @@ Represents a rental booking with pickup/return timing, tier selection, deposit s
 
 ### Schema Definition
 
-```typescript
-RentalReservationSchema = BaseModelSchema.safeExtend({
-    locationId: z.string().nullable().optional(),
-    channelId: z.string().nullable().optional(),
-    customerId: z.string(),
-    resourceId: z.string(),
-    startAt: z.number(),
-    endAt: z.number(),
-    actualReturnAt: z.number().nullable().optional(),
-    tierId: z.string(),
-    status: z.enum(RentalReservationStatus).default("upcoming"),
-    payment: RentalReservationPaymentSchema,
-    checklistCompletions: z.array(ChecklistCompletionSchema).default([]),
-    waiver: WaiverRefSchema.nullable().optional(),
-    idVerification: IDRefSchema.nullable().optional(),
-    notes: z.string().nullable().optional(),
-    externalRef: ExternalRefSchema.nullable().optional(),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "createdAt": { "type": "integer" },
+    "updatedAt": { "type": "integer" },
+    "locationId": { "type": ["string", "null"] },
+    "channelId": { "type": ["string", "null"] },
+    "customerId": { "type": "string" },
+    "resourceId": { "type": "string" },
+    "startAt": { "type": "number" },
+    "endAt": { "type": "number" },
+    "actualReturnAt": { "type": ["number", "null"] },
+    "tierId": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["upcoming", "pickup_soon", "out", "returned", "overdue", "cancelled"],
+      "default": "upcoming"
+    },
+    "payment": {
+      "type": "object",
+      "properties": {
+        "rentalCharge": { "type": "number", "minimum": 0 },
+        "securityDeposit": { "type": "number", "minimum": 0 },
+        "depositStatus": { "type": "string", "enum": ["pending", "paid", "returned", "forfeited"] }
+      },
+      "required": ["rentalCharge", "securityDeposit", "depositStatus"]
+    },
+    "checklistCompletions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "itemId": { "type": "string" },
+          "completed": { "type": "boolean", "default": false },
+          "completedAt": { "type": ["number", "null"] },
+          "completedBy": { "type": ["string", "null"] }
+        },
+        "required": ["itemId"]
+      },
+      "default": []
+    },
+    "waiver": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "waiverId": { "type": "string" },
+            "signedAt": { "type": ["number", "null"] },
+            "status": { "type": "string", "enum": ["required", "signed", "waived"], "default": "required" }
+          },
+          "required": ["waiverId"]
+        },
+        { "type": "null" }
+      ]
+    },
+    "idVerification": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "verificationId": { "type": "string" },
+            "provider": { "type": ["string", "null"] },
+            "verifiedAt": { "type": ["number", "null"] },
+            "status": { "type": "string", "enum": ["required", "verified", "rejected"], "default": "required" }
+          },
+          "required": ["verificationId"]
+        },
+        { "type": "null" }
+      ]
+    },
+    "notes": { "type": ["string", "null"] },
+    "externalRef": {
+      "oneOf": [
+        { "$ref": "#/$defs/ExternalRef" },
+        { "type": "null" }
+      ]
+    }
+  },
+  "required": ["id", "customerId", "resourceId", "startAt", "endAt", "tierId", "payment"]
+}
 ```
 
 ### Operational Fields
@@ -296,73 +406,142 @@ RentalReservationSchema = BaseModelSchema.safeExtend({
 
 ### TableReservationQueryOptions
 
-```typescript
-interface TableReservationQueryOptions {
-    page: number;
-    pageSize: number;
-    filters?: {
-        search?: string;
-        locationId?: string;
-        channelId?: string;
-        customerId?: string;
-        status?: ReservationStatus[];
-        tableId?: string;
-        dateRange?: { start?: number; end?: number };
-        externalSource?: string;
-    };
-    sorting?: {
-        field: keyof TableReservation;
-        direction: "asc" | "desc";
-    };
+```json
+{
+  "type": "object",
+  "properties": {
+    "page": { "type": "integer", "minimum": 1 },
+    "pageSize": { "type": "integer", "minimum": 1 },
+    "filters": {
+      "type": "object",
+      "properties": {
+        "search": { "type": "string" },
+        "locationId": { "type": "string" },
+        "channelId": { "type": "string" },
+        "customerId": { "type": "string" },
+        "status": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["pending", "confirmed", "seated", "checked_in", "completed", "cancelled", "no_show"] }
+        },
+        "tableId": { "type": "string" },
+        "dateRange": {
+          "type": "object",
+          "properties": {
+            "start": { "type": "number" },
+            "end": { "type": "number" }
+          }
+        },
+        "externalSource": { "type": "string" }
+      }
+    },
+    "sorting": {
+      "type": "object",
+      "properties": {
+        "field": { "type": "string", "enum": ["time", "duration", "createdAt"] },
+        "direction": { "type": "string", "enum": ["asc", "desc"] }
+      },
+      "required": ["field", "direction"]
+    }
+  },
+  "required": ["page", "pageSize"]
 }
 ```
 
 ### RoomReservationQueryOptions
 
-```typescript
-interface RoomReservationQueryOptions {
-    page: number;
-    pageSize: number;
-    filters?: {
-        search?: string;
-        locationId?: string;
-        channelId?: string;
-        resourceId?: string;
-        guestId?: string;
-        status?: ReservationStatus[];
-        paymentStatus?: PaymentStatus[];
-        dateRange?: { start?: number; end?: number };
-        externalSource?: string;
-    };
-    sorting?: {
-        field: keyof RoomReservation;
-        direction: "asc" | "desc";
-    };
+```json
+{
+  "type": "object",
+  "properties": {
+    "page": { "type": "integer", "minimum": 1 },
+    "pageSize": { "type": "integer", "minimum": 1 },
+    "filters": {
+      "type": "object",
+      "properties": {
+        "search": { "type": "string" },
+        "locationId": { "type": "string" },
+        "channelId": { "type": "string" },
+        "resourceId": { "type": "string" },
+        "guestId": { "type": "string" },
+        "status": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["pending", "confirmed", "seated", "checked_in", "completed", "cancelled", "no_show"] }
+        },
+        "paymentStatus": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["pending", "paid", "partial", "failed", "refunded"] }
+        },
+        "dateRange": {
+          "type": "object",
+          "properties": {
+            "start": { "type": "number" },
+            "end": { "type": "number" }
+          }
+        },
+        "externalSource": { "type": "string" }
+      }
+    },
+    "sorting": {
+      "type": "object",
+      "properties": {
+        "field": { "type": "string", "enum": ["checkIn", "checkOut", "createdAt"] },
+        "direction": { "type": "string", "enum": ["asc", "desc"] }
+      },
+      "required": ["field", "direction"]
+    }
+  },
+  "required": ["page", "pageSize"]
 }
 ```
 
 ### RentalReservationQueryOptions
 
-```typescript
-interface RentalReservationQueryOptions {
-    page: number;
-    pageSize: number;
-    filters?: {
-        search?: string;
-        locationId?: string;
-        channelId?: string;
-        customerId?: string;
-        resourceId?: string;
-        tierId?: string[];
-        status?: RentalReservationStatus[];
-        depositStatus?: DepositStatus[];
-        dateRange?: { start?: number; end?: number };
-        externalSource?: string;
-    };
-    sorting?: {
-        field: keyof RentalReservation;
-        direction: "asc" | "desc";
-    };
+```json
+{
+  "type": "object",
+  "properties": {
+    "page": { "type": "integer", "minimum": 1 },
+    "pageSize": { "type": "integer", "minimum": 1 },
+    "filters": {
+      "type": "object",
+      "properties": {
+        "search": { "type": "string" },
+        "locationId": { "type": "string" },
+        "channelId": { "type": "string" },
+        "customerId": { "type": "string" },
+        "resourceId": { "type": "string" },
+        "tierId": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "status": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["upcoming", "pickup_soon", "out", "returned", "overdue", "cancelled"] }
+        },
+        "depositStatus": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["pending", "paid", "returned", "forfeited"] }
+        },
+        "dateRange": {
+          "type": "object",
+          "properties": {
+            "start": { "type": "number" },
+            "end": { "type": "number" }
+          }
+        },
+        "externalSource": { "type": "string" }
+      }
+    },
+    "sorting": {
+      "type": "object",
+      "properties": {
+        "field": { "type": "string", "enum": ["startAt", "endAt", "createdAt"] },
+        "direction": { "type": "string", "enum": ["asc", "desc"] }
+      },
+      "required": ["field", "direction"]
+    }
+  },
+  "required": ["page", "pageSize"]
 }
 ```
 

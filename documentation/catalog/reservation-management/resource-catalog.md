@@ -43,18 +43,38 @@ Groups reservation resources by business use, location scope, resource type, and
 
 ### Schema Definition
 
-```typescript
-ResourceCategorySchema = BaseModelSchema.safeExtend({
-    resourceRevisionId: z.string().optional(),
-    locationId: z.string().nullable().optional(),
-    name: z.string().min(1),
-    description: z.string().nullable().optional(),
-    channelMappings: z.array(ResourceCategoryChannelMappingSchema).nullable().optional(),
-    resourceType: z.enum(ResourceType).nullable().optional(),
-    displayOrder: z.number().int().nullable().optional(),
-    isActive: z.boolean().default(true),
-    metadata: z.record(z.string(), z.any()).nullable().optional(),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "createdAt": { "type": "integer" },
+    "updatedAt": { "type": "integer" },
+    "resourceRevisionId": { "type": "string" },
+    "locationId": { "type": ["string", "null"] },
+    "name": { "type": "string", "minLength": 1 },
+    "description": { "type": ["string", "null"] },
+    "channelMappings": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "object",
+        "properties": {
+          "channelId": { "type": "string" },
+          "externalCategoryId": { "type": "string" }
+        },
+        "required": ["channelId", "externalCategoryId"]
+      }
+    },
+    "resourceType": {
+      "type": ["string", "null"],
+      "enum": ["table", "room", "rental", "rentals", "resource", null]
+    },
+    "displayOrder": { "type": ["integer", "null"] },
+    "isActive": { "type": "boolean", "default": true },
+    "metadata": { "type": ["object", "null"], "additionalProperties": true }
+  },
+  "required": ["id", "name"]
+}
 ```
 
 ### Fields
@@ -103,34 +123,87 @@ Defines a reservable type, including capacity, pricing, booking behavior, checkl
 
 ### Schema Definition
 
-```typescript
-ResourceSchema = BaseModelSchema.safeExtend({
-    resourceRevisionId: z.string().optional(),
-    locationId: z.string().nullable().optional(),
-    resourceType: z.enum(ResourceType),
-    categoryId: z.string().nullable().optional(),
-    name: z.string(),
-    description: z.string().nullable().optional(),
-    imageUrls: z.array(z.url()).nullable().optional(),
-    capacity: z.number().int().positive().nullable().optional(),
-    capacityConfig: ResourceCapacitySchema.nullable().optional(),
-    isAvailable: z.boolean().default(true),
-    channelMappings: z.array(ResourceChannelMappingSchema).nullable().optional(),
-    location: z.string().optional(),
-    amenities: z.array(z.string()).default([]),
-    instances: z.array(z.string()).nullable().optional(),
-    pricing: ResourcePricingStrategySchema.nullable().optional(),
-    turnoverMinutes: z.number().int().nonnegative().nullable().optional(),
-    attributes: z.array(ResourceAttributeSchema).nullable().optional(),
-    bookingRules: ServiceBookingRulesSchema.nullable().optional(),
-    depositStrategy: z.enum(ServiceDepositStrategy).nullable().optional(),
-    reservationDuration: z.number().int().positive().nullable().optional(),
-    reservationDurationUnit: z.enum(ResourceReservationDurationUnit).nullable().optional(),
-    checklistTemplate: z.array(ChecklistTemplateItemSchema).default([]),
-    applicableTierIds: z.array(z.string()).default([]),
-    displayOrder: z.number().int().nonnegative().nullable().optional(),
-    metadata: z.record(z.string(), z.any()).optional(),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "createdAt": { "type": "integer" },
+    "updatedAt": { "type": "integer" },
+    "resourceRevisionId": { "type": "string" },
+    "locationId": { "type": ["string", "null"] },
+    "resourceType": { "type": "string", "enum": ["table", "room", "rental", "rentals", "resource"] },
+    "categoryId": { "type": ["string", "null"] },
+    "name": { "type": "string" },
+    "description": { "type": ["string", "null"] },
+    "imageUrls": {
+      "type": ["array", "null"],
+      "items": { "type": "string", "format": "uri" }
+    },
+    "capacity": { "type": ["integer", "null"], "exclusiveMinimum": 0 },
+    "capacityConfig": {
+      "oneOf": [
+        { "$ref": "#/$defs/ResourceCapacity" },
+        { "type": "null" }
+      ]
+    },
+    "isAvailable": { "type": "boolean", "default": true },
+    "channelMappings": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "object",
+        "properties": {
+          "channelId": { "type": "string" },
+          "externalResourceId": { "type": "string" }
+        },
+        "required": ["channelId", "externalResourceId"]
+      }
+    },
+    "location": { "type": "string" },
+    "amenities": { "type": "array", "items": { "type": "string" }, "default": [] },
+    "instances": { "type": ["array", "null"], "items": { "type": "string" } },
+    "pricing": {
+      "oneOf": [
+        { "$ref": "#/$defs/ResourcePricingStrategy" },
+        { "type": "null" }
+      ]
+    },
+    "turnoverMinutes": { "type": ["integer", "null"], "minimum": 0 },
+    "attributes": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": { "type": "string" },
+          "value": { "type": "string" }
+        },
+        "required": ["key", "value"]
+      }
+    },
+    "bookingRules": { "type": ["object", "null"], "additionalProperties": true },
+    "depositStrategy": { "type": ["string", "null"] },
+    "reservationDuration": { "type": ["integer", "null"], "exclusiveMinimum": 0 },
+    "reservationDurationUnit": { "type": ["string", "null"], "enum": ["minutes", "hours", "nights", null] },
+    "checklistTemplate": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "label": { "type": "string" },
+          "required": { "type": "boolean", "default": true },
+          "phase": { "type": "string", "enum": ["pickup", "return", "both"], "default": "both" }
+        },
+        "required": ["id", "label"]
+      },
+      "default": []
+    },
+    "applicableTierIds": { "type": "array", "items": { "type": "string" }, "default": [] },
+    "displayOrder": { "type": ["integer", "null"], "minimum": 0 },
+    "metadata": { "type": "object", "additionalProperties": true }
+  },
+  "required": ["id", "resourceType", "name"]
+}
 ```
 
 ### Capacity Strategies
@@ -141,6 +214,45 @@ ResourceSchema = BaseModelSchema.safeExtend({
 | `occupancy` | room | `standard`, `max`, `extraFee` | Supports lodging occupancy pricing |
 | `single` | rental | `value`, `weightLimit`, `skillLevel` | Supports single-unit rental constraints |
 
+### Capacity Schema
+
+```json
+{
+  "$id": "#/$defs/ResourceCapacity",
+  "oneOf": [
+    {
+      "type": "object",
+      "properties": {
+        "kind": { "type": "string", "const": "range" },
+        "min": { "type": "integer", "exclusiveMinimum": 0 },
+        "max": { "type": "integer", "exclusiveMinimum": 0 }
+      },
+      "required": ["kind", "min", "max"]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "kind": { "type": "string", "const": "occupancy" },
+        "standard": { "type": "integer", "exclusiveMinimum": 0 },
+        "max": { "type": "integer", "exclusiveMinimum": 0 },
+        "extraFee": { "type": ["number", "null"], "minimum": 0 }
+      },
+      "required": ["kind", "standard", "max"]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "kind": { "type": "string", "const": "single" },
+        "value": { "type": "integer", "exclusiveMinimum": 0 },
+        "weightLimit": { "type": ["number", "null"], "exclusiveMinimum": 0 },
+        "skillLevel": { "type": ["string", "null"] }
+      },
+      "required": ["kind", "value"]
+    }
+  ]
+}
+```
+
 ### Pricing Strategies
 
 | Strategy | Resource Type | Fields | Purpose |
@@ -148,6 +260,64 @@ ResourceSchema = BaseModelSchema.safeExtend({
 | `none` | table | `holdPolicy` | No price quote required for a slot |
 | `dayOfWeek` | room | `rates.mon` through `rates.sun` | Nightly rate generation |
 | `tiered` | rental | `tiers` | Duration or quantity based pricing |
+
+### Pricing Schema
+
+```json
+{
+  "$id": "#/$defs/ResourcePricingStrategy",
+  "oneOf": [
+    {
+      "type": "object",
+      "properties": {
+        "kind": { "type": "string", "const": "none" },
+        "holdPolicy": { "type": ["string", "null"] }
+      },
+      "required": ["kind"]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "kind": { "type": "string", "const": "dayOfWeek" },
+        "rates": {
+          "type": "object",
+          "properties": {
+            "mon": { "type": "number", "minimum": 0 },
+            "tue": { "type": "number", "minimum": 0 },
+            "wed": { "type": "number", "minimum": 0 },
+            "thu": { "type": "number", "minimum": 0 },
+            "fri": { "type": "number", "minimum": 0 },
+            "sat": { "type": "number", "minimum": 0 },
+            "sun": { "type": "number", "minimum": 0 }
+          },
+          "required": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
+        }
+      },
+      "required": ["kind", "rates"]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "kind": { "type": "string", "const": "tiered" },
+        "tiers": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "properties": {
+              "from": { "type": "number", "minimum": 0 },
+              "to": { "type": ["number", "null"], "minimum": 0 },
+              "price": { "type": "number", "minimum": 0 }
+            },
+            "required": ["from", "price"]
+          }
+        }
+      },
+      "required": ["kind", "tiers"]
+    }
+  ]
+}
+```
 
 ### Example: Room Resource
 
@@ -225,17 +395,38 @@ Represents a physical table, room, rental unit, or other concrete unit under a r
 
 ### Schema Definition
 
-```typescript
-ResourceInstanceSchema = BaseModelSchema.safeExtend({
-    resourceRevisionId: z.string().optional(),
-    locationId: z.string().nullable().optional(),
-    resourceId: z.string(),
-    name: z.string().nullable().optional(),
-    code: z.string().nullable().optional(),
-    status: z.enum(ResourceInstanceStatus).default("available"),
-    isAvailable: z.boolean().default(true),
-    attributes: z.array(ResourceInstanceAttributeSchema).nullable().optional(),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "createdAt": { "type": "integer" },
+    "updatedAt": { "type": "integer" },
+    "resourceRevisionId": { "type": "string" },
+    "locationId": { "type": ["string", "null"] },
+    "resourceId": { "type": "string" },
+    "name": { "type": ["string", "null"] },
+    "code": { "type": ["string", "null"] },
+    "status": {
+      "type": "string",
+      "enum": ["available", "reserved", "occupied", "maintenance", "cleaning", "out_of_service"],
+      "default": "available"
+    },
+    "isAvailable": { "type": "boolean", "default": true },
+    "attributes": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": { "type": "string" },
+          "value": { "type": "string" }
+        },
+        "required": ["key", "value"]
+      }
+    }
+  },
+  "required": ["id", "resourceId"]
+}
 ```
 
 ### Status Values
@@ -273,35 +464,53 @@ Resource versioning separates stable catalog definitions from mutable revisions.
 
 ### ResourceDefinition
 
-```typescript
-ResourceDefinitionSchema = BaseModelSchema.safeExtend({
-    name: z.string().min(1),
-    description: z.string().nullable().optional(),
-    isActive: z.boolean().default(true),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "createdAt": { "type": "integer" },
+    "updatedAt": { "type": "integer" },
+    "name": { "type": "string", "minLength": 1 },
+    "description": { "type": ["string", "null"] },
+    "isActive": { "type": "boolean", "default": true }
+  },
+  "required": ["id", "name"]
+}
 ```
 
 ### ResourceRevision
 
-```typescript
-ResourceRevisionSchema = BaseModelSchema.safeExtend({
-    resourceId: z.string(),
-    label: z.string().nullable().optional(),
-    status: z.enum(ResourceRevisionStatus).default("draft"),
-    derivedFromRevisionId: z.string().nullable().optional(),
-    publishedAt: z.number().int().positive().nullable().optional(),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "createdAt": { "type": "integer" },
+    "updatedAt": { "type": "integer" },
+    "resourceId": { "type": "string" },
+    "label": { "type": ["string", "null"] },
+    "status": { "type": "string", "enum": ["draft", "active", "archived"], "default": "draft" },
+    "derivedFromRevisionId": { "type": ["string", "null"] },
+    "publishedAt": { "type": ["integer", "null"], "exclusiveMinimum": 0 }
+  },
+  "required": ["id", "resourceId"]
+}
 ```
 
 ### DeriveResourceRevisionRequest
 
-```typescript
-DeriveResourceRevisionRequestSchema = z.object({
-    resourceId: z.string(),
-    sourceRevisionId: z.string().nullable().optional(),
-    strategy: z.enum(ResourceRevisionDeriveStrategy).default("copy_current"),
-    label: z.string().nullable().optional(),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "resourceId": { "type": "string" },
+    "sourceRevisionId": { "type": ["string", "null"] },
+    "strategy": { "type": "string", "enum": ["copy_current", "empty"], "default": "copy_current" },
+    "label": { "type": ["string", "null"] }
+  },
+  "required": ["resourceId"]
+}
 ```
 
 ### Versioning Guidance
@@ -317,63 +526,117 @@ DeriveResourceRevisionRequestSchema = z.object({
 
 ### ResourceCategoryQueryOptions
 
-```typescript
-interface ResourceCategoryQueryOptions {
-    page: number;
-    pageSize: number;
-    filters?: {
-        search?: string;
-        locationId?: string;
-        resourceType?: ResourceType[];
-        isActive?: boolean;
-    };
-    sorting?: {
-        field: keyof ResourceCategory;
-        direction: "asc" | "desc";
-    };
+```json
+{
+  "type": "object",
+  "properties": {
+    "page": { "type": "integer", "minimum": 1 },
+    "pageSize": { "type": "integer", "minimum": 1 },
+    "filters": {
+      "type": "object",
+      "properties": {
+        "search": { "type": "string" },
+        "locationId": { "type": "string" },
+        "resourceType": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["table", "room", "rental", "rentals", "resource"] }
+        },
+        "isActive": { "type": "boolean" }
+      }
+    },
+    "sorting": {
+      "type": "object",
+      "properties": {
+        "field": { "type": "string", "enum": ["name", "displayOrder", "createdAt"] },
+        "direction": { "type": "string", "enum": ["asc", "desc"] }
+      },
+      "required": ["field", "direction"]
+    }
+  },
+  "required": ["page", "pageSize"]
 }
 ```
 
 ### ResourceQueryOptions
 
-```typescript
-interface ResourceQueryOptions {
-    page: number;
-    pageSize: number;
-    filters?: {
-        search?: string;
-        locationId?: string;
-        resourceType?: ResourceType[];
-        categoryId?: string;
-        isAvailable?: boolean;
-        capacityRange?: { min?: number; max?: number };
-        location?: string;
-        amenities?: string[];
-        priceRange?: { min?: number; max?: number };
-    };
-    sorting?: {
-        field: keyof Resource;
-        direction: "asc" | "desc";
-    };
+```json
+{
+  "type": "object",
+  "properties": {
+    "page": { "type": "integer", "minimum": 1 },
+    "pageSize": { "type": "integer", "minimum": 1 },
+    "filters": {
+      "type": "object",
+      "properties": {
+        "search": { "type": "string" },
+        "locationId": { "type": "string" },
+        "resourceType": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["table", "room", "rental", "rentals", "resource"] }
+        },
+        "categoryId": { "type": "string" },
+        "isAvailable": { "type": "boolean" },
+        "capacityRange": {
+          "type": "object",
+          "properties": {
+            "min": { "type": "number" },
+            "max": { "type": "number" }
+          }
+        },
+        "location": { "type": "string" },
+        "amenities": { "type": "array", "items": { "type": "string" } },
+        "priceRange": {
+          "type": "object",
+          "properties": {
+            "min": { "type": "number" },
+            "max": { "type": "number" }
+          }
+        }
+      }
+    },
+    "sorting": {
+      "type": "object",
+      "properties": {
+        "field": { "type": "string", "enum": ["name", "capacity", "createdAt"] },
+        "direction": { "type": "string", "enum": ["asc", "desc"] }
+      },
+      "required": ["field", "direction"]
+    }
+  },
+  "required": ["page", "pageSize"]
 }
 ```
 
 ### ResourceInstanceQueryOptions
 
-```typescript
-interface ResourceInstanceQueryOptions {
-    page: number;
-    pageSize: number;
-    filters?: {
-        resourceId?: string;
-        locationId?: string;
-        status?: ResourceInstanceStatus[];
-        isAvailable?: boolean;
-    };
-    sorting?: {
-        field: keyof ResourceInstance;
-        direction: "asc" | "desc";
-    };
+```json
+{
+  "type": "object",
+  "properties": {
+    "page": { "type": "integer", "minimum": 1 },
+    "pageSize": { "type": "integer", "minimum": 1 },
+    "filters": {
+      "type": "object",
+      "properties": {
+        "resourceId": { "type": "string" },
+        "locationId": { "type": "string" },
+        "status": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["available", "reserved", "occupied", "maintenance", "cleaning", "out_of_service"] }
+        },
+        "isAvailable": { "type": "boolean" }
+      }
+    },
+    "sorting": {
+      "type": "object",
+      "properties": {
+        "field": { "type": "string", "enum": ["name", "status", "createdAt"] },
+        "direction": { "type": "string", "enum": ["asc", "desc"] }
+      },
+      "required": ["field", "direction"]
+    }
+  },
+  "required": ["page", "pageSize"]
 }
 ```
 

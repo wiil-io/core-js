@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.56**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.57**](../../README.md)
 
 ***
 
@@ -54,7 +54,7 @@ type EmailRequestResult = {
 };
 ```
 
-Defined in: [src/core/conversation/outbound-email.schema.ts:181](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/conversation/outbound-email.schema.ts#L181)
+Defined in: [src/core/conversation/outbound-email.schema.ts:181](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/conversation/outbound-email.schema.ts#L181)
 
 Email request result schema.
 Response payload after submitting an email request.
@@ -63,6 +63,6 @@ Response payload after submitting an email request.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="success"></a> `success` | `boolean` | [src/core/conversation/outbound-email.schema.ts:168](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/conversation/outbound-email.schema.ts#L168) |
-| <a id="request"></a> `request?` | \| \{ `id`: `string`; `createdAt?`: `number`; `updatedAt?`: `number`; `emailConfigurationId?`: `string`; `configuredEmailAddress?`: `string`; `templateId?`: `string`; `to`: \{ `email`: `string`; `name?`: `string`; \}[]; `cc?`: \| \{ `email`: `string`; `name?`: `string`; \}[] \| `null`; `bcc?`: \| \{ `email`: `string`; `name?`: `string`; \}[] \| `null`; `replyTo?`: `string` \| `null`; `subject`: `string`; `bodyHtml`: `string`; `bodyText?`: `string`; `variables?`: `Record`\<`string`, `any`\>; `attachments?`: \| \{ `filename`: `string`; `content`: `string`; `contentType`: `string`; \}[] \| `null`; `scheduledAt?`: `number`; `serviceConversationConfigId?`: `string` \| `null`; `status`: [`EmailStatus`](../../type-definitions/enumerations/EmailStatus.md); `maxRetries?`: `number`; `retryCount`: `number`; `retryDelayMinutes?`: `number`; `metadata?`: `Record`\<`string`, `any`\>; \} \| `null` | [src/core/conversation/outbound-email.schema.ts:169](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/conversation/outbound-email.schema.ts#L169) |
-| <a id="error_message"></a> `error_message?` | `string` \| `null` | [src/core/conversation/outbound-email.schema.ts:170](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/conversation/outbound-email.schema.ts#L170) |
+| <a id="success"></a> `success` | `boolean` | [src/core/conversation/outbound-email.schema.ts:168](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/conversation/outbound-email.schema.ts#L168) |
+| <a id="request"></a> `request?` | \| \{ `id`: `string`; `createdAt?`: `number`; `updatedAt?`: `number`; `emailConfigurationId?`: `string`; `configuredEmailAddress?`: `string`; `templateId?`: `string`; `to`: \{ `email`: `string`; `name?`: `string`; \}[]; `cc?`: \| \{ `email`: `string`; `name?`: `string`; \}[] \| `null`; `bcc?`: \| \{ `email`: `string`; `name?`: `string`; \}[] \| `null`; `replyTo?`: `string` \| `null`; `subject`: `string`; `bodyHtml`: `string`; `bodyText?`: `string`; `variables?`: `Record`\<`string`, `any`\>; `attachments?`: \| \{ `filename`: `string`; `content`: `string`; `contentType`: `string`; \}[] \| `null`; `scheduledAt?`: `number`; `serviceConversationConfigId?`: `string` \| `null`; `status`: [`EmailStatus`](../../type-definitions/enumerations/EmailStatus.md); `maxRetries?`: `number`; `retryCount`: `number`; `retryDelayMinutes?`: `number`; `metadata?`: `Record`\<`string`, `any`\>; \} \| `null` | [src/core/conversation/outbound-email.schema.ts:169](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/conversation/outbound-email.schema.ts#L169) |
+| <a id="error_message"></a> `error_message?` | `string` \| `null` | [src/core/conversation/outbound-email.schema.ts:170](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/conversation/outbound-email.schema.ts#L170) |

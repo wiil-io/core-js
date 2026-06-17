@@ -30,20 +30,37 @@ Defines a pricing rule for service-based pricing adjustments.
 
 ### Schema Definition
 
-```typescript
-ServicePricingRuleSchema = BaseModelSchema.safeExtend({
-    locationId: z.string().nullable().optional(),
-    name: z.string().min(1).max(120),
-    applyLevel: z.enum(PricingRuleApplyLevel).default("ORDER"),
-    isStackable: z.boolean().default(true),
-    priority: z.number().int().nonnegative().default(0),
-    channelMappings: z.array(PricingRuleChannelMappingSchema).nullable().optional(),
-    condition: ServicePricingRuleConditionSchema,
-    action: PricingRuleActionSchema,
-    effectiveFrom: z.number().int().nonnegative().optional(),
-    effectiveTo: z.number().int().nonnegative().optional(),
-    isActive: z.boolean().default(true),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "createdAt": { "type": "integer" },
+    "updatedAt": { "type": "integer" },
+    "locationId": { "type": ["string", "null"] },
+    "name": { "type": "string", "minLength": 1, "maxLength": 120 },
+    "applyLevel": { "type": "string", "enum": ["ITEM", "ORDER"], "default": "ORDER" },
+    "isStackable": { "type": "boolean", "default": true },
+    "priority": { "type": "integer", "minimum": 0, "default": 0 },
+    "channelMappings": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "object",
+        "properties": {
+          "channelId": { "type": "string" },
+          "externalPricingRuleId": { "type": "string" }
+        },
+        "required": ["channelId", "externalPricingRuleId"]
+      }
+    },
+    "condition": { "$ref": "#/$defs/ServicePricingRuleCondition" },
+    "action": { "$ref": "#/$defs/PricingRuleAction" },
+    "effectiveFrom": { "type": "integer", "minimum": 0 },
+    "effectiveTo": { "type": "integer", "minimum": 0 },
+    "isActive": { "type": "boolean", "default": true }
+  },
+  "required": ["id", "name", "action"]
+}
 ```
 
 ### Fields
@@ -65,35 +82,27 @@ ServicePricingRuleSchema = BaseModelSchema.safeExtend({
 
 ### Enums
 
-```typescript
-enum PricingRuleApplyLevel {
-    ITEM = "ITEM",    // Apply to each matching line item
-    ORDER = "ORDER",  // Apply once to entire order
-}
-
-enum PricingRuleAdjustmentType {
-    PERCENTAGE = "PERCENTAGE",  // Percentage discount (0-100)
-    FIXED = "FIXED",            // Fixed amount discount
-    OVERRIDE = "OVERRIDE",      // Override the price entirely
-}
-
-enum PricingChannel {
-    ALL = "ALL",
-    DIRECT = "DIRECT",
-    ONLINE = "ONLINE",
-    PHONE = "PHONE",
-    WALK_IN = "WALK_IN",
+```json
+{
+  "applyLevel": ["ITEM", "ORDER"],
+  "adjustmentType": ["PERCENTAGE", "FIXED", "OVERRIDE"],
+  "channel": ["ALL", "DIRECT", "ONLINE", "PHONE", "WALK_IN"]
 }
 ```
 
 ### PricingRuleAction Structure
 
-```typescript
-interface PricingRuleAction {
-    adjustmentType: PricingRuleAdjustmentType;
-    adjustmentValue: number;        // Percentage (0-100) or fixed amount
-    currency: string;               // Currency code (default: "USD")
-    maxAdjustmentAmount?: number;   // Maximum adjustment cap
+```json
+{
+  "$id": "#/$defs/PricingRuleAction",
+  "type": "object",
+  "properties": {
+    "adjustmentType": { "type": "string", "enum": ["PERCENTAGE", "FIXED", "OVERRIDE"] },
+    "adjustmentValue": { "type": "number", "minimum": 0 },
+    "currency": { "type": "string", "minLength": 3, "maxLength": 3, "default": "USD" },
+    "maxAdjustmentAmount": { "type": "number", "minimum": 0 }
+  },
+  "required": ["adjustmentType", "adjustmentValue"]
 }
 ```
 
@@ -143,12 +152,25 @@ Extends common pricing conditions with service-specific targeting.
 
 ### Schema Definition
 
-```typescript
-ServicePricingRuleConditionSchema = PricingRuleCommonConditionSchema.safeExtend({
-    allServices: z.boolean().default(false),
-    serviceIdsAny: z.array(z.string()).default([]),
-    serviceIdsAll: z.array(z.string()).default([]),
-});
+```json
+{
+  "$id": "#/$defs/ServicePricingRuleCondition",
+  "type": "object",
+  "properties": {
+    "allServices": { "type": "boolean", "default": false },
+    "serviceIdsAny": { "type": "array", "items": { "type": "string" }, "default": [] },
+    "serviceIdsAll": { "type": "array", "items": { "type": "string" }, "default": [] },
+    "daysOfWeek": {
+      "type": "array",
+      "items": { "type": "integer", "minimum": 0, "maximum": 6 },
+      "default": []
+    },
+    "startMinute": { "type": "integer", "minimum": 0, "maximum": 1439 },
+    "endMinute": { "type": "integer", "minimum": 0, "maximum": 1439 },
+    "customerSegmentIds": { "type": "array", "items": { "type": "string" } },
+    "channel": { "type": "string", "enum": ["ALL", "DIRECT", "ONLINE", "PHONE", "WALK_IN"], "default": "ALL" }
+  }
+}
 ```
 
 ### Fields
@@ -166,13 +188,20 @@ ServicePricingRuleConditionSchema = PricingRuleCommonConditionSchema.safeExtend(
 
 ### Common Condition Fields (inherited)
 
-```typescript
-interface PricingRuleCommonCondition {
-    daysOfWeek?: number[];           // [0, 1, 2, 3, 4, 5, 6] (0=Sunday, 6=Saturday)
-    startMinute?: number;            // Minutes from midnight (0-1439)
-    endMinute?: number;              // Minutes from midnight (0-1439)
-    customerSegmentIds?: string[];   // Target customer segment IDs
-    channel: PricingChannel;         // Default: ALL
+```json
+{
+  "type": "object",
+  "properties": {
+    "daysOfWeek": {
+      "type": "array",
+      "items": { "type": "integer", "minimum": 0, "maximum": 6 },
+      "default": []
+    },
+    "startMinute": { "type": "integer", "minimum": 0, "maximum": 1439 },
+    "endMinute": { "type": "integer", "minimum": 0, "maximum": 1439 },
+    "customerSegmentIds": { "type": "array", "items": { "type": "string" } },
+    "channel": { "type": "string", "enum": ["ALL", "DIRECT", "ONLINE", "PHONE", "WALK_IN"], "default": "ALL" }
+  }
 }
 ```
 
@@ -233,23 +262,30 @@ interface PricingRuleCommonCondition {
 
 ### ServicePricingRuleFilters
 
-```typescript
-interface ServicePricingRuleFilters {
-    search?: string;                      // Search by name
-    locationId?: string;                  // Filter by location
-    applyLevel?: PricingRuleApplyLevel;   // Filter by apply level
-    channel?: PricingChannel;             // Filter by channel
-    isStackable?: boolean;                // Filter by stackability
-    isActive?: boolean;                   // Filter by active status
+```json
+{
+  "type": "object",
+  "properties": {
+    "search": { "type": "string" },
+    "locationId": { "type": "string" },
+    "applyLevel": { "type": "string", "enum": ["ITEM", "ORDER"] },
+    "channel": { "type": "string", "enum": ["ALL", "DIRECT", "ONLINE", "PHONE", "WALK_IN"] },
+    "isStackable": { "type": "boolean" },
+    "isActive": { "type": "boolean" }
+  }
 }
 ```
 
 ### ServicePricingRuleSorting
 
-```typescript
-interface ServicePricingRuleSorting {
-    field: "name" | "priority" | "createdAt";
-    direction: "asc" | "desc";
+```json
+{
+  "type": "object",
+  "properties": {
+    "field": { "type": "string", "enum": ["name", "priority", "createdAt"] },
+    "direction": { "type": "string", "enum": ["asc", "desc"] }
+  },
+  "required": ["field", "direction"]
 }
 ```
 

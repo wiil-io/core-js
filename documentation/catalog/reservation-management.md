@@ -158,18 +158,33 @@ Groups resources by category, location scope, type, and display order.
 
 #### Schema Definition
 
-```typescript
-ResourceCategorySchema = BaseModelSchema.safeExtend({
-    resourceRevisionId: z.string().optional(),
-    locationId: z.string().nullable().optional(),
-    name: z.string().min(1),
-    description: z.string().nullable().optional(),
-    channelMappings: z.array(ResourceCategoryChannelMappingSchema).nullable().optional(),
-    resourceType: z.enum(ResourceType).nullable().optional(),
-    displayOrder: z.number().int().nullable().optional(),
-    isActive: z.boolean().default(true),
-    metadata: z.record(z.string(), z.any()).nullable().optional(),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "resourceRevisionId": { "type": "string" },
+    "locationId": { "type": ["string", "null"] },
+    "name": { "type": "string", "minLength": 1 },
+    "description": { "type": ["string", "null"] },
+    "channelMappings": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "object",
+        "properties": {
+          "channelId": { "type": "string" },
+          "externalCategoryId": { "type": "string" }
+        },
+        "required": ["channelId", "externalCategoryId"]
+      }
+    },
+    "resourceType": { "type": ["string", "null"], "enum": ["table", "room", "rental", "rentals", "resource", null] },
+    "displayOrder": { "type": ["integer", "null"] },
+    "isActive": { "type": "boolean", "default": true },
+    "metadata": { "type": ["object", "null"], "additionalProperties": true }
+  },
+  "required": ["id", "name"]
+}
 ```
 
 #### Fields
@@ -220,34 +235,59 @@ Defines a reservable type or category, including its capacity model, pricing mod
 
 #### Schema Definition
 
-```typescript
-ResourceSchema = BaseModelSchema.safeExtend({
-    resourceRevisionId: z.string().optional(),
-    locationId: z.string().nullable().optional(),
-    resourceType: z.enum(ResourceType),
-    categoryId: z.string().nullable().optional(),
-    name: z.string(),
-    description: z.string().nullable().optional(),
-    imageUrls: z.array(z.url()).nullable().optional(),
-    capacity: z.number().int().positive().nullable().optional(),
-    capacityConfig: ResourceCapacitySchema.nullable().optional(),
-    isAvailable: z.boolean().default(true),
-    channelMappings: z.array(ResourceChannelMappingSchema).nullable().optional(),
-    location: z.string().optional(),
-    amenities: z.array(z.string()).default([]),
-    instances: z.array(z.string()).nullable().optional(),
-    pricing: ResourcePricingStrategySchema.nullable().optional(),
-    turnoverMinutes: z.number().int().nonnegative().nullable().optional(),
-    attributes: z.array(ResourceAttributeSchema).nullable().optional(),
-    bookingRules: ServiceBookingRulesSchema.nullable().optional(),
-    depositStrategy: z.enum(ServiceDepositStrategy).nullable().optional(),
-    reservationDuration: z.number().int().positive().nullable().optional(),
-    reservationDurationUnit: z.enum(ResourceReservationDurationUnit).nullable().optional(),
-    checklistTemplate: z.array(ChecklistTemplateItemSchema).default([]),
-    applicableTierIds: z.array(z.string()).default([]),
-    displayOrder: z.number().int().nonnegative().nullable().optional(),
-    metadata: z.record(z.string(), z.any()).optional(),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "resourceRevisionId": { "type": "string" },
+    "locationId": { "type": ["string", "null"] },
+    "resourceType": { "type": "string", "enum": ["table", "room", "rental", "rentals", "resource"] },
+    "categoryId": { "type": ["string", "null"] },
+    "name": { "type": "string" },
+    "description": { "type": ["string", "null"] },
+    "imageUrls": { "type": ["array", "null"], "items": { "type": "string", "format": "uri" } },
+    "capacity": { "type": ["integer", "null"], "exclusiveMinimum": 0 },
+    "capacityConfig": { "oneOf": [{ "$ref": "#/$defs/ResourceCapacity" }, { "type": "null" }] },
+    "isAvailable": { "type": "boolean", "default": true },
+    "channelMappings": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "object",
+        "properties": {
+          "channelId": { "type": "string" },
+          "externalResourceId": { "type": "string" }
+        },
+        "required": ["channelId", "externalResourceId"]
+      }
+    },
+    "location": { "type": "string" },
+    "amenities": { "type": "array", "items": { "type": "string" }, "default": [] },
+    "instances": { "type": ["array", "null"], "items": { "type": "string" } },
+    "pricing": { "oneOf": [{ "$ref": "#/$defs/ResourcePricingStrategy" }, { "type": "null" }] },
+    "turnoverMinutes": { "type": ["integer", "null"], "minimum": 0 },
+    "attributes": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": { "type": "string" },
+          "value": { "type": "string" }
+        },
+        "required": ["key", "value"]
+      }
+    },
+    "bookingRules": { "type": ["object", "null"], "additionalProperties": true },
+    "depositStrategy": { "type": ["string", "null"] },
+    "reservationDuration": { "type": ["integer", "null"], "exclusiveMinimum": 0 },
+    "reservationDurationUnit": { "type": ["string", "null"], "enum": ["minutes", "hours", "nights", null] },
+    "checklistTemplate": { "type": "array", "items": { "$ref": "#/$defs/ChecklistTemplateItem" }, "default": [] },
+    "applicableTierIds": { "type": "array", "items": { "type": "string" }, "default": [] },
+    "displayOrder": { "type": ["integer", "null"], "minimum": 0 },
+    "metadata": { "type": "object", "additionalProperties": true }
+  },
+  "required": ["id", "resourceType", "name"]
+}
 ```
 
 #### Fields
@@ -283,26 +323,41 @@ ResourceSchema = BaseModelSchema.safeExtend({
 
 ### Capacity Models
 
-```typescript
-ResourceCapacityRangeSchema = z.object({
-    kind: z.literal("range"),
-    min: z.number().int().positive(),
-    max: z.number().int().positive(),
-});
-
-ResourceCapacityOccupancySchema = z.object({
-    kind: z.literal("occupancy"),
-    standard: z.number().int().positive(),
-    max: z.number().int().positive(),
-    extraFee: z.number().nonnegative().nullable().optional(),
-});
-
-ResourceCapacitySingleSchema = z.object({
-    kind: z.literal("single"),
-    value: z.number().int().positive(),
-    weightLimit: z.number().positive().nullable().optional(),
-    skillLevel: z.string().nullable().optional(),
-});
+```json
+{
+  "$id": "#/$defs/ResourceCapacity",
+  "oneOf": [
+    {
+      "type": "object",
+      "properties": {
+        "kind": { "type": "string", "const": "range" },
+        "min": { "type": "integer", "exclusiveMinimum": 0 },
+        "max": { "type": "integer", "exclusiveMinimum": 0 }
+      },
+      "required": ["kind", "min", "max"]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "kind": { "type": "string", "const": "occupancy" },
+        "standard": { "type": "integer", "exclusiveMinimum": 0 },
+        "max": { "type": "integer", "exclusiveMinimum": 0 },
+        "extraFee": { "type": ["number", "null"], "minimum": 0 }
+      },
+      "required": ["kind", "standard", "max"]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "kind": { "type": "string", "const": "single" },
+        "value": { "type": "integer", "exclusiveMinimum": 0 },
+        "weightLimit": { "type": ["number", "null"], "exclusiveMinimum": 0 },
+        "skillLevel": { "type": ["string", "null"] }
+      },
+      "required": ["kind", "value"]
+    }
+  ]
+}
 ```
 
 | Resource Type | Required Capacity Kind | Typical Use |
@@ -313,29 +368,60 @@ ResourceCapacitySingleSchema = z.object({
 
 ### Pricing Models
 
-```typescript
-ResourcePricingNoneSchema = z.object({
-    kind: z.literal("none"),
-    holdPolicy: z.string().nullable().optional(),
-});
-
-ResourcePricingDayOfWeekSchema = z.object({
-    kind: z.literal("dayOfWeek"),
-    rates: {
-        mon: number,
-        tue: number,
-        wed: number,
-        thu: number,
-        fri: number,
-        sat: number,
-        sun: number,
+```json
+{
+  "$id": "#/$defs/ResourcePricingStrategy",
+  "oneOf": [
+    {
+      "type": "object",
+      "properties": {
+        "kind": { "type": "string", "const": "none" },
+        "holdPolicy": { "type": ["string", "null"] }
+      },
+      "required": ["kind"]
     },
-});
-
-ResourcePricingTieredSchema = z.object({
-    kind: z.literal("tiered"),
-    tiers: z.array(ResourcePricingTierSchema).min(1),
-});
+    {
+      "type": "object",
+      "properties": {
+        "kind": { "type": "string", "const": "dayOfWeek" },
+        "rates": {
+          "type": "object",
+          "properties": {
+            "mon": { "type": "number", "minimum": 0 },
+            "tue": { "type": "number", "minimum": 0 },
+            "wed": { "type": "number", "minimum": 0 },
+            "thu": { "type": "number", "minimum": 0 },
+            "fri": { "type": "number", "minimum": 0 },
+            "sat": { "type": "number", "minimum": 0 },
+            "sun": { "type": "number", "minimum": 0 }
+          },
+          "required": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
+        }
+      },
+      "required": ["kind", "rates"]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "kind": { "type": "string", "const": "tiered" },
+        "tiers": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "properties": {
+              "from": { "type": "number", "minimum": 0 },
+              "to": { "type": ["number", "null"], "minimum": 0 },
+              "price": { "type": "number", "minimum": 0 }
+            },
+            "required": ["from", "price"]
+          }
+        }
+      },
+      "required": ["kind", "tiers"]
+    }
+  ]
+}
 ```
 
 | Resource Type | Required Pricing Kind | Typical Use |
@@ -456,30 +542,42 @@ Represents a physical unit under a resource.
 
 #### Schema Definition
 
-```typescript
-ResourceInstanceSchema = BaseModelSchema.safeExtend({
-    resourceRevisionId: z.string().optional(),
-    locationId: z.string().nullable().optional(),
-    resourceId: z.string(),
-    name: z.string().nullable().optional(),
-    code: z.string().nullable().optional(),
-    status: z.enum(ResourceInstanceStatus).default("available"),
-    isAvailable: z.boolean().default(true),
-    attributes: z.array(ResourceInstanceAttributeSchema).nullable().optional(),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "resourceRevisionId": { "type": "string" },
+    "locationId": { "type": ["string", "null"] },
+    "resourceId": { "type": "string" },
+    "name": { "type": ["string", "null"] },
+    "code": { "type": ["string", "null"] },
+    "status": {
+      "type": "string",
+      "enum": ["available", "reserved", "occupied", "maintenance", "cleaning", "out_of_service"],
+      "default": "available"
+    },
+    "isAvailable": { "type": "boolean", "default": true },
+    "attributes": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": { "type": "string" },
+          "value": { "type": "string" }
+        },
+        "required": ["key", "value"]
+      }
+    }
+  },
+  "required": ["id", "resourceId"]
+}
 ```
 
 #### ResourceInstanceStatus Enum
 
-```typescript
-enum ResourceInstanceStatus {
-    AVAILABLE = "available",
-    RESERVED = "reserved",
-    OCCUPIED = "occupied",
-    MAINTENANCE = "maintenance",
-    CLEANING = "cleaning",
-    OUT_OF_SERVICE = "out_of_service",
-}
+```json
+["available", "reserved", "occupied", "maintenance", "cleaning", "out_of_service"]
 ```
 
 #### Fields
@@ -524,24 +622,33 @@ Time-window reservation for table-based venues.
 
 #### Schema Definition
 
-```typescript
-TableReservationSchema = BaseModelSchema.safeExtend({
-    locationId: z.string().nullable().optional(),
-    channelId: z.string().nullable().optional(),
-    resourceId: z.string(),
-    customerId: z.string(),
-    floorPlanId: z.string().nullable().optional(),
-    floorPlanSectionId: z.string().nullable().optional(),
-    personsNumber: z.number().int().positive(),
-    time: z.number(),
-    duration: z.number().int().positive(),
-    status: z.enum(ReservationStatus).default("pending"),
-    source: z.string().nullable().optional(),
-    notes: z.string().nullable().optional(),
-    isVip: z.boolean().default(false),
-    specialRequests: z.string().nullable().optional(),
-    externalRef: ExternalRefSchema.nullable().optional(),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "locationId": { "type": ["string", "null"] },
+    "channelId": { "type": ["string", "null"] },
+    "resourceId": { "type": "string" },
+    "customerId": { "type": "string" },
+    "floorPlanId": { "type": ["string", "null"] },
+    "floorPlanSectionId": { "type": ["string", "null"] },
+    "personsNumber": { "type": "integer", "exclusiveMinimum": 0 },
+    "time": { "type": "number" },
+    "duration": { "type": "integer", "exclusiveMinimum": 0 },
+    "status": {
+      "type": "string",
+      "enum": ["pending", "confirmed", "seated", "checked_in", "completed", "cancelled", "no_show"],
+      "default": "pending"
+    },
+    "source": { "type": ["string", "null"] },
+    "notes": { "type": ["string", "null"] },
+    "isVip": { "type": "boolean", "default": false },
+    "specialRequests": { "type": ["string", "null"] },
+    "externalRef": { "type": ["object", "null"], "additionalProperties": true }
+  },
+  "required": ["id", "resourceId", "customerId", "personsNumber", "time", "duration"]
+}
 ```
 
 #### Fields
@@ -648,15 +755,8 @@ Time-bounded or date-bounded rental booking.
 
 #### RentalReservationStatus Enum
 
-```typescript
-enum RentalReservationStatus {
-    UPCOMING = "upcoming",
-    PICKUP_SOON = "pickup_soon",
-    OUT = "out",
-    RETURNED = "returned",
-    OVERDUE = "overdue",
-    CANCELLED = "cancelled",
-}
+```json
+["upcoming", "pickup_soon", "out", "returned", "overdue", "cancelled"]
 ```
 
 #### Example
@@ -710,72 +810,87 @@ Assignments bind reservations to physical resource instances. Assignments are se
 
 ### TableAssignment
 
-```typescript
-TableAssignmentSchema = BaseModelSchema.safeExtend({
-    locationId: z.string().nullable().optional(),
-    reservationId: z.string(),
-    tableInstanceId: z.string(),
-    floorPlanId: z.string(),
-    floorPlanSectionId: z.string().nullable().optional(),
-    assignmentType: z.enum(TableAssignmentType).default("soft"),
-    status: z.enum(TableAssignmentStatus).default("assigned"),
-    assignedAt: z.number().int().positive(),
-    assignedBy: z.string().nullable().optional(),
-    releasedAt: z.number().int().positive().nullable().optional(),
-    releasedBy: z.string().nullable().optional(),
-    notes: z.string().nullable().optional(),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "locationId": { "type": ["string", "null"] },
+    "reservationId": { "type": "string" },
+    "tableInstanceId": { "type": "string" },
+    "floorPlanId": { "type": "string" },
+    "floorPlanSectionId": { "type": ["string", "null"] },
+    "slotStart": { "type": "integer", "exclusiveMinimum": 0 },
+    "slotEnd": { "type": "integer", "exclusiveMinimum": 0 },
+    "assignmentType": { "type": "string", "enum": ["soft", "hard"], "default": "soft" },
+    "status": { "type": "string", "enum": ["assigned", "reassigned", "released"], "default": "assigned" },
+    "assignedAt": { "type": "integer", "exclusiveMinimum": 0 },
+    "assignedBy": { "type": ["string", "null"] },
+    "releasedAt": { "type": ["integer", "null"], "exclusiveMinimum": 0 },
+    "releasedBy": { "type": ["string", "null"] },
+    "notes": { "type": ["string", "null"] }
+  },
+  "required": ["id", "reservationId", "tableInstanceId", "floorPlanId", "slotStart", "slotEnd", "assignedAt"]
+}
 ```
 
 ### RoomAssignment
 
-```typescript
-RoomAssignmentSchema = BaseModelSchema.safeExtend({
-    locationId: z.string().nullable().optional(),
-    reservationId: z.string(),
-    roomInstanceId: z.string(),
-    assignmentType: z.enum(RoomAssignmentType).default("soft"),
-    status: z.enum(RoomAssignmentStatus).default("assigned"),
-    assignedAt: z.number().int().positive(),
-    assignedBy: z.string().nullable().optional(),
-    releasedAt: z.number().int().positive().nullable().optional(),
-    releasedBy: z.string().nullable().optional(),
-    housekeepingNotes: z.string().nullable().optional(),
-    notes: z.string().nullable().optional(),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "locationId": { "type": ["string", "null"] },
+    "reservationId": { "type": "string" },
+    "roomInstanceId": { "type": "string" },
+    "slotStart": { "type": "integer", "exclusiveMinimum": 0 },
+    "slotEnd": { "type": "integer", "exclusiveMinimum": 0 },
+    "assignmentType": { "type": "string", "enum": ["soft", "hard"], "default": "soft" },
+    "status": { "type": "string", "enum": ["assigned", "reassigned", "released"], "default": "assigned" },
+    "assignedAt": { "type": "integer", "exclusiveMinimum": 0 },
+    "assignedBy": { "type": ["string", "null"] },
+    "releasedAt": { "type": ["integer", "null"], "exclusiveMinimum": 0 },
+    "releasedBy": { "type": ["string", "null"] },
+    "housekeepingNotes": { "type": ["string", "null"] },
+    "notes": { "type": ["string", "null"] }
+  },
+  "required": ["id", "reservationId", "roomInstanceId", "slotStart", "slotEnd", "assignedAt"]
+}
 ```
 
 ### RentalAssignment
 
-```typescript
-RentalAssignmentSchema = BaseModelSchema.safeExtend({
-    locationId: z.string().nullable().optional(),
-    reservationId: z.string(),
-    rentalInstanceId: z.string(),
-    assignmentType: z.enum(RentalAssignmentType).default("soft"),
-    status: z.enum(RentalAssignmentStatus).default("assigned"),
-    assignedAt: z.number().int().positive(),
-    assignedBy: z.string().nullable().optional(),
-    releasedAt: z.number().int().positive().nullable().optional(),
-    releasedBy: z.string().nullable().optional(),
-    conditionAtPickup: RentalUnitConditionSchema.nullable().optional(),
-    conditionAtReturn: RentalUnitConditionSchema.nullable().optional(),
-    notes: z.string().nullable().optional(),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "locationId": { "type": ["string", "null"] },
+    "reservationId": { "type": "string" },
+    "rentalInstanceId": { "type": "string" },
+    "slotStart": { "type": "integer", "exclusiveMinimum": 0 },
+    "slotEnd": { "type": "integer", "exclusiveMinimum": 0 },
+    "assignmentType": { "type": "string", "enum": ["soft", "hard"], "default": "soft" },
+    "status": { "type": "string", "enum": ["assigned", "reassigned", "released"], "default": "assigned" },
+    "assignedAt": { "type": "integer", "exclusiveMinimum": 0 },
+    "assignedBy": { "type": ["string", "null"] },
+    "releasedAt": { "type": ["integer", "null"], "exclusiveMinimum": 0 },
+    "releasedBy": { "type": ["string", "null"] },
+    "conditionAtPickup": { "oneOf": [{ "$ref": "#/$defs/RentalUnitCondition" }, { "type": "null" }] },
+    "conditionAtReturn": { "oneOf": [{ "$ref": "#/$defs/RentalUnitCondition" }, { "type": "null" }] },
+    "notes": { "type": ["string", "null"] }
+  },
+  "required": ["id", "reservationId", "rentalInstanceId", "slotStart", "slotEnd", "assignedAt"]
+}
 ```
 
 ### Assignment Enums
 
-```typescript
-enum TableAssignmentType {
-    SOFT = "soft",
-    HARD = "hard",
-}
-
-enum TableAssignmentStatus {
-    ASSIGNED = "assigned",
-    REASSIGNED = "reassigned",
-    RELEASED = "released",
+```json
+{
+  "assignmentType": ["soft", "hard"],
+  "status": ["assigned", "reassigned", "released"]
 }
 ```
 
@@ -783,14 +898,22 @@ Room and rental assignments use the same `soft` / `hard` type values and `assign
 
 ### Rental Unit Condition
 
-```typescript
-RentalUnitConditionSchema = z.object({
-    recordedAt: z.number().int().positive(),
-    recordedBy: z.string(),
-    notes: z.string().nullable().optional(),
-    damageReported: z.boolean().default(false),
-    imageUrls: z.array(z.url()).nullable().optional(),
-});
+```json
+{
+  "$id": "#/$defs/RentalUnitCondition",
+  "type": "object",
+  "properties": {
+    "recordedAt": { "type": "integer", "exclusiveMinimum": 0 },
+    "recordedBy": { "type": "string" },
+    "notes": { "type": ["string", "null"] },
+    "damageReported": { "type": "boolean", "default": false },
+    "imageUrls": {
+      "type": ["array", "null"],
+      "items": { "type": "string", "format": "uri" }
+    }
+  },
+  "required": ["recordedAt", "recordedBy"]
+}
 ```
 
 ### Assignment Example
@@ -821,77 +944,90 @@ RentalUnitConditionSchema = z.object({
 
 Defines a floor plan canvas and metadata.
 
-```typescript
-FloorPlanSchema = BaseModelSchema.safeExtend({
-    locationId: z.string().nullable().optional(),
-    name: z.string().min(1),
-    description: z.string(),
-    imageUrls: z.array(z.url()).nullable().optional(),
-    isActive: z.boolean().default(true),
-    canvasDimensions: CanvasDimensionsSchema,
-    capacity: z.number().int().positive(),
-    metadata: z.record(z.string(), z.any()).nullable().optional(),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "locationId": { "type": ["string", "null"] },
+    "name": { "type": "string", "minLength": 1 },
+    "description": { "type": "string" },
+    "imageUrls": { "type": ["array", "null"], "items": { "type": "string", "format": "uri" } },
+    "isActive": { "type": "boolean", "default": true },
+    "canvasDimensions": { "$ref": "#/$defs/CanvasDimensions" },
+    "capacity": { "type": "integer", "exclusiveMinimum": 0 },
+    "metadata": { "type": ["object", "null"], "additionalProperties": true }
+  },
+  "required": ["id", "name", "description", "canvasDimensions", "capacity"]
+}
 ```
 
 ### CanvasDimensions
 
-```typescript
-CanvasDimensionsSchema = z.object({
-    width: z.number().positive(),
-    height: z.number().positive(),
-    unit: z.enum(CanvasUnit).default("px"),
-});
+```json
+{
+  "$id": "#/$defs/CanvasDimensions",
+  "type": "object",
+  "properties": {
+    "width": { "type": "number", "exclusiveMinimum": 0 },
+    "height": { "type": "number", "exclusiveMinimum": 0 },
+    "unit": { "type": "string", "enum": ["px", "ft", "m"], "default": "px" }
+  },
+  "required": ["width", "height"]
+}
 ```
 
 ### Section
 
-```typescript
-SectionSchema = BaseModelSchema.safeExtend({
-    locationId: z.string(),
-    floorPlanId: z.string(),
-    name: z.string().min(1),
-    capacity: z.number().int().positive(),
-    color: z.string().regex(/^#[0-9A-Fa-f]{6}$/),
-    isActive: z.boolean().default(true),
-    sortOrder: z.number().int().nonnegative().default(0),
-    tables: z.array(TablePlacementSchema).default([]),
-    geometry: SectionGeometrySchema.nullable().optional(),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "locationId": { "type": "string" },
+    "floorPlanId": { "type": "string" },
+    "name": { "type": "string", "minLength": 1 },
+    "capacity": { "type": "integer", "exclusiveMinimum": 0 },
+    "color": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+    "isActive": { "type": "boolean", "default": true },
+    "sortOrder": { "type": "integer", "minimum": 0, "default": 0 },
+    "tables": { "type": "array", "items": { "$ref": "#/$defs/TablePlacement" }, "default": [] },
+    "geometry": { "type": ["object", "null"] }
+  },
+  "required": ["id", "locationId", "floorPlanId", "name", "capacity", "color"]
+}
 ```
 
 ### TablePlacement
 
-```typescript
-TablePlacementSchema = BaseModelSchema.safeExtend({
-    tableResourceId: z.string(),
-    floorPlanSectionId: z.string(),
-    number: z.string(),
-    x: z.number(),
-    y: z.number(),
-    width: z.number().positive(),
-    height: z.number().positive(),
-    shape: z.enum(TableShape),
-    rotation: z.number().nullable().optional(),
-    minParty: z.number().int().positive(),
-    maxParty: z.number().int().positive(),
-    combinableWith: z.array(z.string()).default([]),
-    serverSectionId: z.string().nullable().optional(),
-});
+```json
+{
+  "$id": "#/$defs/TablePlacement",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "tableResourceId": { "type": "string" },
+    "floorPlanSectionId": { "type": "string" },
+    "number": { "type": "string" },
+    "x": { "type": "number" },
+    "y": { "type": "number" },
+    "width": { "type": "number", "exclusiveMinimum": 0 },
+    "height": { "type": "number", "exclusiveMinimum": 0 },
+    "shape": { "type": "string", "enum": ["round", "square", "booth", "rect", "curved", "high_top", "bar"] },
+    "rotation": { "type": ["number", "null"] },
+    "minParty": { "type": "integer", "exclusiveMinimum": 0 },
+    "maxParty": { "type": "integer", "exclusiveMinimum": 0 },
+    "combinableWith": { "type": "array", "items": { "type": "string" }, "default": [] },
+    "serverSectionId": { "type": ["string", "null"] }
+  },
+  "required": ["id", "tableResourceId", "floorPlanSectionId", "number", "x", "y", "width", "height", "shape", "minParty", "maxParty"]
+}
 ```
 
 ### TableShape Enum
 
-```typescript
-enum TableShape {
-    ROUND = "round",
-    SQUARE = "square",
-    BOOTH = "booth",
-    RECT = "rect",
-    CURVED = "curved",
-    HIGH_TOP = "high_top",
-    BAR = "bar",
-}
+```json
+["round", "square", "booth", "rect", "curved", "high_top", "bar"]
 ```
 
 ### Layout Validation Rules
@@ -931,12 +1067,17 @@ Slot query schemas model availability requests and responses for each resource t
 
 ### Request Union
 
-```typescript
-ReservationSlotQueryRequestSchema = z.discriminatedUnion("resourceType", [
-    TableReservationSlotQueryRequestSchema,
-    RoomReservationSlotQueryRequestSchema,
-    RentalReservationSlotQueryRequestSchema,
-]);
+```json
+{
+  "oneOf": [
+    { "$ref": "#/$defs/TableReservationSlotQueryRequest" },
+    { "$ref": "#/$defs/RoomReservationSlotQueryRequest" },
+    { "$ref": "#/$defs/RentalReservationSlotQueryRequest" }
+  ],
+  "discriminator": {
+    "propertyName": "resourceType"
+  }
+}
 ```
 
 ### Shared Request Fields
@@ -951,87 +1092,140 @@ ReservationSlotQueryRequestSchema = z.discriminatedUnion("resourceType", [
 
 ### TableReservationSlotQueryRequest
 
-```typescript
-TableReservationSlotQueryRequestSchema = ReservationSlotQueryRequestBaseSchema.extend({
-    resourceType: z.literal(ResourceType.TABLE),
-    partySize: z.number().int().positive(),
-    floorPlanId: z.string().nullable().optional(),
-    floorPlanSectionId: z.string().nullable().optional(),
-});
+```json
+{
+  "$id": "#/$defs/TableReservationSlotQueryRequest",
+  "type": "object",
+  "properties": {
+    "resourceType": { "type": "string", "const": "table" },
+    "locationId": { "type": ["string", "null"] },
+    "resourceId": { "type": ["string", "null"] },
+    "localDate": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "maxResults": { "type": "integer", "exclusiveMinimum": 0, "maximum": 1000, "default": 20 },
+    "partySize": { "type": "integer", "exclusiveMinimum": 0 },
+    "floorPlanId": { "type": ["string", "null"] },
+    "floorPlanSectionId": { "type": ["string", "null"] }
+  },
+  "required": ["resourceType", "localDate", "partySize"]
+}
 ```
 
 ### RoomReservationSlotQueryRequest
 
-```typescript
-RoomReservationSlotQueryRequestSchema = ReservationSlotQueryRequestBaseSchema.extend({
-    resourceType: z.literal(ResourceType.ROOM),
-    nights: z.number().int().positive().default(1),
-    occupancy: z.number().int().positive().nullable().optional(),
-});
+```json
+{
+  "$id": "#/$defs/RoomReservationSlotQueryRequest",
+  "type": "object",
+  "properties": {
+    "resourceType": { "type": "string", "const": "room" },
+    "locationId": { "type": ["string", "null"] },
+    "resourceId": { "type": ["string", "null"] },
+    "localDate": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "maxResults": { "type": "integer", "exclusiveMinimum": 0, "maximum": 1000, "default": 20 },
+    "nights": { "type": "integer", "exclusiveMinimum": 0, "default": 1 },
+    "occupancy": { "type": ["integer", "null"], "exclusiveMinimum": 0 }
+  },
+  "required": ["resourceType", "localDate"]
+}
 ```
 
 ### RentalReservationSlotQueryRequest
 
-```typescript
-RentalReservationSlotQueryRequestSchema = ReservationSlotQueryRequestBaseSchema.extend({
-    resourceType: z.literal(ResourceType.RENTAL),
-    returnDate: ReservationLocalDateSchema.nullable().optional(),
-    tierId: z.string().nullable().optional(),
-    durationMinutes: z.number().int().positive().nullable().optional(),
-});
+```json
+{
+  "$id": "#/$defs/RentalReservationSlotQueryRequest",
+  "type": "object",
+  "properties": {
+    "resourceType": { "type": "string", "const": "rental" },
+    "locationId": { "type": ["string", "null"] },
+    "resourceId": { "type": ["string", "null"] },
+    "localDate": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "maxResults": { "type": "integer", "exclusiveMinimum": 0, "maximum": 1000, "default": 20 },
+    "returnDate": { "type": ["string", "null"], "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "tierId": { "type": ["string", "null"] },
+    "durationMinutes": { "type": ["integer", "null"], "exclusiveMinimum": 0 }
+  },
+  "required": ["resourceType", "localDate"]
+}
 ```
 
 ### Candidate Slot Schemas
 
 #### Table Candidate
 
-```typescript
-ReservationCandidateSlotSchema = z.object({
-    resourceId: z.string(),
-    startTimeOfDay: ReservationTimeOfDayValueSchema,
-    startMinuteOfDay: z.number().int().min(0).max(1439),
-    endMinuteOfDay: z.number().int().min(1).max(1440),
-    startTimeUtcSec: z.number(),
-    endTimeUtcSec: z.number(),
-    isAvailable: z.boolean().default(true),
-    capacityRemaining: z.number().int().nonnegative().nullable().optional(),
-    priceQuote: z.number().nonnegative().nullable().optional(),
-});
+```json
+{
+  "$id": "#/$defs/ReservationCandidateSlot",
+  "type": "object",
+  "properties": {
+    "resourceId": { "type": "string" },
+    "startTimeOfDay": { "type": "string", "pattern": "^(0?[1-9]|1[0-2]):[0-5]\\d\\s?(AM|PM)$" },
+    "startMinuteOfDay": { "type": "integer", "minimum": 0, "maximum": 1439 },
+    "endMinuteOfDay": { "type": "integer", "minimum": 1, "maximum": 1440 },
+    "startTimeUtcSec": { "type": "number" },
+    "endTimeUtcSec": { "type": "number" },
+    "isAvailable": { "type": "boolean", "default": true },
+    "capacityRemaining": { "type": ["integer", "null"], "minimum": 0 },
+    "priceQuote": { "type": ["number", "null"], "minimum": 0 }
+  },
+  "required": ["resourceId", "startTimeOfDay", "startMinuteOfDay", "endMinuteOfDay", "startTimeUtcSec", "endTimeUtcSec"]
+}
 ```
 
 #### Room Candidate
 
-```typescript
-RoomCandidateSlotSchema = z.object({
-    resourceId: z.string(),
-    checkInDate: ReservationLocalDateSchema,
-    checkOutDate: ReservationLocalDateSchema,
-    nights: z.number().int().positive(),
-    occupancy: z.number().int().positive().nullable().optional(),
-    roomsAvailable: z.number().int().nonnegative(),
-    ratePerNight: z.array(RoomRatePerNightSchema).default([]),
-    totalWithTax: z.number().nonnegative(),
-    isAvailable: z.boolean().default(true),
-});
+```json
+{
+  "$id": "#/$defs/RoomCandidateSlot",
+  "type": "object",
+  "properties": {
+    "resourceId": { "type": "string" },
+    "checkInDate": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "checkOutDate": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "nights": { "type": "integer", "exclusiveMinimum": 0 },
+    "occupancy": { "type": ["integer", "null"], "exclusiveMinimum": 0 },
+    "roomsAvailable": { "type": "integer", "minimum": 0 },
+    "ratePerNight": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "date": { "type": "string" },
+          "amount": { "type": "number", "minimum": 0 }
+        },
+        "required": ["date", "amount"]
+      },
+      "default": []
+    },
+    "totalWithTax": { "type": "number", "minimum": 0 },
+    "isAvailable": { "type": "boolean", "default": true }
+  },
+  "required": ["resourceId", "checkInDate", "checkOutDate", "nights", "roomsAvailable", "totalWithTax"]
+}
 ```
 
 #### Rental Candidate
 
-```typescript
-RentalCandidateSlotSchema = z.object({
-    resourceId: z.string(),
-    pickupDate: ReservationLocalDateSchema,
-    returnDate: ReservationLocalDateSchema,
-    pickupTimeOfDay: ReservationTimeOfDayValueSchema.nullable().optional(),
-    returnTimeOfDay: ReservationTimeOfDayValueSchema.nullable().optional(),
-    durationMinutes: z.number().int().positive().nullable().optional(),
-    startTimeUtcSec: z.number(),
-    endTimeUtcSec: z.number(),
-    unitsAvailable: z.number().int().nonnegative(),
-    totalWithTax: z.number().nonnegative(),
-    priceQuote: z.number().nonnegative().nullable().optional(),
-    isAvailable: z.boolean().default(true),
-});
+```json
+{
+  "$id": "#/$defs/RentalCandidateSlot",
+  "type": "object",
+  "properties": {
+    "resourceId": { "type": "string" },
+    "pickupDate": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "returnDate": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "pickupTimeOfDay": { "type": ["string", "null"], "pattern": "^(0?[1-9]|1[0-2]):[0-5]\\d\\s?(AM|PM)$" },
+    "returnTimeOfDay": { "type": ["string", "null"], "pattern": "^(0?[1-9]|1[0-2]):[0-5]\\d\\s?(AM|PM)$" },
+    "durationMinutes": { "type": ["integer", "null"], "exclusiveMinimum": 0 },
+    "startTimeUtcSec": { "type": "number" },
+    "endTimeUtcSec": { "type": "number" },
+    "unitsAvailable": { "type": "integer", "minimum": 0 },
+    "totalWithTax": { "type": "number", "minimum": 0 },
+    "priceQuote": { "type": ["number", "null"], "minimum": 0 },
+    "isAvailable": { "type": "boolean", "default": true }
+  },
+  "required": ["resourceId", "pickupDate", "returnDate", "startTimeUtcSec", "endTimeUtcSec", "unitsAvailable", "totalWithTax"]
+}
 ```
 
 ### Response Examples
@@ -1095,52 +1289,82 @@ RentalCandidateSlotSchema = z.object({
 
 ### Schema Definition
 
-```typescript
-ReservationSettingsSchema = BaseModelSchema.safeExtend({
-    locationId: z.string().nullable().optional(),
-    table: TableReservationSettingsSchema.nullable().optional(),
-    room: RoomReservationSettingsSchema.nullable().optional(),
-    rental: RentalReservationSettingsSchema.nullable().optional(),
-    supportTableReservations: z.boolean().default(false),
-    supportRoomReservations: z.boolean().default(false),
-    supportRentalReservations: z.boolean().default(false),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "locationId": { "type": ["string", "null"] },
+    "table": { "oneOf": [{ "$ref": "#/$defs/TableReservationSettings" }, { "type": "null" }] },
+    "room": { "oneOf": [{ "$ref": "#/$defs/RoomReservationSettings" }, { "type": "null" }] },
+    "rental": { "oneOf": [{ "$ref": "#/$defs/RentalReservationSettings" }, { "type": "null" }] },
+    "supportTableReservations": { "type": "boolean", "default": false },
+    "supportRoomReservations": { "type": "boolean", "default": false },
+    "supportRentalReservations": { "type": "boolean", "default": false }
+  },
+  "required": ["id"]
+}
 ```
 
 ### TableReservationSettings
 
-```typescript
-TableReservationSettingsSchema = z.object({
-    settingType: z.enum(ReservationSettingType).default("capacity"),
-    defaultDurationMinutes: z.number().int().positive().default(90),
-    turnoverMinutes: z.number().int().nonnegative().default(15),
-    slotIntervalMinutes: z.number().int().positive().default(15),
-    maxPartySize: z.number().int().positive().nullable().optional(),
-    advanceBookingDays: z.number().int().positive().default(30),
-});
+```json
+{
+  "$id": "#/$defs/TableReservationSettings",
+  "type": "object",
+  "properties": {
+    "settingType": { "type": "string", "enum": ["capacity", "resource_specific"], "default": "capacity" },
+    "defaultDurationMinutes": { "type": "integer", "exclusiveMinimum": 0, "default": 90 },
+    "turnoverMinutes": { "type": "integer", "minimum": 0, "default": 15 },
+    "slotIntervalMinutes": { "type": "integer", "exclusiveMinimum": 0, "default": 15 },
+    "maxPartySize": { "type": ["integer", "null"], "exclusiveMinimum": 0 },
+    "advanceBookingDays": { "type": "integer", "exclusiveMinimum": 0, "default": 30 }
+  }
+}
 ```
 
 ### RoomReservationSettings
 
-```typescript
-RoomReservationSettingsSchema = z.object({
-    checkInTime: z.string().regex(/^([01]\d|2[0-3]):([0-5]\d)$/).default("15:00"),
-    checkOutTime: z.string().regex(/^([01]\d|2[0-3]):([0-5]\d)$/).default("11:00"),
-    minStayNights: z.number().int().positive().default(1),
-    maxStayNights: z.number().int().positive().nullable().optional(),
-    advanceBookingDays: z.number().int().positive().default(90),
-});
+```json
+{
+  "$id": "#/$defs/RoomReservationSettings",
+  "type": "object",
+  "properties": {
+    "checkInTime": { "type": "string", "pattern": "^([01]\\d|2[0-3]):([0-5]\\d)$", "default": "15:00" },
+    "checkOutTime": { "type": "string", "pattern": "^([01]\\d|2[0-3]):([0-5]\\d)$", "default": "11:00" },
+    "minStayNights": { "type": "integer", "exclusiveMinimum": 0, "default": 1 },
+    "maxStayNights": { "type": ["integer", "null"], "exclusiveMinimum": 0 },
+    "advanceBookingDays": { "type": "integer", "exclusiveMinimum": 0, "default": 90 }
+  }
+}
 ```
 
 ### RentalReservationSettings
 
-```typescript
-RentalReservationSettingsSchema = z.object({
-    tiers: z.array(RentalTierDefinitionSchema).default([]),
-    requireWaiver: z.boolean().default(false),
-    requireIdVerification: z.boolean().default(false),
-    defaultDepositPercent: z.number().nonnegative().max(100).nullable().optional(),
-});
+```json
+{
+  "$id": "#/$defs/RentalReservationSettings",
+  "type": "object",
+  "properties": {
+    "tiers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string", "minLength": 1 },
+          "durationMinutes": { "type": "integer", "exclusiveMinimum": 0 },
+          "sortOrder": { "type": "integer", "minimum": 0, "default": 0 }
+        },
+        "required": ["id", "name", "durationMinutes"]
+      },
+      "default": []
+    },
+    "requireWaiver": { "type": "boolean", "default": false },
+    "requireIdVerification": { "type": "boolean", "default": false },
+    "defaultDepositPercent": { "type": ["number", "null"], "minimum": 0, "maximum": 100 }
+  }
+}
 ```
 
 ### Settings Example
@@ -1184,14 +1408,19 @@ Maintenance blocks remove a physical resource instance from availability for a t
 
 ### Schema Definition
 
-```typescript
-MaintenanceBlockSchema = BaseModelSchema.safeExtend({
-    locationId: z.string().nullable().optional(),
-    resourceInstanceId: z.string(),
-    startDate: z.number(),
-    endDate: z.number(),
-    reason: z.string().nullable().optional(),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "locationId": { "type": ["string", "null"] },
+    "resourceInstanceId": { "type": "string" },
+    "startDate": { "type": "number" },
+    "endDate": { "type": "number" },
+    "reason": { "type": ["string", "null"] }
+  },
+  "required": ["id", "resourceInstanceId", "startDate", "endDate"]
+}
 ```
 
 ### Validation Rules
@@ -1221,45 +1450,55 @@ Resource versioning provides stable definitions and revisions for resource catal
 
 ### ResourceDefinition
 
-```typescript
-ResourceDefinitionSchema = BaseModelSchema.safeExtend({
-    name: z.string().min(1),
-    description: z.string().nullable().optional(),
-    isActive: z.boolean().default(true),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string", "minLength": 1 },
+    "description": { "type": ["string", "null"] },
+    "isActive": { "type": "boolean", "default": true }
+  },
+  "required": ["id", "name"]
+}
 ```
 
 ### ResourceRevision
 
-```typescript
-ResourceRevisionSchema = BaseModelSchema.safeExtend({
-    resourceId: z.string(),
-    label: z.string().nullable().optional(),
-    status: z.enum(ResourceRevisionStatus).default("draft"),
-    derivedFromRevisionId: z.string().nullable().optional(),
-    publishedAt: z.number().int().positive().nullable().optional(),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "resourceId": { "type": "string" },
+    "label": { "type": ["string", "null"] },
+    "status": { "type": "string", "enum": ["draft", "active", "archived"], "default": "draft" },
+    "derivedFromRevisionId": { "type": ["string", "null"] },
+    "publishedAt": { "type": ["integer", "null"], "exclusiveMinimum": 0 }
+  },
+  "required": ["id", "resourceId"]
+}
 ```
 
 ### ResourceRevisionStatus Enum
 
-```typescript
-enum ResourceRevisionStatus {
-    DRAFT = "draft",
-    ACTIVE = "active",
-    ARCHIVED = "archived",
-}
+```json
+["draft", "active", "archived"]
 ```
 
 ### DeriveResourceRevisionRequest
 
-```typescript
-DeriveResourceRevisionRequestSchema = z.object({
-    resourceId: z.string(),
-    sourceRevisionId: z.string().nullable().optional(),
-    strategy: z.enum(ResourceRevisionDeriveStrategy).default("copy_current"),
-    label: z.string().nullable().optional(),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "resourceId": { "type": "string" },
+    "sourceRevisionId": { "type": ["string", "null"] },
+    "strategy": { "type": "string", "enum": ["copy_current", "empty"], "default": "copy_current" },
+    "label": { "type": ["string", "null"] }
+  },
+  "required": ["resourceId"]
+}
 ```
 
 ---
@@ -1376,115 +1615,126 @@ External booking systems are represented by `externalRef` on reservation records
 
 ## Query Options
 
-All query option interfaces follow the same pattern:
+All query option request bodies follow the same JSON shape:
 
-```typescript
-interface QueryOptions {
-    page: number;
-    pageSize: number;
-    filters?: Filters;
-    sorting?: Sorting;
+```json
+{
+  "type": "object",
+  "properties": {
+    "page": { "type": "integer", "minimum": 1 },
+    "pageSize": { "type": "integer", "minimum": 1 },
+    "filters": { "type": "object" },
+    "sorting": {
+      "type": "object",
+      "properties": {
+        "field": { "type": "string" },
+        "direction": { "type": "string", "enum": ["asc", "desc"] }
+      },
+      "required": ["field", "direction"]
+    }
+  },
+  "required": ["page", "pageSize"]
 }
 ```
 
 ### Reservation Filters
 
-```typescript
-interface TableReservationFilters {
-    search?: string;
-    locationId?: string;
-    channelId?: string;
-    customerId?: string;
-    status?: ReservationStatus[];
-    tableId?: string;
-    dateRange?: { start?: number; end?: number };
-    externalSource?: string;
-}
-
-interface RoomReservationFilters {
-    search?: string;
-    locationId?: string;
-    channelId?: string;
-    resourceId?: string;
-    guestId?: string;
-    status?: ReservationStatus[];
-    paymentStatus?: PaymentStatus[];
-    dateRange?: { start?: number; end?: number };
-    externalSource?: string;
-}
-
-interface RentalReservationFilters {
-    search?: string;
-    locationId?: string;
-    channelId?: string;
-    customerId?: string;
-    resourceId?: string;
-    tierId?: string[];
-    status?: RentalReservationStatus[];
-    depositStatus?: DepositStatus[];
-    dateRange?: { start?: number; end?: number };
-    externalSource?: string;
+```json
+{
+  "tableReservation": {
+    "search": "string",
+    "locationId": "string",
+    "channelId": "string",
+    "customerId": "string",
+    "status": ["pending", "confirmed", "seated", "checked_in", "completed", "cancelled", "no_show"],
+    "tableId": "string",
+    "dateRange": { "start": 1705330800, "end": 1705417200 },
+    "externalSource": "string"
+  },
+  "roomReservation": {
+    "search": "string",
+    "locationId": "string",
+    "channelId": "string",
+    "resourceId": "string",
+    "guestId": "string",
+    "status": ["pending", "confirmed", "checked_in"],
+    "paymentStatus": ["pending", "paid", "partial", "failed", "refunded"],
+    "dateRange": { "start": 1705330800, "end": 1705417200 },
+    "externalSource": "string"
+  },
+  "rentalReservation": {
+    "search": "string",
+    "locationId": "string",
+    "channelId": "string",
+    "customerId": "string",
+    "resourceId": "string",
+    "tierId": ["tier_half_day"],
+    "status": ["upcoming", "pickup_soon", "out", "returned", "overdue", "cancelled"],
+    "depositStatus": ["pending", "paid", "returned", "forfeited"],
+    "dateRange": { "start": 1705330800, "end": 1705417200 },
+    "externalSource": "string"
+  }
 }
 ```
 
 ### Resource Filters
 
-```typescript
-interface ResourceFilters {
-    search?: string;
-    locationId?: string;
-    resourceType?: ResourceType[];
-    categoryId?: string;
-    isAvailable?: boolean;
-    capacityRange?: { min?: number; max?: number };
-    location?: string;
-    amenities?: string[];
-    priceRange?: { min?: number; max?: number };
-}
-
-interface ResourceInstanceFilters {
-    resourceId?: string;
-    locationId?: string;
-    status?: ResourceInstanceStatus[];
-    isAvailable?: boolean;
-}
-
-interface ResourceCategoryFilters {
-    search?: string;
-    locationId?: string;
-    resourceType?: ResourceType[];
-    isActive?: boolean;
+```json
+{
+  "resource": {
+    "search": "string",
+    "locationId": "string",
+    "resourceType": ["table", "room", "rental", "rentals", "resource"],
+    "categoryId": "string",
+    "isAvailable": true,
+    "capacityRange": { "min": 2, "max": 4 },
+    "location": "string",
+    "amenities": ["wifi"],
+    "priceRange": { "min": 0, "max": 250 }
+  },
+  "resourceInstance": {
+    "resourceId": "string",
+    "locationId": "string",
+    "status": ["available", "reserved", "occupied", "maintenance", "cleaning", "out_of_service"],
+    "isAvailable": true
+  },
+  "resourceCategory": {
+    "search": "string",
+    "locationId": "string",
+    "resourceType": ["table", "room", "rental", "rentals", "resource"],
+    "isActive": true
+  }
 }
 ```
 
 ### Assignment Filters
 
-```typescript
-interface TableAssignmentFilters {
-    reservationId?: string;
-    tableInstanceId?: string;
-    status?: TableAssignmentStatus[];
-    assignedBy?: string;
-    locationId?: string;
-}
-
-interface RoomAssignmentFilters {
-    reservationId?: string;
-    roomInstanceId?: string;
-    status?: RoomAssignmentStatus[];
-    assignmentType?: RoomAssignmentType;
-    assignedBy?: string;
-    locationId?: string;
-}
-
-interface RentalAssignmentFilters {
-    reservationId?: string;
-    rentalInstanceId?: string;
-    status?: RentalAssignmentStatus[];
-    assignmentType?: RentalAssignmentType;
-    assignedBy?: string;
-    locationId?: string;
-    damageReported?: boolean;
+```json
+{
+  "tableAssignment": {
+    "reservationId": "string",
+    "tableInstanceId": "string",
+    "status": ["assigned", "reassigned", "released"],
+    "assignedBy": "string",
+    "locationId": "string"
+  },
+  "roomAssignment": {
+    "reservationId": "string",
+    "roomInstanceId": "string",
+    "status": ["assigned", "reassigned", "released"],
+    "assignmentType": "soft",
+    "assignedBy": "string",
+    "locationId": "string"
+  },
+  "rentalAssignment": {
+    "reservationId": "string",
+    "rentalInstanceId": "string",
+    "status": ["assigned", "reassigned", "released"],
+    "assignmentType": "hard",
+    "assignedBy": "string",
+    "locationId": "string",
+    "damageReported": false
+  }
 }
 ```
 
@@ -1573,16 +1823,16 @@ interface RentalAssignmentFilters {
 
 ### Common Query Pattern
 
-```typescript
+```json
 {
-  page: 1,
-  pageSize: 25,
-  filters: {
-    locationId: "loc_downtown"
+  "page": 1,
+  "pageSize": 25,
+  "filters": {
+    "locationId": "loc_downtown"
   },
-  sorting: {
-    field: "createdAt",
-    direction: "desc"
+  "sorting": {
+    "field": "createdAt",
+    "direction": "desc"
   }
 }
 ```

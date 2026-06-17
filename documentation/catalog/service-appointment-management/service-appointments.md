@@ -17,34 +17,46 @@ Represents a scheduled appointment for a service.
 
 ### Schema Definition
 
-```typescript
-ServiceAppointmentSchema = BaseModelSchema.safeExtend({
-    businessServiceId: z.string(),
-    locationId: z.string().nullable().optional(),
-    channelId: z.string().nullable().optional(),
-    customerId: z.string(),
-    customerName: z.string().optional(),
-    customerEmail: z.email().optional(),
-    startTime: z.number().int().positive(),
-    endTime: z.number().int().positive().optional(),
-    duration: z.number().int().positive().default(30).optional(),
-    totalPrice: z.number().nonnegative().default(0).optional(),
-    pricing: OrderPricingSchema.optional(),
-    depositPaid: z.number().nonnegative().default(0),
-    status: z.enum(AppointmentStatus).default("pending"),
-    providerId: z.string().nullable().optional(),
-    serviceProviderId: z.string().nullable().optional(),
-    slotIndex: z.number().int().nonnegative().nullable().optional(),
-
-    // Calendar Integration
-    assignedUserAccountId: z.string().nullable().optional(),
-    calendarId: z.string().nullable().optional(),
-    calendarEventId: z.string().nullable().optional(),
-    calendarProvider: z.enum(CalendarProvider).nullable().optional(),
-    cancelReason: z.string().nullable().optional(),
-    serviceConversationConfigId: z.string().nullable().optional(),
-    externalRef: ExternalRefSchema.nullable().optional(),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "createdAt": { "type": "integer" },
+    "updatedAt": { "type": "integer" },
+    "businessServiceId": { "type": "string" },
+    "locationId": { "type": ["string", "null"] },
+    "channelId": { "type": ["string", "null"] },
+    "customerId": { "type": "string" },
+    "customerName": { "type": "string" },
+    "customerEmail": { "type": "string", "format": "email" },
+    "startTime": { "type": "integer", "exclusiveMinimum": 0 },
+    "endTime": { "type": "integer", "exclusiveMinimum": 0 },
+    "duration": { "type": "integer", "exclusiveMinimum": 0, "default": 30 },
+    "totalPrice": { "type": "number", "minimum": 0, "default": 0 },
+    "pricing": { "type": "object", "additionalProperties": true },
+    "depositPaid": { "type": "number", "minimum": 0, "default": 0 },
+    "status": {
+      "type": "string",
+      "enum": ["pending", "confirmed", "cancelled", "completed", "no_show"],
+      "default": "pending"
+    },
+    "providerId": { "type": ["string", "null"] },
+    "serviceProviderId": { "type": ["string", "null"] },
+    "slotIndex": { "type": ["integer", "null"], "minimum": 0 },
+    "assignedUserAccountId": { "type": ["string", "null"] },
+    "calendarId": { "type": ["string", "null"] },
+    "calendarEventId": { "type": ["string", "null"] },
+    "calendarProvider": {
+      "type": ["string", "null"],
+      "enum": ["google", "outlook", "calendly", null]
+    },
+    "cancelReason": { "type": ["string", "null"] },
+    "serviceConversationConfigId": { "type": ["string", "null"] },
+    "externalRef": { "type": ["object", "null"], "additionalProperties": true }
+  },
+  "required": ["id", "businessServiceId", "customerId", "startTime", "depositPaid"]
+}
 ```
 
 ### Fields
@@ -83,24 +95,14 @@ ServiceAppointmentSchema = BaseModelSchema.safeExtend({
 
 ### AppointmentStatus Enum
 
-```typescript
-enum AppointmentStatus {
-    PENDING = "pending",
-    CONFIRMED = "confirmed",
-    CANCELLED = "cancelled",
-    COMPLETED = "completed",
-    NO_SHOW = "no_show",  // For revenue tracking
-}
+```json
+["pending", "confirmed", "cancelled", "completed", "no_show"]
 ```
 
 ### CalendarProvider Enum
 
-```typescript
-enum CalendarProvider {
-    GOOGLE = "google",
-    OUTLOOK = "outlook",
-    CALENDLY = "calendly",
-}
+```json
+["google", "outlook", "calendly"]
 ```
 
 ### Example
@@ -148,11 +150,19 @@ enum CalendarProvider {
 
 Combines appointment creation with dynamic field values.
 
-```typescript
-CreateServiceAppointmentWithCustomDataSchema = z.object({
-    appointment: CreateServiceAppointmentSchema,
-    customData: z.record(z.string(), DynamicFieldValueSchema).default({}),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "appointment": { "$ref": "#/$defs/CreateServiceAppointment" },
+    "customData": {
+      "type": "object",
+      "additionalProperties": true,
+      "default": {}
+    }
+  },
+  "required": ["appointment"]
+}
 ```
 
 **Example:**
@@ -176,11 +186,15 @@ CreateServiceAppointmentWithCustomDataSchema = z.object({
 
 Appointment with its captured field values (for display).
 
-```typescript
-ServiceAppointmentWithAdditionalInfoSchema = z.object({
-    appointment: ServiceAppointmentSchema,
-    additionalInfo: AppointmentAdditionalInfoSchema,
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "appointment": { "$ref": "#/$defs/ServiceAppointment" },
+    "additionalInfo": { "$ref": "#/$defs/AppointmentAdditionalInfo" }
+  },
+  "required": ["appointment", "additionalInfo"]
+}
 ```
 
 ---
@@ -191,15 +205,19 @@ ServiceAppointmentWithAdditionalInfoSchema = z.object({
 
 Request for available appointment slots.
 
-```typescript
-ServiceSlotQueryRequestSchema = z.object({
-    organizationId: z.string(),
-    serviceId: z.string(),
-    localDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
-    locationId: z.string().nullable().optional(),
-    providerId: z.string(),
-    maxResults: z.number().int().positive().max(1000).default(10),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "organizationId": { "type": "string" },
+    "serviceId": { "type": "string" },
+    "localDate": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "locationId": { "type": ["string", "null"] },
+    "providerId": { "type": "string" },
+    "maxResults": { "type": "integer", "exclusiveMinimum": 0, "maximum": 1000, "default": 10 }
+  },
+  "required": ["organizationId", "serviceId", "localDate", "providerId"]
+}
 ```
 
 | Field | Type | Required | Description |
@@ -215,16 +233,21 @@ ServiceSlotQueryRequestSchema = z.object({
 
 Individual available time slot.
 
-```typescript
-ServiceCandidateSlotSchema = z.object({
-    providerId: z.string(),
-    serviceProviderId: z.string().nullable().optional(),
-    startTimeOfDay: z.string().regex(/^(0?[1-9]|1[0-2]):[0-5]\d\s?(AM|PM)$/i),
-    startMinuteOfDay: z.number().int().min(0).max(1439),
-    endMinuteOfDay: z.number().int().min(1).max(1440),
-    startTimeUtcSec: z.number(),
-    endTimeUtcSec: z.number(),
-});
+```json
+{
+  "$id": "#/$defs/ServiceCandidateSlot",
+  "type": "object",
+  "properties": {
+    "providerId": { "type": "string" },
+    "serviceProviderId": { "type": ["string", "null"] },
+    "startTimeOfDay": { "type": "string", "pattern": "^(0?[1-9]|1[0-2]):[0-5]\\d\\s?(AM|PM)$" },
+    "startMinuteOfDay": { "type": "integer", "minimum": 0, "maximum": 1439 },
+    "endMinuteOfDay": { "type": "integer", "minimum": 1, "maximum": 1440 },
+    "startTimeUtcSec": { "type": "number" },
+    "endTimeUtcSec": { "type": "number" }
+  },
+  "required": ["providerId", "startTimeOfDay", "startMinuteOfDay", "endMinuteOfDay", "startTimeUtcSec", "endTimeUtcSec"]
+}
 ```
 
 | Field | Type | Description |
@@ -241,13 +264,20 @@ ServiceCandidateSlotSchema = z.object({
 
 Response containing available slots.
 
-```typescript
-ServiceSlotQueryResponseSchema = z.object({
-    localDate: LocalDateSchema,
-    timezone: z.string().min(1),
-    generatedAt: z.number(),
-    slots: z.array(ServiceCandidateSlotSchema),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "localDate": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "timezone": { "type": "string", "minLength": 1 },
+    "generatedAt": { "type": "number" },
+    "slots": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/ServiceCandidateSlot" }
+    }
+  },
+  "required": ["localDate", "timezone", "generatedAt", "slots"]
+}
 ```
 
 **Example Response:**
@@ -285,29 +315,45 @@ ServiceSlotQueryResponseSchema = z.object({
 
 ### ServiceAppointmentFilters
 
-```typescript
-interface ServiceAppointmentFilters {
-    search?: string;                    // Search customer name/email
-    locationId?: string;                // Filter by location
-    channelId?: string;                 // Filter by booking channel
-    status?: AppointmentStatus[];       // Filter by status(es)
-    businessServiceId?: string;         // Filter by service
-    customerId?: string;                // Filter by customer
-    assignedUserAccountId?: string;     // Filter by assigned user
-    calendarProvider?: CalendarProvider[]; // Filter by calendar provider(s)
-    externalSource?: string;            // Filter by external source
-    dateRange?: {                       // Filter by date range
-        start?: number;
-        end?: number;
-    };
+```json
+{
+  "type": "object",
+  "properties": {
+    "search": { "type": "string" },
+    "locationId": { "type": "string" },
+    "channelId": { "type": "string" },
+    "status": {
+      "type": "array",
+      "items": { "type": "string", "enum": ["pending", "confirmed", "cancelled", "completed", "no_show"] }
+    },
+    "businessServiceId": { "type": "string" },
+    "customerId": { "type": "string" },
+    "assignedUserAccountId": { "type": "string" },
+    "calendarProvider": {
+      "type": "array",
+      "items": { "type": "string", "enum": ["google", "outlook", "calendly"] }
+    },
+    "externalSource": { "type": "string" },
+    "dateRange": {
+      "type": "object",
+      "properties": {
+        "start": { "type": "number" },
+        "end": { "type": "number" }
+      }
+    }
+  }
 }
 ```
 
 ### ServiceAppointmentSorting
 
-```typescript
-interface ServiceAppointmentSorting {
-    field: "startTime" | "endTime" | "createdAt" | "customerName";
-    direction: "asc" | "desc";
+```json
+{
+  "type": "object",
+  "properties": {
+    "field": { "type": "string", "enum": ["startTime", "endTime", "createdAt", "customerName"] },
+    "direction": { "type": "string", "enum": ["asc", "desc"] }
+  },
+  "required": ["field", "direction"]
 }
 ```

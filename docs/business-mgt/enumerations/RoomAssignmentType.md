@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.56**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.57**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: RoomAssignmentType
 
-Defined in: [src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts:29](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts#L29)
+Defined in: [src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts:29](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts#L29)
 
 Room assignment lock type.
 
@@ -14,5 +14,5 @@ Room assignment lock type.
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="soft"></a> `SOFT` | `"soft"` | [src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts:30](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts#L30) |
-| <a id="hard"></a> `HARD` | `"hard"` | [src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts:31](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts#L31) |
+| <a id="soft"></a> `SOFT` | `"soft"` | [src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts:30](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts#L30) |
+| <a id="hard"></a> `HARD` | `"hard"` | [src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts:31](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts#L31) |

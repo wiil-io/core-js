@@ -35,17 +35,27 @@ Represents a location-level canvas for table layouts.
 
 ### Schema Definition
 
-```typescript
-FloorPlanSchema = BaseModelSchema.safeExtend({
-    locationId: z.string().nullable().optional(),
-    name: z.string().min(1),
-    description: z.string(),
-    imageUrls: z.array(z.url()).nullable().optional(),
-    isActive: z.boolean().default(true),
-    canvasDimensions: CanvasDimensionsSchema,
-    capacity: z.number().int().positive(),
-    metadata: z.record(z.string(), z.any()).nullable().optional(),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "createdAt": { "type": "integer" },
+    "updatedAt": { "type": "integer" },
+    "locationId": { "type": ["string", "null"] },
+    "name": { "type": "string", "minLength": 1 },
+    "description": { "type": "string" },
+    "imageUrls": {
+      "type": ["array", "null"],
+      "items": { "type": "string", "format": "uri" }
+    },
+    "isActive": { "type": "boolean", "default": true },
+    "canvasDimensions": { "$ref": "#/$defs/CanvasDimensions" },
+    "capacity": { "type": "integer", "exclusiveMinimum": 0 },
+    "metadata": { "type": ["object", "null"], "additionalProperties": true }
+  },
+  "required": ["id", "name", "description", "canvasDimensions", "capacity"]
+}
 ```
 
 ### Fields
@@ -92,18 +102,34 @@ Represents a named area within a floor plan.
 
 ### Schema Definition
 
-```typescript
-SectionSchema = BaseModelSchema.safeExtend({
-    locationId: z.string(),
-    floorPlanId: z.string(),
-    name: z.string().min(1),
-    capacity: z.number().int().positive(),
-    color: z.string().regex(/^#[0-9A-Fa-f]{6}$/),
-    isActive: z.boolean().default(true),
-    sortOrder: z.number().int().nonnegative().default(0),
-    tables: z.array(TablePlacementSchema).default([]),
-    geometry: SectionGeometrySchema.nullable().optional(),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "createdAt": { "type": "integer" },
+    "updatedAt": { "type": "integer" },
+    "locationId": { "type": "string" },
+    "floorPlanId": { "type": "string" },
+    "name": { "type": "string", "minLength": 1 },
+    "capacity": { "type": "integer", "exclusiveMinimum": 0 },
+    "color": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+    "isActive": { "type": "boolean", "default": true },
+    "sortOrder": { "type": "integer", "minimum": 0, "default": 0 },
+    "tables": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/TablePlacement" },
+      "default": []
+    },
+    "geometry": {
+      "oneOf": [
+        { "$ref": "#/$defs/SectionGeometry" },
+        { "type": "null" }
+      ]
+    }
+  },
+  "required": ["id", "locationId", "floorPlanId", "name", "capacity", "color"]
+}
 ```
 
 ### Example
@@ -138,22 +164,36 @@ Represents a table placed on a floor plan canvas.
 
 ### Schema Definition
 
-```typescript
-TablePlacementSchema = BaseModelSchema.safeExtend({
-    floorPlanSectionId: z.string().nullable().optional(),
-    tableResourceId: z.string(),
-    number: z.string(),
-    x: z.number(),
-    y: z.number(),
-    width: z.number().positive(),
-    height: z.number().positive(),
-    shape: z.enum(TableShape),
-    rotation: z.number().nullable().optional(),
-    minParty: z.number().int().positive(),
-    maxParty: z.number().int().positive(),
-    combinableWith: z.array(z.string()).default([]),
-    serverSectionId: z.string().nullable().optional(),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "createdAt": { "type": "integer" },
+    "updatedAt": { "type": "integer" },
+    "floorPlanSectionId": { "type": "string" },
+    "tableResourceId": { "type": "string" },
+    "number": { "type": "string" },
+    "x": { "type": "number" },
+    "y": { "type": "number" },
+    "width": { "type": "number", "exclusiveMinimum": 0 },
+    "height": { "type": "number", "exclusiveMinimum": 0 },
+    "shape": {
+      "type": "string",
+      "enum": ["round", "square", "booth", "rect", "curved", "high_top", "bar"]
+    },
+    "rotation": { "type": ["number", "null"] },
+    "minParty": { "type": "integer", "exclusiveMinimum": 0 },
+    "maxParty": { "type": "integer", "exclusiveMinimum": 0 },
+    "combinableWith": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "serverSectionId": { "type": ["string", "null"] }
+  },
+  "required": ["id", "floorPlanSectionId", "tableResourceId", "number", "x", "y", "width", "height", "shape", "minParty", "maxParty"]
+}
 ```
 
 ### Table Shapes
@@ -195,33 +235,67 @@ TablePlacementSchema = BaseModelSchema.safeExtend({
 
 ### CanvasDimensions
 
-```typescript
-CanvasDimensionsSchema = z.object({
-    width: z.number().positive(),
-    height: z.number().positive(),
-    unit: z.enum(CanvasUnit).default("px"),
-});
+```json
+{
+  "$id": "#/$defs/CanvasDimensions",
+  "type": "object",
+  "properties": {
+    "width": { "type": "number", "exclusiveMinimum": 0 },
+    "height": { "type": "number", "exclusiveMinimum": 0 },
+    "unit": { "type": "string", "enum": ["px", "ft", "m"], "default": "px" }
+  },
+  "required": ["width", "height"]
+}
 ```
 
 ### SectionGeometry
 
-```typescript
-SectionGeometrySchema = z.discriminatedUnion("kind", [
-    z.object({ kind: z.literal("auto") }),
-    z.object({
-        kind: z.literal("rect"),
-        x: z.number(),
-        y: z.number(),
-        width: z.number().positive(),
-        height: z.number().positive(),
-        rotation: z.number().min(-360).max(360).optional(),
-    }),
-    z.object({
-        kind: z.literal("polygon"),
-        points: z.array(point2DSchema).min(3).max(64),
-        rotation: z.number().min(-360).max(360).optional(),
-    }),
-]);
+```json
+{
+  "$id": "#/$defs/SectionGeometry",
+  "oneOf": [
+    {
+      "type": "object",
+      "properties": {
+        "kind": { "type": "string", "const": "auto" }
+      },
+      "required": ["kind"]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "kind": { "type": "string", "const": "rect" },
+        "x": { "type": "number" },
+        "y": { "type": "number" },
+        "width": { "type": "number", "exclusiveMinimum": 0 },
+        "height": { "type": "number", "exclusiveMinimum": 0 },
+        "rotation": { "type": "number", "minimum": -360, "maximum": 360 }
+      },
+      "required": ["kind", "x", "y", "width", "height"]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "kind": { "type": "string", "const": "polygon" },
+        "points": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 64,
+          "items": {
+            "type": "object",
+            "properties": {
+              "x": { "type": "number" },
+              "y": { "type": "number" }
+            },
+            "required": ["x", "y"]
+          }
+        },
+        "rotation": { "type": "number", "minimum": -360, "maximum": 360 }
+      },
+      "required": ["kind", "points"]
+    }
+  ]
+}
 ```
 
 ### Canvas Units
@@ -238,35 +312,41 @@ SectionGeometrySchema = z.discriminatedUnion("kind", [
 
 ### FloorPlanQueryOptions
 
-```typescript
-interface FloorPlanQueryOptions {
-    page: number;
-    pageSize: number;
-    filters?: {
-        locationId?: string;
-        isActive?: boolean;
-    };
-    sorting?: {
-        field: keyof FloorPlan;
-        direction: "asc" | "desc";
-    };
+```json
+{
+  "type": "object",
+  "properties": {
+    "page": { "type": "integer", "minimum": 1 },
+    "pageSize": { "type": "integer", "minimum": 1 },
+    "filters": {
+      "type": "object",
+      "properties": {
+        "locationId": { "type": "string" },
+        "isActive": { "type": "boolean" }
+      }
+    }
+  },
+  "required": ["page", "pageSize"]
 }
 ```
 
 ### SectionQueryOptions
 
-```typescript
-interface SectionQueryOptions {
-    page: number;
-    pageSize: number;
-    filters?: {
-        locationId?: string;
-        isActive?: boolean;
-    };
-    sorting?: {
-        field: keyof Section;
-        direction: "asc" | "desc";
-    };
+```json
+{
+  "type": "object",
+  "properties": {
+    "page": { "type": "integer", "minimum": 1 },
+    "pageSize": { "type": "integer", "minimum": 1 },
+    "filters": {
+      "type": "object",
+      "properties": {
+        "locationId": { "type": "string" },
+        "isActive": { "type": "boolean" }
+      }
+    }
+  },
+  "required": ["page", "pageSize"]
 }
 ```
 

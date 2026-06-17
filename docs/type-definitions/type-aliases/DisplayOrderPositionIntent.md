@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.56**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.57**](../../README.md)
 
 ***
 
@@ -17,7 +17,7 @@ type DisplayOrderPositionIntent = {
 };
 ```
 
-Defined in: [src/core/type-definitions/display-order.ts:179](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/type-definitions/display-order.ts#L179)
+Defined in: [src/core/type-definitions/display-order.ts:179](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/type-definitions/display-order.ts#L179)
 
 Display order position intent schema.
 
@@ -25,4 +25,4 @@ Display order position intent schema.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="mode"></a> `mode` | \| `"BEGINNING"` \| `"END"` \| `"KEEP_CURRENT"` \| `"BEFORE_ITEM"` \| `"AFTER_ITEM"` \| `"ABSOLUTE_INDEX"` | [src/core/type-definitions/display-order.ts:24](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/type-definitions/display-order.ts#L24) |
+| <a id="mode"></a> `mode` | \| `"BEGINNING"` \| `"END"` \| `"KEEP_CURRENT"` \| `"BEFORE_ITEM"` \| `"AFTER_ITEM"` \| `"ABSOLUTE_INDEX"` | [src/core/type-definitions/display-order.ts:24](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/type-definitions/display-order.ts#L24) |

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.56**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.57**](../../README.md)
 
 ***
 
@@ -14,7 +14,7 @@ type ServiceChannelMapping = {
 };
 ```
 
-Defined in: [src/core/business-mgt/service-management/business-service-config.schema.ts:223](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/business-mgt/service-management/business-service-config.schema.ts#L223)
+Defined in: [src/core/business-mgt/service-management/business-service-config.schema.ts:223](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/business-mgt/service-management/business-service-config.schema.ts#L223)
 
 Per-channel external service ID mapping.
 
@@ -22,6 +22,6 @@ Per-channel external service ID mapping.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="channelid"></a> `channelId` | `string` | [src/core/business-mgt/service-management/business-service-config.schema.ts:82](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/business-mgt/service-management/business-service-config.schema.ts#L82) |
-| <a id="externalserviceid"></a> `externalServiceId` | `string` | [src/core/business-mgt/service-management/business-service-config.schema.ts:83](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/business-mgt/service-management/business-service-config.schema.ts#L83) |
-| <a id="externalcategoryid"></a> `externalCategoryId?` | `string` \| `null` | [src/core/business-mgt/service-management/business-service-config.schema.ts:84](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/business-mgt/service-management/business-service-config.schema.ts#L84) |
+| <a id="channelid"></a> `channelId` | `string` | [src/core/business-mgt/service-management/business-service-config.schema.ts:82](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/business-mgt/service-management/business-service-config.schema.ts#L82) |
+| <a id="externalserviceid"></a> `externalServiceId` | `string` | [src/core/business-mgt/service-management/business-service-config.schema.ts:83](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/business-mgt/service-management/business-service-config.schema.ts#L83) |
+| <a id="externalcategoryid"></a> `externalCategoryId?` | `string` \| `null` | [src/core/business-mgt/service-management/business-service-config.schema.ts:84](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/business-mgt/service-management/business-service-config.schema.ts#L84) |

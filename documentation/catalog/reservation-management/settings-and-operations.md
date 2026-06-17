@@ -37,16 +37,38 @@ Stores table, room, and rental settings for a location.
 
 ### Schema Definition
 
-```typescript
-ReservationSettingsSchema = BaseModelSchema.safeExtend({
-    locationId: z.string().nullable().optional(),
-    table: TableReservationSettingsSchema.nullable().optional(),
-    room: RoomReservationSettingsSchema.nullable().optional(),
-    rental: RentalReservationSettingsSchema.nullable().optional(),
-    supportTableReservations: z.boolean().default(false),
-    supportRoomReservations: z.boolean().default(false),
-    supportRentalReservations: z.boolean().default(false),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "createdAt": { "type": "integer" },
+    "updatedAt": { "type": "integer" },
+    "locationId": { "type": ["string", "null"] },
+    "table": {
+      "oneOf": [
+        { "$ref": "#/$defs/TableReservationSettings" },
+        { "type": "null" }
+      ]
+    },
+    "room": {
+      "oneOf": [
+        { "$ref": "#/$defs/RoomReservationSettings" },
+        { "type": "null" }
+      ]
+    },
+    "rental": {
+      "oneOf": [
+        { "$ref": "#/$defs/RentalReservationSettings" },
+        { "type": "null" }
+      ]
+    },
+    "supportTableReservations": { "type": "boolean", "default": false },
+    "supportRoomReservations": { "type": "boolean", "default": false },
+    "supportRentalReservations": { "type": "boolean", "default": false }
+  },
+  "required": ["id"]
+}
 ```
 
 ### Fields
@@ -100,15 +122,19 @@ ReservationSettingsSchema = BaseModelSchema.safeExtend({
 
 Controls slot duration, turnover, booking window, and party-size limits for table reservations.
 
-```typescript
-TableReservationSettingsSchema = z.object({
-    settingType: z.enum(ReservationSettingType).default("capacity"),
-    defaultDurationMinutes: z.number().int().positive().default(90),
-    turnoverMinutes: z.number().int().nonnegative().default(15),
-    slotIntervalMinutes: z.number().int().positive().default(15),
-    maxPartySize: z.number().int().positive().nullable().optional(),
-    advanceBookingDays: z.number().int().positive().default(30),
-});
+```json
+{
+  "$id": "#/$defs/TableReservationSettings",
+  "type": "object",
+  "properties": {
+    "settingType": { "type": "string", "enum": ["capacity", "resource_specific"], "default": "capacity" },
+    "defaultDurationMinutes": { "type": "integer", "exclusiveMinimum": 0, "default": 90 },
+    "turnoverMinutes": { "type": "integer", "minimum": 0, "default": 15 },
+    "slotIntervalMinutes": { "type": "integer", "exclusiveMinimum": 0, "default": 15 },
+    "maxPartySize": { "type": ["integer", "null"], "exclusiveMinimum": 0 },
+    "advanceBookingDays": { "type": "integer", "exclusiveMinimum": 0, "default": 30 }
+  }
+}
 ```
 
 | Field | Description |
@@ -126,14 +152,18 @@ TableReservationSettingsSchema = z.object({
 
 Controls lodging check-in/check-out times and stay limits.
 
-```typescript
-RoomReservationSettingsSchema = z.object({
-    checkInTime: z.string().regex(/^([01]\d|2[0-3]):([0-5]\d)$/).default("15:00"),
-    checkOutTime: z.string().regex(/^([01]\d|2[0-3]):([0-5]\d)$/).default("11:00"),
-    minStayNights: z.number().int().positive().default(1),
-    maxStayNights: z.number().int().positive().nullable().optional(),
-    advanceBookingDays: z.number().int().positive().default(90),
-});
+```json
+{
+  "$id": "#/$defs/RoomReservationSettings",
+  "type": "object",
+  "properties": {
+    "checkInTime": { "type": "string", "pattern": "^([01]\\d|2[0-3]):([0-5]\\d)$", "default": "15:00" },
+    "checkOutTime": { "type": "string", "pattern": "^([01]\\d|2[0-3]):([0-5]\\d)$", "default": "11:00" },
+    "minStayNights": { "type": "integer", "exclusiveMinimum": 0, "default": 1 },
+    "maxStayNights": { "type": ["integer", "null"], "exclusiveMinimum": 0 },
+    "advanceBookingDays": { "type": "integer", "exclusiveMinimum": 0, "default": 90 }
+  }
+}
 ```
 
 | Field | Description |
@@ -150,24 +180,37 @@ RoomReservationSettingsSchema = z.object({
 
 Controls rental tiers, waiver requirements, ID verification, and default deposit percent.
 
-```typescript
-RentalReservationSettingsSchema = z.object({
-    tiers: z.array(RentalTierDefinitionSchema).default([]),
-    requireWaiver: z.boolean().default(false),
-    requireIdVerification: z.boolean().default(false),
-    defaultDepositPercent: z.number().nonnegative().max(100).nullable().optional(),
-});
+```json
+{
+  "$id": "#/$defs/RentalReservationSettings",
+  "type": "object",
+  "properties": {
+    "tiers": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/RentalTierDefinition" },
+      "default": []
+    },
+    "requireWaiver": { "type": "boolean", "default": false },
+    "requireIdVerification": { "type": "boolean", "default": false },
+    "defaultDepositPercent": { "type": ["number", "null"], "minimum": 0, "maximum": 100 }
+  }
+}
 ```
 
 ### RentalTierDefinition
 
-```typescript
-RentalTierDefinitionSchema = z.object({
-    id: z.string(),
-    name: z.string().min(1),
-    durationMinutes: z.number().int().positive(),
-    sortOrder: z.number().int().nonnegative().default(0),
-});
+```json
+{
+  "$id": "#/$defs/RentalTierDefinition",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string", "minLength": 1 },
+    "durationMinutes": { "type": "integer", "exclusiveMinimum": 0 },
+    "sortOrder": { "type": "integer", "minimum": 0, "default": 0 }
+  },
+  "required": ["id", "name", "durationMinutes"]
+}
 ```
 
 ---
@@ -178,14 +221,21 @@ Blocks a physical resource instance for maintenance, cleaning, repair, or operat
 
 ### Schema Definition
 
-```typescript
-MaintenanceBlockSchema = BaseModelSchema.safeExtend({
-    locationId: z.string().nullable().optional(),
-    resourceInstanceId: z.string(),
-    startDate: z.number(),
-    endDate: z.number(),
-    reason: z.string().nullable().optional(),
-});
+```json
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "createdAt": { "type": "integer" },
+    "updatedAt": { "type": "integer" },
+    "locationId": { "type": ["string", "null"] },
+    "resourceInstanceId": { "type": "string" },
+    "startDate": { "type": "number" },
+    "endDate": { "type": "number" },
+    "reason": { "type": ["string", "null"] }
+  },
+  "required": ["id", "resourceInstanceId", "startDate", "endDate"]
+}
 ```
 
 ### Fields
@@ -218,31 +268,55 @@ MaintenanceBlockSchema = BaseModelSchema.safeExtend({
 
 ### ReservationSettingsQueryOptions
 
-```typescript
-interface ReservationSettingsQueryOptions {
-    page: number;
-    pageSize: number;
-    filters?: {
-        locationId?: string;
-    };
+```json
+{
+  "type": "object",
+  "properties": {
+    "page": { "type": "integer", "minimum": 1 },
+    "pageSize": { "type": "integer", "minimum": 1 },
+    "filters": {
+      "type": "object",
+      "properties": {
+        "locationId": { "type": "string" }
+      }
+    }
+  },
+  "required": ["page", "pageSize"]
 }
 ```
 
 ### MaintenanceBlockQueryOptions
 
-```typescript
-interface MaintenanceBlockQueryOptions {
-    page: number;
-    pageSize: number;
-    filters?: {
-        locationId?: string;
-        resourceInstanceId?: string;
-        dateRange?: { start?: number; end?: number };
-    };
-    sorting?: {
-        field: keyof MaintenanceBlock;
-        direction: "asc" | "desc";
-    };
+```json
+{
+  "type": "object",
+  "properties": {
+    "page": { "type": "integer", "minimum": 1 },
+    "pageSize": { "type": "integer", "minimum": 1 },
+    "filters": {
+      "type": "object",
+      "properties": {
+        "locationId": { "type": "string" },
+        "resourceInstanceId": { "type": "string" },
+        "dateRange": {
+          "type": "object",
+          "properties": {
+            "start": { "type": "number" },
+            "end": { "type": "number" }
+          }
+        }
+      }
+    },
+    "sorting": {
+      "type": "object",
+      "properties": {
+        "field": { "type": "string", "enum": ["startDate", "endDate", "createdAt"] },
+        "direction": { "type": "string", "enum": ["asc", "desc"] }
+      },
+      "required": ["field", "direction"]
+    }
+  },
+  "required": ["page", "pageSize"]
 }
 ```
 

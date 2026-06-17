@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.56**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.57**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const ServicePricingRuleSchema: ZodObject<ServicePricingRule>;
 ```
 
-Defined in: [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:70](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L70)
+Defined in: [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:70](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L70)
 
 Service Pricing Rule schema.
 Defines a pricing rule for service-based pricing adjustments.
