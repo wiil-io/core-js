@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.57**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.58**](../../README.md)
 
 ***
 
@@ -17,7 +17,7 @@ const ResourcePricingTieredSchema: ZodObject<{
 }, $strip>;
 ```
 
-Defined in: [src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:156](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts#L156)
+Defined in: [src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:156](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts#L156)
 
 Tiered pricing strategy schema.
 Used for rentals or resources priced by duration or quantity bands.

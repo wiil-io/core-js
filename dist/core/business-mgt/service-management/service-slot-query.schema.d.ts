@@ -23,7 +23,6 @@ export declare const TimeOfDayValueSchema: z.ZodString;
  * Used to request available appointment slots for a service.
  *
  * @typedef {Object} ServiceSlotQueryRequest
- * @property {string} organizationId - Business account ID
  * @property {string} serviceId - Service ID to query slots for
  * @property {string} localDate - Business local date (YYYY-MM-DD)
  * @property {string} [locationId] - Optional location filter
@@ -31,7 +30,6 @@ export declare const TimeOfDayValueSchema: z.ZodString;
  * @property {number} maxResults - Maximum slots to return
  */
 export declare const ServiceSlotQueryRequestSchema: z.ZodObject<{
-    organizationId: z.ZodString;
     serviceId: z.ZodString;
     localDate: z.ZodString;
     locationId: z.ZodOptional<z.ZodNullable<z.ZodString>>;

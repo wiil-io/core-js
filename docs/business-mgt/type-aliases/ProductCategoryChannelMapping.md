@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.57**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.58**](../../README.md)
 
 ***
 
@@ -13,7 +13,7 @@ type ProductCategoryChannelMapping = {
 };
 ```
 
-Defined in: [src/core/business-mgt/product-management/product-config.schema.ts:453](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/business-mgt/product-management/product-config.schema.ts#L453)
+Defined in: [src/core/business-mgt/product-management/product-config.schema.ts:453](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/product-management/product-config.schema.ts#L453)
 
 Product category channel mapping schema.
 Maps categories to external platform identifiers.
@@ -22,5 +22,5 @@ Maps categories to external platform identifiers.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="channelid"></a> `channelId` | `string` | [src/core/business-mgt/product-management/product-config.schema.ts:128](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/business-mgt/product-management/product-config.schema.ts#L128) |
-| <a id="externalcategoryid"></a> `externalCategoryId` | `string` | [src/core/business-mgt/product-management/product-config.schema.ts:129](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/business-mgt/product-management/product-config.schema.ts#L129) |
+| <a id="channelid"></a> `channelId` | `string` | [src/core/business-mgt/product-management/product-config.schema.ts:128](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/product-management/product-config.schema.ts#L128) |
+| <a id="externalcategoryid"></a> `externalCategoryId` | `string` | [src/core/business-mgt/product-management/product-config.schema.ts:129](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/product-management/product-config.schema.ts#L129) |

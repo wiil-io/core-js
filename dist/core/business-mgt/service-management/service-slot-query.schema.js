@@ -39,7 +39,6 @@ exports.TimeOfDayValueSchema = zod_1.default
  * Used to request available appointment slots for a service.
  *
  * @typedef {Object} ServiceSlotQueryRequest
- * @property {string} organizationId - Business account ID
  * @property {string} serviceId - Service ID to query slots for
  * @property {string} localDate - Business local date (YYYY-MM-DD)
  * @property {string} [locationId] - Optional location filter
@@ -47,7 +46,6 @@ exports.TimeOfDayValueSchema = zod_1.default
  * @property {number} maxResults - Maximum slots to return
  */
 exports.ServiceSlotQueryRequestSchema = zod_1.default.object({
-    organizationId: zod_1.default.string().describe("Business account ID"),
     serviceId: zod_1.default.string().describe("Service ID"),
     localDate: exports.LocalDateSchema.describe("Business local date for slot generation"),
     locationId: zod_1.default.string().nullable().optional().describe("Optional location filter"),

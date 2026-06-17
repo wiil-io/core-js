@@ -40,7 +40,6 @@ export const TimeOfDayValueSchema = z
  * Used to request available appointment slots for a service.
  *
  * @typedef {Object} ServiceSlotQueryRequest
- * @property {string} organizationId - Business account ID
  * @property {string} serviceId - Service ID to query slots for
  * @property {string} localDate - Business local date (YYYY-MM-DD)
  * @property {string} [locationId] - Optional location filter
@@ -48,7 +47,6 @@ export const TimeOfDayValueSchema = z
  * @property {number} maxResults - Maximum slots to return
  */
 export const ServiceSlotQueryRequestSchema = z.object({
-    organizationId: z.string().describe("Business account ID"),
     serviceId: z.string().describe("Service ID"),
     localDate: LocalDateSchema.describe("Business local date for slot generation"),
     locationId: z.string().nullable().optional().describe("Optional location filter"),

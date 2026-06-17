@@ -177,7 +177,6 @@ export type ServiceAppointmentFieldConfig = z.infer<typeof ServiceAppointmentFie
  * Groups related services for organization and display.
  * @typedef {Object} ServiceCategory
  * @property {string} id - Unique identifier
- * @property {string} organizationId - Business account ID
  * @property {string} [serviceRevisionId] - Optional service revision ID for version-scoped data
  * @property {string} name - Category name (e.g., Hair Services, Spa Treatments)
  * @property {string|null} [description] - Category description
@@ -189,7 +188,6 @@ export type ServiceAppointmentFieldConfig = z.infer<typeof ServiceAppointmentFie
  * @property {Date} updatedAt - Last update timestamp
  */
 export const ServiceCategorySchema = BaseModelSchema.safeExtend({
-    organizationId: z.string().describe("Business account ID"),
     serviceRevisionId: z.string().optional().describe("Optional service revision ID for version-scoped data"),
     name: z.string().min(1, "Category name is required").describe("Category name (e.g., Hair Services, Spa Treatments)"),
     description: z.string().nullable().optional().describe("Category description"),
@@ -234,7 +232,6 @@ export type UpdateServiceCategory = z.infer<typeof UpdateServiceCategorySchema>;
  * Defines a service offering with pricing, scheduling, and booking rules.
  * @typedef {Object} BusinessService
  * @property {string} id - Unique identifier
- * @property {string} organizationId - Business account ID this service belongs to
  * @property {string} [serviceRevisionId] - Optional service revision ID for version-scoped data
  * @property {string} name - Name of the service offered
  * @property {string|null} [description] - Detailed description of the service
@@ -267,7 +264,6 @@ export type UpdateServiceCategory = z.infer<typeof UpdateServiceCategorySchema>;
  * @property {Date} updatedAt - Last update timestamp
  */
 export const BusinessServiceConfigSchema = BaseModelSchema.safeExtend({
-    organizationId: z.string().describe("Business account ID this service belongs to"),
     serviceRevisionId: z.string().optional().describe("Optional service revision ID for version-scoped data"),
     name: z.string().min(1, "Service name is required").describe("Name of the service offered"),
     description: z.string().nullable().optional().describe("Detailed description of the service"),

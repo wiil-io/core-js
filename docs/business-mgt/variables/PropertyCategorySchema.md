@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.57**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.58**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const PropertyCategorySchema: ZodObject<PropertyCategory>;
 ```
 
-Defined in: [src/core/business-mgt/property-management/property-config.schema.ts:36](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/business-mgt/property-management/property-config.schema.ts#L36)
+Defined in: [src/core/business-mgt/property-management/property-config.schema.ts:36](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/property-management/property-config.schema.ts#L36)
 
 Property category schema.
 Organizes properties into logical groups (e.g., Luxury Homes, Commercial Offices).

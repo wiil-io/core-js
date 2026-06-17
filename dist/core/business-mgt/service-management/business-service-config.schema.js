@@ -166,7 +166,6 @@ exports.ServiceAppointmentFieldConfigSchema = zod_1.default.object({
  * Groups related services for organization and display.
  * @typedef {Object} ServiceCategory
  * @property {string} id - Unique identifier
- * @property {string} organizationId - Business account ID
  * @property {string} [serviceRevisionId] - Optional service revision ID for version-scoped data
  * @property {string} name - Category name (e.g., Hair Services, Spa Treatments)
  * @property {string|null} [description] - Category description
@@ -178,7 +177,6 @@ exports.ServiceAppointmentFieldConfigSchema = zod_1.default.object({
  * @property {Date} updatedAt - Last update timestamp
  */
 exports.ServiceCategorySchema = base_schema_1.BaseModelSchema.safeExtend({
-    organizationId: zod_1.default.string().describe("Business account ID"),
     serviceRevisionId: zod_1.default.string().optional().describe("Optional service revision ID for version-scoped data"),
     name: zod_1.default.string().min(1, "Category name is required").describe("Category name (e.g., Hair Services, Spa Treatments)"),
     description: zod_1.default.string().nullable().optional().describe("Category description"),
@@ -213,7 +211,6 @@ exports.UpdateServiceCategorySchema = exports.CreateServiceCategorySchema.partia
  * Defines a service offering with pricing, scheduling, and booking rules.
  * @typedef {Object} BusinessService
  * @property {string} id - Unique identifier
- * @property {string} organizationId - Business account ID this service belongs to
  * @property {string} [serviceRevisionId] - Optional service revision ID for version-scoped data
  * @property {string} name - Name of the service offered
  * @property {string|null} [description] - Detailed description of the service
@@ -246,7 +243,6 @@ exports.UpdateServiceCategorySchema = exports.CreateServiceCategorySchema.partia
  * @property {Date} updatedAt - Last update timestamp
  */
 exports.BusinessServiceConfigSchema = base_schema_1.BaseModelSchema.safeExtend({
-    organizationId: zod_1.default.string().describe("Business account ID this service belongs to"),
     serviceRevisionId: zod_1.default.string().optional().describe("Optional service revision ID for version-scoped data"),
     name: zod_1.default.string().min(1, "Service name is required").describe("Name of the service offered"),
     description: zod_1.default.string().nullable().optional().describe("Detailed description of the service"),

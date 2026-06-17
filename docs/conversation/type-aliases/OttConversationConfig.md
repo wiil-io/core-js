@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.57**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.58**](../../README.md)
 
 ***
 
@@ -17,7 +17,7 @@ type OttConversationConfig = {
 };
 ```
 
-Defined in: [src/core/conversation/conversation-config.schema.ts:421](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/conversation/conversation-config.schema.ts#L421)
+Defined in: [src/core/conversation/conversation-config.schema.ts:421](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/conversation/conversation-config.schema.ts#L421)
 
 OTT conversation configuration with connection details.
 
@@ -25,9 +25,9 @@ OTT conversation configuration with connection details.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="platform_user_id"></a> `platform_user_id?` | `number` | [src/core/conversation/conversation-config.schema.ts:396](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/conversation/conversation-config.schema.ts#L396) |
-| <a id="channel_identifier"></a> `channel_identifier` | `string` | [src/core/conversation/conversation-config.schema.ts:397](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/conversation/conversation-config.schema.ts#L397) |
-| <a id="partner_user_id"></a> `partner_user_id?` | `string` | [src/core/conversation/conversation-config.schema.ts:398](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/conversation/conversation-config.schema.ts#L398) |
-| <a id="sdrtn_id"></a> `sdrtn_id?` | `string` \| `null` | [src/core/conversation/conversation-config.schema.ts:405](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/conversation/conversation-config.schema.ts#L405) |
-| <a id="channel_token"></a> `channel_token` | `string` | [src/core/conversation/conversation-config.schema.ts:406](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/conversation/conversation-config.schema.ts#L406) |
-| <a id="connection_url"></a> `connection_url?` | `string` \| `null` | [src/core/conversation/conversation-config.schema.ts:407](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/conversation/conversation-config.schema.ts#L407) |
+| <a id="platform_user_id"></a> `platform_user_id?` | `number` | [src/core/conversation/conversation-config.schema.ts:396](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/conversation/conversation-config.schema.ts#L396) |
+| <a id="channel_identifier"></a> `channel_identifier` | `string` | [src/core/conversation/conversation-config.schema.ts:397](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/conversation/conversation-config.schema.ts#L397) |
+| <a id="partner_user_id"></a> `partner_user_id?` | `string` | [src/core/conversation/conversation-config.schema.ts:398](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/conversation/conversation-config.schema.ts#L398) |
+| <a id="sdrtn_id"></a> `sdrtn_id?` | `string` \| `null` | [src/core/conversation/conversation-config.schema.ts:405](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/conversation/conversation-config.schema.ts#L405) |
+| <a id="channel_token"></a> `channel_token` | `string` | [src/core/conversation/conversation-config.schema.ts:406](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/conversation/conversation-config.schema.ts#L406) |
+| <a id="connection_url"></a> `connection_url?` | `string` \| `null` | [src/core/conversation/conversation-config.schema.ts:407](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/conversation/conversation-config.schema.ts#L407) |

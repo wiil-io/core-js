@@ -301,19 +301,26 @@ The schema includes built-in validation:
 
 ### Percentage Value Limit
 
-```typescript
-// Percentage taxes cannot exceed 100%
-if (rateType === "percentage" && rateValue > 100) {
-  // Error: "rateValue cannot exceed 100 for percentage taxes"
+```json
+{
+  "rule": "percentage_rate_limit",
+  "when": {
+    "rateType": "percentage",
+    "rateValue": { "greaterThan": 100 }
+  },
+  "error": "rateValue cannot exceed 100 for percentage taxes"
 }
 ```
 
 ### Date Range Validation
 
-```typescript
-// effectiveTo must be after effectiveFrom
-if (effectiveTo < effectiveFrom) {
-  // Error: "effectiveTo must be greater than or equal to effectiveFrom"
+```json
+{
+  "rule": "effective_date_range",
+  "when": {
+    "effectiveTo": { "lessThanField": "effectiveFrom" }
+  },
+  "error": "effectiveTo must be greater than or equal to effectiveFrom"
 }
 ```
 

@@ -327,7 +327,14 @@ Validates and previews order pricing before submission.
       "quantity": 1,
       "unitPrice": 19.99,
       "totalPrice": 21.99,
-      "modifiers": [...]
+      "modifiers": [
+        {
+          "modifierGroupId": "mod_group_toppings_id",
+          "modifierOptionId": "mod_extra_cheese_id",
+          "name": "Extra Cheese",
+          "price": 2.00
+        }
+      ]
     }
   ],
   "pricing": {
@@ -485,8 +492,20 @@ Validates and previews order pricing before submission.
     "source": "doordash",
     "url": "https://doordash.com/orders/dd_order_789"
   },
-  "items": [...],
-  "pricing": {...},
+  "items": [
+    {
+      "menuItemId": "pizza_margherita_id",
+      "quantity": 1,
+      "unitPrice": 19.99,
+      "totalPrice": 19.99
+    }
+  ],
+  "pricing": {
+    "subtotal": 19.99,
+    "tax": 1.60,
+    "deliveryFee": 3.99,
+    "total": 25.58
+  },
   "orderDate": 1699900000,
   "deliveryAddress": {
     "street": "456 Oak Avenue",

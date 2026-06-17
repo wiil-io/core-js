@@ -161,17 +161,27 @@ Represents a category with its complete list of menu items for catalog display.
       "id": "pizza_margherita_id",
       "name": "Margherita Pizza",
       "price": 12.99,
-      "variants": [...],
+      "variants": [
+        { "id": "variant_medium_id", "name": "Medium", "price": 12.99 },
+        { "id": "variant_large_id", "name": "Large", "price": 19.99 }
+      ],
       "priceRange": { "min": 12.99, "max": 19.99 },
-      "modifierGroups": [...]
+      "modifierGroups": [
+        { "id": "mod_group_toppings_id", "name": "Toppings" }
+      ]
     },
     {
       "id": "pizza_pepperoni_id",
       "name": "Pepperoni Pizza",
       "price": 14.99,
-      "variants": [...],
+      "variants": [
+        { "id": "variant_medium_id", "name": "Medium", "price": 14.99 },
+        { "id": "variant_large_id", "name": "Large", "price": 21.99 }
+      ],
       "priceRange": { "min": 14.99, "max": 21.99 },
-      "modifierGroups": [...]
+      "modifierGroups": [
+        { "id": "mod_group_toppings_id", "name": "Toppings" }
+      ]
     }
   ]
 }
@@ -229,7 +239,9 @@ BusinessMenuCatalog (array)
       "name": "Appetizers",
       "displayOrder": 1
     },
-    "items": [...]
+    "items": [
+      { "id": "item_garlic_bread_id", "name": "Garlic Bread", "price": 5.49 }
+    ]
   },
   {
     "category": {
@@ -237,7 +249,9 @@ BusinessMenuCatalog (array)
       "name": "Pizzas",
       "displayOrder": 2
     },
-    "items": [...]
+    "items": [
+      { "id": "pizza_margherita_id", "name": "Margherita Pizza", "price": 12.99 }
+    ]
   },
   {
     "category": {
@@ -245,7 +259,9 @@ BusinessMenuCatalog (array)
       "name": "Desserts",
       "displayOrder": 3
     },
-    "items": [...]
+    "items": [
+      { "id": "item_tiramisu_id", "name": "Tiramisu", "price": 7.99 }
+    ]
   }
 ]
 ```

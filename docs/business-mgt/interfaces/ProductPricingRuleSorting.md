@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.57**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.58**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ProductPricingRuleSorting
 
-Defined in: [src/core/business-mgt/product-management/product-pricing-rule.schema.ts:107](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/business-mgt/product-management/product-pricing-rule.schema.ts#L107)
+Defined in: [src/core/business-mgt/product-management/product-pricing-rule.schema.ts:107](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/product-management/product-pricing-rule.schema.ts#L107)
 
 Product pricing rule sorting options.
  ProductPricingRuleSorting
@@ -15,5 +15,5 @@ Product pricing rule sorting options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="field"></a> `field` | `"createdAt"` \| `"name"` | Field to sort by | [src/core/business-mgt/product-management/product-pricing-rule.schema.ts:109](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/business-mgt/product-management/product-pricing-rule.schema.ts#L109) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/product-management/product-pricing-rule.schema.ts:111](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/business-mgt/product-management/product-pricing-rule.schema.ts#L111) |
+| <a id="field"></a> `field` | `"createdAt"` \| `"name"` | Field to sort by | [src/core/business-mgt/product-management/product-pricing-rule.schema.ts:109](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/product-management/product-pricing-rule.schema.ts#L109) |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/product-management/product-pricing-rule.schema.ts:111](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/product-management/product-pricing-rule.schema.ts#L111) |

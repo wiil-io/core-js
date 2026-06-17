@@ -258,19 +258,26 @@ The schema includes built-in validation:
 
 ### Percentage Value Limit
 
-```typescript
-// Percentage discounts cannot exceed 100%
-if (type === "percentage" && value > 100) {
-  // Error: "value cannot exceed 100 for percentage discounts"
+```json
+{
+  "rule": "percentage_value_limit",
+  "when": {
+    "type": "percentage",
+    "value": { "greaterThan": 100 }
+  },
+  "error": "value cannot exceed 100 for percentage discounts"
 }
 ```
 
 ### Date Range Validation
 
-```typescript
-// effectiveTo must be after effectiveFrom
-if (effectiveTo < effectiveFrom) {
-  // Error: "effectiveTo must be greater than or equal to effectiveFrom"
+```json
+{
+  "rule": "effective_date_range",
+  "when": {
+    "effectiveTo": { "lessThanField": "effectiveFrom" }
+  },
+  "error": "effectiveTo must be greater than or equal to effectiveFrom"
 }
 ```
 

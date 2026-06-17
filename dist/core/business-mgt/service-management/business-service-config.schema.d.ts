@@ -222,7 +222,6 @@ export type ServiceAppointmentFieldConfig = z.infer<typeof ServiceAppointmentFie
  * Groups related services for organization and display.
  * @typedef {Object} ServiceCategory
  * @property {string} id - Unique identifier
- * @property {string} organizationId - Business account ID
  * @property {string} [serviceRevisionId] - Optional service revision ID for version-scoped data
  * @property {string} name - Category name (e.g., Hair Services, Spa Treatments)
  * @property {string|null} [description] - Category description
@@ -237,7 +236,6 @@ export declare const ServiceCategorySchema: z.ZodObject<{
     id: z.ZodString;
     createdAt: z.ZodOptional<z.ZodNumber>;
     updatedAt: z.ZodOptional<z.ZodNumber>;
-    organizationId: z.ZodString;
     serviceRevisionId: z.ZodOptional<z.ZodString>;
     name: z.ZodString;
     description: z.ZodOptional<z.ZodNullable<z.ZodString>>;
@@ -263,7 +261,6 @@ export declare const CreateServiceCategorySchema: z.ZodObject<{
         externalCategoryId: z.ZodString;
     }, z.core.$strip>>>>;
     imageUrl: z.ZodOptional<z.ZodNullable<z.ZodURL>>;
-    organizationId: z.ZodString;
     serviceRevisionId: z.ZodOptional<z.ZodString>;
     placement: z.ZodOptional<z.ZodObject<{
         placementIntent: z.ZodObject<{
@@ -294,7 +291,6 @@ export declare const UpdateServiceCategorySchema: z.ZodObject<{
         externalCategoryId: z.ZodString;
     }, z.core.$strip>>>>>;
     imageUrl: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodURL>>>;
-    organizationId: z.ZodOptional<z.ZodString>;
     serviceRevisionId: z.ZodOptional<z.ZodOptional<z.ZodString>>;
     placement: z.ZodOptional<z.ZodOptional<z.ZodObject<{
         placementIntent: z.ZodObject<{
@@ -322,7 +318,6 @@ export type UpdateServiceCategory = z.infer<typeof UpdateServiceCategorySchema>;
  * Defines a service offering with pricing, scheduling, and booking rules.
  * @typedef {Object} BusinessService
  * @property {string} id - Unique identifier
- * @property {string} organizationId - Business account ID this service belongs to
  * @property {string} [serviceRevisionId] - Optional service revision ID for version-scoped data
  * @property {string} name - Name of the service offered
  * @property {string|null} [description] - Detailed description of the service
@@ -358,7 +353,6 @@ export declare const BusinessServiceConfigSchema: z.ZodObject<{
     id: z.ZodString;
     createdAt: z.ZodOptional<z.ZodNumber>;
     updatedAt: z.ZodOptional<z.ZodNumber>;
-    organizationId: z.ZodString;
     serviceRevisionId: z.ZodOptional<z.ZodString>;
     name: z.ZodString;
     description: z.ZodOptional<z.ZodNullable<z.ZodString>>;
@@ -530,7 +524,6 @@ export declare const CreateBusinessServiceSchema: z.ZodObject<{
         lateCancelHours: z.ZodDefault<z.ZodNumber>;
     }, z.core.$strip>>>;
     depositStrategy: z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof ServiceDepositStrategy>>>;
-    organizationId: z.ZodString;
     serviceRevisionId: z.ZodOptional<z.ZodString>;
     bookingCode: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     durationSegments: z.ZodOptional<z.ZodNullable<z.ZodObject<{
@@ -695,7 +688,6 @@ export declare const UpdateBusinessServiceSchema: z.ZodObject<{
         lateCancelHours: z.ZodDefault<z.ZodNumber>;
     }, z.core.$strip>>>>;
     depositStrategy: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof ServiceDepositStrategy>>>>;
-    organizationId: z.ZodOptional<z.ZodString>;
     serviceRevisionId: z.ZodOptional<z.ZodOptional<z.ZodString>>;
     bookingCode: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     durationSegments: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodObject<{
@@ -851,7 +843,6 @@ export declare const ServiceCatalogSchema: z.ZodObject<{
         id: z.ZodString;
         createdAt: z.ZodOptional<z.ZodNumber>;
         updatedAt: z.ZodOptional<z.ZodNumber>;
-        organizationId: z.ZodString;
         serviceRevisionId: z.ZodOptional<z.ZodString>;
         name: z.ZodString;
         description: z.ZodOptional<z.ZodNullable<z.ZodString>>;
@@ -867,7 +858,6 @@ export declare const ServiceCatalogSchema: z.ZodObject<{
         id: z.ZodString;
         createdAt: z.ZodOptional<z.ZodNumber>;
         updatedAt: z.ZodOptional<z.ZodNumber>;
-        organizationId: z.ZodString;
         serviceRevisionId: z.ZodOptional<z.ZodString>;
         name: z.ZodString;
         description: z.ZodOptional<z.ZodNullable<z.ZodString>>;
@@ -1024,7 +1014,6 @@ export declare const BusinessServiceCatalogSchema: z.ZodArray<z.ZodObject<{
         id: z.ZodString;
         createdAt: z.ZodOptional<z.ZodNumber>;
         updatedAt: z.ZodOptional<z.ZodNumber>;
-        organizationId: z.ZodString;
         serviceRevisionId: z.ZodOptional<z.ZodString>;
         name: z.ZodString;
         description: z.ZodOptional<z.ZodNullable<z.ZodString>>;
@@ -1040,7 +1029,6 @@ export declare const BusinessServiceCatalogSchema: z.ZodArray<z.ZodObject<{
         id: z.ZodString;
         createdAt: z.ZodOptional<z.ZodNumber>;
         updatedAt: z.ZodOptional<z.ZodNumber>;
-        organizationId: z.ZodString;
         serviceRevisionId: z.ZodOptional<z.ZodString>;
         name: z.ZodString;
         description: z.ZodOptional<z.ZodNullable<z.ZodString>>;

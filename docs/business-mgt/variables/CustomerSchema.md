@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.57**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.58**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const CustomerSchema: ZodObject<Customer>;
 ```
 
-Defined in: [src/core/business-mgt/customer-management/customer.schema.ts:54](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/business-mgt/customer-management/customer.schema.ts#L54)
+Defined in: [src/core/business-mgt/customer-management/customer.schema.ts:54](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/customer-management/customer.schema.ts#L54)
 
 Customer schema.
 Individual customer record with contact info and preferences.

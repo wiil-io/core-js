@@ -389,12 +389,24 @@ Full catalog as array of ProductCatalog sections (one per category).
 ```json
 [
   {
-    "productCategory": { "id": "cat_electronics", "name": "Electronics", ... },
-    "items": [...]
+    "productCategory": {
+      "id": "cat_electronics",
+      "name": "Electronics",
+      "displayOrder": 1
+    },
+    "items": [
+      { "id": "prod_headphones", "name": "Wireless Headphones", "price": 129.99 }
+    ]
   },
   {
-    "productCategory": { "id": "cat_clothing", "name": "Clothing", ... },
-    "items": [...]
+    "productCategory": {
+      "id": "cat_clothing",
+      "name": "Clothing",
+      "displayOrder": 2
+    },
+    "items": [
+      { "id": "prod_polo", "name": "Classic Polo Shirt", "price": 39.99 }
+    ]
   }
 ]
 ```

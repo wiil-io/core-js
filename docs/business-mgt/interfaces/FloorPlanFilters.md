@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.57**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.58**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: FloorPlanFilters
 
-Defined in: [src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts:107](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts#L107)
+Defined in: [src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts:107](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts#L107)
 
 Floor plan filter options.
  FloorPlanFilters
@@ -15,5 +15,5 @@ Floor plan filter options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="locationid"></a> `locationId?` | `string` | Filter by business location ID | [src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts:109](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts#L109) |
-| <a id="isactive"></a> `isActive?` | `boolean` | Filter by active status | [src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts:111](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts#L111) |
+| <a id="locationid"></a> `locationId?` | `string` | Filter by business location ID | [src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts:109](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts#L109) |
+| <a id="isactive"></a> `isActive?` | `boolean` | Filter by active status | [src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts:111](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts#L111) |

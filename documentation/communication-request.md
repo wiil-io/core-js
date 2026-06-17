@@ -343,7 +343,11 @@ All communication requests return a result schema after submission.
 ```json
 {
   "success": true,
-  "request": { /* BusinessCallRequest object */ },
+  "request": {
+    "id": "call_request_123",
+    "to": "+15551234567",
+    "status": "queued"
+  },
   "error_message": null
 }
 ```
@@ -353,7 +357,12 @@ All communication requests return a result schema after submission.
 ```json
 {
   "success": true,
-  "request": { /* EmailRequest object */ },
+  "request": {
+    "id": "email_request_123",
+    "to": "customer@example.com",
+    "subject": "Appointment reminder",
+    "status": "queued"
+  },
   "error_message": null
 }
 ```
@@ -363,7 +372,12 @@ All communication requests return a result schema after submission.
 ```json
 {
   "success": true,
-  "request": { /* SmsRequest object */ },
+  "request": {
+    "id": "sms_request_123",
+    "to": "+15551234567",
+    "message": "Your appointment is confirmed.",
+    "status": "queued"
+  },
   "error_message": null
 }
 ```

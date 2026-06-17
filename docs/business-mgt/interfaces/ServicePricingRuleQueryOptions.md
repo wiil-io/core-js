@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.57**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.58**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ServicePricingRuleQueryOptions
 
-Defined in: [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:177](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L177)
+Defined in: [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:177](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L177)
 
 Service pricing rule query options.
  ServicePricingRuleQueryOptions
@@ -15,7 +15,7 @@ Service pricing rule query options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:179](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L179) |
-| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:181](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L181) |
-| <a id="filters"></a> `filters?` | [`ServicePricingRuleFilters`](ServicePricingRuleFilters.md) | Optional filters | [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:183](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L183) |
-| <a id="sorting"></a> `sorting?` | [`ServicePricingRuleSorting`](ServicePricingRuleSorting.md) | Optional sorting | [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:185](https://github.com/wiil-io/core-js/blob/43da06db5074f70ed30c699cea7fe6848eefa005/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L185) |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:179](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L179) |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:181](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L181) |
+| <a id="filters"></a> `filters?` | [`ServicePricingRuleFilters`](ServicePricingRuleFilters.md) | Optional filters | [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:183](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L183) |
+| <a id="sorting"></a> `sorting?` | [`ServicePricingRuleSorting`](ServicePricingRuleSorting.md) | Optional sorting | [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:185](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L185) |

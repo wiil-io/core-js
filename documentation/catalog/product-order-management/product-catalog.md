@@ -186,14 +186,20 @@ Represents a category with its complete list of products for catalog display.
       "id": "product_polo_id",
       "name": "Classic Polo Shirt",
       "price": 39.99,
-      "variants": [...],
+      "variants": [
+        { "id": "variant_polo_s_black", "name": "Small / Black", "price": 39.99 },
+        { "id": "variant_polo_m_black", "name": "Medium / Black", "price": 39.99 }
+      ],
       "priceRange": { "min": 39.99, "max": 42.99 }
     },
     {
       "id": "product_jeans_id",
       "name": "Slim Fit Jeans",
       "price": 59.99,
-      "variants": [...],
+      "variants": [
+        { "id": "variant_jeans_30x30", "name": "30x30", "price": 59.99 },
+        { "id": "variant_jeans_32x30", "name": "32x30", "price": 64.99 }
+      ],
       "priceRange": { "min": 59.99, "max": 64.99 }
     }
   ]
@@ -250,7 +256,9 @@ BusinessProductCatalogDisplay (array)
       "name": "Men's Clothing",
       "displayOrder": 1
     },
-    "items": [...]
+    "items": [
+      { "id": "product_polo_id", "name": "Classic Polo Shirt", "price": 39.99 }
+    ]
   },
   {
     "productCategory": {
@@ -258,7 +266,9 @@ BusinessProductCatalogDisplay (array)
       "name": "Women's Clothing",
       "displayOrder": 2
     },
-    "items": [...]
+    "items": [
+      { "id": "product_summer_dress_id", "name": "Summer Dress", "price": 79.99 }
+    ]
   },
   {
     "productCategory": {
@@ -266,7 +276,9 @@ BusinessProductCatalogDisplay (array)
       "name": "Electronics",
       "displayOrder": 3
     },
-    "items": [...]
+    "items": [
+      { "id": "product_headphones_id", "name": "Wireless Headphones", "price": 129.99 }
+    ]
   }
 ]
 ```
