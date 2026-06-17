@@ -91,75 +91,8 @@ export declare const RentalAssignmentSchema: z.ZodObject<{
     }, z.core.$strip>>>;
     notes: z.ZodOptional<z.ZodNullable<z.ZodString>>;
 }, z.core.$strip>;
-/**
- * Schema for creating a new rental assignment.
- * Omits auto-generated fields.
- */
-export declare const CreateRentalAssignmentSchema: z.ZodObject<{
-    status: z.ZodDefault<z.ZodEnum<typeof RentalAssignmentStatus>>;
-    locationId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-    notes: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-    reservationId: z.ZodString;
-    slotStart: z.ZodNumber;
-    slotEnd: z.ZodNumber;
-    assignmentType: z.ZodDefault<z.ZodEnum<typeof RentalAssignmentType>>;
-    assignedAt: z.ZodNumber;
-    assignedBy: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-    releasedAt: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
-    releasedBy: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-    rentalInstanceId: z.ZodString;
-    conditionAtPickup: z.ZodOptional<z.ZodNullable<z.ZodObject<{
-        recordedAt: z.ZodNumber;
-        recordedBy: z.ZodString;
-        notes: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-        damageReported: z.ZodDefault<z.ZodBoolean>;
-        imageUrls: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodURL>>>;
-    }, z.core.$strip>>>;
-    conditionAtReturn: z.ZodOptional<z.ZodNullable<z.ZodObject<{
-        recordedAt: z.ZodNumber;
-        recordedBy: z.ZodString;
-        notes: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-        damageReported: z.ZodDefault<z.ZodBoolean>;
-        imageUrls: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodURL>>>;
-    }, z.core.$strip>>>;
-}, z.core.$strip>;
-/**
- * Schema for updating an existing rental assignment.
- * All fields optional except id.
- */
-export declare const UpdateRentalAssignmentSchema: z.ZodObject<{
-    status: z.ZodOptional<z.ZodDefault<z.ZodEnum<typeof RentalAssignmentStatus>>>;
-    locationId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
-    notes: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
-    reservationId: z.ZodOptional<z.ZodString>;
-    slotStart: z.ZodOptional<z.ZodNumber>;
-    slotEnd: z.ZodOptional<z.ZodNumber>;
-    assignmentType: z.ZodOptional<z.ZodDefault<z.ZodEnum<typeof RentalAssignmentType>>>;
-    assignedAt: z.ZodOptional<z.ZodNumber>;
-    assignedBy: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
-    releasedAt: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
-    releasedBy: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
-    rentalInstanceId: z.ZodOptional<z.ZodString>;
-    conditionAtPickup: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodObject<{
-        recordedAt: z.ZodNumber;
-        recordedBy: z.ZodString;
-        notes: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-        damageReported: z.ZodDefault<z.ZodBoolean>;
-        imageUrls: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodURL>>>;
-    }, z.core.$strip>>>>;
-    conditionAtReturn: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodObject<{
-        recordedAt: z.ZodNumber;
-        recordedBy: z.ZodString;
-        notes: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-        damageReported: z.ZodDefault<z.ZodBoolean>;
-        imageUrls: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodURL>>>;
-    }, z.core.$strip>>>>;
-    id: z.ZodString;
-}, z.core.$strip>;
 export type RentalUnitCondition = z.infer<typeof RentalUnitConditionSchema>;
 export type RentalAssignment = z.infer<typeof RentalAssignmentSchema>;
-export type CreateRentalAssignment = z.infer<typeof CreateRentalAssignmentSchema>;
-export type UpdateRentalAssignment = z.infer<typeof UpdateRentalAssignmentSchema>;
 /**
  * Rental assignment filter options.
  * @interface RentalAssignmentFilters

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.55**](../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.56**](../README.md)
 
 ***
 
@@ -328,14 +328,8 @@ Central export point for business management schemas.
 | [UpdatePropertyInquiryStatus](type-aliases/UpdatePropertyInquiryStatus.md) | Schema for quick status update on property inquiry. |
 | [RentalUnitCondition](type-aliases/RentalUnitCondition.md) | Rental unit condition schema. Captures a condition inspection snapshot at pickup or return. |
 | [RentalAssignment](type-aliases/RentalAssignment.md) | Rental assignment schema. Records the physical rental unit assigned to a rental reservation. |
-| [CreateRentalAssignment](type-aliases/CreateRentalAssignment.md) | Schema for creating a new rental assignment. Omits auto-generated fields. |
-| [UpdateRentalAssignment](type-aliases/UpdateRentalAssignment.md) | Schema for updating an existing rental assignment. All fields optional except id. |
 | [RoomAssignment](type-aliases/RoomAssignment.md) | Room assignment schema. Records the physical room instance assigned to a room reservation. |
-| [CreateRoomAssignment](type-aliases/CreateRoomAssignment.md) | Schema for creating a new room assignment. Omits auto-generated fields. |
-| [UpdateRoomAssignment](type-aliases/UpdateRoomAssignment.md) | Schema for updating an existing room assignment. All fields optional except id. |
 | [TableAssignment](type-aliases/TableAssignment.md) | Table assignment schema. Records the physical table instance assigned to a table reservation. |
-| [CreateTableAssignment](type-aliases/CreateTableAssignment.md) | Schema for creating a new table assignment. Omits auto-generated fields. |
-| [UpdateTableAssignment](type-aliases/UpdateTableAssignment.md) | Schema for updating an existing table assignment. All fields optional except id. |
 | [MaintenanceBlock](type-aliases/MaintenanceBlock.md) | Maintenance block schema. Represents a time period when a reservable resource instance is unavailable. |
 | [CreateMaintenanceBlock](type-aliases/CreateMaintenanceBlock.md) | Schema for creating a new maintenance block. Omits auto-generated fields. |
 | [UpdateMaintenanceBlock](type-aliases/UpdateMaintenanceBlock.md) | Schema for updating an existing maintenance block. All fields optional except id. |
@@ -614,14 +608,8 @@ Central export point for business management schemas.
 | [UpdatePropertyInquiryStatusSchema](variables/UpdatePropertyInquiryStatusSchema.md) | Schema for quick status update on property inquiry. |
 | [RentalUnitConditionSchema](variables/RentalUnitConditionSchema.md) | Rental unit condition schema. Captures a condition inspection snapshot at pickup or return. |
 | [RentalAssignmentSchema](variables/RentalAssignmentSchema.md) | Rental assignment schema. Records the physical rental unit assigned to a rental reservation. |
-| [CreateRentalAssignmentSchema](variables/CreateRentalAssignmentSchema.md) | Schema for creating a new rental assignment. Omits auto-generated fields. |
-| [UpdateRentalAssignmentSchema](variables/UpdateRentalAssignmentSchema.md) | Schema for updating an existing rental assignment. All fields optional except id. |
 | [RoomAssignmentSchema](variables/RoomAssignmentSchema.md) | Room assignment schema. Records the physical room instance assigned to a room reservation. |
-| [CreateRoomAssignmentSchema](variables/CreateRoomAssignmentSchema.md) | Schema for creating a new room assignment. Omits auto-generated fields. |
-| [UpdateRoomAssignmentSchema](variables/UpdateRoomAssignmentSchema.md) | Schema for updating an existing room assignment. All fields optional except id. |
 | [TableAssignmentSchema](variables/TableAssignmentSchema.md) | Table assignment schema. Records the physical table instance assigned to a table reservation. |
-| [CreateTableAssignmentSchema](variables/CreateTableAssignmentSchema.md) | Schema for creating a new table assignment. Omits auto-generated fields. |
-| [UpdateTableAssignmentSchema](variables/UpdateTableAssignmentSchema.md) | Schema for updating an existing table assignment. All fields optional except id. |
 | [MaintenanceBlockSchema](variables/MaintenanceBlockSchema.md) | Maintenance block schema. Represents a time period when a reservable resource instance is unavailable. |
 | [CreateMaintenanceBlockSchema](variables/CreateMaintenanceBlockSchema.md) | Schema for creating a new maintenance block. Omits auto-generated fields. |
 | [UpdateMaintenanceBlockSchema](variables/UpdateMaintenanceBlockSchema.md) | Schema for updating an existing maintenance block. All fields optional except id. |

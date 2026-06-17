@@ -59,48 +59,7 @@ export declare const RoomAssignmentSchema: z.ZodObject<{
     housekeepingNotes: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     notes: z.ZodOptional<z.ZodNullable<z.ZodString>>;
 }, z.core.$strip>;
-/**
- * Schema for creating a new room assignment.
- * Omits auto-generated fields.
- */
-export declare const CreateRoomAssignmentSchema: z.ZodObject<{
-    status: z.ZodDefault<z.ZodEnum<typeof RoomAssignmentStatus>>;
-    locationId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-    notes: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-    reservationId: z.ZodString;
-    slotStart: z.ZodNumber;
-    slotEnd: z.ZodNumber;
-    assignmentType: z.ZodDefault<z.ZodEnum<typeof RoomAssignmentType>>;
-    assignedAt: z.ZodNumber;
-    assignedBy: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-    releasedAt: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
-    releasedBy: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-    roomInstanceId: z.ZodString;
-    housekeepingNotes: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-}, z.core.$strip>;
-/**
- * Schema for updating an existing room assignment.
- * All fields optional except id.
- */
-export declare const UpdateRoomAssignmentSchema: z.ZodObject<{
-    status: z.ZodOptional<z.ZodDefault<z.ZodEnum<typeof RoomAssignmentStatus>>>;
-    locationId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
-    notes: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
-    reservationId: z.ZodOptional<z.ZodString>;
-    slotStart: z.ZodOptional<z.ZodNumber>;
-    slotEnd: z.ZodOptional<z.ZodNumber>;
-    assignmentType: z.ZodOptional<z.ZodDefault<z.ZodEnum<typeof RoomAssignmentType>>>;
-    assignedAt: z.ZodOptional<z.ZodNumber>;
-    assignedBy: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
-    releasedAt: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
-    releasedBy: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
-    roomInstanceId: z.ZodOptional<z.ZodString>;
-    housekeepingNotes: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
-    id: z.ZodString;
-}, z.core.$strip>;
 export type RoomAssignment = z.infer<typeof RoomAssignmentSchema>;
-export type CreateRoomAssignment = z.infer<typeof CreateRoomAssignmentSchema>;
-export type UpdateRoomAssignment = z.infer<typeof UpdateRoomAssignmentSchema>;
 /**
  * Room assignment filter options.
  * @interface RoomAssignmentFilters

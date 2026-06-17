@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.55**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.56**](../../README.md)
 
 ***
 
@@ -6,14 +6,14 @@
 
 # Enumeration: PropertyLeaseStatus
 
-Defined in: [src/core/type-definitions/business-definitions.ts:378](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/type-definitions/business-definitions.ts#L378)
+Defined in: [src/core/type-definitions/business-definitions.ts:378](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/type-definitions/business-definitions.ts#L378)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="pending"></a> `PENDING` | `"pending"` | [src/core/type-definitions/business-definitions.ts:379](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/type-definitions/business-definitions.ts#L379) |
-| <a id="active"></a> `ACTIVE` | `"active"` | [src/core/type-definitions/business-definitions.ts:380](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/type-definitions/business-definitions.ts#L380) |
-| <a id="renewed"></a> `RENEWED` | `"renewed"` | [src/core/type-definitions/business-definitions.ts:381](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/type-definitions/business-definitions.ts#L381) |
-| <a id="terminated"></a> `TERMINATED` | `"terminated"` | [src/core/type-definitions/business-definitions.ts:382](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/type-definitions/business-definitions.ts#L382) |
-| <a id="expired"></a> `EXPIRED` | `"expired"` | [src/core/type-definitions/business-definitions.ts:383](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/type-definitions/business-definitions.ts#L383) |
+| <a id="pending"></a> `PENDING` | `"pending"` | [src/core/type-definitions/business-definitions.ts:379](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/type-definitions/business-definitions.ts#L379) |
+| <a id="active"></a> `ACTIVE` | `"active"` | [src/core/type-definitions/business-definitions.ts:380](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/type-definitions/business-definitions.ts#L380) |
+| <a id="renewed"></a> `RENEWED` | `"renewed"` | [src/core/type-definitions/business-definitions.ts:381](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/type-definitions/business-definitions.ts#L381) |
+| <a id="terminated"></a> `TERMINATED` | `"terminated"` | [src/core/type-definitions/business-definitions.ts:382](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/type-definitions/business-definitions.ts#L382) |
+| <a id="expired"></a> `EXPIRED` | `"expired"` | [src/core/type-definitions/business-definitions.ts:383](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/type-definitions/business-definitions.ts#L383) |

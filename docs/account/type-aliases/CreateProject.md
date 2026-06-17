@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.55**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.56**](../../README.md)
 
 ***
 
@@ -17,7 +17,7 @@ type CreateProject = {
 };
 ```
 
-Defined in: [src/core/account/project.schema.ts:113](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/account/project.schema.ts#L113)
+Defined in: [src/core/account/project.schema.ts:113](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/account/project.schema.ts#L113)
 
 Type definition for creating a new project.
 
@@ -25,9 +25,9 @@ Type definition for creating a new project.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="name"></a> `name` | `string` | [src/core/account/project.schema.ts:45](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/account/project.schema.ts#L45) |
-| <a id="regionid"></a> `regionId?` | `string` | [src/core/account/project.schema.ts:46](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/account/project.schema.ts#L46) |
-| <a id="description"></a> `description?` | `string` | [src/core/account/project.schema.ts:47](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/account/project.schema.ts#L47) |
-| <a id="compliance"></a> `compliance?` | `string`[] | [src/core/account/project.schema.ts:48](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/account/project.schema.ts#L48) |
-| <a id="servicestatus"></a> `serviceStatus` | [`ServiceStatus`](../../type-definitions/enumerations/ServiceStatus.md) | [src/core/account/project.schema.ts:50](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/account/project.schema.ts#L50) |
-| <a id="metadata"></a> `metadata?` | `Record`\<`string`, `any`\> | [src/core/account/project.schema.ts:51](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/account/project.schema.ts#L51) |
+| <a id="name"></a> `name` | `string` | [src/core/account/project.schema.ts:45](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/account/project.schema.ts#L45) |
+| <a id="regionid"></a> `regionId?` | `string` | [src/core/account/project.schema.ts:46](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/account/project.schema.ts#L46) |
+| <a id="description"></a> `description?` | `string` | [src/core/account/project.schema.ts:47](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/account/project.schema.ts#L47) |
+| <a id="compliance"></a> `compliance?` | `string`[] | [src/core/account/project.schema.ts:48](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/account/project.schema.ts#L48) |
+| <a id="servicestatus"></a> `serviceStatus` | [`ServiceStatus`](../../type-definitions/enumerations/ServiceStatus.md) | [src/core/account/project.schema.ts:50](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/account/project.schema.ts#L50) |
+| <a id="metadata"></a> `metadata?` | `Record`\<`string`, `any`\> | [src/core/account/project.schema.ts:51](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/account/project.schema.ts#L51) |

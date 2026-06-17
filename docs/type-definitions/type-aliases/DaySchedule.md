@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.55**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.56**](../../README.md)
 
 ***
 
@@ -18,7 +18,7 @@ type DaySchedule = {
 };
 ```
 
-Defined in: [src/core/type-definitions/business-definitions.ts:289](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/type-definitions/business-definitions.ts#L289)
+Defined in: [src/core/type-definitions/business-definitions.ts:289](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/type-definitions/business-definitions.ts#L289)
 
 Day schedule schema with break times.
 Extends simple day schedule with break periods.
@@ -27,7 +27,7 @@ Extends simple day schedule with break periods.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="isopen"></a> `isOpen` | `boolean` | [src/core/type-definitions/business-definitions.ts:255](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/type-definitions/business-definitions.ts#L255) |
-| <a id="starttime"></a> `startTime` | `string` | [src/core/type-definitions/business-definitions.ts:256](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/type-definitions/business-definitions.ts#L256) |
-| <a id="endtime"></a> `endTime` | `string` | [src/core/type-definitions/business-definitions.ts:257](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/type-definitions/business-definitions.ts#L257) |
-| <a id="breaktimes"></a> `breakTimes?` | \{ `start`: `string`; `end`: `string`; \}[] | [src/core/type-definitions/business-definitions.ts:265](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/type-definitions/business-definitions.ts#L265) |
+| <a id="isopen"></a> `isOpen` | `boolean` | [src/core/type-definitions/business-definitions.ts:255](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/type-definitions/business-definitions.ts#L255) |
+| <a id="starttime"></a> `startTime` | `string` | [src/core/type-definitions/business-definitions.ts:256](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/type-definitions/business-definitions.ts#L256) |
+| <a id="endtime"></a> `endTime` | `string` | [src/core/type-definitions/business-definitions.ts:257](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/type-definitions/business-definitions.ts#L257) |
+| <a id="breaktimes"></a> `breakTimes?` | \{ `start`: `string`; `end`: `string`; \}[] | [src/core/type-definitions/business-definitions.ts:265](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/type-definitions/business-definitions.ts#L265) |

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.55**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.56**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ProductSetFilters
 
-Defined in: [src/core/business-mgt/product-management/product-set.schema.ts:319](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/product-management/product-set.schema.ts#L319)
+Defined in: [src/core/business-mgt/product-management/product-set.schema.ts:319](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/business-mgt/product-management/product-set.schema.ts#L319)
 
 Product set filter options.
  ProductSetFilters
@@ -15,10 +15,10 @@ Product set filter options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="search"></a> `search?` | `string` | Text search across name/description | [src/core/business-mgt/product-management/product-set.schema.ts:321](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/product-management/product-set.schema.ts#L321) |
-| <a id="productrevisionid"></a> `productRevisionId?` | `string` | Filter by product revision ID | [src/core/business-mgt/product-management/product-set.schema.ts:323](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/product-management/product-set.schema.ts#L323) |
-| <a id="locationid"></a> `locationId?` | `string` | Filter by location ID | [src/core/business-mgt/product-management/product-set.schema.ts:325](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/product-management/product-set.schema.ts#L325) |
-| <a id="code"></a> `code?` | `string` | Filter by internal code | [src/core/business-mgt/product-management/product-set.schema.ts:327](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/product-management/product-set.schema.ts#L327) |
-| <a id="targetingmode"></a> `targetingMode?` | [`ProductSetTargetingMode`](../enumerations/ProductSetTargetingMode.md) | Filter by targeting mode | [src/core/business-mgt/product-management/product-set.schema.ts:329](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/product-management/product-set.schema.ts#L329) |
-| <a id="isactive"></a> `isActive?` | `boolean` | Filter by active status | [src/core/business-mgt/product-management/product-set.schema.ts:331](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/product-management/product-set.schema.ts#L331) |
-| <a id="pricingmode"></a> `pricingMode?` | [`ProductSetPricingMode`](../enumerations/ProductSetPricingMode.md) | Filter by pricing mode | [src/core/business-mgt/product-management/product-set.schema.ts:333](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/product-management/product-set.schema.ts#L333) |
+| <a id="search"></a> `search?` | `string` | Text search across name/description | [src/core/business-mgt/product-management/product-set.schema.ts:321](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/business-mgt/product-management/product-set.schema.ts#L321) |
+| <a id="productrevisionid"></a> `productRevisionId?` | `string` | Filter by product revision ID | [src/core/business-mgt/product-management/product-set.schema.ts:323](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/business-mgt/product-management/product-set.schema.ts#L323) |
+| <a id="locationid"></a> `locationId?` | `string` | Filter by location ID | [src/core/business-mgt/product-management/product-set.schema.ts:325](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/business-mgt/product-management/product-set.schema.ts#L325) |
+| <a id="code"></a> `code?` | `string` | Filter by internal code | [src/core/business-mgt/product-management/product-set.schema.ts:327](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/business-mgt/product-management/product-set.schema.ts#L327) |
+| <a id="targetingmode"></a> `targetingMode?` | [`ProductSetTargetingMode`](../enumerations/ProductSetTargetingMode.md) | Filter by targeting mode | [src/core/business-mgt/product-management/product-set.schema.ts:329](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/business-mgt/product-management/product-set.schema.ts#L329) |
+| <a id="isactive"></a> `isActive?` | `boolean` | Filter by active status | [src/core/business-mgt/product-management/product-set.schema.ts:331](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/business-mgt/product-management/product-set.schema.ts#L331) |
+| <a id="pricingmode"></a> `pricingMode?` | [`ProductSetPricingMode`](../enumerations/ProductSetPricingMode.md) | Filter by pricing mode | [src/core/business-mgt/product-management/product-set.schema.ts:333](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/business-mgt/product-management/product-set.schema.ts#L333) |

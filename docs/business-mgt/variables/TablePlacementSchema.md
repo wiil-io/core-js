@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.55**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.56**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const TablePlacementSchema: ZodObject<TablePlacement>;
 ```
 
-Defined in: [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:104](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L104)
+Defined in: [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:104](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L104)
 
 Table placement schema.
 Represents a physical table's position and seating constraints within a floor plan section.

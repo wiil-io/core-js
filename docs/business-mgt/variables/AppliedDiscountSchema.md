@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.55**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.56**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const AppliedDiscountSchema: ZodObject<AppliedDiscount>;
 ```
 
-Defined in: [src/core/business-mgt/order.schema.ts:75](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/order.schema.ts#L75)
+Defined in: [src/core/business-mgt/order.schema.ts:75](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/business-mgt/order.schema.ts#L75)
 
 Applied discount schema.
 Captures a discount applied to an order with calculated amounts.

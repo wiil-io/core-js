@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpdateTableAssignmentSchema = exports.CreateTableAssignmentSchema = exports.TableAssignmentSchema = exports.TableAssignmentStatus = exports.TableAssignmentType = void 0;
+exports.TableAssignmentSchema = exports.TableAssignmentStatus = exports.TableAssignmentType = void 0;
 const zod_1 = require("zod");
 const base_schema_1 = require("../../../base.schema");
 /**
@@ -69,23 +69,4 @@ exports.TableAssignmentSchema = base_schema_1.BaseModelSchema.safeExtend({
     releasedAt: zod_1.z.number().int().positive().nullable().optional().describe("Unix timestamp when this assignment was released or superseded."),
     releasedBy: zod_1.z.string().nullable().optional().describe("Staff user ID who released the assignment."),
     notes: zod_1.z.string().nullable().optional().describe("Operational note for staff about this table assignment."),
-});
-// ============================================================================
-// CREATE/UPDATE SCHEMAS
-// ============================================================================
-/**
- * Schema for creating a new table assignment.
- * Omits auto-generated fields.
- */
-exports.CreateTableAssignmentSchema = exports.TableAssignmentSchema.omit({
-    id: true,
-    createdAt: true,
-    updatedAt: true,
-});
-/**
- * Schema for updating an existing table assignment.
- * All fields optional except id.
- */
-exports.UpdateTableAssignmentSchema = exports.CreateTableAssignmentSchema.partial().safeExtend({
-    id: zod_1.z.string().describe("Unique identifier of the table assignment to update."),
 });

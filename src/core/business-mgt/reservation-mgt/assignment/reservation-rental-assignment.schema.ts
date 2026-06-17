@@ -92,35 +92,11 @@ export const RentalAssignmentSchema = BaseModelSchema.safeExtend({
 });
 
 // ============================================================================
-// CREATE/UPDATE SCHEMAS
-// ============================================================================
-
-/**
- * Schema for creating a new rental assignment.
- * Omits auto-generated fields.
- */
-export const CreateRentalAssignmentSchema = RentalAssignmentSchema.omit({
-    id: true,
-    createdAt: true,
-    updatedAt: true,
-});
-
-/**
- * Schema for updating an existing rental assignment.
- * All fields optional except id.
- */
-export const UpdateRentalAssignmentSchema = CreateRentalAssignmentSchema.partial().safeExtend({
-    id: z.string().describe("Unique identifier of the rental assignment to update."),
-});
-
-// ============================================================================
 // TYPE EXPORTS
 // ============================================================================
 
 export type RentalUnitCondition = z.infer<typeof RentalUnitConditionSchema>;
 export type RentalAssignment = z.infer<typeof RentalAssignmentSchema>;
-export type CreateRentalAssignment = z.infer<typeof CreateRentalAssignmentSchema>;
-export type UpdateRentalAssignment = z.infer<typeof UpdateRentalAssignmentSchema>;
 
 // ============================================================================
 // QUERY OPTIONS

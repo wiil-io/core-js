@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpdateRentalAssignmentSchema = exports.CreateRentalAssignmentSchema = exports.RentalAssignmentSchema = exports.RentalUnitConditionSchema = exports.RentalAssignmentType = exports.RentalAssignmentStatus = void 0;
+exports.RentalAssignmentSchema = exports.RentalUnitConditionSchema = exports.RentalAssignmentType = exports.RentalAssignmentStatus = void 0;
 const zod_1 = require("zod");
 const base_schema_1 = require("../../../base.schema");
 /**
@@ -87,23 +87,4 @@ exports.RentalAssignmentSchema = base_schema_1.BaseModelSchema.safeExtend({
     conditionAtPickup: exports.RentalUnitConditionSchema.nullable().optional().describe("Unit condition recorded at customer pickup."),
     conditionAtReturn: exports.RentalUnitConditionSchema.nullable().optional().describe("Unit condition recorded at customer return."),
     notes: zod_1.z.string().nullable().optional().describe("Operational note for staff about this rental assignment."),
-});
-// ============================================================================
-// CREATE/UPDATE SCHEMAS
-// ============================================================================
-/**
- * Schema for creating a new rental assignment.
- * Omits auto-generated fields.
- */
-exports.CreateRentalAssignmentSchema = exports.RentalAssignmentSchema.omit({
-    id: true,
-    createdAt: true,
-    updatedAt: true,
-});
-/**
- * Schema for updating an existing rental assignment.
- * All fields optional except id.
- */
-exports.UpdateRentalAssignmentSchema = exports.CreateRentalAssignmentSchema.partial().safeExtend({
-    id: zod_1.z.string().describe("Unique identifier of the rental assignment to update."),
 });

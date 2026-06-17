@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.55**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.56**](../../README.md)
 
 ***
 
@@ -19,7 +19,7 @@ type UpdateResourceRevision = {
 };
 ```
 
-Defined in: [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:166](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L166)
+Defined in: [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:166](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L166)
 
 Schema for updating an existing resource revision.
 All fields optional except id.
@@ -28,9 +28,9 @@ All fields optional except id.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="resourceid"></a> `resourceId?` | `string` | [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:65](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L65) |
-| <a id="label"></a> `label?` | `string` \| `null` | [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:66](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L66) |
-| <a id="status"></a> `status?` | \| [`DRAFT`](../enumerations/ResourceRevisionStatus.md#draft) \| [`ACTIVE`](../enumerations/ResourceRevisionStatus.md#active) \| [`ARCHIVED`](../enumerations/ResourceRevisionStatus.md#archived) | [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:67](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L67) |
-| <a id="derivedfromrevisionid"></a> `derivedFromRevisionId?` | `string` \| `null` | [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:68](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L68) |
-| <a id="publishedat"></a> `publishedAt?` | `number` \| `null` | [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:69](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L69) |
-| <a id="id"></a> `id` | `string` | [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:109](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L109) |
+| <a id="resourceid"></a> `resourceId?` | `string` | [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:65](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L65) |
+| <a id="label"></a> `label?` | `string` \| `null` | [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:66](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L66) |
+| <a id="status"></a> `status?` | \| [`DRAFT`](../enumerations/ResourceRevisionStatus.md#draft) \| [`ACTIVE`](../enumerations/ResourceRevisionStatus.md#active) \| [`ARCHIVED`](../enumerations/ResourceRevisionStatus.md#archived) | [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:67](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L67) |
+| <a id="derivedfromrevisionid"></a> `derivedFromRevisionId?` | `string` \| `null` | [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:68](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L68) |
+| <a id="publishedat"></a> `publishedAt?` | `number` \| `null` | [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:69](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L69) |
+| <a id="id"></a> `id` | `string` | [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:109](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L109) |

@@ -61,50 +61,7 @@ export declare const TableAssignmentSchema: z.ZodObject<{
     releasedBy: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     notes: z.ZodOptional<z.ZodNullable<z.ZodString>>;
 }, z.core.$strip>;
-/**
- * Schema for creating a new table assignment.
- * Omits auto-generated fields.
- */
-export declare const CreateTableAssignmentSchema: z.ZodObject<{
-    status: z.ZodDefault<z.ZodEnum<typeof TableAssignmentStatus>>;
-    locationId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-    notes: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-    floorPlanId: z.ZodString;
-    floorPlanSectionId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-    reservationId: z.ZodString;
-    tableInstanceId: z.ZodString;
-    slotStart: z.ZodNumber;
-    slotEnd: z.ZodNumber;
-    assignmentType: z.ZodDefault<z.ZodEnum<typeof TableAssignmentType>>;
-    assignedAt: z.ZodNumber;
-    assignedBy: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-    releasedAt: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
-    releasedBy: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-}, z.core.$strip>;
-/**
- * Schema for updating an existing table assignment.
- * All fields optional except id.
- */
-export declare const UpdateTableAssignmentSchema: z.ZodObject<{
-    status: z.ZodOptional<z.ZodDefault<z.ZodEnum<typeof TableAssignmentStatus>>>;
-    locationId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
-    notes: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
-    floorPlanId: z.ZodOptional<z.ZodString>;
-    floorPlanSectionId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
-    reservationId: z.ZodOptional<z.ZodString>;
-    tableInstanceId: z.ZodOptional<z.ZodString>;
-    slotStart: z.ZodOptional<z.ZodNumber>;
-    slotEnd: z.ZodOptional<z.ZodNumber>;
-    assignmentType: z.ZodOptional<z.ZodDefault<z.ZodEnum<typeof TableAssignmentType>>>;
-    assignedAt: z.ZodOptional<z.ZodNumber>;
-    assignedBy: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
-    releasedAt: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
-    releasedBy: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
-    id: z.ZodString;
-}, z.core.$strip>;
 export type TableAssignment = z.infer<typeof TableAssignmentSchema>;
-export type CreateTableAssignment = z.infer<typeof CreateTableAssignmentSchema>;
-export type UpdateTableAssignment = z.infer<typeof UpdateTableAssignmentSchema>;
 /**
  * Table assignment filter options.
  * @interface TableAssignmentFilters

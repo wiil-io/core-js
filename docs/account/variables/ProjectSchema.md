@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.55**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.56**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const ProjectSchema: ZodObject<Project>;
 ```
 
-Defined in: [src/core/account/project.schema.ts:44](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/account/project.schema.ts#L44)
+Defined in: [src/core/account/project.schema.ts:44](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/account/project.schema.ts#L44)
 
 Zod schema for project entity.
 

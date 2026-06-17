@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.55**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.56**](../../README.md)
 
 ***
 
@@ -13,7 +13,7 @@ type TimeSlot = {
 };
 ```
 
-Defined in: [src/core/type-definitions/business-definitions.ts:286](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/type-definitions/business-definitions.ts#L286)
+Defined in: [src/core/type-definitions/business-definitions.ts:286](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/type-definitions/business-definitions.ts#L286)
 
 Time slot schema for scheduling.
 Defines a start and end time in HH:MM format.
@@ -22,5 +22,5 @@ Defines a start and end time in HH:MM format.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="start"></a> `start` | `string` | [src/core/type-definitions/business-definitions.ts:241](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/type-definitions/business-definitions.ts#L241) |
-| <a id="end"></a> `end` | `string` | [src/core/type-definitions/business-definitions.ts:242](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/type-definitions/business-definitions.ts#L242) |
+| <a id="start"></a> `start` | `string` | [src/core/type-definitions/business-definitions.ts:241](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/type-definitions/business-definitions.ts#L241) |
+| <a id="end"></a> `end` | `string` | [src/core/type-definitions/business-definitions.ts:242](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/type-definitions/business-definitions.ts#L242) |

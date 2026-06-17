@@ -71,34 +71,10 @@ export const RoomAssignmentSchema = BaseModelSchema.safeExtend({
 });
 
 // ============================================================================
-// CREATE/UPDATE SCHEMAS
-// ============================================================================
-
-/**
- * Schema for creating a new room assignment.
- * Omits auto-generated fields.
- */
-export const CreateRoomAssignmentSchema = RoomAssignmentSchema.omit({
-    id: true,
-    createdAt: true,
-    updatedAt: true,
-});
-
-/**
- * Schema for updating an existing room assignment.
- * All fields optional except id.
- */
-export const UpdateRoomAssignmentSchema = CreateRoomAssignmentSchema.partial().safeExtend({
-    id: z.string().describe("Unique identifier of the room assignment to update."),
-});
-
-// ============================================================================
 // TYPE EXPORTS
 // ============================================================================
 
 export type RoomAssignment = z.infer<typeof RoomAssignmentSchema>;
-export type CreateRoomAssignment = z.infer<typeof CreateRoomAssignmentSchema>;
-export type UpdateRoomAssignment = z.infer<typeof UpdateRoomAssignmentSchema>;
 
 // ============================================================================
 // QUERY OPTIONS

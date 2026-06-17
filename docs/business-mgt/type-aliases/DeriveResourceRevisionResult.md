@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.55**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.56**](../../README.md)
 
 ***
 
@@ -13,7 +13,7 @@ type DeriveResourceRevisionResult = {
 };
 ```
 
-Defined in: [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:168](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L168)
+Defined in: [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:168](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L168)
 
 Result schema returned after deriving a resource revision.
 
@@ -21,5 +21,5 @@ Result schema returned after deriving a resource revision.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="resourceid"></a> `resourceId` | `string` | [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:140](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L140) |
-| <a id="resourcerevisionid"></a> `resourceRevisionId` | `string` | [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:141](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L141) |
+| <a id="resourceid"></a> `resourceId` | `string` | [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:140](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L140) |
+| <a id="resourcerevisionid"></a> `resourceRevisionId` | `string` | [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:141](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L141) |

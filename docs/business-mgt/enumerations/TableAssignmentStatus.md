@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.55**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.56**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: TableAssignmentStatus
 
-Defined in: [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:28](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L28)
+Defined in: [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:28](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L28)
 
 Table assignment lifecycle status.
 
@@ -14,6 +14,6 @@ Table assignment lifecycle status.
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="assigned"></a> `ASSIGNED` | `"assigned"` | [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:29](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L29) |
-| <a id="reassigned"></a> `REASSIGNED` | `"reassigned"` | [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:30](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L30) |
-| <a id="released"></a> `RELEASED` | `"released"` | [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:31](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L31) |
+| <a id="assigned"></a> `ASSIGNED` | `"assigned"` | [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:29](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L29) |
+| <a id="reassigned"></a> `REASSIGNED` | `"reassigned"` | [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:30](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L30) |
+| <a id="released"></a> `RELEASED` | `"released"` | [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:31](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L31) |

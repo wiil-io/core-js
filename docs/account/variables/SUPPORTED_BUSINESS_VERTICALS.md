@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.55**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.56**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const SUPPORTED_BUSINESS_VERTICALS: readonly ["healthcare", "health-wellness", "retail", "finance", "real-estate", "technology", "education", "legal", "automotive", "hospitality", "professional", "others"];
 ```
 
-Defined in: [src/core/account/supported-business-verticals.ts:8](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/account/supported-business-verticals.ts#L8)
+Defined in: [src/core/account/supported-business-verticals.ts:8](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/account/supported-business-verticals.ts#L8)
 
 Supported Business Vertical IDs
 

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.55**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.56**](../../README.md)
 
 ***
 
@@ -13,7 +13,7 @@ const ResourceAttributeSchema: ZodObject<{
 }, $strip>;
 ```
 
-Defined in: [src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:185](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts#L185)
+Defined in: [src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:185](https://github.com/wiil-io/core-js/blob/c95ae3a360c78f693556f9e092910921cf0ae2cf/src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts#L185)
 
 Resource attribute schema.
 Stores flexible key/value attributes for resource catalog filtering and integrations.

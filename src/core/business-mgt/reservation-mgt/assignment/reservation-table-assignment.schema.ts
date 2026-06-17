@@ -73,34 +73,10 @@ export const TableAssignmentSchema = BaseModelSchema.safeExtend({
 });
 
 // ============================================================================
-// CREATE/UPDATE SCHEMAS
-// ============================================================================
-
-/**
- * Schema for creating a new table assignment.
- * Omits auto-generated fields.
- */
-export const CreateTableAssignmentSchema = TableAssignmentSchema.omit({
-    id: true,
-    createdAt: true,
-    updatedAt: true,
-});
-
-/**
- * Schema for updating an existing table assignment.
- * All fields optional except id.
- */
-export const UpdateTableAssignmentSchema = CreateTableAssignmentSchema.partial().safeExtend({
-    id: z.string().describe("Unique identifier of the table assignment to update."),
-});
-
-// ============================================================================
 // TYPE EXPORTS
 // ============================================================================
 
 export type TableAssignment = z.infer<typeof TableAssignmentSchema>;
-export type CreateTableAssignment = z.infer<typeof CreateTableAssignmentSchema>;
-export type UpdateTableAssignment = z.infer<typeof UpdateTableAssignmentSchema>;
 
 // ============================================================================
 // QUERY OPTIONS
