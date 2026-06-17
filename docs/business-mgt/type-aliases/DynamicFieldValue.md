@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.53**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.54**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 type DynamicFieldValue = any;
 ```
 
-Defined in: [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:39](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L39)
+Defined in: [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:39](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L39)
 
 Schema for dynamic field value types.
 Accepts any value type to support the various DynamicFieldType values

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.53**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.54**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: ConversationSummarySentiment
 
-Defined in: [src/core/type-definitions/conversation.type.definition.ts:86](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/type-definitions/conversation.type.definition.ts#L86)
+Defined in: [src/core/type-definitions/conversation.type.definition.ts:86](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/type-definitions/conversation.type.definition.ts#L86)
 
 Conversation summary sentiment classification.
 
@@ -17,6 +17,6 @@ used for analytics, routing, and follow-up prioritization.
 
 | Enumeration Member | Value | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="positive"></a> `POSITIVE` | `"positive"` | Customer expressed satisfaction, issue resolved, or positive outcome | [src/core/type-definitions/conversation.type.definition.ts:88](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/type-definitions/conversation.type.definition.ts#L88) |
-| <a id="neutral"></a> `NEUTRAL` | `"neutral"` | Neutral interaction without strong positive or negative indicators | [src/core/type-definitions/conversation.type.definition.ts:90](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/type-definitions/conversation.type.definition.ts#L90) |
-| <a id="negative"></a> `NEGATIVE` | `"negative"` | Customer expressed frustration, issue unresolved, or negative outcome | [src/core/type-definitions/conversation.type.definition.ts:92](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/type-definitions/conversation.type.definition.ts#L92) |
+| <a id="positive"></a> `POSITIVE` | `"positive"` | Customer expressed satisfaction, issue resolved, or positive outcome | [src/core/type-definitions/conversation.type.definition.ts:88](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/type-definitions/conversation.type.definition.ts#L88) |
+| <a id="neutral"></a> `NEUTRAL` | `"neutral"` | Neutral interaction without strong positive or negative indicators | [src/core/type-definitions/conversation.type.definition.ts:90](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/type-definitions/conversation.type.definition.ts#L90) |
+| <a id="negative"></a> `NEGATIVE` | `"negative"` | Customer expressed frustration, issue unresolved, or negative outcome | [src/core/type-definitions/conversation.type.definition.ts:92](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/type-definitions/conversation.type.definition.ts#L92) |

@@ -10,6 +10,8 @@ export declare const AssistantSetupResultSchema: z.ZodObject<{
         defaultFunctionState: z.ZodDefault<z.ZodEnum<typeof import("..").LLMType>>;
         usesWiilSupportModel: z.ZodDefault<z.ZodOptional<z.ZodBoolean>>;
         requiredModelConfig: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodAny>>;
+        useCustomModel: z.ZodDefault<z.ZodOptional<z.ZodBoolean>>;
+        textProcessingModelId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
         instructionConfigurationId: z.ZodString;
         assistantType: z.ZodDefault<z.ZodEnum<typeof import("..").AssistantType>>;
         call_transfer_config: z.ZodDefault<z.ZodOptional<z.ZodArray<z.ZodObject<{

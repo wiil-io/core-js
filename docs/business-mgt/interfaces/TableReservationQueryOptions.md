@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.53**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.54**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: TableReservationQueryOptions
 
-Defined in: [src/core/business-mgt/reservation-mgt/reservation-table.schema.ts:125](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/reservation-mgt/reservation-table.schema.ts#L125)
+Defined in: [src/core/business-mgt/reservation-mgt/reservation-table.schema.ts:125](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/business-mgt/reservation-mgt/reservation-table.schema.ts#L125)
 
 Table reservation query options.
  TableReservationQueryOptions
@@ -15,7 +15,7 @@ Table reservation query options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/reservation-mgt/reservation-table.schema.ts:127](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/reservation-mgt/reservation-table.schema.ts#L127) |
-| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/reservation-mgt/reservation-table.schema.ts:129](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/reservation-mgt/reservation-table.schema.ts#L129) |
-| <a id="filters"></a> `filters?` | [`TableReservationFilters`](TableReservationFilters.md) | Optional filters | [src/core/business-mgt/reservation-mgt/reservation-table.schema.ts:131](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/reservation-mgt/reservation-table.schema.ts#L131) |
-| <a id="sorting"></a> `sorting?` | [`TableReservationSorting`](TableReservationSorting.md) | Optional sorting | [src/core/business-mgt/reservation-mgt/reservation-table.schema.ts:133](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/reservation-mgt/reservation-table.schema.ts#L133) |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/reservation-mgt/reservation-table.schema.ts:127](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/business-mgt/reservation-mgt/reservation-table.schema.ts#L127) |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/reservation-mgt/reservation-table.schema.ts:129](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/business-mgt/reservation-mgt/reservation-table.schema.ts#L129) |
+| <a id="filters"></a> `filters?` | [`TableReservationFilters`](TableReservationFilters.md) | Optional filters | [src/core/business-mgt/reservation-mgt/reservation-table.schema.ts:131](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/business-mgt/reservation-mgt/reservation-table.schema.ts#L131) |
+| <a id="sorting"></a> `sorting?` | [`TableReservationSorting`](TableReservationSorting.md) | Optional sorting | [src/core/business-mgt/reservation-mgt/reservation-table.schema.ts:133](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/business-mgt/reservation-mgt/reservation-table.schema.ts#L133) |

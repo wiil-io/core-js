@@ -43,6 +43,8 @@ const call_transfer_config_schema_1 = require("./call-transfer-config.schema");
  * @property {LLMType} defaultFunctionState - Default operational mode (TEXT, VOICE, MULTI_MODE) (default: MULTI_MODE)
  * @property {boolean} [usesWiilSupportModel=true] - Whether this agent uses Wiil's supported model registry
  * @property {Record<string, any>} [requiredModelConfig] - Additional model parameters (e.g., { voiceId: 'adam', languageId: 'en-US' })
+ * @property {boolean} [useCustomModel=false] - Whether to opt out of platform default model configurations and only use the specified modelId and requiredModelConfig
+ * @property {string|null} [textProcessingModelId] - Specific model ID to use for text processing, if different from the main modelId
  * @property {string} instructionConfigurationId - ID of the instruction configuration providing behavioral guidelines (N:1)
  * @property {AssistantType} assistantType - Channel specialization type (GENERAL, WEB, PHONE, etc.) (default: GENERAL)
  * @property {CallTransferConfig[]} [call_transfer_config=[]] - Call transfer configurations for phone deployments
@@ -80,6 +82,8 @@ exports.AgentConfigurationSchema = base_schema_1.BaseModelSchema.safeExtend({
     defaultFunctionState: zod_1.z.enum(service_config_definitions_1.LLMType).default(service_config_definitions_1.LLMType.MULTI_MODE).describe("Default operational mode (TEXT for text-only, VOICE for speech, MULTI_MODE for combined text/voice capabilities)"),
     usesWiilSupportModel: zod_1.z.boolean().optional().default(true).describe("Whether this agent uses a model from Wiil's curated registry (true) or a custom external model (false)"),
     requiredModelConfig: zod_1.z.record(zod_1.z.string(), zod_1.z.any()).optional().describe("Model-specific configuration parameters as key-value pairs (e.g., { voiceId: 'adam', languageId: 'en-US', temperature: 0.7 })"),
+    useCustomModel: zod_1.z.boolean().optional().default(false).describe("Whether to opt out of platform default model configurations and only use the specified modelId and requiredModelConfig"),
+    textProcessingModelId: zod_1.z.string().nullable().optional().describe("Specific model ID to use for text processing, if different from the main modelId"),
     instructionConfigurationId: zod_1.z.string().describe("ID of the Instruction Configuration providing behavioral guidelines and conversation patterns. Multiple agents can share the same instruction configuration (N:1)"),
     assistantType: zod_1.z.enum(service_config_definitions_1.AssistantType).default(service_config_definitions_1.AssistantType.GENERAL).describe("Channel specialization type for optimization (GENERAL for multi-channel, WEB for browser, PHONE for telephony, EMAIL for email)"),
     call_transfer_config: zod_1.z.array(call_transfer_config_schema_1.CallTransferConfigSchema).optional().default([]).describe("Array of call transfer configurations for phone deployments, defining transfer destinations and conditions for escalation"),

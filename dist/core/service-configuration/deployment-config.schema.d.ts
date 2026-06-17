@@ -128,6 +128,8 @@ export declare const DeploymentConfigurationSchema: z.ZodObject<{
         defaultFunctionState: z.ZodDefault<z.ZodEnum<typeof import("../type-definitions").LLMType>>;
         usesWiilSupportModel: z.ZodDefault<z.ZodOptional<z.ZodBoolean>>;
         requiredModelConfig: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodAny>>;
+        useCustomModel: z.ZodDefault<z.ZodOptional<z.ZodBoolean>>;
+        textProcessingModelId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
         instructionConfigurationId: z.ZodString;
         assistantType: z.ZodDefault<z.ZodEnum<typeof import("../type-definitions").AssistantType>>;
         call_transfer_config: z.ZodDefault<z.ZodOptional<z.ZodArray<z.ZodObject<{
@@ -450,6 +452,8 @@ export declare const DeploymentConfigurationDetailsSchema: z.ZodObject<{
         defaultFunctionState: z.ZodDefault<z.ZodEnum<typeof import("../type-definitions").LLMType>>;
         usesWiilSupportModel: z.ZodDefault<z.ZodOptional<z.ZodBoolean>>;
         requiredModelConfig: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodAny>>;
+        useCustomModel: z.ZodDefault<z.ZodOptional<z.ZodBoolean>>;
+        textProcessingModelId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
         instructionConfigurationId: z.ZodString;
         assistantType: z.ZodDefault<z.ZodEnum<typeof import("../type-definitions").AssistantType>>;
         call_transfer_config: z.ZodDefault<z.ZodOptional<z.ZodArray<z.ZodObject<{

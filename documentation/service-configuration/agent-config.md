@@ -38,6 +38,8 @@ Defines the core behavior, capabilities, and personality of AI agents.
 | defaultFunctionState | enum | Yes | MULTI_MODE | Operational mode (TEXT, VOICE, MULTI_MODE) |
 | usesWiilSupportModel | boolean | No | true | Whether using Wiil registry model |
 | requiredModelConfig | object | No | - | Additional model parameters |
+| useCustomModel | boolean | No | false | Opt out of platform default model configurations and only use the specified modelId and requiredModelConfig |
+| textProcessingModelId | string \| null | No | - | Specific model ID for text processing, if different from the main modelId |
 | instructionConfigurationId | string | Yes | - | Reference to instruction configuration |
 | assistantType | enum | Yes | GENERAL | Channel specialization |
 | call_transfer_config | array | No | [] | Call transfer rules for phone |
@@ -60,6 +62,8 @@ Defines the core behavior, capabilities, and personality of AI agents.
     "languageId": "en-US",
     "temperature": 0.7
   },
+  "useCustomModel": false,
+  "textProcessingModelId": null,
   "instructionConfigurationId": "instr_456def",
   "assistantType": "PHONE",
   "call_transfer_config": [

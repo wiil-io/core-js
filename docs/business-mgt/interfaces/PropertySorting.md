@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.53**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.54**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: PropertySorting
 
-Defined in: [src/core/business-mgt/property-management/property-config.schema.ts:478](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/property-management/property-config.schema.ts#L478)
+Defined in: [src/core/business-mgt/property-management/property-config.schema.ts:478](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/business-mgt/property-management/property-config.schema.ts#L478)
 
 Property sorting options.
  PropertySorting
@@ -15,5 +15,5 @@ Property sorting options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="field"></a> `field` | \| `"createdAt"` \| `"displayOrder"` \| `"title"` \| `"squareFootage"` \| `"salePrice"` \| `"rentalPrice"` | Field to sort by | [src/core/business-mgt/property-management/property-config.schema.ts:480](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/property-management/property-config.schema.ts#L480) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/property-management/property-config.schema.ts:482](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/property-management/property-config.schema.ts#L482) |
+| <a id="field"></a> `field` | \| `"createdAt"` \| `"displayOrder"` \| `"title"` \| `"squareFootage"` \| `"salePrice"` \| `"rentalPrice"` | Field to sort by | [src/core/business-mgt/property-management/property-config.schema.ts:480](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/business-mgt/property-management/property-config.schema.ts#L480) |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/property-management/property-config.schema.ts:482](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/business-mgt/property-management/property-config.schema.ts#L482) |

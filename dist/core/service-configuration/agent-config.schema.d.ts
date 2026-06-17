@@ -37,6 +37,8 @@ import { AssistantType, LLMType } from "../type-definitions/service-config.defin
  * @property {LLMType} defaultFunctionState - Default operational mode (TEXT, VOICE, MULTI_MODE) (default: MULTI_MODE)
  * @property {boolean} [usesWiilSupportModel=true] - Whether this agent uses Wiil's supported model registry
  * @property {Record<string, any>} [requiredModelConfig] - Additional model parameters (e.g., { voiceId: 'adam', languageId: 'en-US' })
+ * @property {boolean} [useCustomModel=false] - Whether to opt out of platform default model configurations and only use the specified modelId and requiredModelConfig
+ * @property {string|null} [textProcessingModelId] - Specific model ID to use for text processing, if different from the main modelId
  * @property {string} instructionConfigurationId - ID of the instruction configuration providing behavioral guidelines (N:1)
  * @property {AssistantType} assistantType - Channel specialization type (GENERAL, WEB, PHONE, etc.) (default: GENERAL)
  * @property {CallTransferConfig[]} [call_transfer_config=[]] - Call transfer configurations for phone deployments
@@ -77,6 +79,8 @@ export declare const AgentConfigurationSchema: z.ZodObject<{
     defaultFunctionState: z.ZodDefault<z.ZodEnum<typeof LLMType>>;
     usesWiilSupportModel: z.ZodDefault<z.ZodOptional<z.ZodBoolean>>;
     requiredModelConfig: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodAny>>;
+    useCustomModel: z.ZodDefault<z.ZodOptional<z.ZodBoolean>>;
+    textProcessingModelId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     instructionConfigurationId: z.ZodString;
     assistantType: z.ZodDefault<z.ZodEnum<typeof AssistantType>>;
     call_transfer_config: z.ZodDefault<z.ZodOptional<z.ZodArray<z.ZodObject<{
@@ -159,6 +163,8 @@ export declare const CreateAgentConfigurationSchema: z.ZodObject<{
     defaultFunctionState: z.ZodDefault<z.ZodEnum<typeof LLMType>>;
     usesWiilSupportModel: z.ZodDefault<z.ZodOptional<z.ZodBoolean>>;
     requiredModelConfig: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodAny>>;
+    useCustomModel: z.ZodDefault<z.ZodOptional<z.ZodBoolean>>;
+    textProcessingModelId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     instructionConfigurationId: z.ZodString;
     assistantType: z.ZodDefault<z.ZodEnum<typeof AssistantType>>;
     call_transfer_config: z.ZodDefault<z.ZodOptional<z.ZodArray<z.ZodObject<{
@@ -203,6 +209,8 @@ export declare const UpdateAgentConfigurationSchema: z.ZodObject<{
     defaultFunctionState: z.ZodOptional<z.ZodDefault<z.ZodEnum<typeof LLMType>>>;
     usesWiilSupportModel: z.ZodOptional<z.ZodDefault<z.ZodOptional<z.ZodBoolean>>>;
     requiredModelConfig: z.ZodOptional<z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodAny>>>;
+    useCustomModel: z.ZodOptional<z.ZodDefault<z.ZodOptional<z.ZodBoolean>>>;
+    textProcessingModelId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     instructionConfigurationId: z.ZodOptional<z.ZodString>;
     assistantType: z.ZodOptional<z.ZodDefault<z.ZodEnum<typeof AssistantType>>>;
     call_transfer_config: z.ZodOptional<z.ZodDefault<z.ZodOptional<z.ZodArray<z.ZodObject<{

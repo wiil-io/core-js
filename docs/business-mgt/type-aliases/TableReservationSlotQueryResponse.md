@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.53**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.54**](../../README.md)
 
 ***
 
@@ -25,7 +25,7 @@ type TableReservationSlotQueryResponse = {
 };
 ```
 
-Defined in: [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:358](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L358)
+Defined in: [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:358](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L358)
 
 Table reservation slot query response schema.
 Returns generated table slot candidates for the requested date.
@@ -34,7 +34,7 @@ Returns generated table slot candidates for the requested date.
 
 | Name | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="resourcetype"></a> `resourceType` | [`TABLE`](../../type-definitions/enumerations/ResourceType.md#table) | - | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:284](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L284) |
-| <a id="localdate"></a> `localDate` | `string` | `ReservationLocalDateSchema` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:285](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L285) |
-| <a id="generatedat"></a> `generatedAt` | `number` | - | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:286](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L286) |
-| <a id="slots"></a> `slots` | \{ `resourceId`: `string`; `startTimeOfDay`: `string`; `startMinuteOfDay`: `number`; `endMinuteOfDay`: `number`; `startTimeUtcSec`: `number`; `endTimeUtcSec`: `number`; `isAvailable`: `boolean`; `capacityRemaining?`: `number` \| `null`; `priceQuote?`: `number` \| `null`; \}[] | - | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:287](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L287) |
+| <a id="resourcetype"></a> `resourceType` | [`TABLE`](../../type-definitions/enumerations/ResourceType.md#table) | - | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:284](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L284) |
+| <a id="localdate"></a> `localDate` | `string` | `ReservationLocalDateSchema` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:285](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L285) |
+| <a id="generatedat"></a> `generatedAt` | `number` | - | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:286](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L286) |
+| <a id="slots"></a> `slots` | \{ `resourceId`: `string`; `startTimeOfDay`: `string`; `startMinuteOfDay`: `number`; `endMinuteOfDay`: `number`; `startTimeUtcSec`: `number`; `endTimeUtcSec`: `number`; `isAvailable`: `boolean`; `capacityRemaining?`: `number` \| `null`; `priceQuote?`: `number` \| `null`; \}[] | - | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:287](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L287) |

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.53**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.54**](../../README.md)
 
 ***
 
@@ -18,7 +18,7 @@ type AssistantEmailMessage = {
 };
 ```
 
-Defined in: [src/core/conversation/conversation-message.schema.ts:290](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/conversation/conversation-message.schema.ts#L290)
+Defined in: [src/core/conversation/conversation-message.schema.ts:290](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/conversation/conversation-message.schema.ts#L290)
 
 Assistant email message schema.
 
@@ -30,13 +30,13 @@ customer support interactions.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="conversation_config_id"></a> `conversation_config_id` | `string` | [src/core/conversation/conversation-message.schema.ts:73](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/conversation/conversation-message.schema.ts#L73) |
-| <a id="message"></a> `message` | `string` | [src/core/conversation/conversation-message.schema.ts:74](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/conversation/conversation-message.schema.ts#L74) |
-| <a id="timestamp"></a> `timestamp` | `number` | [src/core/conversation/conversation-message.schema.ts:75](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/conversation/conversation-message.schema.ts#L75) |
-| <a id="llm_conversation_id"></a> `llm_conversation_id?` | `string` \| `null` | [src/core/conversation/conversation-message.schema.ts:76](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/conversation/conversation-message.schema.ts#L76) |
-| <a id="subject"></a> `subject` | `string` | [src/core/conversation/conversation-message.schema.ts:98](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/conversation/conversation-message.schema.ts#L98) |
-| <a id="isemail"></a> `isEmail` | `true` | [src/core/conversation/conversation-message.schema.ts:99](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/conversation/conversation-message.schema.ts#L99) |
-| <a id="message_type"></a> `message_type` | [`AGENT`](../enumerations/MessageType.md#agent) | [src/core/conversation/conversation-message.schema.ts:195](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/conversation/conversation-message.schema.ts#L195) |
+| <a id="conversation_config_id"></a> `conversation_config_id` | `string` | [src/core/conversation/conversation-message.schema.ts:73](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/conversation/conversation-message.schema.ts#L73) |
+| <a id="message"></a> `message` | `string` | [src/core/conversation/conversation-message.schema.ts:74](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/conversation/conversation-message.schema.ts#L74) |
+| <a id="timestamp"></a> `timestamp` | `number` | [src/core/conversation/conversation-message.schema.ts:75](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/conversation/conversation-message.schema.ts#L75) |
+| <a id="llm_conversation_id"></a> `llm_conversation_id?` | `string` \| `null` | [src/core/conversation/conversation-message.schema.ts:76](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/conversation/conversation-message.schema.ts#L76) |
+| <a id="subject"></a> `subject` | `string` | [src/core/conversation/conversation-message.schema.ts:98](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/conversation/conversation-message.schema.ts#L98) |
+| <a id="isemail"></a> `isEmail` | `true` | [src/core/conversation/conversation-message.schema.ts:99](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/conversation/conversation-message.schema.ts#L99) |
+| <a id="message_type"></a> `message_type` | [`AGENT`](../enumerations/MessageType.md#agent) | [src/core/conversation/conversation-message.schema.ts:195](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/conversation/conversation-message.schema.ts#L195) |
 
 ## Remarks
 

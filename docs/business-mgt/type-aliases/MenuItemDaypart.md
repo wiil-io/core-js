@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.53**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.54**](../../README.md)
 
 ***
 
@@ -15,7 +15,7 @@ type MenuItemDaypart = {
 };
 ```
 
-Defined in: [src/core/business-mgt/order.schema.ts:239](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/order.schema.ts#L239)
+Defined in: [src/core/business-mgt/order.schema.ts:239](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/business-mgt/order.schema.ts#L239)
 
 Menu item daypart schema.
 Defines time-based availability windows for menu items.
@@ -24,7 +24,7 @@ Defines time-based availability windows for menu items.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="name"></a> `name` | `string` | [src/core/business-mgt/order.schema.ts:218](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/order.schema.ts#L218) |
-| <a id="starttime"></a> `startTime` | `string` | [src/core/business-mgt/order.schema.ts:219](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/order.schema.ts#L219) |
-| <a id="endtime"></a> `endTime` | `string` | [src/core/business-mgt/order.schema.ts:220](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/order.schema.ts#L220) |
-| <a id="daysofweek"></a> `daysOfWeek?` | `string`[] | [src/core/business-mgt/order.schema.ts:221](https://github.com/wiil-io/core-js/blob/43f9832c8ca9dc8d3a35be8a362c24983a1b73cc/src/core/business-mgt/order.schema.ts#L221) |
+| <a id="name"></a> `name` | `string` | [src/core/business-mgt/order.schema.ts:218](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/business-mgt/order.schema.ts#L218) |
+| <a id="starttime"></a> `startTime` | `string` | [src/core/business-mgt/order.schema.ts:219](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/business-mgt/order.schema.ts#L219) |
+| <a id="endtime"></a> `endTime` | `string` | [src/core/business-mgt/order.schema.ts:220](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/business-mgt/order.schema.ts#L220) |
+| <a id="daysofweek"></a> `daysOfWeek?` | `string`[] | [src/core/business-mgt/order.schema.ts:221](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/business-mgt/order.schema.ts#L221) |
