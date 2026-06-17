@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.54**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.55**](../../README.md)
 
 ***
 
@@ -15,7 +15,7 @@ type TtsModelConfig = {
 };
 ```
 
-Defined in: [src/core/service-configuration/provisioning-config.ts:88](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/service-configuration/provisioning-config.ts#L88)
+Defined in: [src/core/service-configuration/provisioning-config.ts:88](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/service-configuration/provisioning-config.ts#L88)
 
 Type definition for TTS model configuration.
 
@@ -23,7 +23,7 @@ Type definition for TTS model configuration.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="modelid"></a> `modelId` | `string` | [src/core/service-configuration/provisioning-config.ts:79](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/service-configuration/provisioning-config.ts#L79) |
-| <a id="voiceid"></a> `voiceId` | `string` | [src/core/service-configuration/provisioning-config.ts:80](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/service-configuration/provisioning-config.ts#L80) |
-| <a id="defaultlanguage"></a> `defaultLanguage` | `string` | [src/core/service-configuration/provisioning-config.ts:81](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/service-configuration/provisioning-config.ts#L81) |
-| <a id="voicesettings"></a> `voiceSettings?` | `Record`\<`string`, `any`\> | [src/core/service-configuration/provisioning-config.ts:82](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/service-configuration/provisioning-config.ts#L82) |
+| <a id="modelid"></a> `modelId` | `string` | [src/core/service-configuration/provisioning-config.ts:79](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/service-configuration/provisioning-config.ts#L79) |
+| <a id="voiceid"></a> `voiceId` | `string` | [src/core/service-configuration/provisioning-config.ts:80](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/service-configuration/provisioning-config.ts#L80) |
+| <a id="defaultlanguage"></a> `defaultLanguage` | `string` | [src/core/service-configuration/provisioning-config.ts:81](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/service-configuration/provisioning-config.ts#L81) |
+| <a id="voicesettings"></a> `voiceSettings?` | `Record`\<`string`, `any`\> | [src/core/service-configuration/provisioning-config.ts:82](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/service-configuration/provisioning-config.ts#L82) |

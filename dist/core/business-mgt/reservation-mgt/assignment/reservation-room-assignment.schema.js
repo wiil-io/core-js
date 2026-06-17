@@ -42,6 +42,8 @@ var RoomAssignmentType;
  * @property {string} [locationId] - Business location where the room is assigned
  * @property {string} reservationId - Room reservation ID
  * @property {string} roomInstanceId - Physical room resource instance ID
+ * @property {number} slotStart - Reservation slot start, copied from reservation at assignment time
+ * @property {number} slotEnd - Reservation slot end, copied from reservation at assignment time
  * @property {RoomAssignmentType} assignmentType - Assignment lock type
  * @property {RoomAssignmentStatus} status - Current assignment status
  * @property {number} assignedAt - Assignment timestamp
@@ -55,6 +57,8 @@ exports.RoomAssignmentSchema = base_schema_1.BaseModelSchema.safeExtend({
     locationId: zod_1.z.string().nullable().optional().describe("Business location ID where the assigned room is located."),
     reservationId: zod_1.z.string().describe("RoomReservation ID. This link is immutable after assignment creation."),
     roomInstanceId: zod_1.z.string().describe("ResourceInstance ID for the physical room assigned to the reservation."),
+    slotStart: zod_1.z.number().int().positive().describe("Reservation slot start — copied from reservation at assignment time"),
+    slotEnd: zod_1.z.number().int().positive().describe("Reservation slot end — copied from reservation at assignment time"),
     assignmentType: zod_1.z.enum(RoomAssignmentType).default(RoomAssignmentType.SOFT).describe("Assignment lock type. Soft assignments may be optimized; hard assignments are staff-locked."),
     status: zod_1.z.enum(RoomAssignmentStatus).default(RoomAssignmentStatus.ASSIGNED).describe("Current assignment lifecycle status."),
     assignedAt: zod_1.z.number().int().positive().describe("Unix timestamp when this assignment was made."),

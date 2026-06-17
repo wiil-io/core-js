@@ -45,6 +45,8 @@ export enum TableAssignmentStatus {
  * @property {string} tableInstanceId - Physical table resource instance ID
  * @property {string} floorPlanId - Floor plan ID captured at assignment time
  * @property {string} [floorPlanSectionId] - Floor plan section ID captured at assignment time
+ * @property {number} slotStart - Reservation slot start, copied from reservation at assignment time
+ * @property {number} slotEnd - Reservation slot end, copied from reservation at assignment time
  * @property {TableAssignmentType} assignmentType - Assignment lock type
  * @property {TableAssignmentStatus} status - Current assignment status
  * @property {number} assignedAt - Assignment timestamp
@@ -59,6 +61,8 @@ export const TableAssignmentSchema = BaseModelSchema.safeExtend({
     tableInstanceId: z.string().describe("ResourceInstance ID for the physical table assigned to the reservation."),
     floorPlanId: z.string().describe("Floor plan ID captured at the time of assignment."),
     floorPlanSectionId: z.string().nullable().optional().describe("Floor plan section ID captured at the time of assignment."),
+    slotStart: z.number().int().positive().describe("Reservation slot start — copied from reservation at assignment time"),
+    slotEnd: z.number().int().positive().describe("Reservation slot end — copied from reservation at assignment time"),
     assignmentType: z.enum(TableAssignmentType).default(TableAssignmentType.SOFT).describe("Assignment lock type. Soft assignments may be optimized; hard assignments are staff-locked."),
     status: z.enum(TableAssignmentStatus).default(TableAssignmentStatus.ASSIGNED).describe("Current assignment lifecycle status."),
     assignedAt: z.number().int().positive().describe("Unix timestamp when this assignment was made."),

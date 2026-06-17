@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.54**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.55**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ResourceInstanceFilters
 
-Defined in: [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:116](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L116)
+Defined in: [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:116](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L116)
 
 Resource instance filter options.
  ResourceInstanceFilters
@@ -15,7 +15,7 @@ Resource instance filter options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="resourceid"></a> `resourceId?` | `string` | Filter by parent resource ID | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:118](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L118) |
-| <a id="locationid"></a> `locationId?` | `string` | Filter by business location ID | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:120](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L120) |
-| <a id="status"></a> `status?` | [`ResourceInstanceStatus`](../enumerations/ResourceInstanceStatus.md)[] | Filter by operational statuses | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:122](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L122) |
-| <a id="isavailable"></a> `isAvailable?` | `boolean` | Filter by assignment availability | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:124](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L124) |
+| <a id="resourceid"></a> `resourceId?` | `string` | Filter by parent resource ID | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:118](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L118) |
+| <a id="locationid"></a> `locationId?` | `string` | Filter by business location ID | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:120](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L120) |
+| <a id="status"></a> `status?` | [`ResourceInstanceStatus`](../enumerations/ResourceInstanceStatus.md)[] | Filter by operational statuses | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:122](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L122) |
+| <a id="isavailable"></a> `isAvailable?` | `boolean` | Filter by assignment availability | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:124](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L124) |

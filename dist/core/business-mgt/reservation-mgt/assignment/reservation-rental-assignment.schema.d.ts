@@ -48,6 +48,8 @@ export declare const RentalUnitConditionSchema: z.ZodObject<{
  * @property {string} [locationId] - Business location where the rental unit is assigned
  * @property {string} reservationId - Rental reservation ID
  * @property {string} rentalInstanceId - Physical rental resource instance ID
+ * @property {number} slotStart - Reservation slot start, copied from reservation at assignment time
+ * @property {number} slotEnd - Reservation slot end, copied from reservation at assignment time
  * @property {RentalAssignmentType} assignmentType - Assignment lock type
  * @property {RentalAssignmentStatus} status - Current assignment status
  * @property {number} assignedAt - Assignment timestamp
@@ -65,6 +67,8 @@ export declare const RentalAssignmentSchema: z.ZodObject<{
     locationId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     reservationId: z.ZodString;
     rentalInstanceId: z.ZodString;
+    slotStart: z.ZodNumber;
+    slotEnd: z.ZodNumber;
     assignmentType: z.ZodDefault<z.ZodEnum<typeof RentalAssignmentType>>;
     status: z.ZodDefault<z.ZodEnum<typeof RentalAssignmentStatus>>;
     assignedAt: z.ZodNumber;
@@ -96,6 +100,8 @@ export declare const CreateRentalAssignmentSchema: z.ZodObject<{
     locationId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     notes: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     reservationId: z.ZodString;
+    slotStart: z.ZodNumber;
+    slotEnd: z.ZodNumber;
     assignmentType: z.ZodDefault<z.ZodEnum<typeof RentalAssignmentType>>;
     assignedAt: z.ZodNumber;
     assignedBy: z.ZodOptional<z.ZodNullable<z.ZodString>>;
@@ -126,6 +132,8 @@ export declare const UpdateRentalAssignmentSchema: z.ZodObject<{
     locationId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     notes: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     reservationId: z.ZodOptional<z.ZodString>;
+    slotStart: z.ZodOptional<z.ZodNumber>;
+    slotEnd: z.ZodOptional<z.ZodNumber>;
     assignmentType: z.ZodOptional<z.ZodDefault<z.ZodEnum<typeof RentalAssignmentType>>>;
     assignedAt: z.ZodOptional<z.ZodNumber>;
     assignedBy: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;

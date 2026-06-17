@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.54**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.55**](../../README.md)
 
 ***
 
@@ -13,7 +13,7 @@ type BreakTime = {
 };
 ```
 
-Defined in: [src/core/type-definitions/business-definitions.ts:287](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/type-definitions/business-definitions.ts#L287)
+Defined in: [src/core/type-definitions/business-definitions.ts:287](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/type-definitions/business-definitions.ts#L287)
 
 Break time schema (alias for TimeSlotSchema).
 
@@ -21,5 +21,5 @@ Break time schema (alias for TimeSlotSchema).
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="start"></a> `start` | `string` | [src/core/type-definitions/business-definitions.ts:241](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/type-definitions/business-definitions.ts#L241) |
-| <a id="end"></a> `end` | `string` | [src/core/type-definitions/business-definitions.ts:242](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/type-definitions/business-definitions.ts#L242) |
+| <a id="start"></a> `start` | `string` | [src/core/type-definitions/business-definitions.ts:241](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/type-definitions/business-definitions.ts#L241) |
+| <a id="end"></a> `end` | `string` | [src/core/type-definitions/business-definitions.ts:242](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/type-definitions/business-definitions.ts#L242) |

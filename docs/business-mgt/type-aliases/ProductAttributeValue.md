@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.54**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.55**](../../README.md)
 
 ***
 
@@ -13,7 +13,7 @@ type ProductAttributeValue = {
 };
 ```
 
-Defined in: [src/core/business-mgt/product-management/product-config.schema.ts:452](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/business-mgt/product-management/product-config.schema.ts#L452)
+Defined in: [src/core/business-mgt/product-management/product-config.schema.ts:452](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/product-management/product-config.schema.ts#L452)
 
 Product attribute value schema.
 Stores actual attribute values for products.
@@ -22,5 +22,5 @@ Stores actual attribute values for products.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="attributedefid"></a> `attributeDefId` | `string` | [src/core/business-mgt/product-management/product-config.schema.ts:111](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/business-mgt/product-management/product-config.schema.ts#L111) |
-| <a id="value"></a> `value` | `string` \| `number` \| `boolean` | [src/core/business-mgt/product-management/product-config.schema.ts:112](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/business-mgt/product-management/product-config.schema.ts#L112) |
+| <a id="attributedefid"></a> `attributeDefId` | `string` | [src/core/business-mgt/product-management/product-config.schema.ts:111](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/product-management/product-config.schema.ts#L111) |
+| <a id="value"></a> `value` | `string` \| `number` \| `boolean` | [src/core/business-mgt/product-management/product-config.schema.ts:112](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/product-management/product-config.schema.ts#L112) |

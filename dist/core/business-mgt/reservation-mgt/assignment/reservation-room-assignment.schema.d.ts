@@ -30,6 +30,8 @@ export declare enum RoomAssignmentType {
  * @property {string} [locationId] - Business location where the room is assigned
  * @property {string} reservationId - Room reservation ID
  * @property {string} roomInstanceId - Physical room resource instance ID
+ * @property {number} slotStart - Reservation slot start, copied from reservation at assignment time
+ * @property {number} slotEnd - Reservation slot end, copied from reservation at assignment time
  * @property {RoomAssignmentType} assignmentType - Assignment lock type
  * @property {RoomAssignmentStatus} status - Current assignment status
  * @property {number} assignedAt - Assignment timestamp
@@ -46,6 +48,8 @@ export declare const RoomAssignmentSchema: z.ZodObject<{
     locationId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     reservationId: z.ZodString;
     roomInstanceId: z.ZodString;
+    slotStart: z.ZodNumber;
+    slotEnd: z.ZodNumber;
     assignmentType: z.ZodDefault<z.ZodEnum<typeof RoomAssignmentType>>;
     status: z.ZodDefault<z.ZodEnum<typeof RoomAssignmentStatus>>;
     assignedAt: z.ZodNumber;
@@ -64,6 +68,8 @@ export declare const CreateRoomAssignmentSchema: z.ZodObject<{
     locationId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     notes: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     reservationId: z.ZodString;
+    slotStart: z.ZodNumber;
+    slotEnd: z.ZodNumber;
     assignmentType: z.ZodDefault<z.ZodEnum<typeof RoomAssignmentType>>;
     assignedAt: z.ZodNumber;
     assignedBy: z.ZodOptional<z.ZodNullable<z.ZodString>>;
@@ -81,6 +87,8 @@ export declare const UpdateRoomAssignmentSchema: z.ZodObject<{
     locationId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     notes: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     reservationId: z.ZodOptional<z.ZodString>;
+    slotStart: z.ZodOptional<z.ZodNumber>;
+    slotEnd: z.ZodOptional<z.ZodNumber>;
     assignmentType: z.ZodOptional<z.ZodDefault<z.ZodEnum<typeof RoomAssignmentType>>>;
     assignedAt: z.ZodOptional<z.ZodNumber>;
     assignedBy: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.54**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.55**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const CreateAppointmentAdditionalInfoSchema: ZodObject<CreateAppointmentAdditionalInfo>;
 ```
 
-Defined in: [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:70](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L70)
+Defined in: [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:70](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L70)
 
 Schema for creating appointment additional info.
 Omits auto-generated fields.

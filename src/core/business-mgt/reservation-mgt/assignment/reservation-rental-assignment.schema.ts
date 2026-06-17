@@ -62,6 +62,8 @@ export const RentalUnitConditionSchema = z.object({
  * @property {string} [locationId] - Business location where the rental unit is assigned
  * @property {string} reservationId - Rental reservation ID
  * @property {string} rentalInstanceId - Physical rental resource instance ID
+ * @property {number} slotStart - Reservation slot start, copied from reservation at assignment time
+ * @property {number} slotEnd - Reservation slot end, copied from reservation at assignment time
  * @property {RentalAssignmentType} assignmentType - Assignment lock type
  * @property {RentalAssignmentStatus} status - Current assignment status
  * @property {number} assignedAt - Assignment timestamp
@@ -76,6 +78,8 @@ export const RentalAssignmentSchema = BaseModelSchema.safeExtend({
     locationId: z.string().nullable().optional().describe("Business location ID where the assigned rental unit is located."),
     reservationId: z.string().describe("RentalReservation ID. This link is immutable after assignment creation."),
     rentalInstanceId: z.string().describe("ResourceInstance ID for the specific rental unit assigned to the reservation."),
+    slotStart: z.number().int().positive().describe("Reservation slot start — copied from reservation at assignment time"),
+    slotEnd: z.number().int().positive().describe("Reservation slot end — copied from reservation at assignment time"),
     assignmentType: z.enum(RentalAssignmentType).default(RentalAssignmentType.SOFT).describe("Assignment lock type. Soft assignments may be substituted; hard assignments are customer or staff locked."),
     status: z.enum(RentalAssignmentStatus).default(RentalAssignmentStatus.ASSIGNED).describe("Current assignment lifecycle status."),
     assignedAt: z.number().int().positive().describe("Unix timestamp when this assignment was made."),

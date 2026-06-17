@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.54**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.55**](../../README.md)
 
 ***
 
@@ -44,7 +44,7 @@ type CreateReservationSettings = {
 };
 ```
 
-Defined in: [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:146](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L146)
+Defined in: [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:146](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L146)
 
 Schema for creating reservation settings.
 Omits auto-generated fields.
@@ -53,10 +53,10 @@ Omits auto-generated fields.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="locationid"></a> `locationId?` | `string` \| `null` | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:106](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L106) |
-| <a id="table"></a> `table?` | \| \{ `settingType`: [`ReservationSettingType`](../../type-definitions/enumerations/ReservationSettingType.md); `defaultDurationMinutes`: `number`; `turnoverMinutes`: `number`; `slotIntervalMinutes`: `number`; `maxPartySize?`: `number` \| `null`; `advanceBookingDays`: `number`; \} \| `null` | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:107](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L107) |
-| <a id="room"></a> `room?` | \| \{ `checkInTime`: `string`; `checkOutTime`: `string`; `minStayNights`: `number`; `maxStayNights?`: `number` \| `null`; `advanceBookingDays`: `number`; \} \| `null` | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:108](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L108) |
-| <a id="rental"></a> `rental?` | \| \{ `tiers`: \{ `id`: `string`; `name`: `string`; `durationMinutes`: `number`; `sortOrder`: `number`; \}[]; `requireWaiver`: `boolean`; `requireIdVerification`: `boolean`; `defaultDepositPercent?`: `number` \| `null`; \} \| `null` | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:109](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L109) |
-| <a id="supporttablereservations"></a> `supportTableReservations` | `boolean` | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:110](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L110) |
-| <a id="supportroomreservations"></a> `supportRoomReservations` | `boolean` | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:111](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L111) |
-| <a id="supportrentalreservations"></a> `supportRentalReservations` | `boolean` | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:112](https://github.com/wiil-io/core-js/blob/0a3c1fe21edf560853760c0ca06994b85d3d2555/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L112) |
+| <a id="locationid"></a> `locationId?` | `string` \| `null` | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:106](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L106) |
+| <a id="table"></a> `table?` | \| \{ `settingType`: [`ReservationSettingType`](../../type-definitions/enumerations/ReservationSettingType.md); `defaultDurationMinutes`: `number`; `turnoverMinutes`: `number`; `slotIntervalMinutes`: `number`; `maxPartySize?`: `number` \| `null`; `advanceBookingDays`: `number`; \} \| `null` | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:107](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L107) |
+| <a id="room"></a> `room?` | \| \{ `checkInTime`: `string`; `checkOutTime`: `string`; `minStayNights`: `number`; `maxStayNights?`: `number` \| `null`; `advanceBookingDays`: `number`; \} \| `null` | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:108](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L108) |
+| <a id="rental"></a> `rental?` | \| \{ `tiers`: \{ `id`: `string`; `name`: `string`; `durationMinutes`: `number`; `sortOrder`: `number`; \}[]; `requireWaiver`: `boolean`; `requireIdVerification`: `boolean`; `defaultDepositPercent?`: `number` \| `null`; \} \| `null` | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:109](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L109) |
+| <a id="supporttablereservations"></a> `supportTableReservations` | `boolean` | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:110](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L110) |
+| <a id="supportroomreservations"></a> `supportRoomReservations` | `boolean` | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:111](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L111) |
+| <a id="supportrentalreservations"></a> `supportRentalReservations` | `boolean` | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:112](https://github.com/wiil-io/core-js/blob/e1222f052a98dd4a87fde9421dcfb90098013602/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L112) |
