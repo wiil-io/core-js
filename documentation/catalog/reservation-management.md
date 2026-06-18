@@ -534,6 +534,10 @@ Defines a reservable type or category, including its capacity model, pricing mod
 }
 ```
 
+#### Create Behavior
+
+Resource creation embeds instance definitions (each a ResourceInstance without `resourceId`, assigned by the server) and **requires at least one instance for every resource type except `table`**, where instances may be empty or omitted. The requirement is not enforced on update. See [resource-catalog.md](reservation-management/resource-catalog.md#create-schema) for the full create schema and examples.
+
 ---
 
 ### ResourceInstance

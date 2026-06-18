@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { ResourceReservationDurationUnit, ResourceType } from "../../../type-definitions";
 import { ServiceDepositStrategy } from "../../bookings.shared.schema";
-import type { ResourceInstance } from "./reservation-resource-instance.schema";
+import { type ResourceInstance } from "./reservation-resource-instance.schema";
 /**
  * @fileoverview Reservation resource schema definitions.
  * @module business-mgt/reservation-mgt/resource
@@ -328,7 +328,10 @@ export declare const ResourceSchema: z.ZodObject<{
 }, z.core.$strip>;
 /**
  * Schema for creating a new reservation resource.
- * Omits auto-generated fields.
+ *
+ * @remarks
+ * A reservation resource must be created with at least one instance, except for
+ * table resources, where instances are optional at creation time.
  */
 export declare const CreateResourceSchema: z.ZodObject<{
     capacity: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
@@ -389,7 +392,6 @@ export declare const CreateResourceSchema: z.ZodObject<{
         skillLevel: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     }, z.core.$strip>], "kind">>>;
     location: z.ZodOptional<z.ZodString>;
-    instances: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodString>>>;
     turnoverMinutes: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
     bookingRules: z.ZodOptional<z.ZodNullable<z.ZodObject<{
         onlineEnabled: z.ZodDefault<z.ZodBoolean>;
@@ -427,10 +429,22 @@ export declare const CreateResourceSchema: z.ZodObject<{
         anchorItemId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
         absoluteIndex: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
     }, z.core.$strip>>;
+    instances: z.ZodDefault<z.ZodArray<z.ZodObject<{
+        code: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+        status: z.ZodDefault<z.ZodEnum<typeof import("./reservation-resource-instance.schema").ResourceInstanceStatus>>;
+        name: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+        locationId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+        isAvailable: z.ZodDefault<z.ZodBoolean>;
+        attributes: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodObject<{
+            key: z.ZodString;
+            value: z.ZodString;
+        }, z.core.$strip>>>>;
+        resourceRevisionId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    }, z.core.$strip>>>;
 }, z.core.$strip>;
 /**
  * Schema for updating an existing reservation resource.
- * All fields optional except id.
+ * All fields optional except id. The create-time instance requirement is not enforced on update.
  */
 export declare const UpdateResourceSchema: z.ZodObject<{
     capacity: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
@@ -491,7 +505,6 @@ export declare const UpdateResourceSchema: z.ZodObject<{
         skillLevel: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     }, z.core.$strip>], "kind">>>>;
     location: z.ZodOptional<z.ZodOptional<z.ZodString>>;
-    instances: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodString>>>>;
     turnoverMinutes: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
     bookingRules: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodObject<{
         onlineEnabled: z.ZodDefault<z.ZodBoolean>;
@@ -529,6 +542,18 @@ export declare const UpdateResourceSchema: z.ZodObject<{
         anchorItemId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
         absoluteIndex: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
     }, z.core.$strip>>>;
+    instances: z.ZodOptional<z.ZodDefault<z.ZodArray<z.ZodObject<{
+        code: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+        status: z.ZodDefault<z.ZodEnum<typeof import("./reservation-resource-instance.schema").ResourceInstanceStatus>>;
+        name: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+        locationId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+        isAvailable: z.ZodDefault<z.ZodBoolean>;
+        attributes: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodObject<{
+            key: z.ZodString;
+            value: z.ZodString;
+        }, z.core.$strip>>>>;
+        resourceRevisionId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    }, z.core.$strip>>>>;
     id: z.ZodString;
 }, z.core.$strip>;
 export type ResourceChannelMapping = z.infer<typeof ResourceChannelMappingSchema>;

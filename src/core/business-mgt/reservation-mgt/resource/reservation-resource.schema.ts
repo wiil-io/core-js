@@ -3,7 +3,7 @@ import { BaseModelSchema } from "../../../base.schema";
 import { CreateDisplayOrderPlacementSchema } from "../../../type-definitions/display-order";
 import { ResourceReservationDurationUnit, ResourceType } from "../../../type-definitions";
 import { ServiceBookingRulesSchema, ServiceDepositStrategy } from "../../bookings.shared.schema";
-import type { ResourceInstance } from "./reservation-resource-instance.schema";
+import { CreateResourceInstanceSchema, type ResourceInstance } from "./reservation-resource-instance.schema";
 
 /**
  * @fileoverview Reservation resource schema definitions.
@@ -341,22 +341,43 @@ export const ResourceSchema = BaseModelSchema.safeExtend({
 // ============================================================================
 
 /**
- * Schema for creating a new reservation resource.
- * Omits auto-generated fields.
+ * Object shape for creating a reservation resource.
+ * Omits auto-generated fields and replaces the read-model `instances` ID list with
+ * embedded instance definitions to be created alongside the resource.
  */
-export const CreateResourceSchema = ResourceSchema.omit({
+const CreateResourceObjectSchema = ResourceSchema.omit({
     id: true,
     createdAt: true,
     updatedAt: true,
+    // Replaced below with embedded create-instance definitions (no parent resourceId)
+    instances: true,
 }).safeExtend({
     placement: CreateDisplayOrderPlacementSchema.optional().describe("Optional placement for display ordering."),
+    instances: z.array(CreateResourceInstanceSchema.omit({ resourceId: true })).default([]).describe("Physical instances to create with this resource. At least one is required for every resource type except table; the parent resource ID is assigned by the server."),
+});
+
+/**
+ * Schema for creating a new reservation resource.
+ *
+ * @remarks
+ * A reservation resource must be created with at least one instance, except for
+ * table resources, where instances are optional at creation time.
+ */
+export const CreateResourceSchema = CreateResourceObjectSchema.superRefine((data, ctx) => {
+    if (data.resourceType !== ResourceType.TABLE && data.instances.length < 1) {
+        ctx.addIssue({
+            code: "custom",
+            path: ["instances"],
+            message: "A reservation resource must have at least one instance, except for table resources",
+        });
+    }
 });
 
 /**
  * Schema for updating an existing reservation resource.
- * All fields optional except id.
+ * All fields optional except id. The create-time instance requirement is not enforced on update.
  */
-export const UpdateResourceSchema = CreateResourceSchema.partial().safeExtend({
+export const UpdateResourceSchema = CreateResourceObjectSchema.partial().safeExtend({
     id: z.string().describe("Unique identifier of the reservation resource to update."),
 });
 

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.62**](../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.63**](../README.md)
 
 ***
 
@@ -400,8 +400,8 @@ Central export point for business management schemas.
 | [ChecklistTemplateItem](type-aliases/ChecklistTemplateItem.md) | Checklist template item schema. Defines a pickup or return inspection item used by rental reservations. |
 | [ResourceChannelMapping](type-aliases/ResourceChannelMapping.md) | Resource channel mapping schema. Maps a reservation resource to an external platform resource ID. |
 | [Resource](type-aliases/Resource.md) | Resource schema. Defines a reservable resource category such as a table type, room type, or rental item type. |
-| [CreateResource](type-aliases/CreateResource.md) | Schema for creating a new reservation resource. Omits auto-generated fields. |
-| [UpdateResource](type-aliases/UpdateResource.md) | Schema for updating an existing reservation resource. All fields optional except id. |
+| [CreateResource](type-aliases/CreateResource.md) | Schema for creating a new reservation resource. |
+| [UpdateResource](type-aliases/UpdateResource.md) | Schema for updating an existing reservation resource. All fields optional except id. The create-time instance requirement is not enforced on update. |
 | [ResourceCapacity](type-aliases/ResourceCapacity.md) | Resource capacity schema. Discriminated union of mode-specific reservation capacity models. |
 | [ResourcePricingStrategy](type-aliases/ResourcePricingStrategy.md) | Resource pricing strategy schema. Discriminated union of supported reservation pricing models. |
 | [ResourceInstanceRef](type-aliases/ResourceInstanceRef.md) | - |
@@ -694,8 +694,8 @@ Central export point for business management schemas.
 | [ResourceAttributeSchema](variables/ResourceAttributeSchema.md) | Resource attribute schema. Stores flexible key/value attributes for resource catalog filtering and integrations. |
 | [ChecklistTemplateItemSchema](variables/ChecklistTemplateItemSchema.md) | Checklist template item schema. Defines a pickup or return inspection item used by rental reservations. |
 | [ResourceSchema](variables/ResourceSchema.md) | Resource schema. Defines a reservable resource category such as a table type, room type, or rental item type. |
-| [CreateResourceSchema](variables/CreateResourceSchema.md) | Schema for creating a new reservation resource. Omits auto-generated fields. |
-| [UpdateResourceSchema](variables/UpdateResourceSchema.md) | Schema for updating an existing reservation resource. All fields optional except id. |
+| [CreateResourceSchema](variables/CreateResourceSchema.md) | Schema for creating a new reservation resource. |
+| [UpdateResourceSchema](variables/UpdateResourceSchema.md) | Schema for updating an existing reservation resource. All fields optional except id. The create-time instance requirement is not enforced on update. |
 | [BusinessResourceCatalogSchema](variables/BusinessResourceCatalogSchema.md) | Business resource catalog schema. Represents the complete reservation resource catalog for a business context. |
 | [ResourceDefinitionSchema](variables/ResourceDefinitionSchema.md) | Resource definition schema. Represents the stable identity for a versioned reservation resource catalog. |
 | [ResourceRevisionSchema](variables/ResourceRevisionSchema.md) | Resource revision schema. Represents a specific editable or published version of a resource definition. |

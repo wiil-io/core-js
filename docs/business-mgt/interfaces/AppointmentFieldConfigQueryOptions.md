@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.62**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.63**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: AppointmentFieldConfigQueryOptions
 
-Defined in: [src/core/business-mgt/service-management/appointment-field-config.schema.ts:114](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/service-management/appointment-field-config.schema.ts#L114)
+Defined in: [src/core/business-mgt/service-management/appointment-field-config.schema.ts:114](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/service-management/appointment-field-config.schema.ts#L114)
 
 Appointment field config query options.
  AppointmentFieldConfigQueryOptions
@@ -15,7 +15,7 @@ Appointment field config query options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/service-management/appointment-field-config.schema.ts:116](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/service-management/appointment-field-config.schema.ts#L116) |
-| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/service-management/appointment-field-config.schema.ts:118](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/service-management/appointment-field-config.schema.ts#L118) |
-| <a id="filters"></a> `filters?` | [`AppointmentFieldConfigFilters`](AppointmentFieldConfigFilters.md) | Optional filters | [src/core/business-mgt/service-management/appointment-field-config.schema.ts:120](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/service-management/appointment-field-config.schema.ts#L120) |
-| <a id="sorting"></a> `sorting?` | [`AppointmentFieldConfigSorting`](AppointmentFieldConfigSorting.md) | Optional sorting | [src/core/business-mgt/service-management/appointment-field-config.schema.ts:122](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/service-management/appointment-field-config.schema.ts#L122) |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/service-management/appointment-field-config.schema.ts:116](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/service-management/appointment-field-config.schema.ts#L116) |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/service-management/appointment-field-config.schema.ts:118](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/service-management/appointment-field-config.schema.ts#L118) |
+| <a id="filters"></a> `filters?` | [`AppointmentFieldConfigFilters`](AppointmentFieldConfigFilters.md) | Optional filters | [src/core/business-mgt/service-management/appointment-field-config.schema.ts:120](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/service-management/appointment-field-config.schema.ts#L120) |
+| <a id="sorting"></a> `sorting?` | [`AppointmentFieldConfigSorting`](AppointmentFieldConfigSorting.md) | Optional sorting | [src/core/business-mgt/service-management/appointment-field-config.schema.ts:122](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/service-management/appointment-field-config.schema.ts#L122) |

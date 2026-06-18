@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.62**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.63**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: ServiceConversationType
 
-Defined in: [src/core/type-definitions/conversation.type.definition.ts:19](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/type-definitions/conversation.type.definition.ts#L19)
+Defined in: [src/core/type-definitions/conversation.type.definition.ts:19](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/type-definitions/conversation.type.definition.ts#L19)
 
 Service conversation channel types.
 
@@ -21,10 +21,10 @@ ServiceConversationConfigSchema - Uses this for channel identification
 
 | Enumeration Member | Value | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="ott_call"></a> `OTT_CALL` | `"OTT_CALL"` | WebRTC or OTT voice call | [src/core/type-definitions/conversation.type.definition.ts:21](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/type-definitions/conversation.type.definition.ts#L21) |
-| <a id="ott_chat"></a> `OTT_CHAT` | `"OTT_CHAT"` | WebRTC or OTT text chat | [src/core/type-definitions/conversation.type.definition.ts:23](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/type-definitions/conversation.type.definition.ts#L23) |
-| <a id="telephony_call"></a> `TELEPHONY_CALL` | `"TELEPHONY_CALL"` | Traditional PSTN/SIP telephony call | [src/core/type-definitions/conversation.type.definition.ts:25](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/type-definitions/conversation.type.definition.ts#L25) |
-| <a id="sms"></a> `SMS` | `"SMS"` | SMS text messaging | [src/core/type-definitions/conversation.type.definition.ts:27](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/type-definitions/conversation.type.definition.ts#L27) |
-| <a id="email"></a> `EMAIL` | `"EMAIL"` | Email communication | [src/core/type-definitions/conversation.type.definition.ts:29](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/type-definitions/conversation.type.definition.ts#L29) |
-| <a id="whatsapp"></a> `WHATSAPP` | `"WHATSAPP"` | WhatsApp messaging | [src/core/type-definitions/conversation.type.definition.ts:31](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/type-definitions/conversation.type.definition.ts#L31) |
-| <a id="telegram"></a> `TELEGRAM` | `"TELEGRAM"` | Telegram messaging | [src/core/type-definitions/conversation.type.definition.ts:33](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/type-definitions/conversation.type.definition.ts#L33) |
+| <a id="ott_call"></a> `OTT_CALL` | `"OTT_CALL"` | WebRTC or OTT voice call | [src/core/type-definitions/conversation.type.definition.ts:21](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/type-definitions/conversation.type.definition.ts#L21) |
+| <a id="ott_chat"></a> `OTT_CHAT` | `"OTT_CHAT"` | WebRTC or OTT text chat | [src/core/type-definitions/conversation.type.definition.ts:23](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/type-definitions/conversation.type.definition.ts#L23) |
+| <a id="telephony_call"></a> `TELEPHONY_CALL` | `"TELEPHONY_CALL"` | Traditional PSTN/SIP telephony call | [src/core/type-definitions/conversation.type.definition.ts:25](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/type-definitions/conversation.type.definition.ts#L25) |
+| <a id="sms"></a> `SMS` | `"SMS"` | SMS text messaging | [src/core/type-definitions/conversation.type.definition.ts:27](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/type-definitions/conversation.type.definition.ts#L27) |
+| <a id="email"></a> `EMAIL` | `"EMAIL"` | Email communication | [src/core/type-definitions/conversation.type.definition.ts:29](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/type-definitions/conversation.type.definition.ts#L29) |
+| <a id="whatsapp"></a> `WHATSAPP` | `"WHATSAPP"` | WhatsApp messaging | [src/core/type-definitions/conversation.type.definition.ts:31](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/type-definitions/conversation.type.definition.ts#L31) |
+| <a id="telegram"></a> `TELEGRAM` | `"TELEGRAM"` | Telegram messaging | [src/core/type-definitions/conversation.type.definition.ts:33](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/type-definitions/conversation.type.definition.ts#L33) |

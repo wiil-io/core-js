@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.62**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.63**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: MessageType
 
-Defined in: [src/core/conversation/conversation-message.schema.ts:20](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/conversation/conversation-message.schema.ts#L20)
+Defined in: [src/core/conversation/conversation-message.schema.ts:20](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/conversation/conversation-message.schema.ts#L20)
 
 Message type enum for distinguishing message senders.
 
@@ -17,7 +17,7 @@ routing, formatting, and context tracking.
 
 | Enumeration Member | Value | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="user"></a> `USER` | `"user"` | Message sent by end user/customer | [src/core/conversation/conversation-message.schema.ts:22](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/conversation/conversation-message.schema.ts#L22) |
-| <a id="agent"></a> `AGENT` | `"assistant"` | Message sent by AI agent | [src/core/conversation/conversation-message.schema.ts:24](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/conversation/conversation-message.schema.ts#L24) |
-| <a id="human_agent"></a> `HUMAN_AGENT` | `"human_agent"` | Message sent by human agent (live support) | [src/core/conversation/conversation-message.schema.ts:26](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/conversation/conversation-message.schema.ts#L26) |
-| <a id="system"></a> `SYSTEM` | `"system"` | System-generated message (events, notifications) | [src/core/conversation/conversation-message.schema.ts:28](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/conversation/conversation-message.schema.ts#L28) |
+| <a id="user"></a> `USER` | `"user"` | Message sent by end user/customer | [src/core/conversation/conversation-message.schema.ts:22](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/conversation/conversation-message.schema.ts#L22) |
+| <a id="agent"></a> `AGENT` | `"assistant"` | Message sent by AI agent | [src/core/conversation/conversation-message.schema.ts:24](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/conversation/conversation-message.schema.ts#L24) |
+| <a id="human_agent"></a> `HUMAN_AGENT` | `"human_agent"` | Message sent by human agent (live support) | [src/core/conversation/conversation-message.schema.ts:26](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/conversation/conversation-message.schema.ts#L26) |
+| <a id="system"></a> `SYSTEM` | `"system"` | System-generated message (events, notifications) | [src/core/conversation/conversation-message.schema.ts:28](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/conversation/conversation-message.schema.ts#L28) |

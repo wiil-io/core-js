@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.62**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.63**](../../README.md)
 
 ***
 
@@ -13,7 +13,7 @@ type RoomRatePerNight = {
 };
 ```
 
-Defined in: [src/core/business-mgt/reservation-mgt/reservation-room.schema.ts:102](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/reservation-mgt/reservation-room.schema.ts#L102)
+Defined in: [src/core/business-mgt/reservation-mgt/reservation-room.schema.ts:102](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/reservation-mgt/reservation-room.schema.ts#L102)
 
 Room rate per night schema.
 Captures the nightly rate snapshot for a room reservation.
@@ -22,5 +22,5 @@ Captures the nightly rate snapshot for a room reservation.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="date"></a> `date` | `string` | [src/core/business-mgt/reservation-mgt/reservation-room.schema.ts:23](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/reservation-mgt/reservation-room.schema.ts#L23) |
-| <a id="amount"></a> `amount` | `number` | [src/core/business-mgt/reservation-mgt/reservation-room.schema.ts:24](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/reservation-mgt/reservation-room.schema.ts#L24) |
+| <a id="date"></a> `date` | `string` | [src/core/business-mgt/reservation-mgt/reservation-room.schema.ts:23](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/reservation-mgt/reservation-room.schema.ts#L23) |
+| <a id="amount"></a> `amount` | `number` | [src/core/business-mgt/reservation-mgt/reservation-room.schema.ts:24](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/reservation-mgt/reservation-room.schema.ts#L24) |

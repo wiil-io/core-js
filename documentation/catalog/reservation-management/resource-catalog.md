@@ -387,6 +387,57 @@ Defines a reservable type, including capacity, pricing, booking behavior, checkl
 }
 ```
 
+### Create Schema
+
+Omits: `id`, `createdAt`, `updatedAt`.
+
+On create, the read-model `instances` (an array of instance ID strings) is replaced by **embedded instance definitions** — each a [ResourceInstance](#resourceinstance) without `resourceId` (the parent resource ID is assigned by the server once the resource is created).
+
+**Instance requirement:** A resource must be created with **at least one instance**, **except** when `resourceType` is `table`, where `instances` may be empty or omitted.
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| instances | array | Conditional | Instance definitions (each without `resourceId`). At least one is required unless `resourceType` is `table`. |
+
+### Validation Rules
+
+| Rule | Error Message |
+|------|---------------|
+| instances ≥ 1 for non-table resources | "A reservation resource must have at least one instance, except for table resources" |
+
+### Update Schema
+
+All fields optional except `id`. The create-time instance requirement is not enforced on update.
+
+### Create Example (non-table resource with instances)
+
+```json
+{
+  "resourceType": "room",
+  "name": "King Suite",
+  "capacityConfig": { "kind": "occupancy", "standard": 2, "max": 4 },
+  "pricing": {
+    "kind": "dayOfWeek",
+    "rates": { "mon": 220, "tue": 220, "wed": 240, "thu": 260, "fri": 320, "sat": 340, "sun": 250 }
+  },
+  "instances": [
+    { "name": "Room 204", "code": "204", "status": "available" },
+    { "name": "Room 205", "code": "205", "status": "available" }
+  ]
+}
+```
+
+### Create Example (table resource — instances optional)
+
+```json
+{
+  "resourceType": "table",
+  "name": "2-Top",
+  "capacityConfig": { "kind": "range", "min": 1, "max": 2 },
+  "pricing": { "kind": "none" }
+}
+```
+
 ---
 
 ## ResourceInstance
