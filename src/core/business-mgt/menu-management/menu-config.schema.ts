@@ -1,6 +1,7 @@
 import z from "zod";
 import { BaseModelSchema } from "../../base.schema";
 import { MenuItemDaypartSchema } from "../order.schema";
+import { CreateMenuItemVariantSchema } from "./menu-item-variant.schema";
 
 /**
  * @fileoverview Business menu configuration schema definitions.
@@ -143,6 +144,11 @@ export const CreateMenuCategorySchema = MenuCategorySchema.omit({
 /**
  * Schema for creating a new business menu item.
  * Omits auto-generated fields and allows optional category specification.
+ *
+ * @remarks
+ * A menu item must be created with at least one variant. Nested variants use the
+ * menu item variant create schema with `menuItemId` omitted; the parent link is
+ * assigned by the server once the menu item is created.
  */
 export const CreateBusinessMenuItemSchema = BusinessMenuItemSchema.omit({
     id: true,
@@ -156,6 +162,7 @@ export const CreateBusinessMenuItemSchema = BusinessMenuItemSchema.omit({
     lastOrderedAt: true,
 }).safeExtend({
     categoryId: z.string().nullable().optional(),
+    variants: z.array(CreateMenuItemVariantSchema.omit({ menuItemId: true })).min(1, "A menu item must have at least one variant").describe("Variants to create with this menu item. At least one is required; the parent menu item ID is assigned by the server."),
 });
 
 /**

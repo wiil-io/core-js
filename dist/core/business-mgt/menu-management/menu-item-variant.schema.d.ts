@@ -67,8 +67,8 @@ export declare const CreateMenuItemVariantSchema: z.ZodObject<{
     isDefault: z.ZodDefault<z.ZodBoolean>;
     isActive: z.ZodDefault<z.ZodBoolean>;
     price: z.ZodNumber;
-    isAvailable: z.ZodDefault<z.ZodBoolean>;
     menuItemId: z.ZodString;
+    isAvailable: z.ZodDefault<z.ZodBoolean>;
     variantChannelMappings: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodObject<{
         channelId: z.ZodString;
         externalVariantId: z.ZodString;
@@ -85,8 +85,8 @@ export declare const UpdateMenuItemVariantSchema: z.ZodObject<{
     isDefault: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
     isActive: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
     price: z.ZodOptional<z.ZodNumber>;
-    isAvailable: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
     menuItemId: z.ZodOptional<z.ZodString>;
+    isAvailable: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
     variantChannelMappings: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodObject<{
         channelId: z.ZodString;
         externalVariantId: z.ZodString;

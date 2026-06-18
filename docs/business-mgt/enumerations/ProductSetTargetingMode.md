@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.59**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.60**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: ProductSetTargetingMode
 
-Defined in: [src/core/business-mgt/product-management/product-set.schema.ts:41](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/product-management/product-set.schema.ts#L41)
+Defined in: [src/core/business-mgt/product-management/product-set.schema.ts:41](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/product-management/product-set.schema.ts#L41)
 
 Product set targeting mode.
 Determines how products are selected for the set.
@@ -15,5 +15,5 @@ Determines how products are selected for the set.
 
 | Enumeration Member | Value | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="explicit"></a> `EXPLICIT` | `"EXPLICIT"` | Set includes explicitly listed products | [src/core/business-mgt/product-management/product-set.schema.ts:43](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/product-management/product-set.schema.ts#L43) |
-| <a id="selector"></a> `SELECTOR` | `"SELECTOR"` | Set includes products matching selector criteria | [src/core/business-mgt/product-management/product-set.schema.ts:45](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/product-management/product-set.schema.ts#L45) |
+| <a id="explicit"></a> `EXPLICIT` | `"EXPLICIT"` | Set includes explicitly listed products | [src/core/business-mgt/product-management/product-set.schema.ts:43](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/product-management/product-set.schema.ts#L43) |
+| <a id="selector"></a> `SELECTOR` | `"SELECTOR"` | Set includes products matching selector criteria | [src/core/business-mgt/product-management/product-set.schema.ts:45](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/product-management/product-set.schema.ts#L45) |

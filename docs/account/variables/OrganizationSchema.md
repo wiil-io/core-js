@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.59**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.60**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const OrganizationSchema: ZodObject<Organization>;
 ```
 
-Defined in: [src/core/account/organization.schema.ts:81](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/account/organization.schema.ts#L81)
+Defined in: [src/core/account/organization.schema.ts:81](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/account/organization.schema.ts#L81)
 
 Zod schema for organization entity.
 

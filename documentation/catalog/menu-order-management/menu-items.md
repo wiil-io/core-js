@@ -122,11 +122,19 @@ Represents individual menu items with complete details for ordering, display, an
 
 Omits: `id`, `createdAt`, `updatedAt`, `category`, `orderCount`, `recentOrderCount`, `lastOrderedAt`
 
+Adds: `variants` (**required**, at least one).
+
 Note: `categoryId` becomes optional (nullable) for creation. Analytics fields are view-model-only and computed server-side.
+
+**Required variants:** A menu item must be created with at least one variant. Each entry uses the [MenuItemVariant create schema](#menuitemvariant) with `menuItemId` omitted — the parent link is assigned by the server once the menu item is created.
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| variants | array | Yes (min 1) | Variants to create with this menu item (each without `menuItemId`) |
 
 ### Update Schema
 
-All fields optional except `id` (required).
+All fields optional except `id` (required). `variants` is not enforced on update.
 
 ### Validation Rules
 
@@ -135,6 +143,25 @@ All fields optional except `id` (required).
 | name minimum length 1 | "Menu item name is required" |
 | price >= 0 | Non-negative validation |
 | preparationTime > 0 | Must be positive integer |
+| variants minimum length 1 | "A menu item must have at least one variant" |
+
+### Create Example
+
+```json
+{
+  "name": "Margherita Pizza",
+  "description": "Classic Italian pizza with fresh mozzarella and basil",
+  "price": 12.99,
+  "categoryId": "category_pizza_id",
+  "isActive": true,
+  "isAvailable": true,
+  "variants": [
+    { "name": "Small (10\")", "price": 12.99, "isDefault": true },
+    { "name": "Medium (12\")", "price": 16.99 },
+    { "name": "Large (14\")", "price": 19.99 }
+  ]
+}
+```
 
 ### Example
 

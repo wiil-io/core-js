@@ -309,8 +309,8 @@ export declare const CreateAttributeDefSchema: z.ZodObject<{
     type: z.ZodEnum<typeof AttributeDefType>;
     name: z.ZodString;
     isActive: z.ZodDefault<z.ZodBoolean>;
-    slug: z.ZodString;
     unit: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    slug: z.ZodString;
     enumValues: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodString>>>;
 }, z.core.$strip>;
 /**
@@ -321,8 +321,8 @@ export declare const UpdateAttributeDefSchema: z.ZodObject<{
     type: z.ZodOptional<z.ZodEnum<typeof AttributeDefType>>;
     name: z.ZodOptional<z.ZodString>;
     isActive: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
-    slug: z.ZodOptional<z.ZodString>;
     unit: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
+    slug: z.ZodOptional<z.ZodString>;
     enumValues: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodString>>>>;
     id: z.ZodString;
 }, z.core.$strip>;
@@ -339,8 +339,8 @@ export declare const CreateProductCategorySchema: z.ZodObject<{
         channelId: z.ZodString;
         externalCategoryId: z.ZodString;
     }, z.core.$strip>>>>;
-    slug: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     productRevisionId: z.ZodOptional<z.ZodString>;
+    slug: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     parentId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     iconId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     heroImageId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
@@ -384,8 +384,8 @@ export declare const UpdateProductCategorySchema: z.ZodObject<{
         channelId: z.ZodString;
         externalCategoryId: z.ZodString;
     }, z.core.$strip>>>>>;
-    slug: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     productRevisionId: z.ZodOptional<z.ZodOptional<z.ZodString>>;
+    slug: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     parentId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     iconId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     heroImageId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
@@ -420,6 +420,11 @@ export declare const UpdateProductCategorySchema: z.ZodObject<{
 /**
  * Schema for creating a new business product.
  * Omits auto-generated fields, category object, and analytics.
+ *
+ * @remarks
+ * A product must be created with at least one variant. Nested variants use the
+ * product variant create schema with `productId` omitted; the parent link is
+ * assigned by the server once the product is created.
  */
 export declare const CreateBusinessProductSchema: z.ZodObject<{
     displayOrder: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
@@ -436,22 +441,12 @@ export declare const CreateBusinessProductSchema: z.ZodObject<{
     imageUrl: z.ZodOptional<z.ZodNullable<z.ZodURL>>;
     imageUrls: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodURL>>>;
     productRevisionId: z.ZodOptional<z.ZodString>;
+    sku: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    barcode: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     cost: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
     compareAtPrice: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
-    sku: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-    skuPattern: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-    barcode: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-    barcodeFormat: z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof BarcodeFormat>>>;
-    isAlcoholic: z.ZodDefault<z.ZodOptional<z.ZodNullable<z.ZodBoolean>>>;
-    brand: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-    brandId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-    trackInventory: z.ZodDefault<z.ZodBoolean>;
     stockQuantity: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
     lowStockThreshold: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
-    stockedAt: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
-    reorderPoint: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
-    leadTime: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
-    supplierId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     weight: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
     dimensions: z.ZodOptional<z.ZodNullable<z.ZodObject<{
         length: z.ZodNumber;
@@ -462,6 +457,16 @@ export declare const CreateBusinessProductSchema: z.ZodObject<{
             inches: "inches";
         }>>;
     }, z.core.$strip>>>;
+    skuPattern: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    barcodeFormat: z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof BarcodeFormat>>>;
+    isAlcoholic: z.ZodDefault<z.ZodOptional<z.ZodNullable<z.ZodBoolean>>>;
+    brand: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    brandId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    trackInventory: z.ZodDefault<z.ZodBoolean>;
+    stockedAt: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
+    reorderPoint: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
+    leadTime: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
+    supplierId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     shippingClassId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     HSCode: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     attributes: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodObject<{
@@ -484,6 +489,40 @@ export declare const CreateBusinessProductSchema: z.ZodObject<{
         anchorItemId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
         absoluteIndex: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
     }, z.core.$strip>>;
+    variants: z.ZodArray<z.ZodObject<{
+        isDefault: z.ZodDefault<z.ZodBoolean>;
+        isActive: z.ZodDefault<z.ZodBoolean>;
+        price: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
+        channelMappings: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodObject<{
+            channelId: z.ZodString;
+            externalVariantId: z.ZodString;
+            externalProductId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+        }, z.core.$strip>>>>;
+        productRevisionId: z.ZodOptional<z.ZodString>;
+        axisValues: z.ZodRecord<z.ZodString, z.ZodString>;
+        sku: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+        barcode: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+        partNumber: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+        globalTradeItemNumber: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+        cost: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
+        compareAtPrice: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
+        stockQuantity: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
+        lowStockThreshold: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
+        unitDefinitionId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+        inventoryUnit: z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof import("../..").InventoryUnit>>>;
+        weight: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
+        dimensions: z.ZodOptional<z.ZodNullable<z.ZodObject<{
+            length: z.ZodNumber;
+            width: z.ZodNumber;
+            height: z.ZodNumber;
+            unit: z.ZodDefault<z.ZodEnum<{
+                cm: "cm";
+                inches: "inches";
+            }>>;
+        }, z.core.$strip>>>;
+        imageId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+        imageIds: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodString>>>;
+    }, z.core.$strip>>;
 }, z.core.$strip>;
 /**
  * Schema for updating an existing business product.
@@ -504,22 +543,12 @@ export declare const UpdateBusinessProductSchema: z.ZodObject<{
     imageUrl: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodURL>>>;
     imageUrls: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodURL>>>>;
     productRevisionId: z.ZodOptional<z.ZodOptional<z.ZodString>>;
+    sku: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
+    barcode: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     cost: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
     compareAtPrice: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
-    sku: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
-    skuPattern: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
-    barcode: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
-    barcodeFormat: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof BarcodeFormat>>>>;
-    isAlcoholic: z.ZodOptional<z.ZodDefault<z.ZodOptional<z.ZodNullable<z.ZodBoolean>>>>;
-    brand: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
-    brandId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
-    trackInventory: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
     stockQuantity: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
     lowStockThreshold: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
-    stockedAt: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
-    reorderPoint: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
-    leadTime: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
-    supplierId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     weight: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
     dimensions: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodObject<{
         length: z.ZodNumber;
@@ -530,6 +559,16 @@ export declare const UpdateBusinessProductSchema: z.ZodObject<{
             inches: "inches";
         }>>;
     }, z.core.$strip>>>>;
+    skuPattern: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
+    barcodeFormat: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof BarcodeFormat>>>>;
+    isAlcoholic: z.ZodOptional<z.ZodDefault<z.ZodOptional<z.ZodNullable<z.ZodBoolean>>>>;
+    brand: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
+    brandId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
+    trackInventory: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
+    stockedAt: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
+    reorderPoint: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
+    leadTime: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
+    supplierId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     shippingClassId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     HSCode: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     attributes: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodObject<{
@@ -551,6 +590,40 @@ export declare const UpdateBusinessProductSchema: z.ZodObject<{
         }, z.core.$strip>;
         anchorItemId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
         absoluteIndex: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
+    }, z.core.$strip>>>;
+    variants: z.ZodOptional<z.ZodArray<z.ZodObject<{
+        isDefault: z.ZodDefault<z.ZodBoolean>;
+        isActive: z.ZodDefault<z.ZodBoolean>;
+        price: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
+        channelMappings: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodObject<{
+            channelId: z.ZodString;
+            externalVariantId: z.ZodString;
+            externalProductId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+        }, z.core.$strip>>>>;
+        productRevisionId: z.ZodOptional<z.ZodString>;
+        axisValues: z.ZodRecord<z.ZodString, z.ZodString>;
+        sku: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+        barcode: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+        partNumber: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+        globalTradeItemNumber: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+        cost: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
+        compareAtPrice: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
+        stockQuantity: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
+        lowStockThreshold: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
+        unitDefinitionId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+        inventoryUnit: z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof import("../..").InventoryUnit>>>;
+        weight: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
+        dimensions: z.ZodOptional<z.ZodNullable<z.ZodObject<{
+            length: z.ZodNumber;
+            width: z.ZodNumber;
+            height: z.ZodNumber;
+            unit: z.ZodDefault<z.ZodEnum<{
+                cm: "cm";
+                inches: "inches";
+            }>>;
+        }, z.core.$strip>>>;
+        imageId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+        imageIds: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodString>>>;
     }, z.core.$strip>>>;
     id: z.ZodString;
 }, z.core.$strip>;

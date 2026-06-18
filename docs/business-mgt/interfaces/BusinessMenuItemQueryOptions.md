@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.59**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.60**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: BusinessMenuItemQueryOptions
 
-Defined in: [src/core/business-mgt/menu-management/menu-config.schema.ts:228](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/menu-management/menu-config.schema.ts#L228)
+Defined in: [src/core/business-mgt/menu-management/menu-config.schema.ts:235](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/menu-management/menu-config.schema.ts#L235)
 
 Business menu item query options.
  BusinessMenuItemQueryOptions
@@ -15,7 +15,7 @@ Business menu item query options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/menu-management/menu-config.schema.ts:230](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/menu-management/menu-config.schema.ts#L230) |
-| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/menu-management/menu-config.schema.ts:232](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/menu-management/menu-config.schema.ts#L232) |
-| <a id="filters"></a> `filters?` | [`BusinessMenuItemFilters`](BusinessMenuItemFilters.md) | Optional filters | [src/core/business-mgt/menu-management/menu-config.schema.ts:234](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/menu-management/menu-config.schema.ts#L234) |
-| <a id="sorting"></a> `sorting?` | [`BusinessMenuItemSorting`](BusinessMenuItemSorting.md) | Optional sorting | [src/core/business-mgt/menu-management/menu-config.schema.ts:236](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/menu-management/menu-config.schema.ts#L236) |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/menu-management/menu-config.schema.ts:237](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/menu-management/menu-config.schema.ts#L237) |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/menu-management/menu-config.schema.ts:239](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/menu-management/menu-config.schema.ts#L239) |
+| <a id="filters"></a> `filters?` | [`BusinessMenuItemFilters`](BusinessMenuItemFilters.md) | Optional filters | [src/core/business-mgt/menu-management/menu-config.schema.ts:241](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/menu-management/menu-config.schema.ts#L241) |
+| <a id="sorting"></a> `sorting?` | [`BusinessMenuItemSorting`](BusinessMenuItemSorting.md) | Optional sorting | [src/core/business-mgt/menu-management/menu-config.schema.ts:243](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/menu-management/menu-config.schema.ts#L243) |

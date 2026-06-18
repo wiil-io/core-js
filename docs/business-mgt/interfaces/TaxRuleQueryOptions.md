@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.59**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.60**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: TaxRuleQueryOptions
 
-Defined in: [src/core/business-mgt/tax-rule.schema.ts:143](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/tax-rule.schema.ts#L143)
+Defined in: [src/core/business-mgt/tax-rule.schema.ts:143](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/tax-rule.schema.ts#L143)
 
 Tax rule query options.
  TaxRuleQueryOptions
@@ -15,7 +15,7 @@ Tax rule query options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/tax-rule.schema.ts:145](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/tax-rule.schema.ts#L145) |
-| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/tax-rule.schema.ts:147](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/tax-rule.schema.ts#L147) |
-| <a id="filters"></a> `filters?` | [`TaxRuleFilters`](TaxRuleFilters.md) | Optional filters | [src/core/business-mgt/tax-rule.schema.ts:149](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/tax-rule.schema.ts#L149) |
-| <a id="sorting"></a> `sorting?` | [`TaxRuleSorting`](TaxRuleSorting.md) | Optional sorting | [src/core/business-mgt/tax-rule.schema.ts:151](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/tax-rule.schema.ts#L151) |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/tax-rule.schema.ts:145](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/tax-rule.schema.ts#L145) |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/tax-rule.schema.ts:147](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/tax-rule.schema.ts#L147) |
+| <a id="filters"></a> `filters?` | [`TaxRuleFilters`](TaxRuleFilters.md) | Optional filters | [src/core/business-mgt/tax-rule.schema.ts:149](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/tax-rule.schema.ts#L149) |
+| <a id="sorting"></a> `sorting?` | [`TaxRuleSorting`](TaxRuleSorting.md) | Optional sorting | [src/core/business-mgt/tax-rule.schema.ts:151](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/tax-rule.schema.ts#L151) |

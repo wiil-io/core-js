@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.59**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.60**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: OutboundTemplateSorting
 
-Defined in: [src/core/conversation/outbound-template.schema.ts:216](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/conversation/outbound-template.schema.ts#L216)
+Defined in: [src/core/conversation/outbound-template.schema.ts:216](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/conversation/outbound-template.schema.ts#L216)
 
 Outbound template sorting options.
  OutboundTemplateSorting
@@ -15,5 +15,5 @@ Outbound template sorting options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="field"></a> `field` | `"createdAt"` \| `"updatedAt"` \| `"code"` \| `"name"` \| `"channel"` | Field to sort by | [src/core/conversation/outbound-template.schema.ts:218](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/conversation/outbound-template.schema.ts#L218) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/conversation/outbound-template.schema.ts:220](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/conversation/outbound-template.schema.ts#L220) |
+| <a id="field"></a> `field` | `"createdAt"` \| `"updatedAt"` \| `"code"` \| `"name"` \| `"channel"` | Field to sort by | [src/core/conversation/outbound-template.schema.ts:218](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/conversation/outbound-template.schema.ts#L218) |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/conversation/outbound-template.schema.ts:220](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/conversation/outbound-template.schema.ts#L220) |

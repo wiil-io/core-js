@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.59**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.60**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ServiceAppointmentSorting
 
-Defined in: [src/core/business-mgt/service-management/service-appointment.schema.ts:169](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/service-management/service-appointment.schema.ts#L169)
+Defined in: [src/core/business-mgt/service-management/service-appointment.schema.ts:169](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/service-management/service-appointment.schema.ts#L169)
 
 Service appointment sorting options.
  ServiceAppointmentSorting
@@ -15,5 +15,5 @@ Service appointment sorting options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="field"></a> `field` | `"createdAt"` \| `"startTime"` \| `"endTime"` \| `"customerName"` | Field to sort by | [src/core/business-mgt/service-management/service-appointment.schema.ts:171](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/service-management/service-appointment.schema.ts#L171) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/service-management/service-appointment.schema.ts:173](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/service-management/service-appointment.schema.ts#L173) |
+| <a id="field"></a> `field` | `"createdAt"` \| `"startTime"` \| `"endTime"` \| `"customerName"` | Field to sort by | [src/core/business-mgt/service-management/service-appointment.schema.ts:171](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/service-management/service-appointment.schema.ts#L171) |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/service-management/service-appointment.schema.ts:173](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/service-management/service-appointment.schema.ts#L173) |

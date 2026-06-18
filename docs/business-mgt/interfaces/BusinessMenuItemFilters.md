@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.59**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.60**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: BusinessMenuItemFilters
 
-Defined in: [src/core/business-mgt/menu-management/menu-config.schema.ts:198](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/menu-management/menu-config.schema.ts#L198)
+Defined in: [src/core/business-mgt/menu-management/menu-config.schema.ts:205](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/menu-management/menu-config.schema.ts#L205)
 
 Business menu item filter options.
  BusinessMenuItemFilters
@@ -15,9 +15,9 @@ Business menu item filter options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="search"></a> `search?` | `string` | Text search across name/description | [src/core/business-mgt/menu-management/menu-config.schema.ts:200](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/menu-management/menu-config.schema.ts#L200) |
-| <a id="locationid"></a> `locationId?` | `string` | Filter by location ID | [src/core/business-mgt/menu-management/menu-config.schema.ts:202](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/menu-management/menu-config.schema.ts#L202) |
-| <a id="categoryid"></a> `categoryId?` | `string` | Filter by category ID | [src/core/business-mgt/menu-management/menu-config.schema.ts:204](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/menu-management/menu-config.schema.ts#L204) |
-| <a id="isactive"></a> `isActive?` | `boolean` | Filter by active status | [src/core/business-mgt/menu-management/menu-config.schema.ts:206](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/menu-management/menu-config.schema.ts#L206) |
-| <a id="isavailable"></a> `isAvailable?` | `boolean` | Filter by availability status | [src/core/business-mgt/menu-management/menu-config.schema.ts:208](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/menu-management/menu-config.schema.ts#L208) |
-| <a id="allergens"></a> `allergens?` | `string`[] | Filter by allergens | [src/core/business-mgt/menu-management/menu-config.schema.ts:210](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/menu-management/menu-config.schema.ts#L210) |
+| <a id="search"></a> `search?` | `string` | Text search across name/description | [src/core/business-mgt/menu-management/menu-config.schema.ts:207](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/menu-management/menu-config.schema.ts#L207) |
+| <a id="locationid"></a> `locationId?` | `string` | Filter by location ID | [src/core/business-mgt/menu-management/menu-config.schema.ts:209](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/menu-management/menu-config.schema.ts#L209) |
+| <a id="categoryid"></a> `categoryId?` | `string` | Filter by category ID | [src/core/business-mgt/menu-management/menu-config.schema.ts:211](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/menu-management/menu-config.schema.ts#L211) |
+| <a id="isactive"></a> `isActive?` | `boolean` | Filter by active status | [src/core/business-mgt/menu-management/menu-config.schema.ts:213](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/menu-management/menu-config.schema.ts#L213) |
+| <a id="isavailable"></a> `isAvailable?` | `boolean` | Filter by availability status | [src/core/business-mgt/menu-management/menu-config.schema.ts:215](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/menu-management/menu-config.schema.ts#L215) |
+| <a id="allergens"></a> `allergens?` | `string`[] | Filter by allergens | [src/core/business-mgt/menu-management/menu-config.schema.ts:217](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/menu-management/menu-config.schema.ts#L217) |

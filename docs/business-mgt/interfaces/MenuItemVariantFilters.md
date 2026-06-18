@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.59**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.60**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: MenuItemVariantFilters
 
-Defined in: [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:114](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L114)
+Defined in: [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:114](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L114)
 
 Menu item variant filter options.
  MenuItemVariantFilters
@@ -15,10 +15,10 @@ Menu item variant filter options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="search"></a> `search?` | `string` | Text search across name/description | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:116](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L116) |
-| <a id="menuitemid"></a> `menuItemId?` | `string` | Filter by parent menu item ID | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:118](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L118) |
-| <a id="isactive"></a> `isActive?` | `boolean` | Filter by active status | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:120](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L120) |
-| <a id="isavailable"></a> `isAvailable?` | `boolean` | Filter by availability status | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:122](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L122) |
-| <a id="pricerange"></a> `priceRange?` | \{ `min?`: `number`; `max?`: `number`; \} | Filter by price range | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:124](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L124) |
-| `priceRange.min?` | `number` | - | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:124](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L124) |
-| `priceRange.max?` | `number` | - | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:124](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L124) |
+| <a id="search"></a> `search?` | `string` | Text search across name/description | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:116](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L116) |
+| <a id="menuitemid"></a> `menuItemId?` | `string` | Filter by parent menu item ID | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:118](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L118) |
+| <a id="isactive"></a> `isActive?` | `boolean` | Filter by active status | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:120](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L120) |
+| <a id="isavailable"></a> `isAvailable?` | `boolean` | Filter by availability status | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:122](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L122) |
+| <a id="pricerange"></a> `priceRange?` | \{ `min?`: `number`; `max?`: `number`; \} | Filter by price range | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:124](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L124) |
+| `priceRange.min?` | `number` | - | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:124](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L124) |
+| `priceRange.max?` | `number` | - | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:124](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L124) |

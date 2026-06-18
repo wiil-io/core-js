@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.59**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.60**](../../README.md)
 
 ***
 
@@ -6,13 +6,13 @@
 
 # Enumeration: DiscountScope
 
-Defined in: [src/core/type-definitions/business-definitions.ts:429](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/type-definitions/business-definitions.ts#L429)
+Defined in: [src/core/type-definitions/business-definitions.ts:429](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/type-definitions/business-definitions.ts#L429)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="order"></a> `ORDER` | `"ORDER"` | [src/core/type-definitions/business-definitions.ts:430](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/type-definitions/business-definitions.ts#L430) |
-| <a id="item"></a> `ITEM` | `"ITEM"` | [src/core/type-definitions/business-definitions.ts:431](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/type-definitions/business-definitions.ts#L431) |
-| <a id="shipping"></a> `SHIPPING` | `"SHIPPING"` | [src/core/type-definitions/business-definitions.ts:432](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/type-definitions/business-definitions.ts#L432) |
-| <a id="set"></a> `SET` | `"SET"` | [src/core/type-definitions/business-definitions.ts:433](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/type-definitions/business-definitions.ts#L433) |
+| <a id="order"></a> `ORDER` | `"ORDER"` | [src/core/type-definitions/business-definitions.ts:430](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/type-definitions/business-definitions.ts#L430) |
+| <a id="item"></a> `ITEM` | `"ITEM"` | [src/core/type-definitions/business-definitions.ts:431](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/type-definitions/business-definitions.ts#L431) |
+| <a id="shipping"></a> `SHIPPING` | `"SHIPPING"` | [src/core/type-definitions/business-definitions.ts:432](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/type-definitions/business-definitions.ts#L432) |
+| <a id="set"></a> `SET` | `"SET"` | [src/core/type-definitions/business-definitions.ts:433](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/type-definitions/business-definitions.ts#L433) |

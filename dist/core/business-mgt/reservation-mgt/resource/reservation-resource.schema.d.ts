@@ -338,11 +338,11 @@ export declare const CreateResourceSchema: z.ZodObject<{
     name: z.ZodString;
     description: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     locationId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    isAvailable: z.ZodDefault<z.ZodBoolean>;
     channelMappings: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodObject<{
         channelId: z.ZodString;
         externalResourceId: z.ZodString;
     }, z.core.$strip>>>>;
-    isAvailable: z.ZodDefault<z.ZodBoolean>;
     imageUrls: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodURL>>>;
     pricing: z.ZodOptional<z.ZodNullable<z.ZodDiscriminatedUnion<[z.ZodObject<{
         kind: z.ZodLiteral<"none">;
@@ -440,11 +440,11 @@ export declare const UpdateResourceSchema: z.ZodObject<{
     name: z.ZodOptional<z.ZodString>;
     description: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     locationId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
+    isAvailable: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
     channelMappings: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodObject<{
         channelId: z.ZodString;
         externalResourceId: z.ZodString;
     }, z.core.$strip>>>>>;
-    isAvailable: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
     imageUrls: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodURL>>>>;
     pricing: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodDiscriminatedUnion<[z.ZodObject<{
         kind: z.ZodLiteral<"none">;

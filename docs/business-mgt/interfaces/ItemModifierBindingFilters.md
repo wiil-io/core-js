@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.59**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.60**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ItemModifierBindingFilters
 
-Defined in: [src/core/business-mgt/menu-management/modifier.schema.ts:483](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/menu-management/modifier.schema.ts#L483)
+Defined in: [src/core/business-mgt/menu-management/modifier.schema.ts:483](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/menu-management/modifier.schema.ts#L483)
 
 Item modifier binding filter options.
  ItemModifierBindingFilters
@@ -15,8 +15,8 @@ Item modifier binding filter options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="locationid"></a> `locationId?` | `string` | Filter by location ID | [src/core/business-mgt/menu-management/modifier.schema.ts:485](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/menu-management/modifier.schema.ts#L485) |
-| <a id="menuitemid"></a> `menuItemId?` | `string` | Filter by menu item ID | [src/core/business-mgt/menu-management/modifier.schema.ts:487](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/menu-management/modifier.schema.ts#L487) |
-| <a id="menusetid"></a> `menuSetId?` | `string` | Filter by menu set ID | [src/core/business-mgt/menu-management/modifier.schema.ts:489](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/menu-management/modifier.schema.ts#L489) |
-| <a id="modifiergroupid"></a> `modifierGroupId?` | `string` | Filter by modifier group ID | [src/core/business-mgt/menu-management/modifier.schema.ts:491](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/menu-management/modifier.schema.ts#L491) |
-| <a id="isactive"></a> `isActive?` | `boolean` | Filter by active status | [src/core/business-mgt/menu-management/modifier.schema.ts:493](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/menu-management/modifier.schema.ts#L493) |
+| <a id="locationid"></a> `locationId?` | `string` | Filter by location ID | [src/core/business-mgt/menu-management/modifier.schema.ts:485](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/menu-management/modifier.schema.ts#L485) |
+| <a id="menuitemid"></a> `menuItemId?` | `string` | Filter by menu item ID | [src/core/business-mgt/menu-management/modifier.schema.ts:487](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/menu-management/modifier.schema.ts#L487) |
+| <a id="menusetid"></a> `menuSetId?` | `string` | Filter by menu set ID | [src/core/business-mgt/menu-management/modifier.schema.ts:489](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/menu-management/modifier.schema.ts#L489) |
+| <a id="modifiergroupid"></a> `modifierGroupId?` | `string` | Filter by modifier group ID | [src/core/business-mgt/menu-management/modifier.schema.ts:491](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/menu-management/modifier.schema.ts#L491) |
+| <a id="isactive"></a> `isActive?` | `boolean` | Filter by active status | [src/core/business-mgt/menu-management/modifier.schema.ts:493](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/menu-management/modifier.schema.ts#L493) |

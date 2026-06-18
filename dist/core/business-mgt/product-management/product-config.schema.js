@@ -7,6 +7,7 @@ exports.ProductCategoryWithDescendantsSchema = exports.BusinessProductCatalogSch
 const zod_1 = __importDefault(require("zod"));
 const base_schema_1 = require("../../base.schema");
 const display_order_1 = require("../../type-definitions/display-order");
+const product_variant_schema_1 = require("./product-variant.schema");
 /**
  * @fileoverview Product configuration schema definitions for business management.
  * @module business-mgt/product-config
@@ -330,6 +331,11 @@ exports.UpdateProductCategorySchema = exports.CreateProductCategorySchema.partia
 /**
  * Schema for creating a new business product.
  * Omits auto-generated fields, category object, and analytics.
+ *
+ * @remarks
+ * A product must be created with at least one variant. Nested variants use the
+ * product variant create schema with `productId` omitted; the parent link is
+ * assigned by the server once the product is created.
  */
 exports.CreateBusinessProductSchema = exports.BusinessProductSchema.omit({
     id: true,
@@ -343,6 +349,7 @@ exports.CreateBusinessProductSchema = exports.BusinessProductSchema.omit({
 }).safeExtend({
     categoryId: zod_1.default.string().optional().describe("Category ID this product belongs to"),
     placement: display_order_1.CreateDisplayOrderPlacementSchema.optional().describe("Optional placement for display ordering"),
+    variants: zod_1.default.array(product_variant_schema_1.CreateProductVariantSchema.omit({ productId: true })).min(1, "A product must have at least one variant").describe("Variants to create with this product. At least one is required; the parent product ID is assigned by the server."),
 });
 /**
  * Schema for updating an existing business product.

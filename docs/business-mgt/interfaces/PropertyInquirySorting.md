@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.59**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.60**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: PropertyInquirySorting
 
-Defined in: [src/core/business-mgt/property-management/property-inquiry.schema.ts:184](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/property-management/property-inquiry.schema.ts#L184)
+Defined in: [src/core/business-mgt/property-management/property-inquiry.schema.ts:184](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/property-management/property-inquiry.schema.ts#L184)
 
 Property inquiry sorting options.
  PropertyInquirySorting
@@ -15,5 +15,5 @@ Property inquiry sorting options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="field"></a> `field` | `"createdAt"` \| `"status"` \| `"scheduledViewingDate"` \| `"followUpDate"` | Field to sort by | [src/core/business-mgt/property-management/property-inquiry.schema.ts:186](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/property-management/property-inquiry.schema.ts#L186) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/property-management/property-inquiry.schema.ts:188](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/property-management/property-inquiry.schema.ts#L188) |
+| <a id="field"></a> `field` | `"createdAt"` \| `"status"` \| `"scheduledViewingDate"` \| `"followUpDate"` | Field to sort by | [src/core/business-mgt/property-management/property-inquiry.schema.ts:186](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/property-management/property-inquiry.schema.ts#L186) |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/property-management/property-inquiry.schema.ts:188](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/property-management/property-inquiry.schema.ts#L188) |

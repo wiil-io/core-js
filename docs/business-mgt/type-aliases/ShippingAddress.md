@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.59**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.60**](../../README.md)
 
 ***
 
@@ -25,7 +25,7 @@ type ShippingAddress = {
 };
 ```
 
-Defined in: [src/core/business-mgt/customer-management/shipping-address.schema.ts:87](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/customer-management/shipping-address.schema.ts#L87)
+Defined in: [src/core/business-mgt/customer-management/shipping-address.schema.ts:87](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/customer-management/shipping-address.schema.ts#L87)
 
 Shipping Address schema.
 Customer shipping address record with delivery details.
@@ -34,17 +34,17 @@ Customer shipping address record with delivery details.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="id"></a> `id` | `string` | [src/core/base.schema.ts:8](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/base.schema.ts#L8) |
-| <a id="createdat"></a> `createdAt?` | `number` | [src/core/base.schema.ts:9](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/base.schema.ts#L9) |
-| <a id="updatedat"></a> `updatedAt?` | `number` | [src/core/base.schema.ts:10](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/base.schema.ts#L10) |
-| <a id="customerid"></a> `customerId` | `string` | [src/core/business-mgt/customer-management/shipping-address.schema.ts:48](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/customer-management/shipping-address.schema.ts#L48) |
-| <a id="street"></a> `street` | `string` | [src/core/business-mgt/customer-management/shipping-address.schema.ts:49](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/customer-management/shipping-address.schema.ts#L49) |
-| <a id="street2"></a> `street2?` | `string` | [src/core/business-mgt/customer-management/shipping-address.schema.ts:50](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/customer-management/shipping-address.schema.ts#L50) |
-| <a id="city"></a> `city` | `string` | [src/core/business-mgt/customer-management/shipping-address.schema.ts:51](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/customer-management/shipping-address.schema.ts#L51) |
-| <a id="state"></a> `state` | `string` | [src/core/business-mgt/customer-management/shipping-address.schema.ts:52](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/customer-management/shipping-address.schema.ts#L52) |
-| <a id="postalcode"></a> `postalCode` | `string` | [src/core/business-mgt/customer-management/shipping-address.schema.ts:53](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/customer-management/shipping-address.schema.ts#L53) |
-| <a id="country"></a> `country` | `string` | [src/core/business-mgt/customer-management/shipping-address.schema.ts:54](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/customer-management/shipping-address.schema.ts#L54) |
-| <a id="recipientname"></a> `recipientName?` | `string` | [src/core/business-mgt/customer-management/shipping-address.schema.ts:55](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/customer-management/shipping-address.schema.ts#L55) |
-| <a id="phonenumber"></a> `phoneNumber?` | `string` \| `null` | [src/core/business-mgt/customer-management/shipping-address.schema.ts:56](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/customer-management/shipping-address.schema.ts#L56) |
-| <a id="instructions"></a> `instructions?` | `string` | [src/core/business-mgt/customer-management/shipping-address.schema.ts:57](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/customer-management/shipping-address.schema.ts#L57) |
-| <a id="isprimary"></a> `isPrimary` | `boolean` | [src/core/business-mgt/customer-management/shipping-address.schema.ts:58](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/customer-management/shipping-address.schema.ts#L58) |
+| <a id="id"></a> `id` | `string` | [src/core/base.schema.ts:8](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/base.schema.ts#L8) |
+| <a id="createdat"></a> `createdAt?` | `number` | [src/core/base.schema.ts:9](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/base.schema.ts#L9) |
+| <a id="updatedat"></a> `updatedAt?` | `number` | [src/core/base.schema.ts:10](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/base.schema.ts#L10) |
+| <a id="customerid"></a> `customerId` | `string` | [src/core/business-mgt/customer-management/shipping-address.schema.ts:48](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/customer-management/shipping-address.schema.ts#L48) |
+| <a id="street"></a> `street` | `string` | [src/core/business-mgt/customer-management/shipping-address.schema.ts:49](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/customer-management/shipping-address.schema.ts#L49) |
+| <a id="street2"></a> `street2?` | `string` | [src/core/business-mgt/customer-management/shipping-address.schema.ts:50](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/customer-management/shipping-address.schema.ts#L50) |
+| <a id="city"></a> `city` | `string` | [src/core/business-mgt/customer-management/shipping-address.schema.ts:51](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/customer-management/shipping-address.schema.ts#L51) |
+| <a id="state"></a> `state` | `string` | [src/core/business-mgt/customer-management/shipping-address.schema.ts:52](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/customer-management/shipping-address.schema.ts#L52) |
+| <a id="postalcode"></a> `postalCode` | `string` | [src/core/business-mgt/customer-management/shipping-address.schema.ts:53](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/customer-management/shipping-address.schema.ts#L53) |
+| <a id="country"></a> `country` | `string` | [src/core/business-mgt/customer-management/shipping-address.schema.ts:54](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/customer-management/shipping-address.schema.ts#L54) |
+| <a id="recipientname"></a> `recipientName?` | `string` | [src/core/business-mgt/customer-management/shipping-address.schema.ts:55](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/customer-management/shipping-address.schema.ts#L55) |
+| <a id="phonenumber"></a> `phoneNumber?` | `string` \| `null` | [src/core/business-mgt/customer-management/shipping-address.schema.ts:56](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/customer-management/shipping-address.schema.ts#L56) |
+| <a id="instructions"></a> `instructions?` | `string` | [src/core/business-mgt/customer-management/shipping-address.schema.ts:57](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/customer-management/shipping-address.schema.ts#L57) |
+| <a id="isprimary"></a> `isPrimary` | `boolean` | [src/core/business-mgt/customer-management/shipping-address.schema.ts:58](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/customer-management/shipping-address.schema.ts#L58) |

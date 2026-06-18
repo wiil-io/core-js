@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.59**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.60**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: VariantAxisQueryOptions
 
-Defined in: [src/core/business-mgt/product-management/product-variant-axis.schema.ts:146](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L146)
+Defined in: [src/core/business-mgt/product-management/product-variant-axis.schema.ts:146](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L146)
 
 Variant axis query options.
  VariantAxisQueryOptions
@@ -15,7 +15,7 @@ Variant axis query options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:148](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L148) |
-| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:150](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L150) |
-| <a id="filters"></a> `filters?` | [`VariantAxisFilters`](VariantAxisFilters.md) | Optional filters | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:152](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L152) |
-| <a id="sorting"></a> `sorting?` | [`VariantAxisSorting`](VariantAxisSorting.md) | Optional sorting | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:154](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L154) |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:148](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L148) |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:150](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L150) |
+| <a id="filters"></a> `filters?` | [`VariantAxisFilters`](VariantAxisFilters.md) | Optional filters | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:152](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L152) |
+| <a id="sorting"></a> `sorting?` | [`VariantAxisSorting`](VariantAxisSorting.md) | Optional sorting | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:154](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L154) |

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.59**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.60**](../../README.md)
 
 ***
 
@@ -17,7 +17,7 @@ type SearchablePaginationRequest = {
 };
 ```
 
-Defined in: [src/request/models/paginated-result.schema.ts:104](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/request/models/paginated-result.schema.ts#L104)
+Defined in: [src/request/models/paginated-result.schema.ts:104](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/request/models/paginated-result.schema.ts#L104)
 
 Schema for search-enabled pagination requests.
 
@@ -25,9 +25,9 @@ Schema for search-enabled pagination requests.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | [src/request/models/paginated-result.schema.ts:77](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/request/models/paginated-result.schema.ts#L77) |
-| <a id="pagesize"></a> `pageSize` | `number` | [src/request/models/paginated-result.schema.ts:78](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/request/models/paginated-result.schema.ts#L78) |
-| <a id="sortby"></a> `sortBy?` | `string` | [src/request/models/paginated-result.schema.ts:79](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/request/models/paginated-result.schema.ts#L79) |
-| <a id="sortdirection"></a> `sortDirection` | `"asc"` \| `"desc"` | [src/request/models/paginated-result.schema.ts:80](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/request/models/paginated-result.schema.ts#L80) |
-| <a id="search"></a> `search?` | `string` | [src/request/models/paginated-result.schema.ts:95](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/request/models/paginated-result.schema.ts#L95) |
-| <a id="searchfields"></a> `searchFields?` | `string`[] | [src/request/models/paginated-result.schema.ts:96](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/request/models/paginated-result.schema.ts#L96) |
+| <a id="page"></a> `page` | `number` | [src/request/models/paginated-result.schema.ts:77](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/request/models/paginated-result.schema.ts#L77) |
+| <a id="pagesize"></a> `pageSize` | `number` | [src/request/models/paginated-result.schema.ts:78](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/request/models/paginated-result.schema.ts#L78) |
+| <a id="sortby"></a> `sortBy?` | `string` | [src/request/models/paginated-result.schema.ts:79](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/request/models/paginated-result.schema.ts#L79) |
+| <a id="sortdirection"></a> `sortDirection` | `"asc"` \| `"desc"` | [src/request/models/paginated-result.schema.ts:80](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/request/models/paginated-result.schema.ts#L80) |
+| <a id="search"></a> `search?` | `string` | [src/request/models/paginated-result.schema.ts:95](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/request/models/paginated-result.schema.ts#L95) |
+| <a id="searchfields"></a> `searchFields?` | `string`[] | [src/request/models/paginated-result.schema.ts:96](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/request/models/paginated-result.schema.ts#L96) |

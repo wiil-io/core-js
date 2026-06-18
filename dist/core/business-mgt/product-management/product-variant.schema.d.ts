@@ -108,12 +108,18 @@ export declare const CreateProductVariantSchema: z.ZodObject<{
         externalProductId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     }, z.core.$strip>>>>;
     productRevisionId: z.ZodOptional<z.ZodString>;
-    cost: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
-    compareAtPrice: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
+    productId: z.ZodString;
+    axisValues: z.ZodRecord<z.ZodString, z.ZodString>;
     sku: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     barcode: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    partNumber: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    globalTradeItemNumber: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    cost: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
+    compareAtPrice: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
     stockQuantity: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
     lowStockThreshold: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
+    unitDefinitionId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    inventoryUnit: z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof InventoryUnit>>>;
     weight: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
     dimensions: z.ZodOptional<z.ZodNullable<z.ZodObject<{
         length: z.ZodNumber;
@@ -124,12 +130,6 @@ export declare const CreateProductVariantSchema: z.ZodObject<{
             inches: "inches";
         }>>;
     }, z.core.$strip>>>;
-    productId: z.ZodString;
-    axisValues: z.ZodRecord<z.ZodString, z.ZodString>;
-    partNumber: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-    globalTradeItemNumber: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-    unitDefinitionId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-    inventoryUnit: z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof InventoryUnit>>>;
     imageId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     imageIds: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodString>>>;
 }, z.core.$strip>;
@@ -147,12 +147,18 @@ export declare const UpdateProductVariantSchema: z.ZodObject<{
         externalProductId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     }, z.core.$strip>>>>>;
     productRevisionId: z.ZodOptional<z.ZodOptional<z.ZodString>>;
-    cost: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
-    compareAtPrice: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
+    productId: z.ZodOptional<z.ZodString>;
+    axisValues: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodString>>;
     sku: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     barcode: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
+    partNumber: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
+    globalTradeItemNumber: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
+    cost: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
+    compareAtPrice: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
     stockQuantity: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
     lowStockThreshold: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
+    unitDefinitionId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
+    inventoryUnit: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof InventoryUnit>>>>;
     weight: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
     dimensions: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodObject<{
         length: z.ZodNumber;
@@ -163,12 +169,6 @@ export declare const UpdateProductVariantSchema: z.ZodObject<{
             inches: "inches";
         }>>;
     }, z.core.$strip>>>>;
-    productId: z.ZodOptional<z.ZodString>;
-    axisValues: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodString>>;
-    partNumber: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
-    globalTradeItemNumber: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
-    unitDefinitionId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
-    inventoryUnit: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof InventoryUnit>>>>;
     imageId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     imageIds: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodString>>>>;
     id: z.ZodString;

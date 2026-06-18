@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.59**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.60**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: TableAssignmentQueryOptions
 
-Defined in: [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:117](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L117)
+Defined in: [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:117](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L117)
 
 Table assignment query options.
  TableAssignmentQueryOptions
@@ -15,7 +15,7 @@ Table assignment query options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:119](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L119) |
-| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:121](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L121) |
-| <a id="filters"></a> `filters?` | [`TableAssignmentFilters`](TableAssignmentFilters.md) | Optional filters | [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:123](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L123) |
-| <a id="sorting"></a> `sorting?` | [`TableAssignmentSorting`](TableAssignmentSorting.md) | Optional sorting | [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:125](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L125) |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:119](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L119) |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:121](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L121) |
+| <a id="filters"></a> `filters?` | [`TableAssignmentFilters`](TableAssignmentFilters.md) | Optional filters | [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:123](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L123) |
+| <a id="sorting"></a> `sorting?` | [`TableAssignmentSorting`](TableAssignmentSorting.md) | Optional sorting | [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:125](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L125) |

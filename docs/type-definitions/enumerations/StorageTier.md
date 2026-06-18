@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.59**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.60**](../../README.md)
 
 ***
 
@@ -6,12 +6,12 @@
 
 # Enumeration: StorageTier
 
-Defined in: [src/core/type-definitions/knowledge-definitions.ts:17](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/type-definitions/knowledge-definitions.ts#L17)
+Defined in: [src/core/type-definitions/knowledge-definitions.ts:17](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/type-definitions/knowledge-definitions.ts#L17)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="firestore"></a> `FIRESTORE` | `"firestore"` | [src/core/type-definitions/knowledge-definitions.ts:18](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/type-definitions/knowledge-definitions.ts#L18) |
-| <a id="cloud_storage_standard"></a> `CLOUD_STORAGE_STANDARD` | `"cloud_storage_standard"` | [src/core/type-definitions/knowledge-definitions.ts:19](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/type-definitions/knowledge-definitions.ts#L19) |
-| <a id="cloud_storage_coldline"></a> `CLOUD_STORAGE_COLDLINE` | `"cloud_storage_coldline"` | [src/core/type-definitions/knowledge-definitions.ts:20](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/type-definitions/knowledge-definitions.ts#L20) |
+| <a id="firestore"></a> `FIRESTORE` | `"firestore"` | [src/core/type-definitions/knowledge-definitions.ts:18](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/type-definitions/knowledge-definitions.ts#L18) |
+| <a id="cloud_storage_standard"></a> `CLOUD_STORAGE_STANDARD` | `"cloud_storage_standard"` | [src/core/type-definitions/knowledge-definitions.ts:19](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/type-definitions/knowledge-definitions.ts#L19) |
+| <a id="cloud_storage_coldline"></a> `CLOUD_STORAGE_COLDLINE` | `"cloud_storage_coldline"` | [src/core/type-definitions/knowledge-definitions.ts:20](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/type-definitions/knowledge-definitions.ts#L20) |

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.59**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.60**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: MaintenanceBlockQueryOptions
 
-Defined in: [src/core/business-mgt/reservation-mgt/reservation-maintenance-block.schema.ts:102](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/reservation-mgt/reservation-maintenance-block.schema.ts#L102)
+Defined in: [src/core/business-mgt/reservation-mgt/reservation-maintenance-block.schema.ts:102](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/reservation-mgt/reservation-maintenance-block.schema.ts#L102)
 
 Maintenance block query options.
  MaintenanceBlockQueryOptions
@@ -15,7 +15,7 @@ Maintenance block query options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/reservation-mgt/reservation-maintenance-block.schema.ts:104](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/reservation-mgt/reservation-maintenance-block.schema.ts#L104) |
-| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/reservation-mgt/reservation-maintenance-block.schema.ts:106](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/reservation-mgt/reservation-maintenance-block.schema.ts#L106) |
-| <a id="filters"></a> `filters?` | [`MaintenanceBlockFilters`](MaintenanceBlockFilters.md) | Optional filters | [src/core/business-mgt/reservation-mgt/reservation-maintenance-block.schema.ts:108](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/reservation-mgt/reservation-maintenance-block.schema.ts#L108) |
-| <a id="sorting"></a> `sorting?` | [`MaintenanceBlockSorting`](MaintenanceBlockSorting.md) | Optional sorting | [src/core/business-mgt/reservation-mgt/reservation-maintenance-block.schema.ts:110](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/reservation-mgt/reservation-maintenance-block.schema.ts#L110) |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/reservation-mgt/reservation-maintenance-block.schema.ts:104](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/reservation-mgt/reservation-maintenance-block.schema.ts#L104) |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/reservation-mgt/reservation-maintenance-block.schema.ts:106](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/reservation-mgt/reservation-maintenance-block.schema.ts#L106) |
+| <a id="filters"></a> `filters?` | [`MaintenanceBlockFilters`](MaintenanceBlockFilters.md) | Optional filters | [src/core/business-mgt/reservation-mgt/reservation-maintenance-block.schema.ts:108](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/reservation-mgt/reservation-maintenance-block.schema.ts#L108) |
+| <a id="sorting"></a> `sorting?` | [`MaintenanceBlockSorting`](MaintenanceBlockSorting.md) | Optional sorting | [src/core/business-mgt/reservation-mgt/reservation-maintenance-block.schema.ts:110](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/reservation-mgt/reservation-maintenance-block.schema.ts#L110) |

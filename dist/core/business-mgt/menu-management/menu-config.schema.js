@@ -7,6 +7,7 @@ exports.UpdateBusinessMenuItemSchema = exports.UpdateMenuCategorySchema = export
 const zod_1 = __importDefault(require("zod"));
 const base_schema_1 = require("../../base.schema");
 const order_schema_1 = require("../order.schema");
+const menu_item_variant_schema_1 = require("./menu-item-variant.schema");
 /**
  * @fileoverview Business menu configuration schema definitions.
  * @module business-mgt/business-menu-config
@@ -132,6 +133,11 @@ exports.CreateMenuCategorySchema = exports.MenuCategorySchema.omit({
 /**
  * Schema for creating a new business menu item.
  * Omits auto-generated fields and allows optional category specification.
+ *
+ * @remarks
+ * A menu item must be created with at least one variant. Nested variants use the
+ * menu item variant create schema with `menuItemId` omitted; the parent link is
+ * assigned by the server once the menu item is created.
  */
 exports.CreateBusinessMenuItemSchema = exports.BusinessMenuItemSchema.omit({
     id: true,
@@ -145,6 +151,7 @@ exports.CreateBusinessMenuItemSchema = exports.BusinessMenuItemSchema.omit({
     lastOrderedAt: true,
 }).safeExtend({
     categoryId: zod_1.default.string().nullable().optional(),
+    variants: zod_1.default.array(menu_item_variant_schema_1.CreateMenuItemVariantSchema.omit({ menuItemId: true })).min(1, "A menu item must have at least one variant").describe("Variants to create with this menu item. At least one is required; the parent menu item ID is assigned by the server."),
 });
 /**
  * Schema for updating an existing menu category.

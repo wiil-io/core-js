@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.59**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.60**](../../README.md)
 
 ***
 
@@ -10,7 +10,13 @@
 const CreateBusinessMenuItemSchema: ZodObject<CreateBusinessMenuItem>;
 ```
 
-Defined in: [src/core/business-mgt/menu-management/menu-config.schema.ts:147](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/menu-management/menu-config.schema.ts#L147)
+Defined in: [src/core/business-mgt/menu-management/menu-config.schema.ts:153](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/menu-management/menu-config.schema.ts#L153)
 
 Schema for creating a new business menu item.
 Omits auto-generated fields and allows optional category specification.
+
+## Remarks
+
+A menu item must be created with at least one variant. Nested variants use the
+menu item variant create schema with `menuItemId` omitted; the parent link is
+assigned by the server once the menu item is created.

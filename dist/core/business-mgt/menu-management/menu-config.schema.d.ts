@@ -140,6 +140,11 @@ export declare const CreateMenuCategorySchema: z.ZodObject<{
 /**
  * Schema for creating a new business menu item.
  * Omits auto-generated fields and allows optional category specification.
+ *
+ * @remarks
+ * A menu item must be created with at least one variant. Nested variants use the
+ * menu item variant create schema with `menuItemId` omitted; the parent link is
+ * assigned by the server once the menu item is created.
  */
 export declare const CreateBusinessMenuItemSchema: z.ZodObject<{
     displayOrder: z.ZodOptional<z.ZodNumber>;
@@ -147,6 +152,7 @@ export declare const CreateBusinessMenuItemSchema: z.ZodObject<{
     description: z.ZodOptional<z.ZodString>;
     isActive: z.ZodDefault<z.ZodBoolean>;
     price: z.ZodNumber;
+    isAvailable: z.ZodDefault<z.ZodBoolean>;
     channelMappings: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodObject<{
         channelId: z.ZodString;
         externalMenuItemId: z.ZodString;
@@ -160,7 +166,6 @@ export declare const CreateBusinessMenuItemSchema: z.ZodObject<{
         carbs: z.ZodOptional<z.ZodNumber>;
         fat: z.ZodOptional<z.ZodNumber>;
     }, z.core.$strip>>;
-    isAvailable: z.ZodDefault<z.ZodBoolean>;
     preparationTime: z.ZodOptional<z.ZodNumber>;
     dayParts: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodObject<{
         name: z.ZodString;
@@ -169,6 +174,19 @@ export declare const CreateBusinessMenuItemSchema: z.ZodObject<{
         daysOfWeek: z.ZodOptional<z.ZodArray<z.ZodString>>;
     }, z.core.$strip>>>>;
     categoryId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    variants: z.ZodArray<z.ZodObject<{
+        name: z.ZodString;
+        description: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+        isDefault: z.ZodDefault<z.ZodBoolean>;
+        isActive: z.ZodDefault<z.ZodBoolean>;
+        price: z.ZodNumber;
+        isAvailable: z.ZodDefault<z.ZodBoolean>;
+        variantChannelMappings: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodObject<{
+            channelId: z.ZodString;
+            externalVariantId: z.ZodString;
+            externalMenuItemId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+        }, z.core.$strip>>>>;
+    }, z.core.$strip>>;
 }, z.core.$strip>;
 /**
  * Schema for updating an existing menu category.
@@ -194,6 +212,7 @@ export declare const UpdateBusinessMenuItemSchema: z.ZodObject<{
     description: z.ZodOptional<z.ZodOptional<z.ZodString>>;
     isActive: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
     price: z.ZodOptional<z.ZodNumber>;
+    isAvailable: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
     channelMappings: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodObject<{
         channelId: z.ZodString;
         externalMenuItemId: z.ZodString;
@@ -207,7 +226,6 @@ export declare const UpdateBusinessMenuItemSchema: z.ZodObject<{
         carbs: z.ZodOptional<z.ZodNumber>;
         fat: z.ZodOptional<z.ZodNumber>;
     }, z.core.$strip>>>;
-    isAvailable: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
     preparationTime: z.ZodOptional<z.ZodOptional<z.ZodNumber>>;
     dayParts: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodObject<{
         name: z.ZodString;
@@ -216,6 +234,19 @@ export declare const UpdateBusinessMenuItemSchema: z.ZodObject<{
         daysOfWeek: z.ZodOptional<z.ZodArray<z.ZodString>>;
     }, z.core.$strip>>>>>;
     categoryId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
+    variants: z.ZodOptional<z.ZodArray<z.ZodObject<{
+        name: z.ZodString;
+        description: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+        isDefault: z.ZodDefault<z.ZodBoolean>;
+        isActive: z.ZodDefault<z.ZodBoolean>;
+        price: z.ZodNumber;
+        isAvailable: z.ZodDefault<z.ZodBoolean>;
+        variantChannelMappings: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodObject<{
+            channelId: z.ZodString;
+            externalVariantId: z.ZodString;
+            externalMenuItemId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+        }, z.core.$strip>>>>;
+    }, z.core.$strip>>>;
     id: z.ZodString;
 }, z.core.$strip>;
 export type MenuCategory = z.infer<typeof MenuCategorySchema>;
