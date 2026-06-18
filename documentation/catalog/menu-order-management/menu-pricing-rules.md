@@ -49,7 +49,7 @@ Defines a pricing rule with conditions and associated discount.
 | description | string | No | null | Rule description |
 | channelMappings | array | No | null | Per-channel external rule ID mappings |
 | discountId | string | Yes | - | Associated discount definition |
-| menuSetRevisionId | string | No | null | Menu set revision for version scoping |
+| menuSetRevisionId | string \| null | No | null | Menu set revision for version scoping |
 | condition | object | Yes | - | Conditions for rule application |
 | effectiveFrom | number | No | null | Start timestamp for rule validity |
 | effectiveTo | number | No | null | End timestamp for rule validity |

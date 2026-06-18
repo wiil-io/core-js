@@ -163,7 +163,7 @@ Groups resources by category, location scope, type, and display order.
   "type": "object",
   "properties": {
     "id": { "type": "string" },
-    "resourceRevisionId": { "type": "string" },
+    "resourceRevisionId": { "type": ["string", "null"] },
     "locationId": { "type": ["string", "null"] },
     "name": { "type": "string", "minLength": 1 },
     "description": { "type": ["string", "null"] },
@@ -192,7 +192,7 @@ Groups resources by category, location scope, type, and display order.
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `id` | string | Yes | Unique identifier |
-| `resourceRevisionId` | string | No | Version-scoped resource revision ID |
+| `resourceRevisionId` | string \| null | No | Version-scoped resource revision ID |
 | `locationId` | string \| null | No | Location scope. Null applies across locations |
 | `name` | string | Yes | Category display name |
 | `description` | string \| null | No | Category description |
@@ -240,7 +240,7 @@ Defines a reservable type or category, including its capacity model, pricing mod
   "type": "object",
   "properties": {
     "id": { "type": "string" },
-    "resourceRevisionId": { "type": "string" },
+    "resourceRevisionId": { "type": ["string", "null"] },
     "locationId": { "type": ["string", "null"] },
     "resourceType": { "type": "string", "enum": ["table", "room", "rental", "rentals", "resource"] },
     "categoryId": { "type": ["string", "null"] },
@@ -295,7 +295,7 @@ Defines a reservable type or category, including its capacity model, pricing mod
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `id` | string | Yes | Unique identifier |
-| `resourceRevisionId` | string | No | Version-scoped resource revision ID |
+| `resourceRevisionId` | string \| null | No | Version-scoped resource revision ID |
 | `locationId` | string \| null | No | Location scope. Null applies across locations |
 | `resourceType` | ResourceType | Yes | table, room, rental, rentals, or resource |
 | `categoryId` | string \| null | No | Resource category ID |
@@ -547,7 +547,7 @@ Represents a physical unit under a resource.
   "type": "object",
   "properties": {
     "id": { "type": "string" },
-    "resourceRevisionId": { "type": "string" },
+    "resourceRevisionId": { "type": ["string", "null"] },
     "locationId": { "type": ["string", "null"] },
     "resourceId": { "type": "string" },
     "name": { "type": ["string", "null"] },
@@ -585,7 +585,7 @@ Represents a physical unit under a resource.
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `id` | string | Yes | Unique identifier |
-| `resourceRevisionId` | string | No | Version-scoped resource revision ID |
+| `resourceRevisionId` | string \| null | No | Version-scoped resource revision ID |
 | `locationId` | string \| null | No | Location where instance exists |
 | `resourceId` | string | Yes | Parent resource ID |
 | `name` | string \| null | No | Instance name |

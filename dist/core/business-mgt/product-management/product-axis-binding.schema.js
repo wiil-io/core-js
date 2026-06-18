@@ -27,7 +27,7 @@ const base_schema_1 = require("../../base.schema");
  * @property {boolean} isActive - Whether this binding is active
  */
 exports.ProductAxisBindingSchema = base_schema_1.BaseModelSchema.safeExtend({
-    productRevisionId: zod_1.default.string().optional().describe("Optional product revision ID for version-scoped data"),
+    productRevisionId: zod_1.default.string().nullable().optional().describe("Optional product revision ID for version-scoped data"),
     productId: zod_1.default.string().describe("Product ID"),
     axisId: zod_1.default.string().describe("Variant axis ID"),
     displayOrder: zod_1.default.number().int().default(0).describe("Display order for this axis on the product"),

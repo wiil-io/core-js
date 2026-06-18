@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.61**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.62**](../../README.md)
 
 ***
 
@@ -15,7 +15,7 @@ type ModifierOptionOverride = {
 };
 ```
 
-Defined in: [src/core/business-mgt/menu-management/modifier.schema.ts:376](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/menu-management/modifier.schema.ts#L376)
+Defined in: [src/core/business-mgt/menu-management/modifier.schema.ts:376](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/menu-management/modifier.schema.ts#L376)
 
 Modifier option override schema.
 Per-option override within a binding.
@@ -24,7 +24,7 @@ Per-option override within a binding.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="modifieroptionid"></a> `modifierOptionId` | `string` | [src/core/business-mgt/menu-management/modifier.schema.ts:135](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/menu-management/modifier.schema.ts#L135) |
-| <a id="pricedeltaoverride"></a> `priceDeltaOverride?` | `number` \| `null` | [src/core/business-mgt/menu-management/modifier.schema.ts:136](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/menu-management/modifier.schema.ts#L136) |
-| <a id="isdefaultoverride"></a> `isDefaultOverride?` | `boolean` \| `null` | [src/core/business-mgt/menu-management/modifier.schema.ts:137](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/menu-management/modifier.schema.ts#L137) |
-| <a id="displayorderoverride"></a> `displayOrderOverride?` | `number` \| `null` | [src/core/business-mgt/menu-management/modifier.schema.ts:138](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/menu-management/modifier.schema.ts#L138) |
+| <a id="modifieroptionid"></a> `modifierOptionId` | `string` | [src/core/business-mgt/menu-management/modifier.schema.ts:135](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/menu-management/modifier.schema.ts#L135) |
+| <a id="pricedeltaoverride"></a> `priceDeltaOverride?` | `number` \| `null` | [src/core/business-mgt/menu-management/modifier.schema.ts:136](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/menu-management/modifier.schema.ts#L136) |
+| <a id="isdefaultoverride"></a> `isDefaultOverride?` | `boolean` \| `null` | [src/core/business-mgt/menu-management/modifier.schema.ts:137](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/menu-management/modifier.schema.ts#L137) |
+| <a id="displayorderoverride"></a> `displayOrderOverride?` | `number` \| `null` | [src/core/business-mgt/menu-management/modifier.schema.ts:138](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/menu-management/modifier.schema.ts#L138) |

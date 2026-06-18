@@ -46,7 +46,7 @@ Defines a pricing rule with conditions and associated discount.
 | name | string | Yes | - | Rule name (1-120 characters) |
 | channelMappings | array | No | null | Per-channel external rule ID mappings |
 | discountId | string | Yes | - | Associated discount definition |
-| productSetRevisionId | string | No | null | Product set revision for version scoping |
+| productSetRevisionId | string \| null | No | null | Product set revision for version scoping |
 | condition | object | Yes | - | Conditions for rule application |
 | effectiveFrom | number | No | null | Start timestamp for rule validity |
 | effectiveTo | number | No | null | End timestamp for rule validity |

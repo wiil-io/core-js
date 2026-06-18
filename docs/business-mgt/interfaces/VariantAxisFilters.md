@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.61**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.62**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: VariantAxisFilters
 
-Defined in: [src/core/business-mgt/product-management/product-variant-axis.schema.ts:122](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L122)
+Defined in: [src/core/business-mgt/product-management/product-variant-axis.schema.ts:122](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L122)
 
 Variant axis filter options.
  VariantAxisFilters
@@ -15,6 +15,6 @@ Variant axis filter options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="search"></a> `search?` | `string` | Text search across axis name | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:124](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L124) |
-| <a id="type"></a> `type?` | [`VariantAxisType`](../../type-definitions/enumerations/VariantAxisType.md) | Filter by axis type | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:126](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L126) |
-| <a id="isactive"></a> `isActive?` | `boolean` | Filter by active status | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:128](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L128) |
+| <a id="search"></a> `search?` | `string` | Text search across axis name | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:124](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L124) |
+| <a id="type"></a> `type?` | [`VariantAxisType`](../../type-definitions/enumerations/VariantAxisType.md) | Filter by axis type | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:126](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L126) |
+| <a id="isactive"></a> `isActive?` | `boolean` | Filter by active status | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:128](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L128) |

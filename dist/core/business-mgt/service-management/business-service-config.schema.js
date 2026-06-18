@@ -177,7 +177,7 @@ exports.ServiceAppointmentFieldConfigSchema = zod_1.default.object({
  * @property {Date} updatedAt - Last update timestamp
  */
 exports.ServiceCategorySchema = base_schema_1.BaseModelSchema.safeExtend({
-    serviceRevisionId: zod_1.default.string().optional().describe("Optional service revision ID for version-scoped data"),
+    serviceRevisionId: zod_1.default.string().nullable().optional().describe("Optional service revision ID for version-scoped data"),
     name: zod_1.default.string().min(1, "Category name is required").describe("Category name (e.g., Hair Services, Spa Treatments)"),
     description: zod_1.default.string().nullable().optional().describe("Category description"),
     imageUrl: zod_1.default.url().nullable().optional().describe("Category image URL"),
@@ -243,7 +243,7 @@ exports.UpdateServiceCategorySchema = exports.CreateServiceCategorySchema.partia
  * @property {Date} updatedAt - Last update timestamp
  */
 exports.BusinessServiceConfigSchema = base_schema_1.BaseModelSchema.safeExtend({
-    serviceRevisionId: zod_1.default.string().optional().describe("Optional service revision ID for version-scoped data"),
+    serviceRevisionId: zod_1.default.string().nullable().optional().describe("Optional service revision ID for version-scoped data"),
     name: zod_1.default.string().min(1, "Service name is required").describe("Name of the service offered"),
     description: zod_1.default.string().nullable().optional().describe("Detailed description of the service"),
     imageUrl: zod_1.default.url().nullable().optional().describe("Service image URL"),

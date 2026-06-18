@@ -68,7 +68,7 @@ exports.ProductVariantChannelMappingSchema = zod_1.default.object({
  * @property {number} [lastOrderedAt] - Unix timestamp of last order
  */
 exports.ProductVariantSchema = base_schema_1.BaseModelSchema.safeExtend({
-    productRevisionId: zod_1.default.string().optional().describe("Optional product revision ID for version-scoped data"),
+    productRevisionId: zod_1.default.string().nullable().optional().describe("Optional product revision ID for version-scoped data"),
     productId: zod_1.default.string().describe("Parent product ID"),
     // Axis value selections (e.g., { "axis_size": "value_large", "axis_color": "value_red" })
     axisValues: zod_1.default.record(zod_1.default.string(), zod_1.default.string()).describe("Map of axisId to selected valueId"),

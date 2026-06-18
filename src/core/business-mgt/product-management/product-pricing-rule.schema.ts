@@ -33,7 +33,7 @@ export const ProductPricingRuleSchema = BaseModelSchema.safeExtend({
     name: z.string().min(1).max(120).describe("Display name for this pricing rule (e.g., 'Summer Sale 20% Off', 'Buy 2 Get 1 Free'). Shown to staff and in reports."),
     channelMappings: z.array(PricingRuleChannelMappingSchema).nullable().optional().describe("Per-channel pricing rule ID mappings for external platform synchronization."),
     discountId: z.string().min(1).describe("References DiscountRule that defines the discount type and value to apply when this rule matches."),
-    productSetRevisionId: z.string().optional().describe("Optional product set revision ID for version-scoped rule targeting. Ensures rule applies to specific catalog version."),
+    productSetRevisionId: z.string().nullable().optional().describe("Optional product set revision ID for version-scoped rule targeting. Ensures rule applies to specific catalog version."),
     condition: ProductPricingRuleConditionSchema.describe("Condition criteria that must be met for this pricing rule to apply. Includes product set targeting and quantity requirements."),
     effectiveFrom: z.number().int().nonnegative().optional().describe("Unix timestamp when this pricing rule becomes active. Rule is inactive before this time."),
     effectiveTo: z.number().int().nonnegative().optional().describe("Unix timestamp when this pricing rule expires. Rule is inactive after this time."),

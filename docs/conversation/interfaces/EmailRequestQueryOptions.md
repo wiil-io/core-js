@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.61**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.62**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: EmailRequestQueryOptions
 
-Defined in: [src/core/conversation/outbound-email.schema.ts:223](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/conversation/outbound-email.schema.ts#L223)
+Defined in: [src/core/conversation/outbound-email.schema.ts:223](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/conversation/outbound-email.schema.ts#L223)
 
 Email request query options.
  EmailRequestQueryOptions
@@ -15,7 +15,7 @@ Email request query options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/conversation/outbound-email.schema.ts:225](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/conversation/outbound-email.schema.ts#L225) |
-| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/conversation/outbound-email.schema.ts:227](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/conversation/outbound-email.schema.ts#L227) |
-| <a id="filters"></a> `filters?` | [`EmailRequestFilters`](EmailRequestFilters.md) | Optional filters | [src/core/conversation/outbound-email.schema.ts:229](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/conversation/outbound-email.schema.ts#L229) |
-| <a id="sorting"></a> `sorting?` | [`EmailRequestSorting`](EmailRequestSorting.md) | Optional sorting | [src/core/conversation/outbound-email.schema.ts:231](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/conversation/outbound-email.schema.ts#L231) |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/conversation/outbound-email.schema.ts:225](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/conversation/outbound-email.schema.ts#L225) |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/conversation/outbound-email.schema.ts:227](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/conversation/outbound-email.schema.ts#L227) |
+| <a id="filters"></a> `filters?` | [`EmailRequestFilters`](EmailRequestFilters.md) | Optional filters | [src/core/conversation/outbound-email.schema.ts:229](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/conversation/outbound-email.schema.ts#L229) |
+| <a id="sorting"></a> `sorting?` | [`EmailRequestSorting`](EmailRequestSorting.md) | Optional sorting | [src/core/conversation/outbound-email.schema.ts:231](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/conversation/outbound-email.schema.ts#L231) |

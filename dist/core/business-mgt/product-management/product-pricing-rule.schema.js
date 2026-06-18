@@ -31,7 +31,7 @@ exports.ProductPricingRuleSchema = base_schema_1.BaseModelSchema.safeExtend({
     name: zod_1.z.string().min(1).max(120).describe("Display name for this pricing rule (e.g., 'Summer Sale 20% Off', 'Buy 2 Get 1 Free'). Shown to staff and in reports."),
     channelMappings: zod_1.z.array(pricing_rule_shared_schema_1.PricingRuleChannelMappingSchema).nullable().optional().describe("Per-channel pricing rule ID mappings for external platform synchronization."),
     discountId: zod_1.z.string().min(1).describe("References DiscountRule that defines the discount type and value to apply when this rule matches."),
-    productSetRevisionId: zod_1.z.string().optional().describe("Optional product set revision ID for version-scoped rule targeting. Ensures rule applies to specific catalog version."),
+    productSetRevisionId: zod_1.z.string().nullable().optional().describe("Optional product set revision ID for version-scoped rule targeting. Ensures rule applies to specific catalog version."),
     condition: exports.ProductPricingRuleConditionSchema.describe("Condition criteria that must be met for this pricing rule to apply. Includes product set targeting and quantity requirements."),
     effectiveFrom: zod_1.z.number().int().nonnegative().optional().describe("Unix timestamp when this pricing rule becomes active. Rule is inactive before this time."),
     effectiveTo: zod_1.z.number().int().nonnegative().optional().describe("Unix timestamp when this pricing rule expires. Rule is inactive after this time."),

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.61**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.62**](../../README.md)
 
 ***
 
@@ -19,7 +19,7 @@ type PropertyCategory = {
 };
 ```
 
-Defined in: [src/core/business-mgt/property-management/property-config.schema.ts:390](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/property-management/property-config.schema.ts#L390)
+Defined in: [src/core/business-mgt/property-management/property-config.schema.ts:390](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/property-management/property-config.schema.ts#L390)
 
 Property category schema.
 Organizes properties into logical groups (e.g., Luxury Homes, Commercial Offices).
@@ -28,11 +28,11 @@ Organizes properties into logical groups (e.g., Luxury Homes, Commercial Offices
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="id"></a> `id` | `string` | [src/core/base.schema.ts:8](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/base.schema.ts#L8) |
-| <a id="createdat"></a> `createdAt?` | `number` | [src/core/base.schema.ts:9](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/base.schema.ts#L9) |
-| <a id="updatedat"></a> `updatedAt?` | `number` | [src/core/base.schema.ts:10](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/base.schema.ts#L10) |
-| <a id="name"></a> `name` | `string` | [src/core/business-mgt/property-management/property-config.schema.ts:37](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/property-management/property-config.schema.ts#L37) |
-| <a id="description"></a> `description?` | `string` | [src/core/business-mgt/property-management/property-config.schema.ts:38](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/property-management/property-config.schema.ts#L38) |
-| <a id="propertytype"></a> `propertyType` | [`PropertyType`](../../type-definitions/enumerations/PropertyType.md) | [src/core/business-mgt/property-management/property-config.schema.ts:39](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/property-management/property-config.schema.ts#L39) |
-| <a id="displayorder"></a> `displayOrder?` | `number` | [src/core/business-mgt/property-management/property-config.schema.ts:40](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/property-management/property-config.schema.ts#L40) |
-| <a id="isdefault"></a> `isDefault` | `boolean` | [src/core/business-mgt/property-management/property-config.schema.ts:41](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/property-management/property-config.schema.ts#L41) |
+| <a id="id"></a> `id` | `string` | [src/core/base.schema.ts:8](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/base.schema.ts#L8) |
+| <a id="createdat"></a> `createdAt?` | `number` | [src/core/base.schema.ts:9](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/base.schema.ts#L9) |
+| <a id="updatedat"></a> `updatedAt?` | `number` | [src/core/base.schema.ts:10](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/base.schema.ts#L10) |
+| <a id="name"></a> `name` | `string` | [src/core/business-mgt/property-management/property-config.schema.ts:37](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/property-management/property-config.schema.ts#L37) |
+| <a id="description"></a> `description?` | `string` | [src/core/business-mgt/property-management/property-config.schema.ts:38](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/property-management/property-config.schema.ts#L38) |
+| <a id="propertytype"></a> `propertyType` | [`PropertyType`](../../type-definitions/enumerations/PropertyType.md) | [src/core/business-mgt/property-management/property-config.schema.ts:39](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/property-management/property-config.schema.ts#L39) |
+| <a id="displayorder"></a> `displayOrder?` | `number` | [src/core/business-mgt/property-management/property-config.schema.ts:40](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/property-management/property-config.schema.ts#L40) |
+| <a id="isdefault"></a> `isDefault` | `boolean` | [src/core/business-mgt/property-management/property-config.schema.ts:41](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/property-management/property-config.schema.ts#L41) |

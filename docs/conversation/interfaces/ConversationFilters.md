@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.61**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.62**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ConversationFilters
 
-Defined in: [src/core/conversation/conversation-config.schema.ts:431](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/conversation/conversation-config.schema.ts#L431)
+Defined in: [src/core/conversation/conversation-config.schema.ts:431](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/conversation/conversation-config.schema.ts#L431)
 
 Conversation filter options.
  ConversationFilters
@@ -15,12 +15,12 @@ Conversation filter options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="search"></a> `search?` | `string` | Text search across conversation content | [src/core/conversation/conversation-config.schema.ts:433](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/conversation/conversation-config.schema.ts#L433) |
-| <a id="conversationtype"></a> `conversationType?` | [`ServiceConversationType`](../../type-definitions/enumerations/ServiceConversationType.md)[] | Filter by conversation type(s) | [src/core/conversation/conversation-config.schema.ts:435](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/conversation/conversation-config.schema.ts#L435) |
-| <a id="channelid"></a> `channelId?` | `string` | Filter by channel ID | [src/core/conversation/conversation-config.schema.ts:437](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/conversation/conversation-config.schema.ts#L437) |
-| <a id="locationid"></a> `locationId?` | `string` | Filter by location ID | [src/core/conversation/conversation-config.schema.ts:439](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/conversation/conversation-config.schema.ts#L439) |
-| <a id="customerid"></a> `customerId?` | `string` | Filter by customer ID | [src/core/conversation/conversation-config.schema.ts:441](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/conversation/conversation-config.schema.ts#L441) |
-| <a id="hasmessages"></a> `hasMessages?` | `boolean` | Filter by presence of messages | [src/core/conversation/conversation-config.schema.ts:443](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/conversation/conversation-config.schema.ts#L443) |
-| <a id="daterange"></a> `dateRange?` | \{ `start?`: `Date`; `end?`: `Date`; \} | Filter by date range | [src/core/conversation/conversation-config.schema.ts:445](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/conversation/conversation-config.schema.ts#L445) |
-| `dateRange.start?` | `Date` | - | [src/core/conversation/conversation-config.schema.ts:446](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/conversation/conversation-config.schema.ts#L446) |
-| `dateRange.end?` | `Date` | - | [src/core/conversation/conversation-config.schema.ts:447](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/conversation/conversation-config.schema.ts#L447) |
+| <a id="search"></a> `search?` | `string` | Text search across conversation content | [src/core/conversation/conversation-config.schema.ts:433](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/conversation/conversation-config.schema.ts#L433) |
+| <a id="conversationtype"></a> `conversationType?` | [`ServiceConversationType`](../../type-definitions/enumerations/ServiceConversationType.md)[] | Filter by conversation type(s) | [src/core/conversation/conversation-config.schema.ts:435](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/conversation/conversation-config.schema.ts#L435) |
+| <a id="channelid"></a> `channelId?` | `string` | Filter by channel ID | [src/core/conversation/conversation-config.schema.ts:437](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/conversation/conversation-config.schema.ts#L437) |
+| <a id="locationid"></a> `locationId?` | `string` | Filter by location ID | [src/core/conversation/conversation-config.schema.ts:439](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/conversation/conversation-config.schema.ts#L439) |
+| <a id="customerid"></a> `customerId?` | `string` | Filter by customer ID | [src/core/conversation/conversation-config.schema.ts:441](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/conversation/conversation-config.schema.ts#L441) |
+| <a id="hasmessages"></a> `hasMessages?` | `boolean` | Filter by presence of messages | [src/core/conversation/conversation-config.schema.ts:443](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/conversation/conversation-config.schema.ts#L443) |
+| <a id="daterange"></a> `dateRange?` | \{ `start?`: `Date`; `end?`: `Date`; \} | Filter by date range | [src/core/conversation/conversation-config.schema.ts:445](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/conversation/conversation-config.schema.ts#L445) |
+| `dateRange.start?` | `Date` | - | [src/core/conversation/conversation-config.schema.ts:446](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/conversation/conversation-config.schema.ts#L446) |
+| `dateRange.end?` | `Date` | - | [src/core/conversation/conversation-config.schema.ts:447](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/conversation/conversation-config.schema.ts#L447) |

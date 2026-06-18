@@ -223,7 +223,7 @@ exports.ChecklistTemplateItemSchema = zod_1.z.object({
  * @property {Object} [metadata] - Additional resource metadata
  */
 exports.ResourceSchema = base_schema_1.BaseModelSchema.safeExtend({
-    resourceRevisionId: zod_1.z.string().optional().describe("Optional resource revision ID for version-scoped catalog data."),
+    resourceRevisionId: zod_1.z.string().nullable().optional().describe("Optional resource revision ID for version-scoped catalog data."),
     locationId: zod_1.z.string().nullable().optional().describe("Business location ID where this resource applies. Null applies across locations."),
     resourceType: zod_1.z.enum(type_definitions_1.ResourceType).describe("Reservation resource type, such as table, room, rental, or generic resource."),
     categoryId: zod_1.z.string().nullable().optional().describe("Resource category ID used for grouping and filtering."),

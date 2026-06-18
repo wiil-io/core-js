@@ -43,7 +43,7 @@ Represents a bundle or set of products with configurable pricing and targeting.
 | Field | Type | Required | Default | Description |
 |-------|------|----------|---------|-------------|
 | id | string | Yes | auto-generated | Unique identifier |
-| productRevisionId | string | No | null | Version control for product changes |
+| productRevisionId | string \| null | No | null | Version control for product changes |
 | code | string | No | null | Stable internal code for integration matching |
 | name | string | Yes | - | Product set name (min 1 character) |
 | description | string | No | null | Product set description |

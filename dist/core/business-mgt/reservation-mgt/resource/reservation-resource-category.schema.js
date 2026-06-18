@@ -43,7 +43,7 @@ exports.ResourceCategoryChannelMappingSchema = zod_1.z.object({
  * @property {Object} [metadata] - Additional category metadata
  */
 exports.ResourceCategorySchema = base_schema_1.BaseModelSchema.safeExtend({
-    resourceRevisionId: zod_1.z.string().optional().describe("Optional resource revision ID for version-scoped data"),
+    resourceRevisionId: zod_1.z.string().nullable().optional().describe("Optional resource revision ID for version-scoped data"),
     locationId: zod_1.z.string().nullable().optional().describe("Business location ID where this resource category applies. Null applies across locations."),
     name: zod_1.z.string().min(1, "Category name is required").describe("Display name for the reservation resource category."),
     description: zod_1.z.string().nullable().optional().describe("Customer or staff-facing description of this resource category."),

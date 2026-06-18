@@ -35,7 +35,7 @@ export declare const ResourceCategorySchema: z.ZodObject<{
     id: z.ZodString;
     createdAt: z.ZodOptional<z.ZodNumber>;
     updatedAt: z.ZodOptional<z.ZodNumber>;
-    resourceRevisionId: z.ZodOptional<z.ZodString>;
+    resourceRevisionId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     locationId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     name: z.ZodString;
     description: z.ZodOptional<z.ZodNullable<z.ZodString>>;
@@ -63,7 +63,7 @@ export declare const CreateResourceCategorySchema: z.ZodObject<{
         channelId: z.ZodString;
         externalCategoryId: z.ZodString;
     }, z.core.$strip>>>>;
-    resourceRevisionId: z.ZodOptional<z.ZodString>;
+    resourceRevisionId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     resourceType: z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof ResourceType>>>;
     placement: z.ZodOptional<z.ZodObject<{
         placementIntent: z.ZodObject<{
@@ -95,7 +95,7 @@ export declare const UpdateResourceCategorySchema: z.ZodObject<{
         channelId: z.ZodString;
         externalCategoryId: z.ZodString;
     }, z.core.$strip>>>>>;
-    resourceRevisionId: z.ZodOptional<z.ZodOptional<z.ZodString>>;
+    resourceRevisionId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     resourceType: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof ResourceType>>>>;
     placement: z.ZodOptional<z.ZodOptional<z.ZodObject<{
         placementIntent: z.ZodObject<{

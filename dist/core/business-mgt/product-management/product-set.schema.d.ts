@@ -108,7 +108,7 @@ export declare const ProductSetSchema: z.ZodObject<{
     id: z.ZodString;
     createdAt: z.ZodOptional<z.ZodNumber>;
     updatedAt: z.ZodOptional<z.ZodNumber>;
-    productRevisionId: z.ZodOptional<z.ZodString>;
+    productRevisionId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     code: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     name: z.ZodString;
     description: z.ZodOptional<z.ZodNullable<z.ZodString>>;
@@ -169,7 +169,7 @@ export declare const CreateProductSetSchema: z.ZodObject<{
     }, z.core.$strip>>>;
     imageUrl: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     imageUrls: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodString>>>;
-    productRevisionId: z.ZodOptional<z.ZodString>;
+    productRevisionId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
 }, z.core.$strip>;
 export declare const UpdateProductSetSchema: z.ZodObject<{
     displayOrder: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
@@ -201,7 +201,7 @@ export declare const UpdateProductSetSchema: z.ZodObject<{
     }, z.core.$strip>>>>;
     imageUrl: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     imageUrls: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodString>>>>;
-    productRevisionId: z.ZodOptional<z.ZodOptional<z.ZodString>>;
+    productRevisionId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     id: z.ZodString;
 }, z.core.$strip>;
 export type ProductSetItem = z.infer<typeof ProductSetItemSchema>;
@@ -227,7 +227,7 @@ export declare const ProductSetItemDisplaySchema: z.ZodObject<{
         id: z.ZodString;
         createdAt: z.ZodOptional<z.ZodNumber>;
         updatedAt: z.ZodOptional<z.ZodNumber>;
-        productRevisionId: z.ZodOptional<z.ZodString>;
+        productRevisionId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
         channelMappings: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodObject<{
             channelId: z.ZodString;
             externalProductId: z.ZodString;
@@ -251,7 +251,7 @@ export declare const ProductSetItemDisplaySchema: z.ZodObject<{
             id: z.ZodString;
             createdAt: z.ZodOptional<z.ZodNumber>;
             updatedAt: z.ZodOptional<z.ZodNumber>;
-            productRevisionId: z.ZodOptional<z.ZodString>;
+            productRevisionId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
             parentId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
             name: z.ZodString;
             slug: z.ZodOptional<z.ZodNullable<z.ZodString>>;
@@ -344,7 +344,7 @@ export declare const ProductSetDisplaySchema: z.ZodObject<{
     }, z.core.$strip>>>;
     imageUrl: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     imageUrls: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodString>>>;
-    productRevisionId: z.ZodOptional<z.ZodString>;
+    productRevisionId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     items: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodObject<{
         productId: z.ZodString;
         productVariantId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
@@ -355,7 +355,7 @@ export declare const ProductSetDisplaySchema: z.ZodObject<{
             id: z.ZodString;
             createdAt: z.ZodOptional<z.ZodNumber>;
             updatedAt: z.ZodOptional<z.ZodNumber>;
-            productRevisionId: z.ZodOptional<z.ZodString>;
+            productRevisionId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
             channelMappings: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodObject<{
                 channelId: z.ZodString;
                 externalProductId: z.ZodString;
@@ -379,7 +379,7 @@ export declare const ProductSetDisplaySchema: z.ZodObject<{
                 id: z.ZodString;
                 createdAt: z.ZodOptional<z.ZodNumber>;
                 updatedAt: z.ZodOptional<z.ZodNumber>;
-                productRevisionId: z.ZodOptional<z.ZodString>;
+                productRevisionId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
                 parentId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
                 name: z.ZodString;
                 slug: z.ZodOptional<z.ZodNullable<z.ZodString>>;

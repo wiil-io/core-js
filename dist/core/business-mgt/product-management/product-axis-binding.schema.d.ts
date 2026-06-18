@@ -20,7 +20,7 @@ export declare const ProductAxisBindingSchema: z.ZodObject<{
     id: z.ZodString;
     createdAt: z.ZodOptional<z.ZodNumber>;
     updatedAt: z.ZodOptional<z.ZodNumber>;
-    productRevisionId: z.ZodOptional<z.ZodString>;
+    productRevisionId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     productId: z.ZodString;
     axisId: z.ZodString;
     displayOrder: z.ZodDefault<z.ZodNumber>;
@@ -33,7 +33,7 @@ export declare const ProductAxisBindingSchema: z.ZodObject<{
 export declare const CreateProductAxisBindingSchema: z.ZodObject<{
     displayOrder: z.ZodDefault<z.ZodNumber>;
     isActive: z.ZodDefault<z.ZodBoolean>;
-    productRevisionId: z.ZodOptional<z.ZodString>;
+    productRevisionId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     productId: z.ZodString;
     axisId: z.ZodString;
 }, z.core.$strip>;
@@ -44,7 +44,7 @@ export declare const CreateProductAxisBindingSchema: z.ZodObject<{
 export declare const UpdateProductAxisBindingSchema: z.ZodObject<{
     displayOrder: z.ZodOptional<z.ZodDefault<z.ZodNumber>>;
     isActive: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
-    productRevisionId: z.ZodOptional<z.ZodOptional<z.ZodString>>;
+    productRevisionId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     productId: z.ZodOptional<z.ZodString>;
     axisId: z.ZodOptional<z.ZodString>;
     id: z.ZodString;

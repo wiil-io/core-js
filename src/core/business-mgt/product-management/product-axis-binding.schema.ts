@@ -24,7 +24,7 @@ import { BaseModelSchema } from "../../base.schema";
  * @property {boolean} isActive - Whether this binding is active
  */
 export const ProductAxisBindingSchema = BaseModelSchema.safeExtend({
-    productRevisionId: z.string().optional().describe("Optional product revision ID for version-scoped data"),
+    productRevisionId: z.string().nullable().optional().describe("Optional product revision ID for version-scoped data"),
     productId: z.string().describe("Product ID"),
     axisId: z.string().describe("Variant axis ID"),
     displayOrder: z.number().int().default(0).describe("Display order for this axis on the product"),

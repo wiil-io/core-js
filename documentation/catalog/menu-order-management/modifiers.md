@@ -46,7 +46,7 @@ Groups of related modifier options that can be applied to menu items.
 | Field | Type | Required | Default | Description |
 |-------|------|----------|---------|-------------|
 | id | string | Yes | auto-generated | Unique identifier |
-| modifierRevisionId | string | No | null | Version control ID for tracking changes |
+| modifierRevisionId | string \| null | No | null | Version control ID for tracking changes |
 | locationId | string | No | null | Location-specific modifier group |
 | name | string | Yes | - | Group name (e.g., "Size", "Add-ons") |
 | description | string | No | null | Group description |
@@ -108,7 +108,7 @@ Individual options within a modifier group.
 | Field | Type | Required | Default | Description |
 |-------|------|----------|---------|-------------|
 | id | string | Yes | auto-generated | Unique identifier |
-| modifierRevisionId | string | No | null | Version control ID |
+| modifierRevisionId | string \| null | No | null | Version control ID |
 | locationId | string | No | null | Location-specific option |
 | modifierGroupId | string | Yes | - | Parent modifier group reference |
 | name | string | Yes | - | Option name (e.g., "Extra Cheese") |
@@ -160,7 +160,7 @@ Links modifier groups to menu items, variants, or menu sets with optional overri
 | Field | Type | Required | Default | Description |
 |-------|------|----------|---------|-------------|
 | id | string | Yes | auto-generated | Unique identifier |
-| modifierRevisionId | string | No | null | Version control ID |
+| modifierRevisionId | string \| null | No | null | Version control ID |
 | locationId | string | No | null | Location-specific binding |
 | menuItemId | string | Conditional | null | Target menu item (exactly one target required) |
 | menuItemVariantId | string | No | null | Target variant (requires menuItemId) |

@@ -168,7 +168,7 @@ exports.ProductChannelMappingSchema = zod_1.default.object({
  * @property {CategoryLocationScope} [locationScope] - Location inheritance scope
  */
 exports.ProductCategorySchema = base_schema_1.BaseModelSchema.safeExtend({
-    productRevisionId: zod_1.default.string().optional().describe("Optional product revision ID for version-scoped data. Ensures category applies to specific catalog version."),
+    productRevisionId: zod_1.default.string().nullable().optional().describe("Optional product revision ID for version-scoped data. Ensures category applies to specific catalog version."),
     parentId: zod_1.default.string().nullable().optional().describe("Parent category ID for nested hierarchy. Null for root categories."),
     name: zod_1.default.string().min(1, "Category name is required").describe("Category name for product organization (e.g., Electronics, Clothing). Used by AI Powered Services when presenting product options."),
     slug: zod_1.default.string().min(1).nullable().optional().describe("URL-friendly slug for the category. Used for SEO and deep linking."),
@@ -238,7 +238,7 @@ exports.ProductCategorySchema = base_schema_1.BaseModelSchema.safeExtend({
  * @property {number} [displayOrder] - Display order in category
  */
 exports.BusinessProductSchema = base_schema_1.BaseModelSchema.safeExtend({
-    productRevisionId: zod_1.default.string().optional().describe("Optional product revision ID for version-scoped data. Ensures product applies to specific catalog version."),
+    productRevisionId: zod_1.default.string().nullable().optional().describe("Optional product revision ID for version-scoped data. Ensures product applies to specific catalog version."),
     channelMappings: zod_1.default.array(exports.ProductChannelMappingSchema).nullable().optional().describe("Per-channel product ID mappings for external platform synchronization."),
     name: zod_1.default.string().min(1, "Product name is required").describe("Display name of the product shown to customers. Used by AI Powered Services in order conversations."),
     description: zod_1.default.string().nullable().optional().describe("Detailed product description including features and benefits. Enables AI-powered recommendations."),

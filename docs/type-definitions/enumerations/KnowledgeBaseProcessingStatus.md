@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.61**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.62**](../../README.md)
 
 ***
 
@@ -6,13 +6,13 @@
 
 # Enumeration: KnowledgeBaseProcessingStatus
 
-Defined in: [src/core/type-definitions/knowledge-definitions.ts:1](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/type-definitions/knowledge-definitions.ts#L1)
+Defined in: [src/core/type-definitions/knowledge-definitions.ts:1](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/type-definitions/knowledge-definitions.ts#L1)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="pending"></a> `PENDING` | `"pending"` | [src/core/type-definitions/knowledge-definitions.ts:2](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/type-definitions/knowledge-definitions.ts#L2) |
-| <a id="processing"></a> `PROCESSING` | `"processing"` | [src/core/type-definitions/knowledge-definitions.ts:3](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/type-definitions/knowledge-definitions.ts#L3) |
-| <a id="completed"></a> `COMPLETED` | `"completed"` | [src/core/type-definitions/knowledge-definitions.ts:4](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/type-definitions/knowledge-definitions.ts#L4) |
-| <a id="failed"></a> `FAILED` | `"failed"` | [src/core/type-definitions/knowledge-definitions.ts:5](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/type-definitions/knowledge-definitions.ts#L5) |
+| <a id="pending"></a> `PENDING` | `"pending"` | [src/core/type-definitions/knowledge-definitions.ts:2](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/type-definitions/knowledge-definitions.ts#L2) |
+| <a id="processing"></a> `PROCESSING` | `"processing"` | [src/core/type-definitions/knowledge-definitions.ts:3](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/type-definitions/knowledge-definitions.ts#L3) |
+| <a id="completed"></a> `COMPLETED` | `"completed"` | [src/core/type-definitions/knowledge-definitions.ts:4](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/type-definitions/knowledge-definitions.ts#L4) |
+| <a id="failed"></a> `FAILED` | `"failed"` | [src/core/type-definitions/knowledge-definitions.ts:5](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/type-definitions/knowledge-definitions.ts#L5) |

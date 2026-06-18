@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.61**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.62**](../../README.md)
 
 ***
 
@@ -19,7 +19,7 @@ type ServicePricingRuleCondition = {
 };
 ```
 
-Defined in: [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:134](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L134)
+Defined in: [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:134](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L134)
 
 Service pricing rule condition schema.
 Extends common pricing conditions with service-specific targeting.
@@ -28,11 +28,11 @@ Extends common pricing conditions with service-specific targeting.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="daysofweek"></a> `daysOfWeek` | `number`[] | [src/core/business-mgt/pricing-rule.shared.schema.ts:47](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/pricing-rule.shared.schema.ts#L47) |
-| <a id="startminute"></a> `startMinute?` | `number` | [src/core/business-mgt/pricing-rule.shared.schema.ts:48](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/pricing-rule.shared.schema.ts#L48) |
-| <a id="endminute"></a> `endMinute?` | `number` | [src/core/business-mgt/pricing-rule.shared.schema.ts:49](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/pricing-rule.shared.schema.ts#L49) |
-| <a id="customersegmentids"></a> `customerSegmentIds?` | `string`[] | [src/core/business-mgt/pricing-rule.shared.schema.ts:50](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/pricing-rule.shared.schema.ts#L50) |
-| <a id="channel"></a> `channel` | [`PricingChannel`](../../type-definitions/enumerations/PricingChannel.md) | [src/core/business-mgt/pricing-rule.shared.schema.ts:51](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/pricing-rule.shared.schema.ts#L51) |
-| <a id="allservices"></a> `allServices` | `boolean` | [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:35](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L35) |
-| <a id="serviceidsany"></a> `serviceIdsAny` | `string`[] | [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:36](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L36) |
-| <a id="serviceidsall"></a> `serviceIdsAll` | `string`[] | [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:37](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L37) |
+| <a id="daysofweek"></a> `daysOfWeek` | `number`[] | [src/core/business-mgt/pricing-rule.shared.schema.ts:47](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/pricing-rule.shared.schema.ts#L47) |
+| <a id="startminute"></a> `startMinute?` | `number` | [src/core/business-mgt/pricing-rule.shared.schema.ts:48](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/pricing-rule.shared.schema.ts#L48) |
+| <a id="endminute"></a> `endMinute?` | `number` | [src/core/business-mgt/pricing-rule.shared.schema.ts:49](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/pricing-rule.shared.schema.ts#L49) |
+| <a id="customersegmentids"></a> `customerSegmentIds?` | `string`[] | [src/core/business-mgt/pricing-rule.shared.schema.ts:50](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/pricing-rule.shared.schema.ts#L50) |
+| <a id="channel"></a> `channel` | [`PricingChannel`](../../type-definitions/enumerations/PricingChannel.md) | [src/core/business-mgt/pricing-rule.shared.schema.ts:51](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/pricing-rule.shared.schema.ts#L51) |
+| <a id="allservices"></a> `allServices` | `boolean` | [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:35](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L35) |
+| <a id="serviceidsany"></a> `serviceIdsAny` | `string`[] | [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:36](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L36) |
+| <a id="serviceidsall"></a> `serviceIdsAll` | `string`[] | [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:37](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L37) |

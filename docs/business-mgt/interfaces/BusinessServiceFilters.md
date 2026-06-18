@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.61**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.62**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: BusinessServiceFilters
 
-Defined in: [src/core/business-mgt/service-management/business-service-config.schema.ts:367](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/service-management/business-service-config.schema.ts#L367)
+Defined in: [src/core/business-mgt/service-management/business-service-config.schema.ts:367](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/service-management/business-service-config.schema.ts#L367)
 
 Business service filter options.
  BusinessServiceFilters
@@ -15,12 +15,12 @@ Business service filter options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="search"></a> `search?` | `string` | Text search across name/description | [src/core/business-mgt/service-management/business-service-config.schema.ts:369](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/service-management/business-service-config.schema.ts#L369) |
-| <a id="categoryid"></a> `categoryId?` | `string` | Filter by category ID | [src/core/business-mgt/service-management/business-service-config.schema.ts:371](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/service-management/business-service-config.schema.ts#L371) |
-| <a id="locationid"></a> `locationId?` | `string` | Filter by location ID | [src/core/business-mgt/service-management/business-service-config.schema.ts:373](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/service-management/business-service-config.schema.ts#L373) |
-| <a id="isactive"></a> `isActive?` | `boolean` | Filter by active status | [src/core/business-mgt/service-management/business-service-config.schema.ts:375](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/service-management/business-service-config.schema.ts#L375) |
-| <a id="isbookable"></a> `isBookable?` | `boolean` | Filter by bookable status | [src/core/business-mgt/service-management/business-service-config.schema.ts:377](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/service-management/business-service-config.schema.ts#L377) |
-| <a id="pricerange"></a> `priceRange?` | \{ `min?`: `number`; `max?`: `number`; \} | Filter by price range | [src/core/business-mgt/service-management/business-service-config.schema.ts:379](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/service-management/business-service-config.schema.ts#L379) |
-| `priceRange.min?` | `number` | - | [src/core/business-mgt/service-management/business-service-config.schema.ts:379](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/service-management/business-service-config.schema.ts#L379) |
-| `priceRange.max?` | `number` | - | [src/core/business-mgt/service-management/business-service-config.schema.ts:379](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/service-management/business-service-config.schema.ts#L379) |
-| <a id="includedeleted"></a> `includeDeleted?` | `boolean` | Include soft-deleted records | [src/core/business-mgt/service-management/business-service-config.schema.ts:381](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/service-management/business-service-config.schema.ts#L381) |
+| <a id="search"></a> `search?` | `string` | Text search across name/description | [src/core/business-mgt/service-management/business-service-config.schema.ts:369](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/service-management/business-service-config.schema.ts#L369) |
+| <a id="categoryid"></a> `categoryId?` | `string` | Filter by category ID | [src/core/business-mgt/service-management/business-service-config.schema.ts:371](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/service-management/business-service-config.schema.ts#L371) |
+| <a id="locationid"></a> `locationId?` | `string` | Filter by location ID | [src/core/business-mgt/service-management/business-service-config.schema.ts:373](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/service-management/business-service-config.schema.ts#L373) |
+| <a id="isactive"></a> `isActive?` | `boolean` | Filter by active status | [src/core/business-mgt/service-management/business-service-config.schema.ts:375](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/service-management/business-service-config.schema.ts#L375) |
+| <a id="isbookable"></a> `isBookable?` | `boolean` | Filter by bookable status | [src/core/business-mgt/service-management/business-service-config.schema.ts:377](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/service-management/business-service-config.schema.ts#L377) |
+| <a id="pricerange"></a> `priceRange?` | \{ `min?`: `number`; `max?`: `number`; \} | Filter by price range | [src/core/business-mgt/service-management/business-service-config.schema.ts:379](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/service-management/business-service-config.schema.ts#L379) |
+| `priceRange.min?` | `number` | - | [src/core/business-mgt/service-management/business-service-config.schema.ts:379](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/service-management/business-service-config.schema.ts#L379) |
+| `priceRange.max?` | `number` | - | [src/core/business-mgt/service-management/business-service-config.schema.ts:379](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/service-management/business-service-config.schema.ts#L379) |
+| <a id="includedeleted"></a> `includeDeleted?` | `boolean` | Include soft-deleted records | [src/core/business-mgt/service-management/business-service-config.schema.ts:381](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/service-management/business-service-config.schema.ts#L381) |

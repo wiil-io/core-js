@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.61**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.62**](../../README.md)
 
 ***
 
@@ -13,7 +13,7 @@ type ResourceInstanceAttribute = {
 };
 ```
 
-Defined in: [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:103](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L103)
+Defined in: [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:103](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L103)
 
 Resource instance attribute schema.
 Stores flexible key/value attributes on physical reservation inventory.
@@ -22,5 +22,5 @@ Stores flexible key/value attributes on physical reservation inventory.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="key"></a> `key` | `string` | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:40](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L40) |
-| <a id="value"></a> `value` | `string` | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:41](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L41) |
+| <a id="key"></a> `key` | `string` | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:40](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L40) |
+| <a id="value"></a> `value` | `string` | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:41](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L41) |

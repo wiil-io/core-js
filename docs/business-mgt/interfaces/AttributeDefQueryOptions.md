@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.61**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.62**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: AttributeDefQueryOptions
 
-Defined in: [src/core/business-mgt/product-management/product-config.schema.ts:503](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/product-management/product-config.schema.ts#L503)
+Defined in: [src/core/business-mgt/product-management/product-config.schema.ts:503](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/product-management/product-config.schema.ts#L503)
 
 Attribute definition query options.
  AttributeDefQueryOptions
@@ -15,7 +15,7 @@ Attribute definition query options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/product-management/product-config.schema.ts:505](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/product-management/product-config.schema.ts#L505) |
-| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/product-management/product-config.schema.ts:507](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/product-management/product-config.schema.ts#L507) |
-| <a id="filters"></a> `filters?` | [`AttributeDefFilters`](AttributeDefFilters.md) | Optional filters | [src/core/business-mgt/product-management/product-config.schema.ts:509](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/product-management/product-config.schema.ts#L509) |
-| <a id="sorting"></a> `sorting?` | [`AttributeDefSorting`](AttributeDefSorting.md) | Optional sorting | [src/core/business-mgt/product-management/product-config.schema.ts:511](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/product-management/product-config.schema.ts#L511) |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/product-management/product-config.schema.ts:505](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/product-management/product-config.schema.ts#L505) |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/product-management/product-config.schema.ts:507](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/product-management/product-config.schema.ts#L507) |
+| <a id="filters"></a> `filters?` | [`AttributeDefFilters`](AttributeDefFilters.md) | Optional filters | [src/core/business-mgt/product-management/product-config.schema.ts:509](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/product-management/product-config.schema.ts#L509) |
+| <a id="sorting"></a> `sorting?` | [`AttributeDefSorting`](AttributeDefSorting.md) | Optional sorting | [src/core/business-mgt/product-management/product-config.schema.ts:511](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/product-management/product-config.schema.ts#L511) |

@@ -169,7 +169,7 @@ export const ProductSetSelectorSchema = z.object({
  * @property {number} [displayOrder] - Display order in catalog
  */
 export const ProductSetSchema = BaseModelSchema.safeExtend({
-    productRevisionId: z.string().optional().describe("Optional product revision ID for version-scoped catalog targeting. Ensures set applies to specific catalog version."),
+    productRevisionId: z.string().nullable().optional().describe("Optional product revision ID for version-scoped catalog targeting. Ensures set applies to specific catalog version."),
     code: z.string().min(1).nullable().optional().describe("Stable internal code for idempotent integration matching"),
     name: z.string().min(1, "Product set name is required").describe("Product set name"),
     description: z.string().nullable().optional().describe("Product set description"),

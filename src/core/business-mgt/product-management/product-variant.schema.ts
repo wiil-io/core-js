@@ -67,7 +67,7 @@ export const ProductVariantChannelMappingSchema = z.object({
  * @property {number} [lastOrderedAt] - Unix timestamp of last order
  */
 export const ProductVariantSchema = BaseModelSchema.safeExtend({
-    productRevisionId: z.string().optional().describe("Optional product revision ID for version-scoped data"),
+    productRevisionId: z.string().nullable().optional().describe("Optional product revision ID for version-scoped data"),
     productId: z.string().describe("Parent product ID"),
 
     // Axis value selections (e.g., { "axis_size": "value_large", "axis_color": "value_red" })

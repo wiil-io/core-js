@@ -56,7 +56,7 @@ export const ResourceInstanceAttributeSchema = z.object({
  * @property {ResourceInstanceAttribute[]} [attributes] - Instance-level attributes
  */
 export const ResourceInstanceSchema = BaseModelSchema.safeExtend({
-    resourceRevisionId: z.string().optional().describe("Optional resource revision ID for version-scoped data"),
+    resourceRevisionId: z.string().nullable().optional().describe("Optional resource revision ID for version-scoped data"),
     locationId: z.string().nullable().optional().describe("Business location ID where this resource instance is located. Null applies when the instance is not location-specific."),
     resourceId: z.string().describe("Parent resource ID that defines this physical instance."),
     name: z.string().nullable().optional().describe("Instance name/label"),

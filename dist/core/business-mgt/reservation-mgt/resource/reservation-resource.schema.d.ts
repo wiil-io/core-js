@@ -243,7 +243,7 @@ export declare const ResourceSchema: z.ZodObject<{
     id: z.ZodString;
     createdAt: z.ZodOptional<z.ZodNumber>;
     updatedAt: z.ZodOptional<z.ZodNumber>;
-    resourceRevisionId: z.ZodOptional<z.ZodString>;
+    resourceRevisionId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     locationId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     resourceType: z.ZodEnum<typeof ResourceType>;
     categoryId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
@@ -371,7 +371,7 @@ export declare const CreateResourceSchema: z.ZodObject<{
         value: z.ZodString;
     }, z.core.$strip>>>>;
     amenities: z.ZodDefault<z.ZodArray<z.ZodString>>;
-    resourceRevisionId: z.ZodOptional<z.ZodString>;
+    resourceRevisionId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     resourceType: z.ZodEnum<typeof ResourceType>;
     capacityConfig: z.ZodOptional<z.ZodNullable<z.ZodDiscriminatedUnion<[z.ZodObject<{
         kind: z.ZodLiteral<"range">;
@@ -473,7 +473,7 @@ export declare const UpdateResourceSchema: z.ZodObject<{
         value: z.ZodString;
     }, z.core.$strip>>>>>;
     amenities: z.ZodOptional<z.ZodDefault<z.ZodArray<z.ZodString>>>;
-    resourceRevisionId: z.ZodOptional<z.ZodOptional<z.ZodString>>;
+    resourceRevisionId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     resourceType: z.ZodOptional<z.ZodEnum<typeof ResourceType>>;
     capacityConfig: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodDiscriminatedUnion<[z.ZodObject<{
         kind: z.ZodLiteral<"range">;
@@ -548,7 +548,7 @@ export declare const BusinessResourceCatalogSchema: z.ZodArray<z.ZodObject<{
     id: z.ZodString;
     createdAt: z.ZodOptional<z.ZodNumber>;
     updatedAt: z.ZodOptional<z.ZodNumber>;
-    resourceRevisionId: z.ZodOptional<z.ZodString>;
+    resourceRevisionId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     locationId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     resourceType: z.ZodEnum<typeof ResourceType>;
     categoryId: z.ZodOptional<z.ZodNullable<z.ZodString>>;

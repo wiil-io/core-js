@@ -148,7 +148,7 @@ Categories organize products into a hierarchical structure with support for attr
 | Field | Type | Required | Default | Description |
 |-------|------|----------|---------|-------------|
 | id | string | Yes | auto-generated | Unique identifier |
-| productRevisionId | string | No | null | Version control for category changes |
+| productRevisionId | string \| null | No | null | Version control for category changes |
 | parentId | string | No | null | Parent category ID for nested hierarchy |
 | name | string | Yes | - | Category name (min 1 character) |
 | slug | string | No | null | URL-friendly slug for SEO and deep linking |
@@ -226,7 +226,7 @@ Represents individual products with complete details for ordering, inventory, sh
 | Field | Type | Required | Default | Description |
 |-------|------|----------|---------|-------------|
 | id | string | Yes | auto-generated | Unique identifier |
-| productRevisionId | string | No | null | Version control for product changes |
+| productRevisionId | string \| null | No | null | Version control for product changes |
 | channelMappings | array | No | null | Per-channel product ID mappings |
 | name | string | Yes | - | Product name (min 1 character) |
 | description | string | No | null | Detailed product description |

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.61**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.62**](../../README.md)
 
 ***
 
@@ -25,7 +25,7 @@ type DisplayOrderRequest = {
 };
 ```
 
-Defined in: [src/core/type-definitions/display-order.ts:181](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/type-definitions/display-order.ts#L181)
+Defined in: [src/core/type-definitions/display-order.ts:181](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/type-definitions/display-order.ts#L181)
 
 Display order request schema for item positioning.
 
@@ -33,11 +33,11 @@ Display order request schema for item positioning.
 
 | Name | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="itemid"></a> `itemId` | `string` \| `null` | - | [src/core/type-definitions/display-order.ts:77](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/type-definitions/display-order.ts#L77) |
-| <a id="targetcategoryid"></a> `targetCategoryId` | `string` | - | [src/core/type-definitions/display-order.ts:78](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/type-definitions/display-order.ts#L78) |
-| <a id="positionintent"></a> `positionIntent` | \{ `mode`: \| `"BEGINNING"` \| `"END"` \| `"KEEP_CURRENT"` \| `"BEFORE_ITEM"` \| `"AFTER_ITEM"` \| `"ABSOLUTE_INDEX"`; \} | `DisplayOrderPositionIntentSchema` | [src/core/type-definitions/display-order.ts:79](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/type-definitions/display-order.ts#L79) |
-| `positionIntent.mode` | \| `"BEGINNING"` \| `"END"` \| `"KEEP_CURRENT"` \| `"BEFORE_ITEM"` \| `"AFTER_ITEM"` \| `"ABSOLUTE_INDEX"` | - | [src/core/type-definitions/display-order.ts:24](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/type-definitions/display-order.ts#L24) |
-| <a id="anchoritemid"></a> `anchorItemId` | `string` \| `null` | - | [src/core/type-definitions/display-order.ts:80](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/type-definitions/display-order.ts#L80) |
-| <a id="absoluteindex"></a> `absoluteIndex` | `number` \| `null` | - | [src/core/type-definitions/display-order.ts:81](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/type-definitions/display-order.ts#L81) |
-| <a id="idempotencykey"></a> `idempotencyKey` | `string` | - | [src/core/type-definitions/display-order.ts:82](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/type-definitions/display-order.ts#L82) |
-| <a id="expectedversion"></a> `expectedVersion` | `number` | - | [src/core/type-definitions/display-order.ts:83](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/type-definitions/display-order.ts#L83) |
+| <a id="itemid"></a> `itemId` | `string` \| `null` | - | [src/core/type-definitions/display-order.ts:77](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/type-definitions/display-order.ts#L77) |
+| <a id="targetcategoryid"></a> `targetCategoryId` | `string` | - | [src/core/type-definitions/display-order.ts:78](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/type-definitions/display-order.ts#L78) |
+| <a id="positionintent"></a> `positionIntent` | \{ `mode`: \| `"BEGINNING"` \| `"END"` \| `"KEEP_CURRENT"` \| `"BEFORE_ITEM"` \| `"AFTER_ITEM"` \| `"ABSOLUTE_INDEX"`; \} | `DisplayOrderPositionIntentSchema` | [src/core/type-definitions/display-order.ts:79](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/type-definitions/display-order.ts#L79) |
+| `positionIntent.mode` | \| `"BEGINNING"` \| `"END"` \| `"KEEP_CURRENT"` \| `"BEFORE_ITEM"` \| `"AFTER_ITEM"` \| `"ABSOLUTE_INDEX"` | - | [src/core/type-definitions/display-order.ts:24](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/type-definitions/display-order.ts#L24) |
+| <a id="anchoritemid"></a> `anchorItemId` | `string` \| `null` | - | [src/core/type-definitions/display-order.ts:80](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/type-definitions/display-order.ts#L80) |
+| <a id="absoluteindex"></a> `absoluteIndex` | `number` \| `null` | - | [src/core/type-definitions/display-order.ts:81](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/type-definitions/display-order.ts#L81) |
+| <a id="idempotencykey"></a> `idempotencyKey` | `string` | - | [src/core/type-definitions/display-order.ts:82](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/type-definitions/display-order.ts#L82) |
+| <a id="expectedversion"></a> `expectedVersion` | `number` | - | [src/core/type-definitions/display-order.ts:83](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/type-definitions/display-order.ts#L83) |

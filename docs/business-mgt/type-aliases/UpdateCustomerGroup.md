@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.61**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.62**](../../README.md)
 
 ***
 
@@ -16,7 +16,7 @@ type UpdateCustomerGroup = {
 };
 ```
 
-Defined in: [src/core/business-mgt/customer-management/customer-group.schema.ts:61](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/customer-management/customer-group.schema.ts#L61)
+Defined in: [src/core/business-mgt/customer-management/customer-group.schema.ts:61](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/customer-management/customer-group.schema.ts#L61)
 
 Schema for updating an existing customer group.
 All fields optional except id (required).
@@ -25,8 +25,8 @@ All fields optional except id (required).
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="name"></a> `name?` | `string` | [src/core/business-mgt/customer-management/customer-group.schema.ts:27](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/customer-management/customer-group.schema.ts#L27) |
-| <a id="description"></a> `description?` | `string` \| `null` | [src/core/business-mgt/customer-management/customer-group.schema.ts:28](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/customer-management/customer-group.schema.ts#L28) |
-| <a id="code"></a> `code?` | `string` \| `null` | [src/core/business-mgt/customer-management/customer-group.schema.ts:29](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/customer-management/customer-group.schema.ts#L29) |
-| <a id="isdefault"></a> `isDefault?` | `boolean` | [src/core/business-mgt/customer-management/customer-group.schema.ts:30](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/customer-management/customer-group.schema.ts#L30) |
-| <a id="id"></a> `id` | `string` | [src/core/business-mgt/customer-management/customer-group.schema.ts:52](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/customer-management/customer-group.schema.ts#L52) |
+| <a id="name"></a> `name?` | `string` | [src/core/business-mgt/customer-management/customer-group.schema.ts:27](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/customer-management/customer-group.schema.ts#L27) |
+| <a id="description"></a> `description?` | `string` \| `null` | [src/core/business-mgt/customer-management/customer-group.schema.ts:28](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/customer-management/customer-group.schema.ts#L28) |
+| <a id="code"></a> `code?` | `string` \| `null` | [src/core/business-mgt/customer-management/customer-group.schema.ts:29](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/customer-management/customer-group.schema.ts#L29) |
+| <a id="isdefault"></a> `isDefault?` | `boolean` | [src/core/business-mgt/customer-management/customer-group.schema.ts:30](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/customer-management/customer-group.schema.ts#L30) |
+| <a id="id"></a> `id` | `string` | [src/core/business-mgt/customer-management/customer-group.schema.ts:52](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/customer-management/customer-group.schema.ts#L52) |

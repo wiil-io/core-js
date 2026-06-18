@@ -44,7 +44,7 @@ Represents a bundle or set of menu items with configurable pricing and targeting
 |-------|------|----------|---------|-------------|
 | id | string | Yes | auto-generated | Unique identifier |
 | locationId | string | No | null | Location-specific menu set |
-| menuRevisionId | string | No | null | Version control for menu changes |
+| menuRevisionId | string \| null | No | null | Version control for menu changes |
 | code | string | No | null | Stable internal code for integration matching |
 | name | string | Yes | - | Menu set name (min 1 character) |
 | description | string | No | null | Menu set description |

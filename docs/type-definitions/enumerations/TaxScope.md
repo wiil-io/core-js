@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.61**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.62**](../../README.md)
 
 ***
 
@@ -6,13 +6,13 @@
 
 # Enumeration: TaxScope
 
-Defined in: [src/core/type-definitions/business-definitions.ts:408](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/type-definitions/business-definitions.ts#L408)
+Defined in: [src/core/type-definitions/business-definitions.ts:408](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/type-definitions/business-definitions.ts#L408)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="order"></a> `ORDER` | `"ORDER"` | [src/core/type-definitions/business-definitions.ts:409](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/type-definitions/business-definitions.ts#L409) |
-| <a id="item"></a> `ITEM` | `"ITEM"` | [src/core/type-definitions/business-definitions.ts:410](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/type-definitions/business-definitions.ts#L410) |
-| <a id="service"></a> `SERVICE` | `"SERVICE"` | [src/core/type-definitions/business-definitions.ts:411](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/type-definitions/business-definitions.ts#L411) |
-| <a id="delivery"></a> `DELIVERY` | `"DELIVERY"` | [src/core/type-definitions/business-definitions.ts:412](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/type-definitions/business-definitions.ts#L412) |
+| <a id="order"></a> `ORDER` | `"ORDER"` | [src/core/type-definitions/business-definitions.ts:409](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/type-definitions/business-definitions.ts#L409) |
+| <a id="item"></a> `ITEM` | `"ITEM"` | [src/core/type-definitions/business-definitions.ts:410](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/type-definitions/business-definitions.ts#L410) |
+| <a id="service"></a> `SERVICE` | `"SERVICE"` | [src/core/type-definitions/business-definitions.ts:411](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/type-definitions/business-definitions.ts#L411) |
+| <a id="delivery"></a> `DELIVERY` | `"DELIVERY"` | [src/core/type-definitions/business-definitions.ts:412](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/type-definitions/business-definitions.ts#L412) |

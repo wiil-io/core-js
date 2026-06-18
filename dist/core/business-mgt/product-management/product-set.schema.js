@@ -159,7 +159,7 @@ exports.ProductSetSelectorSchema = zod_1.default.object({
  * @property {number} [displayOrder] - Display order in catalog
  */
 exports.ProductSetSchema = base_schema_1.BaseModelSchema.safeExtend({
-    productRevisionId: zod_1.default.string().optional().describe("Optional product revision ID for version-scoped catalog targeting. Ensures set applies to specific catalog version."),
+    productRevisionId: zod_1.default.string().nullable().optional().describe("Optional product revision ID for version-scoped catalog targeting. Ensures set applies to specific catalog version."),
     code: zod_1.default.string().min(1).nullable().optional().describe("Stable internal code for idempotent integration matching"),
     name: zod_1.default.string().min(1, "Product set name is required").describe("Product set name"),
     description: zod_1.default.string().nullable().optional().describe("Product set description"),

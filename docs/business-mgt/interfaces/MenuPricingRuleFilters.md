@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.61**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.62**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: MenuPricingRuleFilters
 
-Defined in: [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:145](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L145)
+Defined in: [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:145](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L145)
 
 Menu pricing rule filter options.
  MenuPricingRuleFilters
@@ -15,10 +15,10 @@ Menu pricing rule filter options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="search"></a> `search?` | `string` | Text search across name/description | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:147](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L147) |
-| <a id="locationid"></a> `locationId?` | `string` | Filter by location ID | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:149](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L149) |
-| <a id="channel"></a> `channel?` | [`PricingChannel`](../../type-definitions/enumerations/PricingChannel.md) | Filter by pricing channel | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:151](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L151) |
-| <a id="menusetid"></a> `menuSetId?` | `string` | Filter by menu set ID | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:153](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L153) |
-| <a id="discountid"></a> `discountId?` | `string` | Filter by discount ID | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:155](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L155) |
-| <a id="isactive"></a> `isActive?` | `boolean` | Filter by active status | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:157](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L157) |
-| <a id="effectiveat"></a> `effectiveAt?` | `number` | Filter by effective timestamp | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:159](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L159) |
+| <a id="search"></a> `search?` | `string` | Text search across name/description | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:147](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L147) |
+| <a id="locationid"></a> `locationId?` | `string` | Filter by location ID | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:149](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L149) |
+| <a id="channel"></a> `channel?` | [`PricingChannel`](../../type-definitions/enumerations/PricingChannel.md) | Filter by pricing channel | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:151](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L151) |
+| <a id="menusetid"></a> `menuSetId?` | `string` | Filter by menu set ID | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:153](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L153) |
+| <a id="discountid"></a> `discountId?` | `string` | Filter by discount ID | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:155](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L155) |
+| <a id="isactive"></a> `isActive?` | `boolean` | Filter by active status | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:157](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L157) |
+| <a id="effectiveat"></a> `effectiveAt?` | `number` | Filter by effective timestamp | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:159](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L159) |

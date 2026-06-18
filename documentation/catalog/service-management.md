@@ -79,7 +79,7 @@ Defines a service offering with pricing, scheduling, and booking rules.
 |-------|------|----------|---------|-------------|
 | `id` | string | Yes | auto | Unique identifier |
 | `organizationId` | string | Yes | - | Business account ID |
-| `serviceRevisionId` | string | No | - | Version-scoped data reference |
+| `serviceRevisionId` | string \| null | No | - | Version-scoped data reference |
 | `name` | string | Yes | - | Service name |
 | `description` | string \| null | No | - | Detailed description |
 | `imageUrl` | string \| null | No | - | Service image URL |
@@ -162,7 +162,7 @@ Groups related services for organization and display.
 |-------|------|----------|---------|-------------|
 | `id` | string | Yes | auto | Unique identifier |
 | `organizationId` | string | Yes | - | Business account ID |
-| `serviceRevisionId` | string | No | - | Version-scoped data reference |
+| `serviceRevisionId` | string \| null | No | - | Version-scoped data reference |
 | `name` | string | Yes | - | Category name |
 | `description` | string \| null | No | - | Category description |
 | `imageUrl` | string \| null | No | - | Category image URL |

@@ -173,7 +173,7 @@ export const ProductChannelMappingSchema = z.object({
  * @property {CategoryLocationScope} [locationScope] - Location inheritance scope
  */
 export const ProductCategorySchema = BaseModelSchema.safeExtend({
-    productRevisionId: z.string().optional().describe("Optional product revision ID for version-scoped data. Ensures category applies to specific catalog version."),
+    productRevisionId: z.string().nullable().optional().describe("Optional product revision ID for version-scoped data. Ensures category applies to specific catalog version."),
     parentId: z.string().nullable().optional().describe("Parent category ID for nested hierarchy. Null for root categories."),
     name: z.string().min(1, "Category name is required").describe("Category name for product organization (e.g., Electronics, Clothing). Used by AI Powered Services when presenting product options."),
     slug: z.string().min(1).nullable().optional().describe("URL-friendly slug for the category. Used for SEO and deep linking."),
@@ -253,7 +253,7 @@ export const ProductCategorySchema = BaseModelSchema.safeExtend({
  * @property {number} [displayOrder] - Display order in category
  */
 export const BusinessProductSchema = BaseModelSchema.safeExtend({
-    productRevisionId: z.string().optional().describe("Optional product revision ID for version-scoped data. Ensures product applies to specific catalog version."),
+    productRevisionId: z.string().nullable().optional().describe("Optional product revision ID for version-scoped data. Ensures product applies to specific catalog version."),
     channelMappings: z.array(ProductChannelMappingSchema).nullable().optional().describe("Per-channel product ID mappings for external platform synchronization."),
     name: z.string().min(1, "Product name is required").describe("Display name of the product shown to customers. Used by AI Powered Services in order conversations."),
     description: z.string().nullable().optional().describe("Detailed product description including features and benefits. Enables AI-powered recommendations."),

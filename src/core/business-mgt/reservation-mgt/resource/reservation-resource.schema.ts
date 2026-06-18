@@ -242,7 +242,7 @@ export type ChecklistTemplateItem = z.infer<typeof ChecklistTemplateItemSchema>;
  * @property {Object} [metadata] - Additional resource metadata
  */
 export const ResourceSchema = BaseModelSchema.safeExtend({
-    resourceRevisionId: z.string().optional().describe("Optional resource revision ID for version-scoped catalog data."),
+    resourceRevisionId: z.string().nullable().optional().describe("Optional resource revision ID for version-scoped catalog data."),
     locationId: z.string().nullable().optional().describe("Business location ID where this resource applies. Null applies across locations."),
     resourceType: z.enum(ResourceType).describe("Reservation resource type, such as table, room, rental, or generic resource."),
     categoryId: z.string().nullable().optional().describe("Resource category ID used for grouping and filtering."),

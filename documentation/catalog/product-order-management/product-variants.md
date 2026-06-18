@@ -150,7 +150,7 @@ SKU-level variant with axis value selections and override-capable fields.
 | Field | Type | Required | Default | Description |
 |-------|------|----------|---------|-------------|
 | id | string | Yes | auto-generated | Unique identifier |
-| productRevisionId | string | No | null | Optional product revision ID for version scoping |
+| productRevisionId | string \| null | No | null | Optional product revision ID for version scoping |
 | productId | string | Yes | - | Parent product ID |
 | axisValues | object | Yes | - | Map of axisId to selected valueId |
 | sku | string | No | null | Stock Keeping Unit identifier (overrides parent) |
@@ -268,7 +268,7 @@ Links a product to an applicable variant axis.
 | Field | Type | Required | Default | Description |
 |-------|------|----------|---------|-------------|
 | id | string | Yes | auto-generated | Unique identifier |
-| productRevisionId | string | No | null | Optional product revision ID for version scoping |
+| productRevisionId | string \| null | No | null | Optional product revision ID for version scoping |
 | productId | string | Yes | - | Product ID |
 | axisId | string | Yes | - | Variant axis ID |
 | displayOrder | integer | No | 0 | Display order for this axis on the product |

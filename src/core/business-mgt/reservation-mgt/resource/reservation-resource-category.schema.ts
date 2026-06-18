@@ -45,7 +45,7 @@ export const ResourceCategoryChannelMappingSchema = z.object({
  * @property {Object} [metadata] - Additional category metadata
  */
 export const ResourceCategorySchema = BaseModelSchema.safeExtend({
-    resourceRevisionId: z.string().optional().describe("Optional resource revision ID for version-scoped data"),
+    resourceRevisionId: z.string().nullable().optional().describe("Optional resource revision ID for version-scoped data"),
     locationId: z.string().nullable().optional().describe("Business location ID where this resource category applies. Null applies across locations."),
     name: z.string().min(1, "Category name is required").describe("Display name for the reservation resource category."),
     description: z.string().nullable().optional().describe("Customer or staff-facing description of this resource category."),

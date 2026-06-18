@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.61**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.62**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: AppointmentAdditionalInfoQueryOptions
 
-Defined in: [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:124](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L124)
+Defined in: [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:124](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L124)
 
 Appointment additional info query options.
  AppointmentAdditionalInfoQueryOptions
@@ -15,7 +15,7 @@ Appointment additional info query options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:126](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L126) |
-| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:128](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L128) |
-| <a id="filters"></a> `filters?` | [`AppointmentAdditionalInfoFilters`](AppointmentAdditionalInfoFilters.md) | Optional filters | [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:130](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L130) |
-| <a id="sorting"></a> `sorting?` | [`AppointmentAdditionalInfoSorting`](AppointmentAdditionalInfoSorting.md) | Optional sorting | [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:132](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L132) |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:126](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L126) |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:128](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L128) |
+| <a id="filters"></a> `filters?` | [`AppointmentAdditionalInfoFilters`](AppointmentAdditionalInfoFilters.md) | Optional filters | [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:130](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L130) |
+| <a id="sorting"></a> `sorting?` | [`AppointmentAdditionalInfoSorting`](AppointmentAdditionalInfoSorting.md) | Optional sorting | [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:132](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L132) |

@@ -31,7 +31,7 @@ export declare const ProductPricingRuleSchema: z.ZodObject<{
         externalPricingRuleId: z.ZodString;
     }, z.core.$strip>>>>;
     discountId: z.ZodString;
-    productSetRevisionId: z.ZodOptional<z.ZodString>;
+    productSetRevisionId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     condition: z.ZodObject<{
         daysOfWeek: z.ZodDefault<z.ZodArray<z.ZodNumber>>;
         startMinute: z.ZodOptional<z.ZodNumber>;
@@ -67,7 +67,7 @@ export declare const CreateProductPricingRuleSchema: z.ZodObject<{
         channel: z.ZodDefault<z.ZodEnum<typeof PricingChannel>>;
         productSetId: z.ZodString;
     }, z.core.$strip>;
-    productSetRevisionId: z.ZodOptional<z.ZodString>;
+    productSetRevisionId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     placement: z.ZodOptional<z.ZodObject<{
         placementIntent: z.ZodObject<{
             mode: z.ZodEnum<{
@@ -106,7 +106,7 @@ export declare const UpdateProductPricingRuleSchema: z.ZodObject<{
         channel: z.ZodDefault<z.ZodEnum<typeof PricingChannel>>;
         productSetId: z.ZodString;
     }, z.core.$strip>>;
-    productSetRevisionId: z.ZodOptional<z.ZodOptional<z.ZodString>>;
+    productSetRevisionId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     placement: z.ZodOptional<z.ZodOptional<z.ZodObject<{
         placementIntent: z.ZodObject<{
             mode: z.ZodEnum<{

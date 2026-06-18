@@ -50,7 +50,7 @@ Groups reservation resources by business use, location scope, resource type, and
     "id": { "type": "string" },
     "createdAt": { "type": "integer" },
     "updatedAt": { "type": "integer" },
-    "resourceRevisionId": { "type": "string" },
+    "resourceRevisionId": { "type": ["string", "null"] },
     "locationId": { "type": ["string", "null"] },
     "name": { "type": "string", "minLength": 1 },
     "description": { "type": ["string", "null"] },
@@ -82,7 +82,7 @@ Groups reservation resources by business use, location scope, resource type, and
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `id` | string | Yes | Unique category identifier |
-| `resourceRevisionId` | string | No | Version revision this category belongs to |
+| `resourceRevisionId` | string \| null | No | Version revision this category belongs to |
 | `locationId` | string \| null | No | Location scope. Null applies across locations |
 | `name` | string | Yes | Category display name |
 | `description` | string \| null | No | Public or administrative category description |
@@ -130,7 +130,7 @@ Defines a reservable type, including capacity, pricing, booking behavior, checkl
     "id": { "type": "string" },
     "createdAt": { "type": "integer" },
     "updatedAt": { "type": "integer" },
-    "resourceRevisionId": { "type": "string" },
+    "resourceRevisionId": { "type": ["string", "null"] },
     "locationId": { "type": ["string", "null"] },
     "resourceType": { "type": "string", "enum": ["table", "room", "rental", "rentals", "resource"] },
     "categoryId": { "type": ["string", "null"] },
@@ -402,7 +402,7 @@ Represents a physical table, room, rental unit, or other concrete unit under a r
     "id": { "type": "string" },
     "createdAt": { "type": "integer" },
     "updatedAt": { "type": "integer" },
-    "resourceRevisionId": { "type": "string" },
+    "resourceRevisionId": { "type": ["string", "null"] },
     "locationId": { "type": ["string", "null"] },
     "resourceId": { "type": "string" },
     "name": { "type": ["string", "null"] },

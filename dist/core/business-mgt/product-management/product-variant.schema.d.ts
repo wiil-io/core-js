@@ -57,7 +57,7 @@ export declare const ProductVariantSchema: z.ZodObject<{
     id: z.ZodString;
     createdAt: z.ZodOptional<z.ZodNumber>;
     updatedAt: z.ZodOptional<z.ZodNumber>;
-    productRevisionId: z.ZodOptional<z.ZodString>;
+    productRevisionId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     productId: z.ZodString;
     axisValues: z.ZodRecord<z.ZodString, z.ZodString>;
     sku: z.ZodOptional<z.ZodNullable<z.ZodString>>;
@@ -107,7 +107,7 @@ export declare const CreateProductVariantSchema: z.ZodObject<{
         externalVariantId: z.ZodString;
         externalProductId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     }, z.core.$strip>>>>;
-    productRevisionId: z.ZodOptional<z.ZodString>;
+    productRevisionId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     productId: z.ZodString;
     axisValues: z.ZodRecord<z.ZodString, z.ZodString>;
     sku: z.ZodOptional<z.ZodNullable<z.ZodString>>;
@@ -146,7 +146,7 @@ export declare const UpdateProductVariantSchema: z.ZodObject<{
         externalVariantId: z.ZodString;
         externalProductId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     }, z.core.$strip>>>>>;
-    productRevisionId: z.ZodOptional<z.ZodOptional<z.ZodString>>;
+    productRevisionId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     productId: z.ZodOptional<z.ZodString>;
     axisValues: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodString>>;
     sku: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;

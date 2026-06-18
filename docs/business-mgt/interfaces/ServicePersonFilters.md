@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.61**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.62**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ServicePersonFilters
 
-Defined in: [src/core/business-mgt/service-management/service-person.schema.ts:84](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/service-management/service-person.schema.ts#L84)
+Defined in: [src/core/business-mgt/service-management/service-person.schema.ts:84](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/service-management/service-person.schema.ts#L84)
 
 Service person filter options.
  ServicePersonFilters
@@ -15,10 +15,10 @@ Service person filter options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="search"></a> `search?` | `string` | Text search across name/description | [src/core/business-mgt/service-management/service-person.schema.ts:86](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/service-management/service-person.schema.ts#L86) |
-| <a id="locationid"></a> `locationId?` | `string` | Filter by location ID | [src/core/business-mgt/service-management/service-person.schema.ts:88](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/service-management/service-person.schema.ts#L88) |
-| <a id="useraccountid"></a> `userAccountId?` | `string` | Filter by linked user account ID | [src/core/business-mgt/service-management/service-person.schema.ts:90](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/service-management/service-person.schema.ts#L90) |
-| <a id="skillid"></a> `skillId?` | `string` | Filter by skill ID | [src/core/business-mgt/service-management/service-person.schema.ts:92](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/service-management/service-person.schema.ts#L92) |
-| <a id="bookableonline"></a> `bookableOnline?` | `boolean` | Filter by online bookability | [src/core/business-mgt/service-management/service-person.schema.ts:94](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/service-management/service-person.schema.ts#L94) |
-| <a id="bookablebystaff"></a> `bookableByStaff?` | `boolean` | Filter by staff bookability | [src/core/business-mgt/service-management/service-person.schema.ts:96](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/service-management/service-person.schema.ts#L96) |
-| <a id="isactive"></a> `isActive?` | `boolean` | Filter by active status | [src/core/business-mgt/service-management/service-person.schema.ts:98](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/service-management/service-person.schema.ts#L98) |
+| <a id="search"></a> `search?` | `string` | Text search across name/description | [src/core/business-mgt/service-management/service-person.schema.ts:86](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/service-management/service-person.schema.ts#L86) |
+| <a id="locationid"></a> `locationId?` | `string` | Filter by location ID | [src/core/business-mgt/service-management/service-person.schema.ts:88](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/service-management/service-person.schema.ts#L88) |
+| <a id="useraccountid"></a> `userAccountId?` | `string` | Filter by linked user account ID | [src/core/business-mgt/service-management/service-person.schema.ts:90](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/service-management/service-person.schema.ts#L90) |
+| <a id="skillid"></a> `skillId?` | `string` | Filter by skill ID | [src/core/business-mgt/service-management/service-person.schema.ts:92](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/service-management/service-person.schema.ts#L92) |
+| <a id="bookableonline"></a> `bookableOnline?` | `boolean` | Filter by online bookability | [src/core/business-mgt/service-management/service-person.schema.ts:94](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/service-management/service-person.schema.ts#L94) |
+| <a id="bookablebystaff"></a> `bookableByStaff?` | `boolean` | Filter by staff bookability | [src/core/business-mgt/service-management/service-person.schema.ts:96](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/service-management/service-person.schema.ts#L96) |
+| <a id="isactive"></a> `isActive?` | `boolean` | Filter by active status | [src/core/business-mgt/service-management/service-person.schema.ts:98](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/business-mgt/service-management/service-person.schema.ts#L98) |

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.61**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.62**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: ReservationStatus
 
-Defined in: [src/core/type-definitions/business-definitions.ts:61](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/type-definitions/business-definitions.ts#L61)
+Defined in: [src/core/type-definitions/business-definitions.ts:61](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/type-definitions/business-definitions.ts#L61)
 
 Reservation lifecycle status.
 Shared status enum for table and room reservation workflows.
@@ -15,10 +15,10 @@ Shared status enum for table and room reservation workflows.
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="pending"></a> `PENDING` | `"pending"` | [src/core/type-definitions/business-definitions.ts:62](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/type-definitions/business-definitions.ts#L62) |
-| <a id="confirmed"></a> `CONFIRMED` | `"confirmed"` | [src/core/type-definitions/business-definitions.ts:63](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/type-definitions/business-definitions.ts#L63) |
-| <a id="seated"></a> `SEATED` | `"seated"` | [src/core/type-definitions/business-definitions.ts:64](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/type-definitions/business-definitions.ts#L64) |
-| <a id="checked_in"></a> `CHECKED_IN` | `"checked_in"` | [src/core/type-definitions/business-definitions.ts:65](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/type-definitions/business-definitions.ts#L65) |
-| <a id="completed"></a> `COMPLETED` | `"completed"` | [src/core/type-definitions/business-definitions.ts:66](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/type-definitions/business-definitions.ts#L66) |
-| <a id="cancelled"></a> `CANCELLED` | `"cancelled"` | [src/core/type-definitions/business-definitions.ts:67](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/type-definitions/business-definitions.ts#L67) |
-| <a id="no_show"></a> `NO_SHOW` | `"no_show"` | [src/core/type-definitions/business-definitions.ts:68](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/type-definitions/business-definitions.ts#L68) |
+| <a id="pending"></a> `PENDING` | `"pending"` | [src/core/type-definitions/business-definitions.ts:62](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/type-definitions/business-definitions.ts#L62) |
+| <a id="confirmed"></a> `CONFIRMED` | `"confirmed"` | [src/core/type-definitions/business-definitions.ts:63](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/type-definitions/business-definitions.ts#L63) |
+| <a id="seated"></a> `SEATED` | `"seated"` | [src/core/type-definitions/business-definitions.ts:64](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/type-definitions/business-definitions.ts#L64) |
+| <a id="checked_in"></a> `CHECKED_IN` | `"checked_in"` | [src/core/type-definitions/business-definitions.ts:65](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/type-definitions/business-definitions.ts#L65) |
+| <a id="completed"></a> `COMPLETED` | `"completed"` | [src/core/type-definitions/business-definitions.ts:66](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/type-definitions/business-definitions.ts#L66) |
+| <a id="cancelled"></a> `CANCELLED` | `"cancelled"` | [src/core/type-definitions/business-definitions.ts:67](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/type-definitions/business-definitions.ts#L67) |
+| <a id="no_show"></a> `NO_SHOW` | `"no_show"` | [src/core/type-definitions/business-definitions.ts:68](https://github.com/wiil-io/core-js/blob/1ae3602f60f2ec3cdaf01f3ee2e0b52063a29f6d/src/core/type-definitions/business-definitions.ts#L68) |

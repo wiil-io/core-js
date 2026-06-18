@@ -54,7 +54,7 @@ exports.ResourceInstanceAttributeSchema = zod_1.z.object({
  * @property {ResourceInstanceAttribute[]} [attributes] - Instance-level attributes
  */
 exports.ResourceInstanceSchema = base_schema_1.BaseModelSchema.safeExtend({
-    resourceRevisionId: zod_1.z.string().optional().describe("Optional resource revision ID for version-scoped data"),
+    resourceRevisionId: zod_1.z.string().nullable().optional().describe("Optional resource revision ID for version-scoped data"),
     locationId: zod_1.z.string().nullable().optional().describe("Business location ID where this resource instance is located. Null applies when the instance is not location-specific."),
     resourceId: zod_1.z.string().describe("Parent resource ID that defines this physical instance."),
     name: zod_1.z.string().nullable().optional().describe("Instance name/label"),

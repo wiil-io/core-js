@@ -188,7 +188,7 @@ export type ServiceAppointmentFieldConfig = z.infer<typeof ServiceAppointmentFie
  * @property {Date} updatedAt - Last update timestamp
  */
 export const ServiceCategorySchema = BaseModelSchema.safeExtend({
-    serviceRevisionId: z.string().optional().describe("Optional service revision ID for version-scoped data"),
+    serviceRevisionId: z.string().nullable().optional().describe("Optional service revision ID for version-scoped data"),
     name: z.string().min(1, "Category name is required").describe("Category name (e.g., Hair Services, Spa Treatments)"),
     description: z.string().nullable().optional().describe("Category description"),
     imageUrl: z.url().nullable().optional().describe("Category image URL"),
@@ -264,7 +264,7 @@ export type UpdateServiceCategory = z.infer<typeof UpdateServiceCategorySchema>;
  * @property {Date} updatedAt - Last update timestamp
  */
 export const BusinessServiceConfigSchema = BaseModelSchema.safeExtend({
-    serviceRevisionId: z.string().optional().describe("Optional service revision ID for version-scoped data"),
+    serviceRevisionId: z.string().nullable().optional().describe("Optional service revision ID for version-scoped data"),
     name: z.string().min(1, "Service name is required").describe("Name of the service offered"),
     description: z.string().nullable().optional().describe("Detailed description of the service"),
     imageUrl: z.url().nullable().optional().describe("Service image URL"),
