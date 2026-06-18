@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.58**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.59**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: CallRequestStatus
 
-Defined in: [src/core/type-definitions/conversation.type.definition.ts:111](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/type-definitions/conversation.type.definition.ts#L111)
+Defined in: [src/core/type-definitions/conversation.type.definition.ts:111](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/type-definitions/conversation.type.definition.ts#L111)
 
 Call request status for outbound call lifecycle tracking.
 
@@ -30,9 +30,9 @@ BusinessCallRequestSchema - Uses this for call tracking
 
 | Enumeration Member | Value | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="pending"></a> `PENDING` | `"pending"` | Call request created, awaiting processing or scheduled time | [src/core/type-definitions/conversation.type.definition.ts:113](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/type-definitions/conversation.type.definition.ts#L113) |
-| <a id="scheduled"></a> `SCHEDULED` | `"scheduled"` | Call scheduled for future execution within calling hours | [src/core/type-definitions/conversation.type.definition.ts:115](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/type-definitions/conversation.type.definition.ts#L115) |
-| <a id="in_progress"></a> `IN_PROGRESS` | `"in_progress"` | Call currently active with AI agent engaged | [src/core/type-definitions/conversation.type.definition.ts:117](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/type-definitions/conversation.type.definition.ts#L117) |
-| <a id="completed"></a> `COMPLETED` | `"completed"` | Call successfully completed with conversation recorded | [src/core/type-definitions/conversation.type.definition.ts:119](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/type-definitions/conversation.type.definition.ts#L119) |
-| <a id="failed"></a> `FAILED` | `"failed"` | Call failed due to technical error, no answer, or busy signal | [src/core/type-definitions/conversation.type.definition.ts:121](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/type-definitions/conversation.type.definition.ts#L121) |
-| <a id="cancelled"></a> `CANCELLED` | `"cancelled"` | Call cancelled before execution by user or system | [src/core/type-definitions/conversation.type.definition.ts:123](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/type-definitions/conversation.type.definition.ts#L123) |
+| <a id="pending"></a> `PENDING` | `"pending"` | Call request created, awaiting processing or scheduled time | [src/core/type-definitions/conversation.type.definition.ts:113](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/type-definitions/conversation.type.definition.ts#L113) |
+| <a id="scheduled"></a> `SCHEDULED` | `"scheduled"` | Call scheduled for future execution within calling hours | [src/core/type-definitions/conversation.type.definition.ts:115](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/type-definitions/conversation.type.definition.ts#L115) |
+| <a id="in_progress"></a> `IN_PROGRESS` | `"in_progress"` | Call currently active with AI agent engaged | [src/core/type-definitions/conversation.type.definition.ts:117](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/type-definitions/conversation.type.definition.ts#L117) |
+| <a id="completed"></a> `COMPLETED` | `"completed"` | Call successfully completed with conversation recorded | [src/core/type-definitions/conversation.type.definition.ts:119](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/type-definitions/conversation.type.definition.ts#L119) |
+| <a id="failed"></a> `FAILED` | `"failed"` | Call failed due to technical error, no answer, or busy signal | [src/core/type-definitions/conversation.type.definition.ts:121](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/type-definitions/conversation.type.definition.ts#L121) |
+| <a id="cancelled"></a> `CANCELLED` | `"cancelled"` | Call cancelled before execution by user or system | [src/core/type-definitions/conversation.type.definition.ts:123](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/type-definitions/conversation.type.definition.ts#L123) |

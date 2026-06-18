@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.58**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.59**](../../README.md)
 
 ***
 
@@ -17,7 +17,7 @@ type MenuSetSelector = {
 };
 ```
 
-Defined in: [src/core/business-mgt/menu-management/menu-set.schema.ts:278](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/menu-management/menu-set.schema.ts#L278)
+Defined in: [src/core/business-mgt/menu-management/menu-set.schema.ts:278](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/menu-management/menu-set.schema.ts#L278)
 
 Menu set selector schema.
 Defines dynamic rules for set membership.
@@ -26,9 +26,9 @@ Defines dynamic rules for set membership.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="menuitemidsany"></a> `menuItemIdsAny` | `string`[] | [src/core/business-mgt/menu-management/menu-set.schema.ts:96](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/menu-management/menu-set.schema.ts#L96) |
-| <a id="menuitemidsall"></a> `menuItemIdsAll` | `string`[] | [src/core/business-mgt/menu-management/menu-set.schema.ts:97](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/menu-management/menu-set.schema.ts#L97) |
-| <a id="allmenuitems"></a> `allMenuItems` | `boolean` | [src/core/business-mgt/menu-management/menu-set.schema.ts:98](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/menu-management/menu-set.schema.ts#L98) |
-| <a id="quantityexact"></a> `quantityExact?` | `number` | [src/core/business-mgt/menu-management/menu-set.schema.ts:99](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/menu-management/menu-set.schema.ts#L99) |
-| <a id="quantitymin"></a> `quantityMin?` | `number` | [src/core/business-mgt/menu-management/menu-set.schema.ts:100](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/menu-management/menu-set.schema.ts#L100) |
-| <a id="quantitymax"></a> `quantityMax?` | `number` | [src/core/business-mgt/menu-management/menu-set.schema.ts:101](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/menu-management/menu-set.schema.ts#L101) |
+| <a id="menuitemidsany"></a> `menuItemIdsAny` | `string`[] | [src/core/business-mgt/menu-management/menu-set.schema.ts:96](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/menu-management/menu-set.schema.ts#L96) |
+| <a id="menuitemidsall"></a> `menuItemIdsAll` | `string`[] | [src/core/business-mgt/menu-management/menu-set.schema.ts:97](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/menu-management/menu-set.schema.ts#L97) |
+| <a id="allmenuitems"></a> `allMenuItems` | `boolean` | [src/core/business-mgt/menu-management/menu-set.schema.ts:98](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/menu-management/menu-set.schema.ts#L98) |
+| <a id="quantityexact"></a> `quantityExact?` | `number` | [src/core/business-mgt/menu-management/menu-set.schema.ts:99](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/menu-management/menu-set.schema.ts#L99) |
+| <a id="quantitymin"></a> `quantityMin?` | `number` | [src/core/business-mgt/menu-management/menu-set.schema.ts:100](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/menu-management/menu-set.schema.ts#L100) |
+| <a id="quantitymax"></a> `quantityMax?` | `number` | [src/core/business-mgt/menu-management/menu-set.schema.ts:101](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/menu-management/menu-set.schema.ts#L101) |

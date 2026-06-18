@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.58**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.59**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ShippingAddressQueryOptions
 
-Defined in: [src/core/business-mgt/customer-management/shipping-address.schema.ts:127](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/customer-management/shipping-address.schema.ts#L127)
+Defined in: [src/core/business-mgt/customer-management/shipping-address.schema.ts:127](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/customer-management/shipping-address.schema.ts#L127)
 
 Shipping address query options.
  ShippingAddressQueryOptions
@@ -15,7 +15,7 @@ Shipping address query options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/customer-management/shipping-address.schema.ts:129](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/customer-management/shipping-address.schema.ts#L129) |
-| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/customer-management/shipping-address.schema.ts:131](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/customer-management/shipping-address.schema.ts#L131) |
-| <a id="filters"></a> `filters?` | [`ShippingAddressFilters`](ShippingAddressFilters.md) | Optional filters | [src/core/business-mgt/customer-management/shipping-address.schema.ts:133](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/customer-management/shipping-address.schema.ts#L133) |
-| <a id="sorting"></a> `sorting?` | [`ShippingAddressSorting`](ShippingAddressSorting.md) | Optional sorting | [src/core/business-mgt/customer-management/shipping-address.schema.ts:135](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/customer-management/shipping-address.schema.ts#L135) |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/customer-management/shipping-address.schema.ts:129](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/customer-management/shipping-address.schema.ts#L129) |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/customer-management/shipping-address.schema.ts:131](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/customer-management/shipping-address.schema.ts#L131) |
+| <a id="filters"></a> `filters?` | [`ShippingAddressFilters`](ShippingAddressFilters.md) | Optional filters | [src/core/business-mgt/customer-management/shipping-address.schema.ts:133](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/customer-management/shipping-address.schema.ts#L133) |
+| <a id="sorting"></a> `sorting?` | [`ShippingAddressSorting`](ShippingAddressSorting.md) | Optional sorting | [src/core/business-mgt/customer-management/shipping-address.schema.ts:135](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/customer-management/shipping-address.schema.ts#L135) |

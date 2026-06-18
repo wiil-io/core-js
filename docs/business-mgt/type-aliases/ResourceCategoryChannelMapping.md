@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.58**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.59**](../../README.md)
 
 ***
 
@@ -13,7 +13,7 @@ type ResourceCategoryChannelMapping = {
 };
 ```
 
-Defined in: [src/core/business-mgt/reservation-mgt/resource/reservation-resource-category.schema.ts:87](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/reservation-mgt/resource/reservation-resource-category.schema.ts#L87)
+Defined in: [src/core/business-mgt/reservation-mgt/resource/reservation-resource-category.schema.ts:87](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/reservation-mgt/resource/reservation-resource-category.schema.ts#L87)
 
 Resource category channel mapping schema.
 Maps reservation resource categories to external platform category IDs.
@@ -22,5 +22,5 @@ Maps reservation resource categories to external platform category IDs.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="channelid"></a> `channelId` | `string` | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-category.schema.ts:24](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/reservation-mgt/resource/reservation-resource-category.schema.ts#L24) |
-| <a id="externalcategoryid"></a> `externalCategoryId` | `string` | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-category.schema.ts:25](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/reservation-mgt/resource/reservation-resource-category.schema.ts#L25) |
+| <a id="channelid"></a> `channelId` | `string` | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-category.schema.ts:24](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/reservation-mgt/resource/reservation-resource-category.schema.ts#L24) |
+| <a id="externalcategoryid"></a> `externalCategoryId` | `string` | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-category.schema.ts:25](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/reservation-mgt/resource/reservation-resource-category.schema.ts#L25) |

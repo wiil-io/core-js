@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.58**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.59**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: TableAssignmentFilters
 
-Defined in: [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:89](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L89)
+Defined in: [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:89](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L89)
 
 Table assignment filter options.
  TableAssignmentFilters
@@ -15,8 +15,8 @@ Table assignment filter options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="reservationid"></a> `reservationId?` | `string` | Filter by table reservation ID | [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:91](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L91) |
-| <a id="tableinstanceid"></a> `tableInstanceId?` | `string` | Filter by table resource instance ID | [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:93](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L93) |
-| <a id="status"></a> `status?` | [`TableAssignmentStatus`](../enumerations/TableAssignmentStatus.md)[] | Filter by assignment statuses | [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:95](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L95) |
-| <a id="assignedby"></a> `assignedBy?` | `string` | Filter by assigning staff user ID | [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:97](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L97) |
-| <a id="locationid"></a> `locationId?` | `string` | Filter by business location ID | [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:99](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L99) |
+| <a id="reservationid"></a> `reservationId?` | `string` | Filter by table reservation ID | [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:91](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L91) |
+| <a id="tableinstanceid"></a> `tableInstanceId?` | `string` | Filter by table resource instance ID | [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:93](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L93) |
+| <a id="status"></a> `status?` | [`TableAssignmentStatus`](../enumerations/TableAssignmentStatus.md)[] | Filter by assignment statuses | [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:95](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L95) |
+| <a id="assignedby"></a> `assignedBy?` | `string` | Filter by assigning staff user ID | [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:97](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L97) |
+| <a id="locationid"></a> `locationId?` | `string` | Filter by business location ID | [src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts:99](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/reservation-mgt/assignment/reservation-table-assignment.schema.ts#L99) |

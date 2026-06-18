@@ -22,6 +22,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // SHARED SCHEMAS
 // ============================================================================
 __exportStar(require("./bookings.shared.schema"), exports);
+__exportStar(require("./business-location.schema"), exports);
 __exportStar(require("./discount-rule.schema"), exports);
 __exportStar(require("./order.schema"), exports);
 __exportStar(require("./pricing-rule.shared.schema"), exports);

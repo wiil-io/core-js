@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.58**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.59**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: PropertyAddressSorting
 
-Defined in: [src/core/business-mgt/property-management/property-config.schema.ts:531](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/property-management/property-config.schema.ts#L531)
+Defined in: [src/core/business-mgt/property-management/property-config.schema.ts:531](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/property-management/property-config.schema.ts#L531)
 
 Property address sorting options.
  PropertyAddressSorting
@@ -15,5 +15,5 @@ Property address sorting options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="field"></a> `field` | `"createdAt"` \| `"street"` \| `"city"` \| `"state"` \| `"country"` | Field to sort by | [src/core/business-mgt/property-management/property-config.schema.ts:533](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/property-management/property-config.schema.ts#L533) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/property-management/property-config.schema.ts:535](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/property-management/property-config.schema.ts#L535) |
+| <a id="field"></a> `field` | `"createdAt"` \| `"street"` \| `"city"` \| `"state"` \| `"country"` | Field to sort by | [src/core/business-mgt/property-management/property-config.schema.ts:533](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/property-management/property-config.schema.ts#L533) |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/property-management/property-config.schema.ts:535](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/property-management/property-config.schema.ts#L535) |

@@ -504,11 +504,11 @@ export declare const CreatePropertyAddressSchema: z.ZodObject<{
     state: z.ZodString;
     postalCode: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     country: z.ZodString;
-    unit: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     coordinates: z.ZodOptional<z.ZodNullable<z.ZodObject<{
         latitude: z.ZodNumber;
         longitude: z.ZodNumber;
     }, z.core.$strip>>>;
+    unit: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     neighborhood: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     district: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     isVerified: z.ZodDefault<z.ZodBoolean>;
@@ -523,11 +523,11 @@ export declare const UpdatePropertyAddressSchema: z.ZodObject<{
     state: z.ZodOptional<z.ZodString>;
     postalCode: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     country: z.ZodOptional<z.ZodString>;
-    unit: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     coordinates: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodObject<{
         latitude: z.ZodNumber;
         longitude: z.ZodNumber;
     }, z.core.$strip>>>>;
+    unit: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     neighborhood: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     district: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     isVerified: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;

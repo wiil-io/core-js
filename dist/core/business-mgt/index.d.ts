@@ -3,6 +3,7 @@
  * @module business-mgt
  */
 export * from './bookings.shared.schema';
+export * from './business-location.schema';
 export * from './discount-rule.schema';
 export * from './order.schema';
 export * from './pricing-rule.shared.schema';

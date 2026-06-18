@@ -58,7 +58,7 @@ export declare const CustomerSchema: z.ZodObject<{
  */
 export declare const CreateCustomerSchema: z.ZodObject<{
     email: z.ZodOptional<z.ZodEmail>;
-    customerId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    timezone: z.ZodOptional<z.ZodString>;
     address: z.ZodOptional<z.ZodObject<{
         street: z.ZodString;
         street2: z.ZodOptional<z.ZodString>;
@@ -67,11 +67,11 @@ export declare const CreateCustomerSchema: z.ZodObject<{
         postalCode: z.ZodString;
         country: z.ZodString;
     }, z.core.$strip>>;
+    customerId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     phone_number: z.ZodOptional<z.ZodNullable<z.ZodPipe<z.ZodString, z.ZodTransform<string, string>>>>;
     firstname: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     lastname: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     company: z.ZodOptional<z.ZodString>;
-    timezone: z.ZodOptional<z.ZodString>;
     preferred_language: z.ZodDefault<z.ZodString>;
     preferred_contact_method: z.ZodDefault<z.ZodEnum<typeof PreferredContactMethod>>;
     best_time_to_call: z.ZodOptional<z.ZodEnum<typeof BestTimeToCall>>;
@@ -87,7 +87,7 @@ export declare const CreateCustomerSchema: z.ZodObject<{
  */
 export declare const UpdateCustomerSchema: z.ZodObject<{
     email: z.ZodOptional<z.ZodOptional<z.ZodEmail>>;
-    customerId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
+    timezone: z.ZodOptional<z.ZodOptional<z.ZodString>>;
     address: z.ZodOptional<z.ZodOptional<z.ZodObject<{
         street: z.ZodString;
         street2: z.ZodOptional<z.ZodString>;
@@ -96,11 +96,11 @@ export declare const UpdateCustomerSchema: z.ZodObject<{
         postalCode: z.ZodString;
         country: z.ZodString;
     }, z.core.$strip>>>;
+    customerId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     phone_number: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodPipe<z.ZodString, z.ZodTransform<string, string>>>>>;
     firstname: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     lastname: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     company: z.ZodOptional<z.ZodOptional<z.ZodString>>;
-    timezone: z.ZodOptional<z.ZodOptional<z.ZodString>>;
     preferred_language: z.ZodOptional<z.ZodDefault<z.ZodString>>;
     preferred_contact_method: z.ZodOptional<z.ZodDefault<z.ZodEnum<typeof PreferredContactMethod>>>;
     best_time_to_call: z.ZodOptional<z.ZodOptional<z.ZodEnum<typeof BestTimeToCall>>>;

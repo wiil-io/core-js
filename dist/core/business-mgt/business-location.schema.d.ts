@@ -165,20 +165,8 @@ export declare const CreateBusinessLocationSchema: z.ZodObject<{
     name: z.ZodString;
     isPrimary: z.ZodDefault<z.ZodBoolean>;
     phoneNumber: z.ZodOptional<z.ZodString>;
-    address: z.ZodOptional<z.ZodObject<{
-        street: z.ZodString;
-        street2: z.ZodOptional<z.ZodString>;
-        city: z.ZodString;
-        state: z.ZodString;
-        postalCode: z.ZodString;
-        country: z.ZodString;
-    }, z.core.$strip>>;
-    timezone: z.ZodOptional<z.ZodString>;
-    coordinates: z.ZodOptional<z.ZodNullable<z.ZodObject<{
-        latitude: z.ZodNumber;
-        longitude: z.ZodNumber;
-    }, z.core.$strip>>>;
     externalLocationId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    timezone: z.ZodOptional<z.ZodString>;
     businessHours: z.ZodRecord<z.ZodString, z.ZodObject<{
         isOpen: z.ZodBoolean;
         startTime: z.ZodString;
@@ -188,6 +176,18 @@ export declare const CreateBusinessLocationSchema: z.ZodObject<{
             end: z.ZodString;
         }, z.core.$strip>>>;
     }, z.core.$strip>>;
+    address: z.ZodOptional<z.ZodObject<{
+        street: z.ZodString;
+        street2: z.ZodOptional<z.ZodString>;
+        city: z.ZodString;
+        state: z.ZodString;
+        postalCode: z.ZodString;
+        country: z.ZodString;
+    }, z.core.$strip>>;
+    coordinates: z.ZodOptional<z.ZodNullable<z.ZodObject<{
+        latitude: z.ZodNumber;
+        longitude: z.ZodNumber;
+    }, z.core.$strip>>>;
 }, z.core.$strip>;
 /**
  * Zod schema for updating an existing business location.
@@ -212,20 +212,8 @@ export declare const UpdateBusinessLocationSchema: z.ZodObject<{
     name: z.ZodOptional<z.ZodString>;
     isPrimary: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
     phoneNumber: z.ZodOptional<z.ZodOptional<z.ZodString>>;
-    address: z.ZodOptional<z.ZodOptional<z.ZodObject<{
-        street: z.ZodString;
-        street2: z.ZodOptional<z.ZodString>;
-        city: z.ZodString;
-        state: z.ZodString;
-        postalCode: z.ZodString;
-        country: z.ZodString;
-    }, z.core.$strip>>>;
-    timezone: z.ZodOptional<z.ZodOptional<z.ZodString>>;
-    coordinates: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodObject<{
-        latitude: z.ZodNumber;
-        longitude: z.ZodNumber;
-    }, z.core.$strip>>>>;
     externalLocationId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
+    timezone: z.ZodOptional<z.ZodOptional<z.ZodString>>;
     businessHours: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodObject<{
         isOpen: z.ZodBoolean;
         startTime: z.ZodString;
@@ -235,6 +223,18 @@ export declare const UpdateBusinessLocationSchema: z.ZodObject<{
             end: z.ZodString;
         }, z.core.$strip>>>;
     }, z.core.$strip>>>;
+    address: z.ZodOptional<z.ZodOptional<z.ZodObject<{
+        street: z.ZodString;
+        street2: z.ZodOptional<z.ZodString>;
+        city: z.ZodString;
+        state: z.ZodString;
+        postalCode: z.ZodString;
+        country: z.ZodString;
+    }, z.core.$strip>>>;
+    coordinates: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodObject<{
+        latitude: z.ZodNumber;
+        longitude: z.ZodNumber;
+    }, z.core.$strip>>>>;
     id: z.ZodString;
 }, z.core.$strip>;
 /**

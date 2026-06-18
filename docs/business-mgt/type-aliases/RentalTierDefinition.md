@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.58**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.59**](../../README.md)
 
 ***
 
@@ -15,7 +15,7 @@ type RentalTierDefinition = {
 };
 ```
 
-Defined in: [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:141](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L141)
+Defined in: [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:141](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L141)
 
 Rental tier definition schema.
 Defines an available rental duration tier for reservation pricing and slot generation.
@@ -24,7 +24,7 @@ Defines an available rental duration tier for reservation pricing and slot gener
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="id"></a> `id` | `string` | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:25](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L25) |
-| <a id="name"></a> `name` | `string` | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:26](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L26) |
-| <a id="durationminutes"></a> `durationMinutes` | `number` | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:27](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L27) |
-| <a id="sortorder"></a> `sortOrder` | `number` | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:28](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L28) |
+| <a id="id"></a> `id` | `string` | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:25](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L25) |
+| <a id="name"></a> `name` | `string` | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:26](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L26) |
+| <a id="durationminutes"></a> `durationMinutes` | `number` | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:27](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L27) |
+| <a id="sortorder"></a> `sortOrder` | `number` | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:28](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L28) |

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.58**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.59**](../../README.md)
 
 ***
 
@@ -25,7 +25,7 @@ type UpdateServiceProviderTimeOff = {
 };
 ```
 
-Defined in: [src/core/business-mgt/service-management/service-time-off.schema.ts:111](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/service-management/service-time-off.schema.ts#L111)
+Defined in: [src/core/business-mgt/service-management/service-time-off.schema.ts:111](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/service-management/service-time-off.schema.ts#L111)
 
 Schema for updating an existing service provider time off record.
 All fields optional except id (required).
@@ -34,11 +34,11 @@ All fields optional except id (required).
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="providerid"></a> `providerId?` | `string` | [src/core/business-mgt/service-management/service-time-off.schema.ts:49](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/service-management/service-time-off.schema.ts#L49) |
-| <a id="type"></a> `type?` | \| [`RECURRING`](../../type-definitions/enumerations/ServiceProviderTimeOffType.md#recurring) \| [`SPECIFIC`](../../type-definitions/enumerations/ServiceProviderTimeOffType.md#specific) | [src/core/business-mgt/service-management/service-time-off.schema.ts:50](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/service-management/service-time-off.schema.ts#L50) |
-| <a id="startdate"></a> `startDate?` | `number` | [src/core/business-mgt/service-management/service-time-off.schema.ts:51](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/service-management/service-time-off.schema.ts#L51) |
-| <a id="enddate"></a> `endDate?` | `number` | [src/core/business-mgt/service-management/service-time-off.schema.ts:52](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/service-management/service-time-off.schema.ts#L52) |
-| <a id="reason"></a> `reason?` | `string` \| `null` | [src/core/business-mgt/service-management/service-time-off.schema.ts:53](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/service-management/service-time-off.schema.ts#L53) |
-| <a id="status"></a> `status?` | \| [`APPROVED`](../../type-definitions/enumerations/ServiceProviderTimeOffStatus.md#approved) \| [`PENDING`](../../type-definitions/enumerations/ServiceProviderTimeOffStatus.md#pending) \| [`REJECTED`](../../type-definitions/enumerations/ServiceProviderTimeOffStatus.md#rejected) | [src/core/business-mgt/service-management/service-time-off.schema.ts:54](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/service-management/service-time-off.schema.ts#L54) |
-| <a id="recurrence"></a> `recurrence?` | \| \{ `dayOfWeek`: `string`[]; \} \| `null` | [src/core/business-mgt/service-management/service-time-off.schema.ts:55](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/service-management/service-time-off.schema.ts#L55) |
-| <a id="id"></a> `id` | `string` | [src/core/business-mgt/service-management/service-time-off.schema.ts:101](https://github.com/wiil-io/core-js/blob/4be5beeca2c5a15e9be2725805032c749f72aacd/src/core/business-mgt/service-management/service-time-off.schema.ts#L101) |
+| <a id="providerid"></a> `providerId?` | `string` | [src/core/business-mgt/service-management/service-time-off.schema.ts:49](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/service-management/service-time-off.schema.ts#L49) |
+| <a id="type"></a> `type?` | \| [`RECURRING`](../../type-definitions/enumerations/ServiceProviderTimeOffType.md#recurring) \| [`SPECIFIC`](../../type-definitions/enumerations/ServiceProviderTimeOffType.md#specific) | [src/core/business-mgt/service-management/service-time-off.schema.ts:50](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/service-management/service-time-off.schema.ts#L50) |
+| <a id="startdate"></a> `startDate?` | `number` | [src/core/business-mgt/service-management/service-time-off.schema.ts:51](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/service-management/service-time-off.schema.ts#L51) |
+| <a id="enddate"></a> `endDate?` | `number` | [src/core/business-mgt/service-management/service-time-off.schema.ts:52](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/service-management/service-time-off.schema.ts#L52) |
+| <a id="reason"></a> `reason?` | `string` \| `null` | [src/core/business-mgt/service-management/service-time-off.schema.ts:53](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/service-management/service-time-off.schema.ts#L53) |
+| <a id="status"></a> `status?` | \| [`APPROVED`](../../type-definitions/enumerations/ServiceProviderTimeOffStatus.md#approved) \| [`PENDING`](../../type-definitions/enumerations/ServiceProviderTimeOffStatus.md#pending) \| [`REJECTED`](../../type-definitions/enumerations/ServiceProviderTimeOffStatus.md#rejected) | [src/core/business-mgt/service-management/service-time-off.schema.ts:54](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/service-management/service-time-off.schema.ts#L54) |
+| <a id="recurrence"></a> `recurrence?` | \| \{ `dayOfWeek`: `string`[]; \} \| `null` | [src/core/business-mgt/service-management/service-time-off.schema.ts:55](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/service-management/service-time-off.schema.ts#L55) |
+| <a id="id"></a> `id` | `string` | [src/core/business-mgt/service-management/service-time-off.schema.ts:101](https://github.com/wiil-io/core-js/blob/24feef82ee4591737e3700f46c23e871a410fbc1/src/core/business-mgt/service-management/service-time-off.schema.ts#L101) |

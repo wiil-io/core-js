@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.58**](../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.59**](../README.md)
 
 ***
 
@@ -16,6 +16,7 @@ Central export point for business management schemas.
 | ------ | ------ |
 | [ServiceDepositStrategy](enumerations/ServiceDepositStrategy.md) | Service deposit strategy options. |
 | [ReservationType](enumerations/ReservationType.md) | Reservation type options. |
+| [BusinessLocationStatus](enumerations/BusinessLocationStatus.md) | Business location lifecycle status. |
 | [MenuSetPricingMode](enumerations/MenuSetPricingMode.md) | Menu set pricing mode. Determines how set pricing is calculated. |
 | [MenuSetTargetingMode](enumerations/MenuSetTargetingMode.md) | Menu set targeting mode. Determines how set members are selected. |
 | [AttributeDefType](enumerations/AttributeDefType.md) | Attribute definition type. Determines the data type of attribute values. |
@@ -43,6 +44,9 @@ Central export point for business management schemas.
 
 | Interface | Description |
 | ------ | ------ |
+| [BusinessLocationFilters](interfaces/BusinessLocationFilters.md) | Filter options for querying business locations. |
+| [BusinessLocationSorting](interfaces/BusinessLocationSorting.md) | Sorting options for business location queries. |
+| [BusinessLocationQueryOptions](interfaces/BusinessLocationQueryOptions.md) | Pagination, filtering, and sorting options for business location queries. |
 | [CustomerGroupFilters](interfaces/CustomerGroupFilters.md) | Customer group filter options. CustomerGroupFilters |
 | [CustomerGroupSorting](interfaces/CustomerGroupSorting.md) | Customer group sorting options. CustomerGroupSorting |
 | [CustomerGroupQueryOptions](interfaces/CustomerGroupQueryOptions.md) | Customer group query options. CustomerGroupQueryOptions |
@@ -181,6 +185,10 @@ Central export point for business management schemas.
 | Type Alias | Description |
 | ------ | ------ |
 | [ServiceBookingRules](type-aliases/ServiceBookingRules.md) | Service booking rules schema. Configures online booking availability, customer restrictions, and cancellation policies. |
+| [GeoCoordinates](type-aliases/GeoCoordinates.md) | Geographic coordinates inferred from [GeoCoordinatesSchema](variables/GeoCoordinatesSchema.md). |
+| [BusinessLocation](type-aliases/BusinessLocation.md) | Complete business location record inferred from [BusinessLocationSchema](variables/BusinessLocationSchema.md). |
+| [CreateBusinessLocation](type-aliases/CreateBusinessLocation.md) | Payload for creating a business location, inferred from [CreateBusinessLocationSchema](variables/CreateBusinessLocationSchema.md). |
+| [UpdateBusinessLocation](type-aliases/UpdateBusinessLocation.md) | Partial update payload (with required `id`) inferred from [UpdateBusinessLocationSchema](variables/UpdateBusinessLocationSchema.md). |
 | [CustomerGroup](type-aliases/CustomerGroup.md) | Customer Group schema. Groups customers for pricing tiers and special terms. |
 | [CreateCustomerGroup](type-aliases/CreateCustomerGroup.md) | Schema for creating a new customer group. Omits auto-generated fields. |
 | [UpdateCustomerGroup](type-aliases/UpdateCustomerGroup.md) | Schema for updating an existing customer group. All fields optional except id (required). |
@@ -462,6 +470,10 @@ Central export point for business management schemas.
 | Variable | Description |
 | ------ | ------ |
 | [ServiceBookingRulesSchema](variables/ServiceBookingRulesSchema.md) | Service booking rules schema. Configures online booking availability, customer restrictions, and cancellation policies. |
+| [GeoCoordinatesSchema](variables/GeoCoordinatesSchema.md) | Zod schema for geographic coordinates. |
+| [BusinessLocationSchema](variables/BusinessLocationSchema.md) | Zod schema for Business Location validation. |
+| [CreateBusinessLocationSchema](variables/CreateBusinessLocationSchema.md) | Zod schema for creating a new business location. |
+| [UpdateBusinessLocationSchema](variables/UpdateBusinessLocationSchema.md) | Zod schema for updating an existing business location. |
 | [CustomerGroupSchema](variables/CustomerGroupSchema.md) | Customer Group schema. Groups customers for pricing tiers and special terms. |
 | [CreateCustomerGroupSchema](variables/CreateCustomerGroupSchema.md) | Schema for creating a new customer group. Omits auto-generated fields. |
 | [UpdateCustomerGroupSchema](variables/UpdateCustomerGroupSchema.md) | Schema for updating an existing customer group. All fields optional except id (required). |
