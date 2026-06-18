@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.60**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.61**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ReservationSettingsFilters
 
-Defined in: [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:157](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L157)
+Defined in: [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:157](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L157)
 
 Reservation settings filter options.
  ReservationSettingsFilters
@@ -15,4 +15,4 @@ Reservation settings filter options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="locationid"></a> `locationId?` | `string` | Filter by business location ID | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:159](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L159) |
+| <a id="locationid"></a> `locationId?` | `string` | Filter by business location ID | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:159](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L159) |

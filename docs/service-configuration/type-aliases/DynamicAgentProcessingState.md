@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.60**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.61**](../../README.md)
 
 ***
 
@@ -14,7 +14,7 @@ type DynamicAgentProcessingState = {
 };
 ```
 
-Defined in: [src/core/service-configuration/base-agent-setup.ts:116](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/service-configuration/base-agent-setup.ts#L116)
+Defined in: [src/core/service-configuration/base-agent-setup.ts:116](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/service-configuration/base-agent-setup.ts#L116)
 
 Agent processing state schema for tracking long-running setup operations.
 
@@ -22,6 +22,6 @@ Agent processing state schema for tracking long-running setup operations.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="status"></a> `status` | `"pending"` \| `"completed"` \| `"failed"` \| `"in_progress"` | [src/core/service-configuration/base-agent-setup.ts:86](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/service-configuration/base-agent-setup.ts#L86) |
-| <a id="progresspercentage"></a> `progressPercentage` | `number` | [src/core/service-configuration/base-agent-setup.ts:87](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/service-configuration/base-agent-setup.ts#L87) |
-| <a id="message"></a> `message?` | `string` | [src/core/service-configuration/base-agent-setup.ts:88](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/service-configuration/base-agent-setup.ts#L88) |
+| <a id="status"></a> `status` | `"pending"` \| `"completed"` \| `"failed"` \| `"in_progress"` | [src/core/service-configuration/base-agent-setup.ts:86](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/service-configuration/base-agent-setup.ts#L86) |
+| <a id="progresspercentage"></a> `progressPercentage` | `number` | [src/core/service-configuration/base-agent-setup.ts:87](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/service-configuration/base-agent-setup.ts#L87) |
+| <a id="message"></a> `message?` | `string` | [src/core/service-configuration/base-agent-setup.ts:88](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/service-configuration/base-agent-setup.ts#L88) |

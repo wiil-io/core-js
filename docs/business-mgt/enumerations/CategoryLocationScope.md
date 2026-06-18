@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.60**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.61**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: CategoryLocationScope
 
-Defined in: [src/core/business-mgt/product-management/product-config.schema.ts:39](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/product-management/product-config.schema.ts#L39)
+Defined in: [src/core/business-mgt/product-management/product-config.schema.ts:39](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/product-management/product-config.schema.ts#L39)
 
 Category location scope.
 Determines whether category is inherited across locations or local.
@@ -15,5 +15,5 @@ Determines whether category is inherited across locations or local.
 
 | Enumeration Member | Value | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="inherited"></a> `INHERITED` | `"inherited"` | Category is inherited from parent organization | [src/core/business-mgt/product-management/product-config.schema.ts:41](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/product-management/product-config.schema.ts#L41) |
-| <a id="local"></a> `LOCAL` | `"local"` | Category is local to specific location | [src/core/business-mgt/product-management/product-config.schema.ts:43](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/product-management/product-config.schema.ts#L43) |
+| <a id="inherited"></a> `INHERITED` | `"inherited"` | Category is inherited from parent organization | [src/core/business-mgt/product-management/product-config.schema.ts:41](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/product-management/product-config.schema.ts#L41) |
+| <a id="local"></a> `LOCAL` | `"local"` | Category is local to specific location | [src/core/business-mgt/product-management/product-config.schema.ts:43](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/product-management/product-config.schema.ts#L43) |

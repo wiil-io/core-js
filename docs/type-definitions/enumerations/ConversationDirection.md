@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.60**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.61**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: ConversationDirection
 
-Defined in: [src/core/type-definitions/conversation.type.definition.ts:228](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/type-definitions/conversation.type.definition.ts#L228)
+Defined in: [src/core/type-definitions/conversation.type.definition.ts:228](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/type-definitions/conversation.type.definition.ts#L228)
 
 Conversation direction for tracking inbound/outbound interactions.
 
@@ -21,5 +21,5 @@ ServiceConversationConfigSchema - Uses this for direction tracking
 
 | Enumeration Member | Value | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="inbound"></a> `INBOUND` | `"inbound"` | Customer-initiated conversation (incoming call, received email, etc.) | [src/core/type-definitions/conversation.type.definition.ts:230](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/type-definitions/conversation.type.definition.ts#L230) |
-| <a id="outbound"></a> `OUTBOUND` | `"outbound"` | Business-initiated conversation (outbound call, campaign, etc.) | [src/core/type-definitions/conversation.type.definition.ts:232](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/type-definitions/conversation.type.definition.ts#L232) |
+| <a id="inbound"></a> `INBOUND` | `"inbound"` | Customer-initiated conversation (incoming call, received email, etc.) | [src/core/type-definitions/conversation.type.definition.ts:230](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/type-definitions/conversation.type.definition.ts#L230) |
+| <a id="outbound"></a> `OUTBOUND` | `"outbound"` | Business-initiated conversation (outbound call, campaign, etc.) | [src/core/type-definitions/conversation.type.definition.ts:232](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/type-definitions/conversation.type.definition.ts#L232) |

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.60**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.61**](../../README.md)
 
 ***
 
@@ -13,7 +13,7 @@ type ModifierGroupChannelMapping = {
 };
 ```
 
-Defined in: [src/core/business-mgt/menu-management/modifier.schema.ts:381](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/menu-management/modifier.schema.ts#L381)
+Defined in: [src/core/business-mgt/menu-management/modifier.schema.ts:381](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/menu-management/modifier.schema.ts#L381)
 
 Modifier group channel mapping schema.
 Maps modifier groups to external platform identifiers.
@@ -22,5 +22,5 @@ Maps modifier groups to external platform identifiers.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="channelid"></a> `channelId` | `string` | [src/core/business-mgt/menu-management/modifier.schema.ts:25](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/menu-management/modifier.schema.ts#L25) |
-| <a id="externalmodifiergroupid"></a> `externalModifierGroupId` | `string` | [src/core/business-mgt/menu-management/modifier.schema.ts:26](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/menu-management/modifier.schema.ts#L26) |
+| <a id="channelid"></a> `channelId` | `string` | [src/core/business-mgt/menu-management/modifier.schema.ts:25](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/menu-management/modifier.schema.ts#L25) |
+| <a id="externalmodifiergroupid"></a> `externalModifierGroupId` | `string` | [src/core/business-mgt/menu-management/modifier.schema.ts:26](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/menu-management/modifier.schema.ts#L26) |

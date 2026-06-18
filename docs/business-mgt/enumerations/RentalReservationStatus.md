@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.60**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.61**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: RentalReservationStatus
 
-Defined in: [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:19](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L19)
+Defined in: [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:19](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L19)
 
 Rental reservation lifecycle status.
 
@@ -14,9 +14,9 @@ Rental reservation lifecycle status.
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="upcoming"></a> `UPCOMING` | `"upcoming"` | [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:20](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L20) |
-| <a id="pickup_soon"></a> `PICKUP_SOON` | `"pickup_soon"` | [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:21](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L21) |
-| <a id="out"></a> `OUT` | `"out"` | [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:22](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L22) |
-| <a id="returned"></a> `RETURNED` | `"returned"` | [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:23](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L23) |
-| <a id="overdue"></a> `OVERDUE` | `"overdue"` | [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:24](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L24) |
-| <a id="cancelled"></a> `CANCELLED` | `"cancelled"` | [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:25](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L25) |
+| <a id="upcoming"></a> `UPCOMING` | `"upcoming"` | [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:20](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L20) |
+| <a id="pickup_soon"></a> `PICKUP_SOON` | `"pickup_soon"` | [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:21](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L21) |
+| <a id="out"></a> `OUT` | `"out"` | [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:22](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L22) |
+| <a id="returned"></a> `RETURNED` | `"returned"` | [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:23](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L23) |
+| <a id="overdue"></a> `OVERDUE` | `"overdue"` | [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:24](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L24) |
+| <a id="cancelled"></a> `CANCELLED` | `"cancelled"` | [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:25](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L25) |

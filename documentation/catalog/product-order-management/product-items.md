@@ -279,13 +279,53 @@ Represents individual products with complete details for ordering, inventory, sh
 
 Omits: `id`, `createdAt`, `updatedAt`, `category`, `orderCount`, `recentOrderCount`, `lastOrderedAt`
 
-Adds: `placement` (optional) for display ordering.
+Adds: `placement` (optional) for display ordering, and `variants` (**required**, at least one).
 
 Note: `categoryId` becomes optional for creation.
 
+**Required variants:** A product must be created with at least one variant. Each entry uses the ProductVariant create schema with `productId` omitted — the parent link is assigned by the server once the product is created.
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| variants | array | Yes (min 1) | Variants to create with this product (each without `productId`) |
+
+### Create Response
+
+On success, product creation returns the ProductDisplay representation (`ProductDisplaySchema`) — the persisted product hydrated with its created `variants` (including resolved stock status), the computed `priceRange`, and `isVariantSelectable` — rather than the raw create payload.
+
 ### Update Schema
 
-All fields optional except `id` (required).
+All fields optional except `id` (required). `variants` is not enforced on update.
+
+### Validation Rules
+
+| Rule | Error Message |
+|------|---------------|
+| name minimum length 1 | "Product name is required" |
+| price >= 0 | Non-negative validation |
+| variants minimum length 1 | "A product must have at least one variant" |
+
+### Create Example (with required variants)
+
+```json
+{
+  "name": "Wireless Bluetooth Headphones",
+  "price": 149.99,
+  "categoryId": "category_electronics_id",
+  "isActive": true,
+  "variants": [
+    {
+      "axisValues": { "axis_color_id": "value_black_id" },
+      "sku": "WBH-2024-BLK",
+      "isDefault": true
+    },
+    {
+      "axisValues": { "axis_color_id": "value_white_id" },
+      "sku": "WBH-2024-WHT"
+    }
+  ]
+}
+```
 
 ### Example
 

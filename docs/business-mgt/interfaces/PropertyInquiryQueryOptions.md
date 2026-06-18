@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.60**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.61**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: PropertyInquiryQueryOptions
 
-Defined in: [src/core/business-mgt/property-management/property-inquiry.schema.ts:195](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/property-management/property-inquiry.schema.ts#L195)
+Defined in: [src/core/business-mgt/property-management/property-inquiry.schema.ts:195](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/property-management/property-inquiry.schema.ts#L195)
 
 Property inquiry query options.
  PropertyInquiryQueryOptions
@@ -15,7 +15,7 @@ Property inquiry query options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/property-management/property-inquiry.schema.ts:197](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/property-management/property-inquiry.schema.ts#L197) |
-| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/property-management/property-inquiry.schema.ts:199](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/property-management/property-inquiry.schema.ts#L199) |
-| <a id="filters"></a> `filters?` | [`PropertyInquiryFilters`](PropertyInquiryFilters.md) | Optional filters | [src/core/business-mgt/property-management/property-inquiry.schema.ts:201](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/property-management/property-inquiry.schema.ts#L201) |
-| <a id="sorting"></a> `sorting?` | [`PropertyInquirySorting`](PropertyInquirySorting.md) | Optional sorting | [src/core/business-mgt/property-management/property-inquiry.schema.ts:203](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/business-mgt/property-management/property-inquiry.schema.ts#L203) |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/property-management/property-inquiry.schema.ts:197](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/property-management/property-inquiry.schema.ts#L197) |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/property-management/property-inquiry.schema.ts:199](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/property-management/property-inquiry.schema.ts#L199) |
+| <a id="filters"></a> `filters?` | [`PropertyInquiryFilters`](PropertyInquiryFilters.md) | Optional filters | [src/core/business-mgt/property-management/property-inquiry.schema.ts:201](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/property-management/property-inquiry.schema.ts#L201) |
+| <a id="sorting"></a> `sorting?` | [`PropertyInquirySorting`](PropertyInquirySorting.md) | Optional sorting | [src/core/business-mgt/property-management/property-inquiry.schema.ts:203](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/business-mgt/property-management/property-inquiry.schema.ts#L203) |

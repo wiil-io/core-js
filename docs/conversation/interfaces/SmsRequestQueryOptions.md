@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.60**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.61**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: SmsRequestQueryOptions
 
-Defined in: [src/core/conversation/outbound-sms.schema.ts:148](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/conversation/outbound-sms.schema.ts#L148)
+Defined in: [src/core/conversation/outbound-sms.schema.ts:148](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/conversation/outbound-sms.schema.ts#L148)
 
 SMS request query options.
  SmsRequestQueryOptions
@@ -15,7 +15,7 @@ SMS request query options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/conversation/outbound-sms.schema.ts:150](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/conversation/outbound-sms.schema.ts#L150) |
-| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/conversation/outbound-sms.schema.ts:152](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/conversation/outbound-sms.schema.ts#L152) |
-| <a id="filters"></a> `filters?` | [`SmsRequestFilters`](SmsRequestFilters.md) | Optional filters | [src/core/conversation/outbound-sms.schema.ts:154](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/conversation/outbound-sms.schema.ts#L154) |
-| <a id="sorting"></a> `sorting?` | [`SmsRequestSorting`](SmsRequestSorting.md) | Optional sorting | [src/core/conversation/outbound-sms.schema.ts:156](https://github.com/wiil-io/core-js/blob/62b64c02f8acf4dd72c4c541d200515bd9da49d1/src/core/conversation/outbound-sms.schema.ts#L156) |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/conversation/outbound-sms.schema.ts:150](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/conversation/outbound-sms.schema.ts#L150) |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/conversation/outbound-sms.schema.ts:152](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/conversation/outbound-sms.schema.ts#L152) |
+| <a id="filters"></a> `filters?` | [`SmsRequestFilters`](SmsRequestFilters.md) | Optional filters | [src/core/conversation/outbound-sms.schema.ts:154](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/conversation/outbound-sms.schema.ts#L154) |
+| <a id="sorting"></a> `sorting?` | [`SmsRequestSorting`](SmsRequestSorting.md) | Optional sorting | [src/core/conversation/outbound-sms.schema.ts:156](https://github.com/wiil-io/core-js/blob/16f97d4afc9c808249e9e74ff3aad1f67349558b/src/core/conversation/outbound-sms.schema.ts#L156) |

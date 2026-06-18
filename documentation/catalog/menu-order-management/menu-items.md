@@ -132,6 +132,10 @@ Note: `categoryId` becomes optional (nullable) for creation. Analytics fields ar
 |-------|------|----------|-------------|
 | variants | array | Yes (min 1) | Variants to create with this menu item (each without `menuItemId`) |
 
+### Create Response
+
+On success, menu item creation returns the [MenuItemCatalog](#menuitemvariant) representation (`MenuItemCatalogSchema`) — the persisted menu item hydrated with its created `variants`, resolved `priceRange`, `isVariantSelectable`, and `modifierGroups` — rather than the raw create payload.
+
 ### Update Schema
 
 All fields optional except `id` (required). `variants` is not enforced on update.
