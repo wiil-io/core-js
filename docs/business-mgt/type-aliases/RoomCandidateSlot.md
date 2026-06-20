@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.64**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.65**](../../README.md)
 
 ***
 
@@ -23,7 +23,7 @@ type RoomCandidateSlot = {
 };
 ```
 
-Defined in: [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:356](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L356)
+Defined in: [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:356](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L356)
 
 Room candidate slot schema.
 Date-range model for room availability candidates measured in nights.
@@ -32,12 +32,12 @@ Date-range model for room availability candidates measured in nights.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="resourceid"></a> `resourceId` | `string` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:193](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L193) |
-| <a id="checkindate"></a> `checkInDate` | `string` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:194](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L194) |
-| <a id="checkoutdate"></a> `checkOutDate` | `string` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:195](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L195) |
-| <a id="nights"></a> `nights` | `number` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:196](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L196) |
-| <a id="occupancy"></a> `occupancy?` | `number` \| `null` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:197](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L197) |
-| <a id="roomsavailable"></a> `roomsAvailable` | `number` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:198](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L198) |
-| <a id="ratepernight"></a> `ratePerNight` | \{ `date`: `string`; `amount`: `number`; \}[] | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:199](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L199) |
-| <a id="totalwithtax"></a> `totalWithTax` | `number` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:200](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L200) |
-| <a id="isavailable"></a> `isAvailable` | `boolean` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:201](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L201) |
+| <a id="resourceid"></a> `resourceId` | `string` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:193](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L193) |
+| <a id="checkindate"></a> `checkInDate` | `string` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:194](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L194) |
+| <a id="checkoutdate"></a> `checkOutDate` | `string` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:195](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L195) |
+| <a id="nights"></a> `nights` | `number` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:196](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L196) |
+| <a id="occupancy"></a> `occupancy?` | `number` \| `null` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:197](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L197) |
+| <a id="roomsavailable"></a> `roomsAvailable` | `number` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:198](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L198) |
+| <a id="ratepernight"></a> `ratePerNight` | \{ `date`: `string`; `amount`: `number`; \}[] | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:199](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L199) |
+| <a id="totalwithtax"></a> `totalWithTax` | `number` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:200](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L200) |
+| <a id="isavailable"></a> `isAvailable` | `boolean` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:201](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L201) |

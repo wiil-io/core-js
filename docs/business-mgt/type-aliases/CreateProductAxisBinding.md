@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.64**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.65**](../../README.md)
 
 ***
 
@@ -16,7 +16,7 @@ type CreateProductAxisBinding = {
 };
 ```
 
-Defined in: [src/core/business-mgt/product-management/product-axis-binding.schema.ts:61](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/product-management/product-axis-binding.schema.ts#L61)
+Defined in: [src/core/business-mgt/product-management/product-axis-binding.schema.ts:61](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/product-management/product-axis-binding.schema.ts#L61)
 
 Schema for creating a new product axis binding.
 Omits auto-generated fields.
@@ -25,8 +25,8 @@ Omits auto-generated fields.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="productrevisionid"></a> `productRevisionId?` | `string` \| `null` | [src/core/business-mgt/product-management/product-axis-binding.schema.ts:27](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/product-management/product-axis-binding.schema.ts#L27) |
-| <a id="productid"></a> `productId` | `string` | [src/core/business-mgt/product-management/product-axis-binding.schema.ts:28](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/product-management/product-axis-binding.schema.ts#L28) |
-| <a id="axisid"></a> `axisId` | `string` | [src/core/business-mgt/product-management/product-axis-binding.schema.ts:29](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/product-management/product-axis-binding.schema.ts#L29) |
-| <a id="displayorder"></a> `displayOrder` | `number` | [src/core/business-mgt/product-management/product-axis-binding.schema.ts:30](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/product-management/product-axis-binding.schema.ts#L30) |
-| <a id="isactive"></a> `isActive` | `boolean` | [src/core/business-mgt/product-management/product-axis-binding.schema.ts:31](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/product-management/product-axis-binding.schema.ts#L31) |
+| <a id="productrevisionid"></a> `productRevisionId?` | `string` \| `null` | [src/core/business-mgt/product-management/product-axis-binding.schema.ts:27](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/product-management/product-axis-binding.schema.ts#L27) |
+| <a id="productid"></a> `productId` | `string` | [src/core/business-mgt/product-management/product-axis-binding.schema.ts:28](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/product-management/product-axis-binding.schema.ts#L28) |
+| <a id="axisid"></a> `axisId` | `string` | [src/core/business-mgt/product-management/product-axis-binding.schema.ts:29](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/product-management/product-axis-binding.schema.ts#L29) |
+| <a id="displayorder"></a> `displayOrder` | `number` | [src/core/business-mgt/product-management/product-axis-binding.schema.ts:30](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/product-management/product-axis-binding.schema.ts#L30) |
+| <a id="isactive"></a> `isActive` | `boolean` | [src/core/business-mgt/product-management/product-axis-binding.schema.ts:31](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/product-management/product-axis-binding.schema.ts#L31) |

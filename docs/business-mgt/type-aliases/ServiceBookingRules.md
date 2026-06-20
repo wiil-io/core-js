@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.64**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.65**](../../README.md)
 
 ***
 
@@ -17,7 +17,7 @@ type ServiceBookingRules = {
 };
 ```
 
-Defined in: [src/core/business-mgt/bookings.shared.schema.ts:64](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/bookings.shared.schema.ts#L64)
+Defined in: [src/core/business-mgt/bookings.shared.schema.ts:64](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/bookings.shared.schema.ts#L64)
 
 Service booking rules schema.
 Configures online booking availability, customer restrictions, and cancellation policies.
@@ -26,9 +26,9 @@ Configures online booking availability, customer restrictions, and cancellation 
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="onlineenabled"></a> `onlineEnabled` | `boolean` | [src/core/business-mgt/bookings.shared.schema.ts:52](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/bookings.shared.schema.ts#L52) |
-| <a id="existingonly"></a> `existingOnly` | `boolean` | [src/core/business-mgt/bookings.shared.schema.ts:53](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/bookings.shared.schema.ts#L53) |
-| <a id="requiresconsult"></a> `requiresConsult` | `boolean` | [src/core/business-mgt/bookings.shared.schema.ts:54](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/bookings.shared.schema.ts#L54) |
-| <a id="maxdaysout"></a> `maxDaysOut` | `number` | [src/core/business-mgt/bookings.shared.schema.ts:55](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/bookings.shared.schema.ts#L55) |
-| <a id="minnoticehours"></a> `minNoticeHours` | `number` | [src/core/business-mgt/bookings.shared.schema.ts:56](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/bookings.shared.schema.ts#L56) |
-| <a id="latecancelhours"></a> `lateCancelHours` | `number` | [src/core/business-mgt/bookings.shared.schema.ts:57](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/bookings.shared.schema.ts#L57) |
+| <a id="onlineenabled"></a> `onlineEnabled` | `boolean` | [src/core/business-mgt/bookings.shared.schema.ts:52](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/bookings.shared.schema.ts#L52) |
+| <a id="existingonly"></a> `existingOnly` | `boolean` | [src/core/business-mgt/bookings.shared.schema.ts:53](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/bookings.shared.schema.ts#L53) |
+| <a id="requiresconsult"></a> `requiresConsult` | `boolean` | [src/core/business-mgt/bookings.shared.schema.ts:54](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/bookings.shared.schema.ts#L54) |
+| <a id="maxdaysout"></a> `maxDaysOut` | `number` | [src/core/business-mgt/bookings.shared.schema.ts:55](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/bookings.shared.schema.ts#L55) |
+| <a id="minnoticehours"></a> `minNoticeHours` | `number` | [src/core/business-mgt/bookings.shared.schema.ts:56](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/bookings.shared.schema.ts#L56) |
+| <a id="latecancelhours"></a> `lateCancelHours` | `number` | [src/core/business-mgt/bookings.shared.schema.ts:57](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/bookings.shared.schema.ts#L57) |

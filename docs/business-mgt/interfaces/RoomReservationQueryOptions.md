@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.64**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.65**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: RoomReservationQueryOptions
 
-Defined in: [src/core/business-mgt/reservation-mgt/reservation-room.schema.ts:151](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/reservation-mgt/reservation-room.schema.ts#L151)
+Defined in: [src/core/business-mgt/reservation-mgt/reservation-room.schema.ts:151](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/reservation-mgt/reservation-room.schema.ts#L151)
 
 Room reservation query options.
  RoomReservationQueryOptions
@@ -15,7 +15,7 @@ Room reservation query options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/reservation-mgt/reservation-room.schema.ts:153](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/reservation-mgt/reservation-room.schema.ts#L153) |
-| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/reservation-mgt/reservation-room.schema.ts:155](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/reservation-mgt/reservation-room.schema.ts#L155) |
-| <a id="filters"></a> `filters?` | [`RoomReservationFilters`](RoomReservationFilters.md) | Optional filters | [src/core/business-mgt/reservation-mgt/reservation-room.schema.ts:157](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/reservation-mgt/reservation-room.schema.ts#L157) |
-| <a id="sorting"></a> `sorting?` | [`RoomReservationSorting`](RoomReservationSorting.md) | Optional sorting | [src/core/business-mgt/reservation-mgt/reservation-room.schema.ts:159](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/reservation-mgt/reservation-room.schema.ts#L159) |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/reservation-mgt/reservation-room.schema.ts:153](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/reservation-mgt/reservation-room.schema.ts#L153) |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/reservation-mgt/reservation-room.schema.ts:155](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/reservation-mgt/reservation-room.schema.ts#L155) |
+| <a id="filters"></a> `filters?` | [`RoomReservationFilters`](RoomReservationFilters.md) | Optional filters | [src/core/business-mgt/reservation-mgt/reservation-room.schema.ts:157](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/reservation-mgt/reservation-room.schema.ts#L157) |
+| <a id="sorting"></a> `sorting?` | [`RoomReservationSorting`](RoomReservationSorting.md) | Optional sorting | [src/core/business-mgt/reservation-mgt/reservation-room.schema.ts:159](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/reservation-mgt/reservation-room.schema.ts#L159) |

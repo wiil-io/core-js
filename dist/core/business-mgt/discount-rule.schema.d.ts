@@ -49,8 +49,8 @@ export declare const DiscountRuleSchema: z.ZodObject<{
     maxUsesPerCustomer: z.ZodOptional<z.ZodNumber>;
     isStackable: z.ZodDefault<z.ZodBoolean>;
     priority: z.ZodDefault<z.ZodNumber>;
-    effectiveFrom: z.ZodOptional<z.ZodNumber>;
-    effectiveTo: z.ZodOptional<z.ZodNumber>;
+    effectiveFrom: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
+    effectiveTo: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
     isActive: z.ZodDefault<z.ZodBoolean>;
 }, z.core.$strip>;
 /**
@@ -75,8 +75,8 @@ export declare const CreateDiscountRuleSchema: z.ZodObject<{
     maxUsesPerCustomer: z.ZodOptional<z.ZodNumber>;
     isStackable: z.ZodDefault<z.ZodBoolean>;
     priority: z.ZodDefault<z.ZodNumber>;
-    effectiveFrom: z.ZodOptional<z.ZodNumber>;
-    effectiveTo: z.ZodOptional<z.ZodNumber>;
+    effectiveFrom: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
+    effectiveTo: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
     placement: z.ZodOptional<z.ZodObject<{
         placementIntent: z.ZodObject<{
             mode: z.ZodEnum<{
@@ -114,8 +114,8 @@ export declare const UpdateDiscountRuleSchema: z.ZodObject<{
     maxUsesPerCustomer: z.ZodOptional<z.ZodOptional<z.ZodNumber>>;
     isStackable: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
     priority: z.ZodOptional<z.ZodDefault<z.ZodNumber>>;
-    effectiveFrom: z.ZodOptional<z.ZodOptional<z.ZodNumber>>;
-    effectiveTo: z.ZodOptional<z.ZodOptional<z.ZodNumber>>;
+    effectiveFrom: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
+    effectiveTo: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
     placement: z.ZodOptional<z.ZodOptional<z.ZodObject<{
         placementIntent: z.ZodObject<{
             mode: z.ZodEnum<{

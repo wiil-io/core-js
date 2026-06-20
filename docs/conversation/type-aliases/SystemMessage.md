@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.64**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.65**](../../README.md)
 
 ***
 
@@ -19,7 +19,7 @@ type SystemMessage = {
 };
 ```
 
-Defined in: [src/core/conversation/conversation-message.schema.ts:293](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/conversation/conversation-message.schema.ts#L293)
+Defined in: [src/core/conversation/conversation-message.schema.ts:293](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/conversation/conversation-message.schema.ts#L293)
 
 System message schema.
 
@@ -31,14 +31,14 @@ but recorded for audit trails and conversation state tracking.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="conversation_config_id"></a> `conversation_config_id` | `string` | [src/core/conversation/conversation-message.schema.ts:73](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/conversation/conversation-message.schema.ts#L73) |
-| <a id="message"></a> `message` | `string` | [src/core/conversation/conversation-message.schema.ts:74](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/conversation/conversation-message.schema.ts#L74) |
-| <a id="timestamp"></a> `timestamp` | `number` | [src/core/conversation/conversation-message.schema.ts:75](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/conversation/conversation-message.schema.ts#L75) |
-| <a id="llm_conversation_id"></a> `llm_conversation_id?` | `string` \| `null` | [src/core/conversation/conversation-message.schema.ts:76](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/conversation/conversation-message.schema.ts#L76) |
-| <a id="message_type"></a> `message_type` | [`SYSTEM`](../enumerations/MessageType.md#system) | [src/core/conversation/conversation-message.schema.ts:277](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/conversation/conversation-message.schema.ts#L277) |
-| <a id="system_message_id"></a> `system_message_id` | `string` | [src/core/conversation/conversation-message.schema.ts:278](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/conversation/conversation-message.schema.ts#L278) |
-| <a id="event_type"></a> `event_type` | [`SystemMessageEventType`](../enumerations/SystemMessageEventType.md) | [src/core/conversation/conversation-message.schema.ts:279](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/conversation/conversation-message.schema.ts#L279) |
-| <a id="metadata"></a> `metadata?` | `Record`\<`string`, `unknown`\> | [src/core/conversation/conversation-message.schema.ts:280](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/conversation/conversation-message.schema.ts#L280) |
+| <a id="conversation_config_id"></a> `conversation_config_id` | `string` | [src/core/conversation/conversation-message.schema.ts:73](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/conversation/conversation-message.schema.ts#L73) |
+| <a id="message"></a> `message` | `string` | [src/core/conversation/conversation-message.schema.ts:74](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/conversation/conversation-message.schema.ts#L74) |
+| <a id="timestamp"></a> `timestamp` | `number` | [src/core/conversation/conversation-message.schema.ts:75](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/conversation/conversation-message.schema.ts#L75) |
+| <a id="llm_conversation_id"></a> `llm_conversation_id?` | `string` \| `null` | [src/core/conversation/conversation-message.schema.ts:76](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/conversation/conversation-message.schema.ts#L76) |
+| <a id="message_type"></a> `message_type` | [`SYSTEM`](../enumerations/MessageType.md#system) | [src/core/conversation/conversation-message.schema.ts:277](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/conversation/conversation-message.schema.ts#L277) |
+| <a id="system_message_id"></a> `system_message_id` | `string` | [src/core/conversation/conversation-message.schema.ts:278](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/conversation/conversation-message.schema.ts#L278) |
+| <a id="event_type"></a> `event_type` | [`SystemMessageEventType`](../enumerations/SystemMessageEventType.md) | [src/core/conversation/conversation-message.schema.ts:279](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/conversation/conversation-message.schema.ts#L279) |
+| <a id="metadata"></a> `metadata?` | `Record`\<`string`, `unknown`\> | [src/core/conversation/conversation-message.schema.ts:280](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/conversation/conversation-message.schema.ts#L280) |
 
 ## Remarks
 

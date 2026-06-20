@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.64**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.65**](../../README.md)
 
 ***
 
@@ -13,11 +13,11 @@ type DeploymentChannelDeletionRequest = {
 };
 ```
 
-Defined in: [src/core/service-configuration/interaction-channels.schema.ts:495](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/service-configuration/interaction-channels.schema.ts#L495)
+Defined in: [src/core/service-configuration/interaction-channels.schema.ts:495](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/service-configuration/interaction-channels.schema.ts#L495)
 
 ## Type Declaration
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="id"></a> `id` | `string` | [src/core/service-configuration/interaction-channels.schema.ts:491](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/service-configuration/interaction-channels.schema.ts#L491) |
-| <a id="deletephoneconfig"></a> `deletePhoneConfig` | `boolean` | [src/core/service-configuration/interaction-channels.schema.ts:492](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/service-configuration/interaction-channels.schema.ts#L492) |
+| <a id="id"></a> `id` | `string` | [src/core/service-configuration/interaction-channels.schema.ts:491](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/service-configuration/interaction-channels.schema.ts#L491) |
+| <a id="deletephoneconfig"></a> `deletePhoneConfig` | `boolean` | [src/core/service-configuration/interaction-channels.schema.ts:492](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/service-configuration/interaction-channels.schema.ts#L492) |

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.64**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.65**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const BusinessResourceCatalogSchema: ZodArray<BusinessResourceCatalog>;
 ```
 
-Defined in: [src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:402](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts#L402)
+Defined in: [src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:402](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts#L402)
 
 Business resource catalog schema.
 Represents the complete reservation resource catalog for a business context.

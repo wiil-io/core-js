@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.64**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.65**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const TablePlacementWithContextSchema: ZodObject<TablePlacementWithContext>;
 ```
 
-Defined in: [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:250](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L250)
+Defined in: [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:250](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L250)
 
 Table placement with context schema.
 Returns a table placement together with its containing section.

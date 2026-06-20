@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.64**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.65**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: ServicePriceMode
 
-Defined in: [src/core/business-mgt/service-management/business-service-config.schema.ts:24](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/service-management/business-service-config.schema.ts#L24)
+Defined in: [src/core/business-mgt/service-management/business-service-config.schema.ts:24](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/service-management/business-service-config.schema.ts#L24)
 
 Service pricing mode options.
 
@@ -14,6 +14,6 @@ Service pricing mode options.
 
 | Enumeration Member | Value | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="fixed"></a> `FIXED` | `"FIXED"` | Fixed price for the service | [src/core/business-mgt/service-management/business-service-config.schema.ts:26](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/service-management/business-service-config.schema.ts#L26) |
-| <a id="starts_at"></a> `STARTS_AT` | `"STARTS_AT"` | Starting price, final may vary | [src/core/business-mgt/service-management/business-service-config.schema.ts:28](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/service-management/business-service-config.schema.ts#L28) |
-| <a id="variable"></a> `VARIABLE` | `"VARIABLE"` | Variable pricing based on factors | [src/core/business-mgt/service-management/business-service-config.schema.ts:30](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/service-management/business-service-config.schema.ts#L30) |
+| <a id="fixed"></a> `FIXED` | `"FIXED"` | Fixed price for the service | [src/core/business-mgt/service-management/business-service-config.schema.ts:26](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/service-management/business-service-config.schema.ts#L26) |
+| <a id="starts_at"></a> `STARTS_AT` | `"STARTS_AT"` | Starting price, final may vary | [src/core/business-mgt/service-management/business-service-config.schema.ts:28](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/service-management/business-service-config.schema.ts#L28) |
+| <a id="variable"></a> `VARIABLE` | `"VARIABLE"` | Variable pricing based on factors | [src/core/business-mgt/service-management/business-service-config.schema.ts:30](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/service-management/business-service-config.schema.ts#L30) |

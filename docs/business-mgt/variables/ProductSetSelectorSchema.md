@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.64**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.65**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const ProductSetSelectorSchema: ZodObject<ProductSetSelector>;
 ```
 
-Defined in: [src/core/business-mgt/product-management/product-set.schema.ts:104](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/product-management/product-set.schema.ts#L104)
+Defined in: [src/core/business-mgt/product-management/product-set.schema.ts:104](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/product-management/product-set.schema.ts#L104)
 
 Product set selector schema.
 Defines criteria for dynamically selecting products to include in a set.

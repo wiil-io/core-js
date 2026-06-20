@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.64**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.65**](../../README.md)
 
 ***
 
@@ -14,7 +14,7 @@ type DynamicSTTModelConfiguration = {
 };
 ```
 
-Defined in: [src/core/service-configuration/base-agent-setup.ts:114](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/service-configuration/base-agent-setup.ts#L114)
+Defined in: [src/core/service-configuration/base-agent-setup.ts:114](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/service-configuration/base-agent-setup.ts#L114)
 
 Speech-to-text model configuration schema.
 
@@ -22,6 +22,6 @@ Speech-to-text model configuration schema.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="providertype"></a> `providerType` | [`SupportedProprietor`](../../type-definitions/enumerations/SupportedProprietor.md) | [src/core/service-configuration/base-agent-setup.ts:47](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/service-configuration/base-agent-setup.ts#L47) |
-| <a id="providermodelid"></a> `providerModelId` | `string` | [src/core/service-configuration/base-agent-setup.ts:48](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/service-configuration/base-agent-setup.ts#L48) |
-| <a id="languageid"></a> `languageId` | `string` | [src/core/service-configuration/base-agent-setup.ts:60](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/service-configuration/base-agent-setup.ts#L60) |
+| <a id="providertype"></a> `providerType` | [`SupportedProprietor`](../../type-definitions/enumerations/SupportedProprietor.md) | [src/core/service-configuration/base-agent-setup.ts:47](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/service-configuration/base-agent-setup.ts#L47) |
+| <a id="providermodelid"></a> `providerModelId` | `string` | [src/core/service-configuration/base-agent-setup.ts:48](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/service-configuration/base-agent-setup.ts#L48) |
+| <a id="languageid"></a> `languageId` | `string` | [src/core/service-configuration/base-agent-setup.ts:60](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/service-configuration/base-agent-setup.ts#L60) |

@@ -54,8 +54,8 @@ export const DiscountRuleSchema = BaseModelSchema.safeExtend({
     maxUsesPerCustomer: z.number().int().positive().optional(),
     isStackable: z.boolean().default(true),
     priority: z.number().int().nonnegative().default(0),
-    effectiveFrom: z.number().int().nonnegative().optional(),
-    effectiveTo: z.number().int().nonnegative().optional(),
+    effectiveFrom: z.number().int().nonnegative().nullable().optional(),
+    effectiveTo: z.number().int().nonnegative().nullable().optional(),
     isActive: z.boolean().default(true),
 }).superRefine((data, ctx) => {
     if (data.type === DiscountType.PERCENTAGE && data.value > 100) {
@@ -66,8 +66,8 @@ export const DiscountRuleSchema = BaseModelSchema.safeExtend({
         });
     }
     if (
-        data.effectiveFrom !== undefined &&
-        data.effectiveTo !== undefined &&
+        data.effectiveFrom != null &&
+        data.effectiveTo != null &&
         data.effectiveTo < data.effectiveFrom
     ) {
         ctx.addIssue({

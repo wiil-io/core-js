@@ -54,8 +54,8 @@ exports.DiscountRuleSchema = base_schema_1.BaseModelSchema.safeExtend({
     maxUsesPerCustomer: zod_1.z.number().int().positive().optional(),
     isStackable: zod_1.z.boolean().default(true),
     priority: zod_1.z.number().int().nonnegative().default(0),
-    effectiveFrom: zod_1.z.number().int().nonnegative().optional(),
-    effectiveTo: zod_1.z.number().int().nonnegative().optional(),
+    effectiveFrom: zod_1.z.number().int().nonnegative().nullable().optional(),
+    effectiveTo: zod_1.z.number().int().nonnegative().nullable().optional(),
     isActive: zod_1.z.boolean().default(true),
 }).superRefine((data, ctx) => {
     if (data.type === type_definitions_1.DiscountType.PERCENTAGE && data.value > 100) {
@@ -65,8 +65,8 @@ exports.DiscountRuleSchema = base_schema_1.BaseModelSchema.safeExtend({
             message: "value cannot exceed 100 for percentage discounts",
         });
     }
-    if (data.effectiveFrom !== undefined &&
-        data.effectiveTo !== undefined &&
+    if (data.effectiveFrom != null &&
+        data.effectiveTo != null &&
         data.effectiveTo < data.effectiveFrom) {
         ctx.addIssue({
             code: "custom",

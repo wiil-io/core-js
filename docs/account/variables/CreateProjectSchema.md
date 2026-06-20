@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.64**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.65**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const CreateProjectSchema: ZodObject<CreateProject>;
 ```
 
-Defined in: [src/core/account/project.schema.ts:76](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/account/project.schema.ts#L76)
+Defined in: [src/core/account/project.schema.ts:76](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/account/project.schema.ts#L76)
 
 Zod schema for creating a new project.
 
