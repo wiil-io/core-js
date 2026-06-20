@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.69**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.70**](../../README.md)
 
 ***
 
@@ -15,7 +15,7 @@ type DisplayMessage = {
 };
 ```
 
-Defined in: [src/core/conversation/conversation-config.schema.ts:115](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/conversation/conversation-config.schema.ts#L115)
+Defined in: [src/core/conversation/conversation-config.schema.ts:115](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/conversation/conversation-config.schema.ts#L115)
 
 Display message schema.
 
@@ -26,7 +26,7 @@ essential fields needed for rendering messages in chat interfaces.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="id"></a> `id` | `string` | [src/core/conversation/conversation-config.schema.ts:106](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/conversation/conversation-config.schema.ts#L106) |
-| <a id="sender"></a> `sender` | `"user"` \| `"assistant"` | [src/core/conversation/conversation-config.schema.ts:107](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/conversation/conversation-config.schema.ts#L107) |
-| <a id="content"></a> `content` | `string` | [src/core/conversation/conversation-config.schema.ts:111](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/conversation/conversation-config.schema.ts#L111) |
-| <a id="timestamp"></a> `timestamp` | `Date` | [src/core/conversation/conversation-config.schema.ts:112](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/conversation/conversation-config.schema.ts#L112) |
+| <a id="id"></a> `id` | `string` | [src/core/conversation/conversation-config.schema.ts:106](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/conversation/conversation-config.schema.ts#L106) |
+| <a id="sender"></a> `sender` | `"user"` \| `"assistant"` | [src/core/conversation/conversation-config.schema.ts:107](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/conversation/conversation-config.schema.ts#L107) |
+| <a id="content"></a> `content` | `string` | [src/core/conversation/conversation-config.schema.ts:111](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/conversation/conversation-config.schema.ts#L111) |
+| <a id="timestamp"></a> `timestamp` | `Date` | [src/core/conversation/conversation-config.schema.ts:112](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/conversation/conversation-config.schema.ts#L112) |

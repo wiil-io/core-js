@@ -47,7 +47,7 @@ export const DiscountRuleSchema = BaseModelSchema.safeExtend({
     currency: z.string().length(3).default("USD"),
     catalogScope: z.enum(DiscountCatalogScope).default(DiscountCatalogScope.ALL),
     externalDiscountId: z.string().optional(),
-    minSubtotal: z.number().nonnegative().optional(),
+    minSubtotal: z.number().nonnegative().nullable().optional(),
     customerSegment: z.string().optional(),
     firstOrderOnly: z.boolean().default(false),
     maxUses: z.number().int().positive().nullable().optional(),
@@ -100,8 +100,16 @@ export const CreateDiscountRuleSchema = DiscountRuleSchema.omit({
  * Schema for updating an existing discount rule.
  * All fields optional except id.
  */
-export const UpdateDiscountRuleSchema = CreateDiscountRuleSchema.partial().safeExtend({
+export const UpdateDiscountRuleSchema = CreateDiscountRuleSchema.partial().extend({
     id: z.string().describe("Unique identifier of the discount rule to update"),
+    scope: z.enum(DiscountScope).nullable().optional(),
+    type: z.enum(DiscountType).nullable().optional(),
+    currency: z.string().length(3).nullable().optional(),
+    catalogScope: z.enum(DiscountCatalogScope).nullable().optional(),
+    firstOrderOnly: z.boolean().nullable().optional(),
+    isStackable: z.boolean().nullable().optional(),
+    priority: z.number().int().nonnegative().nullable().optional(),
+    isActive: z.boolean().nullable().optional(),
 });
 
 // ============================================================================

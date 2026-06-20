@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.69**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.70**](../../README.md)
 
 ***
 
@@ -12,7 +12,7 @@ type DecommissionRequest = {
 };
 ```
 
-Defined in: [src/core/conversation/conversation-config.schema.ts:416](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/conversation/conversation-config.schema.ts#L416)
+Defined in: [src/core/conversation/conversation-config.schema.ts:416](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/conversation/conversation-config.schema.ts#L416)
 
 Decommission configuration schema.
 
@@ -24,7 +24,7 @@ connections when deployments are disabled or conversations are force-closed.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="decommission_service_id"></a> `decommission_service_id` | `string` | [src/core/conversation/conversation-config.schema.ts:359](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/conversation/conversation-config.schema.ts#L359) |
+| <a id="decommission_service_id"></a> `decommission_service_id` | `string` | [src/core/conversation/conversation-config.schema.ts:359](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/conversation/conversation-config.schema.ts#L359) |
 
 ## Remarks
 

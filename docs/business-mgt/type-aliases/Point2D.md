@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.69**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.70**](../../README.md)
 
 ***
 
@@ -13,7 +13,7 @@ type Point2D = {
 };
 ```
 
-Defined in: [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:45](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L45)
+Defined in: [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:45](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L45)
 
 Two-dimensional point schema.
 Uses the same coordinate system as table placement x/y values.
@@ -22,5 +22,5 @@ Uses the same coordinate system as table placement x/y values.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="x"></a> `x` | `number` | [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:41](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L41) |
-| <a id="y"></a> `y` | `number` | [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:42](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L42) |
+| <a id="x"></a> `x` | `number` | [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:41](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L41) |
+| <a id="y"></a> `y` | `number` | [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:42](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L42) |

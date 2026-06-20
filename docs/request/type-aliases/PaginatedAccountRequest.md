@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.69**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.70**](../../README.md)
 
 ***
 
@@ -13,7 +13,7 @@ type PaginatedAccountRequest = {
 };
 ```
 
-Defined in: [src/request/models/paginated-result.schema.ts:102](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/request/models/paginated-result.schema.ts#L102)
+Defined in: [src/request/models/paginated-result.schema.ts:102](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/request/models/paginated-result.schema.ts#L102)
 
 Schema for paginated account requests.
 
@@ -21,5 +21,5 @@ Schema for paginated account requests.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | [src/request/models/paginated-result.schema.ts:63](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/request/models/paginated-result.schema.ts#L63) |
-| <a id="pagesize"></a> `pageSize` | `number` | [src/request/models/paginated-result.schema.ts:64](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/request/models/paginated-result.schema.ts#L64) |
+| <a id="page"></a> `page` | `number` | [src/request/models/paginated-result.schema.ts:63](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/request/models/paginated-result.schema.ts#L63) |
+| <a id="pagesize"></a> `pageSize` | `number` | [src/request/models/paginated-result.schema.ts:64](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/request/models/paginated-result.schema.ts#L64) |

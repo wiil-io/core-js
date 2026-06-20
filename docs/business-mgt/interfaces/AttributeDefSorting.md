@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.69**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.70**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: AttributeDefSorting
 
-Defined in: [src/core/business-mgt/product-management/product-config.schema.ts:492](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/product-management/product-config.schema.ts#L492)
+Defined in: [src/core/business-mgt/product-management/product-config.schema.ts:492](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/business-mgt/product-management/product-config.schema.ts#L492)
 
 Attribute definition sorting options.
  AttributeDefSorting
@@ -15,5 +15,5 @@ Attribute definition sorting options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="field"></a> `field` | `"createdAt"` \| `"name"` \| `"slug"` | Field to sort by | [src/core/business-mgt/product-management/product-config.schema.ts:494](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/product-management/product-config.schema.ts#L494) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/product-management/product-config.schema.ts:496](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/product-management/product-config.schema.ts#L496) |
+| <a id="field"></a> `field` | `"createdAt"` \| `"name"` \| `"slug"` | Field to sort by | [src/core/business-mgt/product-management/product-config.schema.ts:494](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/business-mgt/product-management/product-config.schema.ts#L494) |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/product-management/product-config.schema.ts:496](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/business-mgt/product-management/product-config.schema.ts#L496) |

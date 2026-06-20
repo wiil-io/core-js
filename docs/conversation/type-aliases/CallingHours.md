@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.69**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.70**](../../README.md)
 
 ***
 
@@ -14,7 +14,7 @@ type CallingHours = {
 };
 ```
 
-Defined in: [src/core/conversation/outbound-call.schema.ts:43](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/conversation/outbound-call.schema.ts#L43)
+Defined in: [src/core/conversation/outbound-call.schema.ts:43](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/conversation/outbound-call.schema.ts#L43)
 
 Calling hours configuration for outbound calls.
 
@@ -36,9 +36,9 @@ Ensures compliance with TCPA regulations and respects customer preferences.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="starttime"></a> `startTime` | `string` | [src/core/conversation/outbound-call.schema.ts:38](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/conversation/outbound-call.schema.ts#L38) |
-| <a id="endtime"></a> `endTime` | `string` | [src/core/conversation/outbound-call.schema.ts:39](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/conversation/outbound-call.schema.ts#L39) |
-| <a id="daysofweek"></a> `daysOfWeek` | `number`[] | [src/core/conversation/outbound-call.schema.ts:40](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/conversation/outbound-call.schema.ts#L40) |
+| <a id="starttime"></a> `startTime` | `string` | [src/core/conversation/outbound-call.schema.ts:38](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/conversation/outbound-call.schema.ts#L38) |
+| <a id="endtime"></a> `endTime` | `string` | [src/core/conversation/outbound-call.schema.ts:39](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/conversation/outbound-call.schema.ts#L39) |
+| <a id="daysofweek"></a> `daysOfWeek` | `number`[] | [src/core/conversation/outbound-call.schema.ts:40](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/conversation/outbound-call.schema.ts#L40) |
 
 ## See
 

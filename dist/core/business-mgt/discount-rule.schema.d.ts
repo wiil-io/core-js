@@ -42,7 +42,7 @@ export declare const DiscountRuleSchema: z.ZodObject<{
     currency: z.ZodDefault<z.ZodString>;
     catalogScope: z.ZodDefault<z.ZodEnum<typeof DiscountCatalogScope>>;
     externalDiscountId: z.ZodOptional<z.ZodString>;
-    minSubtotal: z.ZodOptional<z.ZodNumber>;
+    minSubtotal: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
     customerSegment: z.ZodOptional<z.ZodString>;
     firstOrderOnly: z.ZodDefault<z.ZodBoolean>;
     maxUses: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
@@ -68,7 +68,7 @@ export declare const CreateDiscountRuleSchema: z.ZodObject<{
     scope: z.ZodDefault<z.ZodEnum<typeof DiscountScope>>;
     catalogScope: z.ZodDefault<z.ZodEnum<typeof DiscountCatalogScope>>;
     externalDiscountId: z.ZodOptional<z.ZodString>;
-    minSubtotal: z.ZodOptional<z.ZodNumber>;
+    minSubtotal: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
     customerSegment: z.ZodOptional<z.ZodString>;
     firstOrderOnly: z.ZodDefault<z.ZodBoolean>;
     maxUses: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
@@ -97,23 +97,15 @@ export declare const CreateDiscountRuleSchema: z.ZodObject<{
  * All fields optional except id.
  */
 export declare const UpdateDiscountRuleSchema: z.ZodObject<{
-    type: z.ZodOptional<z.ZodDefault<z.ZodEnum<typeof DiscountType>>>;
     value: z.ZodOptional<z.ZodNumber>;
     code: z.ZodOptional<z.ZodOptional<z.ZodString>>;
     name: z.ZodOptional<z.ZodString>;
-    isActive: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
-    currency: z.ZodOptional<z.ZodDefault<z.ZodString>>;
     locationId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
-    scope: z.ZodOptional<z.ZodDefault<z.ZodEnum<typeof DiscountScope>>>;
-    catalogScope: z.ZodOptional<z.ZodDefault<z.ZodEnum<typeof DiscountCatalogScope>>>;
     externalDiscountId: z.ZodOptional<z.ZodOptional<z.ZodString>>;
-    minSubtotal: z.ZodOptional<z.ZodOptional<z.ZodNumber>>;
+    minSubtotal: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
     customerSegment: z.ZodOptional<z.ZodOptional<z.ZodString>>;
-    firstOrderOnly: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
     maxUses: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
     maxUsesPerCustomer: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
-    isStackable: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
-    priority: z.ZodOptional<z.ZodDefault<z.ZodNumber>>;
     effectiveFrom: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
     effectiveTo: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
     placement: z.ZodOptional<z.ZodOptional<z.ZodObject<{
@@ -131,6 +123,14 @@ export declare const UpdateDiscountRuleSchema: z.ZodObject<{
         absoluteIndex: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
     }, z.core.$strip>>>;
     id: z.ZodString;
+    scope: z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof DiscountScope>>>;
+    type: z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof DiscountType>>>;
+    currency: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    catalogScope: z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof DiscountCatalogScope>>>;
+    firstOrderOnly: z.ZodOptional<z.ZodNullable<z.ZodBoolean>>;
+    isStackable: z.ZodOptional<z.ZodNullable<z.ZodBoolean>>;
+    priority: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
+    isActive: z.ZodOptional<z.ZodNullable<z.ZodBoolean>>;
 }, z.core.$strip>;
 export type DiscountRule = z.infer<typeof DiscountRuleSchema>;
 export type CreateDiscountRule = z.infer<typeof CreateDiscountRuleSchema>;

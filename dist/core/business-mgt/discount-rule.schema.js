@@ -47,7 +47,7 @@ exports.DiscountRuleSchema = base_schema_1.BaseModelSchema.safeExtend({
     currency: zod_1.z.string().length(3).default("USD"),
     catalogScope: zod_1.z.enum(type_definitions_1.DiscountCatalogScope).default(type_definitions_1.DiscountCatalogScope.ALL),
     externalDiscountId: zod_1.z.string().optional(),
-    minSubtotal: zod_1.z.number().nonnegative().optional(),
+    minSubtotal: zod_1.z.number().nonnegative().nullable().optional(),
     customerSegment: zod_1.z.string().optional(),
     firstOrderOnly: zod_1.z.boolean().default(false),
     maxUses: zod_1.z.number().int().positive().nullable().optional(),
@@ -95,6 +95,14 @@ exports.CreateDiscountRuleSchema = exports.DiscountRuleSchema.omit({
  * Schema for updating an existing discount rule.
  * All fields optional except id.
  */
-exports.UpdateDiscountRuleSchema = exports.CreateDiscountRuleSchema.partial().safeExtend({
+exports.UpdateDiscountRuleSchema = exports.CreateDiscountRuleSchema.partial().extend({
     id: zod_1.z.string().describe("Unique identifier of the discount rule to update"),
+    scope: zod_1.z.enum(type_definitions_1.DiscountScope).nullable().optional(),
+    type: zod_1.z.enum(type_definitions_1.DiscountType).nullable().optional(),
+    currency: zod_1.z.string().length(3).nullable().optional(),
+    catalogScope: zod_1.z.enum(type_definitions_1.DiscountCatalogScope).nullable().optional(),
+    firstOrderOnly: zod_1.z.boolean().nullable().optional(),
+    isStackable: zod_1.z.boolean().nullable().optional(),
+    priority: zod_1.z.number().int().nonnegative().nullable().optional(),
+    isActive: zod_1.z.boolean().nullable().optional(),
 });

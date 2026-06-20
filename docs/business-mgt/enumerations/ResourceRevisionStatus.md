@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.69**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.70**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: ResourceRevisionStatus
 
-Defined in: [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:18](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L18)
+Defined in: [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:18](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L18)
 
 Resource revision lifecycle status.
 
@@ -14,6 +14,6 @@ Resource revision lifecycle status.
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="draft"></a> `DRAFT` | `"draft"` | [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:19](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L19) |
-| <a id="active"></a> `ACTIVE` | `"active"` | [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:20](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L20) |
-| <a id="archived"></a> `ARCHIVED` | `"archived"` | [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:21](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L21) |
+| <a id="draft"></a> `DRAFT` | `"draft"` | [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:19](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L19) |
+| <a id="active"></a> `ACTIVE` | `"active"` | [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:20](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L20) |
+| <a id="archived"></a> `ARCHIVED` | `"archived"` | [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:21](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L21) |

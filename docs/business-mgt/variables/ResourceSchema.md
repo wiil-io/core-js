@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.69**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.70**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const ResourceSchema: ZodObject<Resource>;
 ```
 
-Defined in: [src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:244](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts#L244)
+Defined in: [src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:244](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts#L244)
 
 Resource schema.
 Defines a reservable resource category such as a table type, room type, or rental item type.

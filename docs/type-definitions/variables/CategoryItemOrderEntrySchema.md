@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.69**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.70**](../../README.md)
 
 ***
 
@@ -10,6 +10,6 @@
 const CategoryItemOrderEntrySchema: ZodObject<CategoryItemOrderEntry>;
 ```
 
-Defined in: [src/core/type-definitions/display-order.ts:164](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/type-definitions/display-order.ts#L164)
+Defined in: [src/core/type-definitions/display-order.ts:164](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/type-definitions/display-order.ts#L164)
 
 Category item order entry schema.
