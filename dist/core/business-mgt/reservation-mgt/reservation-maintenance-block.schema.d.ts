@@ -10,8 +10,8 @@ import { z } from "zod";
  * @typedef {Object} MaintenanceBlock
  * @property {string} [locationId] - Business location where maintenance applies
  * @property {string} resourceInstanceId - Physical resource instance under maintenance
- * @property {number} startDate - Maintenance block start timestamp
- * @property {number} endDate - Maintenance block end timestamp
+ * @property {number} startDate - Maintenance block start as Unix epoch seconds
+ * @property {number} endDate - Maintenance block end as Unix epoch seconds
  * @property {string} [reason] - Operational reason for the maintenance block
  */
 export declare const MaintenanceBlockSchema: z.ZodObject<{
@@ -59,7 +59,7 @@ export interface MaintenanceBlockFilters {
     resourceInstanceId?: string;
     /** Filter by business location ID */
     locationId?: string;
-    /** Filter by maintenance timestamp range */
+    /** Filter by maintenance date range (Unix epoch seconds) */
     dateRange?: {
         start?: number;
         end?: number;

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.63**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.64**](../../README.md)
 
 ***
 
@@ -10,6 +10,13 @@
 const UpdatePropertyInquirySchema: ZodObject<UpdatePropertyInquiry>;
 ```
 
-Defined in: [src/core/business-mgt/property-management/property-inquiry.schema.ts:117](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/property-management/property-inquiry.schema.ts#L117)
+Defined in: [src/core/business-mgt/property-management/property-inquiry.schema.ts:123](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/property-management/property-inquiry.schema.ts#L123)
 
 Schema for updating an existing property inquiry.
+
+## Remarks
+
+Fields that carry a `.default()` on the base schema are re-declared here as plain
+`.optional()` (without defaults). In Zod, `.partial()` does not strip defaults, so a
+partial update would otherwise inject those defaults (e.g., `status`, `source`) on
+`.parse()` and submit values the caller never set.

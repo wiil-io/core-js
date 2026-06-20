@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.63**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.64**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: ServiceGratuityMode
 
-Defined in: [src/core/business-mgt/service-management/business-service-config.schema.ts:37](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/service-management/business-service-config.schema.ts#L37)
+Defined in: [src/core/business-mgt/service-management/business-service-config.schema.ts:37](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/service-management/business-service-config.schema.ts#L37)
 
 Service gratuity mode options.
 
@@ -14,6 +14,6 @@ Service gratuity mode options.
 
 | Enumeration Member | Value | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="none"></a> `NONE` | `"NONE"` | No gratuity accepted | [src/core/business-mgt/service-management/business-service-config.schema.ts:39](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/service-management/business-service-config.schema.ts#L39) |
-| <a id="optional"></a> `OPTIONAL` | `"OPTIONAL"` | Gratuity is optional | [src/core/business-mgt/service-management/business-service-config.schema.ts:41](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/service-management/business-service-config.schema.ts#L41) |
-| <a id="required"></a> `REQUIRED` | `"REQUIRED"` | Gratuity is required | [src/core/business-mgt/service-management/business-service-config.schema.ts:43](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/service-management/business-service-config.schema.ts#L43) |
+| <a id="none"></a> `NONE` | `"NONE"` | No gratuity accepted | [src/core/business-mgt/service-management/business-service-config.schema.ts:39](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/service-management/business-service-config.schema.ts#L39) |
+| <a id="optional"></a> `OPTIONAL` | `"OPTIONAL"` | Gratuity is optional | [src/core/business-mgt/service-management/business-service-config.schema.ts:41](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/service-management/business-service-config.schema.ts#L41) |
+| <a id="required"></a> `REQUIRED` | `"REQUIRED"` | Gratuity is required | [src/core/business-mgt/service-management/business-service-config.schema.ts:43](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/service-management/business-service-config.schema.ts#L43) |

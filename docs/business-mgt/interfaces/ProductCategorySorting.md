@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.63**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.64**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ProductCategorySorting
 
-Defined in: [src/core/business-mgt/product-management/product-config.schema.ts:535](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/product-management/product-config.schema.ts#L535)
+Defined in: [src/core/business-mgt/product-management/product-config.schema.ts:535](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/product-management/product-config.schema.ts#L535)
 
 Product category sorting options.
  ProductCategorySorting
@@ -15,5 +15,5 @@ Product category sorting options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="field"></a> `field` | `"createdAt"` \| `"displayOrder"` \| `"name"` | Field to sort by | [src/core/business-mgt/product-management/product-config.schema.ts:537](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/product-management/product-config.schema.ts#L537) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/product-management/product-config.schema.ts:539](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/product-management/product-config.schema.ts#L539) |
+| <a id="field"></a> `field` | `"createdAt"` \| `"displayOrder"` \| `"name"` | Field to sort by | [src/core/business-mgt/product-management/product-config.schema.ts:537](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/product-management/product-config.schema.ts#L537) |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/product-management/product-config.schema.ts:539](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/product-management/product-config.schema.ts#L539) |

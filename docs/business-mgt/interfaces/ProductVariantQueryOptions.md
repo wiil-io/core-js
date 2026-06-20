@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.63**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.64**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ProductVariantQueryOptions
 
-Defined in: [src/core/business-mgt/product-management/product-variant.schema.ts:186](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/product-management/product-variant.schema.ts#L186)
+Defined in: [src/core/business-mgt/product-management/product-variant.schema.ts:186](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/product-management/product-variant.schema.ts#L186)
 
 Product variant query options.
  ProductVariantQueryOptions
@@ -15,7 +15,7 @@ Product variant query options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/product-management/product-variant.schema.ts:188](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/product-management/product-variant.schema.ts#L188) |
-| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/product-management/product-variant.schema.ts:190](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/product-management/product-variant.schema.ts#L190) |
-| <a id="filters"></a> `filters?` | [`ProductVariantFilters`](ProductVariantFilters.md) | Optional filters | [src/core/business-mgt/product-management/product-variant.schema.ts:192](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/product-management/product-variant.schema.ts#L192) |
-| <a id="sorting"></a> `sorting?` | [`ProductVariantSorting`](ProductVariantSorting.md) | Optional sorting | [src/core/business-mgt/product-management/product-variant.schema.ts:194](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/product-management/product-variant.schema.ts#L194) |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/product-management/product-variant.schema.ts:188](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/product-management/product-variant.schema.ts#L188) |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/product-management/product-variant.schema.ts:190](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/product-management/product-variant.schema.ts#L190) |
+| <a id="filters"></a> `filters?` | [`ProductVariantFilters`](ProductVariantFilters.md) | Optional filters | [src/core/business-mgt/product-management/product-variant.schema.ts:192](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/product-management/product-variant.schema.ts#L192) |
+| <a id="sorting"></a> `sorting?` | [`ProductVariantSorting`](ProductVariantSorting.md) | Optional sorting | [src/core/business-mgt/product-management/product-variant.schema.ts:194](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/product-management/product-variant.schema.ts#L194) |

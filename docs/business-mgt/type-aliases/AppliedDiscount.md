@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.63**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.64**](../../README.md)
 
 ***
 
@@ -21,7 +21,7 @@ type AppliedDiscount = {
 };
 ```
 
-Defined in: [src/core/business-mgt/order.schema.ts:88](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/order.schema.ts#L88)
+Defined in: [src/core/business-mgt/order.schema.ts:88](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/order.schema.ts#L88)
 
 Applied discount schema.
 Captures a discount applied to an order with calculated amounts.
@@ -30,13 +30,13 @@ Captures a discount applied to an order with calculated amounts.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="discountruleid"></a> `discountRuleId?` | `string` | [src/core/business-mgt/order.schema.ts:76](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/order.schema.ts#L76) |
-| <a id="externaldiscountid"></a> `externalDiscountId?` | `string` | [src/core/business-mgt/order.schema.ts:77](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/order.schema.ts#L77) |
-| <a id="name"></a> `name` | `string` | [src/core/business-mgt/order.schema.ts:78](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/order.schema.ts#L78) |
-| <a id="code"></a> `code?` | `string` | [src/core/business-mgt/order.schema.ts:79](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/order.schema.ts#L79) |
-| <a id="scope"></a> `scope` | [`DiscountScope`](../../type-definitions/enumerations/DiscountScope.md) | [src/core/business-mgt/order.schema.ts:80](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/order.schema.ts#L80) |
-| <a id="type"></a> `type` | [`DiscountType`](../../type-definitions/enumerations/DiscountType.md) | [src/core/business-mgt/order.schema.ts:81](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/order.schema.ts#L81) |
-| <a id="value"></a> `value` | `number` | [src/core/business-mgt/order.schema.ts:82](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/order.schema.ts#L82) |
-| <a id="discountableamount"></a> `discountableAmount` | `number` | [src/core/business-mgt/order.schema.ts:83](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/order.schema.ts#L83) |
-| <a id="discountamount"></a> `discountAmount` | `number` | [src/core/business-mgt/order.schema.ts:84](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/order.schema.ts#L84) |
-| <a id="isstacked"></a> `isStacked` | `boolean` | [src/core/business-mgt/order.schema.ts:85](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/order.schema.ts#L85) |
+| <a id="discountruleid"></a> `discountRuleId?` | `string` | [src/core/business-mgt/order.schema.ts:76](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/order.schema.ts#L76) |
+| <a id="externaldiscountid"></a> `externalDiscountId?` | `string` | [src/core/business-mgt/order.schema.ts:77](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/order.schema.ts#L77) |
+| <a id="name"></a> `name` | `string` | [src/core/business-mgt/order.schema.ts:78](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/order.schema.ts#L78) |
+| <a id="code"></a> `code?` | `string` | [src/core/business-mgt/order.schema.ts:79](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/order.schema.ts#L79) |
+| <a id="scope"></a> `scope` | [`DiscountScope`](../../type-definitions/enumerations/DiscountScope.md) | [src/core/business-mgt/order.schema.ts:80](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/order.schema.ts#L80) |
+| <a id="type"></a> `type` | [`DiscountType`](../../type-definitions/enumerations/DiscountType.md) | [src/core/business-mgt/order.schema.ts:81](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/order.schema.ts#L81) |
+| <a id="value"></a> `value` | `number` | [src/core/business-mgt/order.schema.ts:82](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/order.schema.ts#L82) |
+| <a id="discountableamount"></a> `discountableAmount` | `number` | [src/core/business-mgt/order.schema.ts:83](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/order.schema.ts#L83) |
+| <a id="discountamount"></a> `discountAmount` | `number` | [src/core/business-mgt/order.schema.ts:84](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/order.schema.ts#L84) |
+| <a id="isstacked"></a> `isStacked` | `boolean` | [src/core/business-mgt/order.schema.ts:85](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/order.schema.ts#L85) |

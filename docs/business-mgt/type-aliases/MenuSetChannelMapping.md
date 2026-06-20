@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.63**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.64**](../../README.md)
 
 ***
 
@@ -13,7 +13,7 @@ type MenuSetChannelMapping = {
 };
 ```
 
-Defined in: [src/core/business-mgt/menu-management/menu-set.schema.ts:277](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/menu-management/menu-set.schema.ts#L277)
+Defined in: [src/core/business-mgt/menu-management/menu-set.schema.ts:277](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/menu-management/menu-set.schema.ts#L277)
 
 Menu set channel mapping schema.
 Maps menu sets to external platform identifiers.
@@ -22,5 +22,5 @@ Maps menu sets to external platform identifiers.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="channelid"></a> `channelId` | `string` | [src/core/business-mgt/menu-management/menu-set.schema.ts:52](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/menu-management/menu-set.schema.ts#L52) |
-| <a id="externalmenusetid"></a> `externalMenuSetId` | `string` | [src/core/business-mgt/menu-management/menu-set.schema.ts:53](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/menu-management/menu-set.schema.ts#L53) |
+| <a id="channelid"></a> `channelId` | `string` | [src/core/business-mgt/menu-management/menu-set.schema.ts:52](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/menu-management/menu-set.schema.ts#L52) |
+| <a id="externalmenusetid"></a> `externalMenuSetId` | `string` | [src/core/business-mgt/menu-management/menu-set.schema.ts:53](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/menu-management/menu-set.schema.ts#L53) |

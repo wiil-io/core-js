@@ -17,15 +17,15 @@ import { BaseModelSchema } from "../../base.schema";
  * @typedef {Object} MaintenanceBlock
  * @property {string} [locationId] - Business location where maintenance applies
  * @property {string} resourceInstanceId - Physical resource instance under maintenance
- * @property {number} startDate - Maintenance block start timestamp
- * @property {number} endDate - Maintenance block end timestamp
+ * @property {number} startDate - Maintenance block start as Unix epoch seconds
+ * @property {number} endDate - Maintenance block end as Unix epoch seconds
  * @property {string} [reason] - Operational reason for the maintenance block
  */
 export const MaintenanceBlockSchema = BaseModelSchema.safeExtend({
     locationId: z.string().nullable().optional().describe("Business location ID where the maintenance block applies. Null applies when the resource is not location-specific."),
     resourceInstanceId: z.string().describe("Room/resource ID under maintenance"),
-    startDate: z.number().describe("Maintenance block start timestamp"),
-    endDate: z.number().describe("Maintenance block end timestamp"),
+    startDate: z.number().describe("Maintenance block start as Unix epoch seconds"),
+    endDate: z.number().describe("Maintenance block end as Unix epoch seconds"),
     reason: z.string().nullable().optional().describe("Reason for maintenance block"),
 }).superRefine((data, ctx) => {
     if (data.endDate < data.startDate) {
@@ -80,7 +80,7 @@ export interface MaintenanceBlockFilters {
     resourceInstanceId?: string;
     /** Filter by business location ID */
     locationId?: string;
-    /** Filter by maintenance timestamp range */
+    /** Filter by maintenance date range (Unix epoch seconds) */
     dateRange?: { start?: number; end?: number; };
 }
 

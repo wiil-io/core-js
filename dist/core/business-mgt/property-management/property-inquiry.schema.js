@@ -101,9 +101,21 @@ exports.CreatePropertyInquirySchema = exports.PropertyInquirySchema.omit({
 });
 /**
  * Schema for updating an existing property inquiry.
+ *
+ * @remarks
+ * Fields that carry a `.default()` on the base schema are re-declared here as plain
+ * `.optional()` (without defaults). In Zod, `.partial()` does not strip defaults, so a
+ * partial update would otherwise inject those defaults (e.g., `status`, `source`) on
+ * `.parse()` and submit values the caller never set.
  */
 exports.UpdatePropertyInquirySchema = exports.CreatePropertyInquirySchema.partial().safeExtend({
     id: zod_1.default.string().describe("Unique identifier of the PropertyInquiry to update"),
+    source: zod_1.default.string().optional().describe("Source of the inquiry (website, referral, agent, etc.)"),
+    status: zod_1.default.enum(type_definitions_1.PropertyInquiryStatus).optional().describe("Current status of the inquiry"),
+    viewingCompleted: zod_1.default.boolean().optional().describe("Whether the viewing has been completed"),
+    convertedToTransaction: zod_1.default.boolean().optional().describe("Whether inquiry converted to a transaction"),
+    interestedInBuying: zod_1.default.boolean().optional().describe("Whether contact is interested in buying"),
+    interestedInRenting: zod_1.default.boolean().optional().describe("Whether contact is interested in renting"),
 });
 /**
  * Schema for quick status update on property inquiry.

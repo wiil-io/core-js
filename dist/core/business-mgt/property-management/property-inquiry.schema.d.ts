@@ -136,11 +136,15 @@ export declare const CreatePropertyInquirySchema: z.ZodObject<{
 }, z.core.$strip>;
 /**
  * Schema for updating an existing property inquiry.
+ *
+ * @remarks
+ * Fields that carry a `.default()` on the base schema are re-declared here as plain
+ * `.optional()` (without defaults). In Zod, `.partial()` does not strip defaults, so a
+ * partial update would otherwise inject those defaults (e.g., `status`, `source`) on
+ * `.parse()` and submit values the caller never set.
  */
 export declare const UpdatePropertyInquirySchema: z.ZodObject<{
     message: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
-    source: z.ZodOptional<z.ZodDefault<z.ZodString>>;
-    status: z.ZodOptional<z.ZodDefault<z.ZodEnum<typeof PropertyInquiryStatus>>>;
     customerId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     notes: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     cancelReason: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
@@ -150,23 +154,25 @@ export declare const UpdatePropertyInquirySchema: z.ZodObject<{
     preferredViewingDate: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
     preferredViewingTime: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     scheduledViewingDate: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
-    viewingCompleted: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
     viewingNotes: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     followUpDate: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
     followUpNotes: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     assignedAgentId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
-    convertedToTransaction: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
     transactionId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     transactionType: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodEnum<{
         purchase: "purchase";
         lease: "lease";
     }>>>>;
-    interestedInBuying: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
-    interestedInRenting: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
     budgetMin: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
     budgetMax: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
     appointmentRecordId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     id: z.ZodString;
+    source: z.ZodOptional<z.ZodString>;
+    status: z.ZodOptional<z.ZodEnum<typeof PropertyInquiryStatus>>;
+    viewingCompleted: z.ZodOptional<z.ZodBoolean>;
+    convertedToTransaction: z.ZodOptional<z.ZodBoolean>;
+    interestedInBuying: z.ZodOptional<z.ZodBoolean>;
+    interestedInRenting: z.ZodOptional<z.ZodBoolean>;
 }, z.core.$strip>;
 /**
  * Schema for quick status update on property inquiry.

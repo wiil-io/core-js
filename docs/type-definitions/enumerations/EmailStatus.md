@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.63**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.64**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: EmailStatus
 
-Defined in: [src/core/type-definitions/conversation.type.definition.ts:160](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/type-definitions/conversation.type.definition.ts#L160)
+Defined in: [src/core/type-definitions/conversation.type.definition.ts:160](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/type-definitions/conversation.type.definition.ts#L160)
 
 Email delivery status for tracking email lifecycle.
 
@@ -31,9 +31,9 @@ EmailRecordSchema - Uses this for delivery tracking
 
 | Enumeration Member | Value | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="queued"></a> `QUEUED` | `"queued"` | Email request created, awaiting sending | [src/core/type-definitions/conversation.type.definition.ts:162](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/type-definitions/conversation.type.definition.ts#L162) |
-| <a id="sent"></a> `SENT` | `"sent"` | Email successfully submitted to mail provider | [src/core/type-definitions/conversation.type.definition.ts:164](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/type-definitions/conversation.type.definition.ts#L164) |
-| <a id="delivered"></a> `DELIVERED` | `"delivered"` | Email confirmed delivered to recipient inbox | [src/core/type-definitions/conversation.type.definition.ts:166](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/type-definitions/conversation.type.definition.ts#L166) |
-| <a id="bounced"></a> `BOUNCED` | `"bounced"` | Email bounced (hard or soft bounce from recipient server) | [src/core/type-definitions/conversation.type.definition.ts:168](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/type-definitions/conversation.type.definition.ts#L168) |
-| <a id="failed"></a> `FAILED` | `"failed"` | Email failed to send due to technical error | [src/core/type-definitions/conversation.type.definition.ts:170](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/type-definitions/conversation.type.definition.ts#L170) |
-| <a id="complained"></a> `COMPLAINED` | `"complained"` | Recipient marked email as spam (complaint received) | [src/core/type-definitions/conversation.type.definition.ts:172](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/type-definitions/conversation.type.definition.ts#L172) |
+| <a id="queued"></a> `QUEUED` | `"queued"` | Email request created, awaiting sending | [src/core/type-definitions/conversation.type.definition.ts:162](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/type-definitions/conversation.type.definition.ts#L162) |
+| <a id="sent"></a> `SENT` | `"sent"` | Email successfully submitted to mail provider | [src/core/type-definitions/conversation.type.definition.ts:164](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/type-definitions/conversation.type.definition.ts#L164) |
+| <a id="delivered"></a> `DELIVERED` | `"delivered"` | Email confirmed delivered to recipient inbox | [src/core/type-definitions/conversation.type.definition.ts:166](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/type-definitions/conversation.type.definition.ts#L166) |
+| <a id="bounced"></a> `BOUNCED` | `"bounced"` | Email bounced (hard or soft bounce from recipient server) | [src/core/type-definitions/conversation.type.definition.ts:168](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/type-definitions/conversation.type.definition.ts#L168) |
+| <a id="failed"></a> `FAILED` | `"failed"` | Email failed to send due to technical error | [src/core/type-definitions/conversation.type.definition.ts:170](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/type-definitions/conversation.type.definition.ts#L170) |
+| <a id="complained"></a> `COMPLAINED` | `"complained"` | Recipient marked email as spam (complaint received) | [src/core/type-definitions/conversation.type.definition.ts:172](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/type-definitions/conversation.type.definition.ts#L172) |

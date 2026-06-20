@@ -39,8 +39,8 @@ export const ServiceProviderTimeOffRecurrenceSchema = z.object({
  * @typedef {Object} ServiceProviderTimeOff
  * @property {string} providerId - Provider ID (ServicePerson ID)
  * @property {string} type - Time-off type (recurring or specific)
- * @property {number} startDate - Start date/time as Unix timestamp
- * @property {number} endDate - End date/time as Unix timestamp
+ * @property {number} startDate - Start date/time as Unix epoch seconds
+ * @property {number} endDate - End date/time as Unix epoch seconds
  * @property {string} [reason] - Optional reason for time off
  * @property {string} status - Approval status
  * @property {Object} [recurrence] - Recurrence rule for recurring time off
@@ -48,8 +48,8 @@ export const ServiceProviderTimeOffRecurrenceSchema = z.object({
 export const ServiceProviderTimeOffSchema = BaseModelSchema.safeExtend({
     providerId: z.string().describe("Provider ID (ServicePerson ID)"),
     type: z.enum(ServiceProviderTimeOffType).describe("Time-off type (recurring or specific)"),
-    startDate: z.number().int().positive().describe("Start date/time as Unix timestamp"),
-    endDate: z.number().int().positive().describe("End date/time as Unix timestamp"),
+    startDate: z.number().int().positive().describe("Start date/time as Unix epoch seconds"),
+    endDate: z.number().int().positive().describe("End date/time as Unix epoch seconds"),
     reason: z.string().nullable().optional().describe("Optional reason for time off"),
     status: z.enum(ServiceProviderTimeOffStatus).default(ServiceProviderTimeOffStatus.PENDING).describe("Approval status"),
     recurrence: ServiceProviderTimeOffRecurrenceSchema.nullable().optional().describe("Recurrence rule for recurring time off"),
@@ -125,9 +125,9 @@ export interface ServiceProviderTimeOffFilters {
     type?: ServiceProviderTimeOffType;
     /** Filter by approval status */
     status?: ServiceProviderTimeOffStatus;
-    /** Filter by start date (Unix timestamp) */
+    /** Filter by start date (Unix epoch seconds) */
     fromDate?: number;
-    /** Filter by end date (Unix timestamp) */
+    /** Filter by end date (Unix epoch seconds) */
     toDate?: number;
 }
 

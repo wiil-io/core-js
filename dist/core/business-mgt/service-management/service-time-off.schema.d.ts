@@ -24,8 +24,8 @@ export declare const ServiceProviderTimeOffRecurrenceSchema: z.ZodObject<{
  * @typedef {Object} ServiceProviderTimeOff
  * @property {string} providerId - Provider ID (ServicePerson ID)
  * @property {string} type - Time-off type (recurring or specific)
- * @property {number} startDate - Start date/time as Unix timestamp
- * @property {number} endDate - End date/time as Unix timestamp
+ * @property {number} startDate - Start date/time as Unix epoch seconds
+ * @property {number} endDate - End date/time as Unix epoch seconds
  * @property {string} [reason] - Optional reason for time off
  * @property {string} status - Approval status
  * @property {Object} [recurrence] - Recurrence rule for recurring time off
@@ -90,9 +90,9 @@ export interface ServiceProviderTimeOffFilters {
     type?: ServiceProviderTimeOffType;
     /** Filter by approval status */
     status?: ServiceProviderTimeOffStatus;
-    /** Filter by start date (Unix timestamp) */
+    /** Filter by start date (Unix epoch seconds) */
     fromDate?: number;
-    /** Filter by end date (Unix timestamp) */
+    /** Filter by end date (Unix epoch seconds) */
     toDate?: number;
 }
 /**

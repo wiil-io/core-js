@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.63**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.64**](../../README.md)
 
 ***
 
@@ -15,7 +15,7 @@ type ChecklistTemplateItem = {
 };
 ```
 
-Defined in: [src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:207](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts#L207)
+Defined in: [src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:207](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts#L207)
 
 Checklist template item schema.
 Defines a pickup or return inspection item used by rental reservations.
@@ -24,7 +24,7 @@ Defines a pickup or return inspection item used by rental reservations.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="id"></a> `id` | `string` | [src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:201](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts#L201) |
-| <a id="label"></a> `label` | `string` | [src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:202](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts#L202) |
-| <a id="required"></a> `required` | `boolean` | [src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:203](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts#L203) |
-| <a id="phase"></a> `phase` | `"pickup"` \| `"both"` \| `"return"` | [src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:204](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts#L204) |
+| <a id="id"></a> `id` | `string` | [src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:201](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts#L201) |
+| <a id="label"></a> `label` | `string` | [src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:202](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts#L202) |
+| <a id="required"></a> `required` | `boolean` | [src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:203](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts#L203) |
+| <a id="phase"></a> `phase` | `"pickup"` \| `"both"` \| `"return"` | [src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:204](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts#L204) |

@@ -37,8 +37,8 @@ exports.ServiceProviderTimeOffRecurrenceSchema = zod_1.default.object({
  * @typedef {Object} ServiceProviderTimeOff
  * @property {string} providerId - Provider ID (ServicePerson ID)
  * @property {string} type - Time-off type (recurring or specific)
- * @property {number} startDate - Start date/time as Unix timestamp
- * @property {number} endDate - End date/time as Unix timestamp
+ * @property {number} startDate - Start date/time as Unix epoch seconds
+ * @property {number} endDate - End date/time as Unix epoch seconds
  * @property {string} [reason] - Optional reason for time off
  * @property {string} status - Approval status
  * @property {Object} [recurrence] - Recurrence rule for recurring time off
@@ -46,8 +46,8 @@ exports.ServiceProviderTimeOffRecurrenceSchema = zod_1.default.object({
 exports.ServiceProviderTimeOffSchema = base_schema_1.BaseModelSchema.safeExtend({
     providerId: zod_1.default.string().describe("Provider ID (ServicePerson ID)"),
     type: zod_1.default.enum(type_definitions_1.ServiceProviderTimeOffType).describe("Time-off type (recurring or specific)"),
-    startDate: zod_1.default.number().int().positive().describe("Start date/time as Unix timestamp"),
-    endDate: zod_1.default.number().int().positive().describe("End date/time as Unix timestamp"),
+    startDate: zod_1.default.number().int().positive().describe("Start date/time as Unix epoch seconds"),
+    endDate: zod_1.default.number().int().positive().describe("End date/time as Unix epoch seconds"),
     reason: zod_1.default.string().nullable().optional().describe("Optional reason for time off"),
     status: zod_1.default.enum(type_definitions_1.ServiceProviderTimeOffStatus).default(type_definitions_1.ServiceProviderTimeOffStatus.PENDING).describe("Approval status"),
     recurrence: exports.ServiceProviderTimeOffRecurrenceSchema.nullable().optional().describe("Recurrence rule for recurring time off"),

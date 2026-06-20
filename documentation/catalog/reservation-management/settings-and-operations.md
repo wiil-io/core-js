@@ -245,8 +245,8 @@ Blocks a physical resource instance for maintenance, cleaning, repair, or operat
 | `id` | string | Yes | Unique maintenance block identifier |
 | `locationId` | string \| null | No | Business location scope |
 | `resourceInstanceId` | string | Yes | Physical instance being blocked |
-| `startDate` | number | Yes | Block start Unix timestamp |
-| `endDate` | number | Yes | Block end Unix timestamp |
+| `startDate` | number | Yes | Block start (Unix epoch seconds) |
+| `endDate` | number | Yes | Block end (Unix epoch seconds) |
 | `reason` | string \| null | No | Reason for the downtime |
 
 ### Example

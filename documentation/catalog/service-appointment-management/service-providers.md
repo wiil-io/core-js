@@ -189,8 +189,8 @@ Time-off records for periods when providers are unavailable.
 | `id` | string | Yes | Unique identifier |
 | `providerId` | string | Yes | Provider ID (ServicePerson ID) |
 | `type` | enum | Yes | "recurring" or "specific" |
-| `startDate` | number | Yes | Start timestamp (Unix) |
-| `endDate` | number | Yes | End timestamp (Unix) |
+| `startDate` | number | Yes | Start timestamp (Unix epoch seconds) |
+| `endDate` | number | Yes | End timestamp (Unix epoch seconds) |
 | `reason` | string \| null | No | Reason for time off |
 | `status` | enum | Yes | Approval status (default: "pending") |
 | `recurrence` | object \| null | No | Recurrence rule (required if type = "recurring") |

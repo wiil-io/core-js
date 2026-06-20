@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.63**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.64**](../../README.md)
 
 ***
 
@@ -17,7 +17,7 @@ type CallTransfer = {
 };
 ```
 
-Defined in: [src/core/conversation/conversation-config.schema.ts:417](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/conversation/conversation-config.schema.ts#L417)
+Defined in: [src/core/conversation/conversation-config.schema.ts:417](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/conversation/conversation-config.schema.ts#L417)
 
 Call transfer schema for tracking call transfer details in telephony conversations.
 
@@ -29,12 +29,12 @@ handoff performance in telephony deployments.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="transfer_type"></a> `transfer_type?` | `"blind"` \| `"warm"` \| `null` | [src/core/conversation/conversation-config.schema.ts:303](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/conversation/conversation-config.schema.ts#L303) |
-| <a id="transfer_target"></a> `transfer_target` | `string` | [src/core/conversation/conversation-config.schema.ts:304](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/conversation/conversation-config.schema.ts#L304) |
-| <a id="transfer_initiated_at"></a> `transfer_initiated_at?` | `number` | [src/core/conversation/conversation-config.schema.ts:305](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/conversation/conversation-config.schema.ts#L305) |
-| <a id="transfer_completed_at"></a> `transfer_completed_at?` | `number` | [src/core/conversation/conversation-config.schema.ts:306](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/conversation/conversation-config.schema.ts#L306) |
-| <a id="transfer_status"></a> `transfer_status` | `"pending"` \| `"completed"` \| `"failed"` \| `"returned"` | [src/core/conversation/conversation-config.schema.ts:307](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/conversation/conversation-config.schema.ts#L307) |
-| <a id="transfer_reason"></a> `transfer_reason?` | `string` | [src/core/conversation/conversation-config.schema.ts:308](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/conversation/conversation-config.schema.ts#L308) |
+| <a id="transfer_type"></a> `transfer_type?` | `"blind"` \| `"warm"` \| `null` | [src/core/conversation/conversation-config.schema.ts:303](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/conversation/conversation-config.schema.ts#L303) |
+| <a id="transfer_target"></a> `transfer_target` | `string` | [src/core/conversation/conversation-config.schema.ts:304](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/conversation/conversation-config.schema.ts#L304) |
+| <a id="transfer_initiated_at"></a> `transfer_initiated_at?` | `number` | [src/core/conversation/conversation-config.schema.ts:305](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/conversation/conversation-config.schema.ts#L305) |
+| <a id="transfer_completed_at"></a> `transfer_completed_at?` | `number` | [src/core/conversation/conversation-config.schema.ts:306](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/conversation/conversation-config.schema.ts#L306) |
+| <a id="transfer_status"></a> `transfer_status` | `"pending"` \| `"completed"` \| `"failed"` \| `"returned"` | [src/core/conversation/conversation-config.schema.ts:307](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/conversation/conversation-config.schema.ts#L307) |
+| <a id="transfer_reason"></a> `transfer_reason?` | `string` | [src/core/conversation/conversation-config.schema.ts:308](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/conversation/conversation-config.schema.ts#L308) |
 
 ## Remarks
 

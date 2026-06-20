@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.63**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.64**](../../README.md)
 
 ***
 
@@ -10,6 +10,6 @@
 const CreateWhatsappTemplateSchema: ZodObject<CreateWhatsappTemplate>;
 ```
 
-Defined in: [src/core/conversation/outbound-template.schema.ts:149](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/conversation/outbound-template.schema.ts#L149)
+Defined in: [src/core/conversation/outbound-template.schema.ts:149](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/conversation/outbound-template.schema.ts#L149)
 
 Schema for creating a new WhatsApp template.

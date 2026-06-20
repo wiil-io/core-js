@@ -17,15 +17,15 @@ const base_schema_1 = require("../../base.schema");
  * @typedef {Object} MaintenanceBlock
  * @property {string} [locationId] - Business location where maintenance applies
  * @property {string} resourceInstanceId - Physical resource instance under maintenance
- * @property {number} startDate - Maintenance block start timestamp
- * @property {number} endDate - Maintenance block end timestamp
+ * @property {number} startDate - Maintenance block start as Unix epoch seconds
+ * @property {number} endDate - Maintenance block end as Unix epoch seconds
  * @property {string} [reason] - Operational reason for the maintenance block
  */
 exports.MaintenanceBlockSchema = base_schema_1.BaseModelSchema.safeExtend({
     locationId: zod_1.z.string().nullable().optional().describe("Business location ID where the maintenance block applies. Null applies when the resource is not location-specific."),
     resourceInstanceId: zod_1.z.string().describe("Room/resource ID under maintenance"),
-    startDate: zod_1.z.number().describe("Maintenance block start timestamp"),
-    endDate: zod_1.z.number().describe("Maintenance block end timestamp"),
+    startDate: zod_1.z.number().describe("Maintenance block start as Unix epoch seconds"),
+    endDate: zod_1.z.number().describe("Maintenance block end as Unix epoch seconds"),
     reason: zod_1.z.string().nullable().optional().describe("Reason for maintenance block"),
 }).superRefine((data, ctx) => {
     if (data.endDate < data.startDate) {

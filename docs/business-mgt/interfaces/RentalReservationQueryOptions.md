@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.63**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.64**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: RentalReservationQueryOptions
 
-Defined in: [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:234](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L234)
+Defined in: [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:234](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L234)
 
 Rental reservation query options.
  RentalReservationQueryOptions
@@ -15,7 +15,7 @@ Rental reservation query options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:236](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L236) |
-| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:238](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L238) |
-| <a id="filters"></a> `filters?` | [`RentalReservationFilters`](RentalReservationFilters.md) | Optional filters | [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:240](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L240) |
-| <a id="sorting"></a> `sorting?` | [`RentalReservationSorting`](RentalReservationSorting.md) | Optional sorting | [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:242](https://github.com/wiil-io/core-js/blob/d17655f35874178aedae920329b27f2c84a84388/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L242) |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:236](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L236) |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:238](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L238) |
+| <a id="filters"></a> `filters?` | [`RentalReservationFilters`](RentalReservationFilters.md) | Optional filters | [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:240](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L240) |
+| <a id="sorting"></a> `sorting?` | [`RentalReservationSorting`](RentalReservationSorting.md) | Optional sorting | [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:242](https://github.com/wiil-io/core-js/blob/ef506f541e734fb6e21f90ac213a4af673554dd5/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L242) |
