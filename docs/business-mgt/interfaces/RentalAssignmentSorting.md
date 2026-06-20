@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.70**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.71**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: RentalAssignmentSorting
 
-Defined in: [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:130](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L130)
+Defined in: [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:130](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L130)
 
 Rental assignment sorting options.
  RentalAssignmentSorting
@@ -15,5 +15,5 @@ Rental assignment sorting options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="field"></a> `field` | `"createdAt"` \| `"assignedAt"` \| `"releasedAt"` | Field to sort by | [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:132](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L132) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:134](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L134) |
+| <a id="field"></a> `field` | `"createdAt"` \| `"assignedAt"` \| `"releasedAt"` | Field to sort by | [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:132](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L132) |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:134](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L134) |

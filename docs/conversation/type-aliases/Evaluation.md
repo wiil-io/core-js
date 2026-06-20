@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.70**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.71**](../../README.md)
 
 ***
 
@@ -15,7 +15,7 @@ type Evaluation = {
 };
 ```
 
-Defined in: [src/core/conversation/conversation-config.schema.ts:420](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/conversation/conversation-config.schema.ts#L420)
+Defined in: [src/core/conversation/conversation-config.schema.ts:420](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/conversation/conversation-config.schema.ts#L420)
 
 Evaluation schema for running AI agent evaluations.
 
@@ -23,7 +23,7 @@ Evaluation schema for running AI agent evaluations.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="instructionid"></a> `instructionId` | `string` | [src/core/conversation/conversation-config.schema.ts:381](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/conversation/conversation-config.schema.ts#L381) |
-| <a id="agentid"></a> `agentId` | `string` | [src/core/conversation/conversation-config.schema.ts:382](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/conversation/conversation-config.schema.ts#L382) |
-| <a id="evaluationconfigid"></a> `evaluationConfigId` | `string` | [src/core/conversation/conversation-config.schema.ts:383](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/conversation/conversation-config.schema.ts#L383) |
-| <a id="speechconfig"></a> `speechConfig?` | `Record`\<`string`, `never`\> \| `null` | [src/core/conversation/conversation-config.schema.ts:384](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/conversation/conversation-config.schema.ts#L384) |
+| <a id="instructionid"></a> `instructionId` | `string` | [src/core/conversation/conversation-config.schema.ts:381](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/conversation/conversation-config.schema.ts#L381) |
+| <a id="agentid"></a> `agentId` | `string` | [src/core/conversation/conversation-config.schema.ts:382](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/conversation/conversation-config.schema.ts#L382) |
+| <a id="evaluationconfigid"></a> `evaluationConfigId` | `string` | [src/core/conversation/conversation-config.schema.ts:383](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/conversation/conversation-config.schema.ts#L383) |
+| <a id="speechconfig"></a> `speechConfig?` | `Record`\<`string`, `never`\> \| `null` | [src/core/conversation/conversation-config.schema.ts:384](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/conversation/conversation-config.schema.ts#L384) |

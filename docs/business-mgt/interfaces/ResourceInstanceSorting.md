@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.70**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.71**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ResourceInstanceSorting
 
-Defined in: [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:133](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L133)
+Defined in: [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:133](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L133)
 
 Resource instance sorting options.
  ResourceInstanceSorting
@@ -15,5 +15,5 @@ Resource instance sorting options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="field"></a> `field` | `"createdAt"` \| `"status"` \| `"name"` | Field to sort by | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:135](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L135) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:137](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L137) |
+| <a id="field"></a> `field` | `"createdAt"` \| `"status"` \| `"name"` | Field to sort by | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:135](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L135) |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:137](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L137) |

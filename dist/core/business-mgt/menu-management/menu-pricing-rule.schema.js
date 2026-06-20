@@ -68,7 +68,6 @@ exports.MenuPricingRuleConditionSchema = exports.MenuPricingRuleBaseConditionSch
  * @property {MenuPricingRuleCondition} condition - Conditions for rule application
  * @property {number} [effectiveFrom] - Start timestamp for rule validity
  * @property {number} [effectiveTo] - End timestamp for rule validity
- * @property {number} priority - Rule priority (higher = applied first)
  * @property {number} displayOrder - Display order in rule list
  * @property {boolean} isActive - Whether this rule is active
  */
@@ -82,7 +81,6 @@ exports.MenuPricingRuleSchema = base_schema_1.BaseModelSchema.safeExtend({
     condition: exports.MenuPricingRuleConditionSchema.describe("Conditions for rule application"),
     effectiveFrom: zod_1.z.number().int().nonnegative().nullable().optional().describe("Start timestamp for rule validity"),
     effectiveTo: zod_1.z.number().int().nonnegative().nullable().optional().describe("End timestamp for rule validity"),
-    priority: zod_1.z.number().int().nonnegative().default(0).describe("Rule priority (higher = applied first)"),
     displayOrder: zod_1.z.number().int().nonnegative().default(0).describe("Display order in rule list"),
     isActive: zod_1.z.boolean().default(true).describe("Whether this rule is active"),
 }).superRefine((data, ctx) => {

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.70**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.71**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ProductPricingRuleFilters
 
-Defined in: [src/core/business-mgt/product-management/product-pricing-rule.schema.ts:92](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/business-mgt/product-management/product-pricing-rule.schema.ts#L92)
+Defined in: [src/core/business-mgt/product-management/product-pricing-rule.schema.ts:92](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/product-management/product-pricing-rule.schema.ts#L92)
 
 Product pricing rule filter options.
  ProductPricingRuleFilters
@@ -15,7 +15,7 @@ Product pricing rule filter options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="search"></a> `search?` | `string` | Text search across rule name | [src/core/business-mgt/product-management/product-pricing-rule.schema.ts:94](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/business-mgt/product-management/product-pricing-rule.schema.ts#L94) |
-| <a id="locationid"></a> `locationId?` | `string` | Filter by location ID | [src/core/business-mgt/product-management/product-pricing-rule.schema.ts:96](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/business-mgt/product-management/product-pricing-rule.schema.ts#L96) |
-| <a id="channel"></a> `channel?` | [`PricingChannel`](../../type-definitions/enumerations/PricingChannel.md) | Filter by pricing channel | [src/core/business-mgt/product-management/product-pricing-rule.schema.ts:98](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/business-mgt/product-management/product-pricing-rule.schema.ts#L98) |
-| <a id="isactive"></a> `isActive?` | `boolean` | Filter by active status | [src/core/business-mgt/product-management/product-pricing-rule.schema.ts:100](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/business-mgt/product-management/product-pricing-rule.schema.ts#L100) |
+| <a id="search"></a> `search?` | `string` | Text search across rule name | [src/core/business-mgt/product-management/product-pricing-rule.schema.ts:94](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/product-management/product-pricing-rule.schema.ts#L94) |
+| <a id="locationid"></a> `locationId?` | `string` | Filter by location ID | [src/core/business-mgt/product-management/product-pricing-rule.schema.ts:96](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/product-management/product-pricing-rule.schema.ts#L96) |
+| <a id="channel"></a> `channel?` | [`PricingChannel`](../../type-definitions/enumerations/PricingChannel.md) | Filter by pricing channel | [src/core/business-mgt/product-management/product-pricing-rule.schema.ts:98](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/product-management/product-pricing-rule.schema.ts#L98) |
+| <a id="isactive"></a> `isActive?` | `boolean` | Filter by active status | [src/core/business-mgt/product-management/product-pricing-rule.schema.ts:100](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/product-management/product-pricing-rule.schema.ts#L100) |

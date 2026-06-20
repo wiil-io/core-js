@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.70**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.71**](../../README.md)
 
 ***
 
@@ -23,7 +23,7 @@ type ServiceSlotQueryResponse = {
 };
 ```
 
-Defined in: [src/core/business-mgt/service-management/service-slot-query.schema.ts:130](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/business-mgt/service-management/service-slot-query.schema.ts#L130)
+Defined in: [src/core/business-mgt/service-management/service-slot-query.schema.ts:130](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/service-management/service-slot-query.schema.ts#L130)
 
 Service slot query response schema.
 Contains available slots for the requested date.
@@ -32,7 +32,7 @@ Contains available slots for the requested date.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="localdate"></a> `localDate` | `string` | [src/core/business-mgt/service-management/service-slot-query.schema.ts:115](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/business-mgt/service-management/service-slot-query.schema.ts#L115) |
-| <a id="timezone"></a> `timezone` | `string` | [src/core/business-mgt/service-management/service-slot-query.schema.ts:116](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/business-mgt/service-management/service-slot-query.schema.ts#L116) |
-| <a id="generatedat"></a> `generatedAt` | `number` | [src/core/business-mgt/service-management/service-slot-query.schema.ts:117](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/business-mgt/service-management/service-slot-query.schema.ts#L117) |
-| <a id="slots"></a> `slots` | \{ `providerId`: `string`; `serviceProviderId?`: `string` \| `null`; `startTimeOfDay`: `string`; `startMinuteOfDay`: `number`; `endMinuteOfDay`: `number`; `startTimeUtcSec`: `number`; `endTimeUtcSec`: `number`; \}[] | [src/core/business-mgt/service-management/service-slot-query.schema.ts:118](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/business-mgt/service-management/service-slot-query.schema.ts#L118) |
+| <a id="localdate"></a> `localDate` | `string` | [src/core/business-mgt/service-management/service-slot-query.schema.ts:115](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/service-management/service-slot-query.schema.ts#L115) |
+| <a id="timezone"></a> `timezone` | `string` | [src/core/business-mgt/service-management/service-slot-query.schema.ts:116](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/service-management/service-slot-query.schema.ts#L116) |
+| <a id="generatedat"></a> `generatedAt` | `number` | [src/core/business-mgt/service-management/service-slot-query.schema.ts:117](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/service-management/service-slot-query.schema.ts#L117) |
+| <a id="slots"></a> `slots` | \{ `providerId`: `string`; `serviceProviderId?`: `string` \| `null`; `startTimeOfDay`: `string`; `startMinuteOfDay`: `number`; `endMinuteOfDay`: `number`; `startTimeUtcSec`: `number`; `endTimeUtcSec`: `number`; \}[] | [src/core/business-mgt/service-management/service-slot-query.schema.ts:118](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/service-management/service-slot-query.schema.ts#L118) |

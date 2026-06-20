@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.70**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.71**](../../README.md)
 
 ***
 
@@ -14,7 +14,7 @@ type SimpleDaySchedule = {
 };
 ```
 
-Defined in: [src/core/type-definitions/business-definitions.ts:288](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/type-definitions/business-definitions.ts#L288)
+Defined in: [src/core/type-definitions/business-definitions.ts:288](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/type-definitions/business-definitions.ts#L288)
 
 Simple day schedule schema.
 Defines basic availability for a single day.
@@ -23,6 +23,6 @@ Defines basic availability for a single day.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="isopen"></a> `isOpen` | `boolean` | [src/core/type-definitions/business-definitions.ts:255](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/type-definitions/business-definitions.ts#L255) |
-| <a id="starttime"></a> `startTime` | `string` | [src/core/type-definitions/business-definitions.ts:256](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/type-definitions/business-definitions.ts#L256) |
-| <a id="endtime"></a> `endTime` | `string` | [src/core/type-definitions/business-definitions.ts:257](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/type-definitions/business-definitions.ts#L257) |
+| <a id="isopen"></a> `isOpen` | `boolean` | [src/core/type-definitions/business-definitions.ts:255](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/type-definitions/business-definitions.ts#L255) |
+| <a id="starttime"></a> `startTime` | `string` | [src/core/type-definitions/business-definitions.ts:256](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/type-definitions/business-definitions.ts#L256) |
+| <a id="endtime"></a> `endTime` | `string` | [src/core/type-definitions/business-definitions.ts:257](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/type-definitions/business-definitions.ts#L257) |

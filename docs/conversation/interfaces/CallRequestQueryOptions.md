@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.70**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.71**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: CallRequestQueryOptions
 
-Defined in: [src/core/conversation/outbound-call.schema.ts:179](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/conversation/outbound-call.schema.ts#L179)
+Defined in: [src/core/conversation/outbound-call.schema.ts:179](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/conversation/outbound-call.schema.ts#L179)
 
 Call request query options.
  CallRequestQueryOptions
@@ -15,7 +15,7 @@ Call request query options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/conversation/outbound-call.schema.ts:181](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/conversation/outbound-call.schema.ts#L181) |
-| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/conversation/outbound-call.schema.ts:183](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/conversation/outbound-call.schema.ts#L183) |
-| <a id="filters"></a> `filters?` | [`CallRequestFilters`](CallRequestFilters.md) | Optional filters | [src/core/conversation/outbound-call.schema.ts:185](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/conversation/outbound-call.schema.ts#L185) |
-| <a id="sorting"></a> `sorting?` | [`CallRequestSorting`](CallRequestSorting.md) | Optional sorting | [src/core/conversation/outbound-call.schema.ts:187](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/conversation/outbound-call.schema.ts#L187) |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/conversation/outbound-call.schema.ts:181](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/conversation/outbound-call.schema.ts#L181) |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/conversation/outbound-call.schema.ts:183](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/conversation/outbound-call.schema.ts#L183) |
+| <a id="filters"></a> `filters?` | [`CallRequestFilters`](CallRequestFilters.md) | Optional filters | [src/core/conversation/outbound-call.schema.ts:185](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/conversation/outbound-call.schema.ts#L185) |
+| <a id="sorting"></a> `sorting?` | [`CallRequestSorting`](CallRequestSorting.md) | Optional sorting | [src/core/conversation/outbound-call.schema.ts:187](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/conversation/outbound-call.schema.ts#L187) |

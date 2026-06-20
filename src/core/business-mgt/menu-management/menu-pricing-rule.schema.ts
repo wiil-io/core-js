@@ -71,7 +71,6 @@ export const MenuPricingRuleConditionSchema = MenuPricingRuleBaseConditionSchema
  * @property {MenuPricingRuleCondition} condition - Conditions for rule application
  * @property {number} [effectiveFrom] - Start timestamp for rule validity
  * @property {number} [effectiveTo] - End timestamp for rule validity
- * @property {number} priority - Rule priority (higher = applied first)
  * @property {number} displayOrder - Display order in rule list
  * @property {boolean} isActive - Whether this rule is active
  */
@@ -85,7 +84,6 @@ export const MenuPricingRuleSchema = BaseModelSchema.safeExtend({
     condition: MenuPricingRuleConditionSchema.describe("Conditions for rule application"),
     effectiveFrom: z.number().int().nonnegative().nullable().optional().describe("Start timestamp for rule validity"),
     effectiveTo: z.number().int().nonnegative().nullable().optional().describe("End timestamp for rule validity"),
-    priority: z.number().int().nonnegative().default(0).describe("Rule priority (higher = applied first)"),
     displayOrder: z.number().int().nonnegative().default(0).describe("Display order in rule list"),
     isActive: z.boolean().default(true).describe("Whether this rule is active"),
 }).superRefine((data, ctx) => {
@@ -165,7 +163,7 @@ export interface MenuPricingRuleFilters {
  */
 export interface MenuPricingRuleSorting {
     /** Field to sort by */
-    field: "name" | "createdAt" | "priority" | "displayOrder";
+    field: "name" | "createdAt" | "displayOrder";
     /** Sort direction */
     direction: "asc" | "desc";
 }

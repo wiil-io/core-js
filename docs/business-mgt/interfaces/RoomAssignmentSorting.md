@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.70**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.71**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: RoomAssignmentSorting
 
-Defined in: [src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts:106](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts#L106)
+Defined in: [src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts:106](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts#L106)
 
 Room assignment sorting options.
  RoomAssignmentSorting
@@ -15,5 +15,5 @@ Room assignment sorting options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="field"></a> `field` | `"createdAt"` \| `"assignedAt"` \| `"releasedAt"` | Field to sort by | [src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts:108](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts#L108) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts:110](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts#L110) |
+| <a id="field"></a> `field` | `"createdAt"` \| `"assignedAt"` \| `"releasedAt"` | Field to sort by | [src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts:108](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts#L108) |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts:110](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts#L110) |

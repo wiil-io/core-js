@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.70**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.71**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const CreateInstructionConfigurationSchema: ZodObject<CreateInstructionConfiguration>;
 ```
 
-Defined in: [src/core/service-configuration/instruction-config.schema.ts:121](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/service-configuration/instruction-config.schema.ts#L121)
+Defined in: [src/core/service-configuration/instruction-config.schema.ts:121](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/service-configuration/instruction-config.schema.ts#L121)
 
 Zod schema for creating a new instruction configuration.
 

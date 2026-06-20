@@ -28,7 +28,6 @@ The Menu Pricing Rules domain enables conditional pricing and promotions for men
 ### Key Features
 
 - Flexible condition matching (channel, time, amount, customer group)
-- Priority-based rule application
 - Effective date ranges for scheduled promotions
 - Location-specific rules via `locationId`
 - External platform synchronization

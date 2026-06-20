@@ -64,7 +64,6 @@ export declare const MenuPricingRuleConditionSchema: z.ZodObject<{
  * @property {MenuPricingRuleCondition} condition - Conditions for rule application
  * @property {number} [effectiveFrom] - Start timestamp for rule validity
  * @property {number} [effectiveTo] - End timestamp for rule validity
- * @property {number} priority - Rule priority (higher = applied first)
  * @property {number} displayOrder - Display order in rule list
  * @property {boolean} isActive - Whether this rule is active
  */
@@ -95,7 +94,6 @@ export declare const MenuPricingRuleSchema: z.ZodObject<{
     }, z.core.$strip>;
     effectiveFrom: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
     effectiveTo: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
-    priority: z.ZodDefault<z.ZodNumber>;
     displayOrder: z.ZodDefault<z.ZodNumber>;
     isActive: z.ZodDefault<z.ZodBoolean>;
 }, z.core.$strip>;
@@ -109,7 +107,6 @@ export declare const CreateMenuPricingRuleSchema: z.ZodObject<{
     description: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     isActive: z.ZodDefault<z.ZodBoolean>;
     locationId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-    priority: z.ZodDefault<z.ZodNumber>;
     effectiveFrom: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
     effectiveTo: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
     channelMappings: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodObject<{
@@ -155,7 +152,6 @@ export declare const UpdateMenuPricingRuleSchema: z.ZodObject<{
     description: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     isActive: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
     locationId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
-    priority: z.ZodOptional<z.ZodDefault<z.ZodNumber>>;
     effectiveFrom: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
     effectiveTo: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
     channelMappings: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodObject<{
@@ -223,7 +219,7 @@ export interface MenuPricingRuleFilters {
  */
 export interface MenuPricingRuleSorting {
     /** Field to sort by */
-    field: "name" | "createdAt" | "priority" | "displayOrder";
+    field: "name" | "createdAt" | "displayOrder";
     /** Sort direction */
     direction: "asc" | "desc";
 }

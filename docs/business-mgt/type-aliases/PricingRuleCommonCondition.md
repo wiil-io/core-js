@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.70**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.71**](../../README.md)
 
 ***
 
@@ -16,7 +16,7 @@ type PricingRuleCommonCondition = {
 };
 ```
 
-Defined in: [src/core/business-mgt/pricing-rule.shared.schema.ts:83](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/business-mgt/pricing-rule.shared.schema.ts#L83)
+Defined in: [src/core/business-mgt/pricing-rule.shared.schema.ts:83](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/pricing-rule.shared.schema.ts#L83)
 
 Pricing rule common condition schema.
 Defines when a pricing rule should be applied based on time, day, customer, and channel.
@@ -25,8 +25,8 @@ Defines when a pricing rule should be applied based on time, day, customer, and 
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="daysofweek"></a> `daysOfWeek` | `number`[] | [src/core/business-mgt/pricing-rule.shared.schema.ts:47](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/business-mgt/pricing-rule.shared.schema.ts#L47) |
-| <a id="startminute"></a> `startMinute?` | `number` | [src/core/business-mgt/pricing-rule.shared.schema.ts:48](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/business-mgt/pricing-rule.shared.schema.ts#L48) |
-| <a id="endminute"></a> `endMinute?` | `number` | [src/core/business-mgt/pricing-rule.shared.schema.ts:49](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/business-mgt/pricing-rule.shared.schema.ts#L49) |
-| <a id="customersegmentids"></a> `customerSegmentIds?` | `string`[] | [src/core/business-mgt/pricing-rule.shared.schema.ts:50](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/business-mgt/pricing-rule.shared.schema.ts#L50) |
-| <a id="channel"></a> `channel` | [`PricingChannel`](../../type-definitions/enumerations/PricingChannel.md) | [src/core/business-mgt/pricing-rule.shared.schema.ts:51](https://github.com/wiil-io/core-js/blob/93399ddfe88b7931620744392516237a259c457f/src/core/business-mgt/pricing-rule.shared.schema.ts#L51) |
+| <a id="daysofweek"></a> `daysOfWeek` | `number`[] | [src/core/business-mgt/pricing-rule.shared.schema.ts:47](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/pricing-rule.shared.schema.ts#L47) |
+| <a id="startminute"></a> `startMinute?` | `number` | [src/core/business-mgt/pricing-rule.shared.schema.ts:48](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/pricing-rule.shared.schema.ts#L48) |
+| <a id="endminute"></a> `endMinute?` | `number` | [src/core/business-mgt/pricing-rule.shared.schema.ts:49](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/pricing-rule.shared.schema.ts#L49) |
+| <a id="customersegmentids"></a> `customerSegmentIds?` | `string`[] | [src/core/business-mgt/pricing-rule.shared.schema.ts:50](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/pricing-rule.shared.schema.ts#L50) |
+| <a id="channel"></a> `channel` | [`PricingChannel`](../../type-definitions/enumerations/PricingChannel.md) | [src/core/business-mgt/pricing-rule.shared.schema.ts:51](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/pricing-rule.shared.schema.ts#L51) |
