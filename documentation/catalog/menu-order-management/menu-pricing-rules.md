@@ -52,7 +52,6 @@ Defines a pricing rule with conditions and associated discount.
 | condition | object | Yes | - | Conditions for rule application |
 | effectiveFrom | number | No | null | Start timestamp for rule validity |
 | effectiveTo | number | No | null | End timestamp for rule validity |
-| priority | integer | No | 0 | Rule priority (higher = applied first) |
 | displayOrder | integer | No | 0 | Display order in rule list |
 | isActive | boolean | No | true | Whether rule is active |
 | createdAt | number | No | auto-generated | Unix timestamp of creation |
@@ -92,7 +91,6 @@ All fields optional except `id` (required).
   },
   "effectiveFrom": 1699833600,
   "effectiveTo": 1702425600,
-  "priority": 10,
   "isActive": true
 }
 ```
@@ -240,7 +238,7 @@ Schema for positioning rules in ordered lists.
 
 ### Sorting
 
-**Fields:** `name`, `createdAt`, `priority`, `displayOrder`
+**Fields:** `name`, `createdAt`, `displayOrder`
 
 **Directions:** `asc`, `desc`
 
@@ -264,7 +262,7 @@ Schema for positioning rules in ordered lists.
     "effectiveAt": 1699900000
   },
   "sorting": {
-    "field": "priority",
+    "field": "displayOrder",
     "direction": "desc"
   }
 }
@@ -312,7 +310,7 @@ Schema for positioning rules in ordered lists.
 │   │     - Customer in target group                           │   │
 │   │     - Current day/time matches                           │   │
 │   │     - Items match menuSetId/menuItemIds/categoryIds     │   │
-│   │  4. Sort by priority (highest first)                     │   │
+│   │  4. Sort by discount priority (highest first)           │   │
 │   │  5. Apply discount from discountId                       │   │
 │   └─────────────────────────────────────────────────────────┘   │
 │                                                                  │
@@ -337,7 +335,6 @@ Schema for positioning rules in ordered lists.
     "timeStart": "16:00",
     "timeEnd": "18:00"
   },
-  "priority": 20,
   "isActive": true
 }
 ```
@@ -354,7 +351,6 @@ Schema for positioning rules in ordered lists.
     "menuSetId": "all_items_set_id",
     "minOrderAmount": 30.00
   },
-  "priority": 10,
   "isActive": true
 }
 ```
@@ -371,7 +367,6 @@ Schema for positioning rules in ordered lists.
     "menuSetId": "premium_items_set_id",
     "customerGroupIds": ["group_vip_id"]
   },
-  "priority": 30,
   "isActive": true
 }
 ```
@@ -393,7 +388,6 @@ Schema for positioning rules in ordered lists.
   },
   "effectiveFrom": 1699833600,
   "effectiveTo": 1702425600,
-  "priority": 15,
   "isActive": true
 }
 ```
@@ -412,7 +406,6 @@ Schema for positioning rules in ordered lists.
   },
   "effectiveFrom": 1688169600,
   "effectiveTo": 1693526400,
-  "priority": 25,
   "isActive": true
 }
 ```
@@ -421,7 +414,7 @@ Schema for positioning rules in ordered lists.
 
 ## Best Practices
 
-1. **Set appropriate priorities** - Higher priority rules take precedence when multiple rules match.
+1. **Precedence comes from the discount** - When multiple rules match, the linked discount's priority decides precedence.
 
 2. **Use effective dates for scheduled promotions** - Enables set-and-forget campaign management.
 

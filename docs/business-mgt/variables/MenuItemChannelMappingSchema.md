@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.71**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.72**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const MenuItemChannelMappingSchema: ZodObject<MenuItemChannelMapping>;
 ```
 
-Defined in: [src/core/business-mgt/menu-management/menu-config.schema.ts:40](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/menu-management/menu-config.schema.ts#L40)
+Defined in: [src/core/business-mgt/menu-management/menu-config.schema.ts:40](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/menu-management/menu-config.schema.ts#L40)
 
 Menu item channel mapping schema.
 Maps menu items to external platform identifiers.

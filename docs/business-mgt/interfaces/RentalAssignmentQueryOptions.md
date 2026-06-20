@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.71**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.72**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: RentalAssignmentQueryOptions
 
-Defined in: [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:141](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L141)
+Defined in: [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:141](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L141)
 
 Rental assignment query options.
  RentalAssignmentQueryOptions
@@ -15,7 +15,7 @@ Rental assignment query options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:143](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L143) |
-| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:145](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L145) |
-| <a id="filters"></a> `filters?` | [`RentalAssignmentFilters`](RentalAssignmentFilters.md) | Optional filters | [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:147](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L147) |
-| <a id="sorting"></a> `sorting?` | [`RentalAssignmentSorting`](RentalAssignmentSorting.md) | Optional sorting | [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:149](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L149) |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:143](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L143) |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:145](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L145) |
+| <a id="filters"></a> `filters?` | [`RentalAssignmentFilters`](RentalAssignmentFilters.md) | Optional filters | [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:147](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L147) |
+| <a id="sorting"></a> `sorting?` | [`RentalAssignmentSorting`](RentalAssignmentSorting.md) | Optional sorting | [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:149](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L149) |

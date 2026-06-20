@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.71**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.72**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const CreateCustomerGroupSchema: ZodObject<CreateCustomerGroup>;
 ```
 
-Defined in: [src/core/business-mgt/customer-management/customer-group.schema.ts:41](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/customer-management/customer-group.schema.ts#L41)
+Defined in: [src/core/business-mgt/customer-management/customer-group.schema.ts:41](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/customer-management/customer-group.schema.ts#L41)
 
 Schema for creating a new customer group.
 Omits auto-generated fields.

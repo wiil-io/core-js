@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.71**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.72**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ModifierGroupQueryOptions
 
-Defined in: [src/core/business-mgt/menu-management/modifier.schema.ts:425](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/menu-management/modifier.schema.ts#L425)
+Defined in: [src/core/business-mgt/menu-management/modifier.schema.ts:425](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/menu-management/modifier.schema.ts#L425)
 
 Modifier group query options.
  ModifierGroupQueryOptions
@@ -15,7 +15,7 @@ Modifier group query options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/menu-management/modifier.schema.ts:427](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/menu-management/modifier.schema.ts#L427) |
-| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/menu-management/modifier.schema.ts:429](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/menu-management/modifier.schema.ts#L429) |
-| <a id="filters"></a> `filters?` | [`ModifierGroupFilters`](ModifierGroupFilters.md) | Optional filters | [src/core/business-mgt/menu-management/modifier.schema.ts:431](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/menu-management/modifier.schema.ts#L431) |
-| <a id="sorting"></a> `sorting?` | [`ModifierGroupSorting`](ModifierGroupSorting.md) | Optional sorting | [src/core/business-mgt/menu-management/modifier.schema.ts:433](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/menu-management/modifier.schema.ts#L433) |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/menu-management/modifier.schema.ts:427](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/menu-management/modifier.schema.ts#L427) |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/menu-management/modifier.schema.ts:429](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/menu-management/modifier.schema.ts#L429) |
+| <a id="filters"></a> `filters?` | [`ModifierGroupFilters`](ModifierGroupFilters.md) | Optional filters | [src/core/business-mgt/menu-management/modifier.schema.ts:431](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/menu-management/modifier.schema.ts#L431) |
+| <a id="sorting"></a> `sorting?` | [`ModifierGroupSorting`](ModifierGroupSorting.md) | Optional sorting | [src/core/business-mgt/menu-management/modifier.schema.ts:433](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/menu-management/modifier.schema.ts#L433) |

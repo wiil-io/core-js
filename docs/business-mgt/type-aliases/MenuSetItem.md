@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.71**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.72**](../../README.md)
 
 ***
 
@@ -16,7 +16,7 @@ type MenuSetItem = {
 };
 ```
 
-Defined in: [src/core/business-mgt/menu-management/menu-set.schema.ts:276](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/menu-management/menu-set.schema.ts#L276)
+Defined in: [src/core/business-mgt/menu-management/menu-set.schema.ts:276](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/menu-management/menu-set.schema.ts#L276)
 
 Menu set item schema.
 Individual item within a menu set.
@@ -25,8 +25,8 @@ Individual item within a menu set.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="menuitemid"></a> `menuItemId` | `string` | [src/core/business-mgt/menu-management/menu-set.schema.ts:72](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/menu-management/menu-set.schema.ts#L72) |
-| <a id="menuitemvariantid"></a> `menuItemVariantId` | `string` | [src/core/business-mgt/menu-management/menu-set.schema.ts:73](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/menu-management/menu-set.schema.ts#L73) |
-| <a id="quantity"></a> `quantity` | `number` | [src/core/business-mgt/menu-management/menu-set.schema.ts:74](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/menu-management/menu-set.schema.ts#L74) |
-| <a id="isrequired"></a> `isRequired` | `boolean` | [src/core/business-mgt/menu-management/menu-set.schema.ts:75](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/menu-management/menu-set.schema.ts#L75) |
-| <a id="displayorder"></a> `displayOrder?` | `number` \| `null` | [src/core/business-mgt/menu-management/menu-set.schema.ts:76](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/menu-management/menu-set.schema.ts#L76) |
+| <a id="menuitemid"></a> `menuItemId` | `string` | [src/core/business-mgt/menu-management/menu-set.schema.ts:72](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/menu-management/menu-set.schema.ts#L72) |
+| <a id="menuitemvariantid"></a> `menuItemVariantId` | `string` | [src/core/business-mgt/menu-management/menu-set.schema.ts:73](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/menu-management/menu-set.schema.ts#L73) |
+| <a id="quantity"></a> `quantity` | `number` | [src/core/business-mgt/menu-management/menu-set.schema.ts:74](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/menu-management/menu-set.schema.ts#L74) |
+| <a id="isrequired"></a> `isRequired` | `boolean` | [src/core/business-mgt/menu-management/menu-set.schema.ts:75](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/menu-management/menu-set.schema.ts#L75) |
+| <a id="displayorder"></a> `displayOrder?` | `number` \| `null` | [src/core/business-mgt/menu-management/menu-set.schema.ts:76](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/menu-management/menu-set.schema.ts#L76) |

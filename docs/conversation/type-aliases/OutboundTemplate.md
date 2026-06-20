@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.71**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.72**](../../README.md)
 
 ***
 
@@ -70,6 +70,6 @@ type OutboundTemplate =
 };
 ```
 
-Defined in: [src/core/conversation/outbound-template.schema.ts:185](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/conversation/outbound-template.schema.ts#L185)
+Defined in: [src/core/conversation/outbound-template.schema.ts:185](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/conversation/outbound-template.schema.ts#L185)
 
 Union schema for all template types.

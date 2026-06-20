@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.71**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.72**](../../README.md)
 
 ***
 
@@ -14,7 +14,7 @@ type CategoryAttributeBinding = {
 };
 ```
 
-Defined in: [src/core/business-mgt/product-management/product-config.schema.ts:458](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/product-management/product-config.schema.ts#L458)
+Defined in: [src/core/business-mgt/product-management/product-config.schema.ts:458](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/product-management/product-config.schema.ts#L458)
 
 Category attribute binding schema.
 Links categories to attribute definitions with category-specific settings.
@@ -23,6 +23,6 @@ Links categories to attribute definitions with category-specific settings.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="attributedefid"></a> `attributeDefId` | `string` | [src/core/business-mgt/product-management/product-config.schema.ts:98](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/product-management/product-config.schema.ts#L98) |
-| <a id="required"></a> `required` | `boolean` | [src/core/business-mgt/product-management/product-config.schema.ts:99](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/product-management/product-config.schema.ts#L99) |
-| <a id="displayorder"></a> `displayOrder` | `number` | [src/core/business-mgt/product-management/product-config.schema.ts:100](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/product-management/product-config.schema.ts#L100) |
+| <a id="attributedefid"></a> `attributeDefId` | `string` | [src/core/business-mgt/product-management/product-config.schema.ts:98](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/product-management/product-config.schema.ts#L98) |
+| <a id="required"></a> `required` | `boolean` | [src/core/business-mgt/product-management/product-config.schema.ts:99](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/product-management/product-config.schema.ts#L99) |
+| <a id="displayorder"></a> `displayOrder` | `number` | [src/core/business-mgt/product-management/product-config.schema.ts:100](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/product-management/product-config.schema.ts#L100) |

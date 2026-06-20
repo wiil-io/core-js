@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.71**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.72**](../../README.md)
 
 ***
 
@@ -6,11 +6,11 @@
 
 # Enumeration: DiscountType
 
-Defined in: [src/core/type-definitions/business-definitions.ts:436](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/type-definitions/business-definitions.ts#L436)
+Defined in: [src/core/type-definitions/business-definitions.ts:436](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/type-definitions/business-definitions.ts#L436)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="percentage"></a> `PERCENTAGE` | `"PERCENTAGE"` | [src/core/type-definitions/business-definitions.ts:437](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/type-definitions/business-definitions.ts#L437) |
-| <a id="fixed"></a> `FIXED` | `"FIXED"` | [src/core/type-definitions/business-definitions.ts:438](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/type-definitions/business-definitions.ts#L438) |
+| <a id="percentage"></a> `PERCENTAGE` | `"PERCENTAGE"` | [src/core/type-definitions/business-definitions.ts:437](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/type-definitions/business-definitions.ts#L437) |
+| <a id="fixed"></a> `FIXED` | `"FIXED"` | [src/core/type-definitions/business-definitions.ts:438](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/type-definitions/business-definitions.ts#L438) |

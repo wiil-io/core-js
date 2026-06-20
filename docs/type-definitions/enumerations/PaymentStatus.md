@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.71**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.72**](../../README.md)
 
 ***
 
@@ -6,14 +6,14 @@
 
 # Enumeration: PaymentStatus
 
-Defined in: [src/core/type-definitions/business-definitions.ts:118](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/type-definitions/business-definitions.ts#L118)
+Defined in: [src/core/type-definitions/business-definitions.ts:118](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/type-definitions/business-definitions.ts#L118)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="pending"></a> `PENDING` | `"pending"` | [src/core/type-definitions/business-definitions.ts:119](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/type-definitions/business-definitions.ts#L119) |
-| <a id="paid"></a> `PAID` | `"paid"` | [src/core/type-definitions/business-definitions.ts:120](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/type-definitions/business-definitions.ts#L120) |
-| <a id="partial"></a> `PARTIAL` | `"partial"` | [src/core/type-definitions/business-definitions.ts:121](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/type-definitions/business-definitions.ts#L121) |
-| <a id="failed"></a> `FAILED` | `"failed"` | [src/core/type-definitions/business-definitions.ts:122](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/type-definitions/business-definitions.ts#L122) |
-| <a id="refunded"></a> `REFUNDED` | `"refunded"` | [src/core/type-definitions/business-definitions.ts:123](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/type-definitions/business-definitions.ts#L123) |
+| <a id="pending"></a> `PENDING` | `"pending"` | [src/core/type-definitions/business-definitions.ts:119](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/type-definitions/business-definitions.ts#L119) |
+| <a id="paid"></a> `PAID` | `"paid"` | [src/core/type-definitions/business-definitions.ts:120](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/type-definitions/business-definitions.ts#L120) |
+| <a id="partial"></a> `PARTIAL` | `"partial"` | [src/core/type-definitions/business-definitions.ts:121](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/type-definitions/business-definitions.ts#L121) |
+| <a id="failed"></a> `FAILED` | `"failed"` | [src/core/type-definitions/business-definitions.ts:122](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/type-definitions/business-definitions.ts#L122) |
+| <a id="refunded"></a> `REFUNDED` | `"refunded"` | [src/core/type-definitions/business-definitions.ts:123](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/type-definitions/business-definitions.ts#L123) |

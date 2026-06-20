@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.71**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.72**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const ServiceCandidateSlotSchema: ZodObject<ServiceCandidateSlot>;
 ```
 
-Defined in: [src/core/business-mgt/service-management/service-slot-query.schema.ts:74](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/service-management/service-slot-query.schema.ts#L74)
+Defined in: [src/core/business-mgt/service-management/service-slot-query.schema.ts:74](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/service-management/service-slot-query.schema.ts#L74)
 
 Service candidate slot schema.
 Represents an available time slot for booking.

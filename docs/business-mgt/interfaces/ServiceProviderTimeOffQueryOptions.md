@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.71**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.72**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ServiceProviderTimeOffQueryOptions
 
-Defined in: [src/core/business-mgt/service-management/service-time-off.schema.ts:149](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/service-management/service-time-off.schema.ts#L149)
+Defined in: [src/core/business-mgt/service-management/service-time-off.schema.ts:149](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/service-management/service-time-off.schema.ts#L149)
 
 Service provider time off query options.
  ServiceProviderTimeOffQueryOptions
@@ -15,7 +15,7 @@ Service provider time off query options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/service-management/service-time-off.schema.ts:151](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/service-management/service-time-off.schema.ts#L151) |
-| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/service-management/service-time-off.schema.ts:153](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/service-management/service-time-off.schema.ts#L153) |
-| <a id="filters"></a> `filters?` | [`ServiceProviderTimeOffFilters`](ServiceProviderTimeOffFilters.md) | Optional filters | [src/core/business-mgt/service-management/service-time-off.schema.ts:155](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/service-management/service-time-off.schema.ts#L155) |
-| <a id="sorting"></a> `sorting?` | [`ServiceProviderTimeOffSorting`](ServiceProviderTimeOffSorting.md) | Optional sorting | [src/core/business-mgt/service-management/service-time-off.schema.ts:157](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/service-management/service-time-off.schema.ts#L157) |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/service-management/service-time-off.schema.ts:151](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/service-management/service-time-off.schema.ts#L151) |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/service-management/service-time-off.schema.ts:153](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/service-management/service-time-off.schema.ts#L153) |
+| <a id="filters"></a> `filters?` | [`ServiceProviderTimeOffFilters`](ServiceProviderTimeOffFilters.md) | Optional filters | [src/core/business-mgt/service-management/service-time-off.schema.ts:155](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/service-management/service-time-off.schema.ts#L155) |
+| <a id="sorting"></a> `sorting?` | [`ServiceProviderTimeOffSorting`](ServiceProviderTimeOffSorting.md) | Optional sorting | [src/core/business-mgt/service-management/service-time-off.schema.ts:157](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/service-management/service-time-off.schema.ts#L157) |

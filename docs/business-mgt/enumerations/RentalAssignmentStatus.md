@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.71**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.72**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: RentalAssignmentStatus
 
-Defined in: [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:18](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L18)
+Defined in: [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:18](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L18)
 
 Rental assignment lifecycle status.
 
@@ -14,6 +14,6 @@ Rental assignment lifecycle status.
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="assigned"></a> `ASSIGNED` | `"assigned"` | [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:19](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L19) |
-| <a id="reassigned"></a> `REASSIGNED` | `"reassigned"` | [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:20](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L20) |
-| <a id="released"></a> `RELEASED` | `"released"` | [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:21](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L21) |
+| <a id="assigned"></a> `ASSIGNED` | `"assigned"` | [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:19](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L19) |
+| <a id="reassigned"></a> `REASSIGNED` | `"reassigned"` | [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:20](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L20) |
+| <a id="released"></a> `RELEASED` | `"released"` | [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:21](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L21) |

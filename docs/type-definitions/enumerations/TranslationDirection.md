@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.71**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.72**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: TranslationDirection
 
-Defined in: [src/core/type-definitions/conversation.type.definition.ts:73](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/type-definitions/conversation.type.definition.ts#L73)
+Defined in: [src/core/type-definitions/conversation.type.definition.ts:73](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/type-definitions/conversation.type.definition.ts#L73)
 
 Translation direction for multilingual conversations.
 
@@ -17,5 +17,5 @@ during AI-assisted multilingual conversations.
 
 | Enumeration Member | Value | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="bidirectional"></a> `BIDIRECTIONAL` | `"bidirectional"` | Translate both participant's speech to each other's language | [src/core/type-definitions/conversation.type.definition.ts:75](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/type-definitions/conversation.type.definition.ts#L75) |
-| <a id="unidirectional"></a> `UNIDIRECTIONAL` | `"unidirectional"` | Translate only one participant's speech (typically agent to customer) | [src/core/type-definitions/conversation.type.definition.ts:77](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/type-definitions/conversation.type.definition.ts#L77) |
+| <a id="bidirectional"></a> `BIDIRECTIONAL` | `"bidirectional"` | Translate both participant's speech to each other's language | [src/core/type-definitions/conversation.type.definition.ts:75](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/type-definitions/conversation.type.definition.ts#L75) |
+| <a id="unidirectional"></a> `UNIDIRECTIONAL` | `"unidirectional"` | Translate only one participant's speech (typically agent to customer) | [src/core/type-definitions/conversation.type.definition.ts:77](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/type-definitions/conversation.type.definition.ts#L77) |

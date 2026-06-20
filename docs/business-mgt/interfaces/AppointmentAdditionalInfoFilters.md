@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.71**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.72**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: AppointmentAdditionalInfoFilters
 
-Defined in: [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:100](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L100)
+Defined in: [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:100](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L100)
 
 Appointment additional info filter options.
  AppointmentAdditionalInfoFilters
@@ -15,6 +15,6 @@ Appointment additional info filter options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="businessserviceid"></a> `businessServiceId?` | `string` | Filter by business service ID | [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:102](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L102) |
-| <a id="appointmentid"></a> `appointmentId?` | `string` | Filter by appointment ID | [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:104](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L104) |
-| <a id="customerid"></a> `customerId?` | `string` | Filter by customer ID | [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:106](https://github.com/wiil-io/core-js/blob/b7f7ff561d142acf42bab9f83f6bb56c0dbe009b/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L106) |
+| <a id="businessserviceid"></a> `businessServiceId?` | `string` | Filter by business service ID | [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:102](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L102) |
+| <a id="appointmentid"></a> `appointmentId?` | `string` | Filter by appointment ID | [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:104](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L104) |
+| <a id="customerid"></a> `customerId?` | `string` | Filter by customer ID | [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:106](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L106) |
