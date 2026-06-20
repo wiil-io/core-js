@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.66**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.67**](../../README.md)
 
 ***
 
@@ -12,7 +12,7 @@ type ServiceProviderTimeOffRecurrence = {
 };
 ```
 
-Defined in: [src/core/business-mgt/service-management/service-time-off.schema.ts:108](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/service-management/service-time-off.schema.ts#L108)
+Defined in: [src/core/business-mgt/service-management/service-time-off.schema.ts:108](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/service-management/service-time-off.schema.ts#L108)
 
 Recurrence rule for recurring time off.
 Defines which days of the week the time off applies.
@@ -21,4 +21,4 @@ Defines which days of the week the time off applies.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="dayofweek"></a> `dayOfWeek` | `string`[] | [src/core/business-mgt/service-management/service-time-off.schema.ts:28](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/service-management/service-time-off.schema.ts#L28) |
+| <a id="dayofweek"></a> `dayOfWeek` | `string`[] | [src/core/business-mgt/service-management/service-time-off.schema.ts:28](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/service-management/service-time-off.schema.ts#L28) |

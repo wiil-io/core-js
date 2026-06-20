@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.66**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.67**](../../README.md)
 
 ***
 
@@ -14,7 +14,7 @@ type EmailAttachment = {
 };
 ```
 
-Defined in: [src/core/conversation/outbound-email.schema.ts:44](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/conversation/outbound-email.schema.ts#L44)
+Defined in: [src/core/conversation/outbound-email.schema.ts:44](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/conversation/outbound-email.schema.ts#L44)
 
 Email attachment schema (embedded in EmailRequestSchema).
 
@@ -22,9 +22,9 @@ Email attachment schema (embedded in EmailRequestSchema).
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="filename"></a> `filename` | `string` | [src/core/conversation/outbound-email.schema.ts:39](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/conversation/outbound-email.schema.ts#L39) |
-| <a id="content"></a> `content` | `string` | [src/core/conversation/outbound-email.schema.ts:40](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/conversation/outbound-email.schema.ts#L40) |
-| <a id="contenttype"></a> `contentType` | `string` | [src/core/conversation/outbound-email.schema.ts:41](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/conversation/outbound-email.schema.ts#L41) |
+| <a id="filename"></a> `filename` | `string` | [src/core/conversation/outbound-email.schema.ts:39](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/conversation/outbound-email.schema.ts#L39) |
+| <a id="content"></a> `content` | `string` | [src/core/conversation/outbound-email.schema.ts:40](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/conversation/outbound-email.schema.ts#L40) |
+| <a id="contenttype"></a> `contentType` | `string` | [src/core/conversation/outbound-email.schema.ts:41](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/conversation/outbound-email.schema.ts#L41) |
 
 ## See
 

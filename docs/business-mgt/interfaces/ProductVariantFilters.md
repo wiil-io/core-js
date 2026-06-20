@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.66**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.67**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ProductVariantFilters
 
-Defined in: [src/core/business-mgt/product-management/product-variant.schema.ts:158](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/product-management/product-variant.schema.ts#L158)
+Defined in: [src/core/business-mgt/product-management/product-variant.schema.ts:158](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/product-management/product-variant.schema.ts#L158)
 
 Product variant filter options.
  ProductVariantFilters
@@ -15,8 +15,8 @@ Product variant filter options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="productid"></a> `productId?` | `string` | Filter by parent product ID | [src/core/business-mgt/product-management/product-variant.schema.ts:160](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/product-management/product-variant.schema.ts#L160) |
-| <a id="axisvalueid"></a> `axisValueId?` | `string` | Filter by axis value ID | [src/core/business-mgt/product-management/product-variant.schema.ts:162](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/product-management/product-variant.schema.ts#L162) |
-| <a id="sku"></a> `sku?` | `string` | Filter by SKU | [src/core/business-mgt/product-management/product-variant.schema.ts:164](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/product-management/product-variant.schema.ts#L164) |
-| <a id="isactive"></a> `isActive?` | `boolean` | Filter by active status | [src/core/business-mgt/product-management/product-variant.schema.ts:166](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/product-management/product-variant.schema.ts#L166) |
-| <a id="instock"></a> `inStock?` | `boolean` | Filter by stock availability | [src/core/business-mgt/product-management/product-variant.schema.ts:168](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/product-management/product-variant.schema.ts#L168) |
+| <a id="productid"></a> `productId?` | `string` | Filter by parent product ID | [src/core/business-mgt/product-management/product-variant.schema.ts:160](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/product-management/product-variant.schema.ts#L160) |
+| <a id="axisvalueid"></a> `axisValueId?` | `string` | Filter by axis value ID | [src/core/business-mgt/product-management/product-variant.schema.ts:162](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/product-management/product-variant.schema.ts#L162) |
+| <a id="sku"></a> `sku?` | `string` | Filter by SKU | [src/core/business-mgt/product-management/product-variant.schema.ts:164](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/product-management/product-variant.schema.ts#L164) |
+| <a id="isactive"></a> `isActive?` | `boolean` | Filter by active status | [src/core/business-mgt/product-management/product-variant.schema.ts:166](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/product-management/product-variant.schema.ts#L166) |
+| <a id="instock"></a> `inStock?` | `boolean` | Filter by stock availability | [src/core/business-mgt/product-management/product-variant.schema.ts:168](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/product-management/product-variant.schema.ts#L168) |

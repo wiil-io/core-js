@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.66**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.67**](../../README.md)
 
 ***
 
@@ -17,7 +17,7 @@ type CategoryDisplayOrderResponse = {
 };
 ```
 
-Defined in: [src/core/type-definitions/display-order.ts:184](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/type-definitions/display-order.ts#L184)
+Defined in: [src/core/type-definitions/display-order.ts:184](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/type-definitions/display-order.ts#L184)
 
 Category display order response schema.
 
@@ -25,9 +25,9 @@ Category display order response schema.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="categoryid"></a> `categoryId` | `string` | [src/core/type-definitions/display-order.ts:138](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/type-definitions/display-order.ts#L138) |
-| <a id="targetparentcategoryid"></a> `targetParentCategoryId` | `string` \| `null` | [src/core/type-definitions/display-order.ts:139](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/type-definitions/display-order.ts#L139) |
-| <a id="resolveddisplayorder"></a> `resolvedDisplayOrder` | `number` | [src/core/type-definitions/display-order.ts:140](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/type-definitions/display-order.ts#L140) |
-| <a id="resolvedposition"></a> `resolvedPosition?` | `number` | [src/core/type-definitions/display-order.ts:141](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/type-definitions/display-order.ts#L141) |
-| <a id="categoryversion"></a> `categoryVersion` | `number` | [src/core/type-definitions/display-order.ts:142](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/type-definitions/display-order.ts#L142) |
-| <a id="reindexed"></a> `reindexed` | `boolean` | [src/core/type-definitions/display-order.ts:143](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/type-definitions/display-order.ts#L143) |
+| <a id="categoryid"></a> `categoryId` | `string` | [src/core/type-definitions/display-order.ts:138](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/type-definitions/display-order.ts#L138) |
+| <a id="targetparentcategoryid"></a> `targetParentCategoryId` | `string` \| `null` | [src/core/type-definitions/display-order.ts:139](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/type-definitions/display-order.ts#L139) |
+| <a id="resolveddisplayorder"></a> `resolvedDisplayOrder` | `number` | [src/core/type-definitions/display-order.ts:140](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/type-definitions/display-order.ts#L140) |
+| <a id="resolvedposition"></a> `resolvedPosition?` | `number` | [src/core/type-definitions/display-order.ts:141](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/type-definitions/display-order.ts#L141) |
+| <a id="categoryversion"></a> `categoryVersion` | `number` | [src/core/type-definitions/display-order.ts:142](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/type-definitions/display-order.ts#L142) |
+| <a id="reindexed"></a> `reindexed` | `boolean` | [src/core/type-definitions/display-order.ts:143](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/type-definitions/display-order.ts#L143) |

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.66**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.67**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ShippingAddressSorting
 
-Defined in: [src/core/business-mgt/customer-management/shipping-address.schema.ts:116](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/customer-management/shipping-address.schema.ts#L116)
+Defined in: [src/core/business-mgt/customer-management/shipping-address.schema.ts:116](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/customer-management/shipping-address.schema.ts#L116)
 
 Shipping address sorting options.
  ShippingAddressSorting
@@ -15,5 +15,5 @@ Shipping address sorting options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="field"></a> `field` | `"createdAt"` \| `"city"` \| `"country"` \| `"isPrimary"` | Field to sort by | [src/core/business-mgt/customer-management/shipping-address.schema.ts:118](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/customer-management/shipping-address.schema.ts#L118) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/customer-management/shipping-address.schema.ts:120](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/customer-management/shipping-address.schema.ts#L120) |
+| <a id="field"></a> `field` | `"createdAt"` \| `"city"` \| `"country"` \| `"isPrimary"` | Field to sort by | [src/core/business-mgt/customer-management/shipping-address.schema.ts:118](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/customer-management/shipping-address.schema.ts#L118) |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/customer-management/shipping-address.schema.ts:120](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/customer-management/shipping-address.schema.ts#L120) |

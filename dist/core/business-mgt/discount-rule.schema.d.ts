@@ -45,8 +45,8 @@ export declare const DiscountRuleSchema: z.ZodObject<{
     minSubtotal: z.ZodOptional<z.ZodNumber>;
     customerSegment: z.ZodOptional<z.ZodString>;
     firstOrderOnly: z.ZodDefault<z.ZodBoolean>;
-    maxUses: z.ZodOptional<z.ZodNumber>;
-    maxUsesPerCustomer: z.ZodOptional<z.ZodNumber>;
+    maxUses: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
+    maxUsesPerCustomer: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
     isStackable: z.ZodDefault<z.ZodBoolean>;
     priority: z.ZodDefault<z.ZodNumber>;
     effectiveFrom: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
@@ -71,8 +71,8 @@ export declare const CreateDiscountRuleSchema: z.ZodObject<{
     minSubtotal: z.ZodOptional<z.ZodNumber>;
     customerSegment: z.ZodOptional<z.ZodString>;
     firstOrderOnly: z.ZodDefault<z.ZodBoolean>;
-    maxUses: z.ZodOptional<z.ZodNumber>;
-    maxUsesPerCustomer: z.ZodOptional<z.ZodNumber>;
+    maxUses: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
+    maxUsesPerCustomer: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
     isStackable: z.ZodDefault<z.ZodBoolean>;
     priority: z.ZodDefault<z.ZodNumber>;
     effectiveFrom: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
@@ -110,8 +110,8 @@ export declare const UpdateDiscountRuleSchema: z.ZodObject<{
     minSubtotal: z.ZodOptional<z.ZodOptional<z.ZodNumber>>;
     customerSegment: z.ZodOptional<z.ZodOptional<z.ZodString>>;
     firstOrderOnly: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
-    maxUses: z.ZodOptional<z.ZodOptional<z.ZodNumber>>;
-    maxUsesPerCustomer: z.ZodOptional<z.ZodOptional<z.ZodNumber>>;
+    maxUses: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
+    maxUsesPerCustomer: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
     isStackable: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
     priority: z.ZodOptional<z.ZodDefault<z.ZodNumber>>;
     effectiveFrom: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;

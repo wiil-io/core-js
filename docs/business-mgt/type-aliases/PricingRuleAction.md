@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.66**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.67**](../../README.md)
 
 ***
 
@@ -15,7 +15,7 @@ type PricingRuleAction = {
 };
 ```
 
-Defined in: [src/core/business-mgt/pricing-rule.shared.schema.ts:84](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/pricing-rule.shared.schema.ts#L84)
+Defined in: [src/core/business-mgt/pricing-rule.shared.schema.ts:84](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/pricing-rule.shared.schema.ts#L84)
 
 Pricing rule action schema.
 Defines the price adjustment to apply when rule conditions are met.
@@ -24,7 +24,7 @@ Defines the price adjustment to apply when rule conditions are met.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="adjustmenttype"></a> `adjustmentType` | [`PricingRuleAdjustmentType`](../../type-definitions/enumerations/PricingRuleAdjustmentType.md) | [src/core/business-mgt/pricing-rule.shared.schema.ts:73](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/pricing-rule.shared.schema.ts#L73) |
-| <a id="adjustmentvalue"></a> `adjustmentValue` | `number` | [src/core/business-mgt/pricing-rule.shared.schema.ts:74](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/pricing-rule.shared.schema.ts#L74) |
-| <a id="currency"></a> `currency` | `string` | [src/core/business-mgt/pricing-rule.shared.schema.ts:75](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/pricing-rule.shared.schema.ts#L75) |
-| <a id="maxadjustmentamount"></a> `maxAdjustmentAmount?` | `number` | [src/core/business-mgt/pricing-rule.shared.schema.ts:76](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/pricing-rule.shared.schema.ts#L76) |
+| <a id="adjustmenttype"></a> `adjustmentType` | [`PricingRuleAdjustmentType`](../../type-definitions/enumerations/PricingRuleAdjustmentType.md) | [src/core/business-mgt/pricing-rule.shared.schema.ts:73](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/pricing-rule.shared.schema.ts#L73) |
+| <a id="adjustmentvalue"></a> `adjustmentValue` | `number` | [src/core/business-mgt/pricing-rule.shared.schema.ts:74](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/pricing-rule.shared.schema.ts#L74) |
+| <a id="currency"></a> `currency` | `string` | [src/core/business-mgt/pricing-rule.shared.schema.ts:75](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/pricing-rule.shared.schema.ts#L75) |
+| <a id="maxadjustmentamount"></a> `maxAdjustmentAmount?` | `number` | [src/core/business-mgt/pricing-rule.shared.schema.ts:76](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/pricing-rule.shared.schema.ts#L76) |

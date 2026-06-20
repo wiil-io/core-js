@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.66**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.67**](../../README.md)
 
 ***
 
@@ -6,11 +6,11 @@
 
 # Enumeration: ReservationSettingType
 
-Defined in: [src/core/type-definitions/business-definitions.ts:50](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/type-definitions/business-definitions.ts#L50)
+Defined in: [src/core/type-definitions/business-definitions.ts:50](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/type-definitions/business-definitions.ts#L50)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="capacity"></a> `CAPACITY` | `"capacity"` | [src/core/type-definitions/business-definitions.ts:51](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/type-definitions/business-definitions.ts#L51) |
-| <a id="resource_specific"></a> `RESOURCE_SPECIFIC` | `"resource_specific"` | [src/core/type-definitions/business-definitions.ts:52](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/type-definitions/business-definitions.ts#L52) |
+| <a id="capacity"></a> `CAPACITY` | `"capacity"` | [src/core/type-definitions/business-definitions.ts:51](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/type-definitions/business-definitions.ts#L51) |
+| <a id="resource_specific"></a> `RESOURCE_SPECIFIC` | `"resource_specific"` | [src/core/type-definitions/business-definitions.ts:52](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/type-definitions/business-definitions.ts#L52) |

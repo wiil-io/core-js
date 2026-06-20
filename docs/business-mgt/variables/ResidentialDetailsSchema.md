@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.66**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.67**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const ResidentialDetailsSchema: ZodObject<ResidentialDetails>;
 ```
 
-Defined in: [src/core/business-mgt/property-management/property-config.schema.ts:126](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/property-management/property-config.schema.ts#L126)
+Defined in: [src/core/business-mgt/property-management/property-config.schema.ts:126](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/property-management/property-config.schema.ts#L126)
 
 Residential details schema.
 Details for houses, apartments, condos, townhouses, villas.

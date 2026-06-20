@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.66**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.67**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: BusinessMenuItemSorting
 
-Defined in: [src/core/business-mgt/menu-management/menu-config.schema.ts:224](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/menu-management/menu-config.schema.ts#L224)
+Defined in: [src/core/business-mgt/menu-management/menu-config.schema.ts:224](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/menu-management/menu-config.schema.ts#L224)
 
 Business menu item sorting options.
  BusinessMenuItemSorting
@@ -15,5 +15,5 @@ Business menu item sorting options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="field"></a> `field` | `"createdAt"` \| `"displayOrder"` \| `"name"` \| `"price"` | Field to sort by | [src/core/business-mgt/menu-management/menu-config.schema.ts:226](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/menu-management/menu-config.schema.ts#L226) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/menu-management/menu-config.schema.ts:228](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/menu-management/menu-config.schema.ts#L228) |
+| <a id="field"></a> `field` | `"createdAt"` \| `"displayOrder"` \| `"name"` \| `"price"` | Field to sort by | [src/core/business-mgt/menu-management/menu-config.schema.ts:226](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/menu-management/menu-config.schema.ts#L226) |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/menu-management/menu-config.schema.ts:228](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/menu-management/menu-config.schema.ts#L228) |

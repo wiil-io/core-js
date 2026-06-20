@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.66**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.67**](../../README.md)
 
 ***
 
@@ -19,7 +19,7 @@ type RentalReservationSlotQueryRequest = {
 };
 ```
 
-Defined in: [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:352](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L352)
+Defined in: [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:352](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L352)
 
 Rental reservation slot query request schema.
 Requests candidate rental slots for intra-day or multi-day rental periods.
@@ -28,11 +28,11 @@ Requests candidate rental slots for intra-day or multi-day rental periods.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="locationid"></a> `locationId?` | `string` \| `null` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:47](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L47) |
-| <a id="resourceid"></a> `resourceId?` | `string` \| `null` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:48](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L48) |
-| <a id="localdate"></a> `localDate` | `string` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:49](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L49) |
-| <a id="maxresults"></a> `maxResults` | `number` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:50](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L50) |
-| <a id="resourcetype"></a> `resourceType` | [`RENTAL`](../../type-definitions/enumerations/ResourceType.md#rental) | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:112](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L112) |
-| <a id="returndate"></a> `returnDate?` | `string` \| `null` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:113](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L113) |
-| <a id="tierid"></a> `tierId?` | `string` \| `null` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:114](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L114) |
-| <a id="durationminutes"></a> `durationMinutes?` | `number` \| `null` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:115](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L115) |
+| <a id="locationid"></a> `locationId?` | `string` \| `null` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:47](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L47) |
+| <a id="resourceid"></a> `resourceId?` | `string` \| `null` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:48](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L48) |
+| <a id="localdate"></a> `localDate` | `string` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:49](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L49) |
+| <a id="maxresults"></a> `maxResults` | `number` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:50](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L50) |
+| <a id="resourcetype"></a> `resourceType` | [`RENTAL`](../../type-definitions/enumerations/ResourceType.md#rental) | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:112](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L112) |
+| <a id="returndate"></a> `returnDate?` | `string` \| `null` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:113](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L113) |
+| <a id="tierid"></a> `tierId?` | `string` \| `null` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:114](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L114) |
+| <a id="durationminutes"></a> `durationMinutes?` | `number` \| `null` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:115](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L115) |

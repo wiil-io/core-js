@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.66**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.67**](../../README.md)
 
 ***
 
@@ -17,7 +17,7 @@ type UpdateServiceProvider = {
 };
 ```
 
-Defined in: [src/core/business-mgt/service-management/service-provider.schema.ts:62](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/service-management/service-provider.schema.ts#L62)
+Defined in: [src/core/business-mgt/service-management/service-provider.schema.ts:62](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/service-management/service-provider.schema.ts#L62)
 
 Schema for updating an existing service provider assignment.
 All fields optional except id (required).
@@ -26,9 +26,9 @@ All fields optional except id (required).
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="serviceid"></a> `serviceId?` | `string` | [src/core/business-mgt/service-management/service-provider.schema.ts:27](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/service-management/service-provider.schema.ts#L27) |
-| <a id="providerid"></a> `providerId?` | `string` | [src/core/business-mgt/service-management/service-provider.schema.ts:28](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/service-management/service-provider.schema.ts#L28) |
-| <a id="priceoverride"></a> `priceOverride?` | `number` \| `null` | [src/core/business-mgt/service-management/service-provider.schema.ts:29](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/service-management/service-provider.schema.ts#L29) |
-| <a id="durationoverride"></a> `durationOverride?` | `number` \| `null` | [src/core/business-mgt/service-management/service-provider.schema.ts:30](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/service-management/service-provider.schema.ts#L30) |
-| <a id="active"></a> `active?` | `boolean` | [src/core/business-mgt/service-management/service-provider.schema.ts:31](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/service-management/service-provider.schema.ts#L31) |
-| <a id="id"></a> `id` | `string` | [src/core/business-mgt/service-management/service-provider.schema.ts:53](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/service-management/service-provider.schema.ts#L53) |
+| <a id="serviceid"></a> `serviceId?` | `string` | [src/core/business-mgt/service-management/service-provider.schema.ts:27](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/service-management/service-provider.schema.ts#L27) |
+| <a id="providerid"></a> `providerId?` | `string` | [src/core/business-mgt/service-management/service-provider.schema.ts:28](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/service-management/service-provider.schema.ts#L28) |
+| <a id="priceoverride"></a> `priceOverride?` | `number` \| `null` | [src/core/business-mgt/service-management/service-provider.schema.ts:29](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/service-management/service-provider.schema.ts#L29) |
+| <a id="durationoverride"></a> `durationOverride?` | `number` \| `null` | [src/core/business-mgt/service-management/service-provider.schema.ts:30](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/service-management/service-provider.schema.ts#L30) |
+| <a id="active"></a> `active?` | `boolean` | [src/core/business-mgt/service-management/service-provider.schema.ts:31](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/service-management/service-provider.schema.ts#L31) |
+| <a id="id"></a> `id` | `string` | [src/core/business-mgt/service-management/service-provider.schema.ts:53](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/service-management/service-provider.schema.ts#L53) |

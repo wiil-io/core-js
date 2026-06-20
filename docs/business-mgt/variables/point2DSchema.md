@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.66**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.67**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const point2DSchema: ZodObject<Point2D>;
 ```
 
-Defined in: [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:40](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L40)
+Defined in: [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:40](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L40)
 
 Two-dimensional point schema.
 Uses the same coordinate system as table placement x/y values.

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.66**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.67**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: CustomerFilters
 
-Defined in: [src/core/business-mgt/customer-management/customer.schema.ts:113](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/customer-management/customer.schema.ts#L113)
+Defined in: [src/core/business-mgt/customer-management/customer.schema.ts:113](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/customer-management/customer.schema.ts#L113)
 
 Customer filter options.
  CustomerFilters
@@ -15,8 +15,8 @@ Customer filter options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="search"></a> `search?` | `string` | Text search across name/email/phone | [src/core/business-mgt/customer-management/customer.schema.ts:115](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/customer-management/customer.schema.ts#L115) |
-| <a id="preferredcontactmethod"></a> `preferredContactMethod?` | [`PreferredContactMethod`](../../type-definitions/enumerations/PreferredContactMethod.md)[] | Filter by preferred contact method(s) | [src/core/business-mgt/customer-management/customer.schema.ts:117](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/customer-management/customer.schema.ts#L117) |
-| <a id="tags"></a> `tags?` | `string`[] | Filter by tags | [src/core/business-mgt/customer-management/customer.schema.ts:119](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/customer-management/customer.schema.ts#L119) |
-| <a id="channelid"></a> `channelId?` | `string` | Filter by channel ID | [src/core/business-mgt/customer-management/customer.schema.ts:121](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/customer-management/customer.schema.ts#L121) |
-| <a id="customergroupid"></a> `customerGroupId?` | `string` | Filter by customer group ID | [src/core/business-mgt/customer-management/customer.schema.ts:123](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/customer-management/customer.schema.ts#L123) |
+| <a id="search"></a> `search?` | `string` | Text search across name/email/phone | [src/core/business-mgt/customer-management/customer.schema.ts:115](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/customer-management/customer.schema.ts#L115) |
+| <a id="preferredcontactmethod"></a> `preferredContactMethod?` | [`PreferredContactMethod`](../../type-definitions/enumerations/PreferredContactMethod.md)[] | Filter by preferred contact method(s) | [src/core/business-mgt/customer-management/customer.schema.ts:117](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/customer-management/customer.schema.ts#L117) |
+| <a id="tags"></a> `tags?` | `string`[] | Filter by tags | [src/core/business-mgt/customer-management/customer.schema.ts:119](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/customer-management/customer.schema.ts#L119) |
+| <a id="channelid"></a> `channelId?` | `string` | Filter by channel ID | [src/core/business-mgt/customer-management/customer.schema.ts:121](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/customer-management/customer.schema.ts#L121) |
+| <a id="customergroupid"></a> `customerGroupId?` | `string` | Filter by customer group ID | [src/core/business-mgt/customer-management/customer.schema.ts:123](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/customer-management/customer.schema.ts#L123) |

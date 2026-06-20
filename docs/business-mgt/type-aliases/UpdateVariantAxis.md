@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.66**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.67**](../../README.md)
 
 ***
 
@@ -26,7 +26,7 @@ type UpdateVariantAxis = {
 };
 ```
 
-Defined in: [src/core/business-mgt/product-management/product-variant-axis.schema.ts:111](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L111)
+Defined in: [src/core/business-mgt/product-management/product-variant-axis.schema.ts:111](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L111)
 
 Schema for updating an existing variant axis.
 All fields optional except id (required).
@@ -35,8 +35,8 @@ All fields optional except id (required).
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="name"></a> `name?` | `string` | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:53](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L53) |
-| <a id="type"></a> `type?` | \| [`SWATCH`](../../type-definitions/enumerations/VariantAxisType.md#swatch) \| [`TEXT`](../../type-definitions/enumerations/VariantAxisType.md#text) \| [`IMAGE`](../../type-definitions/enumerations/VariantAxisType.md#image) \| [`NUMERIC`](../../type-definitions/enumerations/VariantAxisType.md#numeric) | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:54](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L54) |
-| <a id="values"></a> `values?` | \{ `id`: `string`; `label`: `string`; `swatchColor?`: `string` \| `null`; `imageId?`: `string` \| `null`; `numericValue?`: `number` \| `null`; `sortOrder`: `number`; \}[] | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:55](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L55) |
-| <a id="isactive"></a> `isActive?` | `boolean` | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:56](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L56) |
-| <a id="id"></a> `id` | `string` | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:78](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L78) |
+| <a id="name"></a> `name?` | `string` | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:53](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L53) |
+| <a id="type"></a> `type?` | \| [`SWATCH`](../../type-definitions/enumerations/VariantAxisType.md#swatch) \| [`TEXT`](../../type-definitions/enumerations/VariantAxisType.md#text) \| [`IMAGE`](../../type-definitions/enumerations/VariantAxisType.md#image) \| [`NUMERIC`](../../type-definitions/enumerations/VariantAxisType.md#numeric) | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:54](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L54) |
+| <a id="values"></a> `values?` | \{ `id`: `string`; `label`: `string`; `swatchColor?`: `string` \| `null`; `imageId?`: `string` \| `null`; `numericValue?`: `number` \| `null`; `sortOrder`: `number`; \}[] | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:55](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L55) |
+| <a id="isactive"></a> `isActive?` | `boolean` | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:56](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L56) |
+| <a id="id"></a> `id` | `string` | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:78](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L78) |

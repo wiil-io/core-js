@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.66**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.67**](../../README.md)
 
 ***
 
@@ -39,7 +39,7 @@ type CallRequestResult = {
 };
 ```
 
-Defined in: [src/core/conversation/outbound-call.schema.ts:138](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/conversation/outbound-call.schema.ts#L138)
+Defined in: [src/core/conversation/outbound-call.schema.ts:138](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/conversation/outbound-call.schema.ts#L138)
 
 Call request result schema.
 Response payload from telephony provider after initiating a call.
@@ -48,6 +48,6 @@ Response payload from telephony provider after initiating a call.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="success"></a> `success` | `boolean` | [src/core/conversation/outbound-call.schema.ts:126](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/conversation/outbound-call.schema.ts#L126) |
-| <a id="request"></a> `request?` | \| \{ `id`: `string`; `createdAt?`: `number`; `updatedAt?`: `number`; `phoneConfigurationId?`: `string` \| `null`; `to`: `string`; `from`: `string`; `agentConfigurationId`: `string`; `instructionConfigurationId?`: `string` \| `null`; `maxDuration?`: `number`; `scheduleType`: [`ScheduleType`](../../type-definitions/enumerations/ScheduleType.md); `serviceConversationConfigId?`: `string` \| `null`; `timeZone?`: `string`; `scheduledAt?`: `number`; `callingHours?`: \| \{ `startTime`: `string`; `endTime`: `string`; `daysOfWeek`: `number`[]; \} \| `null`; `maxRetries?`: `number`; `retryDelayMinutes?`: `number`; `status`: [`CallRequestStatus`](../../type-definitions/enumerations/CallRequestStatus.md); `metadata?`: `Record`\<`string`, `any`\>; \} \| `null` | [src/core/conversation/outbound-call.schema.ts:127](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/conversation/outbound-call.schema.ts#L127) |
-| <a id="error_message"></a> `error_message?` | `string` \| `null` | [src/core/conversation/outbound-call.schema.ts:128](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/conversation/outbound-call.schema.ts#L128) |
+| <a id="success"></a> `success` | `boolean` | [src/core/conversation/outbound-call.schema.ts:126](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/conversation/outbound-call.schema.ts#L126) |
+| <a id="request"></a> `request?` | \| \{ `id`: `string`; `createdAt?`: `number`; `updatedAt?`: `number`; `phoneConfigurationId?`: `string` \| `null`; `to`: `string`; `from`: `string`; `agentConfigurationId`: `string`; `instructionConfigurationId?`: `string` \| `null`; `maxDuration?`: `number`; `scheduleType`: [`ScheduleType`](../../type-definitions/enumerations/ScheduleType.md); `serviceConversationConfigId?`: `string` \| `null`; `timeZone?`: `string`; `scheduledAt?`: `number`; `callingHours?`: \| \{ `startTime`: `string`; `endTime`: `string`; `daysOfWeek`: `number`[]; \} \| `null`; `maxRetries?`: `number`; `retryDelayMinutes?`: `number`; `status`: [`CallRequestStatus`](../../type-definitions/enumerations/CallRequestStatus.md); `metadata?`: `Record`\<`string`, `any`\>; \} \| `null` | [src/core/conversation/outbound-call.schema.ts:127](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/conversation/outbound-call.schema.ts#L127) |
+| <a id="error_message"></a> `error_message?` | `string` \| `null` | [src/core/conversation/outbound-call.schema.ts:128](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/conversation/outbound-call.schema.ts#L128) |

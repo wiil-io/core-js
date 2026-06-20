@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.66**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.67**](../../README.md)
 
 ***
 
@@ -6,12 +6,12 @@
 
 # Enumeration: MenuOrderType
 
-Defined in: [src/core/type-definitions/business-definitions.ts:127](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/type-definitions/business-definitions.ts#L127)
+Defined in: [src/core/type-definitions/business-definitions.ts:127](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/type-definitions/business-definitions.ts#L127)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="dine_in"></a> `DINE_IN` | `"dine_in"` | [src/core/type-definitions/business-definitions.ts:128](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/type-definitions/business-definitions.ts#L128) |
-| <a id="takeout"></a> `TAKEOUT` | `"takeout"` | [src/core/type-definitions/business-definitions.ts:129](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/type-definitions/business-definitions.ts#L129) |
-| <a id="delivery"></a> `DELIVERY` | `"delivery"` | [src/core/type-definitions/business-definitions.ts:130](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/type-definitions/business-definitions.ts#L130) |
+| <a id="dine_in"></a> `DINE_IN` | `"dine_in"` | [src/core/type-definitions/business-definitions.ts:128](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/type-definitions/business-definitions.ts#L128) |
+| <a id="takeout"></a> `TAKEOUT` | `"takeout"` | [src/core/type-definitions/business-definitions.ts:129](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/type-definitions/business-definitions.ts#L129) |
+| <a id="delivery"></a> `DELIVERY` | `"delivery"` | [src/core/type-definitions/business-definitions.ts:130](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/type-definitions/business-definitions.ts#L130) |
