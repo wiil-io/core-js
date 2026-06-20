@@ -104,7 +104,6 @@ export declare const CreateRoomReservationSchema: z.ZodObject<{
 export declare const UpdateRoomReservationSchema: z.ZodObject<{
     source: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     nights: z.ZodOptional<z.ZodNumber>;
-    status: z.ZodOptional<z.ZodDefault<z.ZodEnum<typeof ReservationStatus>>>;
     locationId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     channelId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     notes: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
@@ -127,6 +126,7 @@ export declare const UpdateRoomReservationSchema: z.ZodObject<{
     totalWithTax: z.ZodOptional<z.ZodNumber>;
     deposit: z.ZodOptional<z.ZodDefault<z.ZodNumber>>;
     id: z.ZodString;
+    status: z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof ReservationStatus>>>;
 }, z.core.$strip>;
 export type RoomRatePerNight = z.infer<typeof RoomRatePerNightSchema>;
 export type RoomReservation = z.infer<typeof RoomReservationSchema>;

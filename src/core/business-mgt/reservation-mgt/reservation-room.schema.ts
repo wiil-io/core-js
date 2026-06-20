@@ -91,8 +91,10 @@ export const CreateRoomReservationSchema = RoomReservationSchema.omit({
  * Schema for updating an existing room reservation.
  * All fields optional except id.
  */
-export const UpdateRoomReservationSchema = CreateRoomReservationSchema.partial().safeExtend({
+export const UpdateRoomReservationSchema = CreateRoomReservationSchema.partial().extend({
     id: z.string().describe("Unique identifier of the room reservation to update."),
+    // Re-declared without the base `.default()` so partial updates don't inject a status the caller never set
+    status: z.enum(ReservationStatus).nullable().optional().describe("Room reservation lifecycle status"),
 });
 
 // ============================================================================

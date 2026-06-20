@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.72**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.73**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: BusinessLocationQueryOptions
 
-Defined in: [src/core/business-mgt/business-location.schema.ts:275](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/business-location.schema.ts#L275)
+Defined in: [src/core/business-mgt/business-location.schema.ts:275](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/business-location.schema.ts#L275)
 
 Pagination, filtering, and sorting options for business location queries.
 
@@ -27,7 +27,7 @@ const options: BusinessLocationQueryOptions = {
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/business-location.schema.ts:277](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/business-location.schema.ts#L277) |
-| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/business-location.schema.ts:279](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/business-location.schema.ts#L279) |
-| <a id="filters"></a> `filters?` | [`BusinessLocationFilters`](BusinessLocationFilters.md) | Optional filters | [src/core/business-mgt/business-location.schema.ts:281](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/business-location.schema.ts#L281) |
-| <a id="sorting"></a> `sorting?` | [`BusinessLocationSorting`](BusinessLocationSorting.md) | Optional sorting | [src/core/business-mgt/business-location.schema.ts:283](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/business-location.schema.ts#L283) |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/business-location.schema.ts:277](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/business-location.schema.ts#L277) |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/business-location.schema.ts:279](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/business-location.schema.ts#L279) |
+| <a id="filters"></a> `filters?` | [`BusinessLocationFilters`](BusinessLocationFilters.md) | Optional filters | [src/core/business-mgt/business-location.schema.ts:281](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/business-location.schema.ts#L281) |
+| <a id="sorting"></a> `sorting?` | [`BusinessLocationSorting`](BusinessLocationSorting.md) | Optional sorting | [src/core/business-mgt/business-location.schema.ts:283](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/business-location.schema.ts#L283) |

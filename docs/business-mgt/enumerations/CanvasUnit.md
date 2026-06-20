@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.72**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.73**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: CanvasUnit
 
-Defined in: [src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts:18](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts#L18)
+Defined in: [src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts:18](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts#L18)
 
 Canvas coordinate unit.
 
@@ -14,6 +14,6 @@ Canvas coordinate unit.
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="px"></a> `PX` | `"px"` | [src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts:19](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts#L19) |
-| <a id="ft"></a> `FT` | `"ft"` | [src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts:20](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts#L20) |
-| <a id="m"></a> `M` | `"m"` | [src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts:21](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts#L21) |
+| <a id="px"></a> `PX` | `"px"` | [src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts:19](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts#L19) |
+| <a id="ft"></a> `FT` | `"ft"` | [src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts:20](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts#L20) |
+| <a id="m"></a> `M` | `"m"` | [src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts:21](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts#L21) |

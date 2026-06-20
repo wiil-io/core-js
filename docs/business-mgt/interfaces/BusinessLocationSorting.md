@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.72**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.73**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: BusinessLocationSorting
 
-Defined in: [src/core/business-mgt/business-location.schema.ts:253](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/business-location.schema.ts#L253)
+Defined in: [src/core/business-mgt/business-location.schema.ts:253](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/business-location.schema.ts#L253)
 
 Sorting options for business location queries.
 
@@ -16,5 +16,5 @@ Sorting options for business location queries.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="field"></a> `field` | `"createdAt"` \| `"updatedAt"` \| `"status"` \| `"name"` | Field to sort by | [src/core/business-mgt/business-location.schema.ts:255](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/business-location.schema.ts#L255) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/business-location.schema.ts:257](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/business-location.schema.ts#L257) |
+| <a id="field"></a> `field` | `"createdAt"` \| `"updatedAt"` \| `"status"` \| `"name"` | Field to sort by | [src/core/business-mgt/business-location.schema.ts:255](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/business-location.schema.ts#L255) |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/business-location.schema.ts:257](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/business-location.schema.ts#L257) |

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.72**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.73**](../../README.md)
 
 ***
 
@@ -22,7 +22,7 @@ type ProductOrderItemBase = {
 };
 ```
 
-Defined in: [src/core/business-mgt/product-management/product-order.schema.ts:175](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/product-management/product-order.schema.ts#L175)
+Defined in: [src/core/business-mgt/product-management/product-order.schema.ts:175](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/product-management/product-order.schema.ts#L175)
 
 Base product order item schema (without productOrderId for creation).
 
@@ -30,14 +30,14 @@ Base product order item schema (without productOrderId for creation).
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="productid"></a> `productId` | `string` | [src/core/business-mgt/product-management/product-order.schema.ts:31](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/product-management/product-order.schema.ts#L31) |
-| <a id="variantid"></a> `variantId?` | `string` \| `null` | [src/core/business-mgt/product-management/product-order.schema.ts:32](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/product-management/product-order.schema.ts#L32) |
-| <a id="itemname"></a> `itemName` | `string` | [src/core/business-mgt/product-management/product-order.schema.ts:33](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/product-management/product-order.schema.ts#L33) |
-| <a id="sku"></a> `sku?` | `string` \| `null` | [src/core/business-mgt/product-management/product-order.schema.ts:34](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/product-management/product-order.schema.ts#L34) |
-| <a id="quantity"></a> `quantity` | `number` | [src/core/business-mgt/product-management/product-order.schema.ts:35](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/product-management/product-order.schema.ts#L35) |
-| <a id="unitprice"></a> `unitPrice` | `number` | [src/core/business-mgt/product-management/product-order.schema.ts:36](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/product-management/product-order.schema.ts#L36) |
-| <a id="totalprice"></a> `totalPrice` | `number` | [src/core/business-mgt/product-management/product-order.schema.ts:37](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/product-management/product-order.schema.ts#L37) |
-| <a id="selectedvariant"></a> `selectedVariant?` | `string` | [src/core/business-mgt/product-management/product-order.schema.ts:40](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/product-management/product-order.schema.ts#L40) |
-| <a id="warrantyinfo"></a> `warrantyInfo?` | `string` \| `null` | [src/core/business-mgt/product-management/product-order.schema.ts:41](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/product-management/product-order.schema.ts#L41) |
-| <a id="status"></a> `status` | [`OrderStatus`](../../type-definitions/enumerations/OrderStatus.md) | [src/core/business-mgt/product-management/product-order.schema.ts:43](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/product-management/product-order.schema.ts#L43) |
-| <a id="notes"></a> `notes?` | `string` \| `null` | [src/core/business-mgt/product-management/product-order.schema.ts:44](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/product-management/product-order.schema.ts#L44) |
+| <a id="productid"></a> `productId` | `string` | [src/core/business-mgt/product-management/product-order.schema.ts:31](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/product-management/product-order.schema.ts#L31) |
+| <a id="variantid"></a> `variantId?` | `string` \| `null` | [src/core/business-mgt/product-management/product-order.schema.ts:32](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/product-management/product-order.schema.ts#L32) |
+| <a id="itemname"></a> `itemName` | `string` | [src/core/business-mgt/product-management/product-order.schema.ts:33](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/product-management/product-order.schema.ts#L33) |
+| <a id="sku"></a> `sku?` | `string` \| `null` | [src/core/business-mgt/product-management/product-order.schema.ts:34](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/product-management/product-order.schema.ts#L34) |
+| <a id="quantity"></a> `quantity` | `number` | [src/core/business-mgt/product-management/product-order.schema.ts:35](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/product-management/product-order.schema.ts#L35) |
+| <a id="unitprice"></a> `unitPrice` | `number` | [src/core/business-mgt/product-management/product-order.schema.ts:36](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/product-management/product-order.schema.ts#L36) |
+| <a id="totalprice"></a> `totalPrice` | `number` | [src/core/business-mgt/product-management/product-order.schema.ts:37](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/product-management/product-order.schema.ts#L37) |
+| <a id="selectedvariant"></a> `selectedVariant?` | `string` | [src/core/business-mgt/product-management/product-order.schema.ts:40](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/product-management/product-order.schema.ts#L40) |
+| <a id="warrantyinfo"></a> `warrantyInfo?` | `string` \| `null` | [src/core/business-mgt/product-management/product-order.schema.ts:41](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/product-management/product-order.schema.ts#L41) |
+| <a id="status"></a> `status` | [`OrderStatus`](../../type-definitions/enumerations/OrderStatus.md) | [src/core/business-mgt/product-management/product-order.schema.ts:43](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/product-management/product-order.schema.ts#L43) |
+| <a id="notes"></a> `notes?` | `string` \| `null` | [src/core/business-mgt/product-management/product-order.schema.ts:44](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/product-management/product-order.schema.ts#L44) |

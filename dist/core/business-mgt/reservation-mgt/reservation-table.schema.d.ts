@@ -84,7 +84,6 @@ export declare const UpdateTableReservationSchema: z.ZodObject<{
     source: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     time: z.ZodOptional<z.ZodNumber>;
     duration: z.ZodOptional<z.ZodNumber>;
-    status: z.ZodOptional<z.ZodDefault<z.ZodEnum<typeof ReservationStatus>>>;
     locationId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     customerId: z.ZodOptional<z.ZodString>;
     channelId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
@@ -102,6 +101,7 @@ export declare const UpdateTableReservationSchema: z.ZodObject<{
     isVip: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
     specialRequests: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     id: z.ZodString;
+    status: z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof ReservationStatus>>>;
 }, z.core.$strip>;
 export type TableReservation = z.infer<typeof TableReservationSchema>;
 export type CreateTableReservation = z.infer<typeof CreateTableReservationSchema>;

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.72**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.73**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ServicePricingRuleFilters
 
-Defined in: [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:147](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L147)
+Defined in: [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:147](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L147)
 
 Service pricing rule filter options.
  ServicePricingRuleFilters
@@ -15,9 +15,9 @@ Service pricing rule filter options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="search"></a> `search?` | `string` | Text search across name | [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:149](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L149) |
-| <a id="locationid"></a> `locationId?` | `string` | Filter by location ID | [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:151](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L151) |
-| <a id="applylevel"></a> `applyLevel?` | [`PricingRuleApplyLevel`](../../type-definitions/enumerations/PricingRuleApplyLevel.md) | Filter by apply level | [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:153](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L153) |
-| <a id="channel"></a> `channel?` | [`PricingChannel`](../../type-definitions/enumerations/PricingChannel.md) | Filter by pricing channel | [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:155](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L155) |
-| <a id="isstackable"></a> `isStackable?` | `boolean` | Filter by stackability | [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:157](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L157) |
-| <a id="isactive"></a> `isActive?` | `boolean` | Filter by active status | [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:159](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L159) |
+| <a id="search"></a> `search?` | `string` | Text search across name | [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:149](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L149) |
+| <a id="locationid"></a> `locationId?` | `string` | Filter by location ID | [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:151](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L151) |
+| <a id="applylevel"></a> `applyLevel?` | [`PricingRuleApplyLevel`](../../type-definitions/enumerations/PricingRuleApplyLevel.md) | Filter by apply level | [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:153](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L153) |
+| <a id="channel"></a> `channel?` | [`PricingChannel`](../../type-definitions/enumerations/PricingChannel.md) | Filter by pricing channel | [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:155](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L155) |
+| <a id="isstackable"></a> `isStackable?` | `boolean` | Filter by stackability | [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:157](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L157) |
+| <a id="isactive"></a> `isActive?` | `boolean` | Filter by active status | [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:159](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L159) |

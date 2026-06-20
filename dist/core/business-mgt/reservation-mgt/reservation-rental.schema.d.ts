@@ -214,7 +214,6 @@ export declare const CreateRentalReservationSchema: z.ZodObject<{
  * All fields optional except id.
  */
 export declare const UpdateRentalReservationSchema: z.ZodObject<{
-    status: z.ZodOptional<z.ZodDefault<z.ZodEnum<typeof RentalReservationStatus>>>;
     locationId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     customerId: z.ZodOptional<z.ZodString>;
     channelId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
@@ -261,6 +260,7 @@ export declare const UpdateRentalReservationSchema: z.ZodObject<{
         }>>;
     }, z.core.$strip>>>>;
     id: z.ZodString;
+    status: z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof RentalReservationStatus>>>;
 }, z.core.$strip>;
 export type RentalReservationPayment = z.infer<typeof RentalReservationPaymentSchema>;
 export type ChecklistCompletion = z.infer<typeof ChecklistCompletionSchema>;

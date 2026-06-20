@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.72**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.73**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: VariantAxisSorting
 
-Defined in: [src/core/business-mgt/product-management/product-variant-axis.schema.ts:135](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L135)
+Defined in: [src/core/business-mgt/product-management/product-variant-axis.schema.ts:135](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L135)
 
 Variant axis sorting options.
  VariantAxisSorting
@@ -15,5 +15,5 @@ Variant axis sorting options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="field"></a> `field` | `"createdAt"` \| `"name"` | Field to sort by | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:137](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L137) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:139](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L139) |
+| <a id="field"></a> `field` | `"createdAt"` \| `"name"` | Field to sort by | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:137](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L137) |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:139](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L139) |

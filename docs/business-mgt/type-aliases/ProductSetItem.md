@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.72**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.73**](../../README.md)
 
 ***
 
@@ -16,7 +16,7 @@ type ProductSetItem = {
 };
 ```
 
-Defined in: [src/core/business-mgt/product-management/product-set.schema.ts:271](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/product-management/product-set.schema.ts#L271)
+Defined in: [src/core/business-mgt/product-management/product-set.schema.ts:271](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/product-management/product-set.schema.ts#L271)
 
 Product set item schema.
 Represents a product included in a set with quantity and requirement specifications.
@@ -25,8 +25,8 @@ Represents a product included in a set with quantity and requirement specificati
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="productid"></a> `productId` | `string` | [src/core/business-mgt/product-management/product-set.schema.ts:81](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/product-management/product-set.schema.ts#L81) |
-| <a id="productvariantid"></a> `productVariantId?` | `string` \| `null` | [src/core/business-mgt/product-management/product-set.schema.ts:82](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/product-management/product-set.schema.ts#L82) |
-| <a id="quantity"></a> `quantity` | `number` | [src/core/business-mgt/product-management/product-set.schema.ts:83](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/product-management/product-set.schema.ts#L83) |
-| <a id="isrequired"></a> `isRequired` | `boolean` | [src/core/business-mgt/product-management/product-set.schema.ts:84](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/product-management/product-set.schema.ts#L84) |
-| <a id="displayorder"></a> `displayOrder?` | `number` | [src/core/business-mgt/product-management/product-set.schema.ts:85](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/product-management/product-set.schema.ts#L85) |
+| <a id="productid"></a> `productId` | `string` | [src/core/business-mgt/product-management/product-set.schema.ts:81](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/product-management/product-set.schema.ts#L81) |
+| <a id="productvariantid"></a> `productVariantId?` | `string` \| `null` | [src/core/business-mgt/product-management/product-set.schema.ts:82](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/product-management/product-set.schema.ts#L82) |
+| <a id="quantity"></a> `quantity` | `number` | [src/core/business-mgt/product-management/product-set.schema.ts:83](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/product-management/product-set.schema.ts#L83) |
+| <a id="isrequired"></a> `isRequired` | `boolean` | [src/core/business-mgt/product-management/product-set.schema.ts:84](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/product-management/product-set.schema.ts#L84) |
+| <a id="displayorder"></a> `displayOrder?` | `number` | [src/core/business-mgt/product-management/product-set.schema.ts:85](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/product-management/product-set.schema.ts#L85) |

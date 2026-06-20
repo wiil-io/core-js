@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.72**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.73**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ModifierOptionSorting
 
-Defined in: [src/core/business-mgt/menu-management/modifier.schema.ts:457](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/menu-management/modifier.schema.ts#L457)
+Defined in: [src/core/business-mgt/menu-management/modifier.schema.ts:457](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/menu-management/modifier.schema.ts#L457)
 
 Modifier option sorting options.
  ModifierOptionSorting
@@ -15,5 +15,5 @@ Modifier option sorting options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="field"></a> `field` | `"createdAt"` \| `"displayOrder"` \| `"name"` | Field to sort by | [src/core/business-mgt/menu-management/modifier.schema.ts:459](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/menu-management/modifier.schema.ts#L459) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/menu-management/modifier.schema.ts:461](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/menu-management/modifier.schema.ts#L461) |
+| <a id="field"></a> `field` | `"createdAt"` \| `"displayOrder"` \| `"name"` | Field to sort by | [src/core/business-mgt/menu-management/modifier.schema.ts:459](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/menu-management/modifier.schema.ts#L459) |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/menu-management/modifier.schema.ts:461](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/menu-management/modifier.schema.ts#L461) |

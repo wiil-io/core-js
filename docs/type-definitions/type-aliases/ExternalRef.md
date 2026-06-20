@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.72**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.73**](../../README.md)
 
 ***
 
@@ -15,7 +15,7 @@ type ExternalRef = {
 };
 ```
 
-Defined in: [src/core/type-definitions/business-definitions.ts:13](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/type-definitions/business-definitions.ts#L13)
+Defined in: [src/core/type-definitions/business-definitions.ts:13](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/type-definitions/business-definitions.ts#L13)
 
 External reference schema for synchronization with external systems.
 
@@ -23,7 +23,7 @@ External reference schema for synchronization with external systems.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="externalid"></a> `externalId` | `string` | [src/core/type-definitions/business-definitions.ts:7](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/type-definitions/business-definitions.ts#L7) |
-| <a id="source"></a> `source` | `string` | [src/core/type-definitions/business-definitions.ts:8](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/type-definitions/business-definitions.ts#L8) |
-| <a id="url"></a> `url?` | `string` \| `null` | [src/core/type-definitions/business-definitions.ts:9](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/type-definitions/business-definitions.ts#L9) |
-| <a id="syncedat"></a> `syncedAt?` | `number` \| `null` | [src/core/type-definitions/business-definitions.ts:10](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/type-definitions/business-definitions.ts#L10) |
+| <a id="externalid"></a> `externalId` | `string` | [src/core/type-definitions/business-definitions.ts:7](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/type-definitions/business-definitions.ts#L7) |
+| <a id="source"></a> `source` | `string` | [src/core/type-definitions/business-definitions.ts:8](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/type-definitions/business-definitions.ts#L8) |
+| <a id="url"></a> `url?` | `string` \| `null` | [src/core/type-definitions/business-definitions.ts:9](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/type-definitions/business-definitions.ts#L9) |
+| <a id="syncedat"></a> `syncedAt?` | `number` \| `null` | [src/core/type-definitions/business-definitions.ts:10](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/type-definitions/business-definitions.ts#L10) |

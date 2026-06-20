@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.72**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.73**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ServiceProviderTimeOffFilters
 
-Defined in: [src/core/business-mgt/service-management/service-time-off.schema.ts:121](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/service-management/service-time-off.schema.ts#L121)
+Defined in: [src/core/business-mgt/service-management/service-time-off.schema.ts:121](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/service-management/service-time-off.schema.ts#L121)
 
 Service provider time off filter options.
  ServiceProviderTimeOffFilters
@@ -15,8 +15,8 @@ Service provider time off filter options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="providerid"></a> `providerId?` | `string` | Filter by provider ID | [src/core/business-mgt/service-management/service-time-off.schema.ts:123](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/service-management/service-time-off.schema.ts#L123) |
-| <a id="type"></a> `type?` | [`ServiceProviderTimeOffType`](../../type-definitions/enumerations/ServiceProviderTimeOffType.md) | Filter by time-off type | [src/core/business-mgt/service-management/service-time-off.schema.ts:125](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/service-management/service-time-off.schema.ts#L125) |
-| <a id="status"></a> `status?` | [`ServiceProviderTimeOffStatus`](../../type-definitions/enumerations/ServiceProviderTimeOffStatus.md) | Filter by approval status | [src/core/business-mgt/service-management/service-time-off.schema.ts:127](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/service-management/service-time-off.schema.ts#L127) |
-| <a id="fromdate"></a> `fromDate?` | `number` | Filter by start date (Unix epoch seconds) | [src/core/business-mgt/service-management/service-time-off.schema.ts:129](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/service-management/service-time-off.schema.ts#L129) |
-| <a id="todate"></a> `toDate?` | `number` | Filter by end date (Unix epoch seconds) | [src/core/business-mgt/service-management/service-time-off.schema.ts:131](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/service-management/service-time-off.schema.ts#L131) |
+| <a id="providerid"></a> `providerId?` | `string` | Filter by provider ID | [src/core/business-mgt/service-management/service-time-off.schema.ts:123](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/service-management/service-time-off.schema.ts#L123) |
+| <a id="type"></a> `type?` | [`ServiceProviderTimeOffType`](../../type-definitions/enumerations/ServiceProviderTimeOffType.md) | Filter by time-off type | [src/core/business-mgt/service-management/service-time-off.schema.ts:125](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/service-management/service-time-off.schema.ts#L125) |
+| <a id="status"></a> `status?` | [`ServiceProviderTimeOffStatus`](../../type-definitions/enumerations/ServiceProviderTimeOffStatus.md) | Filter by approval status | [src/core/business-mgt/service-management/service-time-off.schema.ts:127](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/service-management/service-time-off.schema.ts#L127) |
+| <a id="fromdate"></a> `fromDate?` | `number` | Filter by start date (Unix epoch seconds) | [src/core/business-mgt/service-management/service-time-off.schema.ts:129](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/service-management/service-time-off.schema.ts#L129) |
+| <a id="todate"></a> `toDate?` | `number` | Filter by end date (Unix epoch seconds) | [src/core/business-mgt/service-management/service-time-off.schema.ts:131](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/service-management/service-time-off.schema.ts#L131) |

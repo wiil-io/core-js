@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.72**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.73**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const UpdateDynamicWebAgentSchema: ZodObject<UpdateDynamicWebAgent>;
 ```
 
-Defined in: [src/core/service-configuration/dynamic\_setup/web-agent-setup.ts:55](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/service-configuration/dynamic_setup/web-agent-setup.ts#L55)
+Defined in: [src/core/service-configuration/dynamic\_setup/web-agent-setup.ts:55](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/service-configuration/dynamic_setup/web-agent-setup.ts#L55)
 
 Schema for updating an existing web agent configuration.
 All fields are optional except id.

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.72**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.73**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: ReservationType
 
-Defined in: [src/core/business-mgt/bookings.shared.schema.ts:28](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/bookings.shared.schema.ts#L28)
+Defined in: [src/core/business-mgt/bookings.shared.schema.ts:28](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/bookings.shared.schema.ts#L28)
 
 Reservation type options.
 
@@ -14,7 +14,7 @@ Reservation type options.
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="table"></a> `Table` | `"TABLE"` | [src/core/business-mgt/bookings.shared.schema.ts:29](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/bookings.shared.schema.ts#L29) |
-| <a id="room"></a> `Room` | `"ROOM"` | [src/core/business-mgt/bookings.shared.schema.ts:30](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/bookings.shared.schema.ts#L30) |
-| <a id="rental"></a> `Rental` | `"RENTAL"` | [src/core/business-mgt/bookings.shared.schema.ts:31](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/bookings.shared.schema.ts#L31) |
-| <a id="other"></a> `Other` | `"OTHER"` | [src/core/business-mgt/bookings.shared.schema.ts:32](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/bookings.shared.schema.ts#L32) |
+| <a id="table"></a> `Table` | `"TABLE"` | [src/core/business-mgt/bookings.shared.schema.ts:29](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/bookings.shared.schema.ts#L29) |
+| <a id="room"></a> `Room` | `"ROOM"` | [src/core/business-mgt/bookings.shared.schema.ts:30](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/bookings.shared.schema.ts#L30) |
+| <a id="rental"></a> `Rental` | `"RENTAL"` | [src/core/business-mgt/bookings.shared.schema.ts:31](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/bookings.shared.schema.ts#L31) |
+| <a id="other"></a> `Other` | `"OTHER"` | [src/core/business-mgt/bookings.shared.schema.ts:32](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/bookings.shared.schema.ts#L32) |

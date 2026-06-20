@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.72**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.73**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const PhoneNumberPurchaseSchema: ZodObject<PhoneNumberPurchase>;
 ```
 
-Defined in: [src/core/service-configuration/phone-number.schema.ts:132](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/service-configuration/phone-number.schema.ts#L132)
+Defined in: [src/core/service-configuration/phone-number.schema.ts:132](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/service-configuration/phone-number.schema.ts#L132)
 
 Zod schema for phone number purchase transaction.
 

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.72**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.73**](../../README.md)
 
 ***
 
@@ -14,7 +14,7 @@ type CanvasDimensions = {
 };
 ```
 
-Defined in: [src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts:94](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts#L94)
+Defined in: [src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts:94](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts#L94)
 
 Canvas dimensions schema.
 Defines the coordinate space used for floor plan rendering.
@@ -23,6 +23,6 @@ Defines the coordinate space used for floor plan rendering.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="width"></a> `width` | `number` | [src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts:38](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts#L38) |
-| <a id="height"></a> `height` | `number` | [src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts:39](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts#L39) |
-| <a id="unit"></a> `unit` | [`CanvasUnit`](../enumerations/CanvasUnit.md) | [src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts:40](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts#L40) |
+| <a id="width"></a> `width` | `number` | [src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts:38](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts#L38) |
+| <a id="height"></a> `height` | `number` | [src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts:39](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts#L39) |
+| <a id="unit"></a> `unit` | [`CanvasUnit`](../enumerations/CanvasUnit.md) | [src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts:40](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/reservation-mgt/reservation-table-layout.schema.ts#L40) |

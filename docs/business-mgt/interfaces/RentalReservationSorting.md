@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.72**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.73**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: RentalReservationSorting
 
-Defined in: [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:223](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L223)
+Defined in: [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:225](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L225)
 
 Rental reservation sorting options.
  RentalReservationSorting
@@ -15,5 +15,5 @@ Rental reservation sorting options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="field"></a> `field` | `"createdAt"` \| `"startAt"` \| `"endAt"` | Field to sort by | [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:225](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L225) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:227](https://github.com/wiil-io/core-js/blob/c39005a6978571a1c92c2a387def93d246a76ba3/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L227) |
+| <a id="field"></a> `field` | `"createdAt"` \| `"startAt"` \| `"endAt"` | Field to sort by | [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:227](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L227) |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:229](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L229) |

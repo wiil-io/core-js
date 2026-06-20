@@ -68,8 +68,10 @@ export const CreateTableReservationSchema = TableReservationSchema.omit({
  * Schema for updating an existing table reservation.
  * All fields optional except id.
  */
-export const UpdateTableReservationSchema = CreateTableReservationSchema.partial().safeExtend({
+export const UpdateTableReservationSchema = CreateTableReservationSchema.partial().extend({
     id: z.string().describe("Unique identifier of the table reservation to update."),
+    // Re-declared without the base `.default()` so partial updates don't inject a status the caller never set
+    status: z.enum(ReservationStatus).nullable().optional().describe("Table reservation lifecycle status"),
 });
 
 // ============================================================================
