@@ -44,8 +44,8 @@ exports.TaxRuleSchema = base_schema_1.BaseModelSchema.safeExtend({
     isInclusive: zod_1.z.boolean().default(false),
     priority: zod_1.z.number().int().nonnegative().default(0),
     isCompound: zod_1.z.boolean().default(false),
-    effectiveFrom: zod_1.z.number().int().nonnegative().optional(),
-    effectiveTo: zod_1.z.number().int().nonnegative().optional(),
+    effectiveFrom: zod_1.z.number().int().nonnegative().nullable().optional(),
+    effectiveTo: zod_1.z.number().int().nonnegative().nullable().optional(),
     isActive: zod_1.z.boolean().default(true),
 }).superRefine((data, ctx) => {
     if (data.rateType === type_definitions_1.TaxRateType.PERCENTAGE && data.rateValue > 100) {
@@ -55,7 +55,9 @@ exports.TaxRuleSchema = base_schema_1.BaseModelSchema.safeExtend({
             message: "rateValue cannot exceed 100 for percentage taxes",
         });
     }
-    if (data.effectiveFrom !== undefined &&
+    if (data.effectiveFrom !== null &&
+        data.effectiveFrom !== undefined &&
+        data.effectiveTo !== null &&
         data.effectiveTo !== undefined &&
         data.effectiveTo < data.effectiveFrom) {
         ctx.addIssue({

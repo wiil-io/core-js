@@ -212,14 +212,14 @@ Base order item schema without IDs (used for creation).
 | productId | string | Yes | - | Product reference |
 | variantId | string | No | null | Product variant reference |
 | itemName | string | Yes | - | Product name captured at order time |
-| sku | string | No | null | SKU captured at order time |
+| sku | string \| null | No | null | SKU captured at order time |
 | quantity | integer | Yes | - | Quantity ordered (positive) |
 | unitPrice | number | Yes | - | Price per unit at order time |
 | totalPrice | number | Yes | - | Total: unitPrice × quantity |
 | selectedVariant | string | No | null | Selected variant specification |
-| warrantyInfo | string | No | null | Warranty terms captured at purchase |
+| warrantyInfo | string \| null | No | null | Warranty terms captured at purchase |
 | status | enum | No | "pending" | Item fulfillment status |
-| notes | string | No | null | Internal notes for item |
+| notes | string \| null | No | null | Internal notes for item |
 
 ### Example
 

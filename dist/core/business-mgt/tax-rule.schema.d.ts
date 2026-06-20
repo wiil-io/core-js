@@ -39,8 +39,8 @@ export declare const TaxRuleSchema: z.ZodObject<{
     isInclusive: z.ZodDefault<z.ZodBoolean>;
     priority: z.ZodDefault<z.ZodNumber>;
     isCompound: z.ZodDefault<z.ZodBoolean>;
-    effectiveFrom: z.ZodOptional<z.ZodNumber>;
-    effectiveTo: z.ZodOptional<z.ZodNumber>;
+    effectiveFrom: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
+    effectiveTo: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
     isActive: z.ZodDefault<z.ZodBoolean>;
 }, z.core.$strip>;
 /**
@@ -55,8 +55,8 @@ export declare const CreateTaxRuleSchema: z.ZodObject<{
     scope: z.ZodDefault<z.ZodEnum<typeof TaxScope>>;
     catalogScope: z.ZodDefault<z.ZodEnum<typeof TaxCatalogScope>>;
     priority: z.ZodDefault<z.ZodNumber>;
-    effectiveFrom: z.ZodOptional<z.ZodNumber>;
-    effectiveTo: z.ZodOptional<z.ZodNumber>;
+    effectiveFrom: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
+    effectiveTo: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
     externalTaxId: z.ZodOptional<z.ZodString>;
     rateType: z.ZodDefault<z.ZodEnum<typeof TaxRateType>>;
     rateValue: z.ZodNumber;
@@ -89,8 +89,8 @@ export declare const UpdateTaxRuleSchema: z.ZodObject<{
     scope: z.ZodOptional<z.ZodDefault<z.ZodEnum<typeof TaxScope>>>;
     catalogScope: z.ZodOptional<z.ZodDefault<z.ZodEnum<typeof TaxCatalogScope>>>;
     priority: z.ZodOptional<z.ZodDefault<z.ZodNumber>>;
-    effectiveFrom: z.ZodOptional<z.ZodOptional<z.ZodNumber>>;
-    effectiveTo: z.ZodOptional<z.ZodOptional<z.ZodNumber>>;
+    effectiveFrom: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
+    effectiveTo: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodNumber>>>;
     externalTaxId: z.ZodOptional<z.ZodOptional<z.ZodString>>;
     rateType: z.ZodOptional<z.ZodDefault<z.ZodEnum<typeof TaxRateType>>>;
     rateValue: z.ZodOptional<z.ZodNumber>;

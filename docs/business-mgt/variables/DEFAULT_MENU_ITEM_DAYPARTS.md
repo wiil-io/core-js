@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.65**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.66**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const DEFAULT_MENU_ITEM_DAYPARTS: z.infer<typeof MenuItemDaypartSchema>[];
 ```
 
-Defined in: [src/core/business-mgt/order.schema.ts:232](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/order.schema.ts#L232)
+Defined in: [src/core/business-mgt/order.schema.ts:232](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/order.schema.ts#L232)
 
 Default menu item dayparts.
 Standard time windows for meal periods.

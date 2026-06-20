@@ -66,8 +66,10 @@ export const DiscountRuleSchema = BaseModelSchema.safeExtend({
         });
     }
     if (
-        data.effectiveFrom != null &&
-        data.effectiveTo != null &&
+        data.effectiveFrom !== null &&
+        data.effectiveFrom !== undefined &&
+        data.effectiveTo !== null &&
+        data.effectiveTo !== undefined &&
         data.effectiveTo < data.effectiveFrom
     ) {
         ctx.addIssue({

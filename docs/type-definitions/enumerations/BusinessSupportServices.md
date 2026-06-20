@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.65**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.66**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: BusinessSupportServices
 
-Defined in: [src/core/type-definitions/account-definitions.ts:70](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/type-definitions/account-definitions.ts#L70)
+Defined in: [src/core/type-definitions/account-definitions.ts:70](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/type-definitions/account-definitions.ts#L70)
 
 Business support services enumeration.
 
@@ -25,9 +25,9 @@ const enabledServices: BusinessSupportServices[] = [
 
 | Enumeration Member | Value | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="appointment_management"></a> `APPOINTMENT_MANAGEMENT` | `"appointment_management"` | Appointment scheduling and management functionality | [src/core/type-definitions/account-definitions.ts:72](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/type-definitions/account-definitions.ts#L72) |
-| <a id="menu_order_management"></a> `MENU_ORDER_MANAGEMENT` | `"menu_order_management"` | Restaurant menu and food order management functionality | [src/core/type-definitions/account-definitions.ts:74](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/type-definitions/account-definitions.ts#L74) |
-| <a id="product_order_management"></a> `PRODUCT_ORDER_MANAGEMENT` | `"product_order_management"` | E-commerce product order management functionality | [src/core/type-definitions/account-definitions.ts:76](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/type-definitions/account-definitions.ts#L76) |
-| <a id="reservation_management"></a> `RESERVATION_MANAGEMENT` | `"reservation_management"` | Table and venue reservation management functionality | [src/core/type-definitions/account-definitions.ts:78](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/type-definitions/account-definitions.ts#L78) |
-| <a id="property_management"></a> `PROPERTY_MANAGEMENT` | `"property_management"` | Property listing and rental management functionality | [src/core/type-definitions/account-definitions.ts:80](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/type-definitions/account-definitions.ts#L80) |
-| <a id="none"></a> `NONE` | `"none"` | No business support services enabled | [src/core/type-definitions/account-definitions.ts:82](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/type-definitions/account-definitions.ts#L82) |
+| <a id="appointment_management"></a> `APPOINTMENT_MANAGEMENT` | `"appointment_management"` | Appointment scheduling and management functionality | [src/core/type-definitions/account-definitions.ts:72](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/type-definitions/account-definitions.ts#L72) |
+| <a id="menu_order_management"></a> `MENU_ORDER_MANAGEMENT` | `"menu_order_management"` | Restaurant menu and food order management functionality | [src/core/type-definitions/account-definitions.ts:74](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/type-definitions/account-definitions.ts#L74) |
+| <a id="product_order_management"></a> `PRODUCT_ORDER_MANAGEMENT` | `"product_order_management"` | E-commerce product order management functionality | [src/core/type-definitions/account-definitions.ts:76](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/type-definitions/account-definitions.ts#L76) |
+| <a id="reservation_management"></a> `RESERVATION_MANAGEMENT` | `"reservation_management"` | Table and venue reservation management functionality | [src/core/type-definitions/account-definitions.ts:78](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/type-definitions/account-definitions.ts#L78) |
+| <a id="property_management"></a> `PROPERTY_MANAGEMENT` | `"property_management"` | Property listing and rental management functionality | [src/core/type-definitions/account-definitions.ts:80](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/type-definitions/account-definitions.ts#L80) |
+| <a id="none"></a> `NONE` | `"none"` | No business support services enabled | [src/core/type-definitions/account-definitions.ts:82](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/type-definitions/account-definitions.ts#L82) |

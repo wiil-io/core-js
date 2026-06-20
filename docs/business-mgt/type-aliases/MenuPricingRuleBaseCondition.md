@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.65**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.66**](../../README.md)
 
 ***
 
@@ -18,7 +18,7 @@ type MenuPricingRuleBaseCondition = {
 };
 ```
 
-Defined in: [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:131](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L131)
+Defined in: [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:131](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L131)
 
 Menu pricing rule base condition schema.
 Base conditions for menu pricing rules including time and amount restrictions.
@@ -27,10 +27,10 @@ Base conditions for menu pricing rules including time and amount restrictions.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="channel"></a> `channel` | [`PricingChannel`](../../type-definitions/enumerations/PricingChannel.md) | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:32](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L32) |
-| <a id="minorderamount"></a> `minOrderAmount?` | `number` \| `null` | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:33](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L33) |
-| <a id="maxorderamount"></a> `maxOrderAmount?` | `number` \| `null` | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:34](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L34) |
-| <a id="customergroupids"></a> `customerGroupIds?` | `string`[] \| `null` | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:35](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L35) |
-| <a id="dayofweek"></a> `dayOfWeek?` | `number`[] \| `null` | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:36](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L36) |
-| <a id="timestart"></a> `timeStart?` | `string` \| `null` | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:37](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L37) |
-| <a id="timeend"></a> `timeEnd?` | `string` \| `null` | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:38](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L38) |
+| <a id="channel"></a> `channel` | [`PricingChannel`](../../type-definitions/enumerations/PricingChannel.md) | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:32](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L32) |
+| <a id="minorderamount"></a> `minOrderAmount?` | `number` \| `null` | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:33](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L33) |
+| <a id="maxorderamount"></a> `maxOrderAmount?` | `number` \| `null` | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:34](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L34) |
+| <a id="customergroupids"></a> `customerGroupIds?` | `string`[] \| `null` | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:35](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L35) |
+| <a id="dayofweek"></a> `dayOfWeek?` | `number`[] \| `null` | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:36](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L36) |
+| <a id="timestart"></a> `timeStart?` | `string` \| `null` | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:37](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L37) |
+| <a id="timeend"></a> `timeEnd?` | `string` \| `null` | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:38](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L38) |

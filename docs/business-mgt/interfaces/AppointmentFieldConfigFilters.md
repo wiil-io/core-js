@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.65**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.66**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: AppointmentFieldConfigFilters
 
-Defined in: [src/core/business-mgt/service-management/appointment-field-config.schema.ts:90](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/service-management/appointment-field-config.schema.ts#L90)
+Defined in: [src/core/business-mgt/service-management/appointment-field-config.schema.ts:90](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/service-management/appointment-field-config.schema.ts#L90)
 
 Appointment field config filter options.
  AppointmentFieldConfigFilters
@@ -15,6 +15,6 @@ Appointment field config filter options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="reusedetails"></a> `reuseDetails?` | `boolean` | Filter by reuseDetails setting | [src/core/business-mgt/service-management/appointment-field-config.schema.ts:92](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/service-management/appointment-field-config.schema.ts#L92) |
-| <a id="ensureemail"></a> `ensureEmail?` | `boolean` | Filter by ensureEmail setting | [src/core/business-mgt/service-management/appointment-field-config.schema.ts:94](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/service-management/appointment-field-config.schema.ts#L94) |
-| <a id="ensurephone"></a> `ensurePhone?` | `boolean` | Filter by ensurePhone setting | [src/core/business-mgt/service-management/appointment-field-config.schema.ts:96](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/service-management/appointment-field-config.schema.ts#L96) |
+| <a id="reusedetails"></a> `reuseDetails?` | `boolean` | Filter by reuseDetails setting | [src/core/business-mgt/service-management/appointment-field-config.schema.ts:92](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/service-management/appointment-field-config.schema.ts#L92) |
+| <a id="ensureemail"></a> `ensureEmail?` | `boolean` | Filter by ensureEmail setting | [src/core/business-mgt/service-management/appointment-field-config.schema.ts:94](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/service-management/appointment-field-config.schema.ts#L94) |
+| <a id="ensurephone"></a> `ensurePhone?` | `boolean` | Filter by ensurePhone setting | [src/core/business-mgt/service-management/appointment-field-config.schema.ts:96](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/service-management/appointment-field-config.schema.ts#L96) |

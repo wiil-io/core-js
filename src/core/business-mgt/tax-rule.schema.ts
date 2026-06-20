@@ -44,8 +44,8 @@ export const TaxRuleSchema = BaseModelSchema.safeExtend({
     isInclusive: z.boolean().default(false),
     priority: z.number().int().nonnegative().default(0),
     isCompound: z.boolean().default(false),
-    effectiveFrom: z.number().int().nonnegative().optional(),
-    effectiveTo: z.number().int().nonnegative().optional(),
+    effectiveFrom: z.number().int().nonnegative().nullable().optional(),
+    effectiveTo: z.number().int().nonnegative().nullable().optional(),
     isActive: z.boolean().default(true),
 }).superRefine((data, ctx) => {
     if (data.rateType === TaxRateType.PERCENTAGE && data.rateValue > 100) {
@@ -56,7 +56,9 @@ export const TaxRuleSchema = BaseModelSchema.safeExtend({
         });
     }
     if (
+        data.effectiveFrom !== null &&
         data.effectiveFrom !== undefined &&
+        data.effectiveTo !== null &&
         data.effectiveTo !== undefined &&
         data.effectiveTo < data.effectiveFrom
     ) {

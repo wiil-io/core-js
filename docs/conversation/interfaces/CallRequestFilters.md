@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.65**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.66**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: CallRequestFilters
 
-Defined in: [src/core/conversation/outbound-call.schema.ts:148](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/conversation/outbound-call.schema.ts#L148)
+Defined in: [src/core/conversation/outbound-call.schema.ts:148](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/conversation/outbound-call.schema.ts#L148)
 
 Call request filter options.
  CallRequestFilters
@@ -15,10 +15,10 @@ Call request filter options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="search"></a> `search?` | `string` | Text search across phone numbers | [src/core/conversation/outbound-call.schema.ts:150](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/conversation/outbound-call.schema.ts#L150) |
-| <a id="status"></a> `status?` | [`CallRequestStatus`](../../type-definitions/enumerations/CallRequestStatus.md) | Filter by call status | [src/core/conversation/outbound-call.schema.ts:152](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/conversation/outbound-call.schema.ts#L152) |
-| <a id="scheduletype"></a> `scheduleType?` | [`ScheduleType`](../../type-definitions/enumerations/ScheduleType.md) | Filter by schedule type | [src/core/conversation/outbound-call.schema.ts:154](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/conversation/outbound-call.schema.ts#L154) |
-| <a id="agentconfigurationid"></a> `agentConfigurationId?` | `string` | Filter by agent configuration ID | [src/core/conversation/outbound-call.schema.ts:156](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/conversation/outbound-call.schema.ts#L156) |
-| <a id="daterange"></a> `dateRange?` | \{ `start?`: `Date`; `end?`: `Date`; \} | Filter by date range (scheduledAt) | [src/core/conversation/outbound-call.schema.ts:158](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/conversation/outbound-call.schema.ts#L158) |
-| `dateRange.start?` | `Date` | - | [src/core/conversation/outbound-call.schema.ts:159](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/conversation/outbound-call.schema.ts#L159) |
-| `dateRange.end?` | `Date` | - | [src/core/conversation/outbound-call.schema.ts:160](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/conversation/outbound-call.schema.ts#L160) |
+| <a id="search"></a> `search?` | `string` | Text search across phone numbers | [src/core/conversation/outbound-call.schema.ts:150](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/conversation/outbound-call.schema.ts#L150) |
+| <a id="status"></a> `status?` | [`CallRequestStatus`](../../type-definitions/enumerations/CallRequestStatus.md) | Filter by call status | [src/core/conversation/outbound-call.schema.ts:152](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/conversation/outbound-call.schema.ts#L152) |
+| <a id="scheduletype"></a> `scheduleType?` | [`ScheduleType`](../../type-definitions/enumerations/ScheduleType.md) | Filter by schedule type | [src/core/conversation/outbound-call.schema.ts:154](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/conversation/outbound-call.schema.ts#L154) |
+| <a id="agentconfigurationid"></a> `agentConfigurationId?` | `string` | Filter by agent configuration ID | [src/core/conversation/outbound-call.schema.ts:156](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/conversation/outbound-call.schema.ts#L156) |
+| <a id="daterange"></a> `dateRange?` | \{ `start?`: `Date`; `end?`: `Date`; \} | Filter by date range (scheduledAt) | [src/core/conversation/outbound-call.schema.ts:158](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/conversation/outbound-call.schema.ts#L158) |
+| `dateRange.start?` | `Date` | - | [src/core/conversation/outbound-call.schema.ts:159](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/conversation/outbound-call.schema.ts#L159) |
+| `dateRange.end?` | `Date` | - | [src/core/conversation/outbound-call.schema.ts:160](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/conversation/outbound-call.schema.ts#L160) |

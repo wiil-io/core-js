@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.65**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.66**](../../README.md)
 
 ***
 
@@ -16,7 +16,7 @@ type UpdateAppointmentAdditionalInfo = {
 };
 ```
 
-Defined in: [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:90](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L90)
+Defined in: [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:90](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L90)
 
 Schema for updating appointment additional info.
 All fields optional except id (required).
@@ -25,8 +25,8 @@ All fields optional except id (required).
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="businessserviceid"></a> `businessServiceId?` | `string` | [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:56](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L56) |
-| <a id="appointmentid"></a> `appointmentId?` | `string` | [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:57](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L57) |
-| <a id="customerid"></a> `customerId?` | `string` | [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:58](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L58) |
-| <a id="data"></a> `data?` | `Record`\<`string`, `any`\> | [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:59](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L59) |
-| <a id="id"></a> `id` | `string` | [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:81](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L81) |
+| <a id="businessserviceid"></a> `businessServiceId?` | `string` | [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:56](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L56) |
+| <a id="appointmentid"></a> `appointmentId?` | `string` | [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:57](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L57) |
+| <a id="customerid"></a> `customerId?` | `string` | [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:58](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L58) |
+| <a id="data"></a> `data?` | `Record`\<`string`, `any`\> | [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:59](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L59) |
+| <a id="id"></a> `id` | `string` | [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:81](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L81) |

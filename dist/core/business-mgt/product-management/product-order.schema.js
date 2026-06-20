@@ -34,15 +34,15 @@ exports.ProductOrderItemBaseSchema = zod_1.default.object({
     productId: zod_1.default.string().describe("References Product from product-config.schema being ordered. Links order item to catalog for inventory tracking, fulfillment details, and product information."),
     variantId: zod_1.default.string().nullable().optional().describe("Product variant ID being ordered. Links to specific SKU variant for accurate inventory tracking and pricing."),
     itemName: zod_1.default.string().describe("Display name of the product captured at order time. Preserved even if catalog product is later renamed, ensuring historical order accuracy."),
-    sku: zod_1.default.string().optional().describe("Stock Keeping Unit identifier captured at order time for warehouse fulfillment and inventory systems. Links to product catalog SKU for picking and packing."),
+    sku: zod_1.default.string().nullable().optional().describe("Stock Keeping Unit identifier captured at order time for warehouse fulfillment and inventory systems. Links to product catalog SKU for picking and packing."),
     quantity: zod_1.default.number().int().positive().describe("Number of units ordered for this product. Used for inventory deduction, pricing calculations, and fulfillment quantities."),
     unitPrice: zod_1.default.number().nonnegative().describe("Price per unit at the time of order. Captures pricing snapshot for order integrity even if catalog prices change later."),
     totalPrice: zod_1.default.number().nonnegative().describe("Total price for this line item: unitPrice × quantity. Used in order subtotal calculations."),
     // Retail-specific
     selectedVariant: zod_1.default.string().optional().describe("Selected product variant specification (e.g., 'Large/Blue', 'XL', '128GB'). Captured for fulfillment accuracy and inventory tracking of specific variants."),
-    warrantyInfo: zod_1.default.string().optional().describe("Warranty terms and coverage details captured at purchase time. Preserved for customer reference and service claim validation."),
+    warrantyInfo: zod_1.default.string().nullable().optional().describe("Warranty terms and coverage details captured at purchase time. Preserved for customer reference and service claim validation."),
     status: zod_1.default.enum(type_definitions_1.OrderStatus).default(type_definitions_1.OrderStatus.PENDING).describe("Current fulfillment status of this individual item. Enables per-item tracking in warehouse workflow. Defaults to PENDING."),
-    notes: zod_1.default.string().optional().describe("Internal notes about this item for warehouse or fulfillment staff. Not visible to customers.")
+    notes: zod_1.default.string().nullable().optional().describe("Internal notes about this item for warehouse or fulfillment staff. Not visible to customers.")
 });
 /**
  * Product order item schema with IDs (for existing items).

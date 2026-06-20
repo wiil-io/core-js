@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.65**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.66**](../../README.md)
 
 ***
 
@@ -19,7 +19,7 @@ type AppliedModifier = {
 };
 ```
 
-Defined in: [src/core/business-mgt/menu-management/modifier.schema.ts:378](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/menu-management/modifier.schema.ts#L378)
+Defined in: [src/core/business-mgt/menu-management/modifier.schema.ts:378](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/menu-management/modifier.schema.ts#L378)
 
 Applied modifier schema.
 Modifier selected on an order item.
@@ -28,11 +28,11 @@ Modifier selected on an order item.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="modifiergroupid"></a> `modifierGroupId?` | `string` \| `null` | [src/core/business-mgt/menu-management/modifier.schema.ts:228](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/menu-management/modifier.schema.ts#L228) |
-| <a id="modifieroptionid"></a> `modifierOptionId?` | `string` \| `null` | [src/core/business-mgt/menu-management/modifier.schema.ts:229](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/menu-management/modifier.schema.ts#L229) |
-| <a id="externalmodifiergroupid"></a> `externalModifierGroupId?` | `string` \| `null` | [src/core/business-mgt/menu-management/modifier.schema.ts:230](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/menu-management/modifier.schema.ts#L230) |
-| <a id="externalmodifieroptionid"></a> `externalModifierOptionId?` | `string` \| `null` | [src/core/business-mgt/menu-management/modifier.schema.ts:231](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/menu-management/modifier.schema.ts#L231) |
-| <a id="groupname"></a> `groupName` | `string` | [src/core/business-mgt/menu-management/modifier.schema.ts:232](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/menu-management/modifier.schema.ts#L232) |
-| <a id="optionname"></a> `optionName` | `string` | [src/core/business-mgt/menu-management/modifier.schema.ts:233](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/menu-management/modifier.schema.ts#L233) |
-| <a id="quantity"></a> `quantity` | `number` | [src/core/business-mgt/menu-management/modifier.schema.ts:234](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/menu-management/modifier.schema.ts#L234) |
-| <a id="pricedelta"></a> `priceDelta` | `number` | [src/core/business-mgt/menu-management/modifier.schema.ts:235](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/menu-management/modifier.schema.ts#L235) |
+| <a id="modifiergroupid"></a> `modifierGroupId?` | `string` \| `null` | [src/core/business-mgt/menu-management/modifier.schema.ts:228](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/menu-management/modifier.schema.ts#L228) |
+| <a id="modifieroptionid"></a> `modifierOptionId?` | `string` \| `null` | [src/core/business-mgt/menu-management/modifier.schema.ts:229](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/menu-management/modifier.schema.ts#L229) |
+| <a id="externalmodifiergroupid"></a> `externalModifierGroupId?` | `string` \| `null` | [src/core/business-mgt/menu-management/modifier.schema.ts:230](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/menu-management/modifier.schema.ts#L230) |
+| <a id="externalmodifieroptionid"></a> `externalModifierOptionId?` | `string` \| `null` | [src/core/business-mgt/menu-management/modifier.schema.ts:231](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/menu-management/modifier.schema.ts#L231) |
+| <a id="groupname"></a> `groupName` | `string` | [src/core/business-mgt/menu-management/modifier.schema.ts:232](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/menu-management/modifier.schema.ts#L232) |
+| <a id="optionname"></a> `optionName` | `string` | [src/core/business-mgt/menu-management/modifier.schema.ts:233](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/menu-management/modifier.schema.ts#L233) |
+| <a id="quantity"></a> `quantity` | `number` | [src/core/business-mgt/menu-management/modifier.schema.ts:234](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/menu-management/modifier.schema.ts#L234) |
+| <a id="pricedelta"></a> `priceDelta` | `number` | [src/core/business-mgt/menu-management/modifier.schema.ts:235](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/menu-management/modifier.schema.ts#L235) |

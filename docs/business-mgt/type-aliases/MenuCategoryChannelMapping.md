@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.65**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.66**](../../README.md)
 
 ***
 
@@ -13,7 +13,7 @@ type MenuCategoryChannelMapping = {
 };
 ```
 
-Defined in: [src/core/business-mgt/menu-management/menu-config.schema.ts:194](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/menu-management/menu-config.schema.ts#L194)
+Defined in: [src/core/business-mgt/menu-management/menu-config.schema.ts:194](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/menu-management/menu-config.schema.ts#L194)
 
 Menu category channel mapping schema.
 Maps menu categories to external platform identifiers.
@@ -22,5 +22,5 @@ Maps menu categories to external platform identifiers.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="channelid"></a> `channelId` | `string` | [src/core/business-mgt/menu-management/menu-config.schema.ts:27](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/menu-management/menu-config.schema.ts#L27) |
-| <a id="externalcategoryid"></a> `externalCategoryId` | `string` | [src/core/business-mgt/menu-management/menu-config.schema.ts:28](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/menu-management/menu-config.schema.ts#L28) |
+| <a id="channelid"></a> `channelId` | `string` | [src/core/business-mgt/menu-management/menu-config.schema.ts:27](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/menu-management/menu-config.schema.ts#L27) |
+| <a id="externalcategoryid"></a> `externalCategoryId` | `string` | [src/core/business-mgt/menu-management/menu-config.schema.ts:28](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/menu-management/menu-config.schema.ts#L28) |

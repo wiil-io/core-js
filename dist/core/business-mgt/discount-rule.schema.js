@@ -65,8 +65,10 @@ exports.DiscountRuleSchema = base_schema_1.BaseModelSchema.safeExtend({
             message: "value cannot exceed 100 for percentage discounts",
         });
     }
-    if (data.effectiveFrom != null &&
-        data.effectiveTo != null &&
+    if (data.effectiveFrom !== null &&
+        data.effectiveFrom !== undefined &&
+        data.effectiveTo !== null &&
+        data.effectiveTo !== undefined &&
         data.effectiveTo < data.effectiveFrom) {
         ctx.addIssue({
             code: "custom",

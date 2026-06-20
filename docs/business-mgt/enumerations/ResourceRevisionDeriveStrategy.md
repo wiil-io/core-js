@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.65**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.66**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: ResourceRevisionDeriveStrategy
 
-Defined in: [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:29](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L29)
+Defined in: [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:29](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L29)
 
 Strategy for deriving a new resource revision.
 
@@ -14,5 +14,5 @@ Strategy for deriving a new resource revision.
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="copy_current"></a> `COPY_CURRENT` | `"copy_current"` | [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:30](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L30) |
-| <a id="empty"></a> `EMPTY` | `"empty"` | [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:31](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L31) |
+| <a id="copy_current"></a> `COPY_CURRENT` | `"copy_current"` | [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:30](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L30) |
+| <a id="empty"></a> `EMPTY` | `"empty"` | [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:31](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L31) |

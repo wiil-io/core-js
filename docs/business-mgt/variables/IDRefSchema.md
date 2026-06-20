@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.65**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.66**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const IDRefSchema: ZodObject<IDRef>;
 ```
 
-Defined in: [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:89](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L89)
+Defined in: [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:89](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L89)
 
 Identity verification reference schema.
 Captures the external identity verification record for a rental reservation.

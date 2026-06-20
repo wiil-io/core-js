@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.65**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.66**](../../README.md)
 
 ***
 
@@ -14,7 +14,7 @@ type ServiceDateRange = {
 };
 ```
 
-Defined in: [src/core/business-mgt/service-management/business-service-config.schema.ts:148](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/service-management/business-service-config.schema.ts#L148)
+Defined in: [src/core/business-mgt/service-management/business-service-config.schema.ts:148](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/service-management/business-service-config.schema.ts#L148)
 
 Service date range schema.
 Defines seasonal availability or blackout periods.
@@ -23,6 +23,6 @@ Defines seasonal availability or blackout periods.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="startdate"></a> `startDate` | `string` | [src/core/business-mgt/service-management/business-service-config.schema.ts:118](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/service-management/business-service-config.schema.ts#L118) |
-| <a id="enddate"></a> `endDate` | `string` | [src/core/business-mgt/service-management/business-service-config.schema.ts:119](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/service-management/business-service-config.schema.ts#L119) |
-| <a id="isexclusion"></a> `isExclusion` | `boolean` | [src/core/business-mgt/service-management/business-service-config.schema.ts:120](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/service-management/business-service-config.schema.ts#L120) |
+| <a id="startdate"></a> `startDate` | `string` | [src/core/business-mgt/service-management/business-service-config.schema.ts:118](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/service-management/business-service-config.schema.ts#L118) |
+| <a id="enddate"></a> `endDate` | `string` | [src/core/business-mgt/service-management/business-service-config.schema.ts:119](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/service-management/business-service-config.schema.ts#L119) |
+| <a id="isexclusion"></a> `isExclusion` | `boolean` | [src/core/business-mgt/service-management/business-service-config.schema.ts:120](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/service-management/business-service-config.schema.ts#L120) |

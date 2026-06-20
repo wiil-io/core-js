@@ -31,17 +31,17 @@ export const ProductOrderItemBaseSchema = z.object({
     productId: z.string().describe("References Product from product-config.schema being ordered. Links order item to catalog for inventory tracking, fulfillment details, and product information."),
     variantId: z.string().nullable().optional().describe("Product variant ID being ordered. Links to specific SKU variant for accurate inventory tracking and pricing."),
     itemName: z.string().describe("Display name of the product captured at order time. Preserved even if catalog product is later renamed, ensuring historical order accuracy."),
-    sku: z.string().optional().describe("Stock Keeping Unit identifier captured at order time for warehouse fulfillment and inventory systems. Links to product catalog SKU for picking and packing."),
+    sku: z.string().nullable().optional().describe("Stock Keeping Unit identifier captured at order time for warehouse fulfillment and inventory systems. Links to product catalog SKU for picking and packing."),
     quantity: z.number().int().positive().describe("Number of units ordered for this product. Used for inventory deduction, pricing calculations, and fulfillment quantities."),
     unitPrice: z.number().nonnegative().describe("Price per unit at the time of order. Captures pricing snapshot for order integrity even if catalog prices change later."),
     totalPrice: z.number().nonnegative().describe("Total price for this line item: unitPrice × quantity. Used in order subtotal calculations."),
 
     // Retail-specific
     selectedVariant: z.string().optional().describe("Selected product variant specification (e.g., 'Large/Blue', 'XL', '128GB'). Captured for fulfillment accuracy and inventory tracking of specific variants."),
-    warrantyInfo: z.string().optional().describe("Warranty terms and coverage details captured at purchase time. Preserved for customer reference and service claim validation."),
+    warrantyInfo: z.string().nullable().optional().describe("Warranty terms and coverage details captured at purchase time. Preserved for customer reference and service claim validation."),
 
     status: z.enum(OrderStatus).default(OrderStatus.PENDING).describe("Current fulfillment status of this individual item. Enables per-item tracking in warehouse workflow. Defaults to PENDING."),
-    notes: z.string().optional().describe("Internal notes about this item for warehouse or fulfillment staff. Not visible to customers.")
+    notes: z.string().nullable().optional().describe("Internal notes about this item for warehouse or fulfillment staff. Not visible to customers.")
 });
 
 /**

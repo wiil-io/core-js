@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.65**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.66**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: MaintenanceBlockSorting
 
-Defined in: [src/core/business-mgt/reservation-mgt/reservation-maintenance-block.schema.ts:91](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/reservation-mgt/reservation-maintenance-block.schema.ts#L91)
+Defined in: [src/core/business-mgt/reservation-mgt/reservation-maintenance-block.schema.ts:91](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/reservation-mgt/reservation-maintenance-block.schema.ts#L91)
 
 Maintenance block sorting options.
  MaintenanceBlockSorting
@@ -15,5 +15,5 @@ Maintenance block sorting options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="field"></a> `field` | `"createdAt"` \| `"startDate"` \| `"endDate"` | Field to sort by | [src/core/business-mgt/reservation-mgt/reservation-maintenance-block.schema.ts:93](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/reservation-mgt/reservation-maintenance-block.schema.ts#L93) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/reservation-mgt/reservation-maintenance-block.schema.ts:95](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/reservation-mgt/reservation-maintenance-block.schema.ts#L95) |
+| <a id="field"></a> `field` | `"createdAt"` \| `"startDate"` \| `"endDate"` | Field to sort by | [src/core/business-mgt/reservation-mgt/reservation-maintenance-block.schema.ts:93](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/reservation-mgt/reservation-maintenance-block.schema.ts#L93) |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/reservation-mgt/reservation-maintenance-block.schema.ts:95](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/reservation-mgt/reservation-maintenance-block.schema.ts#L95) |

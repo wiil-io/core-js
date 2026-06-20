@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.65**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.66**](../../README.md)
 
 ***
 
@@ -25,7 +25,7 @@ type UpdateMenuItemVariant = {
 };
 ```
 
-Defined in: [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:103](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L103)
+Defined in: [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:103](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L103)
 
 Schema for updating an existing menu item variant.
 All fields are optional except id.
@@ -34,12 +34,12 @@ All fields are optional except id.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="menuitemid"></a> `menuItemId?` | `string` | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:53](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L53) |
-| <a id="name"></a> `name?` | `string` | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:55](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L55) |
-| <a id="description"></a> `description?` | `string` \| `null` | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:56](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L56) |
-| <a id="price"></a> `price?` | `number` | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:57](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L57) |
-| <a id="isavailable"></a> `isAvailable?` | `boolean` | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:59](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L59) |
-| <a id="isactive"></a> `isActive?` | `boolean` | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:60](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L60) |
-| <a id="isdefault"></a> `isDefault?` | `boolean` | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:61](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L61) |
-| <a id="variantchannelmappings"></a> `variantChannelMappings?` | \| \{ `channelId`: `string`; `externalVariantId`: `string`; `externalMenuItemId?`: `string` \| `null`; \}[] \| `null` | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:63](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L63) |
-| <a id="id"></a> `id` | `string` | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:94](https://github.com/wiil-io/core-js/blob/550e0fa2b47c8f9bd959a063f47a5f303ef25dfb/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L94) |
+| <a id="menuitemid"></a> `menuItemId?` | `string` | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:53](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L53) |
+| <a id="name"></a> `name?` | `string` | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:55](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L55) |
+| <a id="description"></a> `description?` | `string` \| `null` | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:56](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L56) |
+| <a id="price"></a> `price?` | `number` | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:57](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L57) |
+| <a id="isavailable"></a> `isAvailable?` | `boolean` | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:59](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L59) |
+| <a id="isactive"></a> `isActive?` | `boolean` | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:60](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L60) |
+| <a id="isdefault"></a> `isDefault?` | `boolean` | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:61](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L61) |
+| <a id="variantchannelmappings"></a> `variantChannelMappings?` | \| \{ `channelId`: `string`; `externalVariantId`: `string`; `externalMenuItemId?`: `string` \| `null`; \}[] \| `null` | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:63](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L63) |
+| <a id="id"></a> `id` | `string` | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:94](https://github.com/wiil-io/core-js/blob/da0521af0ba472bed968d16f0f4057b01dc35515/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L94) |
