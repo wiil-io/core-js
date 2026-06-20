@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.68**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.69**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const RentalReservationSlotQueryRequestSchema: ZodObject<RentalReservationSlotQueryRequest>;
 ```
 
-Defined in: [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:111](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L111)
+Defined in: [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:111](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L111)
 
 Rental reservation slot query request schema.
 Requests candidate rental slots for intra-day or multi-day rental periods.

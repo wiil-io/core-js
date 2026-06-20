@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.68**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.69**](../../README.md)
 
 ***
 
@@ -10,6 +10,6 @@
 const DynamicSTTModelConfigurationSchema: ZodObject<DynamicSTTModelConfiguration>;
 ```
 
-Defined in: [src/core/service-configuration/base-agent-setup.ts:59](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/service-configuration/base-agent-setup.ts#L59)
+Defined in: [src/core/service-configuration/base-agent-setup.ts:59](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/service-configuration/base-agent-setup.ts#L59)
 
 Speech-to-text model configuration schema.

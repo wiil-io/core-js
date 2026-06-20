@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.68**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.69**](../../README.md)
 
 ***
 
@@ -14,7 +14,7 @@ type CreateResourceDefinition = {
 };
 ```
 
-Defined in: [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:163](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L163)
+Defined in: [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:163](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L163)
 
 Schema for creating a new resource definition.
 Omits auto-generated fields.
@@ -23,6 +23,6 @@ Omits auto-generated fields.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="name"></a> `name` | `string` | [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:48](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L48) |
-| <a id="description"></a> `description?` | `string` \| `null` | [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:49](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L49) |
-| <a id="isactive"></a> `isActive` | `boolean` | [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:50](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L50) |
+| <a id="name"></a> `name` | `string` | [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:48](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L48) |
+| <a id="description"></a> `description?` | `string` \| `null` | [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:49](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L49) |
+| <a id="isactive"></a> `isActive` | `boolean` | [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:50](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L50) |

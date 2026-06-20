@@ -94,6 +94,8 @@ export const CreateResourceInstanceSchema = ResourceInstanceSchema.omit({
  */
 export const UpdateResourceInstanceSchema = CreateResourceInstanceSchema.partial().safeExtend({
     id: z.string().describe("Unique identifier of the resource instance to update."),
+    // Re-declared without the base `.default()` so partial updates don't inject a status the caller never set
+    status: z.enum(ResourceInstanceStatus).optional().describe("Current operational status"),
 });
 
 // ============================================================================

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.68**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.69**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: MenuSetPricingMode
 
-Defined in: [src/core/business-mgt/menu-management/menu-set.schema.ts:23](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/menu-management/menu-set.schema.ts#L23)
+Defined in: [src/core/business-mgt/menu-management/menu-set.schema.ts:23](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/menu-management/menu-set.schema.ts#L23)
 
 Menu set pricing mode.
 Determines how set pricing is calculated.
@@ -15,5 +15,5 @@ Determines how set pricing is calculated.
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="fixed"></a> `FIXED` | `"FIXED"` | [src/core/business-mgt/menu-management/menu-set.schema.ts:24](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/menu-management/menu-set.schema.ts#L24) |
-| <a id="sum_of_items"></a> `SUM_OF_ITEMS` | `"SUM_OF_ITEMS"` | [src/core/business-mgt/menu-management/menu-set.schema.ts:25](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/menu-management/menu-set.schema.ts#L25) |
+| <a id="fixed"></a> `FIXED` | `"FIXED"` | [src/core/business-mgt/menu-management/menu-set.schema.ts:24](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/menu-management/menu-set.schema.ts#L24) |
+| <a id="sum_of_items"></a> `SUM_OF_ITEMS` | `"SUM_OF_ITEMS"` | [src/core/business-mgt/menu-management/menu-set.schema.ts:25](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/menu-management/menu-set.schema.ts#L25) |

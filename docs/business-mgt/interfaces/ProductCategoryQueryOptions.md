@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.68**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.69**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ProductCategoryQueryOptions
 
-Defined in: [src/core/business-mgt/product-management/product-config.schema.ts:546](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/product-management/product-config.schema.ts#L546)
+Defined in: [src/core/business-mgt/product-management/product-config.schema.ts:546](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/product-management/product-config.schema.ts#L546)
 
 Product category query options.
  ProductCategoryQueryOptions
@@ -15,7 +15,7 @@ Product category query options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/product-management/product-config.schema.ts:548](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/product-management/product-config.schema.ts#L548) |
-| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/product-management/product-config.schema.ts:550](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/product-management/product-config.schema.ts#L550) |
-| <a id="filters"></a> `filters?` | [`ProductCategoryFilters`](ProductCategoryFilters.md) | Optional filters | [src/core/business-mgt/product-management/product-config.schema.ts:552](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/product-management/product-config.schema.ts#L552) |
-| <a id="sorting"></a> `sorting?` | [`ProductCategorySorting`](ProductCategorySorting.md) | Optional sorting | [src/core/business-mgt/product-management/product-config.schema.ts:554](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/product-management/product-config.schema.ts#L554) |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/product-management/product-config.schema.ts:548](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/product-management/product-config.schema.ts#L548) |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/product-management/product-config.schema.ts:550](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/product-management/product-config.schema.ts#L550) |
+| <a id="filters"></a> `filters?` | [`ProductCategoryFilters`](ProductCategoryFilters.md) | Optional filters | [src/core/business-mgt/product-management/product-config.schema.ts:552](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/product-management/product-config.schema.ts#L552) |
+| <a id="sorting"></a> `sorting?` | [`ProductCategorySorting`](ProductCategorySorting.md) | Optional sorting | [src/core/business-mgt/product-management/product-config.schema.ts:554](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/product-management/product-config.schema.ts#L554) |

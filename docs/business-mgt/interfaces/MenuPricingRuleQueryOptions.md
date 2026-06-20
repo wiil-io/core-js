@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.68**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.69**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: MenuPricingRuleQueryOptions
 
-Defined in: [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:177](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L177)
+Defined in: [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:177](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L177)
 
 Menu pricing rule query options.
  MenuPricingRuleQueryOptions
@@ -15,7 +15,7 @@ Menu pricing rule query options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:179](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L179) |
-| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:181](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L181) |
-| <a id="filters"></a> `filters?` | [`MenuPricingRuleFilters`](MenuPricingRuleFilters.md) | Optional filters | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:183](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L183) |
-| <a id="sorting"></a> `sorting?` | [`MenuPricingRuleSorting`](MenuPricingRuleSorting.md) | Optional sorting | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:185](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L185) |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:179](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L179) |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:181](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L181) |
+| <a id="filters"></a> `filters?` | [`MenuPricingRuleFilters`](MenuPricingRuleFilters.md) | Optional filters | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:183](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L183) |
+| <a id="sorting"></a> `sorting?` | [`MenuPricingRuleSorting`](MenuPricingRuleSorting.md) | Optional sorting | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:185](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L185) |

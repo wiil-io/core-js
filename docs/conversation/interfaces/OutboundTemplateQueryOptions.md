@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.68**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.69**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: OutboundTemplateQueryOptions
 
-Defined in: [src/core/conversation/outbound-template.schema.ts:227](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/conversation/outbound-template.schema.ts#L227)
+Defined in: [src/core/conversation/outbound-template.schema.ts:227](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/conversation/outbound-template.schema.ts#L227)
 
 Outbound template query options.
  OutboundTemplateQueryOptions
@@ -15,7 +15,7 @@ Outbound template query options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/conversation/outbound-template.schema.ts:229](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/conversation/outbound-template.schema.ts#L229) |
-| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/conversation/outbound-template.schema.ts:231](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/conversation/outbound-template.schema.ts#L231) |
-| <a id="filters"></a> `filters?` | [`OutboundTemplateFilters`](OutboundTemplateFilters.md) | Optional filters | [src/core/conversation/outbound-template.schema.ts:233](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/conversation/outbound-template.schema.ts#L233) |
-| <a id="sorting"></a> `sorting?` | [`OutboundTemplateSorting`](OutboundTemplateSorting.md) | Optional sorting | [src/core/conversation/outbound-template.schema.ts:235](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/conversation/outbound-template.schema.ts#L235) |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/conversation/outbound-template.schema.ts:229](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/conversation/outbound-template.schema.ts#L229) |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/conversation/outbound-template.schema.ts:231](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/conversation/outbound-template.schema.ts#L231) |
+| <a id="filters"></a> `filters?` | [`OutboundTemplateFilters`](OutboundTemplateFilters.md) | Optional filters | [src/core/conversation/outbound-template.schema.ts:233](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/conversation/outbound-template.schema.ts#L233) |
+| <a id="sorting"></a> `sorting?` | [`OutboundTemplateSorting`](OutboundTemplateSorting.md) | Optional sorting | [src/core/conversation/outbound-template.schema.ts:235](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/conversation/outbound-template.schema.ts#L235) |

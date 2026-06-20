@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.68**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.69**](../../README.md)
 
 ***
 
@@ -41,7 +41,7 @@ type CreateModifierGroup = {
 };
 ```
 
-Defined in: [src/core/business-mgt/menu-management/modifier.schema.ts:385](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/menu-management/modifier.schema.ts#L385)
+Defined in: [src/core/business-mgt/menu-management/modifier.schema.ts:385](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/menu-management/modifier.schema.ts#L385)
 
 Schema for creating a new modifier group.
 Omits auto-generated fields.
@@ -50,14 +50,14 @@ Omits auto-generated fields.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="modifierrevisionid"></a> `modifierRevisionId?` | `string` \| `null` | [src/core/business-mgt/menu-management/modifier.schema.ts:99](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/menu-management/modifier.schema.ts#L99) |
-| <a id="locationid"></a> `locationId?` | `string` \| `null` | [src/core/business-mgt/menu-management/modifier.schema.ts:100](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/menu-management/modifier.schema.ts#L100) |
-| <a id="name"></a> `name` | `string` | [src/core/business-mgt/menu-management/modifier.schema.ts:101](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/menu-management/modifier.schema.ts#L101) |
-| <a id="description"></a> `description?` | `string` \| `null` | [src/core/business-mgt/menu-management/modifier.schema.ts:102](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/menu-management/modifier.schema.ts#L102) |
-| <a id="minselection"></a> `minSelection` | `number` | [src/core/business-mgt/menu-management/modifier.schema.ts:104](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/menu-management/modifier.schema.ts#L104) |
-| <a id="maxselection"></a> `maxSelection?` | `number` \| `null` | [src/core/business-mgt/menu-management/modifier.schema.ts:105](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/menu-management/modifier.schema.ts#L105) |
-| <a id="isrequired"></a> `isRequired` | `boolean` | [src/core/business-mgt/menu-management/modifier.schema.ts:106](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/menu-management/modifier.schema.ts#L106) |
-| <a id="displayorder"></a> `displayOrder` | `number` | [src/core/business-mgt/menu-management/modifier.schema.ts:107](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/menu-management/modifier.schema.ts#L107) |
-| <a id="channelmappings"></a> `channelMappings?` | \| \{ `channelId`: `string`; `externalModifierGroupId`: `string`; \}[] \| `null` | [src/core/business-mgt/menu-management/modifier.schema.ts:108](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/menu-management/modifier.schema.ts#L108) |
-| <a id="isactive"></a> `isActive` | `boolean` | [src/core/business-mgt/menu-management/modifier.schema.ts:109](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/menu-management/modifier.schema.ts#L109) |
-| <a id="options"></a> `options` | \{ `modifierRevisionId?`: `string` \| `null`; `locationId?`: `string` \| `null`; `name`: `string`; `description?`: `string` \| `null`; `priceDelta`: `number`; `isDefault`: `boolean`; `displayOrder`: `number`; `channelMappings?`: \| \{ `channelId`: `string`; `externalModifierOptionId`: `string`; `externalModifierGroupId?`: `string` \| `null`; \}[] \| `null`; `isActive`: `boolean`; \}[] | [src/core/business-mgt/menu-management/modifier.schema.ts:324](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/menu-management/modifier.schema.ts#L324) |
+| <a id="modifierrevisionid"></a> `modifierRevisionId?` | `string` \| `null` | [src/core/business-mgt/menu-management/modifier.schema.ts:99](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/menu-management/modifier.schema.ts#L99) |
+| <a id="locationid"></a> `locationId?` | `string` \| `null` | [src/core/business-mgt/menu-management/modifier.schema.ts:100](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/menu-management/modifier.schema.ts#L100) |
+| <a id="name"></a> `name` | `string` | [src/core/business-mgt/menu-management/modifier.schema.ts:101](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/menu-management/modifier.schema.ts#L101) |
+| <a id="description"></a> `description?` | `string` \| `null` | [src/core/business-mgt/menu-management/modifier.schema.ts:102](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/menu-management/modifier.schema.ts#L102) |
+| <a id="minselection"></a> `minSelection` | `number` | [src/core/business-mgt/menu-management/modifier.schema.ts:104](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/menu-management/modifier.schema.ts#L104) |
+| <a id="maxselection"></a> `maxSelection?` | `number` \| `null` | [src/core/business-mgt/menu-management/modifier.schema.ts:105](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/menu-management/modifier.schema.ts#L105) |
+| <a id="isrequired"></a> `isRequired` | `boolean` | [src/core/business-mgt/menu-management/modifier.schema.ts:106](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/menu-management/modifier.schema.ts#L106) |
+| <a id="displayorder"></a> `displayOrder` | `number` | [src/core/business-mgt/menu-management/modifier.schema.ts:107](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/menu-management/modifier.schema.ts#L107) |
+| <a id="channelmappings"></a> `channelMappings?` | \| \{ `channelId`: `string`; `externalModifierGroupId`: `string`; \}[] \| `null` | [src/core/business-mgt/menu-management/modifier.schema.ts:108](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/menu-management/modifier.schema.ts#L108) |
+| <a id="isactive"></a> `isActive` | `boolean` | [src/core/business-mgt/menu-management/modifier.schema.ts:109](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/menu-management/modifier.schema.ts#L109) |
+| <a id="options"></a> `options` | \{ `modifierRevisionId?`: `string` \| `null`; `locationId?`: `string` \| `null`; `name`: `string`; `description?`: `string` \| `null`; `priceDelta`: `number`; `isDefault`: `boolean`; `displayOrder`: `number`; `channelMappings?`: \| \{ `channelId`: `string`; `externalModifierOptionId`: `string`; `externalModifierGroupId?`: `string` \| `null`; \}[] \| `null`; `isActive`: `boolean`; \}[] | [src/core/business-mgt/menu-management/modifier.schema.ts:324](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/business-mgt/menu-management/modifier.schema.ts#L324) |

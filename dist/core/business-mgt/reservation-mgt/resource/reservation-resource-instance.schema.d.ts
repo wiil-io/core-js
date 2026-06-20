@@ -81,7 +81,6 @@ export declare const CreateResourceInstanceSchema: z.ZodObject<{
  */
 export declare const UpdateResourceInstanceSchema: z.ZodObject<{
     code: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
-    status: z.ZodOptional<z.ZodDefault<z.ZodEnum<typeof ResourceInstanceStatus>>>;
     name: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     locationId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     isAvailable: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
@@ -92,6 +91,7 @@ export declare const UpdateResourceInstanceSchema: z.ZodObject<{
     resourceId: z.ZodOptional<z.ZodString>;
     resourceRevisionId: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
     id: z.ZodString;
+    status: z.ZodOptional<z.ZodEnum<typeof ResourceInstanceStatus>>;
 }, z.core.$strip>;
 export type ResourceInstanceAttribute = z.infer<typeof ResourceInstanceAttributeSchema>;
 export type ResourceInstance = z.infer<typeof ResourceInstanceSchema>;

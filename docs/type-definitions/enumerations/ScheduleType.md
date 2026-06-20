@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.68**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.69**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: ScheduleType
 
-Defined in: [src/core/type-definitions/conversation.type.definition.ts:134](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/type-definitions/conversation.type.definition.ts#L134)
+Defined in: [src/core/type-definitions/conversation.type.definition.ts:134](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/type-definitions/conversation.type.definition.ts#L134)
 
 Schedule type for outbound call timing configuration.
 
@@ -21,6 +21,6 @@ BusinessCallRequestSchema - Uses this for call scheduling
 
 | Enumeration Member | Value | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="immediate"></a> `IMMEDIATE` | `"immediate"` | Execute call as soon as possible within calling hours | [src/core/type-definitions/conversation.type.definition.ts:136](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/type-definitions/conversation.type.definition.ts#L136) |
-| <a id="scheduled"></a> `SCHEDULED` | `"scheduled"` | Execute call at specific scheduledAt timestamp | [src/core/type-definitions/conversation.type.definition.ts:138](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/type-definitions/conversation.type.definition.ts#L138) |
-| <a id="recurring"></a> `RECURRING` | `"recurring"` | Execute call on recurring schedule based on callingHours | [src/core/type-definitions/conversation.type.definition.ts:140](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/type-definitions/conversation.type.definition.ts#L140) |
+| <a id="immediate"></a> `IMMEDIATE` | `"immediate"` | Execute call as soon as possible within calling hours | [src/core/type-definitions/conversation.type.definition.ts:136](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/type-definitions/conversation.type.definition.ts#L136) |
+| <a id="scheduled"></a> `SCHEDULED` | `"scheduled"` | Execute call at specific scheduledAt timestamp | [src/core/type-definitions/conversation.type.definition.ts:138](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/type-definitions/conversation.type.definition.ts#L138) |
+| <a id="recurring"></a> `RECURRING` | `"recurring"` | Execute call on recurring schedule based on callingHours | [src/core/type-definitions/conversation.type.definition.ts:140](https://github.com/wiil-io/core-js/blob/2566d82ae56a1f9913333c58bd398cfa7eaebbc7/src/core/type-definitions/conversation.type.definition.ts#L140) |
