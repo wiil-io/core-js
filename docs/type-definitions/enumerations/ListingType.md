@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.67**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.68**](../../README.md)
 
 ***
 
@@ -6,12 +6,12 @@
 
 # Enumeration: ListingType
 
-Defined in: [src/core/type-definitions/business-definitions.ts:340](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/type-definitions/business-definitions.ts#L340)
+Defined in: [src/core/type-definitions/business-definitions.ts:340](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/type-definitions/business-definitions.ts#L340)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="sale"></a> `SALE` | `"sale"` | [src/core/type-definitions/business-definitions.ts:341](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/type-definitions/business-definitions.ts#L341) |
-| <a id="rent"></a> `RENT` | `"rent"` | [src/core/type-definitions/business-definitions.ts:342](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/type-definitions/business-definitions.ts#L342) |
-| <a id="both"></a> `BOTH` | `"both"` | [src/core/type-definitions/business-definitions.ts:343](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/type-definitions/business-definitions.ts#L343) |
+| <a id="sale"></a> `SALE` | `"sale"` | [src/core/type-definitions/business-definitions.ts:341](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/type-definitions/business-definitions.ts#L341) |
+| <a id="rent"></a> `RENT` | `"rent"` | [src/core/type-definitions/business-definitions.ts:342](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/type-definitions/business-definitions.ts#L342) |
+| <a id="both"></a> `BOTH` | `"both"` | [src/core/type-definitions/business-definitions.ts:343](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/type-definitions/business-definitions.ts#L343) |

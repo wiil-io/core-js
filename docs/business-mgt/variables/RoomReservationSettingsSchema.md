@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.67**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.68**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const RoomReservationSettingsSchema: ZodObject<RoomReservationSettings>;
 ```
 
-Defined in: [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:63](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L63)
+Defined in: [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:63](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L63)
 
 Room reservation settings schema.
 Configures stay length, check-in/check-out defaults, and booking window for room reservations.

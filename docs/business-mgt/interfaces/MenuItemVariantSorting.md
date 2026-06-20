@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.67**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.68**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: MenuItemVariantSorting
 
-Defined in: [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:131](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L131)
+Defined in: [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:131](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L131)
 
 Menu item variant sorting options.
  MenuItemVariantSorting
@@ -15,5 +15,5 @@ Menu item variant sorting options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="field"></a> `field` | `"createdAt"` \| `"name"` \| `"price"` | Field to sort by | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:133](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L133) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:135](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L135) |
+| <a id="field"></a> `field` | `"createdAt"` \| `"name"` \| `"price"` | Field to sort by | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:133](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L133) |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:135](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L135) |

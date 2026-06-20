@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.67**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.68**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ConversationSorting
 
-Defined in: [src/core/conversation/conversation-config.schema.ts:455](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/conversation/conversation-config.schema.ts#L455)
+Defined in: [src/core/conversation/conversation-config.schema.ts:455](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/conversation/conversation-config.schema.ts#L455)
 
 Conversation sorting options.
  ConversationSorting
@@ -15,5 +15,5 @@ Conversation sorting options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="field"></a> `field` | `"created_at"` \| `"customer_id"` | Field to sort by | [src/core/conversation/conversation-config.schema.ts:457](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/conversation/conversation-config.schema.ts#L457) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/conversation/conversation-config.schema.ts:459](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/conversation/conversation-config.schema.ts#L459) |
+| <a id="field"></a> `field` | `"created_at"` \| `"customer_id"` | Field to sort by | [src/core/conversation/conversation-config.schema.ts:457](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/conversation/conversation-config.schema.ts#L457) |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/conversation/conversation-config.schema.ts:459](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/conversation/conversation-config.schema.ts#L459) |

@@ -7,6 +7,7 @@ exports.UpdateAppointmentFieldConfigSchema = exports.CreateAppointmentFieldConfi
 const zod_1 = __importDefault(require("zod"));
 const base_schema_1 = require("../../base.schema");
 const dynamic_fields_1 = require("../../type-definitions/dynamic-fields");
+const account_definitions_1 = require("../../type-definitions/account-definitions");
 /**
  * @fileoverview Organization-level appointment field configuration schema.
  * @module business-mgt/appointment-field-config
@@ -43,6 +44,7 @@ const dynamic_fields_1 = require("../../type-definitions/dynamic-fields");
  * @property {boolean} reuseDetails - Whether to reuse data for returning customers
  * @property {boolean} ensureEmail - Ensure email field is always included
  * @property {boolean} ensurePhone - Ensure phone field is always included
+ * @property {BusinessSupportServices} [supportService] - Business support service this field configuration applies to
  */
 exports.AppointmentFieldConfigSchema = base_schema_1.BaseModelSchema.safeExtend({
     fields: zod_1.default.array(dynamic_fields_1.FieldDefinitionSchema).default([]).describe("Array of field definitions available at the organization level. Each field has a unique fieldKey, fieldType, label, and optional validation/UI hints."),
@@ -50,6 +52,7 @@ exports.AppointmentFieldConfigSchema = base_schema_1.BaseModelSchema.safeExtend(
     reuseDetails: zod_1.default.boolean().default(false).describe("When true, captured field data can be reused across appointments for the same customer."),
     ensureEmail: zod_1.default.boolean().default(false).describe("When true, ensures an email field is always included in the field configuration."),
     ensurePhone: zod_1.default.boolean().default(false).describe("When true, ensures a phone field is always included in the field configuration."),
+    supportService: zod_1.default.enum(account_definitions_1.BusinessSupportServices).nullable().optional().describe("Business support service this field configuration applies to (e.g., appointment management)."),
 });
 // ============================================================================
 // CREATE/UPDATE SCHEMAS

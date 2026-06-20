@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.67**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.68**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: MenuSetTargetingMode
 
-Defined in: [src/core/business-mgt/menu-management/menu-set.schema.ts:34](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/menu-management/menu-set.schema.ts#L34)
+Defined in: [src/core/business-mgt/menu-management/menu-set.schema.ts:34](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/menu-management/menu-set.schema.ts#L34)
 
 Menu set targeting mode.
 Determines how set members are selected.
@@ -15,5 +15,5 @@ Determines how set members are selected.
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="explicit"></a> `EXPLICIT` | `"EXPLICIT"` | [src/core/business-mgt/menu-management/menu-set.schema.ts:35](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/menu-management/menu-set.schema.ts#L35) |
-| <a id="selector"></a> `SELECTOR` | `"SELECTOR"` | [src/core/business-mgt/menu-management/menu-set.schema.ts:36](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/menu-management/menu-set.schema.ts#L36) |
+| <a id="explicit"></a> `EXPLICIT` | `"EXPLICIT"` | [src/core/business-mgt/menu-management/menu-set.schema.ts:35](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/menu-management/menu-set.schema.ts#L35) |
+| <a id="selector"></a> `SELECTOR` | `"SELECTOR"` | [src/core/business-mgt/menu-management/menu-set.schema.ts:36](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/menu-management/menu-set.schema.ts#L36) |

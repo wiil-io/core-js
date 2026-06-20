@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.67**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.68**](../../README.md)
 
 ***
 
@@ -14,7 +14,7 @@ type ModifierOptionChannelMapping = {
 };
 ```
 
-Defined in: [src/core/business-mgt/menu-management/modifier.schema.ts:382](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/menu-management/modifier.schema.ts#L382)
+Defined in: [src/core/business-mgt/menu-management/modifier.schema.ts:382](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/menu-management/modifier.schema.ts#L382)
 
 Modifier option channel mapping schema.
 Maps modifier options to external platform identifiers.
@@ -23,6 +23,6 @@ Maps modifier options to external platform identifiers.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="channelid"></a> `channelId` | `string` | [src/core/business-mgt/menu-management/modifier.schema.ts:39](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/menu-management/modifier.schema.ts#L39) |
-| <a id="externalmodifieroptionid"></a> `externalModifierOptionId` | `string` | [src/core/business-mgt/menu-management/modifier.schema.ts:40](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/menu-management/modifier.schema.ts#L40) |
-| <a id="externalmodifiergroupid"></a> `externalModifierGroupId?` | `string` \| `null` | [src/core/business-mgt/menu-management/modifier.schema.ts:41](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/menu-management/modifier.schema.ts#L41) |
+| <a id="channelid"></a> `channelId` | `string` | [src/core/business-mgt/menu-management/modifier.schema.ts:39](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/menu-management/modifier.schema.ts#L39) |
+| <a id="externalmodifieroptionid"></a> `externalModifierOptionId` | `string` | [src/core/business-mgt/menu-management/modifier.schema.ts:40](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/menu-management/modifier.schema.ts#L40) |
+| <a id="externalmodifiergroupid"></a> `externalModifierGroupId?` | `string` \| `null` | [src/core/business-mgt/menu-management/modifier.schema.ts:41](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/menu-management/modifier.schema.ts#L41) |

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.67**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.68**](../../README.md)
 
 ***
 
@@ -17,7 +17,7 @@ type VariantAxisValue = {
 };
 ```
 
-Defined in: [src/core/business-mgt/product-management/product-variant-axis.schema.ts:108](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L108)
+Defined in: [src/core/business-mgt/product-management/product-variant-axis.schema.ts:108](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L108)
 
 Variant axis value schema.
 Represents a single selectable value within a variant axis.
@@ -26,9 +26,9 @@ Represents a single selectable value within a variant axis.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="id"></a> `id` | `string` | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:30](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L30) |
-| <a id="label"></a> `label` | `string` | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:31](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L31) |
-| <a id="swatchcolor"></a> `swatchColor?` | `string` \| `null` | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:32](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L32) |
-| <a id="imageid"></a> `imageId?` | `string` \| `null` | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:33](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L33) |
-| <a id="numericvalue"></a> `numericValue?` | `number` \| `null` | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:34](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L34) |
-| <a id="sortorder"></a> `sortOrder` | `number` | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:35](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L35) |
+| <a id="id"></a> `id` | `string` | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:30](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L30) |
+| <a id="label"></a> `label` | `string` | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:31](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L31) |
+| <a id="swatchcolor"></a> `swatchColor?` | `string` \| `null` | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:32](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L32) |
+| <a id="imageid"></a> `imageId?` | `string` \| `null` | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:33](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L33) |
+| <a id="numericvalue"></a> `numericValue?` | `number` \| `null` | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:34](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L34) |
+| <a id="sortorder"></a> `sortOrder` | `number` | [src/core/business-mgt/product-management/product-variant-axis.schema.ts:35](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L35) |

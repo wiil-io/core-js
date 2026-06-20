@@ -57,7 +57,11 @@ Organization-level field library for appointment booking forms.
     },
     "reuseDetails": { "type": "boolean", "default": false },
     "ensureEmail": { "type": "boolean", "default": false },
-    "ensurePhone": { "type": "boolean", "default": false }
+    "ensurePhone": { "type": "boolean", "default": false },
+    "supportService": {
+      "type": ["string", "null"],
+      "enum": ["appointment_management", "menu_order_management", "product_order_management", "reservation_management", "property_management", "none", null]
+    }
   },
   "required": ["id"]
 }
@@ -73,6 +77,7 @@ Organization-level field library for appointment booking forms.
 | `reuseDetails` | boolean | Yes | Reuse data for returning customers (default: false) |
 | `ensureEmail` | boolean | Yes | Always include email field (default: false) |
 | `ensurePhone` | boolean | Yes | Always include phone field (default: false) |
+| `supportService` | BusinessSupportServices \| null | No | Business support service this config applies to |
 
 ### FieldDefinition Structure
 
@@ -227,6 +232,7 @@ Organization-level field library for appointment booking forms.
   "reuseDetails": true,
   "ensureEmail": true,
   "ensurePhone": true,
+  "supportService": "appointment_management",
   "createdAt": 1699900000,
   "updatedAt": 1699900000
 }

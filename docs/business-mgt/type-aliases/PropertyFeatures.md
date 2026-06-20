@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.67**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.68**](../../README.md)
 
 ***
 
@@ -14,7 +14,7 @@ type PropertyFeatures = {
 };
 ```
 
-Defined in: [src/core/business-mgt/property-management/property-config.schema.ts:398](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/property-management/property-config.schema.ts#L398)
+Defined in: [src/core/business-mgt/property-management/property-config.schema.ts:398](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/property-management/property-config.schema.ts#L398)
 
 Property features schema.
 Shared features across all property types.
@@ -23,6 +23,6 @@ Shared features across all property types.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="parkingspaces"></a> `parkingSpaces?` | `number` \| `null` | [src/core/business-mgt/property-management/property-config.schema.ts:98](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/property-management/property-config.schema.ts#L98) |
-| <a id="amenities"></a> `amenities` | `string`[] | [src/core/business-mgt/property-management/property-config.schema.ts:99](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/property-management/property-config.schema.ts#L99) |
-| <a id="utilities"></a> `utilities` | `string`[] | [src/core/business-mgt/property-management/property-config.schema.ts:100](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/property-management/property-config.schema.ts#L100) |
+| <a id="parkingspaces"></a> `parkingSpaces?` | `number` \| `null` | [src/core/business-mgt/property-management/property-config.schema.ts:98](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/property-management/property-config.schema.ts#L98) |
+| <a id="amenities"></a> `amenities` | `string`[] | [src/core/business-mgt/property-management/property-config.schema.ts:99](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/property-management/property-config.schema.ts#L99) |
+| <a id="utilities"></a> `utilities` | `string`[] | [src/core/business-mgt/property-management/property-config.schema.ts:100](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/property-management/property-config.schema.ts#L100) |

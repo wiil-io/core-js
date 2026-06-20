@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.67**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.68**](../../README.md)
 
 ***
 
@@ -59,10 +59,17 @@ type CreateAppointmentFieldConfig = {
   reuseDetails: boolean;
   ensureEmail: boolean;
   ensurePhone: boolean;
+  supportService?:   | APPOINTMENT_MANAGEMENT
+     | MENU_ORDER_MANAGEMENT
+     | PRODUCT_ORDER_MANAGEMENT
+     | RESERVATION_MANAGEMENT
+     | PROPERTY_MANAGEMENT
+     | NONE
+     | null;
 };
 ```
 
-Defined in: [src/core/business-mgt/service-management/appointment-field-config.schema.ts:79](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/service-management/appointment-field-config.schema.ts#L79)
+Defined in: [src/core/business-mgt/service-management/appointment-field-config.schema.ts:82](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/service-management/appointment-field-config.schema.ts#L82)
 
 Schema for creating an appointment field config.
 Omits auto-generated fields.
@@ -71,8 +78,9 @@ Omits auto-generated fields.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="fields"></a> `fields` | \{ `fieldKey`: `string`; `fieldType`: `DynamicFieldType`; `label`: `string`; `description?`: `string`; `validation?`: \{ `required?`: `boolean`; `minLength?`: `number`; `maxLength?`: `number`; `min?`: `number`; `max?`: `number`; `pattern?`: `string`; `patternMessage?`: `string`; \}; `uiHints?`: \{ `placeholder?`: `string`; `helpText?`: `string`; `displayOrder?`: `number`; `width?`: `"full"` \| `"half"` \| `"third"`; \}; `options?`: \{ `value`: `string`; `label`: `string`; `displayOrder?`: `number`; \}[]; `defaultValue?`: `any`; `isActive?`: `boolean`; `condition?`: \{ `dependsOn`: `string`; `operator`: \| `"equals"` \| `"notEquals"` \| `"contains"` \| `"isEmpty"` \| `"isNotEmpty"` \| `"greaterThan"` \| `"lessThan"`; `value?`: `any`; \}; `groupKey?`: `string`; \}[] | [src/core/business-mgt/service-management/appointment-field-config.schema.ts:45](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/service-management/appointment-field-config.schema.ts#L45) |
-| <a id="groups"></a> `groups` | \{ `groupKey`: `string`; `label`: `string`; `description?`: `string`; `displayOrder?`: `number`; `collapsible?`: `boolean`; `defaultCollapsed?`: `boolean`; \}[] | [src/core/business-mgt/service-management/appointment-field-config.schema.ts:46](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/service-management/appointment-field-config.schema.ts#L46) |
-| <a id="reusedetails"></a> `reuseDetails` | `boolean` | [src/core/business-mgt/service-management/appointment-field-config.schema.ts:47](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/service-management/appointment-field-config.schema.ts#L47) |
-| <a id="ensureemail"></a> `ensureEmail` | `boolean` | [src/core/business-mgt/service-management/appointment-field-config.schema.ts:48](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/service-management/appointment-field-config.schema.ts#L48) |
-| <a id="ensurephone"></a> `ensurePhone` | `boolean` | [src/core/business-mgt/service-management/appointment-field-config.schema.ts:49](https://github.com/wiil-io/core-js/blob/ace6832aca9fffedcd08c80748cc5e0215fd52c5/src/core/business-mgt/service-management/appointment-field-config.schema.ts#L49) |
+| <a id="fields"></a> `fields` | \{ `fieldKey`: `string`; `fieldType`: `DynamicFieldType`; `label`: `string`; `description?`: `string`; `validation?`: \{ `required?`: `boolean`; `minLength?`: `number`; `maxLength?`: `number`; `min?`: `number`; `max?`: `number`; `pattern?`: `string`; `patternMessage?`: `string`; \}; `uiHints?`: \{ `placeholder?`: `string`; `helpText?`: `string`; `displayOrder?`: `number`; `width?`: `"full"` \| `"half"` \| `"third"`; \}; `options?`: \{ `value`: `string`; `label`: `string`; `displayOrder?`: `number`; \}[]; `defaultValue?`: `any`; `isActive?`: `boolean`; `condition?`: \{ `dependsOn`: `string`; `operator`: \| `"equals"` \| `"notEquals"` \| `"contains"` \| `"isEmpty"` \| `"isNotEmpty"` \| `"greaterThan"` \| `"lessThan"`; `value?`: `any`; \}; `groupKey?`: `string`; \}[] | [src/core/business-mgt/service-management/appointment-field-config.schema.ts:47](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/service-management/appointment-field-config.schema.ts#L47) |
+| <a id="groups"></a> `groups` | \{ `groupKey`: `string`; `label`: `string`; `description?`: `string`; `displayOrder?`: `number`; `collapsible?`: `boolean`; `defaultCollapsed?`: `boolean`; \}[] | [src/core/business-mgt/service-management/appointment-field-config.schema.ts:48](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/service-management/appointment-field-config.schema.ts#L48) |
+| <a id="reusedetails"></a> `reuseDetails` | `boolean` | [src/core/business-mgt/service-management/appointment-field-config.schema.ts:49](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/service-management/appointment-field-config.schema.ts#L49) |
+| <a id="ensureemail"></a> `ensureEmail` | `boolean` | [src/core/business-mgt/service-management/appointment-field-config.schema.ts:50](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/service-management/appointment-field-config.schema.ts#L50) |
+| <a id="ensurephone"></a> `ensurePhone` | `boolean` | [src/core/business-mgt/service-management/appointment-field-config.schema.ts:51](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/service-management/appointment-field-config.schema.ts#L51) |
+| <a id="supportservice"></a> `supportService?` | \| [`APPOINTMENT_MANAGEMENT`](../../type-definitions/enumerations/BusinessSupportServices.md#appointment_management) \| [`MENU_ORDER_MANAGEMENT`](../../type-definitions/enumerations/BusinessSupportServices.md#menu_order_management) \| [`PRODUCT_ORDER_MANAGEMENT`](../../type-definitions/enumerations/BusinessSupportServices.md#product_order_management) \| [`RESERVATION_MANAGEMENT`](../../type-definitions/enumerations/BusinessSupportServices.md#reservation_management) \| [`PROPERTY_MANAGEMENT`](../../type-definitions/enumerations/BusinessSupportServices.md#property_management) \| [`NONE`](../../type-definitions/enumerations/BusinessSupportServices.md#none) \| `null` | [src/core/business-mgt/service-management/appointment-field-config.schema.ts:52](https://github.com/wiil-io/core-js/blob/755197f4a8ac7ded3396c95a15c2aee6a56d02dc/src/core/business-mgt/service-management/appointment-field-config.schema.ts#L52) |

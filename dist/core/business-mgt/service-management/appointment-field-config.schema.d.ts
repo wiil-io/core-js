@@ -1,4 +1,5 @@
 import z from "zod";
+import { BusinessSupportServices } from "../../type-definitions/account-definitions";
 /**
  * @fileoverview Organization-level appointment field configuration schema.
  * @module business-mgt/appointment-field-config
@@ -32,6 +33,7 @@ import z from "zod";
  * @property {boolean} reuseDetails - Whether to reuse data for returning customers
  * @property {boolean} ensureEmail - Ensure email field is always included
  * @property {boolean} ensurePhone - Ensure phone field is always included
+ * @property {BusinessSupportServices} [supportService] - Business support service this field configuration applies to
  */
 export declare const AppointmentFieldConfigSchema: z.ZodObject<{
     id: z.ZodString;
@@ -106,6 +108,7 @@ export declare const AppointmentFieldConfigSchema: z.ZodObject<{
     reuseDetails: z.ZodDefault<z.ZodBoolean>;
     ensureEmail: z.ZodDefault<z.ZodBoolean>;
     ensurePhone: z.ZodDefault<z.ZodBoolean>;
+    supportService: z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof BusinessSupportServices>>>;
 }, z.core.$strip>;
 /**
  * Schema for creating an appointment field config.
@@ -181,6 +184,7 @@ export declare const CreateAppointmentFieldConfigSchema: z.ZodObject<{
     reuseDetails: z.ZodDefault<z.ZodBoolean>;
     ensureEmail: z.ZodDefault<z.ZodBoolean>;
     ensurePhone: z.ZodDefault<z.ZodBoolean>;
+    supportService: z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof BusinessSupportServices>>>;
 }, z.core.$strip>;
 /**
  * Schema for updating an appointment field config.
@@ -256,6 +260,7 @@ export declare const UpdateAppointmentFieldConfigSchema: z.ZodObject<{
     reuseDetails: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
     ensureEmail: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
     ensurePhone: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
+    supportService: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof BusinessSupportServices>>>>;
     id: z.ZodString;
 }, z.core.$strip>;
 export type AppointmentFieldConfig = z.infer<typeof AppointmentFieldConfigSchema>;

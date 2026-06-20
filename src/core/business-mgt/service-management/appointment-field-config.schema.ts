@@ -1,6 +1,7 @@
 import z from "zod";
 import { BaseModelSchema } from "../../base.schema";
 import { FieldDefinitionSchema, FieldGroupSchema } from "../../type-definitions/dynamic-fields";
+import { BusinessSupportServices } from "../../type-definitions/account-definitions";
 
 /**
  * @fileoverview Organization-level appointment field configuration schema.
@@ -40,6 +41,7 @@ import { FieldDefinitionSchema, FieldGroupSchema } from "../../type-definitions/
  * @property {boolean} reuseDetails - Whether to reuse data for returning customers
  * @property {boolean} ensureEmail - Ensure email field is always included
  * @property {boolean} ensurePhone - Ensure phone field is always included
+ * @property {BusinessSupportServices} [supportService] - Business support service this field configuration applies to
  */
 export const AppointmentFieldConfigSchema = BaseModelSchema.safeExtend({
     fields: z.array(FieldDefinitionSchema).default([]).describe("Array of field definitions available at the organization level. Each field has a unique fieldKey, fieldType, label, and optional validation/UI hints."),
@@ -47,6 +49,7 @@ export const AppointmentFieldConfigSchema = BaseModelSchema.safeExtend({
     reuseDetails: z.boolean().default(false).describe("When true, captured field data can be reused across appointments for the same customer."),
     ensureEmail: z.boolean().default(false).describe("When true, ensures an email field is always included in the field configuration."),
     ensurePhone: z.boolean().default(false).describe("When true, ensures a phone field is always included in the field configuration."),
+    supportService: z.enum(BusinessSupportServices).nullable().optional().describe("Business support service this field configuration applies to (e.g., appointment management)."),
 });
 
 // ============================================================================
