@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.73**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.74**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: RentalAssignmentType
 
-Defined in: [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:29](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L29)
+Defined in: [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:29](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L29)
 
 Rental assignment lock type.
 
@@ -14,5 +14,5 @@ Rental assignment lock type.
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="soft"></a> `SOFT` | `"soft"` | [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:30](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L30) |
-| <a id="hard"></a> `HARD` | `"hard"` | [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:31](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L31) |
+| <a id="soft"></a> `SOFT` | `"soft"` | [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:30](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L30) |
+| <a id="hard"></a> `HARD` | `"hard"` | [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:31](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L31) |

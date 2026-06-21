@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.73**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.74**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: ResourceInstanceStatus
 
-Defined in: [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:18](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L18)
+Defined in: [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:18](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L18)
 
 Operational status of a physical resource instance.
 
@@ -14,9 +14,9 @@ Operational status of a physical resource instance.
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="available"></a> `AVAILABLE` | `"available"` | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:19](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L19) |
-| <a id="reserved"></a> `RESERVED` | `"reserved"` | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:20](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L20) |
-| <a id="occupied"></a> `OCCUPIED` | `"occupied"` | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:21](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L21) |
-| <a id="maintenance"></a> `MAINTENANCE` | `"maintenance"` | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:22](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L22) |
-| <a id="cleaning"></a> `CLEANING` | `"cleaning"` | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:23](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L23) |
-| <a id="out_of_service"></a> `OUT_OF_SERVICE` | `"out_of_service"` | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:24](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L24) |
+| <a id="available"></a> `AVAILABLE` | `"available"` | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:19](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L19) |
+| <a id="reserved"></a> `RESERVED` | `"reserved"` | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:20](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L20) |
+| <a id="occupied"></a> `OCCUPIED` | `"occupied"` | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:21](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L21) |
+| <a id="maintenance"></a> `MAINTENANCE` | `"maintenance"` | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:22](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L22) |
+| <a id="cleaning"></a> `CLEANING` | `"cleaning"` | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:23](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L23) |
+| <a id="out_of_service"></a> `OUT_OF_SERVICE` | `"out_of_service"` | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:24](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L24) |

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.73**](../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.74**](../README.md)
 
 ***
 
@@ -338,6 +338,10 @@ Central export point for business management schemas.
 | [RentalAssignment](type-aliases/RentalAssignment.md) | Rental assignment schema. Records the physical rental unit assigned to a rental reservation. |
 | [RoomAssignment](type-aliases/RoomAssignment.md) | Room assignment schema. Records the physical room instance assigned to a room reservation. |
 | [TableAssignment](type-aliases/TableAssignment.md) | Table assignment schema. Records the physical table instance assigned to a table reservation. |
+| [CreateFloorPlanTablePlacementInput](type-aliases/CreateFloorPlanTablePlacementInput.md) | - |
+| [CreateFloorPlanSectionInput](type-aliases/CreateFloorPlanSectionInput.md) | - |
+| [CreateFloorPlanDefinition](type-aliases/CreateFloorPlanDefinition.md) | - |
+| [FloorPlanDefinition](type-aliases/FloorPlanDefinition.md) | - |
 | [MaintenanceBlock](type-aliases/MaintenanceBlock.md) | Maintenance block schema. Represents a time period when a reservable resource instance is unavailable. |
 | [CreateMaintenanceBlock](type-aliases/CreateMaintenanceBlock.md) | Schema for creating a new maintenance block. Omits auto-generated fields. |
 | [UpdateMaintenanceBlock](type-aliases/UpdateMaintenanceBlock.md) | Schema for updating an existing maintenance block. All fields optional except id. |
@@ -622,6 +626,10 @@ Central export point for business management schemas.
 | [RentalAssignmentSchema](variables/RentalAssignmentSchema.md) | Rental assignment schema. Records the physical rental unit assigned to a rental reservation. |
 | [RoomAssignmentSchema](variables/RoomAssignmentSchema.md) | Room assignment schema. Records the physical room instance assigned to a room reservation. |
 | [TableAssignmentSchema](variables/TableAssignmentSchema.md) | Table assignment schema. Records the physical table instance assigned to a table reservation. |
+| [CreateFloorPlanTablePlacementInputSchema](variables/CreateFloorPlanTablePlacementInputSchema.md) | - |
+| [CreateFloorPlanSectionInputSchema](variables/CreateFloorPlanSectionInputSchema.md) | - |
+| [CreateFloorPlanDefinitionSchema](variables/CreateFloorPlanDefinitionSchema.md) | - |
+| [FloorPlanDefinitionSchema](variables/FloorPlanDefinitionSchema.md) | - |
 | [MaintenanceBlockSchema](variables/MaintenanceBlockSchema.md) | Maintenance block schema. Represents a time period when a reservable resource instance is unavailable. |
 | [CreateMaintenanceBlockSchema](variables/CreateMaintenanceBlockSchema.md) | Schema for creating a new maintenance block. Omits auto-generated fields. |
 | [UpdateMaintenanceBlockSchema](variables/UpdateMaintenanceBlockSchema.md) | Schema for updating an existing maintenance block. All fields optional except id. |

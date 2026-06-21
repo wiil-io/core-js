@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.73**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.74**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: MenuSetSorting
 
-Defined in: [src/core/business-mgt/menu-management/menu-set.schema.ts:350](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/menu-management/menu-set.schema.ts#L350)
+Defined in: [src/core/business-mgt/menu-management/menu-set.schema.ts:350](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/menu-management/menu-set.schema.ts#L350)
 
 Menu set sorting options.
  MenuSetSorting
@@ -15,5 +15,5 @@ Menu set sorting options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="field"></a> `field` | `"createdAt"` \| `"displayOrder"` \| `"name"` | Field to sort by | [src/core/business-mgt/menu-management/menu-set.schema.ts:352](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/menu-management/menu-set.schema.ts#L352) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/menu-management/menu-set.schema.ts:354](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/menu-management/menu-set.schema.ts#L354) |
+| <a id="field"></a> `field` | `"createdAt"` \| `"displayOrder"` \| `"name"` | Field to sort by | [src/core/business-mgt/menu-management/menu-set.schema.ts:352](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/menu-management/menu-set.schema.ts#L352) |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/menu-management/menu-set.schema.ts:354](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/menu-management/menu-set.schema.ts#L354) |

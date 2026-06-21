@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.73**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.74**](../../README.md)
 
 ***
 
@@ -6,12 +6,12 @@
 
 # Enumeration: OttCommunicationType
 
-Defined in: [src/core/type-definitions/service-config.definitions.ts:68](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/type-definitions/service-config.definitions.ts#L68)
+Defined in: [src/core/type-definitions/service-config.definitions.ts:68](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/type-definitions/service-config.definitions.ts#L68)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="text"></a> `TEXT` | `"text"` | [src/core/type-definitions/service-config.definitions.ts:69](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/type-definitions/service-config.definitions.ts#L69) |
-| <a id="voice"></a> `VOICE` | `"voice"` | [src/core/type-definitions/service-config.definitions.ts:70](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/type-definitions/service-config.definitions.ts#L70) |
-| <a id="unified"></a> `UNIFIED` | `"unified"` | [src/core/type-definitions/service-config.definitions.ts:71](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/type-definitions/service-config.definitions.ts#L71) |
+| <a id="text"></a> `TEXT` | `"text"` | [src/core/type-definitions/service-config.definitions.ts:69](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/type-definitions/service-config.definitions.ts#L69) |
+| <a id="voice"></a> `VOICE` | `"voice"` | [src/core/type-definitions/service-config.definitions.ts:70](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/type-definitions/service-config.definitions.ts#L70) |
+| <a id="unified"></a> `UNIFIED` | `"unified"` | [src/core/type-definitions/service-config.definitions.ts:71](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/type-definitions/service-config.definitions.ts#L71) |

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.73**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.74**](../../README.md)
 
 ***
 
@@ -14,12 +14,12 @@ const DAYS_OF_WEEK: {
 }[];
 ```
 
-Defined in: [src/core/type-definitions/business-definitions.ts:209](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/type-definitions/business-definitions.ts#L209)
+Defined in: [src/core/type-definitions/business-definitions.ts:209](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/type-definitions/business-definitions.ts#L209)
 
 ## Type Declaration
 
 | Name | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ |
-| `id` | `number` | `0` | [src/core/type-definitions/business-definitions.ts:210](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/type-definitions/business-definitions.ts#L210) |
-| `name` | `string` | `'Sunday'` | [src/core/type-definitions/business-definitions.ts:210](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/type-definitions/business-definitions.ts#L210) |
-| `short` | `string` | `'Sun'` | [src/core/type-definitions/business-definitions.ts:210](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/type-definitions/business-definitions.ts#L210) |
+| `id` | `number` | `0` | [src/core/type-definitions/business-definitions.ts:210](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/type-definitions/business-definitions.ts#L210) |
+| `name` | `string` | `'Sunday'` | [src/core/type-definitions/business-definitions.ts:210](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/type-definitions/business-definitions.ts#L210) |
+| `short` | `string` | `'Sun'` | [src/core/type-definitions/business-definitions.ts:210](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/type-definitions/business-definitions.ts#L210) |

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.73**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.74**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ServicePricingRuleSorting
 
-Defined in: [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:166](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L166)
+Defined in: [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:166](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L166)
 
 Service pricing rule sorting options.
  ServicePricingRuleSorting
@@ -15,5 +15,5 @@ Service pricing rule sorting options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="field"></a> `field` | `"createdAt"` \| `"name"` \| `"priority"` | Field to sort by | [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:168](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L168) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:170](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L170) |
+| <a id="field"></a> `field` | `"createdAt"` \| `"name"` \| `"priority"` | Field to sort by | [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:168](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L168) |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/service-management/service-pricing-rule.schema.ts:170](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/service-management/service-pricing-rule.schema.ts#L170) |

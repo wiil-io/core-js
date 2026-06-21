@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.73**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.74**](../../README.md)
 
 ***
 
@@ -6,14 +6,14 @@
 
 # Enumeration: TaxCatalogScope
 
-Defined in: [src/core/type-definitions/business-definitions.ts:420](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/type-definitions/business-definitions.ts#L420)
+Defined in: [src/core/type-definitions/business-definitions.ts:420](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/type-definitions/business-definitions.ts#L420)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="all"></a> `ALL` | `"ALL"` | [src/core/type-definitions/business-definitions.ts:421](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/type-definitions/business-definitions.ts#L421) |
-| <a id="menu"></a> `MENU` | `"MENU"` | [src/core/type-definitions/business-definitions.ts:422](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/type-definitions/business-definitions.ts#L422) |
-| <a id="product"></a> `PRODUCT` | `"PRODUCT"` | [src/core/type-definitions/business-definitions.ts:423](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/type-definitions/business-definitions.ts#L423) |
-| <a id="service"></a> `SERVICE` | `"SERVICE"` | [src/core/type-definitions/business-definitions.ts:424](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/type-definitions/business-definitions.ts#L424) |
-| <a id="set"></a> `SET` | `"SET"` | [src/core/type-definitions/business-definitions.ts:425](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/type-definitions/business-definitions.ts#L425) |
+| <a id="all"></a> `ALL` | `"ALL"` | [src/core/type-definitions/business-definitions.ts:421](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/type-definitions/business-definitions.ts#L421) |
+| <a id="menu"></a> `MENU` | `"MENU"` | [src/core/type-definitions/business-definitions.ts:422](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/type-definitions/business-definitions.ts#L422) |
+| <a id="product"></a> `PRODUCT` | `"PRODUCT"` | [src/core/type-definitions/business-definitions.ts:423](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/type-definitions/business-definitions.ts#L423) |
+| <a id="service"></a> `SERVICE` | `"SERVICE"` | [src/core/type-definitions/business-definitions.ts:424](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/type-definitions/business-definitions.ts#L424) |
+| <a id="set"></a> `SET` | `"SET"` | [src/core/type-definitions/business-definitions.ts:425](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/type-definitions/business-definitions.ts#L425) |

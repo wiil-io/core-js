@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.73**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.74**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: ServiceDepositStrategy
 
-Defined in: [src/core/business-mgt/bookings.shared.schema.ts:17](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/bookings.shared.schema.ts#L17)
+Defined in: [src/core/business-mgt/bookings.shared.schema.ts:17](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/bookings.shared.schema.ts#L17)
 
 Service deposit strategy options.
 
@@ -14,6 +14,6 @@ Service deposit strategy options.
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="none"></a> `NONE` | `"NONE"` | [src/core/business-mgt/bookings.shared.schema.ts:18](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/bookings.shared.schema.ts#L18) |
-| <a id="fixed"></a> `FIXED` | `"FIXED"` | [src/core/business-mgt/bookings.shared.schema.ts:19](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/bookings.shared.schema.ts#L19) |
-| <a id="percentage"></a> `PERCENTAGE` | `"PERCENTAGE"` | [src/core/business-mgt/bookings.shared.schema.ts:20](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/bookings.shared.schema.ts#L20) |
+| <a id="none"></a> `NONE` | `"NONE"` | [src/core/business-mgt/bookings.shared.schema.ts:18](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/bookings.shared.schema.ts#L18) |
+| <a id="fixed"></a> `FIXED` | `"FIXED"` | [src/core/business-mgt/bookings.shared.schema.ts:19](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/bookings.shared.schema.ts#L19) |
+| <a id="percentage"></a> `PERCENTAGE` | `"PERCENTAGE"` | [src/core/business-mgt/bookings.shared.schema.ts:20](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/bookings.shared.schema.ts#L20) |

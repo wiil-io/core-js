@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.73**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.74**](../../README.md)
 
 ***
 
@@ -15,7 +15,7 @@ type ChecklistCompletion = {
 };
 ```
 
-Defined in: [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:183](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L183)
+Defined in: [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:183](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L183)
 
 Checklist completion schema.
 Tracks completion of checklist items defined on Resource.checklistTemplate.
@@ -24,7 +24,7 @@ Tracks completion of checklist items defined on Resource.checklistTemplate.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="itemid"></a> `itemId` | `string` | [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:58](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L58) |
-| <a id="completed"></a> `completed` | `boolean` | [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:59](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L59) |
-| <a id="completedat"></a> `completedAt?` | `number` \| `null` | [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:60](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L60) |
-| <a id="completedby"></a> `completedBy?` | `string` \| `null` | [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:61](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L61) |
+| <a id="itemid"></a> `itemId` | `string` | [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:58](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L58) |
+| <a id="completed"></a> `completed` | `boolean` | [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:59](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L59) |
+| <a id="completedat"></a> `completedAt?` | `number` \| `null` | [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:60](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L60) |
+| <a id="completedby"></a> `completedBy?` | `string` \| `null` | [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:61](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L61) |

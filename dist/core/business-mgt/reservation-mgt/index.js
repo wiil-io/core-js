@@ -26,5 +26,6 @@ __exportStar(require("./reservation-slot-query.schema"), exports);
 __exportStar(require("./reservation-maintenance-block.schema"), exports);
 __exportStar(require("./reservation-table-layout.schema"), exports);
 __exportStar(require("./reservation-section.schema"), exports);
+__exportStar(require("./reservation-floor-plan-definition.schema"), exports);
 __exportStar(require("./reservation-settings.schema"), exports);
 __exportStar(require("./resource/resource-versioning.schema"), exports);

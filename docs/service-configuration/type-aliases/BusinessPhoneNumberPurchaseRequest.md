@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.73**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.74**](../../README.md)
 
 ***
 
@@ -13,11 +13,11 @@ type BusinessPhoneNumberPurchaseRequest = {
 };
 ```
 
-Defined in: [src/core/service-configuration/phone-number.schema.ts:192](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/service-configuration/phone-number.schema.ts#L192)
+Defined in: [src/core/service-configuration/phone-number.schema.ts:192](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/service-configuration/phone-number.schema.ts#L192)
 
 ## Type Declaration
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="phonenumber"></a> `phoneNumber` | `string` | [src/core/service-configuration/phone-number.schema.ts:188](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/service-configuration/phone-number.schema.ts#L188) |
-| <a id="friendlyname"></a> `friendlyName?` | `string` | [src/core/service-configuration/phone-number.schema.ts:189](https://github.com/wiil-io/core-js/blob/ed55e9cb0290308a8b96537b377e48d8151ed9ad/src/core/service-configuration/phone-number.schema.ts#L189) |
+| <a id="phonenumber"></a> `phoneNumber` | `string` | [src/core/service-configuration/phone-number.schema.ts:188](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/service-configuration/phone-number.schema.ts#L188) |
+| <a id="friendlyname"></a> `friendlyName?` | `string` | [src/core/service-configuration/phone-number.schema.ts:189](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/service-configuration/phone-number.schema.ts#L189) |

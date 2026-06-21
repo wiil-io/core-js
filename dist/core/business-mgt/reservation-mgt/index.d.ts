@@ -9,5 +9,6 @@ export * from "./reservation-slot-query.schema";
 export * from "./reservation-maintenance-block.schema";
 export * from "./reservation-table-layout.schema";
 export * from "./reservation-section.schema";
+export * from "./reservation-floor-plan-definition.schema";
 export * from "./reservation-settings.schema";
 export * from "./resource/resource-versioning.schema";
