@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.74**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.75**](../../README.md)
 
 ***
 
@@ -17,7 +17,7 @@ type TableReservationSettings = {
 };
 ```
 
-Defined in: [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:142](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L142)
+Defined in: [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:142](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L142)
 
 Table reservation settings schema.
 Configures slot duration, turnover, party limits, and booking window for table reservations.
@@ -26,9 +26,9 @@ Configures slot duration, turnover, party limits, and booking window for table r
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="settingtype"></a> `settingType` | [`ReservationSettingType`](../../type-definitions/enumerations/ReservationSettingType.md) | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:44](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L44) |
-| <a id="defaultdurationminutes"></a> `defaultDurationMinutes` | `number` | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:45](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L45) |
-| <a id="turnoverminutes"></a> `turnoverMinutes` | `number` | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:46](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L46) |
-| <a id="slotintervalminutes"></a> `slotIntervalMinutes` | `number` | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:47](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L47) |
-| <a id="maxpartysize"></a> `maxPartySize?` | `number` \| `null` | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:48](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L48) |
-| <a id="advancebookingdays"></a> `advanceBookingDays` | `number` | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:49](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L49) |
+| <a id="settingtype"></a> `settingType` | [`ReservationSettingType`](../../type-definitions/enumerations/ReservationSettingType.md) | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:44](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L44) |
+| <a id="defaultdurationminutes"></a> `defaultDurationMinutes` | `number` | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:45](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L45) |
+| <a id="turnoverminutes"></a> `turnoverMinutes` | `number` | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:46](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L46) |
+| <a id="slotintervalminutes"></a> `slotIntervalMinutes` | `number` | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:47](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L47) |
+| <a id="maxpartysize"></a> `maxPartySize?` | `number` \| `null` | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:48](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L48) |
+| <a id="advancebookingdays"></a> `advanceBookingDays` | `number` | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:49](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L49) |

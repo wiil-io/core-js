@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.74**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.75**](../../README.md)
 
 ***
 
@@ -6,14 +6,14 @@
 
 # Enumeration: ProviderType
 
-Defined in: [src/core/type-definitions/service-config.definitions.ts:21](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/type-definitions/service-config.definitions.ts#L21)
+Defined in: [src/core/type-definitions/service-config.definitions.ts:21](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/service-config.definitions.ts#L21)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="twilio"></a> `TWILIO` | `"twilio"` | [src/core/type-definitions/service-config.definitions.ts:22](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/type-definitions/service-config.definitions.ts#L22) |
-| <a id="signalwire"></a> `SIGNALWIRE` | `"signal-wire"` | [src/core/type-definitions/service-config.definitions.ts:23](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/type-definitions/service-config.definitions.ts#L23) |
-| <a id="telnyx"></a> `TELNYX` | `"telnyx"` | [src/core/type-definitions/service-config.definitions.ts:24](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/type-definitions/service-config.definitions.ts#L24) |
-| <a id="messagebird"></a> `MESSAGEBIRD` | `"messagebird"` | [src/core/type-definitions/service-config.definitions.ts:25](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/type-definitions/service-config.definitions.ts#L25) |
-| <a id="sns"></a> `SNS` | `"sns"` | [src/core/type-definitions/service-config.definitions.ts:26](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/type-definitions/service-config.definitions.ts#L26) |
+| <a id="twilio"></a> `TWILIO` | `"twilio"` | [src/core/type-definitions/service-config.definitions.ts:22](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/service-config.definitions.ts#L22) |
+| <a id="signalwire"></a> `SIGNALWIRE` | `"signal-wire"` | [src/core/type-definitions/service-config.definitions.ts:23](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/service-config.definitions.ts#L23) |
+| <a id="telnyx"></a> `TELNYX` | `"telnyx"` | [src/core/type-definitions/service-config.definitions.ts:24](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/service-config.definitions.ts#L24) |
+| <a id="messagebird"></a> `MESSAGEBIRD` | `"messagebird"` | [src/core/type-definitions/service-config.definitions.ts:25](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/service-config.definitions.ts#L25) |
+| <a id="sns"></a> `SNS` | `"sns"` | [src/core/type-definitions/service-config.definitions.ts:26](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/service-config.definitions.ts#L26) |

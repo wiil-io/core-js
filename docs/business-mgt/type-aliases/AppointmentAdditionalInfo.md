@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.74**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.75**](../../README.md)
 
 ***
 
@@ -18,7 +18,7 @@ type AppointmentAdditionalInfo = {
 };
 ```
 
-Defined in: [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:88](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L88)
+Defined in: [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:88](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L88)
 
 Appointment Additional Info schema.
 Stores dynamic field values captured during appointment booking.
@@ -27,10 +27,10 @@ Stores dynamic field values captured during appointment booking.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="id"></a> `id` | `string` | [src/core/base.schema.ts:8](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/base.schema.ts#L8) |
-| <a id="createdat"></a> `createdAt?` | `number` | [src/core/base.schema.ts:9](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/base.schema.ts#L9) |
-| <a id="updatedat"></a> `updatedAt?` | `number` | [src/core/base.schema.ts:10](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/base.schema.ts#L10) |
-| <a id="businessserviceid"></a> `businessServiceId` | `string` | [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:56](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L56) |
-| <a id="appointmentid"></a> `appointmentId` | `string` | [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:57](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L57) |
-| <a id="customerid"></a> `customerId` | `string` | [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:58](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L58) |
-| <a id="data"></a> `data` | `Record`\<`string`, `any`\> | [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:59](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L59) |
+| <a id="id"></a> `id` | `string` | [src/core/base.schema.ts:8](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/base.schema.ts#L8) |
+| <a id="createdat"></a> `createdAt?` | `number` | [src/core/base.schema.ts:9](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/base.schema.ts#L9) |
+| <a id="updatedat"></a> `updatedAt?` | `number` | [src/core/base.schema.ts:10](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/base.schema.ts#L10) |
+| <a id="businessserviceid"></a> `businessServiceId` | `string` | [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:56](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L56) |
+| <a id="appointmentid"></a> `appointmentId` | `string` | [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:57](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L57) |
+| <a id="customerid"></a> `customerId` | `string` | [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:58](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L58) |
+| <a id="data"></a> `data` | `Record`\<`string`, `any`\> | [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:59](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L59) |

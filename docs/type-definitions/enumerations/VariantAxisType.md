@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.74**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.75**](../../README.md)
 
 ***
 
@@ -6,13 +6,13 @@
 
 # Enumeration: VariantAxisType
 
-Defined in: [src/core/type-definitions/business-definitions.ts:470](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/type-definitions/business-definitions.ts#L470)
+Defined in: [src/core/type-definitions/business-definitions.ts:470](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/business-definitions.ts#L470)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="swatch"></a> `SWATCH` | `"swatch"` | [src/core/type-definitions/business-definitions.ts:471](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/type-definitions/business-definitions.ts#L471) |
-| <a id="text"></a> `TEXT` | `"text"` | [src/core/type-definitions/business-definitions.ts:472](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/type-definitions/business-definitions.ts#L472) |
-| <a id="image"></a> `IMAGE` | `"image"` | [src/core/type-definitions/business-definitions.ts:473](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/type-definitions/business-definitions.ts#L473) |
-| <a id="numeric"></a> `NUMERIC` | `"numeric"` | [src/core/type-definitions/business-definitions.ts:474](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/type-definitions/business-definitions.ts#L474) |
+| <a id="swatch"></a> `SWATCH` | `"swatch"` | [src/core/type-definitions/business-definitions.ts:471](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/business-definitions.ts#L471) |
+| <a id="text"></a> `TEXT` | `"text"` | [src/core/type-definitions/business-definitions.ts:472](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/business-definitions.ts#L472) |
+| <a id="image"></a> `IMAGE` | `"image"` | [src/core/type-definitions/business-definitions.ts:473](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/business-definitions.ts#L473) |
+| <a id="numeric"></a> `NUMERIC` | `"numeric"` | [src/core/type-definitions/business-definitions.ts:474](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/business-definitions.ts#L474) |

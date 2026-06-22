@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.74**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.75**](../../README.md)
 
 ***
 
@@ -13,7 +13,7 @@ type ServiceCategoryChannelMapping = {
 };
 ```
 
-Defined in: [src/core/business-mgt/service-management/business-service-config.schema.ts:220](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/service-management/business-service-config.schema.ts#L220)
+Defined in: [src/core/business-mgt/service-management/business-service-config.schema.ts:220](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/service-management/business-service-config.schema.ts#L220)
 
 Per-channel service category ID mapping.
 
@@ -21,5 +21,5 @@ Per-channel service category ID mapping.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="channelid"></a> `channelId` | `string` | [src/core/business-mgt/service-management/business-service-config.schema.ts:70](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/service-management/business-service-config.schema.ts#L70) |
-| <a id="externalcategoryid"></a> `externalCategoryId` | `string` | [src/core/business-mgt/service-management/business-service-config.schema.ts:71](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/service-management/business-service-config.schema.ts#L71) |
+| <a id="channelid"></a> `channelId` | `string` | [src/core/business-mgt/service-management/business-service-config.schema.ts:70](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/service-management/business-service-config.schema.ts#L70) |
+| <a id="externalcategoryid"></a> `externalCategoryId` | `string` | [src/core/business-mgt/service-management/business-service-config.schema.ts:71](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/service-management/business-service-config.schema.ts#L71) |

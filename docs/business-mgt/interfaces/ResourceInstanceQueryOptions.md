@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.74**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.75**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ResourceInstanceQueryOptions
 
-Defined in: [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:144](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L144)
+Defined in: [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:144](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L144)
 
 Resource instance query options.
  ResourceInstanceQueryOptions
@@ -15,7 +15,7 @@ Resource instance query options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:146](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L146) |
-| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:148](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L148) |
-| <a id="filters"></a> `filters?` | [`ResourceInstanceFilters`](ResourceInstanceFilters.md) | Optional filters | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:150](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L150) |
-| <a id="sorting"></a> `sorting?` | [`ResourceInstanceSorting`](ResourceInstanceSorting.md) | Optional sorting | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:152](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L152) |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:146](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L146) |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:148](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L148) |
+| <a id="filters"></a> `filters?` | [`ResourceInstanceFilters`](ResourceInstanceFilters.md) | Optional filters | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:150](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L150) |
+| <a id="sorting"></a> `sorting?` | [`ResourceInstanceSorting`](ResourceInstanceSorting.md) | Optional sorting | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:152](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L152) |

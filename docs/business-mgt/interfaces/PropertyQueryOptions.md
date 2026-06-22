@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.74**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.75**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: PropertyQueryOptions
 
-Defined in: [src/core/business-mgt/property-management/property-config.schema.ts:489](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/property-management/property-config.schema.ts#L489)
+Defined in: [src/core/business-mgt/property-management/property-config.schema.ts:489](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/property-management/property-config.schema.ts#L489)
 
 Property query options.
  PropertyQueryOptions
@@ -15,7 +15,7 @@ Property query options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/property-management/property-config.schema.ts:491](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/property-management/property-config.schema.ts#L491) |
-| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/property-management/property-config.schema.ts:493](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/property-management/property-config.schema.ts#L493) |
-| <a id="filters"></a> `filters?` | [`PropertyFilters`](PropertyFilters.md) | Optional filters | [src/core/business-mgt/property-management/property-config.schema.ts:495](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/property-management/property-config.schema.ts#L495) |
-| <a id="sorting"></a> `sorting?` | [`PropertySorting`](PropertySorting.md) | Optional sorting | [src/core/business-mgt/property-management/property-config.schema.ts:497](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/property-management/property-config.schema.ts#L497) |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/property-management/property-config.schema.ts:491](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/property-management/property-config.schema.ts#L491) |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/property-management/property-config.schema.ts:493](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/property-management/property-config.schema.ts#L493) |
+| <a id="filters"></a> `filters?` | [`PropertyFilters`](PropertyFilters.md) | Optional filters | [src/core/business-mgt/property-management/property-config.schema.ts:495](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/property-management/property-config.schema.ts#L495) |
+| <a id="sorting"></a> `sorting?` | [`PropertySorting`](PropertySorting.md) | Optional sorting | [src/core/business-mgt/property-management/property-config.schema.ts:497](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/property-management/property-config.schema.ts#L497) |

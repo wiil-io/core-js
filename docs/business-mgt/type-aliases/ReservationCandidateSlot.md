@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.74**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.75**](../../README.md)
 
 ***
 
@@ -20,7 +20,7 @@ type ReservationCandidateSlot = {
 };
 ```
 
-Defined in: [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:355](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L355)
+Defined in: [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:355](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L355)
 
 Reservation candidate slot schema.
 Shared time-of-day window model for table availability candidates.
@@ -29,12 +29,12 @@ Shared time-of-day window model for table availability candidates.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="resourceid"></a> `resourceId` | `string` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:150](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L150) |
-| <a id="starttimeofday"></a> `startTimeOfDay` | `string` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:151](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L151) |
-| <a id="startminuteofday"></a> `startMinuteOfDay` | `number` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:152](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L152) |
-| <a id="endminuteofday"></a> `endMinuteOfDay` | `number` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:153](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L153) |
-| <a id="starttimeutcsec"></a> `startTimeUtcSec` | `number` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:154](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L154) |
-| <a id="endtimeutcsec"></a> `endTimeUtcSec` | `number` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:155](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L155) |
-| <a id="isavailable"></a> `isAvailable` | `boolean` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:156](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L156) |
-| <a id="capacityremaining"></a> `capacityRemaining?` | `number` \| `null` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:157](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L157) |
-| <a id="pricequote"></a> `priceQuote?` | `number` \| `null` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:158](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L158) |
+| <a id="resourceid"></a> `resourceId` | `string` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:150](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L150) |
+| <a id="starttimeofday"></a> `startTimeOfDay` | `string` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:151](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L151) |
+| <a id="startminuteofday"></a> `startMinuteOfDay` | `number` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:152](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L152) |
+| <a id="endminuteofday"></a> `endMinuteOfDay` | `number` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:153](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L153) |
+| <a id="starttimeutcsec"></a> `startTimeUtcSec` | `number` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:154](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L154) |
+| <a id="endtimeutcsec"></a> `endTimeUtcSec` | `number` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:155](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L155) |
+| <a id="isavailable"></a> `isAvailable` | `boolean` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:156](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L156) |
+| <a id="capacityremaining"></a> `capacityRemaining?` | `number` \| `null` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:157](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L157) |
+| <a id="pricequote"></a> `priceQuote?` | `number` \| `null` | [src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts:158](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/reservation-slot-query.schema.ts#L158) |

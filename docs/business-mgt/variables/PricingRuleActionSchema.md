@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.74**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.75**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const PricingRuleActionSchema: ZodObject<PricingRuleAction>;
 ```
 
-Defined in: [src/core/business-mgt/pricing-rule.shared.schema.ts:72](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/pricing-rule.shared.schema.ts#L72)
+Defined in: [src/core/business-mgt/pricing-rule.shared.schema.ts:72](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/pricing-rule.shared.schema.ts#L72)
 
 Pricing rule action schema.
 Defines the price adjustment to apply when rule conditions are met.

@@ -553,27 +553,6 @@ export declare const ServiceConversationConfigSchema: z.ZodObject<{
     }, z.core.$strip>>>;
 }, z.core.$strip>;
 /**
- * Decommission configuration schema.
- *
- * Request payload for decommissioning and shutting down active conversation services. Used for
- * gracefully terminating conversation sessions, cleaning up resources, and releasing telephony
- * connections when deployments are disabled or conversations are force-closed.
- *
- * @remarks
- * **Architecture Context:**
- * - **Used For**: Graceful shutdown of active conversation sessions
- * - **Triggered By**: Admin actions, deployment deactivation, or timeout policies
- * - **Effects**: Releases telephony resources, closes WebSocket connections, archives conversation
- *
- * **Use Cases:**
- * - Emergency shutdown of misbehaving conversation sessions
- * - Cleanup when deployments are deactivated
- * - Forced conversation termination for policy violations
- */
-export declare const DecommissionConfigSchema: z.ZodObject<{
-    decommission_service_id: z.ZodString;
-}, z.core.$strip>;
-/**
  * Test configuration schema.
  * Base configuration for testing AI agents.
  */
@@ -614,12 +593,8 @@ export declare const OttConversationConfigSchema: z.ZodObject<{
 }, z.core.$strip>;
 export type ConversationSummary = z.infer<typeof ConversationSummarySchema>;
 export type ServiceConversationConfigType = z.infer<typeof ServiceConversationConfigSchema>;
-export type DecommissionRequest = z.infer<typeof DecommissionConfigSchema>;
 export type CallTransfer = z.infer<typeof CallTransferSchema>;
 export type ConversationStateHistory = z.infer<typeof ConversationStateHistorySchema>;
-export type TestConfig = z.infer<typeof TestConfigSchema>;
-export type Evaluation = z.infer<typeof EvaluationSchema>;
-export type OttConversationConfig = z.infer<typeof OttConversationConfigSchema>;
 /**
  * Conversation filter options.
  * @interface ConversationFilters

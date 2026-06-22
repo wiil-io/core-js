@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.74**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.75**](../../README.md)
 
 ***
 
@@ -6,12 +6,12 @@
 
 # Enumeration: PreferredContactMethod
 
-Defined in: [src/core/type-definitions/business-definitions.ts:300](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/type-definitions/business-definitions.ts#L300)
+Defined in: [src/core/type-definitions/business-definitions.ts:300](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/business-definitions.ts#L300)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="email"></a> `EMAIL` | `"email"` | [src/core/type-definitions/business-definitions.ts:301](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/type-definitions/business-definitions.ts#L301) |
-| <a id="phone"></a> `PHONE` | `"phone"` | [src/core/type-definitions/business-definitions.ts:302](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/type-definitions/business-definitions.ts#L302) |
-| <a id="sms"></a> `SMS` | `"sms"` | [src/core/type-definitions/business-definitions.ts:303](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/type-definitions/business-definitions.ts#L303) |
+| <a id="email"></a> `EMAIL` | `"email"` | [src/core/type-definitions/business-definitions.ts:301](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/business-definitions.ts#L301) |
+| <a id="phone"></a> `PHONE` | `"phone"` | [src/core/type-definitions/business-definitions.ts:302](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/business-definitions.ts#L302) |
+| <a id="sms"></a> `SMS` | `"sms"` | [src/core/type-definitions/business-definitions.ts:303](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/business-definitions.ts#L303) |

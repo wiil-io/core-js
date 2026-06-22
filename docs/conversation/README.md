@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.74**](../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.75**](../README.md)
 
 ***
 
@@ -49,12 +49,8 @@ Central export point for conversation schemas.
 | [ConversationContext](type-aliases/ConversationContext.md) | Conversation context schema. |
 | [ConversationSummary](type-aliases/ConversationSummary.md) | Conversation summary schema. |
 | [ServiceConversationConfigType](type-aliases/ServiceConversationConfigType.md) | Service conversation configuration schema. |
-| [DecommissionRequest](type-aliases/DecommissionRequest.md) | Decommission configuration schema. |
 | [CallTransfer](type-aliases/CallTransfer.md) | Call transfer schema for tracking call transfer details in telephony conversations. |
 | [ConversationStateHistory](type-aliases/ConversationStateHistory.md) | Conversation state history schema for tracking status changes. |
-| [TestConfig](type-aliases/TestConfig.md) | Test configuration schema. Base configuration for testing AI agents. |
-| [Evaluation](type-aliases/Evaluation.md) | Evaluation schema for running AI agent evaluations. |
-| [OttConversationConfig](type-aliases/OttConversationConfig.md) | OTT conversation configuration with connection details. |
 | [UserChatMessage](type-aliases/UserChatMessage.md) | User chat message schema. |
 | [AssistantChatMessage](type-aliases/AssistantChatMessage.md) | Assistant chat message schema. |
 | [UserEmailMessage](type-aliases/UserEmailMessage.md) | User email message schema. |
@@ -115,7 +111,6 @@ Central export point for conversation schemas.
 | [BaseConversationConfigSchema](variables/BaseConversationConfigSchema.md) | Base conversation configuration schema. |
 | [CallTransferSchema](variables/CallTransferSchema.md) | Call transfer schema for tracking call transfer details in telephony conversations. |
 | [ServiceConversationConfigSchema](variables/ServiceConversationConfigSchema.md) | Service conversation configuration schema. |
-| [DecommissionConfigSchema](variables/DecommissionConfigSchema.md) | Decommission configuration schema. |
 | [TestConfigSchema](variables/TestConfigSchema.md) | Test configuration schema. Base configuration for testing AI agents. |
 | [EvaluationSchema](variables/EvaluationSchema.md) | Evaluation schema for running AI agent evaluations. |
 | [ConversationConfigSchema](variables/ConversationConfigSchema.md) | OTT conversation configuration schema. Configuration for OTT (over-the-top) chat widget connections. |

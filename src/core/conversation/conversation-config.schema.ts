@@ -337,28 +337,6 @@ export const ServiceConversationConfigSchema = BaseConversationConfigSchema.safe
     call_transfer: CallTransferSchema.nullable().optional().describe("Call transfer details if the conversation was transferred to a human agent including transfer type, destination, timing, and outcome (null if no transfer occurred)")
 });
 
-/**
- * Decommission configuration schema.
- *
- * Request payload for decommissioning and shutting down active conversation services. Used for
- * gracefully terminating conversation sessions, cleaning up resources, and releasing telephony
- * connections when deployments are disabled or conversations are force-closed.
- *
- * @remarks
- * **Architecture Context:**
- * - **Used For**: Graceful shutdown of active conversation sessions
- * - **Triggered By**: Admin actions, deployment deactivation, or timeout policies
- * - **Effects**: Releases telephony resources, closes WebSocket connections, archives conversation
- *
- * **Use Cases:**
- * - Emergency shutdown of misbehaving conversation sessions
- * - Cleanup when deployments are deactivated
- * - Forced conversation termination for policy violations
- */
-export const DecommissionConfigSchema = z.object({
-    decommission_service_id: z.string().describe("Service ID of the active conversation session to decommission and shut down gracefully, releases resources and closes all active connections"),
-});
-
 // ============================================================================
 // TEST AND EVALUATION SCHEMAS
 // ============================================================================
@@ -413,12 +391,8 @@ export const OttConversationConfigSchema = ConversationConfigSchema.safeExtend({
 
 export type ConversationSummary = z.infer<typeof ConversationSummarySchema>;
 export type ServiceConversationConfigType = z.infer<typeof ServiceConversationConfigSchema>;
-export type DecommissionRequest = z.infer<typeof DecommissionConfigSchema>;
 export type CallTransfer = z.infer<typeof CallTransferSchema>;
 export type ConversationStateHistory = z.infer<typeof ConversationStateHistorySchema>;
-export type TestConfig = z.infer<typeof TestConfigSchema>;
-export type Evaluation = z.infer<typeof EvaluationSchema>;
-export type OttConversationConfig = z.infer<typeof OttConversationConfigSchema>;
 
 // ============================================================================
 // QUERY OPTIONS

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.OttConversationConfigSchema = exports.ConversationConfigSchema = exports.EvaluationSchema = exports.TestConfigSchema = exports.DecommissionConfigSchema = exports.ServiceConversationConfigSchema = exports.CallTransferSchema = exports.BaseConversationConfigSchema = exports.ConversationStateHistorySchema = exports.ConversationMessageSchema = exports.ConversationContextSchema = exports.DisplayMessageSchema = exports.MessageSchema = exports.ConversationSummarySchema = void 0;
+exports.OttConversationConfigSchema = exports.ConversationConfigSchema = exports.EvaluationSchema = exports.TestConfigSchema = exports.ServiceConversationConfigSchema = exports.CallTransferSchema = exports.BaseConversationConfigSchema = exports.ConversationStateHistorySchema = exports.ConversationMessageSchema = exports.ConversationContextSchema = exports.DisplayMessageSchema = exports.MessageSchema = exports.ConversationSummarySchema = void 0;
 const zod_1 = require("zod");
 const conversation_message_schema_1 = require("./conversation-message.schema");
 const type_definitions_1 = require("../type-definitions");
@@ -305,27 +305,6 @@ exports.ServiceConversationConfigSchema = exports.BaseConversationConfigSchema.s
     direction: zod_1.z.enum(type_definitions_1.ConversationDirection).nullable().optional().describe("Direction of the telephony call: 'inbound' for customer-initiated calls, 'outbound' for agent-initiated or campaign calls (null for non-voice channels like chat/email)"),
     resource_url: zod_1.z.string().nullable().optional().describe("Resource URL for the call recording or conversation details from telephony provider (SignalWire recording URL, Twilio media URL) for compliance, quality assurance, and dispute resolution"),
     call_transfer: exports.CallTransferSchema.nullable().optional().describe("Call transfer details if the conversation was transferred to a human agent including transfer type, destination, timing, and outcome (null if no transfer occurred)")
-});
-/**
- * Decommission configuration schema.
- *
- * Request payload for decommissioning and shutting down active conversation services. Used for
- * gracefully terminating conversation sessions, cleaning up resources, and releasing telephony
- * connections when deployments are disabled or conversations are force-closed.
- *
- * @remarks
- * **Architecture Context:**
- * - **Used For**: Graceful shutdown of active conversation sessions
- * - **Triggered By**: Admin actions, deployment deactivation, or timeout policies
- * - **Effects**: Releases telephony resources, closes WebSocket connections, archives conversation
- *
- * **Use Cases:**
- * - Emergency shutdown of misbehaving conversation sessions
- * - Cleanup when deployments are deactivated
- * - Forced conversation termination for policy violations
- */
-exports.DecommissionConfigSchema = zod_1.z.object({
-    decommission_service_id: zod_1.z.string().describe("Service ID of the active conversation session to decommission and shut down gracefully, releases resources and closes all active connections"),
 });
 // ============================================================================
 // TEST AND EVALUATION SCHEMAS

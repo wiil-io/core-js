@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.74**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.75**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: SmsRequestSorting
 
-Defined in: [src/core/conversation/outbound-sms.schema.ts:137](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/conversation/outbound-sms.schema.ts#L137)
+Defined in: [src/core/conversation/outbound-sms.schema.ts:137](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/conversation/outbound-sms.schema.ts#L137)
 
 SMS request sorting options.
  SmsRequestSorting
@@ -15,5 +15,5 @@ SMS request sorting options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="field"></a> `field` | `"createdAt"` \| `"status"` \| `"scheduledAt"` \| `"retryCount"` | Field to sort by | [src/core/conversation/outbound-sms.schema.ts:139](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/conversation/outbound-sms.schema.ts#L139) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/conversation/outbound-sms.schema.ts:141](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/conversation/outbound-sms.schema.ts#L141) |
+| <a id="field"></a> `field` | `"createdAt"` \| `"status"` \| `"scheduledAt"` \| `"retryCount"` | Field to sort by | [src/core/conversation/outbound-sms.schema.ts:139](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/conversation/outbound-sms.schema.ts#L139) |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/conversation/outbound-sms.schema.ts:141](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/conversation/outbound-sms.schema.ts#L141) |

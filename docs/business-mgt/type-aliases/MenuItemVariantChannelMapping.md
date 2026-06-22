@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.74**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.75**](../../README.md)
 
 ***
 
@@ -14,7 +14,7 @@ type MenuItemVariantChannelMapping = {
 };
 ```
 
-Defined in: [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:104](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L104)
+Defined in: [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:104](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L104)
 
 Menu item variant channel mapping schema.
 Maps menu item variants to external platform identifiers.
@@ -23,6 +23,6 @@ Maps menu item variants to external platform identifiers.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="channelid"></a> `channelId` | `string` | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:26](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L26) |
-| <a id="externalvariantid"></a> `externalVariantId` | `string` | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:27](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L27) |
-| <a id="externalmenuitemid"></a> `externalMenuItemId?` | `string` \| `null` | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:28](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L28) |
+| <a id="channelid"></a> `channelId` | `string` | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:26](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L26) |
+| <a id="externalvariantid"></a> `externalVariantId` | `string` | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:27](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L27) |
+| <a id="externalmenuitemid"></a> `externalMenuItemId?` | `string` \| `null` | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:28](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L28) |

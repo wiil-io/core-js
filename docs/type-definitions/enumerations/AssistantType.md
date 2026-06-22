@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.74**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.75**](../../README.md)
 
 ***
 
@@ -6,13 +6,13 @@
 
 # Enumeration: AssistantType
 
-Defined in: [src/core/type-definitions/service-config.definitions.ts:81](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/type-definitions/service-config.definitions.ts#L81)
+Defined in: [src/core/type-definitions/service-config.definitions.ts:81](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/service-config.definitions.ts#L81)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="phone"></a> `PHONE` | `"phone"` | [src/core/type-definitions/service-config.definitions.ts:82](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/type-definitions/service-config.definitions.ts#L82) |
-| <a id="web"></a> `WEB` | `"web"` | [src/core/type-definitions/service-config.definitions.ts:83](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/type-definitions/service-config.definitions.ts#L83) |
-| <a id="email"></a> `EMAIL` | `"email"` | [src/core/type-definitions/service-config.definitions.ts:84](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/type-definitions/service-config.definitions.ts#L84) |
-| <a id="general"></a> `GENERAL` | `"general"` | [src/core/type-definitions/service-config.definitions.ts:85](https://github.com/wiil-io/core-js/blob/b2b0ee98ac1c44b705fbb8bab5be775697b2afe8/src/core/type-definitions/service-config.definitions.ts#L85) |
+| <a id="phone"></a> `PHONE` | `"phone"` | [src/core/type-definitions/service-config.definitions.ts:82](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/service-config.definitions.ts#L82) |
+| <a id="web"></a> `WEB` | `"web"` | [src/core/type-definitions/service-config.definitions.ts:83](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/service-config.definitions.ts#L83) |
+| <a id="email"></a> `EMAIL` | `"email"` | [src/core/type-definitions/service-config.definitions.ts:84](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/service-config.definitions.ts#L84) |
+| <a id="general"></a> `GENERAL` | `"general"` | [src/core/type-definitions/service-config.definitions.ts:85](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/service-config.definitions.ts#L85) |
