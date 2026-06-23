@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.75**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.76**](../../README.md)
 
 ***
 
@@ -6,14 +6,14 @@
 
 # Enumeration: PropertyCondition
 
-Defined in: [src/core/type-definitions/business-definitions.ts:355](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/business-definitions.ts#L355)
+Defined in: [src/core/type-definitions/business-definitions.ts:355](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/type-definitions/business-definitions.ts#L355)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="new"></a> `NEW` | `"new"` | [src/core/type-definitions/business-definitions.ts:356](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/business-definitions.ts#L356) |
-| <a id="excellent"></a> `EXCELLENT` | `"excellent"` | [src/core/type-definitions/business-definitions.ts:357](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/business-definitions.ts#L357) |
-| <a id="good"></a> `GOOD` | `"good"` | [src/core/type-definitions/business-definitions.ts:358](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/business-definitions.ts#L358) |
-| <a id="fair"></a> `FAIR` | `"fair"` | [src/core/type-definitions/business-definitions.ts:359](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/business-definitions.ts#L359) |
-| <a id="needs_work"></a> `NEEDS_WORK` | `"needs_work"` | [src/core/type-definitions/business-definitions.ts:360](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/business-definitions.ts#L360) |
+| <a id="new"></a> `NEW` | `"new"` | [src/core/type-definitions/business-definitions.ts:356](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/type-definitions/business-definitions.ts#L356) |
+| <a id="excellent"></a> `EXCELLENT` | `"excellent"` | [src/core/type-definitions/business-definitions.ts:357](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/type-definitions/business-definitions.ts#L357) |
+| <a id="good"></a> `GOOD` | `"good"` | [src/core/type-definitions/business-definitions.ts:358](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/type-definitions/business-definitions.ts#L358) |
+| <a id="fair"></a> `FAIR` | `"fair"` | [src/core/type-definitions/business-definitions.ts:359](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/type-definitions/business-definitions.ts#L359) |
+| <a id="needs_work"></a> `NEEDS_WORK` | `"needs_work"` | [src/core/type-definitions/business-definitions.ts:360](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/type-definitions/business-definitions.ts#L360) |

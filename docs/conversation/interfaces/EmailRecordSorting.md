@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.75**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.76**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: EmailRecordSorting
 
-Defined in: [src/core/conversation/outbound-email.schema.ts:255](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/conversation/outbound-email.schema.ts#L255)
+Defined in: [src/core/conversation/outbound-email.schema.ts:255](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/conversation/outbound-email.schema.ts#L255)
 
 Email record sorting options.
  EmailRecordSorting
@@ -15,5 +15,5 @@ Email record sorting options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="field"></a> `field` | `"createdAt"` \| `"status"` \| `"sentAt"` \| `"deliveredAt"` | Field to sort by | [src/core/conversation/outbound-email.schema.ts:257](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/conversation/outbound-email.schema.ts#L257) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/conversation/outbound-email.schema.ts:259](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/conversation/outbound-email.schema.ts#L259) |
+| <a id="field"></a> `field` | `"createdAt"` \| `"status"` \| `"sentAt"` \| `"deliveredAt"` | Field to sort by | [src/core/conversation/outbound-email.schema.ts:257](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/conversation/outbound-email.schema.ts#L257) |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/conversation/outbound-email.schema.ts:259](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/conversation/outbound-email.schema.ts#L259) |

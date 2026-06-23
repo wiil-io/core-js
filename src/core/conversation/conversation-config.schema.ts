@@ -191,14 +191,15 @@ export const ConversationMessageSchema = z.union([
  * @typedef {Object} ConversationStateHistory
  * @property {string} status - The conversation status at this point in the lifecycle (ACTIVE, COMPLETED, FAILED, ABANDONED, TRANSFERRED)
  * @property {number} timestamp - Unix timestamp in milliseconds when this status was set and recorded
- * @property {string} [reason] - Optional human-readable explanation for why the status changed (e.g., 'User requested transfer', 'Timeout after 5 minutes of inactivity', 'Issue resolved')
- * @property {Object} [metadata] - Additional context about the state change including triggering events, system metrics, or escalation details
+ * @property {string|null} [reason] - Optional human-readable explanation for why the status changed (e.g., 'User requested transfer', 'Timeout after 5 minutes of inactivity', 'Issue resolved')
+ * @property {Object|null} [metadata] - Additional context about the state change including triggering events, system metrics, or escalation details
  */
 export const ConversationStateHistorySchema = z.object({
     status: z.enum(ConversationStatus).describe("The conversation status at this point in the lifecycle (ACTIVE: in progress, COMPLETED: successfully concluded, FAILED: encountered errors, ABANDONED: user left, TRANSFERRED: escalated to human)"),
     timestamp: z.number().describe("Unix timestamp in milliseconds when this status was set and recorded in the conversation history"),
-    reason: z.string().optional().describe("Optional human-readable explanation for why the status changed (e.g., 'User requested transfer to billing', 'Timeout after 5 minutes of inactivity', 'Issue successfully resolved')"),
-    metadata: z.record(z.string(), z.any()).optional().describe("Additional context about the state change as key-value pairs including triggering events, system metrics, agent performance data, or escalation/transfer details")
+    reason: z.string().nullable().optional().describe("Optional human-readable explanation for why the status changed (e.g., 'User requested transfer to billing', 'Timeout after 5 minutes of inactivity', 'Issue successfully resolved')"),
+    metadata: z.record(z.string(), z.any()).nullable()
+    .optional().describe("Additional context about the state change as key-value pairs including triggering events, system metrics, agent performance data, or escalation/transfer details")
 });
 
 /**

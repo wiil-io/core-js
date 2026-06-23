@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.75**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.76**](../../README.md)
 
 ***
 
@@ -96,8 +96,8 @@ const BaseConversationConfigSchema: ZodObject<{
   state_history: ZodOptional<ZodNullable<ZodArray<ZodObject<{
      status: ZodEnum<typeof ConversationStatus>;
      timestamp: ZodNumber;
-     reason: ZodOptional<ZodString>;
-     metadata: ZodOptional<ZodRecord<ZodString, ZodAny>>;
+     reason: ZodOptional<ZodNullable<ZodString>>;
+     metadata: ZodOptional<ZodNullable<ZodRecord<ZodString, ZodAny>>>;
   }, $strip>>>>;
   updated_at: ZodNullable<ZodOptional<ZodNumber>>;
   deleted_at: ZodNullable<ZodOptional<ZodNumber>>;
@@ -115,7 +115,7 @@ const BaseConversationConfigSchema: ZodObject<{
 }, $strip>;
 ```
 
-Defined in: [src/core/conversation/conversation-config.schema.ts:250](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/conversation/conversation-config.schema.ts#L250)
+Defined in: [src/core/conversation/conversation-config.schema.ts:251](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/conversation/conversation-config.schema.ts#L251)
 
 Base conversation configuration schema.
 

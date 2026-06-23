@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.75**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.76**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ShippingAddressFilters
 
-Defined in: [src/core/business-mgt/customer-management/shipping-address.schema.ts:99](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/customer-management/shipping-address.schema.ts#L99)
+Defined in: [src/core/business-mgt/customer-management/shipping-address.schema.ts:99](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/customer-management/shipping-address.schema.ts#L99)
 
 Shipping address filter options.
  ShippingAddressFilters
@@ -15,8 +15,8 @@ Shipping address filter options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="customerid"></a> `customerId?` | `string` | Filter by customer ID | [src/core/business-mgt/customer-management/shipping-address.schema.ts:101](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/customer-management/shipping-address.schema.ts#L101) |
-| <a id="isprimary"></a> `isPrimary?` | `boolean` | Filter by primary status | [src/core/business-mgt/customer-management/shipping-address.schema.ts:103](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/customer-management/shipping-address.schema.ts#L103) |
-| <a id="country"></a> `country?` | `string` | Filter by country | [src/core/business-mgt/customer-management/shipping-address.schema.ts:105](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/customer-management/shipping-address.schema.ts#L105) |
-| <a id="city"></a> `city?` | `string` | Filter by city | [src/core/business-mgt/customer-management/shipping-address.schema.ts:107](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/customer-management/shipping-address.schema.ts#L107) |
-| <a id="state"></a> `state?` | `string` | Filter by state | [src/core/business-mgt/customer-management/shipping-address.schema.ts:109](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/customer-management/shipping-address.schema.ts#L109) |
+| <a id="customerid"></a> `customerId?` | `string` | Filter by customer ID | [src/core/business-mgt/customer-management/shipping-address.schema.ts:101](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/customer-management/shipping-address.schema.ts#L101) |
+| <a id="isprimary"></a> `isPrimary?` | `boolean` | Filter by primary status | [src/core/business-mgt/customer-management/shipping-address.schema.ts:103](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/customer-management/shipping-address.schema.ts#L103) |
+| <a id="country"></a> `country?` | `string` | Filter by country | [src/core/business-mgt/customer-management/shipping-address.schema.ts:105](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/customer-management/shipping-address.schema.ts#L105) |
+| <a id="city"></a> `city?` | `string` | Filter by city | [src/core/business-mgt/customer-management/shipping-address.schema.ts:107](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/customer-management/shipping-address.schema.ts#L107) |
+| <a id="state"></a> `state?` | `string` | Filter by state | [src/core/business-mgt/customer-management/shipping-address.schema.ts:109](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/customer-management/shipping-address.schema.ts#L109) |

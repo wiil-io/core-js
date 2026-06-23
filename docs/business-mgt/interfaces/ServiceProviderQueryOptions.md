@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.75**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.76**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ServiceProviderQueryOptions
 
-Defined in: [src/core/business-mgt/service-management/service-provider.schema.ts:96](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/service-management/service-provider.schema.ts#L96)
+Defined in: [src/core/business-mgt/service-management/service-provider.schema.ts:96](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/service-management/service-provider.schema.ts#L96)
 
 Service provider query options.
  ServiceProviderQueryOptions
@@ -15,7 +15,7 @@ Service provider query options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/service-management/service-provider.schema.ts:98](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/service-management/service-provider.schema.ts#L98) |
-| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/service-management/service-provider.schema.ts:100](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/service-management/service-provider.schema.ts#L100) |
-| <a id="filters"></a> `filters?` | [`ServiceProviderFilters`](ServiceProviderFilters.md) | Optional filters | [src/core/business-mgt/service-management/service-provider.schema.ts:102](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/service-management/service-provider.schema.ts#L102) |
-| <a id="sorting"></a> `sorting?` | [`ServiceProviderSorting`](ServiceProviderSorting.md) | Optional sorting | [src/core/business-mgt/service-management/service-provider.schema.ts:104](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/service-management/service-provider.schema.ts#L104) |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/service-management/service-provider.schema.ts:98](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/service-management/service-provider.schema.ts#L98) |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/service-management/service-provider.schema.ts:100](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/service-management/service-provider.schema.ts#L100) |
+| <a id="filters"></a> `filters?` | [`ServiceProviderFilters`](ServiceProviderFilters.md) | Optional filters | [src/core/business-mgt/service-management/service-provider.schema.ts:102](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/service-management/service-provider.schema.ts#L102) |
+| <a id="sorting"></a> `sorting?` | [`ServiceProviderSorting`](ServiceProviderSorting.md) | Optional sorting | [src/core/business-mgt/service-management/service-provider.schema.ts:104](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/service-management/service-provider.schema.ts#L104) |

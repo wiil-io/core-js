@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.75**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.76**](../../README.md)
 
 ***
 
@@ -6,12 +6,12 @@
 
 # Enumeration: ProductOrderType
 
-Defined in: [src/core/type-definitions/business-definitions.ts:134](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/business-definitions.ts#L134)
+Defined in: [src/core/type-definitions/business-definitions.ts:134](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/type-definitions/business-definitions.ts#L134)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="pickup"></a> `PICKUP` | `"pickup"` | [src/core/type-definitions/business-definitions.ts:135](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/business-definitions.ts#L135) |
-| <a id="delivery"></a> `DELIVERY` | `"delivery"` | [src/core/type-definitions/business-definitions.ts:136](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/business-definitions.ts#L136) |
-| <a id="shipping"></a> `SHIPPING` | `"shipping"` | [src/core/type-definitions/business-definitions.ts:137](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/business-definitions.ts#L137) |
+| <a id="pickup"></a> `PICKUP` | `"pickup"` | [src/core/type-definitions/business-definitions.ts:135](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/type-definitions/business-definitions.ts#L135) |
+| <a id="delivery"></a> `DELIVERY` | `"delivery"` | [src/core/type-definitions/business-definitions.ts:136](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/type-definitions/business-definitions.ts#L136) |
+| <a id="shipping"></a> `SHIPPING` | `"shipping"` | [src/core/type-definitions/business-definitions.ts:137](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/type-definitions/business-definitions.ts#L137) |

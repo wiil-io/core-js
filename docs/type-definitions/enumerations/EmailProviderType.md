@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.75**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.76**](../../README.md)
 
 ***
 
@@ -6,16 +6,16 @@
 
 # Enumeration: EmailProviderType
 
-Defined in: [src/core/type-definitions/service-config.definitions.ts:29](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/service-config.definitions.ts#L29)
+Defined in: [src/core/type-definitions/service-config.definitions.ts:29](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/type-definitions/service-config.definitions.ts#L29)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="google"></a> `GOOGLE` | `"google"` | [src/core/type-definitions/service-config.definitions.ts:30](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/service-config.definitions.ts#L30) |
-| <a id="outlook"></a> `OUTLOOK` | `"outlook"` | [src/core/type-definitions/service-config.definitions.ts:31](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/service-config.definitions.ts#L31) |
-| <a id="sendgrid"></a> `SENDGRID` | `"sendgrid"` | [src/core/type-definitions/service-config.definitions.ts:32](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/service-config.definitions.ts#L32) |
-| <a id="ses"></a> `SES` | `"ses"` | [src/core/type-definitions/service-config.definitions.ts:33](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/service-config.definitions.ts#L33) |
-| <a id="mailgun"></a> `MAILGUN` | `"mailgun"` | [src/core/type-definitions/service-config.definitions.ts:34](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/service-config.definitions.ts#L34) |
-| <a id="postmark"></a> `POSTMARK` | `"postmark"` | [src/core/type-definitions/service-config.definitions.ts:35](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/service-config.definitions.ts#L35) |
-| <a id="smtp"></a> `SMTP` | `"smtp"` | [src/core/type-definitions/service-config.definitions.ts:36](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/service-config.definitions.ts#L36) |
+| <a id="google"></a> `GOOGLE` | `"google"` | [src/core/type-definitions/service-config.definitions.ts:30](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/type-definitions/service-config.definitions.ts#L30) |
+| <a id="outlook"></a> `OUTLOOK` | `"outlook"` | [src/core/type-definitions/service-config.definitions.ts:31](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/type-definitions/service-config.definitions.ts#L31) |
+| <a id="sendgrid"></a> `SENDGRID` | `"sendgrid"` | [src/core/type-definitions/service-config.definitions.ts:32](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/type-definitions/service-config.definitions.ts#L32) |
+| <a id="ses"></a> `SES` | `"ses"` | [src/core/type-definitions/service-config.definitions.ts:33](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/type-definitions/service-config.definitions.ts#L33) |
+| <a id="mailgun"></a> `MAILGUN` | `"mailgun"` | [src/core/type-definitions/service-config.definitions.ts:34](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/type-definitions/service-config.definitions.ts#L34) |
+| <a id="postmark"></a> `POSTMARK` | `"postmark"` | [src/core/type-definitions/service-config.definitions.ts:35](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/type-definitions/service-config.definitions.ts#L35) |
+| <a id="smtp"></a> `SMTP` | `"smtp"` | [src/core/type-definitions/service-config.definitions.ts:36](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/type-definitions/service-config.definitions.ts#L36) |

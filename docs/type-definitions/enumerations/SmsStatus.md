@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.75**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.76**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: SmsStatus
 
-Defined in: [src/core/type-definitions/conversation.type.definition.ts:191](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/conversation.type.definition.ts#L191)
+Defined in: [src/core/type-definitions/conversation.type.definition.ts:191](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/type-definitions/conversation.type.definition.ts#L191)
 
 SMS delivery status for tracking message lifecycle.
 
@@ -30,8 +30,8 @@ SmsRequestSchema - Uses this for delivery tracking
 
 | Enumeration Member | Value | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="queued"></a> `QUEUED` | `"queued"` | SMS request created, awaiting sending | [src/core/type-definitions/conversation.type.definition.ts:193](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/conversation.type.definition.ts#L193) |
-| <a id="sent"></a> `SENT` | `"sent"` | SMS successfully submitted to carrier | [src/core/type-definitions/conversation.type.definition.ts:195](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/conversation.type.definition.ts#L195) |
-| <a id="delivered"></a> `DELIVERED` | `"delivered"` | SMS confirmed delivered to recipient device | [src/core/type-definitions/conversation.type.definition.ts:197](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/conversation.type.definition.ts#L197) |
-| <a id="failed"></a> `FAILED` | `"failed"` | SMS failed to send due to technical error | [src/core/type-definitions/conversation.type.definition.ts:199](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/conversation.type.definition.ts#L199) |
-| <a id="undelivered"></a> `UNDELIVERED` | `"undelivered"` | SMS could not be delivered (invalid number, blocked, etc.) | [src/core/type-definitions/conversation.type.definition.ts:201](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/conversation.type.definition.ts#L201) |
+| <a id="queued"></a> `QUEUED` | `"queued"` | SMS request created, awaiting sending | [src/core/type-definitions/conversation.type.definition.ts:193](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/type-definitions/conversation.type.definition.ts#L193) |
+| <a id="sent"></a> `SENT` | `"sent"` | SMS successfully submitted to carrier | [src/core/type-definitions/conversation.type.definition.ts:195](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/type-definitions/conversation.type.definition.ts#L195) |
+| <a id="delivered"></a> `DELIVERED` | `"delivered"` | SMS confirmed delivered to recipient device | [src/core/type-definitions/conversation.type.definition.ts:197](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/type-definitions/conversation.type.definition.ts#L197) |
+| <a id="failed"></a> `FAILED` | `"failed"` | SMS failed to send due to technical error | [src/core/type-definitions/conversation.type.definition.ts:199](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/type-definitions/conversation.type.definition.ts#L199) |
+| <a id="undelivered"></a> `UNDELIVERED` | `"undelivered"` | SMS could not be delivered (invalid number, blocked, etc.) | [src/core/type-definitions/conversation.type.definition.ts:201](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/type-definitions/conversation.type.definition.ts#L201) |

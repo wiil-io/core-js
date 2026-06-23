@@ -324,8 +324,8 @@ Audit trail of status changes throughout the conversation lifecycle.
 |-------|------|----------|-------------|
 | status | enum | Yes | Conversation status at this point |
 | timestamp | number | Yes | When the status changed |
-| reason | string | No | Reason for status change |
-| triggeredBy | string | No | What triggered the change |
+| reason | string \| null | No | Reason for status change |
+| metadata | object \| null | No | Additional context about the state change |
 
 ### Example
 

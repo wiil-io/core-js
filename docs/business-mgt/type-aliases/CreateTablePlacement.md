@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.75**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.76**](../../README.md)
 
 ***
 
@@ -24,7 +24,7 @@ type CreateTablePlacement = {
 };
 ```
 
-Defined in: [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:208](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L208)
+Defined in: [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:208](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L208)
 
 Schema for creating a new table placement.
 Omits auto-generated fields.
@@ -33,16 +33,16 @@ Omits auto-generated fields.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="tableresourceid"></a> `tableResourceId` | `string` | [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:105](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L105) |
-| <a id="floorplansectionid"></a> `floorPlanSectionId` | `string` | [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:106](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L106) |
-| <a id="number"></a> `number` | `string` | [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:107](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L107) |
-| <a id="x"></a> `x` | `number` | [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:108](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L108) |
-| <a id="y"></a> `y` | `number` | [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:109](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L109) |
-| <a id="width"></a> `width` | `number` | [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:110](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L110) |
-| <a id="height"></a> `height` | `number` | [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:111](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L111) |
-| <a id="shape"></a> `shape` | [`TableShape`](../enumerations/TableShape.md) | [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:112](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L112) |
-| <a id="rotation"></a> `rotation?` | `number` \| `null` | [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:113](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L113) |
-| <a id="minparty"></a> `minParty` | `number` | [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:114](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L114) |
-| <a id="maxparty"></a> `maxParty` | `number` | [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:115](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L115) |
-| <a id="combinablewith"></a> `combinableWith` | `string`[] | [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:116](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L116) |
-| <a id="serversectionid"></a> `serverSectionId?` | `string` \| `null` | [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:117](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L117) |
+| <a id="tableresourceid"></a> `tableResourceId` | `string` | [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:105](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L105) |
+| <a id="floorplansectionid"></a> `floorPlanSectionId` | `string` | [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:106](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L106) |
+| <a id="number"></a> `number` | `string` | [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:107](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L107) |
+| <a id="x"></a> `x` | `number` | [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:108](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L108) |
+| <a id="y"></a> `y` | `number` | [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:109](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L109) |
+| <a id="width"></a> `width` | `number` | [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:110](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L110) |
+| <a id="height"></a> `height` | `number` | [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:111](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L111) |
+| <a id="shape"></a> `shape` | [`TableShape`](../enumerations/TableShape.md) | [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:112](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L112) |
+| <a id="rotation"></a> `rotation?` | `number` \| `null` | [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:113](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L113) |
+| <a id="minparty"></a> `minParty` | `number` | [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:114](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L114) |
+| <a id="maxparty"></a> `maxParty` | `number` | [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:115](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L115) |
+| <a id="combinablewith"></a> `combinableWith` | `string`[] | [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:116](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L116) |
+| <a id="serversectionid"></a> `serverSectionId?` | `string` \| `null` | [src/core/business-mgt/reservation-mgt/reservation-section.schema.ts:117](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/reservation-mgt/reservation-section.schema.ts#L117) |

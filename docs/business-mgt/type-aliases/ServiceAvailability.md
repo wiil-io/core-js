@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.75**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.76**](../../README.md)
 
 ***
 
@@ -22,7 +22,7 @@ type ServiceAvailability = {
 };
 ```
 
-Defined in: [src/core/business-mgt/service-management/business-service-config.schema.ts:149](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/service-management/business-service-config.schema.ts#L149)
+Defined in: [src/core/business-mgt/service-management/business-service-config.schema.ts:149](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/service-management/business-service-config.schema.ts#L149)
 
 Service availability schema.
 Configures when a service is available for booking.
@@ -31,6 +31,6 @@ Configures when a service is available for booking.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="mode"></a> `mode` | [`ServiceAvailabilityMode`](../enumerations/ServiceAvailabilityMode.md) | [src/core/business-mgt/service-management/business-service-config.schema.ts:132](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/service-management/business-service-config.schema.ts#L132) |
-| <a id="weeklyschedule"></a> `weeklySchedule?` | `Record`\<`string`, \{ `isOpen`: `boolean`; `startTime`: `string`; `endTime`: `string`; \}\> | [src/core/business-mgt/service-management/business-service-config.schema.ts:134](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/service-management/business-service-config.schema.ts#L134) |
-| <a id="dateranges"></a> `dateRanges?` | \{ `startDate`: `string`; `endDate`: `string`; `isExclusion`: `boolean`; \}[] | [src/core/business-mgt/service-management/business-service-config.schema.ts:136](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/service-management/business-service-config.schema.ts#L136) |
+| <a id="mode"></a> `mode` | [`ServiceAvailabilityMode`](../enumerations/ServiceAvailabilityMode.md) | [src/core/business-mgt/service-management/business-service-config.schema.ts:132](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/service-management/business-service-config.schema.ts#L132) |
+| <a id="weeklyschedule"></a> `weeklySchedule?` | `Record`\<`string`, \{ `isOpen`: `boolean`; `startTime`: `string`; `endTime`: `string`; \}\> | [src/core/business-mgt/service-management/business-service-config.schema.ts:134](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/service-management/business-service-config.schema.ts#L134) |
+| <a id="dateranges"></a> `dateRanges?` | \{ `startDate`: `string`; `endDate`: `string`; `isExclusion`: `boolean`; \}[] | [src/core/business-mgt/service-management/business-service-config.schema.ts:136](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/service-management/business-service-config.schema.ts#L136) |

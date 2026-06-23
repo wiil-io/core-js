@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.75**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.76**](../../README.md)
 
 ***
 
@@ -6,14 +6,14 @@
 
 # Enumeration: AgentRoleTemplateIdentifier
 
-Defined in: [src/core/type-definitions/service-config.definitions.ts:133](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/service-config.definitions.ts#L133)
+Defined in: [src/core/type-definitions/service-config.definitions.ts:133](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/type-definitions/service-config.definitions.ts#L133)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="customer_support_general"></a> `CUSTOMER_SUPPORT_GENERAL` | `"customer-support-general"` | [src/core/type-definitions/service-config.definitions.ts:134](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/service-config.definitions.ts#L134) |
-| <a id="technical_support_specialist"></a> `TECHNICAL_SUPPORT_SPECIALIST` | `"technical-support-specialist"` | [src/core/type-definitions/service-config.definitions.ts:135](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/service-config.definitions.ts#L135) |
-| <a id="sales_representative"></a> `SALES_REPRESENTATIVE` | `"sales-representative"` | [src/core/type-definitions/service-config.definitions.ts:136](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/service-config.definitions.ts#L136) |
-| <a id="onboarding_specialist"></a> `ONBOARDING_SPECIALIST` | `"onboarding-specialist"` | [src/core/type-definitions/service-config.definitions.ts:137](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/service-config.definitions.ts#L137) |
-| <a id="billing_support_specialist"></a> `BILLING_SUPPORT_SPECIALIST` | `"billing-support-specialist"` | [src/core/type-definitions/service-config.definitions.ts:138](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/type-definitions/service-config.definitions.ts#L138) |
+| <a id="customer_support_general"></a> `CUSTOMER_SUPPORT_GENERAL` | `"customer-support-general"` | [src/core/type-definitions/service-config.definitions.ts:134](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/type-definitions/service-config.definitions.ts#L134) |
+| <a id="technical_support_specialist"></a> `TECHNICAL_SUPPORT_SPECIALIST` | `"technical-support-specialist"` | [src/core/type-definitions/service-config.definitions.ts:135](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/type-definitions/service-config.definitions.ts#L135) |
+| <a id="sales_representative"></a> `SALES_REPRESENTATIVE` | `"sales-representative"` | [src/core/type-definitions/service-config.definitions.ts:136](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/type-definitions/service-config.definitions.ts#L136) |
+| <a id="onboarding_specialist"></a> `ONBOARDING_SPECIALIST` | `"onboarding-specialist"` | [src/core/type-definitions/service-config.definitions.ts:137](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/type-definitions/service-config.definitions.ts#L137) |
+| <a id="billing_support_specialist"></a> `BILLING_SUPPORT_SPECIALIST` | `"billing-support-specialist"` | [src/core/type-definitions/service-config.definitions.ts:138](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/type-definitions/service-config.definitions.ts#L138) |

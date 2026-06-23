@@ -164,14 +164,15 @@ exports.ConversationMessageSchema = zod_1.z.union([
  * @typedef {Object} ConversationStateHistory
  * @property {string} status - The conversation status at this point in the lifecycle (ACTIVE, COMPLETED, FAILED, ABANDONED, TRANSFERRED)
  * @property {number} timestamp - Unix timestamp in milliseconds when this status was set and recorded
- * @property {string} [reason] - Optional human-readable explanation for why the status changed (e.g., 'User requested transfer', 'Timeout after 5 minutes of inactivity', 'Issue resolved')
- * @property {Object} [metadata] - Additional context about the state change including triggering events, system metrics, or escalation details
+ * @property {string|null} [reason] - Optional human-readable explanation for why the status changed (e.g., 'User requested transfer', 'Timeout after 5 minutes of inactivity', 'Issue resolved')
+ * @property {Object|null} [metadata] - Additional context about the state change including triggering events, system metrics, or escalation details
  */
 exports.ConversationStateHistorySchema = zod_1.z.object({
     status: zod_1.z.enum(type_definitions_1.ConversationStatus).describe("The conversation status at this point in the lifecycle (ACTIVE: in progress, COMPLETED: successfully concluded, FAILED: encountered errors, ABANDONED: user left, TRANSFERRED: escalated to human)"),
     timestamp: zod_1.z.number().describe("Unix timestamp in milliseconds when this status was set and recorded in the conversation history"),
-    reason: zod_1.z.string().optional().describe("Optional human-readable explanation for why the status changed (e.g., 'User requested transfer to billing', 'Timeout after 5 minutes of inactivity', 'Issue successfully resolved')"),
-    metadata: zod_1.z.record(zod_1.z.string(), zod_1.z.any()).optional().describe("Additional context about the state change as key-value pairs including triggering events, system metrics, agent performance data, or escalation/transfer details")
+    reason: zod_1.z.string().nullable().optional().describe("Optional human-readable explanation for why the status changed (e.g., 'User requested transfer to billing', 'Timeout after 5 minutes of inactivity', 'Issue successfully resolved')"),
+    metadata: zod_1.z.record(zod_1.z.string(), zod_1.z.any()).nullable()
+        .optional().describe("Additional context about the state change as key-value pairs including triggering events, system metrics, agent performance data, or escalation/transfer details")
 });
 /**
  * Base conversation configuration schema.

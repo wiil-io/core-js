@@ -204,14 +204,14 @@ export declare const ConversationMessageSchema: z.ZodUnion<readonly [z.ZodObject
  * @typedef {Object} ConversationStateHistory
  * @property {string} status - The conversation status at this point in the lifecycle (ACTIVE, COMPLETED, FAILED, ABANDONED, TRANSFERRED)
  * @property {number} timestamp - Unix timestamp in milliseconds when this status was set and recorded
- * @property {string} [reason] - Optional human-readable explanation for why the status changed (e.g., 'User requested transfer', 'Timeout after 5 minutes of inactivity', 'Issue resolved')
- * @property {Object} [metadata] - Additional context about the state change including triggering events, system metrics, or escalation details
+ * @property {string|null} [reason] - Optional human-readable explanation for why the status changed (e.g., 'User requested transfer', 'Timeout after 5 minutes of inactivity', 'Issue resolved')
+ * @property {Object|null} [metadata] - Additional context about the state change including triggering events, system metrics, or escalation details
  */
 export declare const ConversationStateHistorySchema: z.ZodObject<{
     status: z.ZodEnum<typeof ConversationStatus>;
     timestamp: z.ZodNumber;
-    reason: z.ZodOptional<z.ZodString>;
-    metadata: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodAny>>;
+    reason: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    metadata: z.ZodOptional<z.ZodNullable<z.ZodRecord<z.ZodString, z.ZodAny>>>;
 }, z.core.$strip>;
 /**
  * Base conversation configuration schema.
@@ -348,8 +348,8 @@ export declare const BaseConversationConfigSchema: z.ZodObject<{
     state_history: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodObject<{
         status: z.ZodEnum<typeof ConversationStatus>;
         timestamp: z.ZodNumber;
-        reason: z.ZodOptional<z.ZodString>;
-        metadata: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodAny>>;
+        reason: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+        metadata: z.ZodOptional<z.ZodNullable<z.ZodRecord<z.ZodString, z.ZodAny>>>;
     }, z.core.$strip>>>>;
     updated_at: z.ZodNullable<z.ZodOptional<z.ZodNumber>>;
     deleted_at: z.ZodNullable<z.ZodOptional<z.ZodNumber>>;
@@ -514,8 +514,8 @@ export declare const ServiceConversationConfigSchema: z.ZodObject<{
     state_history: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodObject<{
         status: z.ZodEnum<typeof ConversationStatus>;
         timestamp: z.ZodNumber;
-        reason: z.ZodOptional<z.ZodString>;
-        metadata: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodAny>>;
+        reason: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+        metadata: z.ZodOptional<z.ZodNullable<z.ZodRecord<z.ZodString, z.ZodAny>>>;
     }, z.core.$strip>>>>;
     updated_at: z.ZodNullable<z.ZodOptional<z.ZodNumber>>;
     deleted_at: z.ZodNullable<z.ZodOptional<z.ZodNumber>>;

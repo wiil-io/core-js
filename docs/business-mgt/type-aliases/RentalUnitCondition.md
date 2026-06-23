@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.75**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.76**](../../README.md)
 
 ***
 
@@ -16,7 +16,7 @@ type RentalUnitCondition = {
 };
 ```
 
-Defined in: [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:98](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L98)
+Defined in: [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:98](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L98)
 
 Rental unit condition schema.
 Captures a condition inspection snapshot at pickup or return.
@@ -25,8 +25,8 @@ Captures a condition inspection snapshot at pickup or return.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="recordedat"></a> `recordedAt` | `number` | [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:50](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L50) |
-| <a id="recordedby"></a> `recordedBy` | `string` | [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:51](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L51) |
-| <a id="notes"></a> `notes?` | `string` \| `null` | [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:52](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L52) |
-| <a id="damagereported"></a> `damageReported` | `boolean` | [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:53](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L53) |
-| <a id="imageurls"></a> `imageUrls?` | `string`[] \| `null` | [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:54](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L54) |
+| <a id="recordedat"></a> `recordedAt` | `number` | [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:50](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L50) |
+| <a id="recordedby"></a> `recordedBy` | `string` | [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:51](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L51) |
+| <a id="notes"></a> `notes?` | `string` \| `null` | [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:52](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L52) |
+| <a id="damagereported"></a> `damageReported` | `boolean` | [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:53](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L53) |
+| <a id="imageurls"></a> `imageUrls?` | `string`[] \| `null` | [src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts:54](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/reservation-mgt/assignment/reservation-rental-assignment.schema.ts#L54) |

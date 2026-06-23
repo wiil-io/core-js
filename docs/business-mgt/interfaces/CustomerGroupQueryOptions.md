@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.75**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.76**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: CustomerGroupQueryOptions
 
-Defined in: [src/core/business-mgt/customer-management/customer-group.schema.ts:95](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/customer-management/customer-group.schema.ts#L95)
+Defined in: [src/core/business-mgt/customer-management/customer-group.schema.ts:95](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/customer-management/customer-group.schema.ts#L95)
 
 Customer group query options.
  CustomerGroupQueryOptions
@@ -15,7 +15,7 @@ Customer group query options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/customer-management/customer-group.schema.ts:97](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/customer-management/customer-group.schema.ts#L97) |
-| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/customer-management/customer-group.schema.ts:99](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/customer-management/customer-group.schema.ts#L99) |
-| <a id="filters"></a> `filters?` | [`CustomerGroupFilters`](CustomerGroupFilters.md) | Optional filters | [src/core/business-mgt/customer-management/customer-group.schema.ts:101](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/customer-management/customer-group.schema.ts#L101) |
-| <a id="sorting"></a> `sorting?` | [`CustomerGroupSorting`](CustomerGroupSorting.md) | Optional sorting | [src/core/business-mgt/customer-management/customer-group.schema.ts:103](https://github.com/wiil-io/core-js/blob/30ea300b8c5c9afa9ef99fffaae218b767488d67/src/core/business-mgt/customer-management/customer-group.schema.ts#L103) |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/customer-management/customer-group.schema.ts:97](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/customer-management/customer-group.schema.ts#L97) |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/customer-management/customer-group.schema.ts:99](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/customer-management/customer-group.schema.ts#L99) |
+| <a id="filters"></a> `filters?` | [`CustomerGroupFilters`](CustomerGroupFilters.md) | Optional filters | [src/core/business-mgt/customer-management/customer-group.schema.ts:101](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/customer-management/customer-group.schema.ts#L101) |
+| <a id="sorting"></a> `sorting?` | [`CustomerGroupSorting`](CustomerGroupSorting.md) | Optional sorting | [src/core/business-mgt/customer-management/customer-group.schema.ts:103](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/customer-management/customer-group.schema.ts#L103) |
