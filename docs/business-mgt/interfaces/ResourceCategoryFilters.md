@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.76**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.77**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ResourceCategoryFilters
 
-Defined in: [src/core/business-mgt/reservation-mgt/resource/reservation-resource-category.schema.ts:100](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/reservation-mgt/resource/reservation-resource-category.schema.ts#L100)
+Defined in: [src/core/business-mgt/reservation-mgt/resource/reservation-resource-category.schema.ts:100](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/reservation-mgt/resource/reservation-resource-category.schema.ts#L100)
 
 Resource category filter options.
  ResourceCategoryFilters
@@ -15,7 +15,7 @@ Resource category filter options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="search"></a> `search?` | `string` | Text search across category name and description | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-category.schema.ts:102](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/reservation-mgt/resource/reservation-resource-category.schema.ts#L102) |
-| <a id="locationid"></a> `locationId?` | `string` | Filter by business location ID | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-category.schema.ts:104](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/reservation-mgt/resource/reservation-resource-category.schema.ts#L104) |
-| <a id="resourcetype"></a> `resourceType?` | [`ResourceType`](../../type-definitions/enumerations/ResourceType.md)[] | Filter by resource types | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-category.schema.ts:106](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/reservation-mgt/resource/reservation-resource-category.schema.ts#L106) |
-| <a id="isactive"></a> `isActive?` | `boolean` | Filter by active status | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-category.schema.ts:108](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/reservation-mgt/resource/reservation-resource-category.schema.ts#L108) |
+| <a id="search"></a> `search?` | `string` | Text search across category name and description | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-category.schema.ts:102](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/reservation-mgt/resource/reservation-resource-category.schema.ts#L102) |
+| <a id="locationid"></a> `locationId?` | `string` | Filter by business location ID | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-category.schema.ts:104](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/reservation-mgt/resource/reservation-resource-category.schema.ts#L104) |
+| <a id="resourcetype"></a> `resourceType?` | [`ResourceType`](../../type-definitions/enumerations/ResourceType.md)[] | Filter by resource types | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-category.schema.ts:106](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/reservation-mgt/resource/reservation-resource-category.schema.ts#L106) |
+| <a id="isactive"></a> `isActive?` | `boolean` | Filter by active status | [src/core/business-mgt/reservation-mgt/resource/reservation-resource-category.schema.ts:108](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/reservation-mgt/resource/reservation-resource-category.schema.ts#L108) |

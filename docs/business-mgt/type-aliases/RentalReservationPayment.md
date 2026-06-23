@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.76**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.77**](../../README.md)
 
 ***
 
@@ -14,7 +14,7 @@ type RentalReservationPayment = {
 };
 ```
 
-Defined in: [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:182](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L182)
+Defined in: [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:182](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L182)
 
 Rental reservation payment schema.
 Captures rental charge and security deposit state for a rental booking.
@@ -23,6 +23,6 @@ Captures rental charge and security deposit state for a rental booking.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="rentalcharge"></a> `rentalCharge` | `number` | [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:42](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L42) |
-| <a id="securitydeposit"></a> `securityDeposit` | `number` | [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:43](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L43) |
-| <a id="depositstatus"></a> `depositStatus` | [`DepositStatus`](../../type-definitions/enumerations/DepositStatus.md) | [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:44](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L44) |
+| <a id="rentalcharge"></a> `rentalCharge` | `number` | [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:42](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L42) |
+| <a id="securitydeposit"></a> `securityDeposit` | `number` | [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:43](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L43) |
+| <a id="depositstatus"></a> `depositStatus` | [`DepositStatus`](../../type-definitions/enumerations/DepositStatus.md) | [src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts:44](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/reservation-mgt/reservation-rental.schema.ts#L44) |

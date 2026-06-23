@@ -45,7 +45,7 @@ export declare const MenuItemCatalogSchema: z.ZodObject<{
     createdAt: z.ZodOptional<z.ZodNumber>;
     updatedAt: z.ZodOptional<z.ZodNumber>;
     name: z.ZodString;
-    description: z.ZodOptional<z.ZodString>;
+    description: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     price: z.ZodNumber;
     categoryId: z.ZodString;
     category: z.ZodOptional<z.ZodObject<{
@@ -53,7 +53,7 @@ export declare const MenuItemCatalogSchema: z.ZodObject<{
         createdAt: z.ZodOptional<z.ZodNumber>;
         updatedAt: z.ZodOptional<z.ZodNumber>;
         name: z.ZodString;
-        description: z.ZodOptional<z.ZodString>;
+        description: z.ZodOptional<z.ZodNullable<z.ZodString>>;
         displayOrder: z.ZodOptional<z.ZodNumber>;
         channelMappings: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodObject<{
             channelId: z.ZodString;
@@ -69,7 +69,7 @@ export declare const MenuItemCatalogSchema: z.ZodObject<{
         fat: z.ZodOptional<z.ZodNumber>;
     }, z.core.$strip>>;
     isAvailable: z.ZodDefault<z.ZodBoolean>;
-    preparationTime: z.ZodOptional<z.ZodNumber>;
+    preparationTime: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
     isActive: z.ZodDefault<z.ZodBoolean>;
     displayOrder: z.ZodOptional<z.ZodNumber>;
     channelMappings: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodObject<{
@@ -154,7 +154,7 @@ export declare const MenuCatalogSchema: z.ZodObject<{
         createdAt: z.ZodOptional<z.ZodNumber>;
         updatedAt: z.ZodOptional<z.ZodNumber>;
         name: z.ZodString;
-        description: z.ZodOptional<z.ZodString>;
+        description: z.ZodOptional<z.ZodNullable<z.ZodString>>;
         displayOrder: z.ZodOptional<z.ZodNumber>;
         channelMappings: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodObject<{
             channelId: z.ZodString;
@@ -166,7 +166,7 @@ export declare const MenuCatalogSchema: z.ZodObject<{
         createdAt: z.ZodOptional<z.ZodNumber>;
         updatedAt: z.ZodOptional<z.ZodNumber>;
         name: z.ZodString;
-        description: z.ZodOptional<z.ZodString>;
+        description: z.ZodOptional<z.ZodNullable<z.ZodString>>;
         price: z.ZodNumber;
         categoryId: z.ZodString;
         category: z.ZodOptional<z.ZodObject<{
@@ -174,7 +174,7 @@ export declare const MenuCatalogSchema: z.ZodObject<{
             createdAt: z.ZodOptional<z.ZodNumber>;
             updatedAt: z.ZodOptional<z.ZodNumber>;
             name: z.ZodString;
-            description: z.ZodOptional<z.ZodString>;
+            description: z.ZodOptional<z.ZodNullable<z.ZodString>>;
             displayOrder: z.ZodOptional<z.ZodNumber>;
             channelMappings: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodObject<{
                 channelId: z.ZodString;
@@ -190,7 +190,7 @@ export declare const MenuCatalogSchema: z.ZodObject<{
             fat: z.ZodOptional<z.ZodNumber>;
         }, z.core.$strip>>;
         isAvailable: z.ZodDefault<z.ZodBoolean>;
-        preparationTime: z.ZodOptional<z.ZodNumber>;
+        preparationTime: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
         isActive: z.ZodDefault<z.ZodBoolean>;
         displayOrder: z.ZodOptional<z.ZodNumber>;
         channelMappings: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodObject<{
@@ -272,7 +272,7 @@ export declare const BusinessMenuCatalogSchema: z.ZodArray<z.ZodObject<{
         createdAt: z.ZodOptional<z.ZodNumber>;
         updatedAt: z.ZodOptional<z.ZodNumber>;
         name: z.ZodString;
-        description: z.ZodOptional<z.ZodString>;
+        description: z.ZodOptional<z.ZodNullable<z.ZodString>>;
         displayOrder: z.ZodOptional<z.ZodNumber>;
         channelMappings: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodObject<{
             channelId: z.ZodString;
@@ -284,7 +284,7 @@ export declare const BusinessMenuCatalogSchema: z.ZodArray<z.ZodObject<{
         createdAt: z.ZodOptional<z.ZodNumber>;
         updatedAt: z.ZodOptional<z.ZodNumber>;
         name: z.ZodString;
-        description: z.ZodOptional<z.ZodString>;
+        description: z.ZodOptional<z.ZodNullable<z.ZodString>>;
         price: z.ZodNumber;
         categoryId: z.ZodString;
         category: z.ZodOptional<z.ZodObject<{
@@ -292,7 +292,7 @@ export declare const BusinessMenuCatalogSchema: z.ZodArray<z.ZodObject<{
             createdAt: z.ZodOptional<z.ZodNumber>;
             updatedAt: z.ZodOptional<z.ZodNumber>;
             name: z.ZodString;
-            description: z.ZodOptional<z.ZodString>;
+            description: z.ZodOptional<z.ZodNullable<z.ZodString>>;
             displayOrder: z.ZodOptional<z.ZodNumber>;
             channelMappings: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodObject<{
                 channelId: z.ZodString;
@@ -308,7 +308,7 @@ export declare const BusinessMenuCatalogSchema: z.ZodArray<z.ZodObject<{
             fat: z.ZodOptional<z.ZodNumber>;
         }, z.core.$strip>>;
         isAvailable: z.ZodDefault<z.ZodBoolean>;
-        preparationTime: z.ZodOptional<z.ZodNumber>;
+        preparationTime: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
         isActive: z.ZodDefault<z.ZodBoolean>;
         displayOrder: z.ZodOptional<z.ZodNumber>;
         channelMappings: z.ZodOptional<z.ZodNullable<z.ZodArray<z.ZodObject<{

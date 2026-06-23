@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.76**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.77**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: EmailRequestSorting
 
-Defined in: [src/core/conversation/outbound-email.schema.ts:212](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/conversation/outbound-email.schema.ts#L212)
+Defined in: [src/core/conversation/outbound-email.schema.ts:212](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/conversation/outbound-email.schema.ts#L212)
 
 Email request sorting options.
  EmailRequestSorting
@@ -15,5 +15,5 @@ Email request sorting options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="field"></a> `field` | `"createdAt"` \| `"status"` \| `"subject"` \| `"scheduledAt"` \| `"retryCount"` | Field to sort by | [src/core/conversation/outbound-email.schema.ts:214](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/conversation/outbound-email.schema.ts#L214) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/conversation/outbound-email.schema.ts:216](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/conversation/outbound-email.schema.ts#L216) |
+| <a id="field"></a> `field` | `"createdAt"` \| `"status"` \| `"subject"` \| `"scheduledAt"` \| `"retryCount"` | Field to sort by | [src/core/conversation/outbound-email.schema.ts:214](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/conversation/outbound-email.schema.ts#L214) |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/conversation/outbound-email.schema.ts:216](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/conversation/outbound-email.schema.ts#L216) |

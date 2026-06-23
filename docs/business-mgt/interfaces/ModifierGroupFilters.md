@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.76**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.77**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ModifierGroupFilters
 
-Defined in: [src/core/business-mgt/menu-management/modifier.schema.ts:399](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/menu-management/modifier.schema.ts#L399)
+Defined in: [src/core/business-mgt/menu-management/modifier.schema.ts:399](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/menu-management/modifier.schema.ts#L399)
 
 Modifier group filter options.
  ModifierGroupFilters
@@ -15,7 +15,7 @@ Modifier group filter options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="search"></a> `search?` | `string` | Text search across name/description | [src/core/business-mgt/menu-management/modifier.schema.ts:401](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/menu-management/modifier.schema.ts#L401) |
-| <a id="locationid"></a> `locationId?` | `string` | Filter by location ID | [src/core/business-mgt/menu-management/modifier.schema.ts:403](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/menu-management/modifier.schema.ts#L403) |
-| <a id="isrequired"></a> `isRequired?` | `boolean` | Filter by required status | [src/core/business-mgt/menu-management/modifier.schema.ts:405](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/menu-management/modifier.schema.ts#L405) |
-| <a id="isactive"></a> `isActive?` | `boolean` | Filter by active status | [src/core/business-mgt/menu-management/modifier.schema.ts:407](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/menu-management/modifier.schema.ts#L407) |
+| <a id="search"></a> `search?` | `string` | Text search across name/description | [src/core/business-mgt/menu-management/modifier.schema.ts:401](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/menu-management/modifier.schema.ts#L401) |
+| <a id="locationid"></a> `locationId?` | `string` | Filter by location ID | [src/core/business-mgt/menu-management/modifier.schema.ts:403](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/menu-management/modifier.schema.ts#L403) |
+| <a id="isrequired"></a> `isRequired?` | `boolean` | Filter by required status | [src/core/business-mgt/menu-management/modifier.schema.ts:405](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/menu-management/modifier.schema.ts#L405) |
+| <a id="isactive"></a> `isActive?` | `boolean` | Filter by active status | [src/core/business-mgt/menu-management/modifier.schema.ts:407](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/menu-management/modifier.schema.ts#L407) |

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.76**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.77**](../../README.md)
 
 ***
 
@@ -13,7 +13,7 @@ type PricingRuleChannelMapping = {
 };
 ```
 
-Defined in: [src/core/business-mgt/pricing-rule.shared.schema.ts:29](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/pricing-rule.shared.schema.ts#L29)
+Defined in: [src/core/business-mgt/pricing-rule.shared.schema.ts:29](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/pricing-rule.shared.schema.ts#L29)
 
 Pricing rule channel mapping schema.
 Maps pricing rules to external platform pricing rule IDs.
@@ -22,5 +22,5 @@ Maps pricing rules to external platform pricing rule IDs.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="channelid"></a> `channelId` | `string` | [src/core/business-mgt/pricing-rule.shared.schema.ts:25](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/pricing-rule.shared.schema.ts#L25) |
-| <a id="externalpricingruleid"></a> `externalPricingRuleId` | `string` | [src/core/business-mgt/pricing-rule.shared.schema.ts:26](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/pricing-rule.shared.schema.ts#L26) |
+| <a id="channelid"></a> `channelId` | `string` | [src/core/business-mgt/pricing-rule.shared.schema.ts:25](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/pricing-rule.shared.schema.ts#L25) |
+| <a id="externalpricingruleid"></a> `externalPricingRuleId` | `string` | [src/core/business-mgt/pricing-rule.shared.schema.ts:26](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/pricing-rule.shared.schema.ts#L26) |

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.76**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.77**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const DeploymentConfigurationDetailsSchema: ZodObject<DeploymentConfigurationDetails>;
 ```
 
-Defined in: [src/core/service-configuration/deployment-config.schema.ts:302](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/service-configuration/deployment-config.schema.ts#L302)
+Defined in: [src/core/service-configuration/deployment-config.schema.ts:302](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/service-configuration/deployment-config.schema.ts#L302)
 
 Zod schema for deployment configuration details (full version with all relations).
 

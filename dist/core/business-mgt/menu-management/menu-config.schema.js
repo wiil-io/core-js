@@ -59,7 +59,7 @@ exports.MenuItemChannelMappingSchema = zod_1.default.object({
  */
 exports.MenuCategorySchema = base_schema_1.BaseModelSchema.safeExtend({
     name: zod_1.default.string().min(1, "Category name is required").describe("Category name for menu organization (e.g., Appetizers, Main Course, Desserts). Used by AI Powered Services when presenting menu options to customers."),
-    description: zod_1.default.string().optional().describe("Category description providing context about the type of items included. Helps customers navigate the menu."),
+    description: zod_1.default.string().nullable().optional().describe("Category description providing context about the type of items included. Helps customers navigate the menu."),
     displayOrder: zod_1.default.number().int().optional().describe("Numeric order for category display in menu listings. Lower numbers appear first. Enables custom menu organization."),
     channelMappings: zod_1.default.array(exports.MenuCategoryChannelMappingSchema).nullable().optional().describe("Per-channel category ID mappings for external platform integrations"),
 });
@@ -91,7 +91,7 @@ exports.MenuCategorySchema = base_schema_1.BaseModelSchema.safeExtend({
  */
 exports.BusinessMenuItemSchema = base_schema_1.BaseModelSchema.safeExtend({
     name: zod_1.default.string().min(1, "Menu item name is required").describe("Display name of the menu item shown to customers. Used by AI Powered Services in menu order conversations."),
-    description: zod_1.default.string().optional().describe("Detailed item description including preparation style, ingredients, or special features. Helps customers make informed selections."),
+    description: zod_1.default.string().nullable().optional().describe("Detailed item description including preparation style, ingredients, or special features. Helps customers make informed selections."),
     // Menu-specific fields
     price: zod_1.default.number().nonnegative().describe("Base price for this menu item in the account's currency. Used for order pricing calculations."),
     categoryId: zod_1.default.string().describe("References MenuCategory this item belongs to. Used for menu organization and AI-driven category-based browsing."),
@@ -106,7 +106,7 @@ exports.BusinessMenuItemSchema = base_schema_1.BaseModelSchema.safeExtend({
     }).optional().describe("Optional nutritional information for health-conscious customers and dietary compliance."),
     // Availability
     isAvailable: zod_1.default.boolean().default(true).describe("Real-time availability status (e.g., sold out, temporarily unavailable). AI Powered Services only presents available items. Defaults to true."),
-    preparationTime: zod_1.default.number().int().positive().optional().describe("Estimated preparation time in minutes. Used for setting customer expectations and order timing in Menu Order workflow."),
+    preparationTime: zod_1.default.number().int().positive().nullable().optional().describe("Estimated preparation time in minutes. Used for setting customer expectations and order timing in Menu Order workflow."),
     // Business Management
     isActive: zod_1.default.boolean().default(true).describe("Whether item is active in the menu catalog. Inactive items are hidden from customers. Defaults to true."),
     displayOrder: zod_1.default.number().int().optional().describe("Display order within category. Lower numbers appear first. Enables strategic item positioning."),

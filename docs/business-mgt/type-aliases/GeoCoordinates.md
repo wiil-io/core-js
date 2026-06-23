@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.76**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.77**](../../README.md)
 
 ***
 
@@ -13,7 +13,7 @@ type GeoCoordinates = {
 };
 ```
 
-Defined in: [src/core/business-mgt/business-location.schema.ts:190](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/business-location.schema.ts#L190)
+Defined in: [src/core/business-mgt/business-location.schema.ts:190](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/business-location.schema.ts#L190)
 
 Geographic coordinates inferred from [GeoCoordinatesSchema](../variables/GeoCoordinatesSchema.md).
 
@@ -21,5 +21,5 @@ Geographic coordinates inferred from [GeoCoordinatesSchema](../variables/GeoCoor
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="latitude"></a> `latitude` | `number` | [src/core/business-mgt/business-location.schema.ts:58](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/business-location.schema.ts#L58) |
-| <a id="longitude"></a> `longitude` | `number` | [src/core/business-mgt/business-location.schema.ts:59](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/business-location.schema.ts#L59) |
+| <a id="latitude"></a> `latitude` | `number` | [src/core/business-mgt/business-location.schema.ts:58](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/business-location.schema.ts#L58) |
+| <a id="longitude"></a> `longitude` | `number` | [src/core/business-mgt/business-location.schema.ts:59](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/business-location.schema.ts#L59) |

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.76**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.77**](../../README.md)
 
 ***
 
@@ -14,7 +14,7 @@ type MenuItemChannelMapping = {
 };
 ```
 
-Defined in: [src/core/business-mgt/menu-management/menu-config.schema.ts:195](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/menu-management/menu-config.schema.ts#L195)
+Defined in: [src/core/business-mgt/menu-management/menu-config.schema.ts:195](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/menu-management/menu-config.schema.ts#L195)
 
 Menu item channel mapping schema.
 Maps menu items to external platform identifiers.
@@ -23,6 +23,6 @@ Maps menu items to external platform identifiers.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="channelid"></a> `channelId` | `string` | [src/core/business-mgt/menu-management/menu-config.schema.ts:41](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/menu-management/menu-config.schema.ts#L41) |
-| <a id="externalmenuitemid"></a> `externalMenuItemId` | `string` | [src/core/business-mgt/menu-management/menu-config.schema.ts:42](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/menu-management/menu-config.schema.ts#L42) |
-| <a id="externalcategoryid"></a> `externalCategoryId?` | `string` \| `null` | [src/core/business-mgt/menu-management/menu-config.schema.ts:43](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/menu-management/menu-config.schema.ts#L43) |
+| <a id="channelid"></a> `channelId` | `string` | [src/core/business-mgt/menu-management/menu-config.schema.ts:41](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/menu-management/menu-config.schema.ts#L41) |
+| <a id="externalmenuitemid"></a> `externalMenuItemId` | `string` | [src/core/business-mgt/menu-management/menu-config.schema.ts:42](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/menu-management/menu-config.schema.ts#L42) |
+| <a id="externalcategoryid"></a> `externalCategoryId?` | `string` \| `null` | [src/core/business-mgt/menu-management/menu-config.schema.ts:43](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/menu-management/menu-config.schema.ts#L43) |

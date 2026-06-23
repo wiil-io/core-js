@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.76**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.77**](../../README.md)
 
 ***
 
@@ -13,7 +13,7 @@ type ProductSetChannelMapping = {
 };
 ```
 
-Defined in: [src/core/business-mgt/product-management/product-set.schema.ts:272](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/product-management/product-set.schema.ts#L272)
+Defined in: [src/core/business-mgt/product-management/product-set.schema.ts:272](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/product-management/product-set.schema.ts#L272)
 
 Product set channel mapping schema.
 Maps product sets to external platform identifiers.
@@ -22,5 +22,5 @@ Maps product sets to external platform identifiers.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="channelid"></a> `channelId` | `string` | [src/core/business-mgt/product-management/product-set.schema.ts:61](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/product-management/product-set.schema.ts#L61) |
-| <a id="externalproductsetid"></a> `externalProductSetId` | `string` | [src/core/business-mgt/product-management/product-set.schema.ts:62](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/product-management/product-set.schema.ts#L62) |
+| <a id="channelid"></a> `channelId` | `string` | [src/core/business-mgt/product-management/product-set.schema.ts:61](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/product-management/product-set.schema.ts#L61) |
+| <a id="externalproductsetid"></a> `externalProductSetId` | `string` | [src/core/business-mgt/product-management/product-set.schema.ts:62](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/product-management/product-set.schema.ts#L62) |

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.76**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.77**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: CallRequestSorting
 
-Defined in: [src/core/conversation/outbound-call.schema.ts:168](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/conversation/outbound-call.schema.ts#L168)
+Defined in: [src/core/conversation/outbound-call.schema.ts:168](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/conversation/outbound-call.schema.ts#L168)
 
 Call request sorting options.
  CallRequestSorting
@@ -15,5 +15,5 @@ Call request sorting options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="field"></a> `field` | `"createdAt"` \| `"status"` \| `"scheduledAt"` | Field to sort by | [src/core/conversation/outbound-call.schema.ts:170](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/conversation/outbound-call.schema.ts#L170) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/conversation/outbound-call.schema.ts:172](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/conversation/outbound-call.schema.ts#L172) |
+| <a id="field"></a> `field` | `"createdAt"` \| `"status"` \| `"scheduledAt"` | Field to sort by | [src/core/conversation/outbound-call.schema.ts:170](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/conversation/outbound-call.schema.ts#L170) |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/conversation/outbound-call.schema.ts:172](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/conversation/outbound-call.schema.ts#L172) |

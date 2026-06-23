@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.76**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.77**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ResourceSorting
 
-Defined in: [src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:439](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts#L439)
+Defined in: [src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:439](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts#L439)
 
 Resource sorting options.
  ResourceSorting
@@ -15,5 +15,5 @@ Resource sorting options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="field"></a> `field` | `"createdAt"` \| `"capacity"` \| `"name"` | Field to sort by | [src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:441](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts#L441) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:443](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts#L443) |
+| <a id="field"></a> `field` | `"createdAt"` \| `"capacity"` \| `"name"` | Field to sort by | [src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:441](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts#L441) |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts:443](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/reservation-mgt/resource/reservation-resource.schema.ts#L443) |

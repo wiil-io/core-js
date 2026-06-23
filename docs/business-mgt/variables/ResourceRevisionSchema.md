@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.76**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.77**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const ResourceRevisionSchema: ZodObject<ResourceRevision>;
 ```
 
-Defined in: [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:64](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L64)
+Defined in: [src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts:64](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/reservation-mgt/resource/resource-versioning.schema.ts#L64)
 
 Resource revision schema.
 Represents a specific editable or published version of a resource definition.

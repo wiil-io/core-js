@@ -59,7 +59,7 @@ export const MenuItemChannelMappingSchema = z.object({
  */
 export const MenuCategorySchema = BaseModelSchema.safeExtend({
     name: z.string().min(1, "Category name is required").describe("Category name for menu organization (e.g., Appetizers, Main Course, Desserts). Used by AI Powered Services when presenting menu options to customers."),
-    description: z.string().optional().describe("Category description providing context about the type of items included. Helps customers navigate the menu."),
+    description: z.string().nullable().optional().describe("Category description providing context about the type of items included. Helps customers navigate the menu."),
     displayOrder: z.number().int().optional().describe("Numeric order for category display in menu listings. Lower numbers appear first. Enables custom menu organization."),
     channelMappings: z.array(MenuCategoryChannelMappingSchema).nullable().optional().describe("Per-channel category ID mappings for external platform integrations"),
 });
@@ -93,7 +93,7 @@ export const MenuCategorySchema = BaseModelSchema.safeExtend({
  */
 export const BusinessMenuItemSchema = BaseModelSchema.safeExtend({
     name: z.string().min(1, "Menu item name is required").describe("Display name of the menu item shown to customers. Used by AI Powered Services in menu order conversations."),
-    description: z.string().optional().describe("Detailed item description including preparation style, ingredients, or special features. Helps customers make informed selections."),
+    description: z.string().nullable().optional().describe("Detailed item description including preparation style, ingredients, or special features. Helps customers make informed selections."),
 
     // Menu-specific fields
     price: z.number().nonnegative().describe("Base price for this menu item in the account's currency. Used for order pricing calculations."),
@@ -110,7 +110,7 @@ export const BusinessMenuItemSchema = BaseModelSchema.safeExtend({
 
     // Availability
     isAvailable: z.boolean().default(true).describe("Real-time availability status (e.g., sold out, temporarily unavailable). AI Powered Services only presents available items. Defaults to true."),
-    preparationTime: z.number().int().positive().optional().describe("Estimated preparation time in minutes. Used for setting customer expectations and order timing in Menu Order workflow."),
+    preparationTime: z.number().int().positive().nullable().optional().describe("Estimated preparation time in minutes. Used for setting customer expectations and order timing in Menu Order workflow."),
 
     // Business Management
     isActive: z.boolean().default(true).describe("Whether item is active in the menu catalog. Inactive items are hidden from customers. Defaults to true."),

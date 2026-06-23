@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.76**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.77**](../../README.md)
 
 ***
 
@@ -13,7 +13,7 @@ type MenuCatalog = {
      createdAt?: number;
      updatedAt?: number;
      name: string;
-     description?: string;
+     description?: string | null;
      displayOrder?: number;
      channelMappings?:   | {
         channelId: string;
@@ -83,7 +83,7 @@ type MenuCatalog = {
         }[];
      }[];
      name: string;
-     description?: string;
+     description?: string | null;
      price: number;
      categoryId: string;
      category?: {
@@ -91,7 +91,7 @@ type MenuCatalog = {
         createdAt?: number;
         updatedAt?: number;
         name: string;
-        description?: string;
+        description?: string | null;
         displayOrder?: number;
         channelMappings?:   | {
            channelId: string;
@@ -108,7 +108,7 @@ type MenuCatalog = {
         fat?: number;
      };
      isAvailable: boolean;
-     preparationTime?: number;
+     preparationTime?: number | null;
      isActive: boolean;
      displayOrder?: number;
      channelMappings?:   | {
@@ -131,7 +131,7 @@ type MenuCatalog = {
 };
 ```
 
-Defined in: [src/core/business-mgt/menu-management/menu-catalog.schema.ts:69](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/menu-management/menu-catalog.schema.ts#L69)
+Defined in: [src/core/business-mgt/menu-management/menu-catalog.schema.ts:69](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/menu-management/menu-catalog.schema.ts#L69)
 
 Menu catalog schema.
 Represents a category with its menu items and variants.
@@ -140,12 +140,12 @@ Represents a category with its menu items and variants.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="category"></a> `category` | \{ `id`: `string`; `createdAt?`: `number`; `updatedAt?`: `number`; `name`: `string`; `description?`: `string`; `displayOrder?`: `number`; `channelMappings?`: \| \{ `channelId`: `string`; `externalCategoryId`: `string`; \}[] \| `null`; \} | [src/core/business-mgt/menu-management/menu-catalog.schema.ts:53](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/menu-management/menu-catalog.schema.ts#L53) |
-| `category.id` | `string` | [src/core/base.schema.ts:8](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/base.schema.ts#L8) |
-| `category.createdAt?` | `number` | [src/core/base.schema.ts:9](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/base.schema.ts#L9) |
-| `category.updatedAt?` | `number` | [src/core/base.schema.ts:10](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/base.schema.ts#L10) |
-| `category.name` | `string` | [src/core/business-mgt/menu-management/menu-config.schema.ts:61](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/menu-management/menu-config.schema.ts#L61) |
-| `category.description?` | `string` | [src/core/business-mgt/menu-management/menu-config.schema.ts:62](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/menu-management/menu-config.schema.ts#L62) |
-| `category.displayOrder?` | `number` | [src/core/business-mgt/menu-management/menu-config.schema.ts:63](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/menu-management/menu-config.schema.ts#L63) |
-| `category.channelMappings?` | \| \{ `channelId`: `string`; `externalCategoryId`: `string`; \}[] \| `null` | [src/core/business-mgt/menu-management/menu-config.schema.ts:64](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/menu-management/menu-config.schema.ts#L64) |
-| <a id="items"></a> `items` | \{ `id`: `string`; `createdAt?`: `number`; `updatedAt?`: `number`; `variants`: \{ `id`: `string`; `createdAt?`: `number`; `updatedAt?`: `number`; `menuItemId`: `string`; `name`: `string`; `description?`: `string` \| `null`; `price`: `number`; `isAvailable`: `boolean`; `isActive`: `boolean`; `isDefault`: `boolean`; `variantChannelMappings?`: \| \{ `channelId`: `string`; `externalVariantId`: `string`; `externalMenuItemId?`: `string` \| `null`; \}[] \| `null`; `orderCount?`: `number` \| `null`; `recentOrderCount?`: `number` \| `null`; `lastOrderedAt?`: `number` \| `null`; \}[]; `priceRange?`: \| \{ `min`: `number`; `max`: `number`; \} \| `null`; `isVariantSelectable`: `boolean`; `modifierGroups`: \{ `id`: `string`; `name`: `string`; `description?`: `string` \| `null`; `displayOrder`: `number`; `channelMappings?`: \| \{ `channelId`: `string`; `externalModifierGroupId`: `string`; \}[] \| `null`; `isActive`: `boolean`; `isRequired`: `boolean`; `minSelection`: `number`; `maxSelection?`: `number` \| `null`; `options`: \{ `id`: `string`; `name`: `string`; `description?`: `string` \| `null`; `priceDelta`: `number`; `isDefault`: `boolean`; `displayOrder`: `number`; `channelMappings?`: \| \{ `channelId`: `string`; `externalModifierOptionId`: `string`; `externalModifierGroupId?`: ... \| ... \| ...; \}[] \| `null`; `isActive`: `boolean`; \}[]; \}[]; `name`: `string`; `description?`: `string`; `price`: `number`; `categoryId`: `string`; `category?`: \{ `id`: `string`; `createdAt?`: `number`; `updatedAt?`: `number`; `name`: `string`; `description?`: `string`; `displayOrder?`: `number`; `channelMappings?`: \| \{ `channelId`: `string`; `externalCategoryId`: `string`; \}[] \| `null`; \}; `ingredients?`: `string`[]; `allergens?`: `string`[]; `nutritionalInfo?`: \{ `calories?`: `number`; `protein?`: `number`; `carbs?`: `number`; `fat?`: `number`; \}; `isAvailable`: `boolean`; `preparationTime?`: `number`; `isActive`: `boolean`; `displayOrder?`: `number`; `channelMappings?`: \| \{ `channelId`: `string`; `externalMenuItemId`: `string`; `externalCategoryId?`: `string` \| `null`; \}[] \| `null`; `dayParts?`: \| \{ `name`: `string`; `startTime`: `string`; `endTime`: `string`; `daysOfWeek?`: `string`[]; \}[] \| `null`; `orderCount?`: `number` \| `null`; `recentOrderCount?`: `number` \| `null`; `lastOrderedAt?`: `number` \| `null`; \}[] | [src/core/business-mgt/menu-management/menu-catalog.schema.ts:54](https://github.com/wiil-io/core-js/blob/bf48d7864acd8e7b3e7867ae31da63d5dc26ab46/src/core/business-mgt/menu-management/menu-catalog.schema.ts#L54) |
+| <a id="category"></a> `category` | \{ `id`: `string`; `createdAt?`: `number`; `updatedAt?`: `number`; `name`: `string`; `description?`: `string` \| `null`; `displayOrder?`: `number`; `channelMappings?`: \| \{ `channelId`: `string`; `externalCategoryId`: `string`; \}[] \| `null`; \} | [src/core/business-mgt/menu-management/menu-catalog.schema.ts:53](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/menu-management/menu-catalog.schema.ts#L53) |
+| `category.id` | `string` | [src/core/base.schema.ts:8](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/base.schema.ts#L8) |
+| `category.createdAt?` | `number` | [src/core/base.schema.ts:9](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/base.schema.ts#L9) |
+| `category.updatedAt?` | `number` | [src/core/base.schema.ts:10](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/base.schema.ts#L10) |
+| `category.name` | `string` | [src/core/business-mgt/menu-management/menu-config.schema.ts:61](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/menu-management/menu-config.schema.ts#L61) |
+| `category.description?` | `string` \| `null` | [src/core/business-mgt/menu-management/menu-config.schema.ts:62](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/menu-management/menu-config.schema.ts#L62) |
+| `category.displayOrder?` | `number` | [src/core/business-mgt/menu-management/menu-config.schema.ts:63](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/menu-management/menu-config.schema.ts#L63) |
+| `category.channelMappings?` | \| \{ `channelId`: `string`; `externalCategoryId`: `string`; \}[] \| `null` | [src/core/business-mgt/menu-management/menu-config.schema.ts:64](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/menu-management/menu-config.schema.ts#L64) |
+| <a id="items"></a> `items` | \{ `id`: `string`; `createdAt?`: `number`; `updatedAt?`: `number`; `variants`: \{ `id`: `string`; `createdAt?`: `number`; `updatedAt?`: `number`; `menuItemId`: `string`; `name`: `string`; `description?`: `string` \| `null`; `price`: `number`; `isAvailable`: `boolean`; `isActive`: `boolean`; `isDefault`: `boolean`; `variantChannelMappings?`: \| \{ `channelId`: `string`; `externalVariantId`: `string`; `externalMenuItemId?`: `string` \| `null`; \}[] \| `null`; `orderCount?`: `number` \| `null`; `recentOrderCount?`: `number` \| `null`; `lastOrderedAt?`: `number` \| `null`; \}[]; `priceRange?`: \| \{ `min`: `number`; `max`: `number`; \} \| `null`; `isVariantSelectable`: `boolean`; `modifierGroups`: \{ `id`: `string`; `name`: `string`; `description?`: `string` \| `null`; `displayOrder`: `number`; `channelMappings?`: \| \{ `channelId`: `string`; `externalModifierGroupId`: `string`; \}[] \| `null`; `isActive`: `boolean`; `isRequired`: `boolean`; `minSelection`: `number`; `maxSelection?`: `number` \| `null`; `options`: \{ `id`: `string`; `name`: `string`; `description?`: `string` \| `null`; `priceDelta`: `number`; `isDefault`: `boolean`; `displayOrder`: `number`; `channelMappings?`: \| \{ `channelId`: `string`; `externalModifierOptionId`: `string`; `externalModifierGroupId?`: ... \| ... \| ...; \}[] \| `null`; `isActive`: `boolean`; \}[]; \}[]; `name`: `string`; `description?`: `string` \| `null`; `price`: `number`; `categoryId`: `string`; `category?`: \{ `id`: `string`; `createdAt?`: `number`; `updatedAt?`: `number`; `name`: `string`; `description?`: `string` \| `null`; `displayOrder?`: `number`; `channelMappings?`: \| \{ `channelId`: `string`; `externalCategoryId`: `string`; \}[] \| `null`; \}; `ingredients?`: `string`[]; `allergens?`: `string`[]; `nutritionalInfo?`: \{ `calories?`: `number`; `protein?`: `number`; `carbs?`: `number`; `fat?`: `number`; \}; `isAvailable`: `boolean`; `preparationTime?`: `number` \| `null`; `isActive`: `boolean`; `displayOrder?`: `number`; `channelMappings?`: \| \{ `channelId`: `string`; `externalMenuItemId`: `string`; `externalCategoryId?`: `string` \| `null`; \}[] \| `null`; `dayParts?`: \| \{ `name`: `string`; `startTime`: `string`; `endTime`: `string`; `daysOfWeek?`: `string`[]; \}[] \| `null`; `orderCount?`: `number` \| `null`; `recentOrderCount?`: `number` \| `null`; `lastOrderedAt?`: `number` \| `null`; \}[] | [src/core/business-mgt/menu-management/menu-catalog.schema.ts:54](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/menu-management/menu-catalog.schema.ts#L54) |
