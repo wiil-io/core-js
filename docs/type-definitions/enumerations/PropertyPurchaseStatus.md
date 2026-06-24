@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.77**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.78**](../../README.md)
 
 ***
 
@@ -6,14 +6,14 @@
 
 # Enumeration: PropertyPurchaseStatus
 
-Defined in: [src/core/type-definitions/business-definitions.ts:370](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/type-definitions/business-definitions.ts#L370)
+Defined in: [src/core/type-definitions/business-definitions.ts:370](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/type-definitions/business-definitions.ts#L370)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="inquiry"></a> `INQUIRY` | `"inquiry"` | [src/core/type-definitions/business-definitions.ts:371](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/type-definitions/business-definitions.ts#L371) |
-| <a id="offer_made"></a> `OFFER_MADE` | `"offer_made"` | [src/core/type-definitions/business-definitions.ts:372](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/type-definitions/business-definitions.ts#L372) |
-| <a id="under_contract"></a> `UNDER_CONTRACT` | `"under_contract"` | [src/core/type-definitions/business-definitions.ts:373](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/type-definitions/business-definitions.ts#L373) |
-| <a id="completed"></a> `COMPLETED` | `"completed"` | [src/core/type-definitions/business-definitions.ts:374](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/type-definitions/business-definitions.ts#L374) |
-| <a id="cancelled"></a> `CANCELLED` | `"cancelled"` | [src/core/type-definitions/business-definitions.ts:375](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/type-definitions/business-definitions.ts#L375) |
+| <a id="inquiry"></a> `INQUIRY` | `"inquiry"` | [src/core/type-definitions/business-definitions.ts:371](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/type-definitions/business-definitions.ts#L371) |
+| <a id="offer_made"></a> `OFFER_MADE` | `"offer_made"` | [src/core/type-definitions/business-definitions.ts:372](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/type-definitions/business-definitions.ts#L372) |
+| <a id="under_contract"></a> `UNDER_CONTRACT` | `"under_contract"` | [src/core/type-definitions/business-definitions.ts:373](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/type-definitions/business-definitions.ts#L373) |
+| <a id="completed"></a> `COMPLETED` | `"completed"` | [src/core/type-definitions/business-definitions.ts:374](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/type-definitions/business-definitions.ts#L374) |
+| <a id="cancelled"></a> `CANCELLED` | `"cancelled"` | [src/core/type-definitions/business-definitions.ts:375](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/type-definitions/business-definitions.ts#L375) |

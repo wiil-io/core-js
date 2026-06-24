@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.77**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.78**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const CreateServiceProviderSchema: ZodObject<CreateServiceProvider>;
 ```
 
-Defined in: [src/core/business-mgt/service-management/service-provider.schema.ts:42](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/service-management/service-provider.schema.ts#L42)
+Defined in: [src/core/business-mgt/service-management/service-provider.schema.ts:42](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/service-management/service-provider.schema.ts#L42)
 
 Schema for creating a new service provider assignment.
 Omits auto-generated fields.

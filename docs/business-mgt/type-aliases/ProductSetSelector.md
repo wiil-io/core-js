@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.77**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.78**](../../README.md)
 
 ***
 
@@ -17,7 +17,7 @@ type ProductSetSelector = {
 };
 ```
 
-Defined in: [src/core/business-mgt/product-management/product-set.schema.ts:273](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/product-management/product-set.schema.ts#L273)
+Defined in: [src/core/business-mgt/product-management/product-set.schema.ts:273](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/product-management/product-set.schema.ts#L273)
 
 Product set selector schema.
 Defines criteria for dynamically selecting products to include in a set.
@@ -26,9 +26,9 @@ Defines criteria for dynamically selecting products to include in a set.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="productidsany"></a> `productIdsAny` | `string`[] | [src/core/business-mgt/product-management/product-set.schema.ts:105](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/product-management/product-set.schema.ts#L105) |
-| <a id="productidsall"></a> `productIdsAll` | `string`[] | [src/core/business-mgt/product-management/product-set.schema.ts:106](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/product-management/product-set.schema.ts#L106) |
-| <a id="allproducts"></a> `allProducts` | `boolean` | [src/core/business-mgt/product-management/product-set.schema.ts:107](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/product-management/product-set.schema.ts#L107) |
-| <a id="quantityexact"></a> `quantityExact?` | `number` | [src/core/business-mgt/product-management/product-set.schema.ts:108](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/product-management/product-set.schema.ts#L108) |
-| <a id="quantitymin"></a> `quantityMin?` | `number` | [src/core/business-mgt/product-management/product-set.schema.ts:109](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/product-management/product-set.schema.ts#L109) |
-| <a id="quantitymax"></a> `quantityMax?` | `number` | [src/core/business-mgt/product-management/product-set.schema.ts:110](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/product-management/product-set.schema.ts#L110) |
+| <a id="productidsany"></a> `productIdsAny` | `string`[] | [src/core/business-mgt/product-management/product-set.schema.ts:105](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/product-management/product-set.schema.ts#L105) |
+| <a id="productidsall"></a> `productIdsAll` | `string`[] | [src/core/business-mgt/product-management/product-set.schema.ts:106](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/product-management/product-set.schema.ts#L106) |
+| <a id="allproducts"></a> `allProducts` | `boolean` | [src/core/business-mgt/product-management/product-set.schema.ts:107](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/product-management/product-set.schema.ts#L107) |
+| <a id="quantityexact"></a> `quantityExact?` | `number` | [src/core/business-mgt/product-management/product-set.schema.ts:108](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/product-management/product-set.schema.ts#L108) |
+| <a id="quantitymin"></a> `quantityMin?` | `number` | [src/core/business-mgt/product-management/product-set.schema.ts:109](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/product-management/product-set.schema.ts#L109) |
+| <a id="quantitymax"></a> `quantityMax?` | `number` | [src/core/business-mgt/product-management/product-set.schema.ts:110](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/product-management/product-set.schema.ts#L110) |

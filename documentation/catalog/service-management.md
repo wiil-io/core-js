@@ -78,7 +78,6 @@ Defines a service offering with pricing, scheduling, and booking rules.
 | Field | Type | Required | Default | Description |
 |-------|------|----------|---------|-------------|
 | `id` | string | Yes | auto | Unique identifier |
-| `organizationId` | string | Yes | - | Business account ID |
 | `serviceRevisionId` | string \| null | No | - | Version-scoped data reference |
 | `name` | string | Yes | - | Service name |
 | `description` | string \| null | No | - | Detailed description |
@@ -92,7 +91,7 @@ Defines a service offering with pricing, scheduling, and booking rules.
 | `isBookable` | boolean | Yes | true | Can be booked online |
 | `allowsProcessingChairSwap` | boolean \| null | No | - | Allow resource swap during processing |
 | `serviceAvailability` | object \| null | No | - | Service-specific availability |
-| `maxConcurrentBookings` | number \| null | No | - | Max simultaneous bookings |
+| `maxConcurrentBookings` | number \| null | No | - | Max simultaneous bookings (null = 1) |
 | `basePrice` | number | Yes | 0 | Base price in account currency |
 | `priceMode` | enum \| null | No | - | Pricing mode |
 | `gratuityMode` | enum \| null | No | - | Gratuity policy |
@@ -107,13 +106,14 @@ Defines a service offering with pricing, scheduling, and booking rules.
 | `lateCancelFeePercent` | number | Yes | 0 | Late cancellation fee % |
 | `noShowFeePercent` | number | Yes | 0 | No-show fee % |
 | `requiredDatafieldConfig` | object \| null | No | - | Dynamic field configuration |
+| `createdAt` | number | No | auto | Creation timestamp |
+| `updatedAt` | number | No | auto | Last update timestamp |
 
 #### Example
 
 ```json
 {
   "id": "svc_haircut",
-  "organizationId": "org_salon",
   "name": "Women's Haircut",
   "description": "Professional haircut with styling",
   "categoryId": "cat_hair",
@@ -161,7 +161,6 @@ Groups related services for organization and display.
 | Field | Type | Required | Default | Description |
 |-------|------|----------|---------|-------------|
 | `id` | string | Yes | auto | Unique identifier |
-| `organizationId` | string | Yes | - | Business account ID |
 | `serviceRevisionId` | string \| null | No | - | Version-scoped data reference |
 | `name` | string | Yes | - | Category name |
 | `description` | string \| null | No | - | Category description |
@@ -169,13 +168,14 @@ Groups related services for organization and display.
 | `channelMappings` | array \| null | No | - | Per-channel category ID mappings |
 | `displayOrder` | number \| null | No | - | Display order in listing |
 | `isActive` | boolean | Yes | true | Whether category is active |
+| `createdAt` | number | No | auto | Creation timestamp |
+| `updatedAt` | number | No | auto | Last update timestamp |
 
 #### Example
 
 ```json
 {
   "id": "cat_hair",
-  "organizationId": "org_salon",
   "name": "Hair Services",
   "description": "Cuts, coloring, and styling",
   "imageUrl": "https://cdn.example.com/hair.jpg",

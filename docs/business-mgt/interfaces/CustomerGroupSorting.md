@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.77**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.78**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: CustomerGroupSorting
 
-Defined in: [src/core/business-mgt/customer-management/customer-group.schema.ts:84](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/customer-management/customer-group.schema.ts#L84)
+Defined in: [src/core/business-mgt/customer-management/customer-group.schema.ts:84](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/customer-management/customer-group.schema.ts#L84)
 
 Customer group sorting options.
  CustomerGroupSorting
@@ -15,5 +15,5 @@ Customer group sorting options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="field"></a> `field` | `"createdAt"` \| `"code"` \| `"name"` | Field to sort by | [src/core/business-mgt/customer-management/customer-group.schema.ts:86](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/customer-management/customer-group.schema.ts#L86) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/customer-management/customer-group.schema.ts:88](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/customer-management/customer-group.schema.ts#L88) |
+| <a id="field"></a> `field` | `"createdAt"` \| `"code"` \| `"name"` | Field to sort by | [src/core/business-mgt/customer-management/customer-group.schema.ts:86](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/customer-management/customer-group.schema.ts#L86) |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/customer-management/customer-group.schema.ts:88](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/customer-management/customer-group.schema.ts#L88) |

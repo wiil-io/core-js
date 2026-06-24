@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.77**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.78**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const MenuSetSchema: ZodObject<MenuSet>;
 ```
 
-Defined in: [src/core/business-mgt/menu-management/menu-set.schema.ts:163](https://github.com/wiil-io/core-js/blob/dbdfb645457e4fab159a4c3d5050b1d2afe779c3/src/core/business-mgt/menu-management/menu-set.schema.ts#L163)
+Defined in: [src/core/business-mgt/menu-management/menu-set.schema.ts:163](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/menu-management/menu-set.schema.ts#L163)
 
 Menu set schema.
 Bundled menu items (combos, deals, meal sets).
