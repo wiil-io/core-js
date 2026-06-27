@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.78**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.79**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: MenuPricingRuleSorting
 
-Defined in: [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:164](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L164)
+Defined in: [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:164](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L164)
 
 Menu pricing rule sorting options.
  MenuPricingRuleSorting
@@ -15,5 +15,5 @@ Menu pricing rule sorting options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="field"></a> `field` | `"createdAt"` \| `"displayOrder"` \| `"name"` | Field to sort by | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:166](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L166) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:168](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L168) |
+| <a id="field"></a> `field` | `"createdAt"` \| `"displayOrder"` \| `"name"` | Field to sort by | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:166](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L166) |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts:168](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/menu-management/menu-pricing-rule.schema.ts#L168) |

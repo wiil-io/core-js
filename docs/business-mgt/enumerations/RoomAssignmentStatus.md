@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.78**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.79**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: RoomAssignmentStatus
 
-Defined in: [src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts:18](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts#L18)
+Defined in: [src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts:18](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts#L18)
 
 Room assignment lifecycle status.
 
@@ -14,6 +14,6 @@ Room assignment lifecycle status.
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="assigned"></a> `ASSIGNED` | `"assigned"` | [src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts:19](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts#L19) |
-| <a id="reassigned"></a> `REASSIGNED` | `"reassigned"` | [src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts:20](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts#L20) |
-| <a id="released"></a> `RELEASED` | `"released"` | [src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts:21](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts#L21) |
+| <a id="assigned"></a> `ASSIGNED` | `"assigned"` | [src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts:19](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts#L19) |
+| <a id="reassigned"></a> `REASSIGNED` | `"reassigned"` | [src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts:20](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts#L20) |
+| <a id="released"></a> `RELEASED` | `"released"` | [src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts:21](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts#L21) |

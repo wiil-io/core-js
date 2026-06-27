@@ -262,6 +262,15 @@ export declare const UpdateRentalReservationSchema: z.ZodObject<{
     id: z.ZodString;
     status: z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof RentalReservationStatus>>>;
 }, z.core.$strip>;
+/**
+ * Schema for reassigning a rental reservation to a different rental instance.
+ */
+export declare const RentalReAssignmentSchema: z.ZodObject<{
+    reservationId: z.ZodString;
+    toRentalInstanceId: z.ZodString;
+    fromRentalInstanceId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    reason: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+}, z.core.$strip>;
 export type RentalReservationPayment = z.infer<typeof RentalReservationPaymentSchema>;
 export type ChecklistCompletion = z.infer<typeof ChecklistCompletionSchema>;
 export type WaiverRef = z.infer<typeof WaiverRefSchema>;
@@ -269,6 +278,7 @@ export type IDRef = z.infer<typeof IDRefSchema>;
 export type RentalReservation = z.infer<typeof RentalReservationSchema>;
 export type CreateRentalReservation = z.infer<typeof CreateRentalReservationSchema>;
 export type UpdateRentalReservation = z.infer<typeof UpdateRentalReservationSchema>;
+export type RentalReAssignment = z.infer<typeof RentalReAssignmentSchema>;
 /**
  * Rental reservation filter options.
  * @interface RentalReservationFilters

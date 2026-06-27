@@ -98,6 +98,20 @@ export const UpdateRoomReservationSchema = CreateRoomReservationSchema.partial()
 });
 
 // ============================================================================
+// REASSIGNMENT SCHEMA
+// ============================================================================
+
+/**
+ * Schema for reassigning a room reservation to a different room instance.
+ */
+export const RoomReAssignmentSchema = z.object({
+    reservationId: z.string().describe("Room reservation ID being reassigned."),
+    fromRoomInstanceId: z.string().nullable().optional().describe("Current room instance ID the reservation is being moved from."),
+    toRoomInstanceId: z.string().describe("Target room instance ID the reservation is being moved to."),
+    reason: z.string().nullable().optional().describe("Optional reason for the reassignment."),
+});
+
+// ============================================================================
 // TYPE EXPORTS
 // ============================================================================
 
@@ -105,6 +119,7 @@ export type RoomRatePerNight = z.infer<typeof RoomRatePerNightSchema>;
 export type RoomReservation = z.infer<typeof RoomReservationSchema>;
 export type CreateRoomReservation = z.infer<typeof CreateRoomReservationSchema>;
 export type UpdateRoomReservation = z.infer<typeof UpdateRoomReservationSchema>;
+export type RoomReAssignment = z.infer<typeof RoomReAssignmentSchema>;
 
 // ============================================================================
 // QUERY OPTIONS

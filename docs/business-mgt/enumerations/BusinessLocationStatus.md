@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.78**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.79**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: BusinessLocationStatus
 
-Defined in: [src/core/business-mgt/business-location.schema.ts:27](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/business-location.schema.ts#L27)
+Defined in: [src/core/business-mgt/business-location.schema.ts:27](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/business-location.schema.ts#L27)
 
 Business location lifecycle status.
 
@@ -17,5 +17,5 @@ separate boolean active flag.
 
 | Enumeration Member | Value | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="active"></a> `ACTIVE` | `"ACTIVE"` | Location is operational and available for use | [src/core/business-mgt/business-location.schema.ts:29](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/business-location.schema.ts#L29) |
-| <a id="inactive"></a> `INACTIVE` | `"INACTIVE"` | Location is not currently operational | [src/core/business-mgt/business-location.schema.ts:31](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/business-location.schema.ts#L31) |
+| <a id="active"></a> `ACTIVE` | `"ACTIVE"` | Location is operational and available for use | [src/core/business-mgt/business-location.schema.ts:29](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/business-location.schema.ts#L29) |
+| <a id="inactive"></a> `INACTIVE` | `"INACTIVE"` | Location is not currently operational | [src/core/business-mgt/business-location.schema.ts:31](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/business-location.schema.ts#L31) |

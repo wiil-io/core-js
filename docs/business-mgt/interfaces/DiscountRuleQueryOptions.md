@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.78**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.79**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: DiscountRuleQueryOptions
 
-Defined in: [src/core/business-mgt/discount-rule.schema.ts:165](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/discount-rule.schema.ts#L165)
+Defined in: [src/core/business-mgt/discount-rule.schema.ts:165](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/discount-rule.schema.ts#L165)
 
 Discount rule query options.
  DiscountRuleQueryOptions
@@ -15,7 +15,7 @@ Discount rule query options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/discount-rule.schema.ts:167](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/discount-rule.schema.ts#L167) |
-| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/discount-rule.schema.ts:169](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/discount-rule.schema.ts#L169) |
-| <a id="filters"></a> `filters?` | [`DiscountRuleFilters`](DiscountRuleFilters.md) | Optional filters | [src/core/business-mgt/discount-rule.schema.ts:171](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/discount-rule.schema.ts#L171) |
-| <a id="sorting"></a> `sorting?` | [`DiscountRuleSorting`](DiscountRuleSorting.md) | Optional sorting | [src/core/business-mgt/discount-rule.schema.ts:173](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/discount-rule.schema.ts#L173) |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/discount-rule.schema.ts:167](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/discount-rule.schema.ts#L167) |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/discount-rule.schema.ts:169](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/discount-rule.schema.ts#L169) |
+| <a id="filters"></a> `filters?` | [`DiscountRuleFilters`](DiscountRuleFilters.md) | Optional filters | [src/core/business-mgt/discount-rule.schema.ts:171](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/discount-rule.schema.ts#L171) |
+| <a id="sorting"></a> `sorting?` | [`DiscountRuleSorting`](DiscountRuleSorting.md) | Optional sorting | [src/core/business-mgt/discount-rule.schema.ts:173](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/discount-rule.schema.ts#L173) |

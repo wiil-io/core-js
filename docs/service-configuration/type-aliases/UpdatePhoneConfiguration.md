@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.78**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.79**](../../README.md)
 
 ***
 
@@ -13,7 +13,7 @@ type UpdatePhoneConfiguration = {
 };
 ```
 
-Defined in: [src/core/service-configuration/phone-config.schema.ts:136](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/service-configuration/phone-config.schema.ts#L136)
+Defined in: [src/core/service-configuration/phone-config.schema.ts:136](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/service-configuration/phone-config.schema.ts#L136)
 
 Type definition for updating an existing phone configuration.
 
@@ -23,5 +23,5 @@ Represents a partial update payload with required id field.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="id"></a> `id` | `string` | [src/core/service-configuration/phone-config.schema.ts:127](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/service-configuration/phone-config.schema.ts#L127) |
-| <a id="friendlyname"></a> `friendlyName` | `string` \| `null` | [src/core/service-configuration/phone-config.schema.ts:128](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/service-configuration/phone-config.schema.ts#L128) |
+| <a id="id"></a> `id` | `string` | [src/core/service-configuration/phone-config.schema.ts:127](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/service-configuration/phone-config.schema.ts#L127) |
+| <a id="friendlyname"></a> `friendlyName` | `string` \| `null` | [src/core/service-configuration/phone-config.schema.ts:128](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/service-configuration/phone-config.schema.ts#L128) |

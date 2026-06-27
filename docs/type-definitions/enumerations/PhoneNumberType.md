@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.78**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.79**](../../README.md)
 
 ***
 
@@ -6,11 +6,11 @@
 
 # Enumeration: PhoneNumberType
 
-Defined in: [src/core/type-definitions/service-config.definitions.ts:54](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/type-definitions/service-config.definitions.ts#L54)
+Defined in: [src/core/type-definitions/service-config.definitions.ts:54](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/type-definitions/service-config.definitions.ts#L54)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="local"></a> `LOCAL` | `"local"` | [src/core/type-definitions/service-config.definitions.ts:55](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/type-definitions/service-config.definitions.ts#L55) |
-| <a id="toll_free"></a> `TOLL_FREE` | `"toll-free"` | [src/core/type-definitions/service-config.definitions.ts:56](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/type-definitions/service-config.definitions.ts#L56) |
+| <a id="local"></a> `LOCAL` | `"local"` | [src/core/type-definitions/service-config.definitions.ts:55](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/type-definitions/service-config.definitions.ts#L55) |
+| <a id="toll_free"></a> `TOLL_FREE` | `"toll-free"` | [src/core/type-definitions/service-config.definitions.ts:56](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/type-definitions/service-config.definitions.ts#L56) |

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.78**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.79**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: TaxRuleSorting
 
-Defined in: [src/core/business-mgt/tax-rule.schema.ts:134](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/tax-rule.schema.ts#L134)
+Defined in: [src/core/business-mgt/tax-rule.schema.ts:134](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/tax-rule.schema.ts#L134)
 
 Tax rule sorting options.
  TaxRuleSorting
@@ -15,5 +15,5 @@ Tax rule sorting options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="field"></a> `field` | `"createdAt"` \| `"name"` \| `"priority"` \| `"rateValue"` | Field to sort by | [src/core/business-mgt/tax-rule.schema.ts:136](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/tax-rule.schema.ts#L136) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/tax-rule.schema.ts:138](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/tax-rule.schema.ts#L138) |
+| <a id="field"></a> `field` | `"createdAt"` \| `"name"` \| `"priority"` \| `"rateValue"` | Field to sort by | [src/core/business-mgt/tax-rule.schema.ts:136](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/tax-rule.schema.ts#L136) |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/tax-rule.schema.ts:138](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/tax-rule.schema.ts#L138) |

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.78**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.79**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: MenuOrderQueryOptions
 
-Defined in: [src/core/business-mgt/menu-management/menu.order.schema.ts:281](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/menu-management/menu.order.schema.ts#L281)
+Defined in: [src/core/business-mgt/menu-management/menu.order.schema.ts:281](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/menu-management/menu.order.schema.ts#L281)
 
 Menu order query options.
  MenuOrderQueryOptions
@@ -15,7 +15,7 @@ Menu order query options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/menu-management/menu.order.schema.ts:283](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/menu-management/menu.order.schema.ts#L283) |
-| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/menu-management/menu.order.schema.ts:285](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/menu-management/menu.order.schema.ts#L285) |
-| <a id="filters"></a> `filters?` | [`MenuOrderFilters`](MenuOrderFilters.md) | Optional filters | [src/core/business-mgt/menu-management/menu.order.schema.ts:287](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/menu-management/menu.order.schema.ts#L287) |
-| <a id="sorting"></a> `sorting?` | [`MenuOrderSorting`](MenuOrderSorting.md) | Optional sorting | [src/core/business-mgt/menu-management/menu.order.schema.ts:289](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/menu-management/menu.order.schema.ts#L289) |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/menu-management/menu.order.schema.ts:283](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/menu-management/menu.order.schema.ts#L283) |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/menu-management/menu.order.schema.ts:285](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/menu-management/menu.order.schema.ts#L285) |
+| <a id="filters"></a> `filters?` | [`MenuOrderFilters`](MenuOrderFilters.md) | Optional filters | [src/core/business-mgt/menu-management/menu.order.schema.ts:287](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/menu-management/menu.order.schema.ts#L287) |
+| <a id="sorting"></a> `sorting?` | [`MenuOrderSorting`](MenuOrderSorting.md) | Optional sorting | [src/core/business-mgt/menu-management/menu.order.schema.ts:289](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/menu-management/menu.order.schema.ts#L289) |

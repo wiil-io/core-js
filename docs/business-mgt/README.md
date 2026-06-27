@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.78**](../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.79**](../README.md)
 
 ***
 
@@ -352,10 +352,12 @@ Central export point for business management schemas.
 | [RentalReservation](type-aliases/RentalReservation.md) | Rental reservation schema. Represents a time-bounded rental booking with payment, waiver, and inspection state. |
 | [CreateRentalReservation](type-aliases/CreateRentalReservation.md) | Schema for creating a new rental reservation. Omits auto-generated fields. |
 | [UpdateRentalReservation](type-aliases/UpdateRentalReservation.md) | Schema for updating an existing rental reservation. All fields optional except id. |
+| [RentalReAssignment](type-aliases/RentalReAssignment.md) | Schema for reassigning a rental reservation to a different rental instance. |
 | [RoomRatePerNight](type-aliases/RoomRatePerNight.md) | Room rate per night schema. Captures the nightly rate snapshot for a room reservation. |
 | [RoomReservation](type-aliases/RoomReservation.md) | Room reservation schema. Represents a lodging reservation with check-in/check-out dates and nightly pricing. |
 | [CreateRoomReservation](type-aliases/CreateRoomReservation.md) | Schema for creating a new room reservation. Omits auto-generated fields. |
 | [UpdateRoomReservation](type-aliases/UpdateRoomReservation.md) | Schema for updating an existing room reservation. All fields optional except id. |
+| [RoomReAssignment](type-aliases/RoomReAssignment.md) | Schema for reassigning a room reservation to a different room instance. |
 | [Point2D](type-aliases/Point2D.md) | Two-dimensional point schema. Uses the same coordinate system as table placement x/y values. |
 | [SectionGeometry](type-aliases/SectionGeometry.md) | Section geometry schema. Supports automatic, rectangular, and polygon-based section boundaries. |
 | [TablePlacement](type-aliases/TablePlacement.md) | Table placement schema. Represents a physical table's position and seating constraints within a floor plan section. |
@@ -393,6 +395,7 @@ Central export point for business management schemas.
 | [TableReservation](type-aliases/TableReservation.md) | Table reservation schema. Represents a reservation request for a table-based venue such as a restaurant. |
 | [CreateTableReservation](type-aliases/CreateTableReservation.md) | Schema for creating a new table reservation. Omits auto-generated fields. |
 | [UpdateTableReservation](type-aliases/UpdateTableReservation.md) | Schema for updating an existing table reservation. All fields optional except id. |
+| [TableReAssignment](type-aliases/TableReAssignment.md) | Schema for reassigning a table reservation to a different table instance. |
 | [ResourceCategoryChannelMapping](type-aliases/ResourceCategoryChannelMapping.md) | Resource category channel mapping schema. Maps reservation resource categories to external platform category IDs. |
 | [ResourceCategory](type-aliases/ResourceCategory.md) | Resource category schema. Groups reservation resources by type, location, channel mapping, and display order. |
 | [CreateResourceCategory](type-aliases/CreateResourceCategory.md) | Schema for creating a new resource category. Omits auto-generated fields. |
@@ -640,10 +643,12 @@ Central export point for business management schemas.
 | [RentalReservationSchema](variables/RentalReservationSchema.md) | Rental reservation schema. Represents a time-bounded rental booking with payment, waiver, and inspection state. |
 | [CreateRentalReservationSchema](variables/CreateRentalReservationSchema.md) | Schema for creating a new rental reservation. Omits auto-generated fields. |
 | [UpdateRentalReservationSchema](variables/UpdateRentalReservationSchema.md) | Schema for updating an existing rental reservation. All fields optional except id. |
+| [RentalReAssignmentSchema](variables/RentalReAssignmentSchema.md) | Schema for reassigning a rental reservation to a different rental instance. |
 | [RoomRatePerNightSchema](variables/RoomRatePerNightSchema.md) | Room rate per night schema. Captures the nightly rate snapshot for a room reservation. |
 | [RoomReservationSchema](variables/RoomReservationSchema.md) | Room reservation schema. Represents a lodging reservation with check-in/check-out dates and nightly pricing. |
 | [CreateRoomReservationSchema](variables/CreateRoomReservationSchema.md) | Schema for creating a new room reservation. Omits auto-generated fields. |
 | [UpdateRoomReservationSchema](variables/UpdateRoomReservationSchema.md) | Schema for updating an existing room reservation. All fields optional except id. |
+| [RoomReAssignmentSchema](variables/RoomReAssignmentSchema.md) | Schema for reassigning a room reservation to a different room instance. |
 | [point2DSchema](variables/point2DSchema.md) | Two-dimensional point schema. Uses the same coordinate system as table placement x/y values. |
 | [SectionGeometrySchema](variables/SectionGeometrySchema.md) | Section geometry schema. Supports automatic, rectangular, and polygon-based section boundaries. |
 | [TablePlacementSchema](variables/TablePlacementSchema.md) | Table placement schema. Represents a physical table's position and seating constraints within a floor plan section. |
@@ -681,6 +686,7 @@ Central export point for business management schemas.
 | [TableReservationSchema](variables/TableReservationSchema.md) | Table reservation schema. Represents a reservation request for a table-based venue such as a restaurant. |
 | [CreateTableReservationSchema](variables/CreateTableReservationSchema.md) | Schema for creating a new table reservation. Omits auto-generated fields. |
 | [UpdateTableReservationSchema](variables/UpdateTableReservationSchema.md) | Schema for updating an existing table reservation. All fields optional except id. |
+| [TableReAssignmentSchema](variables/TableReAssignmentSchema.md) | Schema for reassigning a table reservation to a different table instance. |
 | [ResourceCategoryChannelMappingSchema](variables/ResourceCategoryChannelMappingSchema.md) | Resource category channel mapping schema. Maps reservation resource categories to external platform category IDs. |
 | [ResourceCategorySchema](variables/ResourceCategorySchema.md) | Resource category schema. Groups reservation resources by type, location, channel mapping, and display order. |
 | [CreateResourceCategorySchema](variables/CreateResourceCategorySchema.md) | Schema for creating a new resource category. Omits auto-generated fields. |

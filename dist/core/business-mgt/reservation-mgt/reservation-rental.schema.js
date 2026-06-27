@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpdateRentalReservationSchema = exports.CreateRentalReservationSchema = exports.RentalReservationSchema = exports.IDRefSchema = exports.WaiverRefSchema = exports.ChecklistCompletionSchema = exports.RentalReservationPaymentSchema = exports.RentalReservationStatus = void 0;
+exports.RentalReAssignmentSchema = exports.UpdateRentalReservationSchema = exports.CreateRentalReservationSchema = exports.RentalReservationSchema = exports.IDRefSchema = exports.WaiverRefSchema = exports.ChecklistCompletionSchema = exports.RentalReservationPaymentSchema = exports.RentalReservationStatus = void 0;
 const zod_1 = require("zod");
 const base_schema_1 = require("../../base.schema");
 const type_definitions_1 = require("../../type-definitions");
@@ -164,4 +164,16 @@ exports.UpdateRentalReservationSchema = exports.CreateRentalReservationSchema.pa
     id: zod_1.z.string().describe("Unique identifier of the rental reservation to update."),
     // Re-declared without the base `.default()` so partial updates don't inject a status the caller never set
     status: zod_1.z.enum(RentalReservationStatus).nullable().optional().describe("Rental reservation lifecycle status"),
+});
+// ============================================================================
+// REASSIGNMENT SCHEMA
+// ============================================================================
+/**
+ * Schema for reassigning a rental reservation to a different rental instance.
+ */
+exports.RentalReAssignmentSchema = zod_1.z.object({
+    reservationId: zod_1.z.string().describe("Rental reservation ID being reassigned."),
+    toRentalInstanceId: zod_1.z.string().describe("Target rental instance ID the reservation is being moved to."),
+    fromRentalInstanceId: zod_1.z.string().nullable().optional().describe("Current rental instance ID the reservation is being moved from."),
+    reason: zod_1.z.string().nullable().optional().describe("Optional reason for the reassignment."),
 });

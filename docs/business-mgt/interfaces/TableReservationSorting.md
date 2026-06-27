@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.78**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.79**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: TableReservationSorting
 
-Defined in: [src/core/business-mgt/reservation-mgt/reservation-table.schema.ts:116](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/reservation-mgt/reservation-table.schema.ts#L116)
+Defined in: [src/core/business-mgt/reservation-mgt/reservation-table.schema.ts:131](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/reservation-mgt/reservation-table.schema.ts#L131)
 
 Table reservation sorting options.
  TableReservationSorting
@@ -15,5 +15,5 @@ Table reservation sorting options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="field"></a> `field` | `"createdAt"` \| `"time"` \| `"duration"` | Field to sort by | [src/core/business-mgt/reservation-mgt/reservation-table.schema.ts:118](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/reservation-mgt/reservation-table.schema.ts#L118) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/reservation-mgt/reservation-table.schema.ts:120](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/reservation-mgt/reservation-table.schema.ts#L120) |
+| <a id="field"></a> `field` | `"createdAt"` \| `"time"` \| `"duration"` | Field to sort by | [src/core/business-mgt/reservation-mgt/reservation-table.schema.ts:133](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/reservation-mgt/reservation-table.schema.ts#L133) |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/reservation-mgt/reservation-table.schema.ts:135](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/reservation-mgt/reservation-table.schema.ts#L135) |

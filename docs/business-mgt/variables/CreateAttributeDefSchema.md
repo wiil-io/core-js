@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.78**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.79**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const CreateAttributeDefSchema: ZodObject<CreateAttributeDef>;
 ```
 
-Defined in: [src/core/business-mgt/product-management/product-config.schema.ts:328](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/product-management/product-config.schema.ts#L328)
+Defined in: [src/core/business-mgt/product-management/product-config.schema.ts:328](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/product-management/product-config.schema.ts#L328)
 
 Schema for creating a new attribute definition.
 Omits auto-generated fields.

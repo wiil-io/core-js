@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.78**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.79**](../../README.md)
 
 ***
 
@@ -22,20 +22,20 @@ type CreateFloorPlanTablePlacementInput = {
 };
 ```
 
-Defined in: [src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts:73](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts#L73)
+Defined in: [src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts:73](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts#L73)
 
 ## Type Declaration
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="number"></a> `number` | `string` | [src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts:18](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts#L18) |
-| <a id="x"></a> `x` | `number` | [src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts:19](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts#L19) |
-| <a id="y"></a> `y` | `number` | [src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts:20](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts#L20) |
-| <a id="width"></a> `width` | `number` | [src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts:21](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts#L21) |
-| <a id="height"></a> `height` | `number` | [src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts:22](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts#L22) |
-| <a id="shape"></a> `shape` | [`TableShape`](../enumerations/TableShape.md) | [src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts:23](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts#L23) |
-| <a id="rotation"></a> `rotation?` | `number` \| `null` | [src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts:24](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts#L24) |
-| <a id="minparty"></a> `minParty` | `number` | [src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts:25](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts#L25) |
-| <a id="maxparty"></a> `maxParty` | `number` | [src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts:26](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts#L26) |
-| <a id="combinablewith"></a> `combinableWith` | `string`[] | [src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts:27](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts#L27) |
-| <a id="serversectionid"></a> `serverSectionId?` | `string` \| `null` | [src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts:28](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts#L28) |
+| <a id="number"></a> `number` | `string` | [src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts:18](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts#L18) |
+| <a id="x"></a> `x` | `number` | [src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts:19](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts#L19) |
+| <a id="y"></a> `y` | `number` | [src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts:20](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts#L20) |
+| <a id="width"></a> `width` | `number` | [src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts:21](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts#L21) |
+| <a id="height"></a> `height` | `number` | [src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts:22](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts#L22) |
+| <a id="shape"></a> `shape` | [`TableShape`](../enumerations/TableShape.md) | [src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts:23](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts#L23) |
+| <a id="rotation"></a> `rotation?` | `number` \| `null` | [src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts:24](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts#L24) |
+| <a id="minparty"></a> `minParty` | `number` | [src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts:25](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts#L25) |
+| <a id="maxparty"></a> `maxParty` | `number` | [src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts:26](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts#L26) |
+| <a id="combinablewith"></a> `combinableWith` | `string`[] | [src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts:27](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts#L27) |
+| <a id="serversectionid"></a> `serverSectionId?` | `string` \| `null` | [src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts:28](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/reservation-mgt/reservation-floor-plan-definition.schema.ts#L28) |

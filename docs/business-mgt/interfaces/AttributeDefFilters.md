@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.78**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.79**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: AttributeDefFilters
 
-Defined in: [src/core/business-mgt/product-management/product-config.schema.ts:479](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/product-management/product-config.schema.ts#L479)
+Defined in: [src/core/business-mgt/product-management/product-config.schema.ts:479](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/product-management/product-config.schema.ts#L479)
 
 Attribute definition filter options.
  AttributeDefFilters
@@ -15,6 +15,6 @@ Attribute definition filter options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="search"></a> `search?` | `string` | Text search across name/slug | [src/core/business-mgt/product-management/product-config.schema.ts:481](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/product-management/product-config.schema.ts#L481) |
-| <a id="type"></a> `type?` | [`AttributeDefType`](../enumerations/AttributeDefType.md) | Filter by attribute type | [src/core/business-mgt/product-management/product-config.schema.ts:483](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/product-management/product-config.schema.ts#L483) |
-| <a id="isactive"></a> `isActive?` | `boolean` | Filter by active status | [src/core/business-mgt/product-management/product-config.schema.ts:485](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/product-management/product-config.schema.ts#L485) |
+| <a id="search"></a> `search?` | `string` | Text search across name/slug | [src/core/business-mgt/product-management/product-config.schema.ts:481](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/product-management/product-config.schema.ts#L481) |
+| <a id="type"></a> `type?` | [`AttributeDefType`](../enumerations/AttributeDefType.md) | Filter by attribute type | [src/core/business-mgt/product-management/product-config.schema.ts:483](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/product-management/product-config.schema.ts#L483) |
+| <a id="isactive"></a> `isActive?` | `boolean` | Filter by active status | [src/core/business-mgt/product-management/product-config.schema.ts:485](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/product-management/product-config.schema.ts#L485) |

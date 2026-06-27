@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.78**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.79**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const ProductCatalogSchema: ZodObject<ProductCatalog>;
 ```
 
-Defined in: [src/core/business-mgt/product-management/product-config.schema.ts:406](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/product-management/product-config.schema.ts#L406)
+Defined in: [src/core/business-mgt/product-management/product-config.schema.ts:406](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/product-management/product-config.schema.ts#L406)
 
 Product catalog schema.
 Represents a category with its list of products.

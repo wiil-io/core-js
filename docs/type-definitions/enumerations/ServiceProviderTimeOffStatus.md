@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.78**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.79**](../../README.md)
 
 ***
 
@@ -6,12 +6,12 @@
 
 # Enumeration: ServiceProviderTimeOffStatus
 
-Defined in: [src/core/type-definitions/business-definitions.ts:85](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/type-definitions/business-definitions.ts#L85)
+Defined in: [src/core/type-definitions/business-definitions.ts:85](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/type-definitions/business-definitions.ts#L85)
 
 ## Enumeration Members
 
 | Enumeration Member | Value | Defined in |
 | ------ | ------ | ------ |
-| <a id="approved"></a> `APPROVED` | `"approved"` | [src/core/type-definitions/business-definitions.ts:86](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/type-definitions/business-definitions.ts#L86) |
-| <a id="pending"></a> `PENDING` | `"pending"` | [src/core/type-definitions/business-definitions.ts:87](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/type-definitions/business-definitions.ts#L87) |
-| <a id="rejected"></a> `REJECTED` | `"rejected"` | [src/core/type-definitions/business-definitions.ts:88](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/type-definitions/business-definitions.ts#L88) |
+| <a id="approved"></a> `APPROVED` | `"approved"` | [src/core/type-definitions/business-definitions.ts:86](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/type-definitions/business-definitions.ts#L86) |
+| <a id="pending"></a> `PENDING` | `"pending"` | [src/core/type-definitions/business-definitions.ts:87](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/type-definitions/business-definitions.ts#L87) |
+| <a id="rejected"></a> `REJECTED` | `"rejected"` | [src/core/type-definitions/business-definitions.ts:88](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/type-definitions/business-definitions.ts#L88) |

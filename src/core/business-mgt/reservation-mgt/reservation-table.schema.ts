@@ -75,12 +75,27 @@ export const UpdateTableReservationSchema = CreateTableReservationSchema.partial
 });
 
 // ============================================================================
+// REASSIGNMENT SCHEMA
+// ============================================================================
+
+/**
+ * Schema for reassigning a table reservation to a different table instance.
+ */
+export const TableReAssignmentSchema = z.object({
+    reservationId: z.string().describe("Table reservation ID being reassigned."),
+    toTableInstanceId: z.string().describe("Target table instance ID the reservation is being moved to."),
+    fromTableInstanceId: z.string().nullable().optional().describe("Current table instance ID the reservation is being moved from."),
+    reason: z.string().nullable().optional().describe("Optional reason for the reassignment."),
+});
+
+// ============================================================================
 // TYPE EXPORTS
 // ============================================================================
 
 export type TableReservation = z.infer<typeof TableReservationSchema>;
 export type CreateTableReservation = z.infer<typeof CreateTableReservationSchema>;
 export type UpdateTableReservation = z.infer<typeof UpdateTableReservationSchema>;
+export type TableReAssignment = z.infer<typeof TableReAssignmentSchema>;
 
 // ============================================================================
 // QUERY OPTIONS

@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.78**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.79**](../../README.md)
 
 ***
 
@@ -17,7 +17,7 @@ function validateSupportedVoices(voices): {
 }[];
 ```
 
-Defined in: [src/core/service-configuration/voice-language.schema.ts:172](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/service-configuration/voice-language.schema.ts#L172)
+Defined in: [src/core/service-configuration/voice-language.schema.ts:172](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/service-configuration/voice-language.schema.ts#L172)
 
 Validation function for supported voices.
 

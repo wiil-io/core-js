@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpdateRoomReservationSchema = exports.CreateRoomReservationSchema = exports.RoomReservationSchema = exports.RoomRatePerNightSchema = void 0;
+exports.RoomReAssignmentSchema = exports.UpdateRoomReservationSchema = exports.CreateRoomReservationSchema = exports.RoomReservationSchema = exports.RoomRatePerNightSchema = void 0;
 const zod_1 = require("zod");
 const base_schema_1 = require("../../base.schema");
 const type_definitions_1 = require("../../type-definitions");
@@ -91,4 +91,16 @@ exports.UpdateRoomReservationSchema = exports.CreateRoomReservationSchema.partia
     id: zod_1.z.string().describe("Unique identifier of the room reservation to update."),
     // Re-declared without the base `.default()` so partial updates don't inject a status the caller never set
     status: zod_1.z.enum(type_definitions_1.ReservationStatus).nullable().optional().describe("Room reservation lifecycle status"),
+});
+// ============================================================================
+// REASSIGNMENT SCHEMA
+// ============================================================================
+/**
+ * Schema for reassigning a room reservation to a different room instance.
+ */
+exports.RoomReAssignmentSchema = zod_1.z.object({
+    reservationId: zod_1.z.string().describe("Room reservation ID being reassigned."),
+    fromRoomInstanceId: zod_1.z.string().nullable().optional().describe("Current room instance ID the reservation is being moved from."),
+    toRoomInstanceId: zod_1.z.string().describe("Target room instance ID the reservation is being moved to."),
+    reason: zod_1.z.string().nullable().optional().describe("Optional reason for the reassignment."),
 });

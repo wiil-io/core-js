@@ -176,6 +176,20 @@ export const UpdateRentalReservationSchema = CreateRentalReservationSchema.parti
 });
 
 // ============================================================================
+// REASSIGNMENT SCHEMA
+// ============================================================================
+
+/**
+ * Schema for reassigning a rental reservation to a different rental instance.
+ */
+export const RentalReAssignmentSchema = z.object({
+    reservationId: z.string().describe("Rental reservation ID being reassigned."),
+    toRentalInstanceId: z.string().describe("Target rental instance ID the reservation is being moved to."),
+    fromRentalInstanceId: z.string().nullable().optional().describe("Current rental instance ID the reservation is being moved from."),
+    reason: z.string().nullable().optional().describe("Optional reason for the reassignment."),
+});
+
+// ============================================================================
 // TYPE EXPORTS
 // ============================================================================
 
@@ -186,6 +200,7 @@ export type IDRef = z.infer<typeof IDRefSchema>;
 export type RentalReservation = z.infer<typeof RentalReservationSchema>;
 export type CreateRentalReservation = z.infer<typeof CreateRentalReservationSchema>;
 export type UpdateRentalReservation = z.infer<typeof UpdateRentalReservationSchema>;
+export type RentalReAssignment = z.infer<typeof RentalReAssignmentSchema>;
 
 // ============================================================================
 // QUERY OPTIONS

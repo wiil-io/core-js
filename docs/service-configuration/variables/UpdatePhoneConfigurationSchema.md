@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.78**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.79**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const UpdatePhoneConfigurationSchema: ZodObject<UpdatePhoneConfiguration>;
 ```
 
-Defined in: [src/core/service-configuration/phone-config.schema.ts:126](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/service-configuration/phone-config.schema.ts#L126)
+Defined in: [src/core/service-configuration/phone-config.schema.ts:126](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/service-configuration/phone-config.schema.ts#L126)
 
 Zod schema for updating an existing phone configuration.
 

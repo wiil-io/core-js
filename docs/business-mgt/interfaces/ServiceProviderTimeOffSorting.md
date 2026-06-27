@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.78**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.79**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ServiceProviderTimeOffSorting
 
-Defined in: [src/core/business-mgt/service-management/service-time-off.schema.ts:138](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/service-management/service-time-off.schema.ts#L138)
+Defined in: [src/core/business-mgt/service-management/service-time-off.schema.ts:138](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/service-management/service-time-off.schema.ts#L138)
 
 Service provider time off sorting options.
  ServiceProviderTimeOffSorting
@@ -15,5 +15,5 @@ Service provider time off sorting options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="field"></a> `field` | `"createdAt"` \| `"startDate"` \| `"endDate"` | Field to sort by | [src/core/business-mgt/service-management/service-time-off.schema.ts:140](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/service-management/service-time-off.schema.ts#L140) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/service-management/service-time-off.schema.ts:142](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/service-management/service-time-off.schema.ts#L142) |
+| <a id="field"></a> `field` | `"createdAt"` \| `"startDate"` \| `"endDate"` | Field to sort by | [src/core/business-mgt/service-management/service-time-off.schema.ts:140](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/service-management/service-time-off.schema.ts#L140) |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/service-management/service-time-off.schema.ts:142](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/service-management/service-time-off.schema.ts#L142) |

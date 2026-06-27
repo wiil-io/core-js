@@ -103,9 +103,19 @@ export declare const UpdateTableReservationSchema: z.ZodObject<{
     id: z.ZodString;
     status: z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof ReservationStatus>>>;
 }, z.core.$strip>;
+/**
+ * Schema for reassigning a table reservation to a different table instance.
+ */
+export declare const TableReAssignmentSchema: z.ZodObject<{
+    reservationId: z.ZodString;
+    toTableInstanceId: z.ZodString;
+    fromTableInstanceId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    reason: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+}, z.core.$strip>;
 export type TableReservation = z.infer<typeof TableReservationSchema>;
 export type CreateTableReservation = z.infer<typeof CreateTableReservationSchema>;
 export type UpdateTableReservation = z.infer<typeof UpdateTableReservationSchema>;
+export type TableReAssignment = z.infer<typeof TableReAssignmentSchema>;
 /**
  * Table reservation filter options.
  * @interface TableReservationFilters

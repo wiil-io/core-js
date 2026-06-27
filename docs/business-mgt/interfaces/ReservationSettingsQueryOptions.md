@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.78**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.79**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ReservationSettingsQueryOptions
 
-Defined in: [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:166](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L166)
+Defined in: [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:166](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L166)
 
 Reservation settings query options.
  ReservationSettingsQueryOptions
@@ -15,6 +15,6 @@ Reservation settings query options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:168](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L168) |
-| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:170](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L170) |
-| <a id="filters"></a> `filters?` | [`ReservationSettingsFilters`](ReservationSettingsFilters.md) | Optional filters | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:172](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L172) |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:168](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L168) |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:170](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L170) |
+| <a id="filters"></a> `filters?` | [`ReservationSettingsFilters`](ReservationSettingsFilters.md) | Optional filters | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:172](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L172) |

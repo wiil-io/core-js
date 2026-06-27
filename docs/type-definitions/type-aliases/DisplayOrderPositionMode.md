@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.78**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.79**](../../README.md)
 
 ***
 
@@ -16,6 +16,6 @@ type DisplayOrderPositionMode =
   | "ABSOLUTE_INDEX";
 ```
 
-Defined in: [src/core/type-definitions/display-order.ts:178](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/type-definitions/display-order.ts#L178)
+Defined in: [src/core/type-definitions/display-order.ts:178](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/type-definitions/display-order.ts#L178)
 
 Display order position mode enum.

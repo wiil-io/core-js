@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.78**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.79**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: RoomAssignmentQueryOptions
 
-Defined in: [src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts:117](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts#L117)
+Defined in: [src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts:117](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts#L117)
 
 Room assignment query options.
  RoomAssignmentQueryOptions
@@ -15,7 +15,7 @@ Room assignment query options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts:119](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts#L119) |
-| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts:121](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts#L121) |
-| <a id="filters"></a> `filters?` | [`RoomAssignmentFilters`](RoomAssignmentFilters.md) | Optional filters | [src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts:123](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts#L123) |
-| <a id="sorting"></a> `sorting?` | [`RoomAssignmentSorting`](RoomAssignmentSorting.md) | Optional sorting | [src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts:125](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts#L125) |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts:119](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts#L119) |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts:121](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts#L121) |
+| <a id="filters"></a> `filters?` | [`RoomAssignmentFilters`](RoomAssignmentFilters.md) | Optional filters | [src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts:123](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts#L123) |
+| <a id="sorting"></a> `sorting?` | [`RoomAssignmentSorting`](RoomAssignmentSorting.md) | Optional sorting | [src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts:125](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/reservation-mgt/assignment/reservation-room-assignment.schema.ts#L125) |

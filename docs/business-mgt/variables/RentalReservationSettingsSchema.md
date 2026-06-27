@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.78**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.79**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const RentalReservationSettingsSchema: ZodObject<RentalReservationSettings>;
 ```
 
-Defined in: [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:81](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L81)
+Defined in: [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:81](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L81)
 
 Rental reservation settings schema.
 Configures rental tiers, waiver requirements, identity verification, and deposits.

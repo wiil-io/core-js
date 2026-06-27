@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.78**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.79**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: AppointmentAdditionalInfoSorting
 
-Defined in: [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:113](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L113)
+Defined in: [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:113](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L113)
 
 Appointment additional info sorting options.
  AppointmentAdditionalInfoSorting
@@ -15,5 +15,5 @@ Appointment additional info sorting options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="field"></a> `field` | `"createdAt"` \| `"updatedAt"` | Field to sort by | [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:115](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L115) |
-| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:117](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L117) |
+| <a id="field"></a> `field` | `"createdAt"` \| `"updatedAt"` | Field to sort by | [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:115](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L115) |
+| <a id="direction"></a> `direction` | `"asc"` \| `"desc"` | Sort direction | [src/core/business-mgt/service-management/appointment-additional-info.schema.ts:117](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/service-management/appointment-additional-info.schema.ts#L117) |

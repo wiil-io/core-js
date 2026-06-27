@@ -128,10 +128,20 @@ export declare const UpdateRoomReservationSchema: z.ZodObject<{
     id: z.ZodString;
     status: z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof ReservationStatus>>>;
 }, z.core.$strip>;
+/**
+ * Schema for reassigning a room reservation to a different room instance.
+ */
+export declare const RoomReAssignmentSchema: z.ZodObject<{
+    reservationId: z.ZodString;
+    fromRoomInstanceId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    toRoomInstanceId: z.ZodString;
+    reason: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+}, z.core.$strip>;
 export type RoomRatePerNight = z.infer<typeof RoomRatePerNightSchema>;
 export type RoomReservation = z.infer<typeof RoomReservationSchema>;
 export type CreateRoomReservation = z.infer<typeof CreateRoomReservationSchema>;
 export type UpdateRoomReservation = z.infer<typeof UpdateRoomReservationSchema>;
+export type RoomReAssignment = z.infer<typeof RoomReAssignmentSchema>;
 /**
  * Room reservation filter options.
  * @interface RoomReservationFilters

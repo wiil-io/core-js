@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.78**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.79**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const MenuSetViewSchema: ZodObject<MenuSetView>;
 ```
 
-Defined in: [src/core/business-mgt/menu-management/menu-set.schema.ts:311](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/menu-management/menu-set.schema.ts#L311)
+Defined in: [src/core/business-mgt/menu-management/menu-set.schema.ts:311](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/menu-management/menu-set.schema.ts#L311)
 
 Menu set view schema.
 Read-optimized view with resolved items and pricing.

@@ -8,10 +8,11 @@ This document details the table, room, and rental reservation record schemas.
 2. [TableReservation](#tablereservation)
 3. [RoomReservation](#roomreservation)
 4. [RentalReservation](#rentalreservation)
-5. [Status Models](#status-models)
-6. [Query Options](#query-options)
-7. [Validation Rules](#validation-rules)
-8. [Implementation Notes](#implementation-notes)
+5. [Reassignment](#reassignment)
+6. [Status Models](#status-models)
+7. [Query Options](#query-options)
+8. [Validation Rules](#validation-rules)
+9. [Implementation Notes](#implementation-notes)
 
 ---
 
@@ -370,6 +371,50 @@ Represents a rental booking with pickup/return timing, tier selection, deposit s
     "status": "verified"
   },
   "notes": "Customer requested child seat"
+}
+```
+
+---
+
+## Reassignment
+
+Reassignment schemas move an existing reservation from one physical instance to another (e.g., switching a guest to a different room). Each type lives in its respective reservation schema file.
+
+### RoomReAssignment
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `reservationId` | string | Yes | Room reservation ID being reassigned |
+| `fromRoomInstanceId` | string \| null | No | Current room instance ID being moved from |
+| `toRoomInstanceId` | string | Yes | Target room instance ID being moved to |
+| `reason` | string \| null | No | Optional reason for the reassignment |
+
+### TableReAssignment
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `reservationId` | string | Yes | Table reservation ID being reassigned |
+| `toTableInstanceId` | string | Yes | Target table instance ID being moved to |
+| `fromTableInstanceId` | string \| null | No | Current table instance ID being moved from |
+| `reason` | string \| null | No | Optional reason for the reassignment |
+
+### RentalReAssignment
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `reservationId` | string | Yes | Rental reservation ID being reassigned |
+| `toRentalInstanceId` | string | Yes | Target rental instance ID being moved to |
+| `fromRentalInstanceId` | string \| null | No | Current rental instance ID being moved from |
+| `reason` | string \| null | No | Optional reason for the reassignment |
+
+### Example
+
+```json
+{
+  "reservationId": "room_res_123",
+  "fromRoomInstanceId": "room_204",
+  "toRoomInstanceId": "room_210",
+  "reason": "Guest requested a higher floor"
 }
 ```
 

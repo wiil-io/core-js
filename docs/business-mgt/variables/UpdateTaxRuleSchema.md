@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.78**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.79**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const UpdateTaxRuleSchema: ZodObject<UpdateTaxRule>;
 ```
 
-Defined in: [src/core/business-mgt/tax-rule.schema.ts:93](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/tax-rule.schema.ts#L93)
+Defined in: [src/core/business-mgt/tax-rule.schema.ts:93](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/tax-rule.schema.ts#L93)
 
 Schema for updating an existing tax rule.
 All fields optional except id.

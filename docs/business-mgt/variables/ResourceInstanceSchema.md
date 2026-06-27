@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.78**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.79**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const ResourceInstanceSchema: ZodObject<ResourceInstance>;
 ```
 
-Defined in: [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:58](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L58)
+Defined in: [src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts:58](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/reservation-mgt/resource/reservation-resource-instance.schema.ts#L58)
 
 Resource instance schema.
 Represents a physical table, room, rental unit, or other reservable unit.

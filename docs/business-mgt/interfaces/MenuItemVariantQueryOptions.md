@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.78**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.79**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: MenuItemVariantQueryOptions
 
-Defined in: [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:142](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L142)
+Defined in: [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:142](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L142)
 
 Menu item variant query options.
  MenuItemVariantQueryOptions
@@ -15,7 +15,7 @@ Menu item variant query options.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:144](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L144) |
-| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:146](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L146) |
-| <a id="filters"></a> `filters?` | [`MenuItemVariantFilters`](MenuItemVariantFilters.md) | Optional filters | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:148](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L148) |
-| <a id="sorting"></a> `sorting?` | [`MenuItemVariantSorting`](MenuItemVariantSorting.md) | Optional sorting | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:150](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L150) |
+| <a id="page"></a> `page` | `number` | Page number (1-indexed) | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:144](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L144) |
+| <a id="pagesize"></a> `pageSize` | `number` | Items per page | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:146](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L146) |
+| <a id="filters"></a> `filters?` | [`MenuItemVariantFilters`](MenuItemVariantFilters.md) | Optional filters | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:148](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L148) |
+| <a id="sorting"></a> `sorting?` | [`MenuItemVariantSorting`](MenuItemVariantSorting.md) | Optional sorting | [src/core/business-mgt/menu-management/menu-item-variant.schema.ts:150](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/menu-management/menu-item-variant.schema.ts#L150) |

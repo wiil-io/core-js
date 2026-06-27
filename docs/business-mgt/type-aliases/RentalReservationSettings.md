@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.78**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.79**](../../README.md)
 
 ***
 
@@ -20,7 +20,7 @@ type RentalReservationSettings = {
 };
 ```
 
-Defined in: [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:144](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L144)
+Defined in: [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:144](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L144)
 
 Rental reservation settings schema.
 Configures rental tiers, waiver requirements, identity verification, and deposits.
@@ -29,7 +29,7 @@ Configures rental tiers, waiver requirements, identity verification, and deposit
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="tiers"></a> `tiers` | \{ `id`: `string`; `name`: `string`; `durationMinutes`: `number`; `sortOrder`: `number`; \}[] | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:82](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L82) |
-| <a id="requirewaiver"></a> `requireWaiver` | `boolean` | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:83](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L83) |
-| <a id="requireidverification"></a> `requireIdVerification` | `boolean` | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:84](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L84) |
-| <a id="defaultdepositpercent"></a> `defaultDepositPercent?` | `number` \| `null` | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:85](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L85) |
+| <a id="tiers"></a> `tiers` | \{ `id`: `string`; `name`: `string`; `durationMinutes`: `number`; `sortOrder`: `number`; \}[] | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:82](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L82) |
+| <a id="requirewaiver"></a> `requireWaiver` | `boolean` | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:83](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L83) |
+| <a id="requireidverification"></a> `requireIdVerification` | `boolean` | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:84](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L84) |
+| <a id="defaultdepositpercent"></a> `defaultDepositPercent?` | `number` \| `null` | [src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts:85](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/reservation-mgt/reservation-settings.schema.ts#L85) |

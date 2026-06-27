@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.78**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.79**](../../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 const VariantAxisSchema: ZodObject<VariantAxis>;
 ```
 
-Defined in: [src/core/business-mgt/product-management/product-variant-axis.schema.ts:52](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L52)
+Defined in: [src/core/business-mgt/product-management/product-variant-axis.schema.ts:52](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/business-mgt/product-management/product-variant-axis.schema.ts#L52)
 
 Variant axis schema.
 Defines a dimension along which products can vary (e.g., Size, Color, Material).

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpdateTableReservationSchema = exports.CreateTableReservationSchema = exports.TableReservationSchema = void 0;
+exports.TableReAssignmentSchema = exports.UpdateTableReservationSchema = exports.CreateTableReservationSchema = exports.TableReservationSchema = void 0;
 const zod_1 = require("zod");
 const base_schema_1 = require("../../base.schema");
 const type_definitions_1 = require("../../type-definitions");
@@ -69,4 +69,16 @@ exports.UpdateTableReservationSchema = exports.CreateTableReservationSchema.part
     id: zod_1.z.string().describe("Unique identifier of the table reservation to update."),
     // Re-declared without the base `.default()` so partial updates don't inject a status the caller never set
     status: zod_1.z.enum(type_definitions_1.ReservationStatus).nullable().optional().describe("Table reservation lifecycle status"),
+});
+// ============================================================================
+// REASSIGNMENT SCHEMA
+// ============================================================================
+/**
+ * Schema for reassigning a table reservation to a different table instance.
+ */
+exports.TableReAssignmentSchema = zod_1.z.object({
+    reservationId: zod_1.z.string().describe("Table reservation ID being reassigned."),
+    toTableInstanceId: zod_1.z.string().describe("Target table instance ID the reservation is being moved to."),
+    fromTableInstanceId: zod_1.z.string().nullable().optional().describe("Current table instance ID the reservation is being moved from."),
+    reason: zod_1.z.string().nullable().optional().describe("Optional reason for the reassignment."),
 });

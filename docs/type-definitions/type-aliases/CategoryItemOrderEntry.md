@@ -1,4 +1,4 @@
-[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.78**](../../README.md)
+[**Wiil Platform JavaScript Data Model Definitions - API Reference v0.0.79**](../../README.md)
 
 ***
 
@@ -13,7 +13,7 @@ type CategoryItemOrderEntry = {
 };
 ```
 
-Defined in: [src/core/type-definitions/display-order.ts:187](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/type-definitions/display-order.ts#L187)
+Defined in: [src/core/type-definitions/display-order.ts:187](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/type-definitions/display-order.ts#L187)
 
 Category item order entry schema.
 
@@ -21,5 +21,5 @@ Category item order entry schema.
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="itemid"></a> `itemId` | `string` | [src/core/type-definitions/display-order.ts:165](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/type-definitions/display-order.ts#L165) |
-| <a id="displayorder"></a> `displayOrder` | `number` | [src/core/type-definitions/display-order.ts:166](https://github.com/wiil-io/core-js/blob/b184f878c8938357e78881ccc1cdb3c1cc1bceec/src/core/type-definitions/display-order.ts#L166) |
+| <a id="itemid"></a> `itemId` | `string` | [src/core/type-definitions/display-order.ts:165](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/type-definitions/display-order.ts#L165) |
+| <a id="displayorder"></a> `displayOrder` | `number` | [src/core/type-definitions/display-order.ts:166](https://github.com/wiil-io/core-js/blob/7bf38f479c29583d09bdbea11f27bc7a0daba926/src/core/type-definitions/display-order.ts#L166) |
